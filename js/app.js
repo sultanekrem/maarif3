@@ -409,10 +409,168 @@
           navigator.vibrate([30, 40, 60]);
         } else if (type === 'warning') {
           navigator.vibrate([40, 50]);
+        } else if (type === 'light') {
+          navigator.vibrate(15);
         }
       } catch(e) {}
     }
   }
+
+  // ==========================================================================
+  // ✏️ SİHİRLİ PARMAK KALEMİ & KARALAMA TAHTASI (Child-Friendly Mobile Canvas)
+  // ==========================================================================
+  const ScratchpadService = {
+    isOpen: { quiz: false, exam: false, kumbara: false },
+    activeCanvas: null,
+    ctx: null,
+    isDrawing: false,
+    lastX: 0,
+    lastY: 0,
+    strokeColor: '#FBBF24',
+    lineWidth: 3.5,
+
+    init: function() {
+      ['quiz', 'exam', 'kumbara'].forEach(type => {
+        const btnTrigger = document.getElementById(`btn-draw-${type}`);
+        if (btnTrigger) {
+          btnTrigger.onclick = (e) => {
+            e.stopPropagation();
+            this.toggle(type);
+          };
+        }
+        const btnClear = document.getElementById(`btn-clear-sp-${type}`);
+        if (btnClear) {
+          btnClear.onclick = (e) => {
+            e.stopPropagation();
+            this.clear(type);
+          };
+        }
+        const btnClose = document.getElementById(`btn-close-sp-${type}`);
+        if (btnClose) {
+          btnClose.onclick = (e) => {
+            e.stopPropagation();
+            this.close(type);
+          };
+        }
+      });
+    },
+
+    toggle: function(type) {
+      if (this.isOpen[type]) {
+        this.close(type);
+      } else {
+        this.open(type);
+      }
+    },
+
+    open: function(type) {
+      const box = document.getElementById(`scratchpad-box-${type}`);
+      if (!box) return;
+
+      box.classList.remove('hidden');
+      this.isOpen[type] = true;
+
+      const qTextSource = type === 'quiz' ? document.getElementById('quiz-question-text') :
+                          type === 'exam' ? document.getElementById('exam-question-text') :
+                          document.getElementById('kumbara-q-text');
+      const qMirror = document.getElementById(`sp-question-mirror-${type}`);
+      if (qTextSource && qMirror) {
+        qMirror.textContent = '📌 ' + qTextSource.textContent;
+      }
+
+      const canvas = document.getElementById(`sp-canvas-${type}`);
+      if (canvas) {
+        this.activeCanvas = canvas;
+        this.ctx = canvas.getContext('2d');
+        setTimeout(() => {
+          this.resizeCanvas(canvas);
+          this.bindEvents(canvas);
+        }, 50);
+      }
+      triggerHaptic('light');
+    },
+
+    close: function(type) {
+      const box = document.getElementById(`scratchpad-box-${type}`);
+      if (box) box.classList.add('hidden');
+      this.isOpen[type] = false;
+      this.isDrawing = false;
+      triggerHaptic('light');
+    },
+
+    clear: function(type) {
+      const canvas = document.getElementById(`sp-canvas-${type}`);
+      if (canvas) {
+        const ctx = canvas.getContext('2d');
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+      triggerHaptic('warning');
+    },
+
+    resizeCanvas: function(canvas) {
+      const rect = canvas.getBoundingClientRect();
+      if (rect.width === 0 || rect.height === 0) return;
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = rect.width * dpr;
+      canvas.height = rect.height * dpr;
+      const ctx = canvas.getContext('2d');
+      ctx.scale(dpr, dpr);
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+      ctx.strokeStyle = this.strokeColor;
+      ctx.lineWidth = this.lineWidth;
+    },
+
+    bindEvents: function(canvas) {
+      if (canvas._hasEvents) return;
+      canvas._hasEvents = true;
+
+      const getPos = (e) => {
+        const rect = canvas.getBoundingClientRect();
+        const touch = (e.touches && e.touches[0]) || (e.changedTouches && e.changedTouches[0]) || e;
+        return {
+          x: touch.clientX - rect.left,
+          y: touch.clientY - rect.top
+        };
+      };
+
+      const start = (e) => {
+        if (e.cancelable) e.preventDefault();
+        this.isDrawing = true;
+        const pos = getPos(e);
+        this.lastX = pos.x;
+        this.lastY = pos.y;
+        const ctx = canvas.getContext('2d');
+        ctx.beginPath();
+        ctx.moveTo(this.lastX, this.lastY);
+      };
+
+      const move = (e) => {
+        if (!this.isDrawing) return;
+        if (e.cancelable) e.preventDefault();
+        const pos = getPos(e);
+        const ctx = canvas.getContext('2d');
+        ctx.lineTo(pos.x, pos.y);
+        ctx.stroke();
+        this.lastX = pos.x;
+        this.lastY = pos.y;
+      };
+
+      const end = (e) => {
+        if (e.cancelable) e.preventDefault();
+        this.isDrawing = false;
+      };
+
+      canvas.addEventListener('mousedown', start);
+      canvas.addEventListener('mousemove', move);
+      window.addEventListener('mouseup', end);
+
+      canvas.addEventListener('touchstart', start, { passive: false });
+      canvas.addEventListener('touchmove', move, { passive: false });
+      canvas.addEventListener('touchend', end, { passive: false });
+      canvas.addEventListener('touchcancel', end, { passive: false });
+    }
+  };
 
   // 🧠 YILDIZ KUMBARASI (Hata Kumbarası) YÖNETİMİ
   function updateKumbaraBadge() {
@@ -553,6 +711,7 @@
 
     const qTextEl = document.getElementById('kumbara-q-text');
     if (qTextEl) qTextEl.textContent = item.q;
+    ScratchpadService.close('kumbara');
 
     // 🔊 Kumbara Sorusu Sesli Oku Butonu
     const btnReadKumbara = document.getElementById('btn-read-kumbara-q');
@@ -1052,8 +1211,24 @@
     const fillPercent = ((state.currentTaskIndex + 1) / totalTasks) * 100;
     document.getElementById('quiz-progress-bar').style.width = `${fillPercent}%`;
 
-document.getElementById('quiz-question-text').textContent = task.q;
+    document.getElementById('quiz-question-text').textContent = task.q;
     document.getElementById('quiz-streak-badge').textContent = `🔥 ${state.streak} Seri`;
+
+    // Karalama tahtasını her yeni soruda kapat
+    ScratchpadService.close('quiz');
+
+    // 🌟 Çocuk Odaklı Macera Görev Rozeti
+    const qBadgeEl = document.getElementById('quiz-q-type-badge');
+    if (qBadgeEl) {
+      const missionMap = {
+        'matematik': '🚀 Uzay Kaptanı Görevi',
+        'fen': '🔬 Doğa Kaşifi Görevi',
+        'hayat': '🌱 Gezegen Dedektifi Görevi',
+        'turkce': '📖 Masal Kahramanı Görevi',
+        'ingilizce': '🔤 Dünya Gezgini Görevi'
+      };
+      qBadgeEl.textContent = missionMap[state.currentSubject] || '🎯 Yıldız Görevi';
+    }
 
     // 🔊 Sesli Oku Butonu
     const btnReadQuiz = document.getElementById('btn-read-quiz-q');
@@ -1236,7 +1411,8 @@ document.getElementById('quiz-question-text').textContent = task.q;
 
     document.getElementById('exam-counter-text').textContent = `Soru ${qIndex + 1} / ${totalQ}`;
     document.getElementById('exam-score-live').textContent = `Doğru: ${state.examCorrectCount}`;
-document.getElementById('exam-question-text').textContent = qData.q;
+    document.getElementById('exam-question-text').textContent = qData.q;
+    ScratchpadService.close('exam');
 
     // 🔊 Sınav Sorusu Sesli Oku Butonu
     const btnReadExam = document.getElementById('btn-read-exam-q');
@@ -1997,6 +2173,7 @@ document.getElementById('exam-question-text').textContent = qData.q;
   document.addEventListener('DOMContentLoaded', () => {
     loadSavedProgress();
     initEventListeners();
+    ScratchpadService.init();
   });
 
 })();

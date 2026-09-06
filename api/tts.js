@@ -1,6 +1,14 @@
 const { MsEdgeTTS, OUTPUT_FORMAT } = require('msedge-tts');
 
-function sanitizeForSpeech(str) {
+function sanitizeForSpeech(str, isEnglish) {
+  if (isEnglish) {
+    return String(str || '')
+      .replace(/&/g, ' and ')
+      .replace(/["']/g, '')
+      .replace(/<[^>]*>/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
   return String(str || '')
     .replace(/&/g, ' ve ')
     .replace(/</g, ' küçüktür ')
@@ -46,8 +54,19 @@ module.exports = async (req, res) => {
     return;
   }
 
-  // Voice selection: default Emel (friendly, warm Turkish female teacher voice)
-  const voice = (req.query && req.query.voice === 'ahmet') ? 'tr-TR-AhmetNeural' : 'tr-TR-EmelNeural';
+  // Voice selection:
+  // - Jenny: en-US-JennyNeural (Authentic, clear native English female voice)
+  // - Ahmet: tr-TR-AhmetNeural
+  // - Emel: tr-TR-EmelNeural (Default warm Turkish teacher voice)
+  let voice = 'tr-TR-EmelNeural';
+  let isEnglish = false;
+  const reqVoice = (req.query && req.query.voice) ? String(req.query.voice).toLowerCase() : '';
+  if (reqVoice.includes('jenny') || reqVoice === 'en' || reqVoice === 'english' || reqVoice.startsWith('en-')) {
+    voice = 'en-US-JennyNeural';
+    isEnglish = true;
+  } else if (reqVoice === 'ahmet') {
+    voice = 'tr-TR-AhmetNeural';
+  }
 
   // Rate: -8% provides a calm, gentle, pedagogical tempo for 3rd graders
   let rate = '-8%';
@@ -59,7 +78,7 @@ module.exports = async (req, res) => {
     const tts = new MsEdgeTTS();
     await tts.setMetadata(voice, OUTPUT_FORMAT.AUDIO_24KHZ_48KBITRATE_MONO_MP3);
 
-    const safeText = sanitizeForSpeech(text).substring(0, 1000);
+    const safeText = sanitizeForSpeech(text, isEnglish).substring(0, 1000);
     const { audioStream } = tts.toStream(safeText, { rate });
 
     res.statusCode = 200;

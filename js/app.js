@@ -144,29 +144,38 @@
 
 
   // ==========================================================================
-  // 🔊 PROFESYONEL DOĞAL TÜRKÇE SES MOTORU (Nöral Stüdyo Sesi + Web Speech Yedek)
+  // 🔊 ÇİFT SESLİ PEDAGOJİK SES MOTORU (Dual-Voice Bilingual Engine)
+  // İngilizce metinleri: Gerçek yerel İngilizce aksanı (en-US-JennyNeural)
+  // Türkçe açıklamaları: Şefkatli Türkçe öğretmen sesi (tr-TR-EmelNeural)
   // ==========================================================================
   const SpeechService = {
     isSpeaking: false,
     activeButton: null,
     cachedVoices: [],
     audioPlayer: null,
-    currentFallbackText: null,
+    queue: [],
+    queueIndex: 0,
+    currentTimeout: null,
 
     init: function() {
       try {
         this.audioPlayer = new Audio();
         this.audioPlayer.preload = 'none';
         this.audioPlayer.onended = () => {
-          this.stop();
+          if (this.isSpeaking) {
+            // İki dil arasında nefes alma boşluğu (350ms)
+            this.currentTimeout = setTimeout(() => {
+              this.playNextSegment();
+            }, 350);
+          }
         };
         this.audioPlayer.onerror = (e) => {
-          console.warn('Nöral ses akış hatası, Web Speech API devreye alınıyor:', e);
-          if (this.currentFallbackText && this.isSpeaking) {
-            const fbText = this.currentFallbackText;
-            const btn = this.activeButton;
-            this.currentFallbackText = null;
-            this.speakWebSpeech(fbText, btn);
+          console.warn('Nöral ses akış hatası, Web Speech API fallback:', e);
+          if (this.isSpeaking && this.queue && this.queue[this.queueIndex - 1]) {
+            const currentSeg = this.queue[this.queueIndex - 1];
+            this.speakWebSpeechSegment(currentSeg, () => {
+              if (this.isSpeaking) this.playNextSegment();
+            });
           } else {
             this.stop();
           }
@@ -191,17 +200,14 @@
       if (!this.cachedVoices || this.cachedVoices.length === 0) {
         this.loadVoices();
       }
-      const voices = this.cachedVoices;
-      if (!voices || voices.length === 0) return null;
-
+      const voices = this.cachedVoices || [];
       const scored = [];
       for (let i = 0; i < voices.length; i++) {
         const v = voices[i];
         const lang = (v.lang || '').toLowerCase().replace('_', '-');
         const name = (v.name || '').toLowerCase();
 
-        const isTr = lang.startsWith('tr') || name.includes('turkish') || name.includes('türkçe');
-        if (!isTr) continue;
+        if (!lang.startsWith('tr') && !name.includes('turkish') && !name.includes('türkçe')) continue;
 
         let score = 20;
         if (name.includes('natural')) score += 70;
@@ -213,16 +219,42 @@
         if (name.includes('emel') || name.includes('ahmet')) score += 30;
         if (v.localService === false) score += 25;
         if (name.includes('desktop')) score -= 30;
-        if (name.includes('tolga') && !name.includes('natural')) score -= 20;
 
-        scored.push({ voice: v, score: score });
+        scored.push({ voice: v, score });
       }
-
       scored.sort((a, b) => b.score - a.score);
       return scored.length > 0 ? scored[0].voice : null;
     },
 
-    cleanText: function(text) {
+    getBestEnglishVoice: function() {
+      if (!this.cachedVoices || this.cachedVoices.length === 0) {
+        this.loadVoices();
+      }
+      const voices = this.cachedVoices || [];
+      const scored = [];
+      for (let i = 0; i < voices.length; i++) {
+        const v = voices[i];
+        const lang = (v.lang || '').toLowerCase().replace('_', '-');
+        const name = (v.name || '').toLowerCase();
+
+        if (!lang.startsWith('en')) continue;
+
+        let score = 20;
+        if (lang.includes('us')) score += 30;
+        if (name.includes('natural')) score += 60;
+        if (name.includes('neural')) score += 50;
+        if (name.includes('jenny') || name.includes('samantha') || name.includes('victoria')) score += 50;
+        if (name.includes('google')) score += 35;
+        if (name.includes('siri') || name.includes('karen')) score += 30;
+        if (v.localService === false) score += 20;
+
+        scored.push({ voice: v, score });
+      }
+      scored.sort((a, b) => b.score - a.score);
+      return scored.length > 0 ? scored[0].voice : null;
+    },
+
+    cleanTurkishText: function(text) {
       if (!text) return '';
       let res = String(text)
         .replace(/\+/g, ' artı ')
@@ -231,7 +263,6 @@
         .replace(/÷|\//g, ' bölü ')
         .replace(/=/g, ' eşittir ');
 
-      // Sayıların ardındaki noktayı kaldır (347. -> üç yüz kırk yedinci olmasını önler)
       res = res.replace(/(\d+)\.(?!\d)/g, (match, p1, offset, fullStr) => {
         const after = fullStr.slice(offset + match.length).trim();
         if (/^(sınıf|tema|ünite|adım|soru|sıra|kat|madde|bölüm)/i.test(after)) {
@@ -240,32 +271,17 @@
         return p1 + ' ';
       });
 
-      // Sondaki noktaları kaldır
       res = res.replace(/\.+$/, '');
       return res.replace(/\s+/g, ' ').trim();
     },
 
-    formatQuestion: function(qData) {
-      if (!qData) return '';
-      let qText = this.cleanText(qData.q);
-      
-      let speech = qText + '. ';
-      if (qData.tr_q) {
-        speech += 'Türkçe anlamı: ' + this.cleanText(qData.tr_q) + '. ';
-      }
-
-      if (Array.isArray(qData.options) && qData.options.length > 0) {
-        const letters = ['A', 'B', 'C', 'D'];
-        const optParts = [];
-        qData.options.forEach((opt, idx) => {
-          let optClean = this.cleanText(opt);
-          optParts.push(letters[idx] + ' şıkkı ' + optClean);
-        });
-        // Şıklar arasına virgül koy (asla nokta değil)
-        speech += optParts.join(', ');
-      }
-
-      return speech.trim();
+    cleanEnglishText: function(text) {
+      if (!text) return '';
+      return String(text)
+        .replace(/\(\s*\d+\s*\)/g, '') // Remove (40) numbers in parens
+        .replace(/\.+$/, '')
+        .replace(/\s+/g, ' ')
+        .trim();
     },
 
     resetButton: function(btn) {
@@ -287,7 +303,12 @@
     },
 
     stop: function() {
-      this.currentFallbackText = null;
+      if (this.currentTimeout) {
+        clearTimeout(this.currentTimeout);
+        this.currentTimeout = null;
+      }
+      this.queue = [];
+      this.queueIndex = 0;
       if (this.audioPlayer) {
         try {
           this.audioPlayer.pause();
@@ -307,55 +328,134 @@
       }
     },
 
+    // ÇİFT SESLİ AKILLI SORU SESLENDİRME
     toggleQuestion: function(qData, btnElement) {
       if (this.isSpeaking && this.activeButton === btnElement) {
         this.stop();
         return;
       }
-      const text = this.formatQuestion(qData);
-      this.speak(text, btnElement);
-    },
-
-    speak: function(text, btnElement) {
-      if (!text) return;
 
       this.stop();
+      if (!qData) return;
 
+      const isEnglish = (state.currentSubjectKey === 'ingilizce') || Boolean(qData.tr_q) || (qData.q && qData.q.includes('[İngilizce]'));
+
+      const segments = [];
+
+      if (isEnglish) {
+        // SEGMENT 1: Orijinal İngilizce Cümle + Şıklar (Doğal Amerikan Aksanı - JennyNeural)
+        let enText = this.cleanEnglishText(qData.q);
+        // Remove [İngilizce] prefix if present for clean speech
+        enText = enText.replace(/^\[İngilizce\]\s*/i, '');
+
+        if (Array.isArray(qData.options) && qData.options.length > 0) {
+          const letters = ['Option A', 'Option B', 'Option C', 'Option D'];
+          const optParts = [];
+          qData.options.forEach((opt, idx) => {
+            optParts.push(letters[idx] + ', ' + this.cleanEnglishText(opt));
+          });
+          enText += '. ' + optParts.join('. ');
+        }
+
+        segments.push({
+          text: enText,
+          lang: 'en-US',
+          voiceKey: 'jenny',
+          rate: '-8%',
+          webSpeechRate: 0.88
+        });
+
+        // SEGMENT 2: Türkçe Pedagojik Açıklama (Şefkatli Türkçe Öğretmen Sesi - EmelNeural)
+        if (qData.tr_q) {
+          const trText = 'Türkçe anlamı: ' + this.cleanTurkishText(qData.tr_q);
+          segments.push({
+            text: trText,
+            lang: 'tr-TR',
+            voiceKey: 'emel',
+            rate: '-8%',
+            webSpeechRate: 0.93
+          });
+        }
+      } else {
+        // TÜRKÇE DERSLER (Matematik, Türkçe, Fen, Hayat Bilgisi):
+        let trText = this.cleanTurkishText(qData.q);
+        if (Array.isArray(qData.options) && qData.options.length > 0) {
+          const letters = ['A', 'B', 'C', 'D'];
+          const optParts = [];
+          qData.options.forEach((opt, idx) => {
+            optParts.push(letters[idx] + ' şıkkı ' + this.cleanTurkishText(opt));
+          });
+          trText += '. ' + optParts.join(', ');
+        }
+
+        segments.push({
+          text: trText,
+          lang: 'tr-TR',
+          voiceKey: 'emel',
+          rate: '-8%',
+          webSpeechRate: 0.93
+        });
+      }
+
+      this.playQueue(segments, btnElement);
+    },
+
+    playQueue: function(segments, btnElement) {
+      if (!segments || segments.length === 0) {
+        this.stop();
+        return;
+      }
+      this.queue = segments;
+      this.queueIndex = 0;
       this.isSpeaking = true;
       this.activeButton = btnElement;
       if (btnElement) {
         this.setButtonSpeaking(btnElement);
       }
+      this.playNextSegment();
+    },
 
-      // 1. ÖNCELİK: Vercel Nöral İnsan Sesi Akışı (tr-TR-EmelNeural - Şefkatli, Net Öğretmen Sesi)
+    playNextSegment: function() {
+      if (!this.isSpeaking) return;
+      if (this.queueIndex >= this.queue.length) {
+        this.stop();
+        return;
+      }
+
+      const seg = this.queue[this.queueIndex];
+      this.queueIndex++;
+
+      // 1. ÖNCELİK: Nöral Stüdyo Sesi (/api/tts?voice=jenny veya emel)
       if (navigator.onLine !== false && this.audioPlayer) {
         try {
-          this.currentFallbackText = text;
-          const url = '/api/tts?text=' + encodeURIComponent(text) + '&voice=emel&rate=' + encodeURIComponent('-8%');
+          const url = '/api/tts?text=' + encodeURIComponent(seg.text) + '&voice=' + encodeURIComponent(seg.voiceKey) + '&rate=' + encodeURIComponent(seg.rate);
           this.audioPlayer.src = url;
           const playPromise = this.audioPlayer.play();
           if (playPromise !== undefined) {
             playPromise.catch((err) => {
-              console.warn('Nöral ses tarayıcı kısıtlaması, Web Speech API devreye alınıyor:', err);
-              if (this.isSpeaking && this.currentFallbackText === text) {
-                this.currentFallbackText = null;
-                this.speakWebSpeech(text, btnElement);
+              console.warn('Nöral ses tarayıcı engeli, Web Speech devreye alınıyor:', err);
+              if (this.isSpeaking) {
+                this.speakWebSpeechSegment(seg, () => {
+                  if (this.isSpeaking) this.playNextSegment();
+                });
               }
             });
           }
           return;
         } catch (err) {
-          console.warn('Nöral ses başlatma istisnası:', err);
+          console.warn('Nöral ses istisnası:', err);
         }
       }
 
-      // 2. ÖNCELİK (Çevrimdışı / Hata Durumu): Cihazın Yerel Web Speech API Motoru
-      this.speakWebSpeech(text, btnElement);
+      // 2. ÖNCELİK: Cihaz Yerel Web Speech API Motoru
+      this.speakWebSpeechSegment(seg, () => {
+        if (this.isSpeaking) this.playNextSegment();
+      });
     },
 
-    speakWebSpeech: function(text, btnElement) {
-      if (!('speechSynthesis' in window) || !text) {
-        this.stop();
+    speakWebSpeechSegment: function(seg, onComplete) {
+      if (!('speechSynthesis' in window) || !seg || !seg.text) {
+        if (onComplete) onComplete();
         return;
       }
 
@@ -363,41 +463,35 @@
         window.speechSynthesis.cancel();
       } catch (e) {}
 
-      const u = new SpeechSynthesisUtterance(text);
-      u.lang = 'tr-TR';
-      u.rate = 0.93; // 0.93: Tane tane, sakin, pedagojik ilkokul dinleme temposu
+      const u = new SpeechSynthesisUtterance(seg.text);
+      u.lang = seg.lang || 'tr-TR';
+      u.rate = seg.webSpeechRate || 0.90;
       u.pitch = 1.0;
 
-      const bestVoice = this.getBestTurkishVoice();
-      if (bestVoice) {
-        u.voice = bestVoice;
+      if (seg.lang && seg.lang.startsWith('en')) {
+        const enVoice = this.getBestEnglishVoice();
+        if (enVoice) u.voice = enVoice;
+      } else {
+        const trVoice = this.getBestTurkishVoice();
+        if (trVoice) u.voice = trVoice;
       }
 
-      this.isSpeaking = true;
-      this.activeButton = btnElement;
-      if (btnElement) {
-        this.setButtonSpeaking(btnElement);
-      }
-
-      const onEndOrError = () => {
-        this.isSpeaking = false;
-        if (this.activeButton) {
-          this.resetButton(this.activeButton);
-          this.activeButton = null;
+      u.onend = () => {
+        if (this.isSpeaking && onComplete) {
+          setTimeout(onComplete, 300);
         }
       };
 
-      u.onend = onEndOrError;
       u.onerror = (e) => {
-        console.warn('Web Speech error:', e);
-        onEndOrError();
+        console.warn('Web speech segment error:', e);
+        if (this.isSpeaking && onComplete) onComplete();
       };
 
       try {
         window.speechSynthesis.speak(u);
       } catch (err) {
         console.warn('Web Speech speak failed:', err);
-        onEndOrError();
+        if (onComplete) onComplete();
       }
     }
   };

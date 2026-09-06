@@ -5566,43 +5566,88 @@ html, body {
 }
 
 /* ============================================================
-   🇹🇷 ÇOCUK DOSTU İKİ DİLLİ TÜRKÇE ANLAM / ÇEVİRİ ÇUBUĞU
+   🇹🇷 ÇOCUK DOSTU İKİ DİLLİ TÜRKÇE ANLAM KARTI (YÜKSEK KONTRAST & MOBİL)
    ============================================================ */
 .q-tr-banner {
   display: flex !important;
-  align-items: center !important;
-  gap: 8px !important;
-  background: rgba(14, 116, 144, 0.22) !important;
-  border: 1.5px solid rgba(56, 189, 248, 0.45) !important;
-  border-left: 5px solid #38BDF8 !important;
-  border-radius: 12px !important;
-  padding: 8px 12px !important;
-  margin: 8px 0 10px 0 !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
-  animation: fadeInTr 0.2s ease-out !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.96) 0%, rgba(30, 58, 138, 0.5) 100%) !important;
+  border: 2px solid #38BDF8 !important;
+  border-left: 6px solid #F59E0B !important;
+  border-radius: 14px !important;
+  padding: 10px 14px !important;
+  margin: 10px 0 12px 0 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45), 0 0 10px rgba(56, 189, 248, 0.25) !important;
+  animation: fadeInTr 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 .q-tr-banner.hidden {
   display: none !important;
 }
 
+.q-tr-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+  margin-bottom: 2px !important;
+}
+
 .q-tr-badge {
-  font-size: 0.76rem !important;
+  font-size: 0.8rem !important;
   font-weight: 900 !important;
-  color: #38BDF8 !important;
-  background: rgba(15, 23, 42, 0.75) !important;
-  padding: 3px 8px !important;
+  color: #0F172A !important;
+  background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%) !important;
+  padding: 3px 10px !important;
   border-radius: 99px !important;
-  white-space: nowrap !important;
-  border: 1px solid rgba(56, 189, 248, 0.35) !important;
+  box-shadow: 0 2px 6px rgba(245, 158, 11, 0.4) !important;
   display: inline-flex !important;
   align-items: center !important;
+  gap: 4px !important;
+  letter-spacing: -0.2px !important;
+}
+
+.q-tr-audio-hint {
+  font-size: 0.72rem !important;
+  font-weight: 800 !important;
+  color: #38BDF8 !important;
+  background: rgba(14, 116, 144, 0.35) !important;
+  border: 1px solid rgba(56, 189, 248, 0.45) !important;
+  padding: 2px 8px !important;
+  border-radius: 99px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
 }
 
 .q-tr-text {
-  font-size: 0.94rem !important;
-  font-weight: 700 !important;
-  color: #F1F5F9 !important;
-  line-height: 1.4 !important;
-  flex: 1 !important;
+  font-size: 1.05rem !important;
+  font-weight: 800 !important;
+  color: #FFFFFF !important;
+  line-height: 1.45 !important;
+  letter-spacing: -0.2px !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6) !important;
+  user-select: text !important;
+}
+
+@media (max-width: 600px) {
+  .q-tr-banner {
+    padding: 10px 12px !important;
+    margin: 8px 0 10px 0 !important;
+    border-width: 2px !important;
+    border-left-width: 5px !important;
+  }
+  .q-tr-text {
+    font-size: 1.02rem !important;
+    line-height: 1.4 !important;
+  }
+  .q-tr-badge {
+    font-size: 0.78rem !important;
+    padding: 3px 8px !important;
+  }
+  .q-tr-audio-hint {
+    font-size: 0.68rem !important;
+  }
 }

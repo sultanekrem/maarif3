@@ -4175,3 +4175,226 @@ html, body {
 .app-modal-backdrop.keyboard-open .register-sub {
   display: none !important; /* Klavye açıkken uzun açıklamayı gizler */
 }
+
+/* ==========================================================================
+   🎯 MOBİL ÜST BAR & GERİ BUTONLARI KRİSTAL NETLİKTE TASARIM SİSTEMİ
+   - Geri butonları opak, parlak ve her ekranda %100 okunur.
+   - Mobil üst bar: Profil kartı tek satır, butonlar ferah, sıfır iç içe geçme.
+   ========================================================================== */
+
+/* 1. TÜM GERİ BUTONLARI — OPAK, PARLAK & %100 GÖRÜNÜR */
+.btn-back,
+.btn-back-quiz {
+  background: #1E293B !important; /* Opak koyu lacivert zemin - asla arka planla karışmaz */
+  color: #FFFFFF !important; /* Bembeyaz kalın yazı */
+  border: 2px solid #818CF8 !important; /* Belirgin neon çivit çerçeve */
+  border-radius: 99px !important;
+  padding: 8px 16px !important;
+  font-family: inherit !important;
+  font-size: 0.9rem !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5) !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  z-index: 15 !important;
+}
+
+.btn-back *,
+.btn-back-quiz * {
+  color: #FFFFFF !important;
+}
+
+.back-arrow {
+  color: #FDE047 !important; /* Altın sarısı ok - anında parlar */
+  font-size: 1.15rem !important;
+  font-weight: 900 !important;
+  display: inline-block !important;
+  line-height: 1 !important;
+}
+
+.btn-back:hover,
+.btn-back-quiz:hover {
+  background: #334155 !important;
+  border-color: #A5B4FC !important;
+  color: #FFFFFF !important;
+  transform: translateX(-2px) !important;
+}
+
+/* 2. HAP BİLGİ MODALINDAKİ KAPAT VE X BUTONLARI */
+.modal-close-x {
+  background: #1E293B !important;
+  border: 2px solid rgba(255, 255, 255, 0.25) !important;
+  color: #FFFFFF !important;
+  font-size: 1.1rem !important;
+  font-weight: 900 !important;
+  width: 38px !important;
+  height: 38px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+}
+.modal-close-x:hover {
+  background: #EF4444 !important;
+  border-color: #EF4444 !important;
+  color: #FFFFFF !important;
+}
+
+#btn-close-fact.btn-secondary-action {
+  background: #334155 !important;
+  color: #FFFFFF !important;
+  border: 2px solid rgba(255, 255, 255, 0.25) !important;
+  font-weight: 800 !important;
+  font-size: 0.95rem !important;
+  border-radius: 14px !important;
+  padding: 12px 20px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+#btn-close-fact.btn-secondary-action * {
+  color: #FFFFFF !important;
+}
+
+/* 3. MOBİL ANA MENÜ ÜST BAR (CROWDED HEADER ÇÖZÜMÜ) */
+@media (max-width: 640px) {
+  .app-header {
+    display: grid !important;
+    grid-template-columns: 1fr auto !important;
+    grid-template-areas:
+      "profile actions"
+      "stats stats" !important;
+    padding: 10px 12px !important;
+    gap: 8px 10px !important;
+    align-items: center !important;
+    background: rgba(15, 23, 42, 0.95) !important;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1) !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .header-student-profile {
+    grid-area: profile !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 5px 10px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.18) !important;
+    border-radius: 99px !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .student-avatar-wrap {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 1.25rem !important;
+    flex-shrink: 0 !important;
+  }
+
+  .student-text {
+    min-width: 0 !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+
+  .student-name-row {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    line-height: 1.2 !important;
+  }
+
+  .student-name {
+    font-size: 0.95rem !important;
+    font-weight: 800 !important;
+    color: #FFFFFF !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .edit-badge {
+    font-size: 0.68rem !important;
+    padding: 1px 6px !important;
+    background: rgba(245, 158, 11, 0.25) !important;
+    color: #FDE047 !important;
+    border: 1px solid rgba(245, 158, 11, 0.5) !important;
+    border-radius: 99px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+
+  .student-sub {
+    font-size: 0.72rem !important;
+    color: #93C5FD !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    line-height: 1.2 !important;
+    margin-top: 1px !important;
+  }
+
+  /* 4 Buton Grubu: Sıkışmadan yan yana */
+  .header-actions {
+    grid-area: actions !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    flex-shrink: 0 !important;
+    justify-self: end !important;
+  }
+
+  .action-circle-btn {
+    width: 34px !important;
+    height: 34px !important;
+    font-size: 0.95rem !important;
+    border-radius: 50% !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.2) !important;
+    color: #FFFFFF !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* 2. Satır: Yıldız ve Puan Barı (Tam Genişlikte Ferah) */
+  .header-stats {
+    grid-area: stats !important;
+    display: flex !important;
+    width: 100% !important;
+    gap: 8px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+
+  .stat-pill {
+    flex: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 6px 10px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 12px !important;
+  }
+
+  .pill-value {
+    font-size: 0.95rem !important;
+  }
+
+  .pill-label {
+    font-size: 0.72rem !important;
+  }
+}

@@ -85,8 +85,8 @@
     const metaEl = document.getElementById('header-student-meta');
     if (metaEl) {
       metaEl.textContent = prof.isRegistered 
-        ? `${prof.class || '3-A'} Sınıfı • No: ${prof.no || '—'} • 2026-2027 Maarif İstasyonu`
-        : 'Öğrenci Girişi Yapılmadı • Tıkla & Kaydol';
+        ? `${prof.class || '3-A'} • No: ${prof.no || '—'}`
+        : 'Giriş Yapılmadı • Tıkla';
     }
 
     // Genel Öğrenci İsmi Alanları

@@ -1,0 +1,42 @@
+{
+  "name": "Maarif Yıldızı 3 - 3. Sınıf MEB 2026-2027",
+  "short_name": "Maarif Yıldızı 3",
+  "description": "MEB 3. Sınıf 1. Dönem Resmî Ders Kitapları, 3 Adımlı Hap Bilgiler ve Başarı Sınavları",
+  "start_url": "./index.html",
+  "id": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": [
+    "standalone",
+    "fullscreen",
+    "window-controls-overlay"
+  ],
+  "orientation": "any",
+  "theme_color": "#0B0F19",
+  "background_color": "#0B0F19",
+  "icons": [
+    {
+      "src": "assets/maarif_logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "education",
+    "games"
+  ],
+  "lang": "tr"
+}

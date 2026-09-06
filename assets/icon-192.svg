@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#312E81"/>
+      <stop offset="50%" stop-color="#1E1B4B"/>
+      <stop offset="100%" stop-color="#0A0D18"/>
+    </radialGradient>
+
+    <linearGradient id="starLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB"/>
+      <stop offset="30%" stop-color="#FDE047"/>
+      <stop offset="70%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+
+    <linearGradient id="borderGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#78350F"/>
+    </linearGradient>
+
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Squircle Base with Gold Outer Ring -->
+  <rect width="512" height="512" rx="115" fill="url(#bgGlow)"/>
+  <rect x="10" y="10" width="492" height="492" rx="105" fill="none" stroke="url(#borderGold)" stroke-width="5" opacity="0.9"/>
+  <rect x="22" y="22" width="468" height="468" rx="95" fill="none" stroke="#6366F1" stroke-width="2" stroke-dasharray="8 8" opacity="0.5"/>
+
+  <!-- Subtle Orbital Rings -->
+  <ellipse cx="256" cy="275" rx="215" ry="82" fill="none" stroke="#38BDF8" stroke-width="3.5" opacity="0.55" transform="rotate(-28 256 275)"/>
+  <ellipse cx="256" cy="275" rx="215" ry="82" fill="none" stroke="#C084FC" stroke-width="3.5" opacity="0.45" transform="rotate(32 256 275)"/>
+
+  <!-- Orbital Particles -->
+  <circle cx="85" cy="210" r="13" fill="#38BDF8" filter="url(#glow)"/>
+  <circle cx="430" cy="335" r="14" fill="#F43F5E" filter="url(#glow)"/>
+  <circle cx="410" cy="165" r="9" fill="#10B981" filter="url(#glow)"/>
+  <circle cx="110" cy="360" r="10" fill="#FBBF24" filter="url(#glow)"/>
+
+  <!-- Glowing Star Backing -->
+  <circle cx="256" cy="275" r="140" fill="#F59E0B" opacity="0.2" filter="url(#glow)"/>
+
+  <!-- 3D Pure Iconic Star (Maarif Yıldızı - NO TEXT) -->
+  <g transform="translate(256, 275) scale(1.48)">
+    <!-- Light Facets -->
+    <polygon points="0,0 0,-100 23.5,-32.4" fill="#FFFBEB"/>
+    <polygon points="0,0 95.1,-30.9 38,12.4" fill="#FDE047"/>
+    <polygon points="0,0 58.8,80.9 0,40" fill="#F59E0B"/>
+    <polygon points="0,0 -58.8,80.9 -38,12.4" fill="#D97706"/>
+    <polygon points="0,0 -95.1,-30.9 -23.5,-32.4" fill="#FDE047"/>
+
+    <!-- Shaded Facets -->
+    <polygon points="0,0 0,-100 -23.5,-32.4" fill="#F59E0B"/>
+    <polygon points="0,0 95.1,-30.9 23.5,-32.4" fill="#D97706"/>
+    <polygon points="0,0 58.8,80.9 38,12.4" fill="#B45309"/>
+    <polygon points="0,0 -58.8,80.9 0,40" fill="#92400E"/>
+    <polygon points="0,0 -95.1,-30.9 -38,12.4" fill="#D97706"/>
+  </g>
+
+  <!-- Turkish Crescent and Star Emblem in Star Center -->
+  <g transform="translate(256, 275) scale(0.98)">
+    <circle cx="0" cy="0" r="28" fill="#DC2626" stroke="#FEF08A" stroke-width="2.5" filter="url(#glow)"/>
+    <!-- Crescent -->
+    <path d="M-8,-16 A17 17 0 1 0 13 12 A13 13 0 1 1 -8 -16 Z" fill="#FFFFFF"/>
+    <!-- Star -->
+    <polygon points="9,-3 12,4 4,0 14,0 7,4" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Graduation Cap perched proudly on top star point -->
+  <g transform="translate(256, 126) scale(1.22)">
+    <polygon points="0,-30 70,0 0,30 -70,0" fill="#1E1B4B" stroke="url(#borderGold)" stroke-width="3.5"/>
+    <path d="M-36,5 C-36,25 36,25 36,5 L36,15 C36,33 -36,33 -36,15 Z" fill="#0F172A" stroke="#4F46E5" stroke-width="2"/>
+    <circle cx="0" cy="0" r="6" fill="#F59E0B"/>
+    <path d="M0,0 Q40,10 46,38 Q48,54 50,60" fill="none" stroke="#FDE047" stroke-width="4.5" stroke-linecap="round" filter="url(#glow)"/>
+    <circle cx="50" cy="62" r="6" fill="#D97706"/>
+  </g>
+</svg>

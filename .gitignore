@@ -1,0 +1,4 @@
+# Temporary scratch files
+scratch_*.txt
+toc_*.txt
+*.log

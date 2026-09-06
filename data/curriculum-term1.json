@@ -1,0 +1,3116 @@
+{
+  "matematik": {
+    "title": "Matematik",
+    "subtitle": "3. Sınıf 1. Kitap (MEB Maarif Modeli)",
+    "icon": "📐",
+    "badge": "18 Konu",
+    "accent": "#4F46E5",
+    "bg_light": "#EEF2FF",
+    "themes": [
+      {
+        "id": "mat_tema1",
+        "title": "1. TEMA: Sayılar ve Nicelikler (1)",
+        "page_range": "s. 12 - 85",
+        "topics": [
+          {
+            "id": "mat_t1_1",
+            "title": "Sayıları Okuma ve Yazma",
+            "page": 12,
+            "desc": "3 basamaklı doğal sayılar, basamak ve basamak değerleri, yüzlük taban blokları.",
+            "badge": "Doğal Sayılar",
+            "activity": "read_write",
+            "tasks": [
+              {
+                "q": "Modellenen 3 basamaklı sayıyı bulun: 3 Yüzlük, 4 Onluk, 7 Birlik",
+                "options": [
+                  "347",
+                  "374",
+                  "437",
+                  "734"
+                ],
+                "ans": 0,
+                "hint": "3 yüzlük = 300, 4 onluk = 40, 7 birlik = 7"
+              },
+              {
+                "q": "Okunuşu 'Dört yüz seksen beş' olan sayının rakamla yazılışı nedir?",
+                "options": [
+                  "458",
+                  "485",
+                  "845",
+                  "405"
+                ],
+                "ans": 1,
+                "hint": "4 yüzlük, 8 onluk ve 5 birlikten oluşur."
+              },
+              {
+                "q": "692 sayısında '9' rakamının basamak değeri kaçtır?",
+                "options": [
+                  "9",
+                  "90",
+                  "900",
+                  "92"
+                ],
+                "ans": 1,
+                "hint": "9 rakamı onlar basamağında olduğundan değeri 9 x 10 = 90 dır."
+              },
+              {
+                "q": "Birler basamağında 3, yüzler basamağında 8, onlar basamağında 0 olan sayı kaçtır?",
+                "options": [
+                  "308",
+                  "830",
+                  "803",
+                  "83"
+                ],
+                "ans": 2,
+                "hint": "Yüzler: 8, Onlar: 0, Birler: 3 -> 803"
+              }
+            ],
+            "fact_card": {
+              "title": "Sayıları Okuma ve Yazma",
+              "emoji": "🧱",
+              "rule": "3 basamaklı bir sayıyı okurken soldan sağa doğru: önce Yüzler basamağını söyler ve sonuna 'yüz' ekleriz, sonra Onlar basamağını ve en son Birler basamağını okuruz. Sayıları yazıyla yazarken her kelimeyi mutlaka ayrı yazarız.",
+              "example": "452 sayısında: 4 yüzlük ('Dört yüz') + 5 onluk ('elli') + 2 birlik ('iki') = 'Dört yüz elli iki'. Markette 325 TL'lik bir mont gördüğünde bunu 'Üç yüz yirmi beş lira' diye okursun.",
+              "tip": "Basamağında 0 (sıfır) olan yer okunmaz! 704 sayısı 'Yedi yüz dört' diye okunur ('yedi yüz sıfır dört' DEMEYİZ). Ayrıca sayılar yazıyla yazılırken bitişik değil AYRI yazılır: 'üçyüz' YANLIŞ, 'üç yüz' DOĞRU!"
+            }
+          },
+          {
+            "id": "mat_t1_2",
+            "title": "Sayıları Çözümleme",
+            "page": 18,
+            "desc": "Sayıları yüzlük, onluk ve birliklerine ayırma ve basamak değerleri toplamı olarak yazma.",
+            "badge": "Çözümleme",
+            "activity": "expansion",
+            "tasks": [
+              {
+                "q": "562 sayısının doğru çözümlenmiş hali hangisidir?",
+                "options": [
+                  "500 + 60 + 2",
+                  "50 + 60 + 2",
+                  "500 + 6 + 2",
+                  "500 + 20 + 6"
+                ],
+                "ans": 0,
+                "hint": "5 yüzlük (500) + 6 onluk (60) + 2 birlik (2)"
+              },
+              {
+                "q": "700 + 40 + 8 şeklinde çözümlenen sayı kaçtır?",
+                "options": [
+                  "748",
+                  "784",
+                  "704",
+                  "478"
+                ],
+                "ans": 0,
+                "hint": "Yüzler 7, Onlar 4, Birler 8 = 748"
+              },
+              {
+                "q": "9 yüzlük ve 5 birlikten oluşan sayının çözümlenişi nasıldır?",
+                "options": [
+                  "900 + 50",
+                  "900 + 5",
+                  "90 + 5",
+                  "900 + 50 + 5"
+                ],
+                "ans": 1,
+                "hint": "Onlar basamağı 0 olduğu için 900 + 5 = 905"
+              },
+              {
+                "q": "319 sayısında basamak değeri en büyük olan rakamın basamak değeri kaçtır?",
+                "options": [
+                  "9",
+                  "10",
+                  "300",
+                  "319"
+                ],
+                "ans": 2,
+                "hint": "Yüzler basamağındaki 3 rakamının basamak değeri 300 dür."
+              }
+            ],
+            "fact_card": {
+              "title": "Sayıları Çözümleme",
+              "emoji": "🔍",
+              "rule": "Bir sayıyı çözümlerken her rakamı basamak değeriyle yazar veya basamak değerlerinin toplamı olarak ifade ederiz: (Yüzler x 100) + (Onlar x 10) + (Birler x 1).",
+              "example": "748 sayısını çözümlersek: 7 yüzlük (700) + 4 onluk (40) + 8 birlik (8) -> 700 + 40 + 8 = 748 eder. Kumbaranda 7 tane 100 TL, 4 tane 10 TL ve 8 tane 1 TL olması gibidir.",
+              "tip": "SAYI DEĞERİ ile BASAMAK DEĞERİNİ karıştırma! 748 sayısında 7'nin sayı değeri sadece 7'dir; ancak yüzler basamağında olduğu için basamak değeri 700'dür! 0'ın basamak değeri her zaman 0'dır."
+            }
+          },
+          {
+            "id": "mat_t1_3",
+            "title": "Sayıları Sıralama ve Karşılaştırma",
+            "page": 28,
+            "desc": "< ve > sembolleri ile üç basamaklı sayıları büyükten küçüğe ve küçükten büyüğe sıralama.",
+            "badge": "Sıralama",
+            "activity": "compare",
+            "tasks": [
+              {
+                "q": "478 .... 482 ifadesinde noktalı yere hangi sembol gelmelidir?",
+                "options": [
+                  "<",
+                  ">",
+                  "="
+                ],
+                "ans": 0,
+                "hint": "Yüzler basamakları aynı (4), onlar basamağına bakarsak 7 < 8 dir."
+              },
+              {
+                "q": "Aşağıdaki sıralamalardan hangisi DOĞRUDUR?",
+                "options": [
+                  "345 > 354 > 360",
+                  "712 < 721 < 750",
+                  "605 > 650 > 655",
+                  "820 < 802 < 890"
+                ],
+                "ans": 1,
+                "hint": "712 < 721 < 750 küçükten büyüğe doğru sıralanmıştır."
+              },
+              {
+                "q": "654, 621, 689 sayılarını BÜYÜKTEN KÜÇÜĞE doğru sıralayınız.",
+                "options": [
+                  "689 > 654 > 621",
+                  "621 > 654 > 689",
+                  "654 > 689 > 621",
+                  "689 > 621 > 654"
+                ],
+                "ans": 0,
+                "hint": "En büyük 689, sonra 654, en küçük 621 dir."
+              }
+            ],
+            "fact_card": {
+              "title": "Sayıları Sıralama ve Karşılaştırma",
+              "emoji": "🐊",
+              "rule": "3 basamaklı sayıları sıralarken ilk önce en soldaki YÜZLER basamağına bakılır. Yüzler basamağı büyük olan sayı her zaman daha büyüktür. Yüzler eşitse onlar basamağına, onlar da eşitse birler basamağına bakılır.",
+              "example": "645 ve 599 sayılarını karşılaştıralım: 6 yüzlük, 5 yüzlükten büyük olduğu için diğer basamaklara bakmaya gerek yoktur: 645 > 599!",
+              "tip": "Timsah sembolünün (< veya >) açık olan geniş ağzı her zaman BÜYÜK sayıyı yemek ister! Sivri uç ise küçük sayıyı gösterir: 820 > 815."
+            }
+          },
+          {
+            "id": "mat_t1_4",
+            "title": "Ritmik Sayma",
+            "page": 40,
+            "desc": "6, 7, 8 ve 9’ar ileri ve geri ritmik sayma örüntüleri, 100’lük tablodaki ilişkiler.",
+            "badge": "Ritmik Sayma",
+            "activity": "rhythm",
+            "tasks": [
+              {
+                "q": "6 - 12 - 18 - ? - 30 ritmik saymasında soru işareti yerine hangi sayı gelmelidir?",
+                "options": [
+                  "20",
+                  "22",
+                  "24",
+                  "26"
+                ],
+                "ans": 2,
+                "hint": "6 şar artıyor: 18 + 6 = 24"
+              },
+              {
+                "q": "7 den başlayıp 7 şer sayarken 4. söylediğimiz sayı hangisidir?",
+                "options": [
+                  "21",
+                  "28",
+                  "35",
+                  "14"
+                ],
+                "ans": 1,
+                "hint": "1. (7), 2. (14), 3. (21), 4. (28)"
+              },
+              {
+                "q": "8 - 16 - 24 - 32 - 40 - ? dizisinde sıradaki sayı kaçtır?",
+                "options": [
+                  "44",
+                  "46",
+                  "48",
+                  "50"
+                ],
+                "ans": 2,
+                "hint": "8 er ritmik sayma: 40 + 8 = 48"
+              },
+              {
+                "q": "9 - 18 - 27 - 36 - ? dizisinde sıradaki sayı kaçtır?",
+                "options": [
+                  "45",
+                  "42",
+                  "49",
+                  "54"
+                ],
+                "ans": 0,
+                "hint": "9 ar ritmik sayma: 36 + 9 = 45"
+              }
+            ],
+            "fact_card": {
+              "title": "Ritmik Sayma",
+              "emoji": "🎵",
+              "rule": "Ritmik sayma belirli bir kurala göre ileriye veya geriye doğru eşit adımlarla saymaktır. 6'şar, 7'şer, 8'er ve 9'ar sayarken her adımda tam o sayı kadar eklenir veya çıkarılır.",
+              "example": "6'şar ritmik sayma: 6, 12, 18, 24, 30, 36, 42, 48, 54, 60. Yumurtaları 6'şar paketlerken kaç yumurta olduğunu bu saymayla hemen bulabilirsin.",
+              "tip": "Ritmik saymalar çarpım tablosunun temelidir! Örneğin 7'şer sayarken 4. söylediğin sayı (7, 14, 21, 28) doğrudan 4 x 7 = 28 işleminin sonucudur!"
+            }
+          },
+          {
+            "id": "mat_t1_5",
+            "title": "Tek ve Çift Sayılar",
+            "page": 56,
+            "desc": "Birler basamağı kuralı, tek ve çift doğal sayıları ayırt etme.",
+            "badge": "Tek / Çift",
+            "activity": "odd_even",
+            "tasks": [
+              {
+                "q": "Bir sayının ÇİFT sayı olduğunu anlamak için hangi basamağına bakarız?",
+                "options": [
+                  "Yüzler basamağına",
+                  "Onlar basamağına",
+                  "Birler basamağına",
+                  "İlk basamağına"
+                ],
+                "ans": 2,
+                "hint": "Birler basamağı 0, 2, 4, 6, 8 olan sayılar çifttir."
+              },
+              {
+                "q": "Aşağıdaki sayılardan hangisi TEK sayıdır?",
+                "options": [
+                  "438",
+                  "560",
+                  "719",
+                  "824"
+                ],
+                "ans": 2,
+                "hint": "719 sayısının birler basamağında 9 vardır, dolayısıyla tektir."
+              },
+              {
+                "q": "Aşağıdaki sayılardan hangisi ÇİFT sayıdır?",
+                "options": [
+                  "311",
+                  "505",
+                  "672",
+                  "897"
+                ],
+                "ans": 2,
+                "hint": "672 sayısının birler basamağında 2 vardır (çift)."
+              }
+            ],
+            "fact_card": {
+              "title": "Tek ve Çift Sayılar",
+              "emoji": "👫",
+              "rule": "Bir doğal sayının tek mi çift mi olduğunu anlamak için SADECE EN SAĞDAKİ BİRLER basamağına bakılır. Birler basamağı 0, 2, 4, 6, 8 ise ÇİFT; 1, 3, 5, 7, 9 ise TEK sayıdır.",
+              "example": "748 sayısının birler basamağında 8 olduğu için ÇİFTTİR. 931 sayısının birler basamağında 1 olduğu için TEKTİR. Ayakkabılarımızı ikişer eşleştirdiğimizde tek kalmıyorsa çifttir.",
+              "tip": "Yüzler ve onlar basamağındaki sayılar ne kadar büyük olursa olsun tekliği ve çiftliği DEĞİŞTİRMEZ! 991 sayısında yüzler ve onlar 9 olsa bile birler basamağı 1 olduğu için TEK sayıdır!"
+            }
+          },
+          {
+            "id": "mat_t1_6",
+            "title": "Tek ve Çift Sayıları Toplama",
+            "page": 63,
+            "desc": "Tek+Tek=Çift, Çift+Çift=Çift, Tek+Çift=Tek toplam kuralı ve genellemeler.",
+            "badge": "Toplam Kuralları",
+            "activity": "sum_rules",
+            "tasks": [
+              {
+                "q": "İki TEK sayının toplamı her zaman nasıl bir sayıdır? (Örn: 3 + 5 = ?)",
+                "options": [
+                  "Her zaman Tek",
+                  "Her zaman Çift",
+                  "Bazen tek, bazen çift",
+                  "0 olur"
+                ],
+                "ans": 1,
+                "hint": "3 + 5 = 8 (Çift), Tek + Tek = ÇİFT"
+              },
+              {
+                "q": "Bir ÇİFT sayı ile bir TEK sayıyı toplarsak sonuç ne olur? (Örn: 4 + 3 = ?)",
+                "options": [
+                  "Çift sayı",
+                  "Tek sayı",
+                  "Değişir",
+                  "Asal sayı"
+                ],
+                "ans": 1,
+                "hint": "4 + 3 = 7 (Tek), Çift + Tek = TEK"
+              },
+              {
+                "q": "İki ÇİFT sayının toplamı nasıldır? (Örn: 6 + 4 = ?)",
+                "options": [
+                  "Çift sayı",
+                  "Tek sayı",
+                  "10 dur",
+                  "Negatif"
+                ],
+                "ans": 0,
+                "hint": "Çift + Çift = ÇİFT"
+              }
+            ],
+            "fact_card": {
+              "title": "Tek ve Çift Sayıları Toplama",
+              "emoji": "✨",
+              "rule": "İki sayıyı toplarken: Tek + Tek = ÇİFT, Çift + Çift = ÇİFT olur. Sadece Tek + Çift toplandığında sonuç TEK olur!",
+              "example": "3 (Tek) + 5 (Tek) = 8 (Çift). 4 (Çift) + 6 (Çift) = 10 (Çift). 3 (Tek) + 4 (Çift) = 7 (Tek).",
+              "tip": "Aynı tür sayıların toplamı her zaman ÇİFTTİR (Tek+Tek=Çift, Çift+Çift=Çift). Sadece farklı türler toplandığında sonuç TEK çıkar!"
+            }
+          },
+          {
+            "id": "mat_t1_7",
+            "title": "Sayı ve Şekil Örüntüleri",
+            "page": 68,
+            "desc": "Örüntünün kuralını belirleme, eksik terimi tamamlama.",
+            "badge": "Örüntü",
+            "activity": "pattern",
+            "tasks": [
+              {
+                "q": "15 - 22 - 29 - 36 - ? örüntüsünün kuralı ve sıradaki sayısı nedir?",
+                "options": [
+                  "7 şer artıyor, 43",
+                  "6 şar artıyor, 42",
+                  "8 er artıyor, 44",
+                  "5 er artıyor, 41"
+                ],
+                "ans": 0,
+                "hint": "Farklar: 22-15 = 7. 36 + 7 = 43"
+              },
+              {
+                "q": "80 - 75 - 70 - 65 - ? azalan örüntüsünde soru işareti yerine ne gelir?",
+                "options": [
+                  "55",
+                  "60",
+                  "50",
+                  "62"
+                ],
+                "ans": 1,
+                "hint": "5 er azalan örüntü: 65 - 5 = 60"
+              }
+            ],
+            "fact_card": {
+              "title": "Sayı ve Şekil Örüntüleri",
+              "emoji": "🕵️",
+              "rule": "Sayı veya şekil örüntüsünde sayılar arasındaki artış veya azalış miktarı her zaman kurala bağlıdır. Önce yan yana iki sayı arasındaki fark bulunarak kural belirlenir.",
+              "example": "12 - 17 - 22 - 27 - ? örüntüsünde: 17 - 12 = 5 artmış. Kural: 'Sayılar 5'er artıyor'. O halde soru işareti yerine 27 + 5 = 32 gelmelidir.",
+              "tip": "Bazen örüntüler iki farklı kural içerebilir (örneğin: 2 ekle, 1 çıkar). Sadece ilk iki sayıya değil, tüm sıraya bakarak kuralı doğrula!"
+            }
+          },
+          {
+            "id": "mat_t1_8",
+            "title": "Nesnelerin Sayılarını Tahmin Etme & Yuvarlama",
+            "page": 74,
+            "desc": "En yakın onluğa ve yüzlüğe yuvarlama kuralları.",
+            "badge": "Yuvarlama",
+            "activity": "rounding",
+            "tasks": [
+              {
+                "q": "467 sayısı en yakın ONLUĞA yuvarlandığında hangi sayı elde edilir?",
+                "options": [
+                  "460",
+                  "470",
+                  "500",
+                  "400"
+                ],
+                "ans": 1,
+                "hint": "Birler basamağı 7 (>= 5) olduğu için sonraki onluğa yani 470 e yuvarlanır."
+              },
+              {
+                "q": "342 sayısı en yakın ONLUĞA yuvarlandığında hangisi olur?",
+                "options": [
+                  "340",
+                  "350",
+                  "300",
+                  "345"
+                ],
+                "ans": 0,
+                "hint": "Birler basamağı 2 (< 5) olduğundan kendi onluğuna yani 340 a yuvarlanır."
+              },
+              {
+                "q": "584 sayısı en yakın YÜZLÜĞE yuvarlandığında hangisi olur?",
+                "options": [
+                  "500",
+                  "600",
+                  "580",
+                  "590"
+                ],
+                "ans": 1,
+                "hint": "Son iki basamağı 84 (>= 50) olduğundan 600 e yuvarlanır."
+              }
+            ],
+            "fact_card": {
+              "title": "Nesnelerin Sayılarını Tahmin Etme & Yuvarlama",
+              "emoji": "🎯",
+              "rule": "Bir sayıyı en yakın ONLUĞA yuvarlarken birler basamağına bakılır: 1, 2, 3, 4 ise kendi onluğuna (aşağı), 5, 6, 7, 8, 9 ise bir üst onluğa (yukarı) yuvarlanır.",
+              "example": "73 sayısı 70'e yuvarlanır (çünkü birler basamağı 3). 75 sayısı ise 80'e yuvarlanır (çünkü 5 ve üstü yukarı gider).",
+              "tip": "5 sayısı tam ortadadır ve her zaman YUKARI (üst onluğa) yuvarlanır! Sayı 185 ise en yakın onluğu 190'dır."
+            }
+          }
+        ],
+        "exam": {
+          "title": "1. Tema Değerlendirme Sınavı (Sayılar ve Nicelikler 1)",
+          "book_ref": "MEB Matematik 1. Kitap s. 79 - 85",
+          "questions": [
+            {
+              "q": "7 yüzlük, 0 onluk ve 4 birlikten oluşan doğal sayının okunuşu nedir?",
+              "options": [
+                "Yedi yüz kırk",
+                "Yedi yüz dört",
+                "Yetmiş dört",
+                "Yedi yüz kırk dört"
+              ],
+              "ans": 1,
+              "hint": "704 sayısı \"Yedi yüz dört\" diye okunur."
+            },
+            {
+              "q": "583 sayısının basamak değerleri toplamı kaçtır?",
+              "options": [
+                "583",
+                "16",
+                "500 + 80",
+                "580"
+              ],
+              "ans": 0,
+              "hint": "Bir sayının basamak değerleri toplamı sayının kendisine eşittir (500+80+3=583)."
+            },
+            {
+              "q": "346 < A < 352 sıralamasında A yerine yazılabilecek EN BÜYÜK ÇİFT sayı kaçtır?",
+              "options": [
+                "350",
+                "351",
+                "348",
+                "352"
+              ],
+              "ans": 0,
+              "hint": "352 den küçük sayılar: 351, 350, 349... En büyük çift sayı 350 dir."
+            },
+            {
+              "q": "42 den başlayarak 6 şar ileriye doğru sayarken 5. söylediğimiz sayı kaçtır?",
+              "options": [
+                "60",
+                "66",
+                "72",
+                "54"
+              ],
+              "ans": 1,
+              "hint": "1.(42), 2.(48), 3.(54), 4.(60), 5.(66)"
+            },
+            {
+              "q": "İki basamaklı en büyük tek sayı ile üç basamaklı en küçük çift sayının toplamı kaçtır?",
+              "options": [
+                "199",
+                "200",
+                "198",
+                "201"
+              ],
+              "ans": 0,
+              "hint": "İki basamaklı en büyük tek: 99. Üç basamaklı en küçük çift: 100. Toplam: 99 + 100 = 199."
+            },
+            {
+              "q": "Tek bir sayı ile çift bir sayının toplamı her zaman nasıl bir sayıdır?",
+              "options": [
+                "Çift",
+                "Tek",
+                "Sıfır",
+                "Belli olmaz"
+              ],
+              "ans": 1,
+              "hint": "Tek + Çift = Tek (Örn: 3 + 4 = 7)"
+            },
+            {
+              "q": "34 - 42 - 50 - 58 - ? örüntüsünde soru işareti yerine hangi sayı gelmelidir?",
+              "options": [
+                "64",
+                "66",
+                "68",
+                "70"
+              ],
+              "ans": 1,
+              "hint": "8 er artan bir örüntüdür: 58 + 8 = 66."
+            },
+            {
+              "q": "674 sayısı en yakın ONLUĞA ve YÜZLÜĞE yuvarlandığında sırasıyla hangi sayılar elde edilir?",
+              "options": [
+                "670 ve 700",
+                "680 ve 700",
+                "670 ve 600",
+                "680 ve 600"
+              ],
+              "ans": 0,
+              "hint": "Birler basamağı 4 olduğundan 670, son iki basamağı 74 olduğundan 700."
+            }
+          ]
+        }
+      },
+      {
+        "id": "mat_tema2",
+        "title": "2. TEMA: Sayılar ve Nicelikler (2)",
+        "page_range": "s. 86 - 157",
+        "topics": [
+          {
+            "id": "mat_t2_1",
+            "title": "Bütün, Yarım ve Çeyreğin Kesir Gösterimi",
+            "page": 86,
+            "desc": "Kesir kavramı, birim kesir, bütün, yarım ve çeyrek modelleri.",
+            "badge": "Kesirler",
+            "activity": "fractions",
+            "tasks": [
+              {
+                "q": "Bir bütünün 2 eş parçaya bölünmesiyle oluşan parçalardan birine ne ad verilir ve nasıl yazılır?",
+                "options": [
+                  "Çeyrek, 1/4",
+                  "Yarım, 1/2",
+                  "Bütün, 1/1",
+                  "Payda, 2/1"
+                ],
+                "ans": 1,
+                "hint": "1 bütün = 2 yarım (1/2)"
+              },
+              {
+                "q": "Bir bütünün 4 eş parçasından birini gösteren kesir hangisidir?",
+                "options": [
+                  "1/2",
+                  "1/3",
+                  "1/4",
+                  "4/1"
+                ],
+                "ans": 2,
+                "hint": "Çeyrek 1/4 olarak gösterilir."
+              },
+              {
+                "q": "2 tam elma kaç tane yarım elma eder?",
+                "options": [
+                  "2",
+                  "3",
+                  "4",
+                  "8"
+                ],
+                "ans": 2,
+                "hint": "1 tam = 2 yarım ise 2 tam = 2 x 2 = 4 yarım."
+              }
+            ],
+            "fact_card": {
+              "title": "Bütün, Yarım ve Çeyreğin Kesir Gösterimi",
+              "emoji": "🍕",
+              "rule": "Bir bütünün tamamına BÜTÜN (1/1), iki eş parçasından her birine YARIM (1/2), dört eş parçasından her birine ÇEYREK (1/4) denir.",
+              "example": "1 bütün elmayı ortadan ikiye kestiğimizde 2 yarım elma, dörde böldüğümüzde ise 4 çeyrek elma elde ederiz.",
+              "tip": "Kesir gösteriminde alttaki sayı (payda) bütünün kaç parçaya bölündüğünü, üstteki sayı (pay) ise kaç parçanın alındığını gösterir!"
+            }
+          },
+          {
+            "id": "mat_t2_2",
+            "title": "Bir Bütünü Oluşturan Eş Parçalar",
+            "page": 92,
+            "desc": "Şekilleri eş parçalara bölme ve modelleme.",
+            "badge": "Eş Parçalar",
+            "activity": "equal_parts",
+            "tasks": [
+              {
+                "q": "Bir pastayı 6 eş dilime böldük ve 2 dilimini yedik. Yenen kısmı ifade eden kesir hangisidir?",
+                "options": [
+                  "2/6",
+                  "6/2",
+                  "4/6",
+                  "1/6"
+                ],
+                "ans": 0,
+                "hint": "Bütün 6 parça (payda=6), alınan 2 parça (pay=2) -> 2/6"
+              },
+              {
+                "q": "Payı 3, paydası 8 olan kesir nasıl yazılır?",
+                "options": [
+                  "8/3",
+                  "3/8",
+                  "38",
+                  "1/3"
+                ],
+                "ans": 1,
+                "hint": "Pay üste, payda alta yazılır: 3/8"
+              }
+            ],
+            "fact_card": {
+              "title": "Bir Bütünü Oluşturan Eş Parçalar",
+              "emoji": "🍰",
+              "rule": "Bir bütünün kesir oluşturabilmesi için parçaların mutlaka birbirine EŞİT (özdeş) büyüklükte olması şarttır.",
+              "example": "Bir pizzayı biri büyük biri küçük iki parçaya bölersen bunlara 'yarım' denemez. Yarım olması için tam ortadan eşit bölünmelidir.",
+              "tip": "Sorularda farklı büyüklükte bölünmüş şekiller gösterilirse tuzaktır; parçalar eşit değilse kesir ifade etmez!"
+            }
+          },
+          {
+            "id": "mat_t2_3",
+            "title": "Pay ve Payda Arasındaki İlişki",
+            "page": 97,
+            "desc": "Pay ve payda terimlerinin anlamı ve birim kesirler.",
+            "badge": "Pay & Payda",
+            "activity": "numerator_denom",
+            "tasks": [
+              {
+                "q": "Bir kesirde bütünün kaç eş parçaya ayrıldığını hangi terim gösterir?",
+                "options": [
+                  "Pay",
+                  "Kesir çizgisi",
+                  "Payda",
+                  "Bölüm"
+                ],
+                "ans": 2,
+                "hint": "Payda bütünü bölen eş parça sayısını gösterir."
+              },
+              {
+                "q": "Payı 1 olan kesirlere ne ad verilir? (Örn: 1/2, 1/3, 1/5)",
+                "options": [
+                  "Birim Kesir",
+                  "Bileşik Kesir",
+                  "Tam Kesir",
+                  "Çift Kesir"
+                ],
+                "ans": 0,
+                "hint": "Payı 1 olan her kesre Birim Kesir denir."
+              }
+            ],
+            "fact_card": {
+              "title": "Pay ve Payda Arasındaki İlişki",
+              "emoji": "⚖️",
+              "rule": "Kesir çizgisinin ÜSTÜNDEKİ sayı PAY (alınan parça sayısı), ALTINDAKİ sayı PAYDA (bütünün toplam eş parça sayısı) olarak adlandırılır.",
+              "example": "3/4 kesrinde payda 4'tür (bütün 4 parçaya bölünmüş), pay ise 3'tür (3 parçası boyanmış veya yenmiş).",
+              "tip": "Aklında tutmak için: PAYDA 'Padişah' gibi altta tahtında oturur (taban), PAY ise üstte gezer!"
+            }
+          },
+          {
+            "id": "mat_t2_4",
+            "title": "Analog ve Dijital Saatler",
+            "page": 108,
+            "desc": "Öğleden önce ve öğleden sonra saat okuma, saat ve dakika ilişkisi.",
+            "badge": "Saat Okuma",
+            "activity": "clocks",
+            "tasks": [
+              {
+                "q": "Öğleden sonra saat 3, dijital saatte nasıl gösterilir?",
+                "options": [
+                  "03:00",
+                  "13:00",
+                  "15:00",
+                  "18:00"
+                ],
+                "ans": 2,
+                "hint": "Öğleden sonra için 12 ekleriz: 12 + 3 = 15:00"
+              },
+              {
+                "q": "Yelkovan 6'nın üzerindeyken saat neyi gösterir?",
+                "options": [
+                  "Çeyrek geçiyor",
+                  "Buçuk (:30)",
+                  "Tam saat",
+                  "Çeyrek var"
+                ],
+                "ans": 1,
+                "hint": "6 rakamı 30 dakikayı (buçuğu) temsil eder."
+              },
+              {
+                "q": "Dijital saat 14:15 iken bu saat nasıl okunur?",
+                "options": [
+                  "İkiyi çeyrek geçiyor",
+                  "İkiye çeyrek var",
+                  "İkiyi yirmi geçiyor",
+                  "Biri çeyrek geçiyor"
+                ],
+                "ans": 0,
+                "hint": "14 saat 2 demektir, 15 dakika çeyrek geçiyor demektir."
+              }
+            ],
+            "fact_card": {
+              "title": "Analog ve Dijital Saatler",
+              "emoji": "⏰",
+              "rule": "Analog saatte kısa kol AKREP (saati), uzun kol YELKOVAN (dakikayı) gösterir. Yelkovan 12'deyken tam saat, 6'dayken buçuk (30 dk), 3'teyken çeyrek geçe (15 dk), 9'dayken çeyrek vardır (45 dk).",
+              "example": "Akrep 4 ile 5 arasında, yelkovan 6'da ise saat '04.30' veya 'Dördü buçuk geçiyor' demektir.",
+              "tip": "Öğleden sonraki saatleri okurken saate 12 ekleriz! Örneğin öğleden sonra saat 3, dijital saatte 15.00 olarak görünür (3 + 12 = 15)."
+            }
+          },
+          {
+            "id": "mat_t2_5",
+            "title": "Zaman Ölçü Birimleri",
+            "page": 114,
+            "desc": "Saat, dakika, gün, hafta, ay, mevsim, yıl dönüşümleri.",
+            "badge": "Zaman Birimleri",
+            "activity": "time_units",
+            "tasks": [
+              {
+                "q": "1 saat kaç dakikadır?",
+                "options": [
+                  "30 dakika",
+                  "60 dakika",
+                  "100 dakika",
+                  "24 dakika"
+                ],
+                "ans": 1,
+                "hint": "1 saat tam olarak 60 dakikadır."
+              },
+              {
+                "q": "1 yılda kaç mevsim ve kaç ay vardır?",
+                "options": [
+                  "4 mevsim, 12 ay",
+                  "2 mevsim, 6 ay",
+                  "4 mevsim, 10 ay",
+                  "12 mevsim, 4 ay"
+                ],
+                "ans": 0,
+                "hint": "Sonbahar, Kış, İlkbahar, Yaz (4 mevsim) ve 12 ay."
+              },
+              {
+                "q": "1 gün kaç saattir?",
+                "options": [
+                  "12 saat",
+                  "24 saat",
+                  "48 saat",
+                  "60 saat"
+                ],
+                "ans": 1,
+                "hint": "Dünya kendi ekseni etrafında 1 tam turunu 24 saatte tamamlar."
+              }
+            ],
+            "fact_card": {
+              "title": "Zaman Ölçü Birimleri",
+              "emoji": "📅",
+              "rule": "1 yıl = 12 ay = 52 hafta = 365 gün 6 saat. 1 ay = 30 gün (yaklaşık 4 hafta). 1 hafta = 7 gün. 1 gün = 24 saat. 1 saat = 60 dakika.",
+              "example": "Okulda 2 ders saati 40 + 40 = 80 dakika sürer. Bu da 1 saat 20 dakikaya eşittir.",
+              "tip": "Şubat ayı 4 yılda bir 29 gün çeker (Artık yıl). Diğer yıllar 28 gündür."
+            }
+          },
+          {
+            "id": "mat_t2_6",
+            "title": "Olayların Oluş Sürelerini Tahmin Etme",
+            "page": 124,
+            "desc": "Günlük aktivitelerin sürelerini tahmin etme ve planlama.",
+            "badge": "Süre Tahmini",
+            "activity": "estimate_duration",
+            "tasks": [
+              {
+                "q": "Diş fırçalama süresi yaklaşık olarak ne kadardır?",
+                "options": [
+                  "2 saniye",
+                  "2 dakika",
+                  "2 saat",
+                  "2 gün"
+                ],
+                "ans": 1,
+                "hint": "Dişlerimizi günde 2 kez en az 2 dakika fırçalamalıyız."
+              },
+              {
+                "q": "Bir teneffüs süresi okullarda genellikle kaç dakikadır?",
+                "options": [
+                  "15 dakika",
+                  "60 dakika",
+                  "1 dakika",
+                  "3 saat"
+                ],
+                "ans": 0,
+                "hint": "Standart okul teneffüsleri 10-15 dakika sürer."
+              }
+            ],
+            "fact_card": {
+              "title": "Olayların Oluş Sürelerini Tahmin Etme",
+              "emoji": "⏳",
+              "rule": "Günlük olayların sürelerini tahmin ederken saniye, dakika, saat ve gün birimlerinden en uygun olanını seçeriz.",
+              "example": "Göz kırpmak saniyeler sürer, diş fırçalamak 2-3 dakika, bir okul günü 6-7 saat, yaz tatili ise 3 ay (yaklaşık 90 gün) sürer.",
+              "tip": "Soru çözerken birimlere dikkat et: 'Bir film kaç dakika sürer?' sorusuna saniye veya gün cevabı verilemez!"
+            }
+          },
+          {
+            "id": "mat_t2_7",
+            "title": "Uzunluk ve Kütle Ölçü Birimleri",
+            "page": 126,
+            "desc": "Metre (m), santimetre (cm), kilogram (kg), gram (g) dönüşümleri.",
+            "badge": "Ölçme",
+            "activity": "units_measure",
+            "tasks": [
+              {
+                "q": "1 metre (m) kaç santimetredir (cm)?",
+                "options": [
+                  "10 cm",
+                  "100 cm",
+                  "1000 cm",
+                  "60 cm"
+                ],
+                "ans": 1,
+                "hint": "1 m = 100 cm"
+              },
+              {
+                "q": "1 kilogram (kg) kaç gramdır (g)?",
+                "options": [
+                  "100 g",
+                  "500 g",
+                  "1000 g",
+                  "10 g"
+                ],
+                "ans": 2,
+                "hint": "1 kg = 1000 g"
+              },
+              {
+                "q": "Silgimizin boyunu ölçerken en uygun birim hangisidir?",
+                "options": [
+                  "Kilometre",
+                  "Metre",
+                  "Santimetre",
+                  "Kilogram"
+                ],
+                "ans": 2,
+                "hint": "Küçük nesnelerin boyunu santimetre (cm) ile ölçeriz."
+              }
+            ],
+            "fact_card": {
+              "title": "Uzunluk ve Kütle Ölçü Birimleri",
+              "emoji": "📏",
+              "rule": "Uzunlukları Metre (m) ve Santimetre (cm) ile; kütleleri (ağırlıkları) Kilogram (kg) ve Gram (g) ile ölçeriz. 1 m = 100 cm, 1 kg = 1000 g.",
+              "example": "Boyumuz yaklaşık 130 cm'dir. Çantamızın ağırlığı yaklaşık 3 kg, bir elmanın ağırlığı ise yaklaşık 150 gramdır.",
+              "tip": "Hafif nesneler (kalem, silgi, yüzük) GRAM ile; ağır nesneler (insan, karpuz, çanta) KİLOGRAM ile ölçülür!"
+            }
+          },
+          {
+            "id": "mat_t2_8",
+            "title": "Madenî ve Kâğıt Paralar",
+            "page": 144,
+            "desc": "Lira ve kuruş ilişkisi (1 TL = 100 Kr), market hesabı ve para üstü.",
+            "badge": "Paralarımız",
+            "activity": "money_calc",
+            "tasks": [
+              {
+                "q": "1 Türk Lirası kaç kuruştur?",
+                "options": [
+                  "10 Kuruş",
+                  "50 Kuruş",
+                  "100 Kuruş",
+                  "1000 Kuruş"
+                ],
+                "ans": 2,
+                "hint": "1 TL = 100 Kuruştur."
+              },
+              {
+                "q": "Fiyatı 35 TL olan kitaba 50 TL veren Ali kaç TL para üstü alır?",
+                "options": [
+                  "10 TL",
+                  "15 TL",
+                  "25 TL",
+                  "20 TL"
+                ],
+                "ans": 1,
+                "hint": "50 - 35 = 15 TL para üstü alır."
+              },
+              {
+                "q": "4 adet 25 kuruş toplam kaç TL eder?",
+                "options": [
+                  "50 Kuruş",
+                  "1 TL",
+                  "2 TL",
+                  "4 TL"
+                ],
+                "ans": 1,
+                "hint": "25 x 4 = 100 Kuruş = 1 TL"
+              }
+            ],
+            "fact_card": {
+              "title": "Madenî ve Kâğıt Paralar",
+              "emoji": "💰",
+              "rule": "Para birimimiz Türk Lirası (TL) ve Kuruş (kr)'tur. 1 TL = 100 Kuruştur. En büyük kağıt paramız 200 TL, en küçük madeni paramız 1 Kuruştur.",
+              "example": "Tanesi 25 kuruş olan sakızdan 4 tane alırsan: 25 + 25 + 25 + 25 = 100 Kuruş, yani tam 1 TL ödersin.",
+              "tip": "Kuruşları toplarken 100 kuruşa ulaştığında bunu 1 TL olarak sol tarafa devretmeyi unutma!"
+            }
+          }
+        ],
+        "exam": {
+          "title": "2. Tema Değerlendirme Sınavı (Kesirler, Zaman ve Ölçme)",
+          "book_ref": "MEB Matematik 1. Kitap s. 153 - 157",
+          "questions": [
+            {
+              "q": "Payı 1 olan ve bir bütünün eş parçalarından birini gösteren kesirlere ne ad verilir?",
+              "options": [
+                "Birim Kesir",
+                "Bileşik Kesir",
+                "Tam Kesir",
+                "Yarım Kesir"
+              ],
+              "ans": 0,
+              "hint": "Payı 1 olan kesirler birim kesirdir (1/2, 1/4, 1/8 gibi)."
+            },
+            {
+              "q": "8 dilime ayrılmış bir pizzanın 3 dilimini yiyen Burak, pizzanın kaçta kaçını yemiştir?",
+              "options": [
+                "3/8",
+                "8/3",
+                "5/8",
+                "1/8"
+              ],
+              "ans": 0,
+              "hint": "Bütün dilim sayısı payda (8), yenen kısım pay (3) -> 3/8."
+            },
+            {
+              "q": "Öğleden sonra saat 4'ü 20 geçe dijital saatte nasıl gösterilir?",
+              "options": [
+                "16:20",
+                "04:20",
+                "14:20",
+                "18:20"
+              ],
+              "ans": 0,
+              "hint": "Öğleden sonra saat 4: 12 + 4 = 16. Dakika 20 -> 16:20."
+            },
+            {
+              "q": "Bir terzi 4 metre kumaşın 160 santimetresini kullandı. Geriye kaç cm kumaş kaldı?",
+              "options": [
+                "240 cm",
+                "260 cm",
+                "140 cm",
+                "340 cm"
+              ],
+              "ans": 0,
+              "hint": "4 m = 400 cm. 400 - 160 = 240 cm."
+            },
+            {
+              "q": "Tanesi 75 kuruş olan sakızlardan 4 tane alan Ece, satıcıya 5 TL verirse kaç TL para üstü alır?",
+              "options": [
+                "2 TL",
+                "3 TL",
+                "1 TL",
+                "2 TL 50 Kr"
+              ],
+              "ans": 0,
+              "hint": "4 x 75 Kr = 300 Kr = 3 TL. 5 TL - 3 TL = 2 TL para üstü."
+            }
+          ]
+        }
+      },
+      {
+        "id": "mat_tema3",
+        "title": "3. TEMA: İşlemlerden Cebirsel Düşünmeye",
+        "page_range": "s. 158 - 191",
+        "topics": [
+          {
+            "id": "mat_t3_1",
+            "title": "Toplama ve Çıkarma Sonuçlarını Tahmin Etme",
+            "page": 160,
+            "desc": "Yuvarlama yöntemiyle zihinden işlem tahmini ve karşılaştırma.",
+            "badge": "Tahmin & İşlem",
+            "activity": "estimate_ops",
+            "tasks": [
+              {
+                "q": "48 + 31 işleminin sonucunu en yakın onluğa yuvarlayarak tahmin ediniz.",
+                "options": [
+                  "70",
+                  "80",
+                  "90",
+                  "75"
+                ],
+                "ans": 1,
+                "hint": "48 -> 50, 31 -> 30; 50 + 30 = 80"
+              },
+              {
+                "q": "72 - 29 işleminin onluğa yuvarlanarak yapılan tahmini sonucu kaçtır?",
+                "options": [
+                  "40",
+                  "50",
+                  "30",
+                  "45"
+                ],
+                "ans": 0,
+                "hint": "72 -> 70, 29 -> 30; 70 - 30 = 40"
+              }
+            ],
+            "fact_card": {
+              "title": "Toplama ve Çıkarma Sonuçlarını Tahmin Etme",
+              "emoji": "🧠",
+              "rule": "Toplama ve çıkarma sonuçlarını tahmin ederken sayıları en yakın ONLUĞA yuvarlayıp zihinden hesaplarız. Gerçek sonuç ile tahmin arasındaki fark 'Hata Payı'dır.",
+              "example": "218 + 173 işlemini tahmin edelim: 218 -> 220, 173 -> 170. Tahmin: 220 + 170 = 390. Gerçek sonuç: 391. Fark sadece 1'dir!",
+              "tip": "Tahmin sorularında işlem yapmadan önce sayıları yuvarla. Asla önce tam sonucu bulup sonra yuvarlama, bu tahmin mantığına uymaz!"
+            }
+          },
+          {
+            "id": "mat_t3_2",
+            "title": "Toplama ve Çıkarma İşlemlerini Çözümleme",
+            "page": 181,
+            "desc": "Basamaklara ayırarak işlem yapma ve verilmeyen terimi bulma (kutu hesabı).",
+            "badge": "Verilmeyeni Bul",
+            "activity": "missing_term",
+            "tasks": [
+              {
+                "q": "45 + [ ? ] = 82 işleminde verilmeyen toplanan kaçtır?",
+                "options": [
+                  "37",
+                  "47",
+                  "27",
+                  "35"
+                ],
+                "ans": 0,
+                "hint": "Toplama işleminde verilmeyeni bulmak için: 82 - 45 = 37"
+              },
+              {
+                "q": "[ ? ] - 26 = 54 işleminde eksilen sayı kaçtır?",
+                "options": [
+                  "28",
+                  "70",
+                  "80",
+                  "78"
+                ],
+                "ans": 2,
+                "hint": "Eksileni bulmak için çıkan ile fark toplanır: 54 + 26 = 80"
+              }
+            ],
+            "fact_card": {
+              "title": "Toplama ve Çıkarma İşlemlerini Çözümleme",
+              "emoji": "📦",
+              "rule": "İşlemleri basamak değerlerine göre çözümleyerek yapmak hata yapmayı önler: Yüzlükleri kendi arasında, onlukları kendi arasında, birlikleri kendi arasında toplar veya çıkarırız.",
+              "example": "345 + 231 = (300+200) + (40+30) + (5+1) = 500 + 70 + 6 = 576.",
+              "tip": "Eldeli toplama yaparken elde edilen onluğu onlar basamağı toplamına eklemeyi unutma!"
+            }
+          }
+        ],
+        "exam": {
+          "title": "3. Tema Değerlendirme Sınavı (Cebirsel Düşünme & Zihinden İşlem)",
+          "book_ref": "MEB Matematik 1. Kitap s. 185 - 191",
+          "questions": [
+            {
+              "q": "58 + 39 işleminin sonucunu en yakın onluklara yuvarlayarak tahmin ettiğimizde sonuç kaç olur?",
+              "options": [
+                "100",
+                "90",
+                "110",
+                "95"
+              ],
+              "ans": 0,
+              "hint": "58 -> 60, 39 -> 40. 60 + 40 = 100."
+            },
+            {
+              "q": "[ ▲ ] + 148 = 362 işleminde verilmeyen toplanan [ ▲ ] kaçtır?",
+              "options": [
+                "214",
+                "224",
+                "114",
+                "510"
+              ],
+              "ans": 0,
+              "hint": "Verilmeyen toplanan = Toplam - Verilen toplanan: 362 - 148 = 214."
+            },
+            {
+              "q": "500 - [ ■ ] = 175 işleminde verilmeyen çıkan [ ■ ] kaçtır?",
+              "options": [
+                "325",
+                "335",
+                "675",
+                "425"
+              ],
+              "ans": 0,
+              "hint": "Çıkan = Eksilen - Fark: 500 - 175 = 325."
+            }
+          ]
+        }
+      }
+    ],
+    "final_exam": {
+      "title": "🏆 1. Dönem Matematik Büyük Başarı Sınavı",
+      "book_ref": "3. Sınıf MEB Matematik 1. Dönem Tüm Temalar (s. 12 - 191)",
+      "questions": [
+        {
+          "q": "600 + 50 + 9 şeklinde çözümlenen sayı hangisidir?",
+          "options": [
+            "659",
+            "695",
+            "569",
+            "650"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "348 sayısının en yakın onluğa yuvarlanmış hali nedir?",
+          "options": [
+            "340",
+            "350",
+            "400",
+            "300"
+          ],
+          "ans": 1
+        },
+        {
+          "q": "245 + 138 işleminin sonucu kaçtır?",
+          "options": [
+            "373",
+            "383",
+            "385",
+            "393"
+          ],
+          "ans": 1
+        },
+        {
+          "q": "500 - 165 işleminin sonucu kaçtır?",
+          "options": [
+            "335",
+            "345",
+            "435",
+            "325"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "4 kutunun her birinde 8 çikolata vardır. Toplam kaç çikolata vardır?",
+          "options": [
+            "24",
+            "28",
+            "32",
+            "36"
+          ],
+          "ans": 2
+        },
+        {
+          "q": "27 bilyeyi 3 arkadaş eşit paylaşırsa her birine kaç bilye düşer?",
+          "options": [
+            "7",
+            "8",
+            "9",
+            "10"
+          ],
+          "ans": 2
+        },
+        {
+          "q": "Aşağıdaki sayılardan hangisi ÇİFT sayıdır?",
+          "options": [
+            "341",
+            "587",
+            "690",
+            "705"
+          ],
+          "ans": 2
+        },
+        {
+          "q": "15, 21, 27, 33, ? örüntüsünde soru işareti yerine hangi sayı gelmelidir?",
+          "options": [
+            "37",
+            "38",
+            "39",
+            "40"
+          ],
+          "ans": 2
+        }
+      ]
+    }
+  },
+  "fenbilimleri": {
+    "title": "Fen Bilimleri",
+    "subtitle": "3. Sınıf 1. Kitap (MEB Maarif Modeli)",
+    "icon": "🔬",
+    "badge": "11 Konu",
+    "accent": "#059669",
+    "bg_light": "#ECFDF5",
+    "themes": [
+      {
+        "id": "fen_u1",
+        "title": "1. ÜNİTE: Bilimsel Keşif Yolculuğu",
+        "page_range": "s. 12 - 38",
+        "topics": [
+          {
+            "id": "fen_u1_1",
+            "title": "Güvenlik Sembolleri",
+            "page": 12,
+            "desc": "Laboratuvar ve deneylerde koruyucu gözlük, eldiven, ısı, elektrik, cam kırılması sembolleri.",
+            "badge": "Güvenlik",
+            "activity": "safety_signs",
+            "tasks": [
+              {
+                "q": "Üzerinde eldiven resmi olan laboratuvar sembolü neyi ifade eder?",
+                "options": [
+                  "Ellerimizi korumak için koruyucu eldiven takmalıyız",
+                  "Ellerimizi yıkamalıyız",
+                  "Sıcak yüzey vardır",
+                  "Cam kırıktır"
+                ],
+                "ans": 0,
+                "hint": "Eldiven sembolü kimyasallardan ve kesiklerden elleri korumayı belirtir."
+              },
+              {
+                "q": "Deneylerde gözlerimizi korumak için hangi aracı kullanmalıyız?",
+                "options": [
+                  "Güneş gözlüğü",
+                  "Koruyucu laboratuvar gözlüğü",
+                  "Büyüteç",
+                  "Mikroskop"
+                ],
+                "ans": 1,
+                "hint": "Koruyucu gözlük göze yabancı madde sıçramasını engeller."
+              }
+            ],
+            "fact_card": {
+              "title": "Güvenlik Sembolleri",
+              "emoji": "⚠️",
+              "rule": "Güvenlik sembolleri deney ve günlük yaşamda tehlikelere karşı bizi uyarır: Kırılabilir cam, Isı ve yangın tehlikesi, Zehirli (toksik) madde, Koruyucu gözlük tak vb.",
+              "example": "Çamaşır suyu şişesinde kuru kafa sembolü varsa bu maddenin ZEHİRLİ olduğunu ve asla koklanmaması gerektiğini gösterir.",
+              "tip": "Güvenlik işaretleri süs değildir! Deney laboratuvarında veya evde bu işaretleri gördüğümüzde büyüklerimizin uyarılarına harfiyen uymalıyız."
+            }
+          },
+          {
+            "id": "fen_u1_2",
+            "title": "Bilimsel Bilgiye Ulaşma Yolları",
+            "page": 16,
+            "desc": "Gözlem yapma, merak etme, soru sorma, araştırma ve deney tasarlama adımları.",
+            "badge": "Bilimsel Yöntem",
+            "activity": "science_steps",
+            "tasks": [
+              {
+                "q": "Bilimsel bir araştırmanın ilk adımı genellikle hangisidir?",
+                "options": [
+                  "Rapor yazmak",
+                  "Merak etmek ve gözlem yapmak",
+                  "Sonucu ilan etmek",
+                  "Malzemeleri çöpe atmak"
+                ],
+                "ans": 1,
+                "hint": "Her bilimsel keşif çevreyi merak etmek ve gözlemlemekle başlar."
+              },
+              {
+                "q": "Bir fikrin doğruluğunu test etmek için kontrollü koşullarda yapılan uygulamaya ne denir?",
+                "options": [
+                  "Deney",
+                  "Şarkı",
+                  "Örüntü",
+                  "Resim"
+                ],
+                "ans": 0,
+                "hint": "Gözlemleri sınamak için deney yaparız."
+              }
+            ],
+            "fact_card": {
+              "title": "Bilimsel Bilgiye Ulaşma Yolları",
+              "emoji": "🔭",
+              "rule": "Bilimsel bilgiye; merak etmek, soru sormak, gözlem yapmak, deneyler tasarlamak ve güvenilir kaynaklardan araştırma yapmakla ulaşılır.",
+              "example": "Bitkilerin güneşte mi yoksa karanlıkta mı hızlı büyüdüğünü anlamak için iki özdeş saksı alıp birini pencereye, birini dolaba koyarak gözlemlemek bilimsel bir yöntemdir.",
+              "tip": "Bilim insanları bir deneyi sadece bir kez yapıp bırakmazlar; doğruluğundan emin olmak için birden fazla kez tekrarlarlar!"
+            }
+          },
+          {
+            "id": "fen_u1_3",
+            "title": "Bilim İnsanlarının Özellikleri",
+            "page": 26,
+            "desc": "Meraklı, sabırlı, sorgulayıcı, tarafsız, çalışkan ve azimli olma erdemleri.",
+            "badge": "Bilim İnsanı",
+            "activity": "scientists",
+            "tasks": [
+              {
+                "q": "Aşağıdakilerden hangisi bir bilim insanının temel özelliklerinden BİRİDİR?",
+                "options": [
+                  "Hemen pes etmek",
+                  "Meraklı ve sorgulayıcı olmak",
+                  "Sadece başkalarını taklit etmek",
+                  "Deney yapmaktan korkmak"
+                ],
+                "ans": 1,
+                "hint": "Bilim insanları merak eder, araştırır ve sabırla sorgular."
+              },
+              {
+                "q": "Deneylerinde başarısız olduğunda pes etmeyip defalarca deneyen bilim insanı hangi erdeme sahiptir?",
+                "options": [
+                  "Sabır ve azim",
+                  "Tembellik",
+                  "Hızlılık",
+                  "Dikkatsizlik"
+                ],
+                "ans": 0,
+                "hint": "Bilim insanının en önemli erdemi azim ve sabırdır."
+              }
+            ],
+            "fact_card": {
+              "title": "Bilim İnsanlarının Özellikleri",
+              "emoji": "💡",
+              "rule": "Bilim insanları meraklı, gözlemci, sabırlı, sorgulayıcı, dürüst ve hata yapmaktan korkmayan kişilerdir (Örn: Aziz Sancar, İbn-i Sina, Marie Curie).",
+              "example": "Thomas Edison ampulü bulana kadar yüzlerce deneme yapmış, hiç vazgeçmemiş ve sabırla çalışmaya devam etmiştir.",
+              "tip": "Bilim insanı olmak için dahi olmaya gerek yoktur; çevreni merak etmek, çok kitap okumak ve yılmadan çalışmak yeterlidir!"
+            }
+          }
+        ],
+        "exam": {
+          "title": "1. Ünite Değerlendirme Sınavı (Bilimsel Keşif Yolculuğu)",
+          "book_ref": "MEB Fen Bilimleri 1. Kitap s. 31 - 38",
+          "questions": [
+            {
+              "q": "Deney yaparken ellerimizi kimyasal maddelerden korumak için hangi güvenlik ekipmanını kullanmalıyız?",
+              "options": [
+                "Eldiven",
+                "Gözlük",
+                "Önlük",
+                "Maske"
+              ],
+              "ans": 0,
+              "hint": "Eldiven ellerimizi asit, boya ve zararlı sıvılardan korur."
+            },
+            {
+              "q": "Bilimsel bir araştırmada bir probleme geçici olarak üretilen çözüm önerisine ne denir?",
+              "options": [
+                "Hipotez (Ön Fikir)",
+                "Sonuç",
+                "Rapor",
+                "Tablo"
+              ],
+              "ans": 0,
+              "hint": "Hipotez, araştırmanın başında kurulan test edilebilir tahmindir."
+            },
+            {
+              "q": "Bilim insanlarının başarısızlık karşısında vazgeçmeyip yeni yöntemler denemesi hangi özelliğidir?",
+              "options": [
+                "Sabır ve Azim",
+                "Meraksızlık",
+                "Acelecilik",
+                "Ön Yargı"
+              ],
+              "ans": 0,
+              "hint": "Bilim insanının en önemli gücü sabır ve azmidir."
+            }
+          ]
+        }
+      },
+      {
+        "id": "fen_u2",
+        "title": "2. ÜNİTE: Canlılar Dünyasına Yolculuk",
+        "page_range": "s. 39 - 80",
+        "topics": [
+          {
+            "id": "fen_u2_1",
+            "title": "Canlıların Sınıflandırılması",
+            "page": 42,
+            "desc": "Bitkiler, Hayvanlar, Mantarlar ve Mikroskobik Canlıların temel özellikleri.",
+            "badge": "Canlılar Âlemi",
+            "activity": "classify_living",
+            "tasks": [
+              {
+                "q": "Gözle görülemeyecek kadar küçük olan ve sadece mikroskopla görülebilen canlı grubu hangisidir?",
+                "options": [
+                  "Mikroskobik canlılar",
+                  "Bitkiler",
+                  "Omurgalılar",
+                  "Ağaçlar"
+                ],
+                "ans": 0,
+                "hint": "Bakteriler ve amip mikroskobik canlılardır."
+              },
+              {
+                "q": "Mantarlar fotosentez yaparak kendi besinini üretebilir mi? (Bitki midir?)",
+                "options": [
+                  "Evet, bitkidir",
+                  "Hayır, bitki değildir, kendi besinini üretemez",
+                  "Sadece suda üretir",
+                  "Güneş görünce üretir"
+                ],
+                "ans": 1,
+                "hint": "Mantarlar bitki değildir; klorofilleri yoktur, kendi besinini üretemezler."
+              }
+            ],
+            "fact_card": {
+              "title": "Canlıların Sınıflandırılması",
+              "emoji": "🌿",
+              "rule": "Canlılar benzer özelliklerine göre sınıflandırılır: Bitkiler, Hayvanlar, Mantarlar ve Mikroskobik canlılar. Hayvanlar da omurgalı ve omurgasız olarak ayrılır.",
+              "example": "Kedi, kuş, balık hayvanlar alemine; papatya, çam ağacı bitkiler alemine; yoğurt mayası ise mikroskobik canlılara örnektir.",
+              "tip": "Bitkiler kendi besinlerini güneş ışığıyla kendileri üretir (fotosentez). Hayvanlar ise besinlerini dışarıdan hazır alırlar!"
+            }
+          },
+          {
+            "id": "fen_u2_2",
+            "title": "Duyu Organlarının İşlevleri",
+            "page": 58,
+            "desc": "Göz, Kulak, Burun, Dil, Deri ve duyu organlarının sağlığını koruma kuralları.",
+            "badge": "5 Duyumuz",
+            "activity": "senses",
+            "tasks": [
+              {
+                "q": "Çevremizdeki nesnelerin sertlik, yumuşaklık ve sıcaklık özelliklerini hangi duyu organımızla algılarız?",
+                "options": [
+                  "Göz",
+                  "Deri (Dokunma)",
+                  "Burun",
+                  "Kulak"
+                ],
+                "ans": 1,
+                "hint": "Deri dokunma duyusu organımızdır."
+              },
+              {
+                "q": "Yüksek sesli ortamlarda bulunmak öncelikle hangi duyu organımıza zarar verir?",
+                "options": [
+                  "Göz",
+                  "Kulak",
+                  "Dil",
+                  "Burun"
+                ],
+                "ans": 1,
+                "hint": "Yüksek ses kulak zarına ve işitme duyumuza zarar verir."
+              }
+            ],
+            "fact_card": {
+              "title": "Duyu Organlarının İşlevleri",
+              "emoji": "👀",
+              "rule": "5 duyu organımız: Göz (Görme), Kulak (İşitme), Burun (Koklama), Dil (Tat), Deri (Dokunma). Duyu organlarımız çevremizi güvenle keşfetmemizi sağlar.",
+              "example": "Sıcak bir çorbanın kokusunu burnumuzla, sıcaklığını derimizle, tadını dilimizle hissederiz.",
+              "tip": "Tat ve koku duyuları birlikte çalışır. Nezle olduğunda burnun tıkandığı için yemeklerin tadını tam alamazsın!"
+            }
+          },
+          {
+            "id": "fen_u2_3",
+            "title": "Canlıların Yaşam Döngüleri",
+            "page": 69,
+            "desc": "Tohumun çimlenmesi, bitkinin büyümesi ve hayvanların yaşam döngüsü aşamaları.",
+            "badge": "Yaşam Döngüsü",
+            "activity": "lifecycle",
+            "tasks": [
+              {
+                "q": "Bir tohumun çimlenmesi için gereken 3 temel faktör hangisidir?",
+                "options": [
+                  "Su, Sıcaklık (Isı), Hava (Oksijen)",
+                  "Sadece Gübre",
+                  "Sadece Karanlık",
+                  "Tuz, Şeker, Işık"
+                ],
+                "ans": 0,
+                "hint": "Tohum çimlenirken fotosentez yapmadığı için ışığa değil Su, Isı ve Havaya ihtiyaç duyar."
+              },
+              {
+                "q": "Kelebeğin yaşam döngüsündeki sıralama hangisidir?",
+                "options": [
+                  "Yumurta -> Tırtıl -> Pupa (Koza) -> Kelebek",
+                  "Kelebek -> Pupa -> Yumurta -> Tırtıl",
+                  "Tırtıl -> Kelebek -> Yumurta -> Pupa",
+                  "Yumurta -> Kelebek -> Tırtıl"
+                ],
+                "ans": 0,
+                "hint": "Yumurta çatlar tırtıl çıkar, pupa koza örer ve içinden kelebek çıkar."
+              }
+            ],
+            "fact_card": {
+              "title": "Canlıların Yaşam Döngüleri",
+              "emoji": "🌱",
+              "rule": "Canlılar doğar, büyür, gelişir, ürer ve ölürler. Buna 'Yaşam Döngüsü' denir. Kelebekler ve kurbağalar başkalaşım (değişim) geçirerek büyür.",
+              "example": "Tırtıl koza örer, kozanın içinde bekler ve rengarenk kanatlı bir kelebek olarak dışarı çıkar.",
+              "tip": "Bitkilerin yaşam döngüsü tohumla başlar. Tohumun çimlenmesi için SOS (Su, Oksijen, Sıcaklık) gereklidir; çimlenme aşamasında ışık şart DEĞİLDİR!"
+            }
+          }
+        ],
+        "exam": {
+          "title": "2. Ünite Değerlendirme Sınavı (Canlılar Dünyasına Yolculuk)",
+          "book_ref": "MEB Fen Bilimleri 1. Kitap s. 73 - 80",
+          "questions": [
+            {
+              "q": "Sütten yoğurt yapılmasını sağlayan faydalı canlılar hangi canlı grubundadır?",
+              "options": [
+                "Mikroskobik Canlılar",
+                "Bitkiler",
+                "Hayvanlar",
+                "Mantarlar"
+              ],
+              "ans": 0,
+              "hint": "Sütü yoğurda dönüştüren mikroskobik bakterilerdir."
+            },
+            {
+              "q": "Kulağımızın ve işitme duyumuzun sağlığını korumak için hangisini yapmamalıyız?",
+              "options": [
+                "Sert cisimlerle kulağımızı karıştırmak",
+                "Yüksek sesten kaçınmak",
+                "Kulağımızı temiz tutmak",
+                "Düzenli doktora gitmek"
+              ],
+              "ans": 0,
+              "hint": "Kulağa sivri ve sert cisimler sokmak kulak zarına zarar verir."
+            },
+            {
+              "q": "Tohumun çimlenmesi için aşağıdakilerden hangisi GEREKLİ DEĞİLDİR?",
+              "options": [
+                "Işık",
+                "Su (Nem)",
+                "Uygun Sıcaklık",
+                "Hava (Oksijen)"
+              ],
+              "ans": 0,
+              "hint": "Tohum toprak altında karanlıkta da çimlenir, çimlenme için ışık zorunlu değildir."
+            }
+          ]
+        }
+      },
+      {
+        "id": "fen_u3",
+        "title": "3. ÜNİTE: Yer Bilimciler İş Başında",
+        "page_range": "s. 81 - 104",
+        "topics": [
+          {
+            "id": "fen_u3_1",
+            "title": "Kayaçlar, Madenler ve Mineraller",
+            "page": 84,
+            "desc": "Yer kabuğu, kayaçlar, mineraller ve ekonomik değeri olan madenler (bor, bakır, altın, kömür).",
+            "badge": "Yer Kabuğu",
+            "activity": "minerals",
+            "tasks": [
+              {
+                "q": "Kayaçlara farklı renk, parlaklık ve sertlik veren yapılar hangileridir?",
+                "options": [
+                  "Toprak",
+                  "Mineraller",
+                  "Su damlaları",
+                  "Hava kabarcıkları"
+                ],
+                "ans": 1,
+                "hint": "Kayaçların yapısını ve özelliklerini mineraller belirler."
+              },
+              {
+                "q": "Ekonomik değeri olan kayaç ve minerallere ne ad verilir? (Bor, altın, bakır gibi)",
+                "options": [
+                  "Kum",
+                  "Maden",
+                  "Fosil",
+                  "Çakıl"
+                ],
+                "ans": 1,
+                "hint": "Ekonomik değeri yüksek olan yer altı zenginliklerine maden denir."
+              }
+            ],
+            "fact_card": {
+              "title": "Kayaçlar, Madenler ve Mineraller",
+              "emoji": "💎",
+              "rule": "Yer kabuğunu kayaçlar oluşturur. Kayaçların parçalanmasıyla taş, çakıl ve kum oluşur. Ekonomik değeri olan değerli kayaçlara ise MADEN denir (Altın, Bor, Bakır, Kömür).",
+              "example": "Mutfak tezgahımız mermerden, elektrik kablolarının içindeki teller bakır madeninden yapılır.",
+              "tip": "Bütün madenler birer kayaçtır ama her kayaç maden DEĞİLDİR! Bir kayacın maden olması için ekonomik değer taşıması gerekir."
+            }
+          },
+          {
+            "id": "fen_u3_2",
+            "title": "Fosil Oluşumu",
+            "page": 93,
+            "desc": "Fosiller nasıl oluşur? Milyonlarca yıllık tortul tabakalar ve geçmiş canlı kalıntıları.",
+            "badge": "Fosiller",
+            "activity": "fossils",
+            "tasks": [
+              {
+                "q": "Milyonlarca yıl önce yaşamış canlıların kayaç tabakaları arasında taşlaşmış kalıntılarına ne ad verilir?",
+                "options": [
+                  "Mineral",
+                  "Fosil",
+                  "Maden",
+                  "Linyit"
+                ],
+                "ans": 1,
+                "hint": "Geçmiş canlı kalıntılarına fosil denir."
+              },
+              {
+                "q": "Fosilleri ve eski yaşam izlerini inceleyen bilim dalına ne denir?",
+                "options": [
+                  "Paleontoloji (Taşıl Bilim)",
+                  "Zooloji",
+                  "Astronomi",
+                  "Meteoroloji"
+                ],
+                "ans": 0,
+                "hint": "Fosil bilimcilerine paleontolog, bilim dalına paleontoloji denir."
+              }
+            ],
+            "fact_card": {
+              "title": "Fosil Oluşumu",
+              "emoji": "🦖",
+              "rule": "Geçmişte yaşamış canlıların kayaçlar arasında taşlaşmış kalıntı ve izlerine FOSİL denir. Fosilleri inceleyen bilim dalına Paleontoloji denir.",
+              "example": "Milyonlarca yıl önce yaşamış dinozorların kemikleri veya kehribar reçinesinin içinde kalmış böcekler günümüze ulaşan fosillerdir.",
+              "tip": "Fosiller sadece birkaç yılda oluşmaz! Bir kalıntının fosil sayılabilmesi için aradan en az milyonlarca yıl geçmesi ve hava almadan tortul tabakalar altında kalması gerekir."
+            }
+          }
+        ],
+        "exam": {
+          "title": "3. Ünite Değerlendirme Sınavı (Yer Bilimciler İş Başında)",
+          "book_ref": "MEB Fen Bilimleri 1. Kitap s. 97 - 104",
+          "questions": [
+            {
+              "q": "Ülkemizde dünya rezervlerinin çok büyük kısmı bulunan ve roket yakıtından deterjana kadar kullanılan maden hangisidir?",
+              "options": [
+                "Bor",
+                "Kömür",
+                "Altın",
+                "Krom"
+              ],
+              "ans": 0,
+              "hint": "Türkiye dünyada en zengin bor madeni yataklarına sahiptir."
+            },
+            {
+              "q": "Fosiller hangi kayaç türlerinin tabakaları arasında daha kolay ve bozulmadan oluşur?",
+              "options": [
+                "Tortul (Tortullaşmış) kayaçlar",
+                "Volkanik lavlar",
+                "Erimiş magma",
+                "Kızgın kireç"
+              ],
+              "ans": 0,
+              "hint": "Fosiller göl ve deniz tabanındaki tortul katmanlar arasında sıkışarak oluşur."
+            }
+          ]
+        }
+      },
+      {
+        "id": "fen_u4",
+        "title": "4. ÜNİTE: Maddeyi Tanıyalım, Karıştırıp Ayıralım",
+        "page_range": "s. 105 - 140",
+        "topics": [
+          {
+            "id": "fen_u4_1",
+            "title": "Maddenin Katı, Sıvı ve Gaz Hâli",
+            "page": 108,
+            "desc": "Katı, sıvı ve gaz maddelerin belirgin özellikleri, akışkanlık ve şekil durumları.",
+            "badge": "Maddenin Hâlleri",
+            "activity": "states_of_matter",
+            "tasks": [
+              {
+                "q": "Belirli bir şekli olan ve dışarıdan bir etki olmadıkça şeklini koruyan maddeler hangi haldedir?",
+                "options": [
+                  "Katı",
+                  "Sıvı",
+                  "Gaz",
+                  "Buhar"
+                ],
+                "ans": 0,
+                "hint": "Taş, masa, kalem gibi katı maddelerin belirli bir şekli vardır."
+              },
+              {
+                "q": "Bulunduğu kabın şeklini alan ve akışkan olan su ve süt hangi maddedir?",
+                "options": [
+                  "Katı",
+                  "Sıvı",
+                  "Gaz",
+                  "Plazma"
+                ],
+                "ans": 1,
+                "hint": "Sıvılar akışkandır ve kabın şeklini alır."
+              }
+            ],
+            "fact_card": {
+              "title": "Maddenin Katı, Sıvı ve Gaz Hâli",
+              "emoji": "🧊",
+              "rule": "Maddeler doğada 3 temel halde bulunur: Katı (belirli şekli var: taş, tahta), Sıvı (akışkan, kabın şeklini alır: su, süt), Gaz (uçucu, ortama yayılır: hava, su buharı).",
+              "example": "Buz KATI, eriyen su SIVI, kaynayan tencereden çıkan buhar ise MADDENİN GAZ HALİDİR.",
+              "tip": "Kum, tuz, mercimek gibi küçük taneli katılar sıvılar gibi akabilir ve konuldukları kabın şeklini alır; ama taneciklerinin her biri YİNE DE KATIDIR!"
+            }
+          },
+          {
+            "id": "fen_u4_2",
+            "title": "Karışımlar ve Karışımların Ayrılması",
+            "page": 118,
+            "desc": "Eleme, süzme, mıknatısla ayırma ve buharlaştırma yöntemleri.",
+            "badge": "Karışım Ayırma",
+            "activity": "separating_mixtures",
+            "tasks": [
+              {
+                "q": "Demir tozları ile talaş karışımını en kolay hangi yöntemle ayırabiliriz?",
+                "options": [
+                  "Süzme ile",
+                  "Mıknatıs ile",
+                  "Eleme ile",
+                  "Buharlaştırma ile"
+                ],
+                "ans": 1,
+                "hint": "Mıknatıs demir tozlarını çeker, talaş geride kalır."
+              },
+              {
+                "q": "Makarna ile suyu birbirinden ayırmak için hangi aleti kullanırız?",
+                "options": [
+                  "Süzgeç",
+                  "Mıknatıs",
+                  "Büyüteç",
+                  "Elek"
+                ],
+                "ans": 0,
+                "hint": "Katı-sıvı karışımları süzgeç yardımıyla süzerek ayırırız."
+              }
+            ],
+            "fact_card": {
+              "title": "Karışımlar ve Karışımların Ayrılması",
+              "emoji": "🔬",
+              "rule": "İki veya daha fazla maddenin özelliklerini kaybetmeden bir araya gelmesiyle KARIŞIM oluşur. Karışımlar süzme, eleme, mıknatısla çekme ve buharlaştırma yöntemleriyle ayrılır.",
+              "example": "Demir tozu ve kumu ayırmak için mıknatıs kullanırız (mıknatıs demiri çeker, kumu bırakır). Makarnayı sudan ayırmak için süzgeç kullanırız.",
+              "tip": "Mıknatıs sadece demir, nikel ve kobalt metallerini çeker; plastik, tahta veya altın mıknatısla çekilemez!"
+            }
+          },
+          {
+            "id": "fen_u4_3",
+            "title": "Atıkların Ayrıştırılması & Geri Dönüşüm",
+            "page": 127,
+            "desc": "Sıfır atık, kâğıt, cam, plastik ve metal atıkların geri dönüşümü ve çevre bilinci.",
+            "badge": "Sıfır Atık",
+            "activity": "recycling",
+            "tasks": [
+              {
+                "q": "Kullanılmış defter ve karton kutuları hangi geri dönüşüm kutusuna atmalıyız?",
+                "options": [
+                  "Mavi - Kâğıt Kutusu",
+                  "Yeşil - Cam Kutusu",
+                  "Sarı - Plastik Kutusu",
+                  "Gri - Metal Kutusu"
+                ],
+                "ans": 0,
+                "hint": "Kâğıt ve karton atıklar kâğıt geri dönüşüm kutusuna atılır."
+              },
+              {
+                "q": "Atıkların yeniden işlenerek üretime kazandırılmasına ne ad verilir?",
+                "options": [
+                  "Geri Dönüşüm",
+                  "Buharlaşma",
+                  "Eritme",
+                  "Çöp Yakma"
+                ],
+                "ans": 0,
+                "hint": "Geri dönüşüm doğal kaynaklarımızı korur ve çevre kirliliğini önler."
+              }
+            ],
+            "fact_card": {
+              "title": "Atıkların Ayrıştırılması & Geri Dönüşüm",
+              "emoji": "♻️",
+              "rule": "Kullanılmış kağıt, cam, metal ve plastik atıkların fabrikalarda yeniden işlenerek kullanılabilir hale getirilmesine GERİ DÖNÜŞÜM denir.",
+              "example": "1 ton kullanılmış kağıdın geri dönüştürülmesi doğada tam 17 tane yetişkin ağacın kesilmesini önler!",
+              "tip": "Geri dönüşüm kutularına çöp değil, sadece temiz ve ayrıştırılmış geri dönüştürülebilir malzemeler atılmalıdır."
+            }
+          }
+        ],
+        "exam": {
+          "title": "4. Ünite Değerlendirme Sınavı (Maddeyi Tanıyalım, Karıştırıp Ayıralım)",
+          "book_ref": "MEB Fen Bilimleri 1. Kitap s. 135 - 140",
+          "questions": [
+            {
+              "q": "Bulunduğu kabın şeklini alan ve akışkan olan maddelere ne denir?",
+              "options": [
+                "Sıvı",
+                "Katı",
+                "Buz",
+                "Taş"
+              ],
+              "ans": 0,
+              "hint": "Su, süt, yağ sıvıdır ve kabın şeklini alır."
+            },
+            {
+              "q": "Tuzlu sudan tuzu ayırmak için hangi yöntem kullanılır?",
+              "options": [
+                "Buharlaştırma",
+                "Süzme",
+                "Eleme",
+                "Mıknatısla ayırma"
+              ],
+              "ans": 0,
+              "hint": "Su buharlaştırıldığında tuz kabın dibinde kristal halde kalır."
+            },
+            {
+              "q": "Plastik ve metal kutuların çöp yerine geri dönüşüm kutusuna atılmasının en büyük yararı nedir?",
+              "options": [
+                "Doğal kaynakları korur ve çevre kirliliğini önler",
+                "Daha çok çöp oluşturur",
+                "Zaman kaybettirir",
+                "Maliyeti artırır"
+              ],
+              "ans": 0,
+              "hint": "Geri dönüşüm çevre ve doğayı korur."
+            }
+          ]
+        }
+      }
+    ],
+    "final_exam": {
+      "title": "🏆 1. Dönem Fen Bilimleri Büyük Başarı Sınavı",
+      "book_ref": "3. Sınıf MEB Fen Bilimleri 1. Dönem Tüm Üniteler (s. 14 - 140)",
+      "questions": [
+        {
+          "q": "Ufuktan yaklaşan bir geminin önce bacası, sonra gövdesi görünür. Bu durum neyi kanıtlar?",
+          "options": [
+            "Dünya'nın küreye benzediğini",
+            "Dünya'nın düz olduğunu",
+            "Geminin çok hızlı gittiğini",
+            "Denizlerin çok derin olduğunu"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Canlıların üzerinde yaşadığı, dağların ve ovaların bulunduğu katman hangisidir?",
+          "options": [
+            "Su Katmanı",
+            "Hava Katmanı",
+            "Yer Kabuğu (Kara Katmanı)",
+            "Çekirdek"
+          ],
+          "ans": 2
+        },
+        {
+          "q": "Koku alma duyusu ile hangi duyu organımız birlikte uyum içinde çalışır?",
+          "options": [
+            "Göz",
+            "Dil (Tat alma)",
+            "Kulak",
+            "Deri"
+          ],
+          "ans": 1
+        },
+        {
+          "q": "Güneşe doğrudan çıplak gözle bakmak hangi duyu organımıza zarar verir?",
+          "options": [
+            "Kulak",
+            "Deri",
+            "Göz",
+            "Burun"
+          ],
+          "ans": 2
+        },
+        {
+          "q": "Yokuş aşağı hızla inen bir topun önüne ayak koyarak durdurmak hangi kuvvet etkisidir?",
+          "options": [
+            "Hızlandırma",
+            "Yavaşlatma ve Durdurma",
+            "Sallanma",
+            "Dönme"
+          ],
+          "ans": 1
+        },
+        {
+          "q": "Kuvvet uygulandığında şekil değiştiren, kuvvet ortadan kalktığında ESKİ HALİNE DÖNEN madde hangisidir?",
+          "options": [
+            "Oyun hamuru",
+            "Paket lastiği (Esnek)",
+            "Cam bardak",
+            "Tahta blok"
+          ],
+          "ans": 1
+        },
+        {
+          "q": "Evdeki deterjan, çamaşır suyu gibi kimyasallarla ilgili hangisi DOĞRUDUR?",
+          "options": [
+            "Koklayarak ne olduğunu anlamalıyız",
+            "Tadına bakmalıyız",
+            "Kesinlikle koklamamalı ve dokunmamalıyız",
+            "Gözümüze damlatmalıyız"
+          ],
+          "ans": 2
+        },
+        {
+          "q": "Aşağıdakilerden hangisi pürüzsüz bir maddedir?",
+          "options": [
+            "Ağaç kabuğu",
+            "Zımpara kağıdı",
+            "Ayna yüzeyi",
+            "Ceviz kabuğu"
+          ],
+          "ans": 2
+        }
+      ]
+    }
+  },
+  "hayatbilgisi": {
+    "title": "Hayat Bilgisi",
+    "subtitle": "3. Sınıf 1. Kitap (MEB Maarif Modeli)",
+    "icon": "🇹🇷",
+    "badge": "9 Konu",
+    "accent": "#E11D48",
+    "bg_light": "#FFF1F2",
+    "themes": [
+      {
+        "id": "hb_u1",
+        "title": "1. ÖĞRENME ALANI: Ben ve Okulum",
+        "page_range": "s. 12 - 41",
+        "topics": [
+          {
+            "id": "hb_u1_1",
+            "title": "Güçlüyüm, Gelişiyorum",
+            "page": 16,
+            "desc": "Kişisel güçlü yönleri, ilgi ve yetenekleri keşfetme ve hedefler belirleme.",
+            "badge": "Güçlü Yönlerim",
+            "activity": "strengths",
+            "tasks": [
+              {
+                "q": "Bir arkadaşımızın resmi çok güzel yapması onun hangi yönünü gösterir?",
+                "options": [
+                  "Güçlü olduğu bir yeteneğini",
+                  "Kötü bir yönünü",
+                  "Tembelliğini",
+                  "Bencil olduğunu"
+                ],
+                "ans": 0,
+                "hint": "Her bireyin farklı ilgi ve yetenek alanları güçlü yönleridir."
+              },
+              {
+                "q": "Geliştirmek istediğimiz bir alanda (örneğin satrançta) başarılı olmak için ne yapmalıyız?",
+                "options": [
+                  "Hemen vazgeçmeliyiz",
+                  "Düzenli pratik yapmalı ve pes etmemeliyiz",
+                  "Arkadaşımızı kıskanmalıyız",
+                  "Hiç oynamamalıyız"
+                ],
+                "ans": 1,
+                "hint": "Çalışmak ve pes etmemek bizi geliştirir."
+              }
+            ],
+            "fact_card": {
+              "title": "Güçlüyüm, Gelişiyorum",
+              "emoji": "🌟",
+              "rule": "Her bireyin ilgi alanları, yetenekleri ve güçlendirmesi gereken yönleri farklıdır. Kendimizi tanımalı, güçlü yanlarımızı geliştirmeli, eksiklerimiz için sabırla çalışmalıyız.",
+              "example": "Sen satrançta çok stratejik düşünebilirsin, arkadaşın ise resimde renkleri harika kullanabilir.",
+              "tip": "Hiç kimse her konuda mükemmel olmak zorunda değildir; farklılıklar sınıfımızı ve dünyamızı zenginleştirir!"
+            }
+          },
+          {
+            "id": "hb_u1_2",
+            "title": "Hakkım da Var Sorumluluğum da",
+            "page": 24,
+            "desc": "Sınıf ve okul kuralları, okul kaynaklarını özenli kullanma ve sorumluluk bilinci.",
+            "badge": "Hak & Sorumluluk",
+            "activity": "rules",
+            "tasks": [
+              {
+                "q": "Aşağıdakilerden hangisi okuldaki SORUMLULUKLARIMIZDAN biridir?",
+                "options": [
+                  "Ders sırasında arkadaşımızla yüksek sesle konuşmak",
+                  "Okul kaynaklarını ve sıraları temiz kullanmak",
+                  "Koridorda koşarak çarpmak",
+                  "Çöpleri sıranın altına atmak"
+                ],
+                "ans": 1,
+                "hint": "Sıraları ve sınıfı korumak ortak sorumluluğumuzdur."
+              },
+              {
+                "q": "Derste söz alarak konuşmak neyin göstergesidir?",
+                "options": [
+                  "Sınıf kurallarına ve arkadaşlarına saygının",
+                  "Korkaklığın",
+                  "Zaman kaybetmenin",
+                  "Kuralları çiğnemenin"
+                ],
+                "ans": 0,
+                "hint": "Parmak kaldırıp söz hakkı almak temel nezaket ve kuraldır."
+              }
+            ],
+            "fact_card": {
+              "title": "Hakkım da Var Sorumluluğum da",
+              "emoji": "🏫",
+              "rule": "Haklarımız özgürlüklerimizi, sorumluluklarımız ise üstlendiğimiz görevleri ifade eder. Haklarımızı kullanırken başkalarının haklarına saygı göstermek en temel sorumluluğumuzdur.",
+              "example": "Teneffüste bahçede oyun oynama HAKKIMIZ vardır; zil çaldığında zamanında sınıfa girme ve ders araçlarını koruma SORUMLULUĞUMUZ vardır.",
+              "tip": "Sorumluluğunu bilmeyen birey haklarını da koruyamaz. Hak ve sorumluluk iki elin parmakları gibi birbirini tamamlar."
+            }
+          },
+          {
+            "id": "hb_u1_3",
+            "title": "Çocuğum, Haklarımla Varım",
+            "page": 33,
+            "desc": "Çocuk Hakları Sözleşmesi: Yaşama, korunma, eğitim ve oyun haklarımız.",
+            "badge": "Çocuk Hakları",
+            "activity": "child_rights",
+            "tasks": [
+              {
+                "q": "Tüm dünyadaki çocukların okula gidip bilgi öğrenmesi hangi hakla güvenceye alınmıştır?",
+                "options": [
+                  "Eğitim Hakkı",
+                  "Çalışma Hakkı",
+                  "Alışveriş Hakkı",
+                  "Yolculuk Hakkı"
+                ],
+                "ans": 0,
+                "hint": "Her çocuğun eğitim alma hakkı vardır."
+              },
+              {
+                "q": "Oyun oynamak ve dinlenmek çocuklar için nedir?",
+                "options": [
+                  "Bir suçtur",
+                  "Temel bir çocuk hakkıdır",
+                  "Yasaklanmalıdır",
+                  "Sadece tatillerde yapılır"
+                ],
+                "ans": 1,
+                "hint": "Oyun oynamak Çocuk Hakları Sözleşmesi ile korunan bir haktır."
+              }
+            ],
+            "fact_card": {
+              "title": "Çocuğum, Haklarımla Varım",
+              "emoji": "🕊️",
+              "rule": "Çocuk Hakları Sözleşmesi'ne göre 18 yaşına kadar her birey çocuktur. En temel haklarımız: Yaşama hakkı, Sağlık hakkı, Eğitim hakkı ve Oyun oynama hakkıdır.",
+              "example": "Okula gidip ders dinleyebilmemiz EĞİTİM hakkımız; hastalandığımızda doktora gidebilmemiz SAĞLIK hakkımızdır.",
+              "tip": "Çocuklar hiçbir koşulda ağır işlerde çalıştırılamaz; çocukların birinci görevi okumak, öğrenmek ve güvenle büyümektir!"
+            }
+          }
+        ],
+        "exam": {
+          "title": "1. Öğrenme Alanı Değerlendirme (Ben ve Okulum)",
+          "book_ref": "MEB Hayat Bilgisi 1. Kitap s. 38 - 41",
+          "questions": [
+            {
+              "q": "Sınıf içi kararlar alınırken her öğrencinin görüşünü belirtmesi hangi hak ile ilgilidir?",
+              "options": [
+                "Düşüncesini özgürce ifade etme hakkı",
+                "Beslenme hakkı",
+                "Sağlık hakkı",
+                "Yolculuk hakkı"
+              ],
+              "ans": 0,
+              "hint": "Her çocuğun düşüncelerini ifade etme hakkı vardır."
+            },
+            {
+              "q": "Okulun kütüphanesini ve laboratuvarını kullanırken hangisine dikkat etmeliyiz?",
+              "options": [
+                "Ortak kaynakları özenle korumaya ve temiz bırakmaya",
+                "Kitapları eve götürüp getirmemeye",
+                "Yüksek sesle bağırmaya",
+                "Eşyaları kırmaya"
+              ],
+              "ans": 0,
+              "hint": "Ortak kullanım alanları özenli kullanılmalıdır."
+            }
+          ]
+        }
+      },
+      {
+        "id": "hb_u2",
+        "title": "2. ÖĞRENME ALANI: Sağlığım ve Güvenliğim",
+        "page_range": "s. 42 - 73",
+        "topics": [
+          {
+            "id": "hb_u2_1",
+            "title": "Sağlığımı Koruyorum",
+            "page": 46,
+            "desc": "Dengeli beslenme, mevsim meyve ve sebzeleri, kişisel temizlik ve uyku düzeni.",
+            "badge": "Sağlıklı Yaşam",
+            "activity": "health",
+            "tasks": [
+              {
+                "q": "Vücudumuzun sağlıklı büyümesi için her besin grubundan yeteri kadar tüketmeye ne denir?",
+                "options": [
+                  "Dengesiz beslenme",
+                  "Dengeli ve düzenli beslenme",
+                  "Sürekli abur cubur yeme",
+                  "Tek yönlü beslenme"
+                ],
+                "ans": 1,
+                "hint": "Protein, karbonhidrat, vitamin dengeli alınmalıdır."
+              },
+              {
+                "q": "Kış mevsiminde sağlığımızı korumak için hangi meyveleri tüketmek C vitamini sağlar?",
+                "options": [
+                  "Karpuz, kavun",
+                  "Portakal, mandalina",
+                  "Kiraz, vişne",
+                  "İncir, üzüm"
+                ],
+                "ans": 1,
+                "hint": "Narenciye meyveleri kışın bağışıklığımızı güçlendirir."
+              }
+            ],
+            "fact_card": {
+              "title": "Sağlığımı Koruyorum",
+              "emoji": "🥗",
+              "rule": "Sağlığımızı korumak için kişisel temizliğe dikkat etmeli, dengeli beslenmeli, düzenli spor yapmalı ve mevsime uygun giyinmeliyiz.",
+              "example": "Kışın soğukta dışarı çıkarken atkı, bere ve mont giymek bizi hastalıklardan korur.",
+              "tip": "Hastalanınca hemen antibiyotiğe sarılmamalıyız; ilaçlar sadece doktor önerisiyle kullanılmalıdır."
+            }
+          },
+          {
+            "id": "hb_u2_2",
+            "title": "Güvenliğimizi Tehdit Eden Durumlar",
+            "page": 53,
+            "desc": "Evde, okulda, sokakta güvenlik; tanımadığımız kişilere karşı sınırlar ve 112 Acil Çağrı.",
+            "badge": "Güvenlik & 112",
+            "activity": "emergency",
+            "tasks": [
+              {
+                "q": "Türkiye'de polis, ambulans, itfaiye gibi tüm acil durumlar için aranan tek numara hangisidir?",
+                "options": [
+                  "112",
+                  "155",
+                  "110",
+                  "156"
+                ],
+                "ans": 0,
+                "hint": "Tüm acil yardım hatları 112 Tek Acil Çağrı Merkezinde birleştirilmiştir."
+              },
+              {
+                "q": "Sokakta tanımadığımız bir kişi bize şeker verip kendisiyle gelmemizi isterse ne yapmalıyız?",
+                "options": [
+                  "Hemen onunla gitmeliyiz",
+                  "Teklifi kesinlikle reddedip güvenli bir büyüğün yanına gitmeliyiz",
+                  "Şekeri alıp beklemeliyiz",
+                  "Arkadaşımızı çağırmalıyız"
+                ],
+                "ans": 1,
+                "hint": "Tanımadığımız kişilerin tekliflerini reddedip ailemize haber vermeliyiz."
+              }
+            ],
+            "fact_card": {
+              "title": "Güvenliğimizi Tehdit Eden Durumlar",
+              "emoji": "🚨",
+              "rule": "Evde, okulda ve sokakta güvenliğimizi tehdit eden durumlar: Islak zeminde koşmak, açık prizlere dokunmak, tanımadığımız yabancılarla konuşmak veya onların arabasına binmektir.",
+              "example": "Evde gaz kokusu hissettiğimizde hemen pencereleri açmalı, elektrik düğmelerine dokunmamalı ve büyüklerimize haber vermeliyiz.",
+              "tip": "Tanımadığın biri sana 'gel sana şeker alayım' veya 'anneni tanıyorum' derse ASLA inanma ve hemen güvenli bir yere (öğretmenin veya polisin yanına) koş!"
+            }
+          },
+          {
+            "id": "hb_u2_3",
+            "title": "Trafik Kurallarının Önemi",
+            "page": 63,
+            "desc": "Trafik işaret levhaları, yaya geçidi, emniyet kemeri ve güvenli oyun alanları.",
+            "badge": "Trafik Kuralları",
+            "activity": "traffic",
+            "tasks": [
+              {
+                "q": "Karşıdan karşıya geçerken hangisini KULLANMALIYIZ?",
+                "options": [
+                  "Araba yolunun ortasını",
+                  "Yaya geçidini veya üst geçidi",
+                  "Kavşağın tam ortasını",
+                  "Araçların arasından koşarak"
+                ],
+                "ans": 1,
+                "hint": "Yaya geçitleri yayaların güvenle karşıya geçmesini sağlar."
+              },
+              {
+                "q": "Araç içinde seyahat ederken can güvenliğimiz için mutlaka ne takmalıyız?",
+                "options": [
+                  "Kulaklık",
+                  "Emniyet kemeri",
+                  "Gözlük",
+                  "Şapka"
+                ],
+                "ans": 1,
+                "hint": "Emniyet kemeri olası kazalarda hayat kurtarır."
+              }
+            ],
+            "fact_card": {
+              "title": "Trafik Kurallarının Önemi",
+              "emoji": "🚦",
+              "rule": "Trafikte can güvenliğimiz için kurallara uymalıyız: Yaya geçidini ve üst geçitleri kullanmak, yeşil ışıkta geçmek, arabada arka koltuğa oturup emniyet kemerini takmak.",
+              "example": "Yoldan karşıya geçerken: Önce sola, sonra sağa, tekrar sola bakarak dikkatlice geçmeliyiz.",
+              "tip": "12 yaşından küçük çocukların arabanın ön koltuğunda oturması yasaktır ve son derece tehlikelidir!"
+            }
+          }
+        ],
+        "exam": {
+          "title": "2. Öğrenme Alanı Değerlendirme (Sağlığım ve Güvenliğim)",
+          "book_ref": "MEB Hayat Bilgisi 1. Kitap s. 70 - 73",
+          "questions": [
+            {
+              "q": "Acil bir durumda (yangın, kaza, sağlık) tek bir numarayı arayarak yardım çağırabiliriz. Bu numara kaçtır?",
+              "options": [
+                "112",
+                "155",
+                "110",
+                "186"
+              ],
+              "ans": 0,
+              "hint": "Tüm acil çağrılar 112 numaralı merkezde toplanmıştır."
+            },
+            {
+              "q": "Okul servis aracına bindiğimizde ilk yapmamız gereken güvenlik kuralı hangisidir?",
+              "options": [
+                "Emniyet kemerini takmak",
+                "Pencereden dışarı sarkmak",
+                "Ayağa kalkıp oynamak",
+                "Şoförle bağırmak"
+              ],
+              "ans": 0,
+              "hint": "Emniyet kemeri takmak hayati bir güvenlik kuralıdır."
+            }
+          ]
+        }
+      },
+      {
+        "id": "hb_u3",
+        "title": "3. ÖĞRENME ALANI: Ailem ve Toplum",
+        "page_range": "s. 74 - 102",
+        "topics": [
+          {
+            "id": "hb_u3_1",
+            "title": "Aile ve Toplum",
+            "page": 78,
+            "desc": "Aile içi dayanışma, akrabalık bağları, komşuluk ilişkileri ve büyüklere saygı.",
+            "badge": "Bizim Aile",
+            "activity": "family",
+            "tasks": [
+              {
+                "q": "Annemizin ve babamızın annesine ne ad veririz?",
+                "options": [
+                  "Büyükanne / Nine",
+                  "Teyze",
+                  "Hala",
+                  "Yenge"
+                ],
+                "ans": 0,
+                "hint": "Büyükanne veya nine denir."
+              },
+              {
+                "q": "Komşularımızla iyi ilişkiler kurmak toplum hayatına nasıl katkı sağlar?",
+                "options": [
+                  "Huzur ve dayanışmayı artırır",
+                  "Sorun çıkarır",
+                  "Gereksizdir",
+                  "Kavga ettirir"
+                ],
+                "ans": 0,
+                "hint": "Ev alma komşu al atasözü komşuluğun değerini anlatır."
+              }
+            ],
+            "fact_card": {
+              "title": "Aile ve Toplum",
+              "emoji": "🏡",
+              "rule": "Aile toplumun temel taşıdır. Aile içinde sevgi, saygı, dürüstlük, anlayış ve dayanışma olmalıdır.",
+              "example": "Akşam ailece sofraya oturup günün nasıl geçtiğini paylaşmak aile bağlarını güçlendirir.",
+              "tip": "Aile bireylerinin fikirleri dinlenmeli, önemli kararlar alınırken çocukların da görüşleri sorulmalıdır."
+            }
+          },
+          {
+            "id": "hb_u3_2",
+            "title": "Yardımlaşma",
+            "page": 86,
+            "desc": "Toplumsal yardımlaşma, imece kültürü, empati ve paylaşmanın önemi.",
+            "badge": "İmece & Paylaşım",
+            "activity": "solidarity",
+            "tasks": [
+              {
+                "q": "Bir işin köylüler veya komşular tarafından el birliğiyle gönüllü olarak yapılmasına ne ad verilir?",
+                "options": [
+                  "İmece",
+                  "Yarışma",
+                  "Münazara",
+                  "Ticaret"
+                ],
+                "ans": 0,
+                "hint": "El birliğiyle yardımlaşarak iş yapmaya imece denir."
+              },
+              {
+                "q": "İhtiyaç sahibi insanlara yardım etmek hangi duygunun sonucudur?",
+                "options": [
+                  "Empati ve sevgi",
+                  "Kıskançlık",
+                  "Kibir",
+                  "Öfke"
+                ],
+                "ans": 0,
+                "hint": "Paylaşmak ve yardımlaşmak toplumu bir arada tutar."
+              }
+            ],
+            "fact_card": {
+              "title": "Yardımlaşma",
+              "emoji": "🤝",
+              "rule": "Yardımlaşma ve dayanışma toplumda kardeşliği ve birliği pekiştirir. Kızılay, AFAD, Yeşilay gibi sivil toplum kuruluşları ihtiyaç sahiplerine el uzatır.",
+              "example": "Deprem veya sel felaketinde ihtiyaç sahiplerine kıyafet ve battaniye yardımı göndermek milletimizin en güzel yardımlaşma örneğidir.",
+              "tip": "Büyük yardımlar yapmak zorunda değilsin; yaşlı bir komşunun poşetini taşımak bile çok değerli bir yardımlaşmadır."
+            }
+          },
+          {
+            "id": "hb_u3_3",
+            "title": "Meslekler",
+            "page": 93,
+            "desc": "Toplumdaki meslekler, yaptıkları işler ve kullandıkları araç-gereçler.",
+            "badge": "Meslekler",
+            "activity": "professions",
+            "tasks": [
+              {
+                "q": "Hastaları muayene eden, teşhis koyup tedavi eden meslek sahibi kimdir?",
+                "options": [
+                  "Doktor / Hekim",
+                  "Mimar",
+                  "Aşçı",
+                  "Kaptan"
+                ],
+                "ans": 0,
+                "hint": "Doktorlar sağlık hizmeti verir ve stetoskop kullanır."
+              },
+              {
+                "q": "Binaların, evlerin ve köprülerin planını ve projesini çizen meslek hangisidir?",
+                "options": [
+                  "Mimar",
+                  "Şoför",
+                  "Fırıncı",
+                  "Terzi"
+                ],
+                "ans": 0,
+                "hint": "Mimarlar yapıları tasarlar ve projelerini çizer."
+              }
+            ],
+            "fact_card": {
+              "title": "Meslekler",
+              "emoji": "👩‍⚕️",
+              "rule": "Toplumda her meslek bir ihtiyacı karşılar: Doktor sağlığımızı, Öğretmen eğitimimizi, Polis güvenliğimizi, Çiftçi besinlerimizi, İtfaiyeci canımızı korur.",
+              "example": "Fırıncılar sabahın erken saatlerinde taze ekmek pişirerek soframıza ekmek gelmesini sağlarlar.",
+              "tip": "Hiçbir meslek diğerinden üstün değildir; işini dürüst, özenli ve severek yapan her meslek sahibi saygıyı hak eder!"
+            }
+          }
+        ],
+        "exam": {
+          "title": "3. Öğrenme Alanı Değerlendirme (Ailem ve Toplum)",
+          "book_ref": "MEB Hayat Bilgisi 1. Kitap s. 99 - 102",
+          "questions": [
+            {
+              "q": "Toplumda insanların birbirine yardım ederek zor işleri kolayca bitirmesine ne denir?",
+              "options": [
+                "Dayanışma ve İmece",
+                "Rekabet",
+                "Kavga",
+                "Bencillik"
+              ],
+              "ans": 0,
+              "hint": "Birlikten kuvvet doğar, dayanışma toplumu güçlendirir."
+            },
+            {
+              "q": "Evlerimizin güvenliğini sağlayan ve asayişi koruyan meslek hangisidir?",
+              "options": [
+                "Polis / Güvenlik Görevlisi",
+                "Aşçı",
+                "Berber",
+                "Fırıncı"
+              ],
+              "ans": 0,
+              "hint": "Polis ve güvenlik güçleri güvenliğimizi sağlar."
+            }
+          ]
+        }
+      }
+    ],
+    "final_exam": {
+      "title": "🏆 1. Dönem Hayat Bilgisi Büyük Başarı Sınavı",
+      "book_ref": "3. Sınıf MEB Hayat Bilgisi 1. Dönem Tüm Üniteler (s. 12 - 102)",
+      "questions": [
+        {
+          "q": "Bir yerin kuş bakışı görünüşünün ölçüsüz ve kabataslak kağıda çizilmesine ne denir?",
+          "options": [
+            "Harita",
+            "Kroki",
+            "Resim",
+            "Plan"
+          ],
+          "ans": 1
+        },
+        {
+          "q": "Sınıfta ders dinlerken söz almak isteyen bir öğrenci ne yapmalıdır?",
+          "options": [
+            "Ayağa fırlamalıdır",
+            "Parmak kaldırıp öğretmenden izin istemelidir",
+            "Bağırarak konuşmalıdır",
+            "Sıraya vurmalıdır"
+          ],
+          "ans": 1
+        },
+        {
+          "q": "Aşağıdakilerden hangisi bir İHTİYAÇTIR?",
+          "options": [
+            "Yeni bir video oyunu",
+            "Kışlık sıcak bir mont",
+            "Altıncı oyuncak araba",
+            "Pahalı bir çikolata"
+          ],
+          "ans": 1
+        },
+        {
+          "q": "Evimizde ve okulumuzda kaynakları tasarruflu kullanmak için hangisini yapmalıyız?",
+          "options": [
+            "Gereksiz yanan lambaları kapatmalıyız",
+            "Musluğu açık bırakmalıyız",
+            "Televizyonu sürekli açık tutmalıyız",
+            "Sayfaları boşa yırtmalıyız"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Sağlıklı büyümek ve gelişmek için hangisi DOĞRUDUR?",
+          "options": [
+            "Sadece abur cuburla beslenmek",
+            "Mevsiminde taze sebze ve meyve tüketmek",
+            "Gece 02.00'de uyumak",
+            "Hiç su içmemek"
+          ],
+          "ans": 1
+        },
+        {
+          "q": "Arkadaşlarımızla oyun oynarken hangisi doğru bir davranıştır?",
+          "options": [
+            "Kaybedince küsüp oyunu bozmak",
+            "Kurallara uymak ve kazananı tebrik etmek",
+            "Arkadaşımıza lakap takmak",
+            "Sadece kendi istediğimiz oyunu oynamak"
+          ],
+          "ans": 1
+        }
+      ]
+    }
+  },
+  "ingilizce": {
+    "title": "İngilizce (English)",
+    "subtitle": "3. Sınıf Ders & Çalışma Kitabı (1. Dönem / Themes 1-3)",
+    "icon": "🇬🇧",
+    "badge": "11 Konu",
+    "accent": "#0284C7",
+    "bg_light": "#F0F9FF",
+    "themes": [
+      {
+        "id": "ing_t1",
+        "title": "THEME 1: School Life",
+        "page_range": "DK: s. 19 - 36 / CK: s. 9 - 18",
+        "topics": [
+          {
+            "id": "ing_t1_1",
+            "title": "Greetings & People at School",
+            "page": 19,
+            "desc": "classmate, teacher, librarian, school nurse, caretaker, headteacher ('Who is this?')",
+            "badge": "School People",
+            "activity": "vocab_school",
+            "tasks": [
+              {
+                "q": "Who works in the school library and helps us find books?",
+                "options": [
+                  "A librarian",
+                  "A school nurse",
+                  "A caretaker",
+                  "A driver"
+                ],
+                "ans": 0,
+                "hint": "Library -> Librarian (Kütüphaneci)"
+              },
+              {
+                "q": "'Who is this?' - 'This is my ............. (sınıf arkadaşım).'",
+                "options": [
+                  "classmate",
+                  "doctor",
+                  "pilot",
+                  "farmer"
+                ],
+                "ans": 0,
+                "hint": "Sınıf arkadaşı = Classmate"
+              }
+            ],
+            "fact_card": {
+              "title": "Greetings & People at School",
+              "emoji": "🏫",
+              "rule": "Selamlaşma ve okul kişileri: Good morning (Günaydın), Good afternoon (Tünaydın), Teacher (Öğretmen), Student (Öğrenci), Friend (Arkadaş).",
+              "example": "'Good morning teacher!' (Günaydın öğretmenim!), 'This is my friend Ece.' (Bu benim arkadaşım Ece.)",
+              "tip": "'Good night' (İyi geceler) sadece yatarken söylenir. Akşam karşılaştığımızda 'Good evening' (İyi akşamlar) deriz!"
+            }
+          },
+          {
+            "id": "ing_t1_2",
+            "title": "Places at School",
+            "page": 22,
+            "desc": "library, art room, music room, gym, corridor, sports field ('Where is Daphne?')",
+            "badge": "School Places",
+            "activity": "places_school",
+            "tasks": [
+              {
+                "q": "Where do students play basketball and do physical exercises at school?",
+                "options": [
+                  "In the gym",
+                  "In the art room",
+                  "In the library",
+                  "In the music room"
+                ],
+                "ans": 0,
+                "hint": "Spor salonu = Gym"
+              },
+              {
+                "q": "'Where is Daphne?' - 'She is in the ........... playing the piano.'",
+                "options": [
+                  "music room",
+                  "canteen",
+                  "garden",
+                  "office"
+                ],
+                "ans": 0,
+                "hint": "Piyano müzik odasındadır (music room)."
+              }
+            ],
+            "fact_card": {
+              "title": "Places at School",
+              "emoji": "🎨",
+              "rule": "Okul bölümleri: Classroom (Sınıf), Library (Kütüphane), Canteen (Kantin), Playground (Oyun bahçesi), Music room (Müzik odası).",
+              "example": "'Where are you?' -> 'I am in the library.' (Neredesin? -> Kütüphanedeyim.) 'Let's play in the playground.'",
+              "tip": "Bölüm isimlerinin başına genellikle 'the' getirilir: 'in the canteen' (kantinde)."
+            }
+          },
+          {
+            "id": "ing_t1_3",
+            "title": "Months & Birthday Celebrations",
+            "page": 28,
+            "desc": "Months of the year (January - December), candle, cake, gift ('When is your birthday?')",
+            "badge": "Months & Birthdays",
+            "activity": "months_quiz",
+            "tasks": [
+              {
+                "q": "Which month comes after October?",
+                "options": [
+                  "November",
+                  "September",
+                  "December",
+                  "August"
+                ],
+                "ans": 0,
+                "hint": "October (Ekim) -> November (Kasım)"
+              },
+              {
+                "q": "'How old are you?' sorusuna hangi cevap verilir?",
+                "options": [
+                  "I am 8 years old.",
+                  "It is in July.",
+                  "Yes, I am.",
+                  "Fine, thanks."
+                ],
+                "ans": 0,
+                "hint": "How old are you? = Kaç yaşındasın?"
+              }
+            ],
+            "fact_card": {
+              "title": "Months & Birthday Celebrations",
+              "emoji": "🎂",
+              "rule": "Yılın 12 ayı: January, February, March, April, May, June, July, August, September, October, November, December.",
+              "example": "'When is your birthday?' (Doğum günün ne zaman?) -> 'It is in May.' (Mayıs ayında.) 'Happy Birthday!' (İyi ki doğdun!)",
+              "tip": "İngilizcede ay isimlerinin ilk harfi CÜMLENİN NERESİNDE OLURSA OLSUN her zaman BÜYÜK harfle yazılır (March, April vb.)!"
+            }
+          },
+          {
+            "id": "ing_t1_4",
+            "title": "School Rules & Must / Mustn't",
+            "page": 32,
+            "desc": "You must follow rules. You mustn't run in the corridor.",
+            "badge": "Must / Mustn't",
+            "activity": "must_rules",
+            "tasks": [
+              {
+                "q": "You ........... run in the corridor at school! (Koridorda koşmamalısın!)",
+                "options": [
+                  "mustn't",
+                  "must",
+                  "can",
+                  "are"
+                ],
+                "ans": 0,
+                "hint": "Yasak ve yapılmaması gerekenler için mustn't kullanılır."
+              },
+              {
+                "q": "You ........... listen to your teacher carefully in the lesson.",
+                "options": [
+                  "must",
+                  "mustn't",
+                  "aren't",
+                  "don't"
+                ],
+                "ans": 0,
+                "hint": "Zorunluluk ve yapılması gerekenler için must kullanılır."
+              }
+            ],
+            "fact_card": {
+              "title": "School Rules & Must / Mustn't",
+              "emoji": "🛑",
+              "rule": "Okul kuralları: 'Must' (yapmalısın - zorunluluk), 'Mustn't' (yapmamalısın - yasak).",
+              "example": "'You must listen to the teacher.' (Öğretmeni dinlemelisin.) 'You mustn't run in the corridor.' (Koridorda koşmamalısın.)",
+              "tip": "'Mustn't' = Must not birleşimidir; kurallara aykırı yasakları ifade eder."
+            }
+          }
+        ],
+        "exam": {
+          "title": "Theme 1 Evaluation (School Life Quiz)",
+          "book_ref": "MEB İngilizce 3. Sınıf s. 33 - 36",
+          "questions": [
+            {
+              "q": "Where do students do science experiments?",
+              "options": [
+                "In the science lab",
+                "In the canteen",
+                "In the corridor",
+                "In the garden"
+              ],
+              "ans": 0,
+              "hint": "Experiments are done in the science lab (laboratuvar)."
+            },
+            {
+              "q": "Which month is between June and August?",
+              "options": [
+                "July",
+                "May",
+                "September",
+                "October"
+              ],
+              "ans": 0,
+              "hint": "June, July, August (Haziran, Temmuz, Ağustos)."
+            },
+            {
+              "q": "You ............ shout or run in the library!",
+              "options": [
+                "mustn't",
+                "must",
+                "can",
+                "are"
+              ],
+              "ans": 0,
+              "hint": "Kütüphanede bağırmak yasaktır -> mustn't."
+            }
+          ]
+        }
+      },
+      {
+        "id": "ing_t2",
+        "title": "THEME 2: Classroom Life",
+        "page_range": "DK: s. 37 - 56 / CK: s. 19 - 26",
+        "topics": [
+          {
+            "id": "ing_t2_1",
+            "title": "Classroom Objects & Furniture",
+            "page": 37,
+            "desc": "pencil, ruler, teacher's desk, bookshelf, keyboard, duster, pen ('What are they?')",
+            "badge": "Classroom Objects",
+            "activity": "objects_quiz",
+            "tasks": [
+              {
+                "q": "What is this? (Çizim yaparken düz çizgi çekmek için kullanılan cetvel)",
+                "options": [
+                  "A ruler",
+                  "A duster",
+                  "A chair",
+                  "A schoolbag"
+                ],
+                "ans": 0,
+                "hint": "Cetvel = Ruler"
+              },
+              {
+                "q": "'What are they?' - 'They are ............. (kitaplıklar).'",
+                "options": [
+                  "bookshelves",
+                  "rulers",
+                  "pencils",
+                  "erasers"
+                ],
+                "ans": 0,
+                "hint": "Bookshelf -> Bookshelves (Kitaplıklar)"
+              }
+            ],
+            "fact_card": {
+              "title": "Classroom Objects & Furniture",
+              "emoji": "✏️",
+              "rule": "Sınıf eşyaları: Desk (Sıra), Board (Yazı tahtası), Chair (Sandalye), Pencil case (Kalemlik), Book (Kitap), Ruler (Cetvel).",
+              "example": "'What is this?' -> 'It is a ruler.' (Bu nedir? -> Bu bir cetveldir.)",
+              "tip": "Sessiz harfle başlayan nesnelerin önüne 'a' (a book), sesli harfle başlayanların önüne 'an' (an eraser) gelir!"
+            }
+          },
+          {
+            "id": "ing_t2_2",
+            "title": "Telling the Time",
+            "page": 42,
+            "desc": "'What time is it? It's five o'clock.' / Saatleri İngilizce söyleme.",
+            "badge": "What time is it?",
+            "activity": "english_time",
+            "tasks": [
+              {
+                "q": "Saat tam 5:00 iken nasıl söylenir?",
+                "options": [
+                  "It is five o'clock.",
+                  "It is four o'clock.",
+                  "It is half past five.",
+                  "It is five past."
+                ],
+                "ans": 0,
+                "hint": "Tam saatlerde 'o'clock' kullanılır: It is five o'clock."
+              },
+              {
+                "q": "'What time is it?' sorusu ne anlama gelir?",
+                "options": [
+                  "Saat kaç?",
+                  "Bugün günlerden ne?",
+                  "Hava nasıl?",
+                  "Kaç yaşındasın?"
+                ],
+                "ans": 0,
+                "hint": "What time is it? = Saat kaç?"
+              }
+            ],
+            "fact_card": {
+              "title": "Telling the Time",
+              "emoji": "⏱️",
+              "rule": "Saati sorma: 'What time is it?' (Saat kaç?). Tam saatlerde 'It is ... o'clock' kalıbı kullanılır.",
+              "example": "'What time is it?' -> 'It is three o'clock.' (Saat 3.) 'It is nine o'clock.' (Saat 9.)",
+              "tip": "'o'clock' kelimesi sadece TAM saatlerde (saat 1.00, 2.00, 3.00) söylenir. Buçuklu saatlerde o'clock kullanılmaz!"
+            }
+          },
+          {
+            "id": "ing_t2_3",
+            "title": "Numbers 20-50 & Have got / Has got",
+            "page": 46,
+            "desc": "twenty to fifty; 'How many pencils have you got? I have got two pencils.'",
+            "badge": "Numbers & Have got",
+            "activity": "numbers_have",
+            "tasks": [
+              {
+                "q": "30 sayısının İngilizce yazılışı hangisidir?",
+                "options": [
+                  "Thirty",
+                  "Thirteen",
+                  "Twenty",
+                  "Forty"
+                ],
+                "ans": 0,
+                "hint": "30 = Thirty, 13 = Thirteen"
+              },
+              {
+                "q": "'How many books have you got?' - 'I have got ........... (40) books.'",
+                "options": [
+                  "forty",
+                  "fourteen",
+                  "four",
+                  "fifty"
+                ],
+                "ans": 0,
+                "hint": "40 = Forty"
+              }
+            ],
+            "fact_card": {
+              "title": "Numbers 20-50 & Have got / Has got",
+              "emoji": "🔢",
+              "rule": "20-50 arası sayılar: 20 (Twenty), 30 (Thirty), 40 (Forty), 50 (Fifty). 'Have got' / 'Has got' (Sahip olmak).",
+              "example": "'I have got thirty pencils.' (Benim otuz kurşun kalemim var.) 'She has got a cat.' (Onun bir kedisi var.)",
+              "tip": "I, You, We, They ile 'HAVE GOT'; He, She, It ile 'HAS GOT' kullanılır!"
+            }
+          },
+          {
+            "id": "ing_t2_4",
+            "title": "Weather & School Subjects",
+            "page": 50,
+            "desc": "sunny, rainy, cloudy, windy; Maths, Science, Life Study, English, Music, Art.",
+            "badge": "Weather & Subjects",
+            "activity": "weather_subjects",
+            "tasks": [
+              {
+                "q": "'How is the weather today?' - 'It is ............ (güneşli).'",
+                "options": [
+                  "sunny",
+                  "rainy",
+                  "cloudy",
+                  "snowy"
+                ],
+                "ans": 0,
+                "hint": "Güneşli = Sunny"
+              },
+              {
+                "q": "Sayıları, toplamayı ve çarpmayı öğrendiğimiz dersin İngilizcesi nedir?",
+                "options": [
+                  "Maths",
+                  "Music",
+                  "Art",
+                  "English"
+                ],
+                "ans": 0,
+                "hint": "Matematik dersi = Maths"
+              }
+            ],
+            "fact_card": {
+              "title": "Weather & School Subjects",
+              "emoji": "☀️",
+              "rule": "Hava durumu: Sunny (Güneşli), Rainy (Yağmurlu), Snowy (Karlı), Windy (Rüzgarlı). Dersler: Maths (Matematik), Science (Fen), Art (Resim).",
+              "example": "'How is the weather today?' -> 'It is sunny today.' (Bugün hava nasıl? -> Bugün hava güneşli.)",
+              "tip": "'I like Maths' (Matematiği severim), 'I like Science' (Feni severim) cümleleriyle sevdiğin dersleri anlatabilirsin."
+            }
+          }
+        ],
+        "exam": {
+          "title": "Theme 2 Evaluation (Classroom Life Quiz)",
+          "book_ref": "MEB İngilizce 3. Sınıf s. 53 - 56",
+          "questions": [
+            {
+              "q": "What time is it? (10:00)",
+              "options": [
+                "It is ten o'clock.",
+                "It is nine o'clock.",
+                "It is half past ten.",
+                "It is ten past."
+              ],
+              "ans": 0,
+              "hint": "Saat 10:00 -> It is ten o'clock."
+            },
+            {
+              "q": "We learn songs and play instruments in ............ lesson.",
+              "options": [
+                "Music",
+                "Maths",
+                "Science",
+                "PE"
+              ],
+              "ans": 0,
+              "hint": "Müzik dersi -> Music lesson."
+            }
+          ]
+        }
+      },
+      {
+        "id": "ing_t3",
+        "title": "THEME 3: Personal Life",
+        "page_range": "DK: s. 57 - 74 / CK: s. 27 - 34",
+        "topics": [
+          {
+            "id": "ing_t3_1",
+            "title": "Parts of the Body & Appearance",
+            "page": 57,
+            "desc": "head, eye, nose, curly blonde hair, tall, short ('What does she look like?')",
+            "badge": "Body & Looks",
+            "activity": "body_appearance",
+            "tasks": [
+              {
+                "q": "'Foot' (ayak) kelimesinin çoğul hali hangisidir?",
+                "options": [
+                  "feet",
+                  "foots",
+                  "feets",
+                  "footies"
+                ],
+                "ans": 0,
+                "hint": "Foot düzensiz çoğuldur ve feet olur."
+              },
+              {
+                "q": "'She has got curly blonde hair.' cümlesinin Türkçe anlamı nedir?",
+                "options": [
+                  "Onun kıvırcık sarı saçları var.",
+                  "Onun düz siyah saçları var.",
+                  "O uzun boyludur.",
+                  "Onun mavi gözleri var."
+                ],
+                "ans": 0,
+                "hint": "Curly = Kıvırcık, Blonde = Sarı saç"
+              }
+            ],
+            "fact_card": {
+              "title": "Parts of the Body & Appearance",
+              "emoji": "👧",
+              "rule": "Vücut bölümleri: Head (Baş), Eyes (Gözler), Ears (Kulaklar), Nose (Burun), Mouth (Ağız), Hands (Eller), Legs (Bacaklar).",
+              "example": "'Touch your nose!' (Burnuna dokun!) 'I have got brown eyes.' (Benim kahverengi gözlerim var.)",
+              "tip": "Çoğul olan uzuvların sonuna 's' takısı gelir: One eye (bir göz) -> Two eyes (iki göz)!"
+            }
+          },
+          {
+            "id": "ing_t3_2",
+            "title": "Clothes & Seasons",
+            "page": 64,
+            "desc": "sweatshirt, jeans, coat, dress, sunglasses ('What are you wearing today?')",
+            "badge": "Clothes",
+            "activity": "clothes_closet",
+            "tasks": [
+              {
+                "q": "Kışın soğuk havalarda dışarı çıkarken giydiğimiz palto/kabanın İngilizcesi nedir?",
+                "options": [
+                  "A coat",
+                  "A T-shirt",
+                  "A skirt",
+                  "Shorts"
+                ],
+                "ans": 0,
+                "hint": "Kaban/palto = Coat"
+              },
+              {
+                "q": "Güneşli günlerde gözlerimizi korumak için ne takarız?",
+                "options": [
+                  "Sunglasses",
+                  "Boots",
+                  "Gloves",
+                  "Socks"
+                ],
+                "ans": 0,
+                "hint": "Güneş gözlüğü = Sunglasses"
+              }
+            ],
+            "fact_card": {
+              "title": "Clothes & Seasons",
+              "emoji": "🧥",
+              "rule": "Kıyafetler ve Mevsimler: T-shirt (Tişört), Jacket (Ceket), Shoes (Ayakkabı), Hat (Şapka). Seasons: Spring (İlkbahar), Summer (Yaz), Autumn (Sonbahar), Winter (Kış).",
+              "example": "'In summer, I wear a T-shirt.' (Yazın tişört giyerim.) 'In winter, I wear a coat and boots.'",
+              "tip": "'Wear' (giymek) fiilidir: 'I wear my shoes' (Ayakkabılarımı giyerim)."
+            }
+          },
+          {
+            "id": "ing_t3_3",
+            "title": "Feelings & Preferences (Like / Dislike)",
+            "page": 70,
+            "desc": "'I like sunny days', 'I dislike rainy days', preferences and feelings.",
+            "badge": "Likes / Dislikes",
+            "activity": "preferences",
+            "tasks": [
+              {
+                "q": "Bir şeyi SEVMEDİĞİMİZİ belirtmek için hangisini kullanırız?",
+                "options": [
+                  "I dislike / hate",
+                  "I love",
+                  "I like",
+                  "I enjoy"
+                ],
+                "ans": 0,
+                "hint": "Dislike veya hate sevmemek anlamına gelir."
+              },
+              {
+                "q": "'I love reading books in the library.' cümlesi ne anlama gelir?",
+                "options": [
+                  "Kütüphanede kitap okumayı çok severim.",
+                  "Kütüphaneye gitmek istemiyorum.",
+                  "Kitaplarım kayboldu.",
+                  "Kitapları sevmiyorum."
+                ],
+                "ans": 0,
+                "hint": "Love = Çok sevmek"
+              }
+            ],
+            "fact_card": {
+              "title": "Feelings & Preferences (Like / Dislike)",
+              "emoji": "❤️",
+              "rule": "Duygular ve Beğeniler: 'I like ...' (Severim), 'I don't like ...' (Sevmem). Happy (Mutlu), Sad (Üzgün), Energetic (Enerjik).",
+              "example": "'I like football, but I don't like tennis.' (Futbolu severim ama tenisi sevmem.) 'Are you happy?' -> 'Yes, I am!'",
+              "tip": "'Like' kelimesinin olumsuzu 'don't like'tır. Sorularda 'Do you like apples?' (Elma sever misin?) diye sorulur!"
+            }
+          }
+        ],
+        "exam": {
+          "title": "Theme 3 Evaluation (Personal Life Quiz)",
+          "book_ref": "MEB İngilizce 3. Sınıf s. 71 - 74",
+          "questions": [
+            {
+              "q": "What does she look like? (O nasıl görünüyor?)",
+              "options": [
+                "She has got long curly hair and green eyes.",
+                "She is in the classroom.",
+                "It is rainy today.",
+                "I like apples."
+              ],
+              "ans": 0,
+              "hint": "Fiziksel görünüş tanımlanıyor: uzun kıvırcık saç ve yeşil gözler."
+            },
+            {
+              "q": "It is cold and snowy today. You should wear your ............",
+              "options": [
+                "coat and boots",
+                "sunglasses",
+                "swimsuit",
+                "T-shirt and shorts"
+              ],
+              "ans": 0,
+              "hint": "Soğuk ve karlı havada kaban ve bot (coat and boots) giyilir."
+            }
+          ]
+        }
+      }
+    ],
+    "final_exam": {
+      "title": "🏆 1. Dönem İngilizce Büyük Başarı Sınavı",
+      "book_ref": "3. Sınıf MEB İngilizce 1. Dönem Tüm Üniteler (s. 8 - 74)",
+      "questions": [
+        {
+          "q": "Sabah okula geldiğinde öğretmenine nasıl selam verirsin?",
+          "options": [
+            "Good night!",
+            "Good morning!",
+            "Goodbye!",
+            "See you!"
+          ],
+          "ans": 1
+        },
+        {
+          "q": "'What is your name?' sorusuna nasıl cevap verilir?",
+          "options": [
+            "I am eight years old.",
+            "My name is Can.",
+            "I am fine.",
+            "Yes, I am."
+          ],
+          "ans": 1
+        },
+        {
+          "q": "'How are you?' sorusunun anlamı nedir?",
+          "options": [
+            "Kaç yaşındasın?",
+            "Adın ne?",
+            "Nasılsın?",
+            "Nerelisin?"
+          ],
+          "ans": 2
+        },
+        {
+          "q": "'Mother' kelimesinin Türkçe karşılığı nedir?",
+          "options": [
+            "Baba",
+            "Anne",
+            "Kız kardeş",
+            "Büyükbaba"
+          ],
+          "ans": 1
+        },
+        {
+          "q": "Karnı acıkan bir çocuk kendini nasıl ifade eder?",
+          "options": [
+            "I am happy.",
+            "I am tired.",
+            "I am hungry.",
+            "I am cold."
+          ],
+          "ans": 2
+        },
+        {
+          "q": "'The elephant is big.' cümlesi ne anlama gelir?",
+          "options": [
+            "Fil küçüktür.",
+            "Fil büyüktür.",
+            "Fil hızlıdır.",
+            "Fil yavaştır."
+          ],
+          "ans": 1
+        }
+      ]
+    }
+  },
+  "general_exam": {
+    "title": "👑 3. Sınıf 1. Dönem MEB Maarif Modeli Genel Değerlendirme Sınavı",
+    "book_ref": "3. Sınıf 1. Dönem 4 Ana Ders Genel Başarı Sınavı (49 Kazanım)",
+    "questions": [
+      {
+        "q": "[Matematik] 4 yüzlük, 6 onluk ve 3 birlikten oluşan sayı hangisidir?",
+        "options": [
+          "463",
+          "643",
+          "364",
+          "436"
+        ],
+        "ans": 0
+      },
+      {
+        "q": "[Matematik] 5 x 8 işleminin sonucu kaçtır?",
+        "options": [
+          "35",
+          "40",
+          "45",
+          "48"
+        ],
+        "ans": 1
+      },
+      {
+        "q": "[Matematik] 30 lirası olan Efe, tanesi 6 lira olan defterlerden kaç tane alabilir?",
+        "options": [
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        "ans": 1
+      },
+      {
+        "q": "[Fen Bilimleri] Hangisi Dünya'nın yuvarlak olduğunu kanıtlayan olaylardan biridir?",
+        "options": [
+          "Güneşin her gün doğudan doğması",
+          "Hep aynı yöne giden uçağın başladığı yere dönmesi",
+          "Geceleri yıldızların görünmesi",
+          "Yağmurun yukarıdan yağması"
+        ],
+        "ans": 1
+      },
+      {
+        "q": "[Fen Bilimleri] Kuvvet uygulandığında şekil değiştiren, kuvvet kalkınca eski haline dönen madde hangisidir?",
+        "options": [
+          "Hamur",
+          "Paket lastiği",
+          "Tahta",
+          "Cam"
+        ],
+        "ans": 1
+      },
+      {
+        "q": "[Hayat Bilgisi] Kroki ile ilgili hangisi DOĞRUDUR?",
+        "options": [
+          "Cetvelle milimetrik ölçülür",
+          "Kuş bakışı ve kabataslaktır",
+          "Yandan çizilir",
+          "Ölçeksiz çizilemez"
+        ],
+        "ans": 1
+      },
+      {
+        "q": "[Hayat Bilgisi] Aşağıdakilerden hangisi bir İSTEKTİR (temel ihtiyaç değildir)?",
+        "options": [
+          "Su",
+          "Ekmek",
+          "Sıcak mont",
+          "Uzaktan kumandalı araba"
+        ],
+        "ans": 3
+      },
+      {
+        "q": "[İngilizce] 'I am thirsty.' diyen biri ne istemektedir?",
+        "options": [
+          "Water (Su)",
+          "Pizza",
+          "Book (Kitap)",
+          "Bed (Yatak)"
+        ],
+        "ans": 0
+      }
+    ]
+  }
+}

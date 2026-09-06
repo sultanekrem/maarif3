@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#4338CA">
+  <link rel="icon" type="image/svg+xml" href="assets/maarif_logo.svg">
+  <link rel="apple-touch-icon" href="assets/icon-512.svg">
+  <link rel="manifest" href="manifest.json">
+  <title>Maarif Yıldızı 3 - 3. Sınıf MEB 2026-2027 Ders & Başarı İstasyonu</title>
+  
+  <!-- Türkçe Karakterleri %100 Kusursuz Destekleyen Neşeli Tipografi -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Quicksand:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    
+    <!-- 1. SPLASH SCREEN (Karşılama & Başlangıç - Geniş Modern Sahne) -->
+    <div id="screen-splash" class="screen active">
+      <div class="splash-hero-container">
+        
+        <div class="splash-hero-header">
+          <div class="splash-ministry-badge">
+            <span>🇹🇷 T.C. MİLLÎ EĞİTİM BAKANLIĞI • 2026-2027 TÜRKİYE YÜZYILI MAARİF MODELİ</span>
+          </div>
+        </div>
+
+        <div class="splash-hero-center">
+          <div class="splash-logo-wrapper">
+            <img src="assets/maarif_logo.svg" class="splash-hero-logo" alt="Maarif Yıldızı 3">
+          </div>
+          <h1 class="splash-hero-title">Maarif Yıldızı 3</h1>
+          <p class="splash-hero-subtitle">3. Sınıf 1. Dönem Resmî MEB Ders Kitapları • 3 Adımlı Görsel Hap Bilgiler • Tema Başarı Sınavları</p>
+        </div>
+
+        <!-- 4 Resmî MEB Dersi Kartları (Geniş Vitrin) -->
+        <div class="splash-curriculum-showcase">
+          <div class="showcase-card showcase-math">
+            <div class="showcase-icon">📐</div>
+            <div class="showcase-info">
+              <strong>Matematik</strong>
+              <span>18 Konu • 4 Tema</span>
+            </div>
+          </div>
+          <div class="showcase-card showcase-sci">
+            <div class="showcase-icon">🔬</div>
+            <div class="showcase-info">
+              <strong>Fen Bilimleri</strong>
+              <span>11 Konu • 4 Tema</span>
+            </div>
+          </div>
+          <div class="showcase-card showcase-life">
+            <div class="showcase-icon">🇹🇷</div>
+            <div class="showcase-info">
+              <strong>Hayat Bilgisi</strong>
+              <span>10 Konu • 2 Tema</span>
+            </div>
+          </div>
+          <div class="showcase-card showcase-eng">
+            <div class="showcase-icon">🇬🇧</div>
+            <div class="showcase-info">
+              <strong>İngilizce</strong>
+              <span>10 Konu • 2 Tema</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Özellikler Şeridi -->
+        <div class="splash-features-bar">
+          <div class="feature-item">
+            <span class="f-icon">💡</span>
+            <span>49 Adet 3 Adımlı Hap Bilgi</span>
+          </div>
+          <div class="feature-item">
+            <span class="f-icon">📝</span>
+            <span>12 Tema Sınavı + Büyük Final</span>
+          </div>
+          <div class="feature-item">
+            <span class="f-icon">🎓</span>
+            <span>Kişiselleştirilmiş Başarı Karnesi</span>
+          </div>
+        </div>
+
+        <!-- Başlatma ve Giriş Aksiyonları -->
+        <div class="splash-hero-actions">
+          <button id="btn-start-app" class="btn-splash-start">
+            <span class="btn-icon">🚀</span>
+            <span class="btn-text">DERSLERE BAŞLA (Giriş Yap)</span>
+          </button>
+          <button id="btn-splash-profile" class="btn-splash-profile">
+            <span class="btn-icon">👤</span>
+            <span class="btn-text">Öğrenci Kaydı / Profil</span>
+          </button>
+        </div>
+
+        <div class="splash-pwa-badge">
+          <span>📱 Tablet, iPad, Akıllı Tahta & PC Uyumlu • Çevrimdışı Çalışır (PWA)</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 2. SCREEN MENU (Ana Ders Paneli & Sınıf Kumanda Merkezi) -->
+    <div id="screen-menu" class="screen">
+      <!-- Üst Kumanda Barı (Belirgin Ayrılmış, Çocuk Odaklı) -->
+      <header class="app-header">
+        <div class="header-student-profile" id="header-profile-card" role="button" tabindex="0" title="Öğrenci Profilini Düzenle">
+          <div class="student-avatar-wrap">
+            <span class="student-avatar-emoji" id="header-avatar-emoji">👧</span>
+          </div>
+          <div class="student-text">
+            <div class="student-name-row">
+              <span class="student-name" id="header-student-name">Eylül Yılmaz</span>
+              <span class="edit-badge">✏️ Değiştir</span>
+            </div>
+            <div class="student-sub" id="header-student-meta">3-A Sınıfı • No: 342 • 2026-2027 Maarif İstasyonu</div>
+          </div>
+        </div>
+
+        <div class="header-stats">
+          <div class="stat-pill stars-pill">
+            <span class="pill-icon">⭐</span>
+            <span id="menu-stars" class="pill-value">0</span>
+            <span class="pill-label">Yıldız</span>
+          </div>
+          <div class="stat-pill score-pill">
+            <span class="pill-icon">🏆</span>
+            <span id="menu-score" class="pill-value">0</span>
+            <span class="pill-label">Puan</span>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <button id="btn-fullscreen" class="action-circle-btn" title="Tam Ekran">⛶</button>
+          <button id="btn-sound" class="action-circle-btn" title="Ses Aç/Kapat">🔊</button>
+          <button id="btn-badges-nav" class="action-circle-btn" title="Başarılar & Rozetler">🏅</button>
+          <button id="btn-parent-dashboard" class="action-circle-btn" title="Veli & Öğretmen Takip Paneli">👨‍🏫</button>
+        </div>
+      </header>
+
+      <!-- Ana İçerik Konteyneri -->
+      <main class="menu-main-content">
+        <div class="section-title-wrap">
+          <div>
+            <h2 class="section-heading">1. Dönem Dersleri & Üniteler</h2>
+            <p class="section-subheading">Çalışmak istediğin ders kitabını seç, konuları bitir ve ünite sınavıyla kendini dene!</p>
+          </div>
+          <div class="term-tag">2026 - 2027 EĞİTİM ÖĞRETİM YILI</div>
+        </div>
+
+        <!-- 4 Ana Ders Kartı Grid -->
+        <div class="subjects-grid" id="subjects-grid-container">
+          <!-- JS tarafından doldurulur -->
+        </div>
+        <!-- 👑 DÖNEMİN BÜYÜK SINAVI: 4 DERS GENEL DEĞERLENDİRME BANNER'I -->
+        <div class="grand-general-exam-banner" id="grand-exam-banner">
+          <div class="grand-banner-content">
+            <div class="grand-banner-left">
+              <span class="grand-badge">👑 1. DÖNEM DÖRT DERS GENEL BAŞARI SINAVI</span>
+              <h3 class="grand-title">3. Sınıf MEB Maarif Modeli Genel Değerlendirme Sınavı</h3>
+              <p class="grand-sub">Matematik, Fen Bilimleri, Hayat Bilgisi ve İngilizce — Tüm 49 resmî kazanımı kapsayan büyük dönem sınavı! Kendini sına ve karne al!</p>
+            </div>
+            <button id="btn-start-general-exam" class="btn-grand-exam-action">
+              <span>Genel Sınavı Başlat</span>
+              <span>🚀</span>
+            </button>
+          </div>
+        </div>
+
+
+        <!-- Sınıf & Öğrenci Başarı Paneli (Gelişim Özeti - Alta Sabitlenmiş) -->
+        <div class="classroom-summary-card">
+          <div class="summary-left">
+            <span class="summary-badge">🎓 3. SINIF GELİŞİM RAPORU (2026-2027)</span>
+            <h3 class="summary-title" id="class-summary-title">49 Resmî MEB Kazanımı Hazır</h3>
+            <p class="summary-desc">Her üniteyi tamamladıktan sonra "Tema Değerlendirme Sınavı" ile bilginizi ölçün, öğretmen ve veli onaylı karnenizi alın!</p>
+          </div>
+          <div class="summary-right">
+            <div class="summary-stat-box">
+              <span class="stat-big-num" id="stat-completed-topics-count">0 / 49</span>
+              <span class="stat-small-lbl">Tamamlanan Konu</span>
+            </div>
+            <div class="summary-stat-box">
+              <span class="stat-big-num" id="stat-exams-taken-count">0 / 12</span>
+              <span class="stat-small-lbl">Tema Sınavı</span>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- 3. SCREEN TOPICS (Seçilen Dersin Ünite ve Konu Ağacı) -->
+    <div id="screen-topics" class="screen">
+      <header class="topics-header">
+        <button id="btn-back-to-subjects" class="btn-back">
+          <span class="back-arrow">←</span> Dersler
+        </button>
+        <div class="topics-header-title">
+          <span id="current-subject-icon" class="subject-icon-large">📐</span>
+          <div>
+            <h2 id="current-subject-title">Matematik</h2>
+            <p id="current-subject-subtitle">3. Sınıf 1. Kitap • 2026-2027 Maarif Modeli</p>
+          </div>
+        </div>
+        <div class="topics-header-stats">
+          <span id="subject-progress-count" class="progress-badge">0 / 18 Konu</span>
+        </div>
+      </header>
+
+      <!-- Ünite Seçici Sekmeler -->
+      <div class="theme-tabs-nav" id="theme-tabs-container">
+        <!-- JS ile üniteler doldurulur -->
+      </div>
+
+      <!-- O Ünitenin Değerlendirme Sınavı & Konuları Alanı -->
+      <div class="topics-scroll-area">
+        <!-- Ünite Değerlendirme Sınavı Banner'ı -->
+        
+        <!-- DERSİN 1. DÖNEM BÜYÜK FİNAL SINAVI BANNER'I -->
+        <div class="subject-final-exam-banner" id="subject-final-exam-banner">
+          <div class="final-banner-left">
+            <span class="final-badge" id="final-exam-badge">🏆 DERS BÜYÜK FİNAL SINAVI</span>
+            <h3 class="final-title" id="final-exam-title">1. Dönem Matematik Büyük Başarı Sınavı</h3>
+            <p class="final-sub" id="final-exam-sub">Bu dersin tüm ünitelerinden seçilmiş kapsamlı dönem sonu değerlendirmesi!</p>
+          </div>
+          <button id="btn-start-subject-final-exam" class="btn-final-exam-action">
+            <span>Ders Final Sınavına Başla</span>
+            <span>🌟</span>
+          </button>
+        </div>
+<div class="unit-exam-banner" id="unit-exam-banner">
+          <div class="exam-banner-info">
+            <span class="exam-banner-tag">📝 MEB TEMA DEĞERLENDİRME SINAVI</span>
+            <h3 class="exam-banner-title" id="exam-banner-title">1. Tema Değerlendirme Sınavı</h3>
+            <p class="exam-banner-sub" id="exam-banner-ref">Resmî MEB Ders Kitabı Soruları ile Kendini Dene!</p>
+          </div>
+          <button id="btn-start-unit-exam" class="btn-exam-action">
+            <span>Sınava Başla</span>
+            <span>✍️</span>
+          </button>
+        </div>
+
+        <!-- Konu Kartları Izgarası -->
+        <div class="topics-grid" id="topics-list-container">
+          <!-- JS ile o ünitenin resmî konuları doldurulur -->
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. SCREEN QUIZ (İnteraktif Konu Çalışma Ekranı - Oyun Arenası Tasarımı) -->
+    <div id="screen-quiz" class="screen arena-screen">
+      <header class="quiz-header">
+        <button id="btn-back-to-topics" class="btn-back-quiz">
+          <span class="back-arrow">←</span> Konu Listesi
+        </button>
+        <div class="quiz-topic-info">
+          <span id="quiz-topic-title" class="quiz-topic-name">Sayıları Okuma ve Yazma</span>
+          <span id="quiz-book-page" class="quiz-page-badge">📖 Kitap Sayfa 12</span>
+        </div>
+        <div class="quiz-progress-wrap">
+          <span id="quiz-progress-text" class="quiz-progress-label">Soru 1 / 4</span>
+          <div class="quiz-progress-track">
+            <div id="quiz-progress-bar" class="quiz-progress-fill"></div>
+          </div>
+        </div>
+      </header>
+
+      <main class="quiz-main-card">
+        <!-- Soru Kutusu (Renkli, Oyun Kartı Şeklinde) -->
+        <div class="question-container">
+          <div class="question-badge-row">
+            <span id="quiz-q-type-badge" class="q-type-badge">🎯 Kazanım Sorusu</span>
+            <span id="quiz-streak-badge" class="streak-badge">🔥 1 Seri</span>
+          </div>
+          <h3 id="quiz-question-text" class="question-text">Soru metni yükleniyor...</h3>
+        </div>
+
+        <!-- Şıklar Izgarası (Renkli, Taktil Dokunmatik Butonlar) -->
+        <div class="options-grid" id="quiz-options-container">
+          <!-- Seçenekler JS ile render edilir -->
+        </div>
+
+        <!-- İpucu & Açıklama Çubuğu -->
+        <div id="quiz-feedback-box" class="feedback-box hidden">
+          <div class="feedback-icon" id="feedback-icon">💡</div>
+          <div class="feedback-text-content">
+            <div id="feedback-title" class="feedback-title">İpucu</div>
+            <div id="feedback-message" class="feedback-message">Açıklama mesajı</div>
+          </div>
+          <button id="btn-quiz-next" class="btn-next-action">Sonraki Soru →</button>
+        </div>
+      </main>
+    </div>
+
+    <!-- 5. SCREEN EXAM (Resmî MEB Tema Değerlendirme Deneme Sınavı - Oyun Arenası) -->
+    <div id="screen-exam" class="screen arena-screen">
+      <header class="exam-header">
+        <button id="btn-cancel-exam" class="btn-back-quiz">
+          <span class="back-arrow">✕</span> Sınavdan Çık
+        </button>
+        <div class="exam-header-info">
+          <span id="exam-current-title" class="exam-title-text">1. Tema Değerlendirme Sınavı</span>
+          <span id="exam-book-badge" class="exam-ref-badge">MEB Kitabı s. 79</span>
+        </div>
+        <div class="exam-counter-pill">
+          <span id="exam-counter-text">Soru 1 / 8</span>
+        </div>
+      </header>
+
+      <main class="exam-main-card">
+        <div class="question-container">
+          <div class="question-badge-row">
+            <span class="q-type-badge">📝 MEB Değerlendirme Sorusu</span>
+            <span id="exam-score-live" class="streak-badge">Doğru: 0</span>
+          </div>
+          <h3 id="exam-question-text" class="question-text">Sınav sorusu yükleniyor...</h3>
+        </div>
+
+        <div class="options-grid" id="exam-options-container">
+          <!-- Sınav şıkları -->
+        </div>
+      </main>
+    </div>
+
+    <!-- 6. SCREEN REPORT CARD (Öğrenci Başarı Karnesi & Deneme Denetim Raporu) -->
+    <div id="screen-report-card" class="screen overlay">
+      <div class="report-card-modal">
+        <div class="report-card-header">
+          <img src="assets/maarif_logo.svg" class="report-card-logo" alt="Maarif Yıldızı">
+          <span class="report-badge">T.C. MEB 3. SINIF BAŞARI KARNESİ (2026-2027)</span>
+          <h2 id="report-exam-title" class="report-title">1. Tema Değerlendirme Sınavı</h2>
+          
+          <!-- Öğrenci Kimlik Kartı Rozeti -->
+          <div class="report-student-pill">
+            <span class="r-student-avatar" id="report-student-avatar">👧</span>
+            <div class="r-student-info">
+              <strong id="report-student-name">Eylül Yılmaz</strong>
+              <span id="report-student-class">3-A Sınıfı • Okul No: 342</span>
+            </div>
+            <span class="report-date" id="report-date">06.09.2026</span>
+          </div>
+        </div>
+
+        <div class="report-grade-circle" id="report-grade-badge">
+          <span class="grade-score" id="report-score-num">100</span>
+          <span class="grade-label">PUAN</span>
+        </div>
+
+        <div class="report-stats-grid">
+          <div class="r-stat-box r-stat-correct">
+            <span class="r-stat-val" id="report-correct-val">8</span>
+            <span class="r-stat-lbl">Doğru</span>
+          </div>
+          <div class="r-stat-box r-stat-wrong">
+            <span class="r-stat-val" id="report-wrong-val">0</span>
+            <span class="r-stat-lbl">Yanlış</span>
+          </div>
+          <div class="r-stat-box r-stat-stars">
+            <span class="r-stat-val" id="report-stars-val">⭐⭐⭐⭐⭐</span>
+            <span class="r-stat-lbl">Derece</span>
+          </div>
+        </div>
+
+        <!-- Hile Önleme / Çoklu Deneme & İlerleme Takip Kutusu -->
+        <div class="report-audit-box">
+          <div class="audit-header-row">
+            <span class="audit-badge" id="report-attempt-badge">📝 Deneme #1</span>
+            <span class="audit-comparison" id="report-attempt-comparison">İlk Çözüm Kaydedildi</span>
+          </div>
+          <div class="audit-history-list" id="report-audit-history">
+            <!-- Geçmiş denemeler buraya listelenir -->
+          </div>
+        </div>
+
+        <!-- Öğretmen Görüşü -->
+        <div class="teacher-notes-card">
+          <div class="teacher-notes-title">👩‍🏫 Öğretmen Notu & Değerlendirmesi:</div>
+          <div class="teacher-notes-text" id="report-teacher-note">
+            "Tebrikler Eylül! Bu temanın tüm kazanımlarını başarıyla tamamladın."
+          </div>
+        </div>
+
+        <div class="report-actions">
+          <button id="btn-close-report" class="btn-primary-action">Karnemi Kaydet ve Dön</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. SCREEN RESULTS (Konu Sonu Kutlaması) -->
+    <div id="screen-results" class="screen overlay">
+      <div class="results-modern-card">
+        <div class="results-trophy-wrap">
+          <img src="assets/maarif_logo.svg" class="results-avatar-logo" alt="Maarif Yıldızı">
+          <div class="results-celebrate-badge">🎉 TEBRİKLER!</div>
+        </div>
+        
+        <h2 id="result-title" class="results-title">Harika İş Çıkardın!</h2>
+        <p id="result-subtitle" class="results-sub">Bu konunun tüm kazanımlarını başarıyla tamamladın!</p>
+
+        <div class="results-stars-row" id="result-stars">
+          <span class="star-icon">⭐</span>
+          <span class="star-icon">⭐</span>
+          <span class="star-icon">⭐</span>
+        </div>
+
+        <div class="results-stats-row">
+          <div class="stat-card stat-correct">
+            <span class="stat-num" id="result-correct">4</span>
+            <span class="stat-txt">Doğru</span>
+          </div>
+          <div class="stat-card stat-score">
+            <span class="stat-num" id="result-score">+100</span>
+            <span class="stat-txt">Kazanılan Puan</span>
+          </div>
+          <div class="stat-card stat-stars">
+            <span class="stat-num" id="result-earned-stars">+3</span>
+            <span class="stat-txt">Yıldız</span>
+          </div>
+        </div>
+
+        <div class="results-actions">
+          <button id="btn-result-next-topic" class="btn-primary-action">Sonraki Konuya Geç →</button>
+          <button id="btn-result-back-topics" class="btn-secondary-action">Konu Listesine Dön</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. SCREEN BADGES (Rozetler & Yıl Boyu İlerleme) -->
+    <div id="screen-badges" class="screen">
+      <header class="app-header">
+        <button id="btn-close-badges" class="btn-back">
+          <span class="back-arrow">←</span> Geri
+        </button>
+        <h2 class="header-title">Başarılar & Rozetler (2026-2027)</h2>
+        <div style="width: 60px;"></div>
+      </header>
+
+      <div class="badges-content">
+        <div class="badges-stats-card">
+          <div class="b-stat">
+            <span class="b-val" id="badges-total-topics">0 / 49</span>
+            <span class="b-lbl">Tamamlanan Konu</span>
+          </div>
+          <div class="b-stat">
+            <span class="b-val" id="badges-total-stars">0</span>
+            <span class="b-lbl">Toplam Yıldız</span>
+          </div>
+          <div class="b-stat">
+            <span class="b-val" id="badges-total-score">0</span>
+            <span class="b-lbl">Toplam Puan</span>
+          </div>
+        </div>
+
+        <h3 class="badges-grid-title">Kazanılan Rozetler</h3>
+        <div class="badges-grid" id="badges-container">
+          <!-- JS ile rozetler buraya render edilir -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ====================================================================
+         ROOT MODALLAR (Ekranlardan bağımsız, overlay açılan pencereler)
+         ==================================================================== -->
+
+    <!-- A. ÖĞRENCİ KAYIT & PROFİL DÜZENLEME MODALI -->
+    <div id="modal-student-register" class="app-modal-backdrop">
+      <div class="student-register-card">
+        <div class="register-header">
+          <div class="register-badge">🌟 ÖĞRENCİ İSTASYONU KAYDI</div>
+          <h2 class="register-title">Maarif Yıldızı'na Hoş Geldin!</h2>
+          <p class="register-sub">2026-2027 başarı profilini oluştur; karnelerinde adın, numaran ve başarıların parlasın!</p>
+        </div>
+
+        <!-- Karakter / Avatar Seçici -->
+        <div class="avatar-picker-section">
+          <label class="register-label">Öğrenci Karakterini Seç:</label>
+          <div class="avatar-picker-grid" id="avatar-picker-grid">
+            <button type="button" class="avatar-opt selected" data-avatar="👧">👧</button>
+            <button type="button" class="avatar-opt" data-avatar="👦">👦</button>
+            <button type="button" class="avatar-opt" data-avatar="🧑‍🚀">🧑‍🚀</button>
+            <button type="button" class="avatar-opt" data-avatar="🦁">🦁</button>
+            <button type="button" class="avatar-opt" data-avatar="🦊">🦊</button>
+            <button type="button" class="avatar-opt" data-avatar="🚀">🚀</button>
+            <button type="button" class="avatar-opt" data-avatar="⭐">⭐</button>
+            <button type="button" class="avatar-opt" data-avatar="🦉">🦉</button>
+          </div>
+        </div>
+
+        <!-- Bilgi Giriş Formu -->
+        <div class="register-form">
+          <div class="form-group">
+            <label for="input-student-name" class="form-label">Öğrenci Adı ve Soyadı:</label>
+            <input type="text" id="input-student-name" class="form-input" placeholder="Örn: Eylül Yılmaz" maxlength="32" autocomplete="off">
+          </div>
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="input-student-class" class="form-label">Sınıf / Şube:</label>
+              <input type="text" id="input-student-class" class="form-input" placeholder="Örn: 3-A" maxlength="10" autocomplete="off">
+            </div>
+            <div class="form-group">
+              <label for="input-student-no" class="form-label">Okul Numarası:</label>
+              <input type="text" id="input-student-no" class="form-input" placeholder="Örn: 342" maxlength="10" autocomplete="off">
+            </div>
+          </div>
+        </div>
+
+        <div class="register-actions">
+          <button id="btn-save-profile" class="btn-register-save">
+            <span>🌟 Bilgileri Kaydet & Başla</span>
+          </button>
+          <button id="btn-cancel-profile" class="btn-register-cancel" style="display: none;">
+            <span>Vazgeç</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- B. 💡 3 ADIMLI HAP BİLGİ & KEŞFET KARTI MODALI (Kural, Örnek, Püf Noktası) -->
+    <div id="modal-fact-card" class="app-modal-backdrop">
+      <div class="fact-card-modal-large">
+        <button class="modal-close-x" id="btn-close-fact-x" title="Kapat">✕</button>
+        
+        <div class="fact-card-top">
+          <div class="fact-top-title-row">
+            <span class="fact-emoji-large" id="fact-card-emoji">💡</span>
+            <div>
+              <span class="fact-badge" id="fact-card-badge">3 ADIMDA HAP BİLGİ & KEŞİF</span>
+              <h2 class="fact-card-title" id="fact-card-title">Konu Başlığı</h2>
+            </div>
+          </div>
+          <div class="fact-book-ref-badge" id="fact-book-page-ref">📖 Resmî MEB 3. Sınıf Ders Kitabı</div>
+        </div>
+
+        <!-- 3 Zengin Bilgi Kartı Izgarası -->
+        <div class="fact-trio-grid">
+          <!-- 1. Kural & Öz Bilgi -->
+          <div class="fact-step-card step-rule">
+            <div class="fact-step-badge">
+              <span class="step-icon">💡</span>
+              <span class="step-num">1. ADIM: KURAL & NASIL YAPILIR?</span>
+            </div>
+            <p id="fact-card-rule" class="step-text">Kural metni buraya gelir...</p>
+          </div>
+
+          <!-- 2. Günlük Hayattan Örnek -->
+          <div class="fact-step-card step-example">
+            <div class="fact-step-badge">
+              <span class="step-icon">🔍</span>
+              <span class="step-num">2. ADIM: GERÇEK HAYATTAN ÖRNEK</span>
+            </div>
+            <p id="fact-card-example" class="step-text">Örnek metni buraya gelir...</p>
+          </div>
+
+          <!-- 3. Püf Noktası & Dikkat -->
+          <div class="fact-step-card step-tip">
+            <div class="fact-step-badge">
+              <span class="step-icon">🎯</span>
+              <span class="step-num">3. ADIM: PÜF NOKTASI & TUZAK!</span>
+            </div>
+            <p id="fact-card-tip" class="step-text">Püf noktası metni buraya gelir...</p>
+          </div>
+        </div>
+
+        <div class="fact-card-actions">
+          <button id="btn-fact-start-quiz" class="btn-primary-action">
+            <span>🚀 Harika Anladım, Soruları Çöz!</span>
+          </button>
+          <button id="btn-close-fact" class="btn-secondary-action">
+            <span>Kapat</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- C. 👨‍🏫 VELİ & ÖĞRETMEN TAKİP VE DENETİM PANELİ MODALI -->
+    <div id="modal-parent-dashboard" class="app-modal-backdrop">
+      <div class="parent-dashboard-card">
+        <button class="modal-close-x" id="btn-close-parent-dashboard" title="Kapat">✕</button>
+        
+        <div class="parent-dash-header">
+          <span class="parent-badge">👨‍🏫 VELİ & ÖĞRETMEN YÖNETİM MERKEZİ</span>
+          <h2 class="parent-title">Öğrenci Takip & Sınıf Karne Paneli</h2>
+          <p class="parent-sub">Tablet üzerindeki tüm çözümleri denetleyin, Excel olarak indirin veya canlı Google E-Tablo'ya bağlayın.</p>
+        </div>
+
+        <!-- 1. Google Sheets Canlı Bulut Senkronizasyonu Kartı -->
+        <div class="parent-sync-box">
+          <div class="sync-box-top">
+            <span class="sync-icon">📊</span>
+            <div>
+              <strong>Google E-Tablolar (Canlı Sınıf & Veli Takibi)</strong>
+              <p>Çocuklar sınavı bitirdiğinde notlar doğrudan telefonunuzdaki Google E-Tablo'ya düşsün.</p>
+            </div>
+          </div>
+          <div class="sync-input-row">
+            <input type="url" id="input-telemetry-url" class="form-input" placeholder="Google Apps Script Web Uygulaması URL'sini yapıştırın...">
+            <button id="btn-save-telemetry" class="btn-save-sync">Kaydet</button>
+          </div>
+          <div id="telemetry-status-msg" class="telemetry-status-msg">
+            Durum: Bağlantı hazır (İsteğe bağlı - Çevrimdışı da çalışır)
+          </div>
+        </div>
+
+        <!-- 2. Cihaz İçi Çözüm Geçmişi (Denetim Günlüğü) -->
+        <div class="parent-logs-section">
+          <div class="logs-header-row">
+            <h3 class="logs-title">📋 Bu Tabletteki Son Sınav & Faaliyetler</h3>
+            <button id="btn-export-csv" class="btn-export-action">
+              <span>📥 Excel / CSV Olarak İndir</span>
+            </button>
+          </div>
+          <div class="parent-logs-list" id="parent-logs-list">
+            <!-- JS ile doldurulur -->
+          </div>
+        </div>
+
+        <div class="parent-dash-actions">
+          <button id="btn-close-parent-dash-bottom" class="btn-secondary-action">
+            <span>Kapat</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPT YÜKLEME SIRASI -->
+  <script src="js/engine/utils.js"></script>
+  <script src="js/engine/audio.js"></script>
+  <script src="js/engine/particles.js"></script>
+  <script src="js/curriculum-term1.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

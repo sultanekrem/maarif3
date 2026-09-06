@@ -2474,6 +2474,292 @@
     return count || 69;
   }
 
+
+  // ==========================================================================
+  // 👓 DİSLEKSİ & ODAK DOSTU OKUMA SERVİSİ
+  // ==========================================================================
+  const AccessibilityService = {
+    isDyslexiaMode: false,
+
+    init: function() {
+      const saved = localStorage.getItem('maarif_dyslexia_mode_2026');
+      if (saved === 'true') {
+        this.enable(false);
+      }
+      const btn = document.getElementById('btn-dyslexia');
+      if (btn) {
+        btn.addEventListener('click', () => {
+          this.toggle();
+        });
+      }
+    },
+
+    toggle: function() {
+      if (this.isDyslexiaMode) {
+        this.disable();
+      } else {
+        this.enable(true);
+      }
+    },
+
+    enable: function(withHaptic) {
+      this.isDyslexiaMode = true;
+      document.body.classList.add('dyslexia-mode');
+      localStorage.setItem('maarif_dyslexia_mode_2026', 'true');
+      const btn = document.getElementById('btn-dyslexia');
+      if (btn) btn.classList.add('is-active');
+      if (withHaptic) triggerHaptic('light');
+    },
+
+    disable: function() {
+      this.isDyslexiaMode = false;
+      document.body.classList.remove('dyslexia-mode');
+      localStorage.setItem('maarif_dyslexia_mode_2026', 'false');
+      const btn = document.getElementById('btn-dyslexia');
+      if (btn) btn.classList.remove('is-active');
+      triggerHaptic('light');
+    }
+  };
+
+  // ==========================================================================
+  // 🧮 İNTERAKTİF SOMUT MATEMATİK ARAÇLARI SERVİSİ (Yüzlük Bloklar + Çarpım Cetveli)
+  // ==========================================================================
+  const MathToolsService = {
+    isOpen: false,
+    activeTab: 'blocks',
+    blocks: { hundreds: 0, tens: 0, units: 0 },
+    mult: { factorA: 6, factorB: 7 },
+
+    init: function() {
+      ['quiz', 'exam', 'kumbara'].forEach(type => {
+        const btn = document.getElementById(`btn-tools-${type}`);
+        if (btn) {
+          btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.open();
+          });
+        }
+      });
+
+      const btnClose = document.getElementById('btn-close-math-tools');
+      if (btnClose) {
+        btnClose.addEventListener('click', () => this.close());
+      }
+
+      const modal = document.getElementById('modal-math-tools');
+      if (modal) {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) this.close();
+        });
+      }
+
+      const tabBlocks = document.getElementById('tab-btn-blocks');
+      const tabMult = document.getElementById('tab-btn-mult');
+      if (tabBlocks) {
+        tabBlocks.addEventListener('click', () => this.switchTab('blocks'));
+      }
+      if (tabMult) {
+        tabMult.addEventListener('click', () => this.switchTab('mult'));
+      }
+
+      const btnH = document.getElementById('btn-add-hundred');
+      if (btnH) btnH.addEventListener('click', () => this.addBlock('hundreds'));
+
+      const btnT = document.getElementById('btn-add-ten');
+      if (btnT) btnT.addEventListener('click', () => this.addBlock('tens'));
+
+      const btnU = document.getElementById('btn-add-one');
+      if (btnU) btnU.addEventListener('click', () => this.addBlock('units'));
+
+      const btnClear = document.getElementById('btn-clear-blocks');
+      if (btnClear) btnClear.addEventListener('click', () => this.clearBlocks());
+
+      this.initMultSelectors();
+      this.renderMultCard();
+      this.renderBlocks();
+    },
+
+    open: function() {
+      const modal = document.getElementById('modal-math-tools');
+      if (!modal) return;
+      modal.classList.remove('hidden');
+      this.isOpen = true;
+      triggerHaptic('light');
+    },
+
+    close: function() {
+      const modal = document.getElementById('modal-math-tools');
+      if (!modal) return;
+      modal.classList.add('hidden');
+      this.isOpen = false;
+    },
+
+    switchTab: function(tabName) {
+      this.activeTab = tabName;
+      document.querySelectorAll('.math-tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.math-tab-panel').forEach(p => p.classList.remove('active'));
+
+      const targetTabBtn = document.getElementById(tabName === 'blocks' ? 'tab-btn-blocks' : 'tab-btn-mult');
+      const targetPanel = document.getElementById(tabName === 'blocks' ? 'math-tab-content-blocks' : 'math-tab-content-mult');
+
+      if (targetTabBtn) targetTabBtn.classList.add('active');
+      if (targetPanel) targetPanel.classList.add('active');
+      triggerHaptic('light');
+    },
+
+    addBlock: function(type) {
+      if (this.blocks[type] >= 9) {
+        triggerHaptic('warning');
+        return;
+      }
+      this.blocks[type]++;
+      playAudioChime('correct');
+      triggerHaptic('light');
+      this.renderBlocks();
+    },
+
+    removeBlock: function(type) {
+      if (this.blocks[type] > 0) {
+        this.blocks[type]--;
+        triggerHaptic('light');
+        this.renderBlocks();
+      }
+    },
+
+    clearBlocks: function() {
+      this.blocks = { hundreds: 0, tens: 0, units: 0 };
+      triggerHaptic('light');
+      this.renderBlocks();
+    },
+
+    renderBlocks: function() {
+      const hCount = this.blocks.hundreds;
+      const tCount = this.blocks.tens;
+      const uCount = this.blocks.units;
+
+      const valH = document.getElementById('val-100');
+      const numH = document.getElementById('num-100');
+      const valT = document.getElementById('val-10');
+      const numT = document.getElementById('num-10');
+      const valU = document.getElementById('val-1');
+      const numU = document.getElementById('num-1');
+      const totalEl = document.getElementById('blocks-total-number');
+
+      if (valH) valH.textContent = hCount;
+      if (numH) numH.textContent = hCount * 100;
+      if (valT) valT.textContent = tCount;
+      if (numT) numT.textContent = tCount * 10;
+      if (valU) valU.textContent = uCount;
+      if (numU) numU.textContent = uCount;
+
+      const total = (hCount * 100) + (tCount * 10) + uCount;
+      if (totalEl) totalEl.textContent = total;
+
+      const poolH = document.getElementById('pool-hundreds');
+      const poolT = document.getElementById('pool-tens');
+      const poolU = document.getElementById('pool-units');
+
+      if (poolH) {
+        poolH.innerHTML = '';
+        for (let i = 0; i < hCount; i++) {
+          const b = document.createElement('div');
+          b.className = 'v-block hundred';
+          b.title = 'Yüzlük (100) - Silmek için tıkla';
+          b.textContent = '100';
+          b.onclick = () => this.removeBlock('hundreds');
+          poolH.appendChild(b);
+        }
+      }
+
+      if (poolT) {
+        poolT.innerHTML = '';
+        for (let i = 0; i < tCount; i++) {
+          const b = document.createElement('div');
+          b.className = 'v-block ten';
+          b.title = 'Onluk (10) - Silmek için tıkla';
+          b.textContent = '10';
+          b.onclick = () => this.removeBlock('tens');
+          poolT.appendChild(b);
+        }
+      }
+
+      if (poolU) {
+        poolU.innerHTML = '';
+        for (let i = 0; i < uCount; i++) {
+          const b = document.createElement('div');
+          b.className = 'v-block unit';
+          b.title = 'Birlik (1) - Silmek için tıkla';
+          b.textContent = '1';
+          b.onclick = () => this.removeBlock('units');
+          poolU.appendChild(b);
+        }
+      }
+    },
+
+    initMultSelectors: function() {
+      const wrapA = document.getElementById('mult-selector-a');
+      const wrapB = document.getElementById('mult-selector-b');
+      if (!wrapA || !wrapB) return;
+
+      wrapA.innerHTML = '';
+      wrapB.innerHTML = '';
+
+      for (let i = 1; i <= 10; i++) {
+        const pA = document.createElement('button');
+        pA.className = 'num-pill' + (i === this.mult.factorA ? ' selected-a' : '');
+        pA.textContent = i;
+        pA.type = 'button';
+        pA.onclick = () => {
+          this.mult.factorA = i;
+          document.querySelectorAll('#mult-selector-a .num-pill').forEach(el => el.classList.remove('selected-a'));
+          pA.classList.add('selected-a');
+          triggerHaptic('light');
+          this.renderMultCard();
+        };
+        wrapA.appendChild(pA);
+
+        const pB = document.createElement('button');
+        pB.className = 'num-pill' + (i === this.mult.factorB ? ' selected-b' : '');
+        pB.textContent = i;
+        pB.type = 'button';
+        pB.onclick = () => {
+          this.mult.factorB = i;
+          document.querySelectorAll('#mult-selector-b .num-pill').forEach(el => el.classList.remove('selected-b'));
+          pB.classList.add('selected-b');
+          triggerHaptic('light');
+          this.renderMultCard();
+        };
+        wrapB.appendChild(pB);
+      }
+    },
+
+    renderMultCard: function() {
+      const a = this.mult.factorA;
+      const b = this.mult.factorB;
+      const product = a * b;
+
+      const elA = document.getElementById('mult-factor-a');
+      const elB = document.getElementById('mult-factor-b');
+      const elProd = document.getElementById('mult-product');
+      const rhythmStepsEl = document.getElementById('mult-rhythm-steps');
+
+      if (elA) elA.textContent = a;
+      if (elB) elB.textContent = b;
+      if (elProd) elProd.textContent = product;
+
+      if (rhythmStepsEl) {
+        rhythmStepsEl.innerHTML = '';
+        for (let step = 1; step <= 10; step++) {
+          const val = a * step;
+          const sSpan = document.createElement('span');
+          sSpan.className = 'rhythm-step' + (step === b ? ' highlight' : '');
+          sSpan.textContent = val;
+          rhythmStepsEl.appendChild(sSpan);
+        }
+      }
+    }
+  };
+
   function renderBadges() {
     const completedCount = Object.keys(state.progress.completedTopics).length;
     const totalTopics = getTotalTopicsCount();
@@ -2514,6 +2800,8 @@
     loadSavedProgress();
     initEventListeners();
     ScratchpadService.init();
+    AccessibilityService.init();
+    MathToolsService.init();
   });
 
 })();

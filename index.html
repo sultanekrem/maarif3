@@ -15,7 +15,7 @@
   <!-- Türkçe Karakterleri %100 Kusursuz Destekleyen Neşeli Tipografi -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Quicksand:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800;900&family=Quicksand:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -148,6 +148,7 @@
             <span>🧠</span>
             <span id="kumbara-counter-badge" class="kumbara-badge hidden">0</span>
           </button>
+          <button id="btn-dyslexia" class="action-circle-btn" title="Kolay Okuma & Disleksi Modu">👓</button>
           <button id="btn-sound" class="action-circle-btn" title="Ses Aç/Kapat">🔊</button>
           <button id="btn-badges-nav" class="action-circle-btn" title="Başarılar & Rozetler">🏅</button>
         </div>
@@ -309,6 +310,10 @@
               <span class="draw-icon">✏️</span>
               <span class="draw-text">Çiz & İşlem Yap</span>
             </button>
+            <button id="btn-tools-quiz" class="btn-math-tools-trigger" type="button" title="Somut Matematik Araçları">
+              <span class="tools-icon">🧮</span>
+              <span class="tools-text">Araçlar</span>
+            </button>
           </div>
         </div>
 
@@ -371,6 +376,10 @@
             <button id="btn-draw-exam" class="btn-scratchpad-trigger" type="button" title="Sihirli Çizim Tahtası">
               <span class="draw-icon">✏️</span>
               <span class="draw-text">Çiz & İşlem Yap</span>
+            </button>
+            <button id="btn-tools-exam" class="btn-math-tools-trigger" type="button" title="Somut Matematik Araçları">
+              <span class="tools-icon">🧮</span>
+              <span class="tools-text">Araçlar</span>
             </button>
           </div>
         </div>
@@ -724,6 +733,10 @@
               <span class="draw-icon">✏️</span>
               <span class="draw-text">Çiz & İşlem Yap</span>
             </button>
+            <button id="btn-tools-kumbara" class="btn-math-tools-trigger" type="button" title="Somut Matematik Araçları">
+              <span class="tools-icon">🧮</span>
+              <span class="tools-text">Araçlar</span>
+            </button>
           </div>
           <div id="kumbara-options-grid" class="options-grid">
             <!-- Şıklar dinamik yüklenir -->
@@ -861,6 +874,112 @@
       <div id="sp-question-mirror-kumbara" class="sp-question-mirror"></div>
       <div class="sp-canvas-wrap">
         <canvas id="sp-canvas-kumbara" class="scratchpad-canvas"></canvas>
+      </div>
+    </div>
+
+    <!-- 4. 🧮 İNTERAKTİF SOMUT MATEMATİK ARAÇLARI MODALI (Mobile-First Root Modal) -->
+    <div id="modal-math-tools" class="math-tools-modal-backdrop hidden">
+      <div class="math-tools-sheet">
+        <!-- Sheet Header -->
+        <div class="math-tools-header">
+          <div class="math-tools-tabs">
+            <button id="tab-btn-blocks" class="math-tab-btn active" type="button">
+              <span>🧱</span> Taban Blokları
+            </button>
+            <button id="tab-btn-mult" class="math-tab-btn" type="button">
+              <span>✖️</span> Çarpım Cetveli
+            </button>
+          </div>
+          <button id="btn-close-math-tools" class="math-tools-close-btn" type="button" title="Kapat">✕</button>
+        </div>
+
+        <!-- Tab 1: Yüzlük Taban Blokları & Sayı İnşa Aracı -->
+        <div id="math-tab-content-blocks" class="math-tab-panel active">
+          <!-- Canlı Sonuç & Formül Çubuğu -->
+          <div class="blocks-result-bar">
+            <div class="blocks-formula-row">
+              <span class="formula-chunk chunk-100"><span id="val-100">0</span> Yüzlük (<span id="num-100">0</span>)</span>
+              <span class="formula-plus">+</span>
+              <span class="formula-chunk chunk-10"><span id="val-10">0</span> Onluk (<span id="num-10">0</span>)</span>
+              <span class="formula-plus">+</span>
+              <span class="formula-chunk chunk-1"><span id="val-1">0</span> Birlik (<span id="num-1">0</span>)</span>
+            </div>
+            <div class="blocks-total-row">
+              <span class="total-label">Oluşan Sayı:</span>
+              <span id="blocks-total-number" class="total-number">0</span>
+            </div>
+          </div>
+
+          <!-- Dokunmatik Hızlı Butonlar (Büyük Parmak Dostu) -->
+          <div class="blocks-control-grid">
+            <button id="btn-add-hundred" class="block-add-btn btn-blue" type="button">
+              <span class="btn-top-icon">🟦</span>
+              <span class="btn-main-txt">+1 Yüzlük</span>
+              <span class="btn-sub-txt">(100)</span>
+            </button>
+            <button id="btn-add-ten" class="block-add-btn btn-green" type="button">
+              <span class="btn-top-icon">🟩</span>
+              <span class="btn-main-txt">+1 Onluk</span>
+              <span class="btn-sub-txt">(10)</span>
+            </button>
+            <button id="btn-add-one" class="block-add-btn btn-yellow" type="button">
+              <span class="btn-top-icon">🟨</span>
+              <span class="btn-main-txt">+1 Birlik</span>
+              <span class="btn-sub-txt">(1)</span>
+            </button>
+            <button id="btn-clear-blocks" class="block-clear-btn" type="button" title="Sıfırla">
+              <span>🧹</span>
+              <span>Sıfırla</span>
+            </button>
+          </div>
+
+          <!-- Görsel Blok Havuzu -->
+          <div class="blocks-visual-stage">
+            <div class="stage-section section-100">
+              <div class="section-title">Yüzlükler (100)</div>
+              <div id="pool-hundreds" class="block-pool pool-hundreds"></div>
+            </div>
+            <div class="stage-section section-10">
+              <div class="section-title">Onluklar (10)</div>
+              <div id="pool-tens" class="block-pool pool-tens"></div>
+            </div>
+            <div class="stage-section section-1">
+              <div class="section-title">Birlikler (1)</div>
+              <div id="pool-units" class="block-pool pool-units"></div>
+            </div>
+          </div>
+          <div class="stage-tip">💡 İpucu: Eklediğin bir bloğa dokunarak silebilirsin.</div>
+        </div>
+
+        <!-- Tab 2: İnteraktif Çarpım & Ritmik Sayma Cetveli -->
+        <div id="math-tab-content-mult" class="math-tab-panel">
+          <!-- Canlı Çarpma Sonuç Kartı -->
+          <div class="mult-hero-card">
+            <div class="mult-equation">
+              <span id="mult-factor-a" class="mult-num num-a">6</span>
+              <span class="mult-op">×</span>
+              <span id="mult-factor-b" class="mult-num num-b">7</span>
+              <span class="mult-eq">=</span>
+              <span id="mult-product" class="mult-res">42</span>
+            </div>
+            <div class="mult-rhythm-box">
+              <span class="rhythm-title">🎵 Ritmik Sayma Zinciri:</span>
+              <div id="mult-rhythm-steps" class="rhythm-steps"></div>
+            </div>
+          </div>
+
+          <!-- 1. Çarpan Seçici (1 - 10) -->
+          <div class="mult-selector-row">
+            <span class="selector-label">1. Çarpan:</span>
+            <div id="mult-selector-a" class="num-pills-wrap"></div>
+          </div>
+
+          <!-- 2. Çarpan Seçici (1 - 10) -->
+          <div class="mult-selector-row">
+            <span class="selector-label">2. Çarpan:</span>
+            <div id="mult-selector-b" class="num-pills-wrap"></div>
+          </div>
+        </div>
       </div>
     </div>
 

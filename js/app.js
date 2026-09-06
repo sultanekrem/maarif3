@@ -672,13 +672,27 @@
   // 🧠 YILDIZ KUMBARASI (Hata Kumbarası) YÖNETİMİ
   function updateKumbaraBadge() {
     const badgeEl = document.getElementById('kumbara-counter-badge');
-    if (!badgeEl) return;
+    const btnKumbara = document.getElementById('btn-kumbara');
     const count = (state.progress.mistakeBank && state.progress.mistakeBank.length) || 0;
-    badgeEl.textContent = count;
-    if (count > 0) {
-      badgeEl.classList.remove('hidden');
-    } else {
-      badgeEl.classList.add('hidden');
+
+    if (badgeEl) {
+      badgeEl.textContent = count;
+      if (count > 0) {
+        badgeEl.classList.remove('hidden');
+      } else {
+        badgeEl.classList.add('hidden');
+      }
+    }
+
+    // Ana ekranda buton altında "X soru" etiketi göster
+    if (btnKumbara) {
+      if (count > 0) {
+        btnKumbara.setAttribute('data-count-label', `${count} soru`);
+        btnKumbara.title = `Yıldız Kumbarası — ${count} soru bekliyor!`;
+      } else {
+        btnKumbara.setAttribute('data-count-label', 'Boş');
+        btnKumbara.title = 'Yıldız Kumbarası (Boş)';
+      }
     }
   }
 

@@ -5479,3 +5479,88 @@ html, body {
   color: #FBBF24;
   letter-spacing: 0.5px;
 }
+
+/* ============================================================
+   KUMBARA FOOTER BUTONU - Koyu temada okunur hale getir
+   ============================================================ */
+.kumbara-footer {
+  padding: 12px 20px 4px 20px;
+  margin-top: 8px;
+}
+
+.kumbara-footer .btn-secondary-action {
+  width: 100% !important;
+  background: rgba(30, 41, 59, 0.8) !important;
+  color: #CBD5E1 !important;
+  border: 1.5px solid rgba(148, 163, 184, 0.4) !important;
+  border-bottom: 3px solid rgba(100, 116, 139, 0.5) !important;
+  font-family: inherit !important;
+  font-size: 0.95rem !important;
+  font-weight: 800 !important;
+  padding: 12px !important;
+  border-radius: 14px !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+  letter-spacing: 0.2px !important;
+}
+
+.kumbara-footer .btn-secondary-action:active {
+  transform: translateY(2px) !important;
+  border-bottom-width: 1px !important;
+  background: rgba(51, 65, 85, 0.9) !important;
+}
+
+/* ============================================================
+   ANA EKRAN KUMBARA BUTONU - Soru sayısını büyük ve belirgin göster
+   ============================================================ */
+.kumbara-circle-btn {
+  position: relative !important;
+  background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%) !important;
+  border: 2px solid rgba(251, 191, 36, 0.4) !important;
+  border-radius: 14px !important;
+  min-width: 52px !important;
+  padding: 6px 10px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 2px !important;
+  transition: all 0.2s ease !important;
+}
+
+.kumbara-circle-btn:active {
+  transform: scale(0.95) !important;
+}
+
+/* Badge: soru sayısını butonun üstünde kırmızı pill olarak göster */
+.kumbara-badge {
+  position: absolute !important;
+  top: -7px !important;
+  right: -7px !important;
+  background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%) !important;
+  color: #FFFFFF !important;
+  font-size: 0.72rem !important;
+  font-weight: 900 !important;
+  min-width: 22px !important;
+  height: 22px !important;
+  border-radius: 99px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 2px solid #0F172A !important;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.7) !important;
+  padding: 0 4px !important;
+  animation: pulseKumbara 1.8s infinite !important;
+  z-index: 10 !important;
+}
+
+/* Kumbara butonunun altında "Kumbara X soru" etiketi */
+.kumbara-circle-btn::after {
+  content: attr(data-count-label);
+  display: block;
+  font-size: 0.58rem;
+  font-weight: 800;
+  color: #FBBF24;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+  margin-top: 1px;
+}

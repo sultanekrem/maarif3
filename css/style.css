@@ -5695,7 +5695,7 @@ body.dyslexia-mode #btn-dyslexia {
   border-radius: 99px !important;
   padding: 8px 13px !important;
   min-height: 44px !important;
-  display: inline-flex !important;
+  display: none; /* Sadece Matematik dersinde görünür */
   align-items: center !important;
   gap: 5px !important;
   color: #FFFFFF !important;
@@ -5706,6 +5706,10 @@ body.dyslexia-mode #btn-dyslexia {
   white-space: nowrap !important;
   transition: all 0.15s ease !important;
   box-shadow: 0 2px 8px rgba(5, 150, 105, 0.35) !important;
+}
+
+.btn-math-tools-trigger.is-visible {
+  display: inline-flex !important;
 }
 
 .btn-math-tools-trigger:active {

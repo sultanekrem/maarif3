@@ -951,6 +951,17 @@
       }
     }
 
+    // 🧮 Somut Matematik Araçları Sadece Matematik Sorularında Görünür
+    const btnToolsKumbara = document.getElementById('btn-tools-kumbara');
+    if (btnToolsKumbara) {
+      const isMath = (item.subjectKey === 'matematik') || (item.q && item.q.includes('[Matematik]'));
+      if (isMath) {
+        btnToolsKumbara.classList.add('is-visible');
+      } else {
+        btnToolsKumbara.classList.remove('is-visible');
+      }
+    }
+
     // 🎯 Aralıklı Tekrar İlerleme Göstergesi (kaç kez doğru yapıldı)
     const correctCount = item.correctCount || 0;
     const MASTERY_TARGET = 3;
@@ -1542,6 +1553,16 @@
     // Karalama tahtasını her yeni soruda kapat
     ScratchpadService.close('quiz');
 
+    // 🧮 Somut Matematik Araçları Sadece Matematik Dersinde Görünür
+    const btnToolsQuiz = document.getElementById('btn-tools-quiz');
+    if (btnToolsQuiz) {
+      if (state.currentSubjectKey === 'matematik') {
+        btnToolsQuiz.classList.add('is-visible');
+      } else {
+        btnToolsQuiz.classList.remove('is-visible');
+      }
+    }
+
     // 🌟 Çocuk Odaklı Macera Görev Rozeti
     const qBadgeEl = document.getElementById('quiz-q-type-badge');
     if (qBadgeEl) {
@@ -1753,6 +1774,17 @@
       }
     }
     ScratchpadService.close('exam');
+
+    // 🧮 Somut Matematik Araçları Sadece Matematik Sınavında Görünür
+    const btnToolsExam = document.getElementById('btn-tools-exam');
+    if (btnToolsExam) {
+      const isMath = (state.currentSubjectKey === 'matematik') || (qData.q && qData.q.includes('[Matematik]'));
+      if (isMath) {
+        btnToolsExam.classList.add('is-visible');
+      } else {
+        btnToolsExam.classList.remove('is-visible');
+      }
+    }
 
     // 🔊 Sınav Sorusu Sesli Oku Butonu
     const btnReadExam = document.getElementById('btn-read-exam-q');

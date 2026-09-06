@@ -6142,16 +6142,19 @@ body.dyslexia-mode #btn-dyslexia {
 }
 
 /* ============================================================
-   🎯 SORU EYLEM VE ARAÇ ÇUBUĞU (UNIFIED QUESTION ACTION BAR)
-   Tüm butonlar eşit boyutta, eşit yükseklikte ve kusursuz oranda
+   🎯 SORU EYLEM VE ARAÇ ÇUBUĞU (CHILD-FRIENDLY ACTION BAR)
+   Mobilde 2 Katmanlı (2-Tier) Ergonomik Düzen:
+   - 1. Katman (Üst): 🔊 Soruyu Sesli Dinle (%100 Tam Genişlik, Asla Kesilmez)
+   - 2. Katman (Alt): ✏️ Çizim Tahtası (%50) + 🧮 Sayı Araçları (%50)
+   (Matematik harici derslerde Çizim Tahtası tek başına %100 olur)
    ============================================================ */
 .question-audio-strip {
   display: flex !important;
-  flex-direction: row !important;
+  flex-wrap: wrap !important;
   align-items: stretch !important;
   gap: 8px !important;
   width: 100% !important;
-  margin: 10px 0 6px 0 !important;
+  margin: 10px 0 8px 0 !important;
   box-sizing: border-box !important;
 }
 
@@ -6159,24 +6162,16 @@ body.dyslexia-mode #btn-dyslexia {
   margin: 10px 0 10px 0 !important;
 }
 
-/* Çubuktaki tüm butonların ortak temel ölçüleri (TAM EŞİT DÜZEN) */
+/* Çubuktaki tüm butonların ortak temel ölçüleri */
 .btn-voice-premium,
 .btn-scratchpad-trigger,
 .btn-math-tools-trigger {
-  flex: 1 1 0 !important;
-  min-width: 0 !important;
-  height: 44px !important;
-  min-height: 44px !important;
-  max-height: 44px !important;
-  padding: 0 8px !important;
   border-radius: 12px !important;
   font-family: inherit !important;
-  font-size: 0.82rem !important;
   font-weight: 800 !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 6px !important;
   box-sizing: border-box !important;
   white-space: nowrap !important;
   cursor: pointer !important;
@@ -6193,8 +6188,15 @@ body.dyslexia-mode #btn-dyslexia {
   border-bottom-width: 1.5px !important;
 }
 
-/* 1. Sesli Dinle Butonu (İndigo) */
+/* 1. Katman: Soruyu Sesli Dinle Butonu (Üstte Tam Genişlik %100) */
 .btn-voice-premium {
+  flex: 1 1 100% !important;
+  width: 100% !important;
+  height: 44px !important;
+  min-height: 44px !important;
+  padding: 0 14px !important;
+  font-size: 0.88rem !important;
+  gap: 8px !important;
   background: #4F46E5 !important;
   border: 1.5px solid #6366F1 !important;
   border-bottom: 3.5px solid #3730A3 !important;
@@ -6213,19 +6215,24 @@ body.dyslexia-mode #btn-dyslexia {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  font-size: 1rem !important;
+  font-size: 1.05rem !important;
   flex-shrink: 0 !important;
 }
 
 .v-text, .draw-text, .tools-text {
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
   white-space: nowrap !important;
-  letter-spacing: 0.1px !important;
+  letter-spacing: 0.15px !important;
 }
 
-/* 2. Çizim Yap Butonu (Gök Mavisi) */
+/* 2. Katman: Yardımcı Araçlar (Alt Satırda Eşit Dağılım) */
 .btn-scratchpad-trigger {
+  flex: 1 1 0 !important;
+  min-width: 0 !important;
+  height: 42px !important;
+  min-height: 42px !important;
+  padding: 0 10px !important;
+  font-size: 0.82rem !important;
+  gap: 6px !important;
   background: #0284C7 !important;
   border: 1.5px solid #38BDF8 !important;
   border-bottom: 3.5px solid #0369A1 !important;
@@ -6238,9 +6245,16 @@ body.dyslexia-mode #btn-dyslexia {
   flex-shrink: 0 !important;
 }
 
-/* 3. Matematik Araçları Butonu (Zümrüt Yeşili) */
+/* 3. Matematik Araçları Butonu */
 .btn-math-tools-trigger {
   display: none; /* Sadece Matematik dersinde görünür */
+  flex: 1 1 0 !important;
+  min-width: 0 !important;
+  height: 42px !important;
+  min-height: 42px !important;
+  padding: 0 10px !important;
+  font-size: 0.82rem !important;
+  gap: 6px !important;
   background: #059669 !important;
   border: 1.5px solid #10B981 !important;
   border-bottom: 3.5px solid #047857 !important;
@@ -6252,15 +6266,19 @@ body.dyslexia-mode #btn-dyslexia {
   display: inline-flex !important;
 }
 
-@media (max-width: 480px) {
+/* Masaüstü ve Geniş Tablet Ekranlarında Tek Satır Şıklığı (>= 600px) */
+@media (min-width: 600px) {
   .question-audio-strip {
-    gap: 6px !important;
+    flex-wrap: nowrap !important;
   }
-  .btn-voice-premium,
+  .btn-voice-premium {
+    flex: 1.4 1 0 !important;
+    width: auto !important;
+    height: 44px !important;
+  }
   .btn-scratchpad-trigger,
-  .btn-math-tools-trigger {
-    padding: 0 6px !important;
-    font-size: 0.78rem !important;
-    gap: 4px !important;
+  .btn-math-tools-trigger.is-visible {
+    flex: 1 1 0 !important;
+    height: 44px !important;
   }
 }

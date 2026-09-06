@@ -297,7 +297,7 @@
       if (!btn) return;
       btn.classList.remove('is-speaking');
       const txt = btn.querySelector('.v-text');
-      if (txt) txt.textContent = 'Sesli Dinle';
+      if (txt) txt.textContent = 'Soruyu Sesli Dinle';
       const icon = btn.querySelector('.v-icon');
       if (icon) icon.textContent = '🔊';
     },
@@ -306,7 +306,7 @@
       if (!btn) return;
       btn.classList.add('is-speaking');
       const txt = btn.querySelector('.v-text');
-      if (txt) txt.textContent = 'Durdur';
+      if (txt) txt.textContent = 'Okumayı Durdur';
       const icon = btn.querySelector('.v-icon');
       if (icon) icon.textContent = '⏹️';
     },

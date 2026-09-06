@@ -587,6 +587,7 @@
   }
 
   function handleKumbaraAnswer(selectedIdx, btnElement, item) {
+    SpeechService.stop();
     const allBtns = document.querySelectorAll('#kumbara-options-grid .option-btn');
     allBtns.forEach(b => b.disabled = true);
 
@@ -1089,6 +1090,7 @@ document.getElementById('quiz-question-text').textContent = task.q;
 
   // ÇOK BELİRGİN & CANLI DOĞRU/YANLIŞ GERİBİLDİRİMİ
   function handleTaskAnswer(selectedIdx, btnElement, task) {
+    SpeechService.stop();
     const allBtns = document.querySelectorAll('#quiz-options-container .option-btn');
     allBtns.forEach(b => b.disabled = true);
 
@@ -1266,6 +1268,7 @@ document.getElementById('exam-question-text').textContent = qData.q;
   }
 
   function handleExamAnswer(selectedIdx, btnElement, qData) {
+    SpeechService.stop();
     const allBtns = document.querySelectorAll('#exam-options-container .option-btn');
     allBtns.forEach(b => b.disabled = true);
 

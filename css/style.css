@@ -5073,45 +5073,45 @@ html, body {
 }
 
 .btn-voice-premium {
-  background: rgba(99, 102, 241, 0.14) !important;
-  border: 1.5px solid rgba(129, 140, 248, 0.45) !important;
-  border-bottom: 3.5px solid rgba(79, 70, 229, 0.75) !important;
+  background: #4F46E5 !important;
+  border: 2px solid #6366F1 !important;
+  border-bottom: 4px solid #3730A3 !important;
   border-radius: 99px !important;
   padding: 8px 18px !important;
   min-height: 44px !important;
   display: inline-flex !important;
   align-items: center !important;
   gap: 10px !important;
-  color: #E0E7FF !important;
+  color: #FFFFFF !important;
   font-family: inherit !important;
-  font-size: 0.88rem !important;
+  font-size: 0.9rem !important;
   font-weight: 800 !important;
   cursor: pointer !important;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2) !important;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.35) !important;
   user-select: none !important;
   -webkit-tap-highlight-color: transparent !important;
 }
 
 .btn-voice-premium:hover {
-  background: rgba(99, 102, 241, 0.25) !important;
+  background: #4338CA !important;
   border-color: #818CF8 !important;
   color: #FFFFFF !important;
   transform: translateY(-1px) !important;
-  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.35) !important;
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.45) !important;
 }
 
 .btn-voice-premium:active {
   transform: translateY(2px) !important;
-  border-bottom-width: 1.5px !important;
+  border-bottom-width: 2px !important;
 }
 
 .v-icon-bubble {
   width: 28px !important;
   height: 28px !important;
   border-radius: 50% !important;
-  background: rgba(99, 102, 241, 0.35) !important;
-  border: 1px solid rgba(129, 140, 248, 0.6) !important;
+  background: rgba(255, 255, 255, 0.22) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -5121,6 +5121,8 @@ html, body {
 
 .v-text {
   letter-spacing: 0.2px !important;
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
 }
 
 /* Ekolayzır Ses Dalgası */
@@ -5135,28 +5137,33 @@ html, body {
 .eq-bar {
   width: 3px !important;
   height: 4px !important;
-  background: #818CF8 !important;
+  background: #FFFFFF !important;
   border-radius: 2px !important;
   transition: height 0.2s ease !important;
 }
 
-/* Okurken Canlanan Durum (is-speaking) */
+/* Okurken Canlanan Durum (is-speaking) - KRİSTAL NETLİĞİNDE YÜKSEK KONTRAST */
 .btn-voice-premium.is-speaking {
-  background: rgba(239, 68, 68, 0.2) !important;
-  border-color: #F87171 !important;
-  border-bottom-color: #DC2626 !important;
-  color: #FEE2E2 !important;
-  box-shadow: 0 0 24px rgba(239, 68, 68, 0.4) !important;
+  background: #DC2626 !important;
+  border-color: #EF4444 !important;
+  border-bottom-color: #991B1B !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 20px rgba(220, 38, 38, 0.55) !important;
   animation: pulseSpeak 1.6s infinite alternate !important;
 }
 
+.btn-voice-premium.is-speaking .v-text {
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+}
+
 .btn-voice-premium.is-speaking .v-icon-bubble {
-  background: rgba(239, 68, 68, 0.45) !important;
-  border-color: #F87171 !important;
+  background: rgba(255, 255, 255, 0.28) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
 }
 
 .btn-voice-premium.is-speaking .eq-bar {
-  background: #F87171 !important;
+  background: #FFFFFF !important;
   animation: eqBounce 0.8s ease-in-out infinite alternate !important;
 }
 

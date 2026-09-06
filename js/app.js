@@ -474,14 +474,15 @@
                           document.getElementById('kumbara-q-text');
       const qMirror = document.getElementById(`sp-question-mirror-${type}`);
       if (qTextSource && qMirror) {
-        qMirror.textContent = '📌 ' + qTextSource.textContent;
+        const fullText = qTextSource.innerText || qTextSource.textContent || '';
+        qMirror.innerHTML = `<span style="color:#FBBF24; margin-right:6px;">❓ Soru:</span> ${fullText.trim()}`;
       }
 
       const canvas = document.getElementById(`sp-canvas-${type}`);
       if (canvas) {
-        setTimeout(() => {
+        requestAnimationFrame(() => {
           this.initCanvas(canvas);
-        }, 40);
+        });
       }
       triggerHaptic('light');
     },
@@ -511,14 +512,36 @@
       const w = Math.floor(parent ? parent.clientWidth : rect.width) || 320;
       const h = Math.floor(parent ? parent.clientHeight : rect.height) || 200;
 
-      canvas.width = w;
-      canvas.height = h;
+      if (canvas.width !== w || canvas.height !== h) {
+        // Çizim varsa korumak için geçici buffer
+        let tempCanvas = null;
+        if (canvas.width > 0 && canvas.height > 0) {
+          tempCanvas = document.createElement('canvas');
+          tempCanvas.width = canvas.width;
+          tempCanvas.height = canvas.height;
+          const tempCtx = tempCanvas.getContext('2d');
+          tempCtx.drawImage(canvas, 0, 0);
+        }
 
-      const ctx = canvas.getContext('2d');
-      ctx.lineCap = 'round';
-      ctx.lineJoin = 'round';
-      ctx.strokeStyle = this.strokeColor;
-      ctx.lineWidth = this.lineWidth;
+        canvas.width = w;
+        canvas.height = h;
+
+        const ctx = canvas.getContext('2d');
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+        ctx.strokeStyle = this.strokeColor;
+        ctx.lineWidth = this.lineWidth;
+
+        if (tempCanvas) {
+          ctx.drawImage(tempCanvas, 0, 0);
+        }
+      } else {
+        const ctx = canvas.getContext('2d');
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+        ctx.strokeStyle = this.strokeColor;
+        ctx.lineWidth = this.lineWidth;
+      }
 
       if (canvas._hasEvents) return;
       canvas._hasEvents = true;

@@ -121,19 +121,149 @@
 
 
   // ==========================================================================
-  // 🔊 AKILLI TÜRKÇE SESLİ OKUMA ASİSTANI (Web Speech API)
+  // 🔊 AKILLI DOĞAL TÜRKÇE SES MOTORU & SESLİ OKUMA ASİSTANI (Web Speech API)
   // ==========================================================================
   const SpeechService = {
     isSpeaking: false,
     activeButton: null,
+    cachedVoices: [],
 
-    speak: function(text, btnElement) {
-      if (!('speechSynthesis' in window)) {
+    init: function() {
+      if (!('speechSynthesis' in window)) return;
+      this.loadVoices();
+      if ('onvoiceschanged' in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = () => this.loadVoices();
+      }
+    },
+
+    loadVoices: function() {
+      if (!('speechSynthesis' in window)) return;
+      this.cachedVoices = window.speechSynthesis.getVoices() || [];
+    },
+
+    getBestTurkishVoice: function() {
+      if (!this.cachedVoices || this.cachedVoices.length === 0) {
+        this.loadVoices();
+      }
+      const voices = this.cachedVoices;
+      if (!voices || voices.length === 0) return null;
+
+      // Akıllı Türkçe Ses Puanlama Algoritması (Neural / Doğal / İnsan Benzeri Sesleri Seçer)
+      const scored = [];
+      for (let i = 0; i < voices.length; i++) {
+        const v = voices[i];
+        const lang = (v.lang || '').toLowerCase().replace('_', '-');
+        const name = (v.name || '').toLowerCase();
+
+        const isTr = lang.startsWith('tr') || name.includes('turkish') || name.includes('türkçe');
+        if (!isTr) continue;
+
+        let score = 20;
+
+        // 1. Doğal & Neural Ses Anahtar Kelimeleri (En yüksek öncelik)
+        if (name.includes('natural')) score += 70;
+        if (name.includes('neural')) score += 60;
+        if (name.includes('online')) score += 35;
+        if (name.includes('enhanced') || name.includes('premium')) score += 50;
+
+        // 2. Google & Apple & Microsoft Neural Modelleri
+        if (name.includes('google')) score += 45;
+        if (name.includes('siri')) score += 40;
+        if (name.includes('emel') || name.includes('ahmet')) score += 30;
+
+        // 3. Bulut Tabanlı / Ağ Sesleri (Genelde yüksek kaliteli neural AI sentezleyicidir)
+        if (v.localService === false) score += 25;
+
+        // 4. Eski SAPI / Robotik Desktop Sentezleyicilerini Geride Bırak
+        if (name.includes('desktop')) score -= 30;
+        if (name.includes('tolga') && !name.includes('natural')) score -= 20;
+        if (name.includes('hedda')) score -= 20;
+
+        scored.push({ voice: v, score: score });
+      }
+
+      scored.sort((a, b) => b.score - a.score);
+      return scored.length > 0 ? scored[0].voice : null;
+    },
+
+    formatQuestionSpeech: function(qData) {
+      if (!qData) return '';
+      let rawQ = qData.q || '';
+
+      // Matematiksel sembolleri Türkçe telaffuza dönüştür
+      let cleanQ = rawQ
+        .replace(/\+/g, ' artı ')
+        .replace(/-/g, ' eksi ')
+        .replace(/×|\*/g, ' çarpı ')
+        .replace(/÷|\//g, ' bölü ')
+        .replace(/=/g, ' eşittir ')
+        .replace(/\s+/g, ' ')
+        .trim();
+
+      // Sıcak öğretmen tonlaması ve duraklamalar
+      let speech = 'Soru: ' + cleanQ + '... ';
+
+      if (Array.isArray(qData.options) && qData.options.length > 0) {
+        speech += 'Seçenekler: ';
+        const letters = ['A', 'B', 'C', 'D'];
+        qData.options.forEach((opt, idx) => {
+          let cleanOpt = (opt || '')
+            .replace(/\+/g, ' artı ')
+            .replace(/-/g, ' eksi ')
+            .replace(/×|\*/g, ' çarpı ')
+            .replace(/÷|\//g, ' bölü ')
+            .replace(/=/g, ' eşittir ')
+            .replace(/\s+/g, ' ')
+            .trim();
+          speech += letters[idx] + ' seçeneği, ' + cleanOpt + '... ';
+        });
+      }
+
+      return speech;
+    },
+
+    resetButton: function(btn) {
+      if (!btn) return;
+      btn.classList.remove('is-speaking');
+      const txt = btn.querySelector('.v-text');
+      if (txt) txt.textContent = 'Soruyu ve Şıkları Sesli Dinle';
+      const icon = btn.querySelector('.v-icon');
+      if (icon) icon.textContent = '🔊';
+    },
+
+    setButtonSpeaking: function(btn) {
+      if (!btn) return;
+      btn.classList.add('is-speaking');
+      const txt = btn.querySelector('.v-text');
+      if (txt) txt.textContent = 'Okumayı Durdur';
+      const icon = btn.querySelector('.v-icon');
+      if (icon) icon.textContent = '⏹️';
+    },
+
+    stop: function() {
+      if ('speechSynthesis' in window) {
+        try {
+          window.speechSynthesis.cancel();
+        } catch(e) {}
+      }
+      this.isSpeaking = false;
+      if (this.activeButton) {
+        this.resetButton(this.activeButton);
+        this.activeButton = null;
+      }
+    },
+
+    toggleQuestion: function(qData, btnElement) {
+      if (this.isSpeaking && this.activeButton === btnElement) {
+        this.stop();
         return;
       }
-      
-      if (this.isSpeaking) {
-        this.stop();
+      const text = this.formatQuestionSpeech(qData);
+      this.speak(text, btnElement);
+    },
+
+    speak: function(text, btnElement) {
+      if (!('speechSynthesis' in window) || !text) {
         return;
       }
 
@@ -141,51 +271,43 @@
 
       const u = new SpeechSynthesisUtterance(text);
       u.lang = 'tr-TR';
-      u.rate = 0.90; // 3. sınıf öğrencileri için tane tane ve berrak okuma
-      u.pitch = 1.05;
+      u.rate = 0.92; // 3. sınıf öğrencileri için tane tane ve sıcak öğretmen ritmi
+      u.pitch = 1.02; // Canlı ve doğal ses perdesi
 
-      const voices = window.speechSynthesis.getVoices();
-      const trVoice = voices.find(v => v.lang && v.lang.startsWith('tr'));
-      if (trVoice) u.voice = trVoice;
+      const bestVoice = this.getBestTurkishVoice();
+      if (bestVoice) {
+        u.voice = bestVoice;
+      }
 
       this.isSpeaking = true;
       this.activeButton = btnElement;
 
       if (btnElement) {
-        btnElement.classList.add('is-speaking');
-        const txt = btnElement.querySelector('.v-text');
-        if (txt) txt.textContent = 'Durdur';
+        this.setButtonSpeaking(btnElement);
       }
 
-      const resetBtn = () => {
+      const onEndOrError = () => {
         this.isSpeaking = false;
         if (this.activeButton) {
-          this.activeButton.classList.remove('is-speaking');
-          const txt = this.activeButton.querySelector('.v-text');
-          if (txt) txt.textContent = 'Dinle';
+          this.resetButton(this.activeButton);
           this.activeButton = null;
         }
       };
 
-      u.onend = resetBtn;
-      u.onerror = resetBtn;
+      u.onend = onEndOrError;
+      u.onerror = onEndOrError;
 
-      window.speechSynthesis.speak(u);
-    },
-
-    stop: function() {
-      if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
-      }
-      this.isSpeaking = false;
-      if (this.activeButton) {
-        this.activeButton.classList.remove('is-speaking');
-        const txt = this.activeButton.querySelector('.v-text');
-        if (txt) txt.textContent = 'Dinle';
-        this.activeButton = null;
+      try {
+        window.speechSynthesis.speak(u);
+      } catch (err) {
+        console.warn('Speech synthesis speak failed:', err);
+        onEndOrError();
       }
     }
   };
+
+  // Ses motorunu sayfa açılışında derhal başlat
+  SpeechService.init();
 
   // 📳 Haptik Dokunmatik Titreşim (Destekleyen telefonlar için)
   function triggerHaptic(type) {
@@ -338,6 +460,15 @@
 
     const qTextEl = document.getElementById('kumbara-q-text');
     if (qTextEl) qTextEl.textContent = item.q;
+
+    // 🔊 Kumbara Sorusu Sesli Oku Butonu
+    const btnReadKumbara = document.getElementById('btn-read-kumbara-q');
+    if (btnReadKumbara) {
+      SpeechService.resetButton(btnReadKumbara);
+      btnReadKumbara.onclick = () => {
+        SpeechService.toggleQuestion(item, btnReadKumbara);
+      };
+    }
 
     const optGrid = document.getElementById('kumbara-options-grid');
     if (optGrid) {
@@ -833,13 +964,9 @@ document.getElementById('quiz-question-text').textContent = task.q;
     // 🔊 Sesli Oku Butonu
     const btnReadQuiz = document.getElementById('btn-read-quiz-q');
     if (btnReadQuiz) {
+      SpeechService.resetButton(btnReadQuiz);
       btnReadQuiz.onclick = () => {
-        const letters = ['A', 'B', 'C', 'D'];
-        let speakText = task.q + '. ';
-        task.options.forEach((opt, idx) => {
-          speakText += letters[idx] + ' şıkkı: ' + opt + '. ';
-        });
-        SpeechService.speak(speakText, btnReadQuiz);
+        SpeechService.toggleQuestion(task, btnReadQuiz);
       };
     }
 
@@ -1019,13 +1146,9 @@ document.getElementById('exam-question-text').textContent = qData.q;
     // 🔊 Sınav Sorusu Sesli Oku Butonu
     const btnReadExam = document.getElementById('btn-read-exam-q');
     if (btnReadExam) {
+      SpeechService.resetButton(btnReadExam);
       btnReadExam.onclick = () => {
-        const letters = ['A', 'B', 'C', 'D'];
-        let speakText = qData.q + '. ';
-        qData.options.forEach((opt, idx) => {
-          speakText += letters[idx] + ' şıkkı: ' + opt + '. ';
-        });
-        SpeechService.speak(speakText, btnReadExam);
+        SpeechService.toggleQuestion(qData, btnReadExam);
       };
     }
 

@@ -278,15 +278,21 @@
         <div class="question-container">
           <div class="question-badge-row">
             <span id="quiz-q-type-badge" class="q-type-badge">🎯 Kazanım Sorusu</span>
-            <div class="q-actions-inline">
-              <button id="btn-read-quiz-q" class="btn-voice-read" title="Soruyu Sesli Dinle">
-                <span class="v-icon">🔊</span>
-                <span class="v-text">Dinle</span>
-              </button>
-              <span id="quiz-streak-badge" class="streak-badge">🔥 1 Seri</span>
-            </div>
+            <span id="quiz-streak-badge" class="streak-badge">🔥 1 Seri</span>
           </div>
           <h3 id="quiz-question-text" class="question-text">Soru metni yükleniyor...</h3>
+          <div class="question-audio-strip">
+            <button id="btn-read-quiz-q" class="btn-voice-premium" type="button" aria-label="Soruyu ve Şıkları Sesli Dinle">
+              <span class="v-icon-bubble"><span class="v-icon">🔊</span></span>
+              <span class="v-text">Soruyu ve Şıkları Sesli Dinle</span>
+              <span class="v-equalizer" aria-hidden="true">
+                <span class="eq-bar"></span>
+                <span class="eq-bar"></span>
+                <span class="eq-bar"></span>
+                <span class="eq-bar"></span>
+              </span>
+            </button>
+          </div>
         </div>
 
         <!-- Şıklar Izgarası (Renkli, Taktil Dokunmatik Butonlar) -->
@@ -325,15 +331,21 @@
         <div class="question-container">
           <div class="question-badge-row">
             <span class="q-type-badge">📝 MEB Değerlendirme Sorusu</span>
-            <div class="q-actions-inline">
-              <button id="btn-read-exam-q" class="btn-voice-read" title="Soruyu Sesli Dinle">
-                <span class="v-icon">🔊</span>
-                <span class="v-text">Dinle</span>
-              </button>
-              <span id="exam-score-live" class="streak-badge">Doğru: 0</span>
-            </div>
+            <span id="exam-score-live" class="streak-badge">Doğru: 0</span>
           </div>
           <h3 id="exam-question-text" class="question-text">Sınav sorusu yükleniyor...</h3>
+          <div class="question-audio-strip">
+            <button id="btn-read-exam-q" class="btn-voice-premium" type="button" aria-label="Soruyu ve Şıkları Sesli Dinle">
+              <span class="v-icon-bubble"><span class="v-icon">🔊</span></span>
+              <span class="v-text">Soruyu ve Şıkları Sesli Dinle</span>
+              <span class="v-equalizer" aria-hidden="true">
+                <span class="eq-bar"></span>
+                <span class="eq-bar"></span>
+                <span class="eq-bar"></span>
+                <span class="eq-bar"></span>
+              </span>
+            </button>
+          </div>
         </div>
 
         <div class="options-grid" id="exam-options-container">
@@ -664,6 +676,18 @@
             <span id="kumbara-count-text" class="kumbara-count-text">Kalan Soru: 1 / 3</span>
           </div>
           <h3 id="kumbara-q-text" class="kumbara-q-text">Soru metni...</h3>
+          <div class="question-audio-strip">
+            <button id="btn-read-kumbara-q" class="btn-voice-premium" type="button" aria-label="Soruyu ve Şıkları Sesli Dinle">
+              <span class="v-icon-bubble"><span class="v-icon">🔊</span></span>
+              <span class="v-text">Soruyu ve Şıkları Sesli Dinle</span>
+              <span class="v-equalizer" aria-hidden="true">
+                <span class="eq-bar"></span>
+                <span class="eq-bar"></span>
+                <span class="eq-bar"></span>
+                <span class="eq-bar"></span>
+              </span>
+            </button>
+          </div>
           <div id="kumbara-options-grid" class="options-grid">
             <!-- Şıklar dinamik yüklenir -->
           </div>

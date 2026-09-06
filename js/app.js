@@ -121,29 +121,18 @@
 
 
   // ==========================================================================
-  // 🔊 AKILLI DOĞAL TÜRKÇE SES MOTORU (Google Neural Audio + Web Speech API)
+  // 🔊 AKILLI DOĞAL TÜRKÇE SES MOTORU (Web Speech API - Hızlı, Güvenilir & Doğal)
   // ==========================================================================
   const SpeechService = {
     isSpeaking: false,
     activeButton: null,
-    audioElement: null,
-    audioQueue: [],
-    queueIndex: 0,
     cachedVoices: [],
 
     init: function() {
-      if (typeof Audio !== 'undefined') {
-        this.audioElement = new Audio();
-        this.audioElement.onended = () => this.playNextChunk();
-        this.audioElement.onerror = () => {
-          this.fallbackToWebSpeech();
-        };
-      }
-      if ('speechSynthesis' in window) {
-        this.loadVoices();
-        if ('onvoiceschanged' in window.speechSynthesis) {
-          window.speechSynthesis.onvoiceschanged = () => this.loadVoices();
-        }
+      if (!('speechSynthesis' in window)) return;
+      this.loadVoices();
+      if ('onvoiceschanged' in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = () => this.loadVoices();
       }
     },
 
@@ -174,7 +163,7 @@
         if (name.includes('online')) score += 35;
         if (name.includes('enhanced') || name.includes('premium')) score += 50;
         if (name.includes('google')) score += 45;
-        if (name.includes('siri')) score += 40;
+        if (name.includes('siri') || name.includes('yelda')) score += 40;
         if (name.includes('emel') || name.includes('ahmet')) score += 30;
         if (v.localService === false) score += 25;
         if (name.includes('desktop')) score -= 30;
@@ -206,42 +195,29 @@
         return p1 + ' ';
       });
 
-      // Sondaki noktaları kaldır (özellikle şıklardaki "347." durumları için)
-      res = res.replace(/(\d+)\.$/, '$1');
+      // Sondaki noktaları kaldır
+      res = res.replace(/\.+$/, '');
       return res.replace(/\s+/g, ' ').trim();
     },
 
-    formatQuestionChunks: function(qData) {
-      if (!qData) return [];
-      const chunks = [];
+    formatQuestion: function(qData) {
+      if (!qData) return '';
+      let qText = this.cleanText(qData.q);
+      
+      let speech = qText + '. ';
 
-      // 1. Soru Metni
-      const qClean = this.cleanText(qData.q);
-      if (qClean) {
-        chunks.push(qClean);
-      }
-
-      // 2. Şıklar (A, B, C, D) - Şıklar arasına virgül koyarak sayıların sıra sayısı (-inci) olmasını engelleriz
       if (Array.isArray(qData.options) && qData.options.length > 0) {
         const letters = ['A', 'B', 'C', 'D'];
-        let part1 = '';
-        let part2 = '';
-
+        const optParts = [];
         qData.options.forEach((opt, idx) => {
-          const optClean = this.cleanText(opt).replace(/(\d+)\.$/, '$1');
-          const line = `${letters[idx]} şıkkı: ${optClean}`;
-          if (idx < 2) {
-            part1 += (part1 ? ', ' : '') + line;
-          } else {
-            part2 += (part2 ? ', ' : '') + line;
-          }
+          let optClean = this.cleanText(opt);
+          optParts.push(letters[idx] + ' şıkkı ' + optClean);
         });
-
-        if (part1) chunks.push(part1);
-        if (part2) chunks.push(part2);
+        // Şıklar arasına virgül koy (asla nokta değil! Sayıların ardına nokta gelmez!)
+        speech += optParts.join(', ');
       }
 
-      return chunks;
+      return speech.trim();
     },
 
     resetButton: function(btn) {
@@ -263,24 +239,11 @@
     },
 
     stop: function() {
-      // 1. Stop HTML5 Audio
-      if (this.audioElement) {
-        try {
-          this.audioElement.pause();
-          this.audioElement.currentTime = 0;
-          this.audioElement.removeAttribute('src');
-        } catch(e) {}
-      }
-      this.audioQueue = [];
-      this.queueIndex = 0;
-
-      // 2. Stop Web Speech Synthesis
       if ('speechSynthesis' in window) {
         try {
           window.speechSynthesis.cancel();
         } catch(e) {}
       }
-
       this.isSpeaking = false;
       if (this.activeButton) {
         this.resetButton(this.activeButton);
@@ -293,97 +256,53 @@
         this.stop();
         return;
       }
-      this.speakQuestion(qData, btnElement);
+      const text = this.formatQuestion(qData);
+      this.speak(text, btnElement);
     },
 
-    speakQuestion: function(qData, btnElement) {
-      this.stop();
-
-      const chunks = this.formatQuestionChunks(qData);
-      if (!chunks || chunks.length === 0) return;
-
-      this.isSpeaking = true;
-      this.activeButton = btnElement;
-      if (btnElement) {
-        this.setButtonSpeaking(btnElement);
-      }
-
-      // Öncelik 1: Doğal, Sıcak & Akıcı Google Neural TTS Audio Akışı
-      if (navigator.onLine && this.audioElement) {
-        this.audioQueue = chunks;
-        this.queueIndex = 0;
-        this.playNextChunk();
-      } else {
-        // Çevrimdışıysa yerel Web Speech API ile oku
-        this.speakWithWebSpeech(chunks.join('. '));
-      }
-    },
-
-    playNextChunk: function() {
-      if (!this.isSpeaking) return;
-
-      if (this.queueIndex >= this.audioQueue.length) {
-        // Tüm parçalar bitti
-        this.stop();
-        return;
-      }
-
-      const text = this.audioQueue[this.queueIndex];
-      this.queueIndex++;
-
-      const url = 'https://translate.google.com/translate_tts?ie=UTF-8&tl=tr&client=tw-ob&q=' + encodeURIComponent(text);
-      this.audioElement.src = url;
-      
-      const playPromise = this.audioElement.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(err => {
-          console.warn('Audio play failed, falling back to Web Speech:', err);
-          this.fallbackToWebSpeech();
-        });
-      }
-    },
-
-    fallbackToWebSpeech: function() {
-      if (!this.isSpeaking) return;
-      // Kalan parçaları birleştirip Web Speech API ile oku
-      const remaining = this.audioQueue.slice(Math.max(0, this.queueIndex - 1)).join(', ');
-      this.audioQueue = [];
-      this.speakWithWebSpeech(remaining);
-    },
-
-    speakWithWebSpeech: function(text) {
+    speak: function(text, btnElement) {
       if (!('speechSynthesis' in window) || !text) {
-        this.stop();
         return;
       }
 
-      try {
-        window.speechSynthesis.cancel();
-      } catch(e) {}
+      this.stop();
 
       const u = new SpeechSynthesisUtterance(text);
       u.lang = 'tr-TR';
-      u.rate = 1.05; // Doğal, akıcı, canlı öğretmen temposu (asla yavaş ve hantal değil!)
-      u.pitch = 1.0;
+      u.rate = 1.0; // 1.0: Doğal, akıcı, gerçek konuşma hızı (asla yavaş ve robotik değil)
+      u.pitch = 1.0; // 1.0: Orijinal doğal ses perdesi
 
       const bestVoice = this.getBestTurkishVoice();
       if (bestVoice) {
         u.voice = bestVoice;
       }
 
-      u.onend = () => {
-        this.stop();
+      this.isSpeaking = true;
+      this.activeButton = btnElement;
+
+      if (btnElement) {
+        this.setButtonSpeaking(btnElement);
+      }
+
+      const onEndOrError = () => {
+        this.isSpeaking = false;
+        if (this.activeButton) {
+          this.resetButton(this.activeButton);
+          this.activeButton = null;
+        }
       };
-      u.onerror = (err) => {
-        console.warn('Web Speech error:', err);
-        this.stop();
+
+      u.onend = onEndOrError;
+      u.onerror = (e) => {
+        console.warn('Speech error:', e);
+        onEndOrError();
       };
 
       try {
         window.speechSynthesis.speak(u);
       } catch (err) {
-        console.warn('Web Speech speak call failed:', err);
-        this.stop();
+        console.warn('SpeechSynthesis speak failed:', err);
+        onEndOrError();
       }
     }
   };

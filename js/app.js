@@ -60,6 +60,7 @@
     updateStudentProfileDisplay();
     updateHeaderStats();
     updateClassroomSummary();
+    updateKumbaraBadge();
   }
 
   function saveProgress() {

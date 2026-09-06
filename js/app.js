@@ -1003,7 +1003,7 @@
       });
     });
 
-    // Enter tuşu ile kaydetme
+    // Enter tuşu ile kaydetme & Sanal klavyede ortalama
     ['input-student-name', 'input-student-class', 'input-student-no'].forEach(id => {
       const el = document.getElementById(id);
       if (el) {
@@ -1011,6 +1011,11 @@
           if (e.key === 'Enter') {
             saveStudentProfileFromModal();
           }
+        });
+        el.addEventListener('focus', () => {
+          setTimeout(() => {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 300);
         });
       }
     });
@@ -1086,9 +1091,11 @@
     }
 
     modal.classList.add('open');
-    setTimeout(() => {
-      if (nameInput) nameInput.focus();
-    }, 150);
+    if (window.innerWidth > 600) {
+      setTimeout(() => {
+        if (nameInput) nameInput.focus();
+      }, 150);
+    }
   }
 
   function closeStudentRegisterModal() {

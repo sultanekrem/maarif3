@@ -3714,3 +3714,398 @@ html, body {
   display: flex !important;
   justify-content: flex-end !important;
 }
+
+/* ==========================================================================
+   📱 TÜM EKRANLAR İÇİN EVRENSEL RESPONSİVE SİSTEM (Mobil, Tablet, Masaüstü)
+   - Başlıklarda ve Geri Butonlarında Sıfır Kesilme
+   - Konu Kartlarında 2 Satırlı Geniş Dokunmatik Butonlar
+   - Sanal Klavye Açıldığında Kayan Klavye Uyumlu Kayıt Modalı
+   ========================================================================== */
+
+/* 1. Geri Butonları Temel Koruma: Asla sıkışamaz veya kesilemez */
+.btn-back,
+.btn-back-quiz {
+  flex-shrink: 0 !important;
+  min-width: fit-content !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 8px 14px !important;
+  font-size: 0.88rem !important;
+  font-weight: 800 !important;
+  white-space: nowrap !important;
+  box-sizing: border-box !important;
+}
+
+/* 2. Sanal Klavye Uyumlu Modal Sistemi (Keyboard-Proof Overlay) */
+.app-modal-backdrop {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  height: 100dvh !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  padding: 12px 12px 30px 12px !important;
+  box-sizing: border-box !important;
+  z-index: 2000 !important;
+}
+
+.app-modal-backdrop.open {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important; /* Üstten başlar; klavye açılınca aşağı kaydırılabilir */
+}
+
+.student-register-card {
+  margin: 10px auto 30px auto !important;
+  max-width: 460px !important;
+  width: 100% !important;
+  background: linear-gradient(160deg, #1E1B4B 0%, #0F172A 100%) !important;
+  border: 2px solid #F59E0B !important;
+  border-radius: 22px !important;
+  padding: 20px 16px !important;
+  box-sizing: border-box !important;
+  color: #FFFFFF !important;
+  flex-shrink: 0 !important;
+}
+
+/* Kompakt Yatay Kaydırılabilir Avatar Seçici (Klavyede yer kaplamaz) */
+.avatar-picker-section {
+  margin-bottom: 12px !important;
+}
+.avatar-picker-grid {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  gap: 8px !important;
+  padding: 6px 2px 10px 2px !important;
+  scrollbar-width: thin !important;
+}
+.avatar-opt {
+  flex-shrink: 0 !important;
+  width: 44px !important;
+  height: 44px !important;
+  font-size: 1.35rem !important;
+  border-radius: 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 2px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.register-form {
+  margin-top: 8px !important;
+}
+.form-group {
+  margin-bottom: 10px !important;
+}
+.form-row-2 {
+  display: flex !important;
+  gap: 8px !important;
+}
+.form-row-2 .form-group {
+  flex: 1 !important;
+}
+.form-input {
+  padding: 10px 12px !important;
+  font-size: 0.95rem !important;
+  min-height: 44px !important;
+  box-sizing: border-box !important;
+}
+.btn-register-save {
+  width: 100% !important;
+  min-height: 46px !important;
+  padding: 12px !important;
+  font-size: 1rem !important;
+  font-weight: 900 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+}
+
+/* 3. MOBİL & TABLET EKRANLARI (< 768px) BAŞLIK VE BUTON DÜZENİ */
+@media (max-width: 768px) {
+  
+  /* A. Konular Ekranı Başlığı: 2 Satıra bölünür, geri butonu ASLA kesilmez */
+  .topics-header {
+    display: grid !important;
+    grid-template-columns: auto 1fr auto !important;
+    grid-template-areas:
+      "back . stats"
+      "title title title" !important;
+    padding: 10px 14px !important;
+    gap: 8px 10px !important;
+    min-height: auto !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .topics-header .btn-back {
+    grid-area: back !important;
+    justify-self: start !important;
+  }
+  .topics-header-stats {
+    grid-area: stats !important;
+    justify-self: end !important;
+  }
+  .topics-header-title {
+    grid-area: title !important;
+    width: 100% !important;
+    padding-top: 6px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+  .topics-header-title h2 {
+    font-size: 1.1rem !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+  .topics-header-title p {
+    font-size: 0.75rem !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  /* B. Soru ve Sınav Başlıkları: 2 Satır, sıfır sıkışma */
+  .quiz-header, .exam-header {
+    display: grid !important;
+    grid-template-columns: auto 1fr !important;
+    grid-template-areas:
+      "back counter"
+      "info info" !important;
+    padding: 10px 14px !important;
+    gap: 8px 10px !important;
+    min-height: auto !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .quiz-header .btn-back-quiz, .exam-header .btn-back-quiz {
+    grid-area: back !important;
+    justify-self: start !important;
+  }
+  .quiz-progress-wrap, .exam-counter-pill {
+    grid-area: counter !important;
+    justify-self: end !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+  .quiz-topic-info, .exam-header-info {
+    grid-area: info !important;
+    width: 100% !important;
+    padding-top: 6px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+  .quiz-topic-name, .exam-title-text {
+    font-size: 0.95rem !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  /* C. Ana Menü Üst Başlığı (Profile + Stats + Actions) */
+  .app-header {
+    padding: 8px 12px !important;
+    display: grid !important;
+    grid-template-columns: 1fr auto !important;
+    grid-template-areas:
+      "profile actions"
+      "stats stats" !important;
+    gap: 8px !important;
+    min-height: auto !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .header-student-profile {
+    grid-area: profile !important;
+    max-width: 100% !important;
+    gap: 8px !important;
+  }
+  .header-actions {
+    grid-area: actions !important;
+    justify-self: end !important;
+    gap: 6px !important;
+  }
+  .header-stats {
+    grid-area: stats !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding-top: 6px !important;
+  }
+  .stat-pill {
+    flex: 1 !important;
+    justify-content: center !important;
+  }
+
+  /* D. Bannerlar ve Aksiyon Butonları Dikey İstiflenir */
+  .grand-banner-content,
+  .unit-exam-banner,
+  .subject-final-exam-banner {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    text-align: left !important;
+  }
+  .btn-grand-exam-action,
+  .btn-final-exam-action,
+  .btn-exam-action {
+    width: 100% !important;
+    justify-content: center !important;
+    min-height: 44px !important;
+    font-size: 0.92rem !important;
+    box-sizing: border-box !important;
+  }
+
+  /* E. 3 Adımlı Hap Bilgi Modalı Trio Grid Tek Kolon */
+  .fact-trio-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  .fact-card-actions {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+  .btn-primary-action, .btn-secondary-action {
+    width: 100% !important;
+    justify-content: center !important;
+    min-height: 44px !important;
+  }
+}
+
+/* 4. MOBİL CİHAZLAR (< 580px): KONU KARTLARINDA 2 SATIRLI FERAH BUTONLAR */
+@media (max-width: 580px) {
+  /* Splash Ekranı Mobil Optimizasyonu */
+  #screen-splash {
+    padding: 12px 10px !important;
+  }
+  .splash-hero-container {
+    padding: 20px 14px !important;
+    border-radius: 24px !important;
+  }
+  .splash-logo-wrapper {
+    width: 90px !important;
+    height: 90px !important;
+    margin-bottom: 8px !important;
+  }
+  .splash-hero-title {
+    font-size: 1.7rem !important;
+    margin-bottom: 4px !important;
+  }
+  .splash-hero-subtitle {
+    font-size: 0.85rem !important;
+    line-height: 1.35 !important;
+  }
+  .splash-curriculum-showcase {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+    margin-bottom: 14px !important;
+  }
+  .showcase-card {
+    padding: 10px 8px !important;
+    gap: 8px !important;
+  }
+  .showcase-icon {
+    font-size: 1.3rem !important;
+  }
+  .showcase-info strong {
+    font-size: 0.85rem !important;
+  }
+  .showcase-info span {
+    font-size: 0.68rem !important;
+  }
+  .splash-features-bar {
+    gap: 6px !important;
+    margin-bottom: 16px !important;
+  }
+  .feature-item {
+    font-size: 0.75rem !important;
+    padding: 4px 10px !important;
+  }
+  .splash-hero-actions {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 10px !important;
+  }
+  .btn-splash-start, .btn-splash-profile {
+    width: 100% !important;
+    min-height: 46px !important;
+    padding: 12px 16px !important;
+    font-size: 0.98rem !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Konu Kartları Izgarası: Tek Kolon */
+  .topics-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .topic-card-item {
+    padding: 14px !important;
+    gap: 10px !important;
+  }
+
+  /* BUTONLARI 2 SATIRDA MANTIKLI GÖSTERME (Metin taşması ve kesilmeye kesin çözüm) */
+  .topic-card-footer {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 8px !important;
+    width: 100% !important;
+    margin-top: 10px !important;
+    padding-top: 10px !important;
+  }
+  .btn-topic-fact,
+  .btn-start-topic {
+    width: 100% !important;
+    min-height: 44px !important;
+    padding: 10px 14px !important;
+    font-size: 0.88rem !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    white-space: nowrap !important;
+  }
+
+  /* Soru ve Sınav Şıkları: 1 Kolon & Ferah Dokunmatik Alan */
+  .options-grid {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+  .option-btn {
+    padding: 12px 14px !important;
+    min-height: 50px !important;
+    font-size: 0.95rem !important;
+    box-sizing: border-box !important;
+  }
+  .option-letter {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 0.92rem !important;
+  }
+
+  .feedback-box {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    padding: 12px 14px !important;
+  }
+  .btn-next-action {
+    width: 100% !important;
+    min-height: 44px !important;
+    justify-content: center !important;
+  }
+}

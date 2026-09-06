@@ -109,13 +109,35 @@
   function updateClassroomSummary() {
     const topicCountEl = document.getElementById('stat-completed-topics-count');
     const examCountEl = document.getElementById('stat-exams-taken-count');
+    const titleEl = document.getElementById('class-summary-title');
+
+    let totalTopics = 0;
+    let totalExams = 0;
+    if (window.CURRICULUM_TERM1) {
+      Object.keys(window.CURRICULUM_TERM1).forEach(k => {
+        if (k === 'general_exam') return;
+        const subj = window.CURRICULUM_TERM1[k];
+        if (subj.themes) {
+          subj.themes.forEach(t => {
+            if (t.topics) totalTopics += t.topics.length;
+            if (t.exam) totalExams++;
+          });
+        }
+        if (subj.final_exam) totalExams++;
+      });
+      if (window.CURRICULUM_TERM1.general_exam) totalExams++;
+    }
+
+    if (titleEl) {
+      titleEl.textContent = `${totalTopics} Resmî MEB Kazanımı Hazır`;
+    }
     if (topicCountEl) {
       const completedCount = Object.keys(state.progress.completedTopics).length;
-      topicCountEl.textContent = `${completedCount} / 49`;
+      topicCountEl.textContent = `${completedCount} / ${totalTopics}`;
     }
     if (examCountEl) {
       const examCount = Object.keys(state.progress.completedExams).length;
-      examCountEl.textContent = `${examCount} / 17`;
+      examCountEl.textContent = `${examCount} / ${totalExams}`;
     }
   }
 
@@ -444,6 +466,7 @@
 
     const item = bank[currentKumbaraIndex];
     const subjNames = {
+      'turkce': 'Türkçe 📖',
       'matematik': 'Matematik 📐',
       'fenbilimleri': 'Fen Bilimleri 🔬',
       'hayatbilgisi': 'Hayat Bilgisi 🌱',
@@ -1847,18 +1870,37 @@ document.getElementById('exam-question-text').textContent = qData.q;
     }
   }
 
+  function getTotalTopicsCount() {
+    let count = 0;
+    if (window.CURRICULUM_TERM1) {
+      Object.keys(window.CURRICULUM_TERM1).forEach(k => {
+        if (k === 'general_exam') return;
+        const subj = window.CURRICULUM_TERM1[k];
+        if (subj.themes) {
+          subj.themes.forEach(t => {
+            if (t.topics) count += t.topics.length;
+          });
+        }
+      });
+    }
+    return count || 69;
+  }
+
   function renderBadges() {
     const completedCount = Object.keys(state.progress.completedTopics).length;
-    document.getElementById('badges-total-topics').textContent = `${completedCount} / 49`;
+    const totalTopics = getTotalTopicsCount();
+    const badgesEl = document.getElementById('badges-total-topics');
+    if (badgesEl) badgesEl.textContent = `${completedCount} / ${totalTopics}`;
     document.getElementById('badges-total-stars').textContent = state.progress.stars;
     document.getElementById('badges-total-score').textContent = state.progress.score;
 
     const badges = [
       { name: 'İlk Adım', desc: 'İlk MEB konusunu tamamla', icon: '🌱', req: completedCount >= 1 },
       { name: 'Matematik Kaşifi', desc: '5 Matematik konusunu bitir', icon: '📐', req: completedCount >= 5 },
+      { name: 'Türkçe Kitap Kurdu', desc: '5 Türkçe konusunu bitir', icon: '📖', req: completedCount >= 5 },
       { name: 'Sınav Şampiyonu', desc: 'İlk Tema Sınavından 80+ al', icon: '🏆', req: Object.keys(state.progress.completedExams).length >= 1 },
       { name: 'Yıldız Koleksiyoncusu', desc: '30 yıldız kazan', icon: '⭐', req: state.progress.stars >= 30 },
-      { name: '1. Dönem Onur Belgesi', desc: 'Tüm 49 MEB konusunu tamamla', icon: '👑', req: completedCount >= 49 }
+      { name: '1. Dönem Onur Belgesi', desc: `Tüm ${totalTopics} MEB konusunu tamamla`, icon: '👑', req: completedCount >= totalTopics }
     ];
 
     const container = document.getElementById('badges-container');

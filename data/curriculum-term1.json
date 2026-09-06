@@ -3027,6 +3027,1513 @@
       ]
     }
   },
+  "turkce": {
+    "title": "Türkçe",
+    "subtitle": "3. Sınıf 1. Kitap (MEB Maarif Modeli)",
+    "icon": "📖",
+    "badge": "20 Konu",
+    "accent": "#D97706",
+    "bg_light": "#FEF3C7",
+    "themes": [
+      {
+        "id": "turkce_tema1",
+        "title": "1. TEMA: Değerlerimizle Yaşıyoruz",
+        "page_range": "s. 18 - 55",
+        "topics": [
+          {
+            "id": "turk_t1_1",
+            "title": "Kelebek ile Lavanta (Dinleme Metni)",
+            "page": 22,
+            "desc": "Dinleme kuralları, nezaket, dostluk ve yardımlaşma.",
+            "badge": "Nezaket & Dostluk",
+            "tasks": [
+              {
+                "q": "Bir konuşmacıyı ya da metni dinlerken hangi davranış doğru ve nezaketlidir?",
+                "options": [
+                  "Konuşmacının sözünü kesmeden, dikkatle dinlemek",
+                  "Dinlerken etraftaki başka şeylerle ilgilenmek",
+                  "Konuşmacıya bakmadan yere bakmak",
+                  "Söz verilmeden yüksek sesle araya girmek"
+                ],
+                "ans": 0,
+                "hint": "İyi bir dinleyici konuşmacıyı göz teması kurarak ve dikkatle dinler."
+              },
+              {
+                "q": "\"Kelebek ile Lavanta\" metninde vurgulanan temel değer hangisidir?",
+                "options": [
+                  "Dostluk ve karşılıklı yardımlaşma",
+                  "Yalnız yaşamak",
+                  "Kibirli olmak",
+                  "Her şeyi tek başına yapmak"
+                ],
+                "ans": 0,
+                "hint": "Doğadaki canlılar birbirine destek olarak güzellikleri paylaşırlar."
+              },
+              {
+                "q": "Aşağıdaki sözcüklerden hangisi bir nezaket ifadesidir?",
+                "options": [
+                  "Rica ederim",
+                  "Çekil şuradan",
+                  "Bana ne",
+                  "Sus artık"
+                ],
+                "ans": 0,
+                "hint": "Teşekkür edildiğinde 'Rica ederim' demek güzel bir nezaket örneğidir."
+              },
+              {
+                "q": "Görsellerden hareketle bir metnin konusunu tahmin ederken neye dikkat ederiz?",
+                "options": [
+                  "Resimlerdeki karakterler ve olay ipuçlarına",
+                  "Sadece kitabın kalınlığına",
+                  "Yazıların rengine",
+                  "Kitabın basım yılına"
+                ],
+                "ans": 0,
+                "hint": "Görseller metnin ana konusu hakkında güçlü ipuçları taşır."
+              }
+            ]
+          },
+          {
+            "id": "turk_t1_2",
+            "title": "Ben Kimim? (Aziz Sancar)",
+            "page": 28,
+            "desc": "Aziz Sancar'ın çocukluğu, Anıtkabir ziyareti, çalışma azmi ve dürüstlük.",
+            "badge": "Çalışma Azmi",
+            "tasks": [
+              {
+                "q": "Nobel Ödüllü bilim insanımız Aziz Sancar, Anıtkabir'i ilk ziyaretinde kime hangi sözü vermiştir?",
+                "options": [
+                  "Atatürk'e çok çalışıp milletine hizmet edeceğine",
+                  "Futbolcu olacağına",
+                  "Yurt dışına yerleşeceğine",
+                  "Okulu bırakacağına"
+                ],
+                "ans": 0,
+                "hint": "Aziz Sancar çocukken Atatürk'e çok çalışıp milletine faydalı olacağına söz vermiştir."
+              },
+              {
+                "q": "\"Aziz Sancar tıp alanında büyük bir başarıya imza attı.\" cümlesinde özel isim hangisidir?",
+                "options": [
+                  "Aziz Sancar",
+                  "başarıya",
+                  "büyük",
+                  "tıp"
+                ],
+                "ans": 0,
+                "hint": "Kişi ad ve soyadları özel isimdir ve ilk harfleri büyük yazılır."
+              },
+              {
+                "q": "Bir insanın kendine ve çevresine karşı dürüst olması ne anlama gelir?",
+                "options": [
+                  "Her zaman doğruyu söylemek ve sözünde durmak",
+                  "Hata yaptığında başkalarını suçlamak",
+                  "Kendi çıkarı için gerçeği saklamak",
+                  "Söz verip yerine getirmemek"
+                ],
+                "ans": 0,
+                "hint": "Dürüstlük; doğru sözlü ve güvenilir birey olmanın temelidir."
+              },
+              {
+                "q": "\"çalışkan\" sözcüğünün zıt (karşıt) anlamlısı hangisidir?",
+                "options": [
+                  "tembel",
+                  "akıllı",
+                  "başarılı",
+                  "gayretli"
+                ],
+                "ans": 0,
+                "hint": "Çalışkanın zıttı tembeldir."
+              }
+            ]
+          },
+          {
+            "id": "turk_t1_3",
+            "title": "Köyde İlk Sabah",
+            "page": 34,
+            "desc": "Şiirde duygu ve tonlama, 5N1K metin anlama ve doğa sevgisi.",
+            "badge": "Şiir & Duygu",
+            "tasks": [
+              {
+                "q": "\"Köyde İlk Sabah\" şiirinde çocuğun avucuna konan ve ona günaydın diyen canlı hangisidir?",
+                "options": [
+                  "Bir serçe kuşu",
+                  "Sevimli bir kedi",
+                  "Küçük bir kuzu",
+                  "Renkli bir kelebek"
+                ],
+                "ans": 0,
+                "hint": "Şiirde rüyadaki serçe pencerede öterek çocuğa günaydın der."
+              },
+              {
+                "q": "Şiir okurken en çok nelere dikkat etmeliyiz?",
+                "options": [
+                  "Vurgu, tonlama ve duyguyu yansıtmaya",
+                  "Çok hızlı okumaya",
+                  "Fısıldayarak okumaya",
+                  "Nefes almadan bitirmeye"
+                ],
+                "ans": 0,
+                "hint": "Şiirin güzelliği doğru vurgu ve tonlama ile ortaya çıkar."
+              },
+              {
+                "q": "\"Köyde ilk sabahım, hava mis gibi.\" dizesinde altı çizili 'mis' sözcüğü neyi ifade eder?",
+                "options": [
+                  "Çok güzel ve temiz koktuğunu",
+                  "Havanın soğuk olduğunu",
+                  "Rüzgarlı olduğunu",
+                  "Karanlık olduğunu"
+                ],
+                "ans": 0,
+                "hint": "Mis gibi kokmak, tertemiz ve ferahlatıcı kokuyu anlatır."
+              },
+              {
+                "q": "\"Kuşlar ağaçlarda neşeyle ötüyor.\" cümlesinde iş (eylem) bildiren sözcük hangisidir?",
+                "options": [
+                  "ötüyor",
+                  "Kuşlar",
+                  "ağaçlarda",
+                  "neşeyle"
+                ],
+                "ans": 0,
+                "hint": "Cümlede yapılan hareketi 'ötüyor' sözcüğü belirtir."
+              }
+            ]
+          },
+          {
+            "id": "turk_t1_4",
+            "title": "Nermin Teyze Nerede?",
+            "page": 40,
+            "desc": "Komşuluk ilişkileri, yardımlaşma, empati ve büyük harflerin yazımı.",
+            "badge": "Komşuluk & Empati",
+            "tasks": [
+              {
+                "q": "Kültürümüzde komşuluk ilişkilerine neden büyük önem verilir?",
+                "options": [
+                  "Zor ve sevinçli günlerde birbirimize destek olmak için",
+                  "Komşuların işine karışmak için",
+                  "Yalnızlığı sevdiğimiz için",
+                  "Sadece bayramlarda hediye almak için"
+                ],
+                "ans": 0,
+                "hint": "Komşular günlük hayatımızda en yakın yardımcımızdır."
+              },
+              {
+                "q": "Aşağıdaki cümlelerin hangisinde yazım yanlışı yapılmıştır?",
+                "options": [
+                  "ali ve kemal parkta kaykay sürdüler.",
+                  "Dün Nermin teyze bize kek getirdi.",
+                  "Sabahları okula beraber gideriz.",
+                  "Yaşlılara her zaman yardım etmeliyiz."
+                ],
+                "ans": 0,
+                "hint": "Cümle başı ve özel isimler (Ali ve Kemal) büyük harfle başlar."
+              },
+              {
+                "q": "Bir kimsenin kendini başkasının yerine koyarak onun duygularını anlamasına ne denir?",
+                "options": [
+                  "Empati",
+                  "Kıskançlık",
+                  "Öfke",
+                  "Bencillik"
+                ],
+                "ans": 0,
+                "hint": "Empati; karşımızdakini anlamanın ve yardım etmenin anahtarıdır."
+              },
+              {
+                "q": "\"Komşumuz Hasan amca poşetleri taşımakta zorlanıyordu\" cümlesinin sonuna hangi noktalama işareti konmalıdır?",
+                "options": [
+                  "Nokta (.)",
+                  "Soru işareti (?)",
+                  "Ünlem işareti (!)",
+                  "Virgül (,)"
+                ],
+                "ans": 0,
+                "hint": "Tamamlanmış bir haber cümlesinin sonuna nokta konur."
+              }
+            ]
+          },
+          {
+            "id": "turk_t1_5",
+            "title": "Çam Ağacı",
+            "page": 46,
+            "desc": "Sabır, kanaat, estetik değerler, eş ve zıt anlamlı kelimeler.",
+            "badge": "Eş & Zıt Anlam",
+            "tasks": [
+              {
+                "q": "\"Çam Ağacı\" metninde yaşlı çınar ağacı, genç çam ağacına hangi öğüdü vermiştir?",
+                "options": [
+                  "Sabırlı olmasını ve kendi güzelliğinin farkına varmasını",
+                  "Hemen ormandan kaçmasını",
+                  "Diğer ağaçlarla kavga etmesini",
+                  "Kuşları kovmasını"
+                ],
+                "ans": 0,
+                "hint": "Her varlığın kendine has bir değeri ve güzelliği vardır; sabırlı olmak gerekir."
+              },
+              {
+                "q": "\"yaşlı\" sözcüğünün eş anlamlısı aşağıdakilerden hangisidir?",
+                "options": [
+                  "ihtiyar",
+                  "genç",
+                  "küçük",
+                  "güçlü"
+                ],
+                "ans": 0,
+                "hint": "Yaşlı ile ihtiyar aynı anlama gelen eş anlamlı sözcüklerdir."
+              },
+              {
+                "q": "\"üzgün\" sözcüğünün zıt anlamlısı hangisidir?",
+                "options": [
+                  "mutlu",
+                  "kederli",
+                  "yorgun",
+                  "kırgın"
+                ],
+                "ans": 0,
+                "hint": "Üzgünün karşıtı sevinçli ya da mutludur."
+              },
+              {
+                "q": "\"Dere kenarında yaşlı bir çınar ağacı vardı.\" cümlesinde niteleme (özellik belirten) sözcük hangisidir?",
+                "options": [
+                  "yaşlı",
+                  "dere",
+                  "vardı",
+                  "ağacı"
+                ],
+                "ans": 0,
+                "hint": "Çınarın durumunu ve özelliğini 'yaşlı' sözcüğü belirtmektedir."
+              }
+            ]
+          }
+        ],
+        "exam": {
+          "id": "turkce_tema1_exam",
+          "title": "1. Tema Değerlendirme Sınavı",
+          "book_ref": "MEB Kitabı s. 54",
+          "tasks": [
+            {
+              "q": "Metne göre Bilge, sabah uyandığında anne ve babasına hangi nezaket sözcüğünü söylemiştir? (s. 54)",
+              "options": [
+                "Günaydın",
+                "İyi akşamlar",
+                "Görüşürüz",
+                "Hoşça kal"
+              ],
+              "ans": 0,
+              "hint": "Bilge sabah kalktığında ailesine 'Günaydın' demiştir."
+            },
+            {
+              "q": "Bilge, apartmandan çıkarken zorlanan yaşlı komşusu Hasan amcaya nasıl yardımcı olmuştur? (s. 54)",
+              "options": [
+                "Eşyalarını alıp kapısına kadar taşıyarak",
+                "Sadece el sallayarak",
+                "Kapıyı yüzüne kapatarak",
+                "Hızlıca yanından uzaklaşarak"
+              ],
+              "ans": 0,
+              "hint": "Hasan amcanın elindeki ağır eşyaları kapısına kadar taşımıştır."
+            },
+            {
+              "q": "\"Nezaket ve Yardımlaşma\" metninin ana fikri aşağıdakilerden hangisidir? (s. 54)",
+              "options": [
+                "İnsanlara yardım etmek ve nazik olmak bizi mutlu ve iyi bir komşu yapar.",
+                "Sadece kendi işlerimizle ilgilenmeliyiz.",
+                "Sabahları kimseyle konuşmamalıyız.",
+                "Yaşlı insanlardan uzak durmalıyız."
+              ],
+              "ans": 0,
+              "hint": "Yardımlaşmak hem yardım edeni hem de edileni mutlu eder."
+            },
+            {
+              "q": "\"Hasan amca size yardım etmemi ister misiniz\" cümlesinin sonuna hangi noktalama işareti gelmelidir? (s. 54)",
+              "options": [
+                "Soru işareti (?)",
+                "Nokta (.)",
+                "Ünlem işareti (!)",
+                "Virgül (,)"
+              ],
+              "ans": 0,
+              "hint": "Cevap bekleyen bir soru cümlesidir."
+            },
+            {
+              "q": "Aşağıdaki bilgilerden hangisi doğrudur? (s. 55)",
+              "options": [
+                "Cümlelerin ilk harfi her zaman büyük yazılır.",
+                "Özel isimlerin ilk harfi küçük yazılır.",
+                "Soru cümlelerinin sonuna ünlem işareti konur.",
+                "Virgül cümlenin en sonuna konur."
+              ],
+              "ans": 0,
+              "hint": "Her cümlenin ilk harfi kural olarak büyük harfle başlar."
+            },
+            {
+              "q": "\"Annem mis gibi kokan çiçekleri vazoya yerleştirdi.\" cümlesinde altı çizili kelimenin anlamı nedir? (s. 55)",
+              "options": [
+                "Çok güzel ve hoş kokan",
+                "Kötü kokan",
+                "Eski ve solmuş",
+                "Renksiz"
+              ],
+              "ans": 0,
+              "hint": "Mis gibi kokmak tertemiz ve harika kokuları ifade eder."
+            }
+          ]
+        }
+      },
+      {
+        "id": "turkce_tema2",
+        "title": "2. TEMA: Atatürk ve Kahramanlarımız",
+        "page_range": "s. 56 - 97",
+        "topics": [
+          {
+            "id": "turk_t2_1",
+            "title": "Kahverengi Ayakkabıları Siyaha Boyayan Ülkü",
+            "page": 60,
+            "desc": "Atatürk'ün manevi kızı Ülkü, tevazu, eşitlik ve dinleme kuralları.",
+            "badge": "Tevazu & Eşitlik",
+            "tasks": [
+              {
+                "q": "Ülkü, ayakkabılarını neden siyaha boyamak istemiştir?",
+                "options": [
+                  "Okuldaki diğer arkadaşlarıyla eşit olmak ve dikkat çekmemek için",
+                  "Kahverengiyi sevmediği için",
+                  "Ayakkabısı kirlendiği için",
+                  "Boya yapmayı oyun sandığı için"
+                ],
+                "ans": 0,
+                "hint": "Ülkü, diğer çocuklardan farklı görünmek istememiş ve tevazu göstermiştir."
+              },
+              {
+                "q": "Bu metinde Atatürk'ün ve ailesinin hangi erdemi ön plana çıkarılmıştır?",
+                "options": [
+                  "Alçakgönüllülük ve adalet duygusu",
+                  "Gösteriş merakı",
+                  "Pahalı eşyalar sevmesi",
+                  "Arkadaş edinmemesi"
+                ],
+                "ans": 0,
+                "hint": "Atatürk ve ailesi her zaman mütevazı ve halkla iç içe olmuştur."
+              },
+              {
+                "q": "\"siyah\" sözcüğünün eş anlamlısı hangisidir?",
+                "options": [
+                  "kara",
+                  "beyaz",
+                  "koyu",
+                  "renkli"
+                ],
+                "ans": 0,
+                "hint": "Siyah ile kara eş anlamlı sözcüklerdir."
+              },
+              {
+                "q": "\"Ülkü okuluna severek giderdi.\" cümlesi kaç sözcükten oluşmuştur?",
+                "options": [
+                  "4",
+                  "5",
+                  "3",
+                  "6"
+                ],
+                "ans": 0,
+                "hint": "Ülkü (1) okuluna (2) severek (3) giderdi (4) -> 4 sözcüktür."
+              }
+            ]
+          },
+          {
+            "id": "turk_t2_2",
+            "title": "Atatürk Çok Kitap Okurmuş",
+            "page": 66,
+            "desc": "Atatürk'ün kitap tutkusu, araştırmacı kişiliği ve Çocuklara Rehber Dergisi.",
+            "badge": "Kitap & Araştırma",
+            "tasks": [
+              {
+                "q": "Metne göre Atatürk çocukken eline biraz para geçse yarısıyla ne alırmış?",
+                "options": [
+                  "Kitap",
+                  "Oyuncak",
+                  "Şeker",
+                  "Kıyafet"
+                ],
+                "ans": 0,
+                "hint": "Atatürk eline geçen paranın yarısıyla kitap alıp kendini geliştirirdi."
+              },
+              {
+                "q": "Atatürk kitap okurken önemli gördüğü yerleri nasıl incelerdi?",
+                "options": [
+                  "Altını çizerek ve kenarına notlar alarak",
+                  "Hemen sayfayı yırtarak",
+                  "Kitabı kapatarak",
+                  "Hiç okumadan geçerek"
+                ],
+                "ans": 0,
+                "hint": "Atatürk kitapların altını kırmızı ve mavi kalemlerle çizerek okurdu."
+              },
+              {
+                "q": "Atatürk hangi dergide matematik sorularına verdiği yanıtları yayımlatmıştır?",
+                "options": [
+                  "Çocuklara Rehber Dergisi",
+                  "Bilim Çocuk",
+                  "Genç Matematik",
+                  "Tarih Rehberi"
+                ],
+                "ans": 0,
+                "hint": "Haftalık Çocuklara Rehber Dergisi'nde matematik çözümleri çıkmıştır."
+              },
+              {
+                "q": "\"okumak\" sözcüğü aşağıdaki cümlelerin hangisinde mecaz (farklı) anlamda kullanılmıştır?",
+                "options": [
+                  "Gözlerinden ne kadar mutlu olduğunu okudum.",
+                  "Kütüphaneden aldığım kitabı okudum.",
+                  "Sabah gazetesini baştan sona okudu.",
+                  "Öğretmenimiz tahtadaki şiiri okudu."
+                ],
+                "ans": 0,
+                "hint": "Gözlerinden okumak, hissetmek ve anlamak anlamında mecazdır."
+              }
+            ]
+          },
+          {
+            "id": "turk_t2_3",
+            "title": "Anadolu'nun Kadınları",
+            "page": 72,
+            "desc": "Şerife Bacı, Nene Hatun, Gördesli Makbule ve Millî Mücadele kahramanları.",
+            "badge": "Millî Mücadele",
+            "tasks": [
+              {
+                "q": "Kastamonu'dan İnebolu'ya cephane taşırken bebeğinin üzerindeki battaniyeyi ıslanmasın diye mermilere örten kahraman kadınımız kimdir?",
+                "options": [
+                  "Şerife Bacı",
+                  "Nene Hatun",
+                  "Halide Edip",
+                  "Kara Fatma"
+                ],
+                "ans": 0,
+                "hint": "Şerife Bacı vatanı için canını feda eden fedakar Türk anasıdır."
+              },
+              {
+                "q": "Erzurum savunmasında tabyalarda cesurca savaşan kahramanımız kimdir?",
+                "options": [
+                  "Nene Hatun",
+                  "Gördesli Makbule",
+                  "Halime Çavuş",
+                  "Çete Emir Ayşe"
+                ],
+                "ans": 0,
+                "hint": "Nene Hatun Erzurum Aziziye Tabyaları'nda destan yazmıştır."
+              },
+              {
+                "q": "\"cesur\" sözcüğünün zıt anlamlısı aşağıdakilerden hangisidir?",
+                "options": [
+                  "korkak",
+                  "yiğit",
+                  "kahraman",
+                  "güçlü"
+                ],
+                "ans": 0,
+                "hint": "Cesurun karşıtı korkaktır."
+              },
+              {
+                "q": "Millî Mücadele kahramanlarımızın ortak özelliği hangisidir?",
+                "options": [
+                  "Vatan ve millet sevgisiyle fedakarlık yapmaları",
+                  "Kişisel zenginlik aramaları",
+                  "Zorluklardan kaçmaları",
+                  "Yabancı ülkelere gitmeleri"
+                ],
+                "ans": 0,
+                "hint": "Kahramanlarımız vatanımızın bağımsızlığı için birlik olmuştur."
+              }
+            ]
+          },
+          {
+            "id": "turk_t2_4",
+            "title": "Dün Gibi",
+            "page": 80,
+            "desc": "Bayram sevinci, halk oyunları, bayramlıklar ve milli günler.",
+            "badge": "Milli Bayramlar",
+            "tasks": [
+              {
+                "q": "\"Dün Gibi\" metninde yazar çocukluğundaki hangi coşkulu anıyı anlatmaktadır?",
+                "options": [
+                  "Milli bayramlarda giyilen bayramlıkları ve halk oyunu heyecanını",
+                  "Yaz tatilinde denize gitmesini",
+                  "Pazara alışverişe gitmesini",
+                  "Evde tek başına kalmasını"
+                ],
+                "ans": 0,
+                "hint": "Metin bayramlık kıyafetlerin ve milli bayramların sevincini anlatır."
+              },
+              {
+                "q": "Aşağıdakilerden hangisi milli bayramlarımızdan biridir?",
+                "options": [
+                  "23 Nisan Ulusal Egemenlik ve Çocuk Bayramı",
+                  "Kurban Bayramı",
+                  "Ramazan Bayramı",
+                  "Anneler Günü"
+                ],
+                "ans": 0,
+                "hint": "23 Nisan, Atatürk'ün çocuklara armağan ettiği milli bayramımızdır."
+              },
+              {
+                "q": "\"kırmızı\" sözcüğünün eş anlamlısı hangisidir?",
+                "options": [
+                  "al",
+                  "ak",
+                  "kara",
+                  "sarı"
+                ],
+                "ans": 0,
+                "hint": "Kırmızı ile al eş anlamlıdır (Al bayrak = Kırmızı bayrak)."
+              },
+              {
+                "q": "\"Bayram sabahı erkenden uyandım ( ) yepyeni kıyafetlerimi giydim.\" cümlesinde yay ayraç içine ne gelmelidir?",
+                "options": [
+                  "Virgül (,)",
+                  "Nokta (.)",
+                  "Soru işareti (?)",
+                  "Ünlem işareti (!)"
+                ],
+                "ans": 0,
+                "hint": "Birbiri ardınca sıralanan cümleleri ayırmak için virgül konur."
+              }
+            ]
+          },
+          {
+            "id": "turk_t2_5",
+            "title": "Atatürk'ün Çocuk Sevgisi",
+            "page": 88,
+            "desc": "Atatürk'ün çocuklara verdiği değer ve 23 Nisan Çocuk Bayramı.",
+            "badge": "Çocuk Sevgisi",
+            "tasks": [
+              {
+                "q": "Mustafa Kemal Atatürk dünyada çocuklara bayram armağan eden tek liderdir. Bu bayram hangisidir?",
+                "options": [
+                  "23 Nisan Ulusal Egemenlik ve Çocuk Bayramı",
+                  "19 Mayıs Gençlik Bayramı",
+                  "29 Ekim Cumhuriyet Bayramı",
+                  "30 Ağustos Zafer Bayramı"
+                ],
+                "ans": 0,
+                "hint": "TBMM'nin açıldığı 23 Nisan günü tüm dünya çocuklarına armağan edilmiştir."
+              },
+              {
+                "q": "Atatürk çocukları neden 'geleceğin ışığı ve mimarı' olarak görmüştür?",
+                "options": [
+                  "Ülkeyi daha aydınlık günlere çocukların taşıyacağına inandığı için",
+                  "Sadece oyun oynadıkları için",
+                  "Okula gittikleri için",
+                  "Küçük oldukları için"
+                ],
+                "ans": 0,
+                "hint": "Cumhuriyet yeni nesillere ve çocukların çalışkanlığına emanet edilmiştir."
+              },
+              {
+                "q": "\"barış\" sözcüğünün zıt anlamlısı hangisidir?",
+                "options": [
+                  "savaş",
+                  "sevgi",
+                  "dostluk",
+                  "huzur"
+                ],
+                "ans": 0,
+                "hint": "Barışın karşıtı savaştır."
+              },
+              {
+                "q": "\"Küçük hanımlar, küçük beyler! Sizler geleceğin bir gülü, yıldızısınız.\" sözü kime aittir?",
+                "options": [
+                  "Mustafa Kemal Atatürk",
+                  "Mehmet Akif Ersoy",
+                  "Ömer Seyfettin",
+                  "Ziya Gökalp"
+                ],
+                "ans": 0,
+                "hint": "Bu sevgi dolu ve yüreklendirici hitap Atatürk'e aittir."
+              }
+            ]
+          }
+        ],
+        "exam": {
+          "id": "turkce_tema2_exam",
+          "title": "2. Tema Değerlendirme Sınavı",
+          "book_ref": "MEB Kitabı s. 96",
+          "tasks": [
+            {
+              "q": "Metne göre Mustafa Kemal Atatürk, 19 Mayıs 1919'da nereye giderek halkı bağımsızlık için birleşmeye çağırmıştır? (s. 96)",
+              "options": [
+                "Samsun'a",
+                "Ankara'ya",
+                "İzmir'e",
+                "Erzurum'a"
+              ],
+              "ans": 0,
+              "hint": "Millî Mücadele'nin meşalesi 19 Mayıs 1919'da Samsun'da yakılmıştır."
+            },
+            {
+              "q": "Mustafa Kemal Atatürk Türkiye Cumhuriyeti'ni hangi tarihte ilan etmiştir? (s. 96)",
+              "options": [
+                "29 Ekim 1923",
+                "23 Nisan 1920",
+                "19 Mayıs 1919",
+                "30 Ağustos 1922"
+              ],
+              "ans": 0,
+              "hint": "Cumhuriyetimiz 29 Ekim 1923 tarihinde kurulmuştur."
+            },
+            {
+              "q": "Atatürk'ün \"Egemenlik kayıtsız şartsız milletindir!\" sözü ne anlama gelmektedir? (s. 96)",
+              "options": [
+                "Ülke yönetiminde en üstün gücün halkın kendi iradesi olduğu",
+                "Yalnızca tek bir kişinin karar vermesi gerektiği",
+                "Yabancı devletlerin yönetime karışması",
+                "Halkın oy kullanmaması"
+              ],
+              "ans": 0,
+              "hint": "Millet kendi temsilcilerini seçerek devleti kendisi yönetir."
+            },
+            {
+              "q": "\"bağımsız\" sözcüğünün zıt anlamlısı aşağıdakilerden hangisidir? (s. 97)",
+              "options": [
+                "tutsak (bağımlı)",
+                "özgür",
+                "hür",
+                "serbest"
+              ],
+              "ans": 0,
+              "hint": "Bağımsızın karşıtı tutsak veya bağımlıdır."
+            },
+            {
+              "q": "\"zafer\" sözcüğünün zıt anlamlısı hangisidir? (s. 97)",
+              "options": [
+                "yenilgi",
+                "başarı",
+                "kazanç",
+                "ödül"
+              ],
+              "ans": 0,
+              "hint": "Zafer kazanmanın karşıtı yenilgidir."
+            },
+            {
+              "q": "\"Takımın başarısı için birlik içinde çalışmalıyız.\" cümlesinde altı çizili 'birlik' kelimesinin sözlük anlamı nedir? (s. 97)",
+              "options": [
+                "Birlikte olma, dayanışma ve uyum hali",
+                "Yalnız başına çalışma",
+                "Kavga etme",
+                "Yarışma"
+              ],
+              "ans": 0,
+              "hint": "Birlik; bir amaç doğrultusunda el ele vermek ve dayanışmaktır."
+            }
+          ]
+        }
+      },
+      {
+        "id": "turkce_tema3",
+        "title": "3. TEMA: Doğayı Tanıyoruz",
+        "page_range": "s. 98 - 139",
+        "topics": [
+          {
+            "id": "turk_t3_1",
+            "title": "Bir Orman (Dinleme Metni)",
+            "page": 102,
+            "desc": "Orman ekosistemi, canlılar, çevre bilinci ve doğa sevgisi.",
+            "badge": "Çevre & Canlılar",
+            "tasks": [
+              {
+                "q": "Ormanlar neden 'dünyanın akciğerleri' olarak adlandırılır?",
+                "options": [
+                  "Oksijen üreterek havayı temizledikleri için",
+                  "Kışın kar yağdırdıkları için",
+                  "Çok ses çıkardıkları için",
+                  "Sadece odun verdikleri için"
+                ],
+                "ans": 0,
+                "hint": "Ağaçlar fotosentez yaparak canlılar için temiz oksijen üretir."
+              },
+              {
+                "q": "Orman yangınlarını önlemek için piknik sonrası yapılması gereken en önemli şey nedir?",
+                "options": [
+                  "Ateşin tamamen söndüğünden emin olmak ve çöpleri toplamak",
+                  "Çöpleri ormanda bırakmak",
+                  "Ateşi yanar halde bırakıp gitmek",
+                  "Cam şişeleri ağaç diplerine atmak"
+                ],
+                "ans": 0,
+                "hint": "Kıvılcımlar ve cam kırıkları büyük orman yangınlarına yol açabilir."
+              },
+              {
+                "q": "\"ırmak\" sözcüğünün eş anlamlısı hangisidir?",
+                "options": [
+                  "nehir",
+                  "deniz",
+                  "göl",
+                  "okyanus"
+                ],
+                "ans": 0,
+                "hint": "Irmak ile nehir eş anlamlı sözcüklerdir."
+              },
+              {
+                "q": "Aşağıdaki cümlelerin hangisinde doğayı korumaya yönelik bir davranış vardır?",
+                "options": [
+                  "Emre, plastik şişeyi geri dönüşüm kutusuna attı.",
+                  "Can, yere şeker jelatini attı.",
+                  "Mert, parktaki ağacın dallarını kırdı.",
+                  "Ece, musluğu açık bıraktı."
+                ],
+                "ans": 0,
+                "hint": "Geri dönüşüm kutularını kullanmak doğayı ve doğal kaynakları korur."
+              }
+            ]
+          },
+          {
+            "id": "turk_t3_2",
+            "title": "Karıncalar",
+            "page": 108,
+            "desc": "Karıncaların çalışkanlığı, iş bölümü, dayanışma ve doğadaki döngü.",
+            "badge": "Dayanışma & Çalışkanlık",
+            "tasks": [
+              {
+                "q": "Karıncalar kış mevsimine nasıl hazırlanırlar?",
+                "options": [
+                  "Yaz boyu yuvalarına yiyecek taşıyıp depolayarak",
+                  "Sadece uyuyarak",
+                  "Başka yuvalara taşınarak",
+                  "Kışı bekleyerek"
+                ],
+                "ans": 0,
+                "hint": "Karıncalar çalışkanlıkları ve yiyecek depolamaları ile bilinir."
+              },
+              {
+                "q": "Karınca yuvasındaki iş bölümü bize hangi insani değeri öğretir?",
+                "options": [
+                  "İş birliği, planlı çalışma ve dayanışmayı",
+                  "Tembellik yapmayı",
+                  "Bencilliği",
+                  "Kavga etmeyi"
+                ],
+                "ans": 0,
+                "hint": "Karıncalar organize şekilde yardımlaşarak zor işleri başarır."
+              },
+              {
+                "q": "\"Küçük karınca büyük bir buğday tanesini sırtladı.\" cümlesindeki zıt anlamlı kelimeler hangileridir?",
+                "options": [
+                  "Küçük - büyük",
+                  "karınca - buğday",
+                  "tanesini - sırtladı",
+                  "büyük - buğday"
+                ],
+                "ans": 0,
+                "hint": "Küçük ve büyük zıt anlamlı kelimelerdir."
+              },
+              {
+                "q": "\"Karıncalar yuvalarına doğru hızla ilerliyordu.\" cümlesinde nasıl ilerlediklerini belirten sözcük hangisidir?",
+                "options": [
+                  "hızla",
+                  "yuvalarına",
+                  "Karıncalar",
+                  "doğru"
+                ],
+                "ans": 0,
+                "hint": "Hareketin biçimini ve durumunu 'hızla' kelimesi belirtir."
+              }
+            ]
+          },
+          {
+            "id": "turk_t3_3",
+            "title": "Orman",
+            "page": 116,
+            "desc": "Ağaçların önemi, erozyonu önleme ve doğal zenginliklerimiz.",
+            "badge": "Doğa & Erozyon",
+            "tasks": [
+              {
+                "q": "Ağaç köklerinin toprağı tutarak rüzgar ve yağmurla kaymasını önlemesine ne denir?",
+                "options": [
+                  "Erozyonu önleme",
+                  "Hava kirliliği",
+                  "Kuraklık",
+                  "Geri dönüşüm"
+                ],
+                "ans": 0,
+                "hint": "Ağaçlar erozyonu engelleyerek verimli toprağı korur."
+              },
+              {
+                "q": "Ormanların sağladığı faydalardan biri hangisi değildir?",
+                "options": [
+                  "Hava kirliliğini artırmak",
+                  "Yaban hayvanlarına barınak olmak",
+                  "Oksijen üretmek",
+                  "Toprağı erozyondan korumak"
+                ],
+                "ans": 0,
+                "hint": "Ormanlar havayı kirletmez, aksine filtreleyip temizler."
+              },
+              {
+                "q": "\"yurt\" sözcüğünün eş anlamlısı hangisidir?",
+                "options": [
+                  "vatan",
+                  "şehir",
+                  "köy",
+                  "sokak"
+                ],
+                "ans": 0,
+                "hint": "Yurt ile vatan aynı anlama gelir."
+              },
+              {
+                "q": "\"Ormanları korumak her vatandaşın görevidir.\" cümlesi ne tür bir cümledir?",
+                "options": [
+                  "Kurallı bir olumlu cümle",
+                  "Soru cümlesi",
+                  "Ünlem cümlesi",
+                  "Olumsuz cümle"
+                ],
+                "ans": 0,
+                "hint": "Yargı bildiren tamamlanmış kurallı bir cümledir."
+              }
+            ]
+          },
+          {
+            "id": "turk_t3_4",
+            "title": "Fırtına",
+            "page": 122,
+            "desc": "Doğa olayları, afet bilinci ve güvenli davranış kuralları.",
+            "badge": "Doğa Olayları & Afet",
+            "tasks": [
+              {
+                "q": "Şiddetli rüzgar ve yağmurun birleşmesiyle oluşan doğa olayına ne ad verilir?",
+                "options": [
+                  "Fırtına",
+                  "Sis",
+                  "Kırağı",
+                  "Gökkuşağı"
+                ],
+                "ans": 0,
+                "hint": "Fırtına güçlü rüzgar ve yağış getiren bir hava olayıdır."
+              },
+              {
+                "q": "Fırtınalı havalarda güvenliğimiz için hangisini yapmamalıyız?",
+                "options": [
+                  "Ağaç altlarında ve elektrik direkleri yanında beklemek",
+                  "Evde pencerelerden uzak durmak",
+                  "Gereksiz yere dışarı çıkmamak",
+                  "Balkondaki uçabilecek eşyaları içeri almak"
+                ],
+                "ans": 0,
+                "hint": "Fırtınada devrilebilecek ağaç ve direklerin altı çok tehlikelidir."
+              },
+              {
+                "q": "\"rüzgar\" sözcüğünün eş anlamlısı hangisidir?",
+                "options": [
+                  "yel",
+                  "fırtına",
+                  "yağmur",
+                  "bulut"
+                ],
+                "ans": 0,
+                "hint": "Rüzgar ile yel eş anlamlıdır."
+              },
+              {
+                "q": "\"Eyvah ( ) çatıdaki kiremitler uçuyor ( )\" cümlesindeki parantezlere sırasıyla hangileri gelmelidir?",
+                "options": [
+                  "virgül (,), ünlem (!)",
+                  "nokta (.), nokta (.)",
+                  "soru işareti (?), nokta (.)",
+                  "iki nokta (:), virgül (,)"
+                ],
+                "ans": 0,
+                "hint": "'Eyvah,' korku ve heyecan bildirdiği için cümlenin sonu ünlemle biter."
+              }
+            ]
+          },
+          {
+            "id": "turk_t3_5",
+            "title": "Küçük Su Damlası",
+            "page": 130,
+            "desc": "Suyun döngüsü, su tasarrufu ve doğal kaynakları koruma.",
+            "badge": "Su Tasarrufu",
+            "tasks": [
+              {
+                "q": "Güneşin ısıtmasıyla buharlaşan suların gökyüzünde bulut olup yağmur olarak yere inmesine ne ad verilir?",
+                "options": [
+                  "Su döngüsü",
+                  "Su israfı",
+                  "Su kirliliği",
+                  "Su baskını"
+                ],
+                "ans": 0,
+                "hint": "Su döngüsü sayesinde yeryüzündeki tatlı su kaynakları yenilenir."
+              },
+              {
+                "q": "Evimizde su tasarrufu yapmak için hangi davranışı sergilemeliyiz?",
+                "options": [
+                  "Diş fırçalarken musluğu kapatmak",
+                  "Musluğu sonuna kadar açık bırakmak",
+                  "Bulaşıkları elde su akarken yıkamak",
+                  "Hortumla uzun süre araba yıkamak"
+                ],
+                "ans": 0,
+                "hint": "Musluğu kapatmak tonlarca suyun boşa gitmesini engeller."
+              },
+              {
+                "q": "\"tüketim\" sözcüğünün zıt anlamlısı hangisidir?",
+                "options": [
+                  "üretim",
+                  "israf",
+                  "masraf",
+                  "satış"
+                ],
+                "ans": 0,
+                "hint": "Tüketimin karşıtı üretimdir."
+              },
+              {
+                "q": "\"Damlaya damlaya göl olur.\" atasözü bize neyi öğütler?",
+                "options": [
+                  "Küçük birikimlerin ve tasarrufun zamanla büyük değer taşıdığını",
+                  "Suyla oyun oynamayı",
+                  "Göllerde yüzmeyi",
+                  "Hemen para harcamayı"
+                ],
+                "ans": 0,
+                "hint": "Tasarruf ve sabırla yapılan küçük birikimler geleceğimizi korur."
+              }
+            ]
+          }
+        ],
+        "exam": {
+          "id": "turkce_tema3_exam",
+          "title": "3. Tema Değerlendirme Sınavı",
+          "book_ref": "MEB Kitabı s. 138",
+          "tasks": [
+            {
+              "q": "Metne göre gereksiz enerji kullanımı ve israf doğaya nasıl zarar verir? (s. 138)",
+              "options": [
+                "Doğal kaynakların tükenmesine ve çevrenin kirlenmesine yol açar.",
+                "Doğayı daha temiz yapar.",
+                "Ağaçların daha hızlı büyümesini sağlar.",
+                "Canlı sayısını artırır."
+              ],
+              "ans": 0,
+              "hint": "Bilinçsiz tüketim doğal dengenin bozulmasına neden olur."
+            },
+            {
+              "q": "Geri dönüşüm yaparak doğayı nasıl korumuş oluruz? (s. 138)",
+              "options": [
+                "Atıkları yeniden değerlendirip ağaçların kesilmesini ve kirliliği önleyerek",
+                "Bütün çöpleri denizlere dökerek",
+                "Daha çok plastik tüketerek",
+                "Çöpleri yakarak"
+              ],
+              "ans": 0,
+              "hint": "Geri dönüşüm hammadde ve enerji tasarrufu sağlar."
+            },
+            {
+              "q": "\"Ayşe teyze misafirlerine çay ikram etti.\" cümlesinde altı çizili 'misafir' sözcüğünün eş anlamlısı hangisidir? (s. 139)",
+              "options": [
+                "konuk",
+                "komşu",
+                "akraba",
+                "arkadaş"
+              ],
+              "ans": 0,
+              "hint": "Misafir ile konuk eş anlamlı sözcüklerdir."
+            },
+            {
+              "q": "\"Kardeşime çok güzel bir hediye aldım.\" cümlesinde altı çizili 'hediye' sözcüğünün eş anlamlısı hangisidir? (s. 139)",
+              "options": [
+                "armağan",
+                "ödül",
+                "kitap",
+                "ücret"
+              ],
+              "ans": 0,
+              "hint": "Hediye ile armağan eş anlamlı sözcüklerdir."
+            },
+            {
+              "q": "\"sabah okuluma gittim.\" cümlesinin yazım kurallarına uygun doğru yazılışı hangisidir? (s. 139)",
+              "options": [
+                "Sabah okuluma gittim.",
+                "sabah Okuluma gittim.",
+                "SABAH okuluma gittim.",
+                "sabah okuluma Gittim."
+              ],
+              "ans": 0,
+              "hint": "Cümlenin ilk harfi büyük harfle başlamalıdır."
+            },
+            {
+              "q": "\"Bugün Ankara'dan dayım gelecek.\" cümlesinde özel isme gelen eki ayırmak için hangi noktalama işareti kullanılır? (s. 139)",
+              "options": [
+                "Kesme işareti (')",
+                "Virgül (,)",
+                "Nokta (.)",
+                "Kısa çizgi (-)"
+              ],
+              "ans": 0,
+              "hint": "Özel adlara getirilen çekim ekleri kesme işareti ile ayrılır."
+            }
+          ]
+        }
+      },
+      {
+        "id": "turkce_tema4",
+        "title": "4. TEMA: Bilgi Hazinemiz",
+        "page_range": "s. 140 - 179",
+        "topics": [
+          {
+            "id": "turk_t4_1",
+            "title": "Kütüphanemiz (İzleme Metni)",
+            "page": 144,
+            "desc": "Kütüphane kuralları, kitap seçimi, sessizlik ve okuma kültürü.",
+            "badge": "Kütüphane Kültürü",
+            "tasks": [
+              {
+                "q": "Kütüphanede kitap okurken ve araştırma yaparken uyulması gereken en temel kural hangisidir?",
+                "options": [
+                  "Sessiz olmak ve başkalarının dikkatini dağıtmamak",
+                  "Yüksek sesle müzik dinlemek",
+                  "Kitapların sayfalarını çizmek",
+                  "Kütüphanede koşup oyun oynamak"
+                ],
+                "ans": 0,
+                "hint": "Kütüphane sessizce odaklanılan ve bilgi edinilen saygın bir alandır."
+              },
+              {
+                "q": "Ödünç aldığımız bir kütüphane kitabını okuduktan sonra ne yapmalıyız?",
+                "options": [
+                  "Zamanında, temiz ve yıpratmadan kütüphaneye teslim etmeliyiz.",
+                  "Evde sonsuza kadar saklamalıyız.",
+                  "Arkadaşımıza hediye etmeliyiz.",
+                  "Sayfalarına resim yapmalıyız."
+                ],
+                "ans": 0,
+                "hint": "Kütüphane kitapları herkesin ortak mirasıdır, özenle korunmalıdır."
+              },
+              {
+                "q": "Kitapların türlerine ve konularına göre raflara dizilmesinin amacı nedir?",
+                "options": [
+                  "Aranan kitabın kolayca ve hızlıca bulunabilmesi için",
+                  "Kitapların rengini sergilemek için",
+                  "Rafları doldurmak için",
+                  "Rastgele koymak için"
+                ],
+                "ans": 0,
+                "hint": "Kütüphane tasnif sistemi aradığımız bilgiye çabuk ulaşmamızı sağlar."
+              },
+              {
+                "q": "\"kitap\" sözcüğünün çoğul hâli aşağıdakilerden hangisidir?",
+                "options": [
+                  "kitaplar",
+                  "kitapçık",
+                  "kitaplık",
+                  "kitapçı"
+                ],
+                "ans": 0,
+                "hint": "-lar / -ler eki kelimelere çoğul anlamı katar."
+              }
+            ]
+          },
+          {
+            "id": "turk_t4_2",
+            "title": "Kitap Sevgisi",
+            "page": 150,
+            "desc": "Kitap okuma alışkanlığı, sözcük dağarcığı ve hayal gücü.",
+            "badge": "Kitap Sevgisi",
+            "tasks": [
+              {
+                "q": "Düzenli kitap okumak bir çocuğun gelişimine nasıl katkı sağlar?",
+                "options": [
+                  "Kelime dağarcığını zenginleştirir ve düşünme becerisini artırır.",
+                  "Sadece gözlerini yorar.",
+                  "Yeni şeyler öğrenmesini engeller.",
+                  "Arkadaşlarıyla iletişimini koparır."
+                ],
+                "ans": 0,
+                "hint": "Kitap okumak hayal gücünü besler, doğru konuşmayı ve yazmayı sağlar."
+              },
+              {
+                "q": "Bir hikaye kitabında olayın geçtiği yer, zaman ve kahramanların anlatıldığı bölüme ne denir?",
+                "options": [
+                  "Serim (Giriş) bölümü",
+                  "Sonuç bölümü",
+                  "Kaynaklar",
+                  "İçindekiler"
+                ],
+                "ans": 0,
+                "hint": "Hikayelerin başında olay, mekan ve kişiler tanıtılır."
+              },
+              {
+                "q": "\"fikir\" sözcüğünün eş anlamlısı hangisidir?",
+                "options": [
+                  "düşünce",
+                  "akıl",
+                  "bilgi",
+                  "hayal"
+                ],
+                "ans": 0,
+                "hint": "Fikir ile düşünce eş anlamlı sözcüklerdir."
+              },
+              {
+                "q": "\"Kitaplar bize bilmediğimiz diyarların kapısını açar.\" cümlesinde anlatılmak istenen nedir?",
+                "options": [
+                  "Kitapların yeni dünyalar ve bilgiler keşfettirdiği",
+                  "Kitapların kapı kolu olduğu",
+                  "Sadece resimlere bakıldığı",
+                  "Kitapların seyahat bileti olduğu"
+                ],
+                "ans": 0,
+                "hint": "Kitap okumak hayal gücümüzle yeni dünyalara yolculuk yapmamızı sağlar."
+              }
+            ]
+          },
+          {
+            "id": "turk_t4_3",
+            "title": "Kitaplar Bize Ne Söyler?",
+            "page": 156,
+            "desc": "Okur kimliği, eleştirel düşünme ve farklı bakış açıları kazanma.",
+            "badge": "Okur Kimliği",
+            "tasks": [
+              {
+                "q": "Bir kitabı okuduktan sonra 'okur kimliği' geliştiren bir kişi ne yapar?",
+                "options": [
+                  "Okuduğu kitap üzerine düşünür, yorum yapar ve ana fikrini sorgular.",
+                  "Kitabı hemen çöpe atar.",
+                  "Kimseye kitaptan bahsetmez.",
+                  "Sadece kapağına bakar."
+                ],
+                "ans": 0,
+                "hint": "Bilinçli okur, okuduklarından yeni anlamlar çıkarır ve fikir üretir."
+              },
+              {
+                "q": "Farklı yazarların kitaplarını okumak bize ne kazandırır?",
+                "options": [
+                  "Olaylara farklı pencerelerden bakabilme yeteneği",
+                  "Sadece aynı şeyleri tekrar etme",
+                  "Kafa karışıklığı",
+                  "Zaman kaybı"
+                ],
+                "ans": 0,
+                "hint": "Her yazar bize hayata dair zengin ve farklı bir bakış açısı sunar."
+              },
+              {
+                "q": "\"öğrenci\" sözcüğünün eş anlamlısı hangisidir?",
+                "options": [
+                  "talebe",
+                  "öğretmen",
+                  "okul",
+                  "müdür"
+                ],
+                "ans": 0,
+                "hint": "Öğrenci ile talebe eş anlamlıdır."
+              },
+              {
+                "q": "\"En iyi dost kitaptır.\" cümlesinde kitap neye benzetilmiştir?",
+                "options": [
+                  "Güvenilir bir dosta",
+                  "Bir oyuncağa",
+                  "Bir öğretmene",
+                  "Bir çiçeğe"
+                ],
+                "ans": 0,
+                "hint": "Kitap insana hiç bıkmadan bilgi veren bir dosta benzetilmiştir."
+              }
+            ]
+          },
+          {
+            "id": "turk_t4_4",
+            "title": "Pusula",
+            "page": 162,
+            "desc": "Yön bulma, bilimin hayatımıza etkisi, merak ve keşif duygusu.",
+            "badge": "Bilim & Keşifler",
+            "tasks": [
+              {
+                "q": "Pusulanın renkli (genelde kırmızı) ucu her zaman hangi ana yönü gösterir?",
+                "options": [
+                  "Kuzey",
+                  "Güney",
+                  "Doğu",
+                  "Batı"
+                ],
+                "ans": 0,
+                "hint": "Pusula ibresinin renkli ucu Dünya'nın manyetik kuzeyini gösterir."
+              },
+              {
+                "q": "İnsanların doğayı gözlemleyerek pusula gibi araçları icat etmesi neyin sonucudur?",
+                "options": [
+                  "Merak, araştırma ve bilimsel düşüncenin",
+                  "Şans eseri olmanın",
+                  "Sadece bekleyişin",
+                  "Tembellik yapmanın"
+                ],
+                "ans": 0,
+                "hint": "Bilim ve teknoloji insanın merak duygusu ve araştırmaları ile gelişir."
+              },
+              {
+                "q": "Aşağıdakilerden hangisi bir ana yöndür?",
+                "options": [
+                  "Doğu",
+                  "Kuzeydoğu",
+                  "Güneybatı",
+                  "Güneydoğu"
+                ],
+                "ans": 0,
+                "hint": "Kuzey, Güney, Doğu ve Batı 4 ana yöndür."
+              },
+              {
+                "q": "\"Denizciler pusula sayesinde fırtınalı denizde yönlerini kolayca buldular.\" cümlesinde sebep-sonuç ilişkisi bildiren ifade hangisidir?",
+                "options": [
+                  "pusula sayesinde",
+                  "denizciler",
+                  "kolayca buldular",
+                  "fırtınalı denizde"
+                ],
+                "ans": 0,
+                "hint": "Yönün bulunmasının nedeni pusulanın kullanılmasıdır."
+              }
+            ]
+          },
+          {
+            "id": "turk_t4_5",
+            "title": "Ömer Seyfettin",
+            "page": 168,
+            "desc": "Türk edebiyatının usta hikâyecisi Ömer Seyfettin ve eserleri.",
+            "badge": "Türk Edebiyatı",
+            "tasks": [
+              {
+                "q": "Türk edebiyatında modern hikâyeciliğin kurucularından olan ve 'Kaşağı', 'Diyet', 'Falaka' gibi unutulmaz eserler yazan yazarımız kimdir?",
+                "options": [
+                  "Ömer Seyfettin",
+                  "Mehmet Akif Ersoy",
+                  "Cahit Sıtkı Tarancı",
+                  "Kemalettin Tuğcu"
+                ],
+                "ans": 0,
+                "hint": "Ömer Seyfettin 3. sınıf çocuklarının severek okuduğu milli hikayecimizdir."
+              },
+              {
+                "q": "Ömer Seyfettin'in hikâyelerinde Türkçeyi nasıl kullandığı bilinir?",
+                "options": [
+                  "Sade, yalın ve herkesin anlayabileceği duru bir Türkçe ile",
+                  "Çok karmaşık yabancı kelimelerle",
+                  "Sadece şiir yazarak",
+                  "Hiç noktalama işareti kullanmadan"
+                ],
+                "ans": 0,
+                "hint": "Ömer Seyfettin 'Yeni Lisan' akımıyla Türkçeyi sadeleştirmiştir."
+              },
+              {
+                "q": "\"yazar\" sözcüğünün eş anlamlısı hangisidir?",
+                "options": [
+                  "edip (müellif)",
+                  "okur",
+                  "şair",
+                  "ressam"
+                ],
+                "ans": 0,
+                "hint": "Yazı yazan, edebi eser üreten kişiye edip veya yazar denir."
+              },
+              {
+                "q": "Bir hikayenin temel unsurları (öğeleri) aşağıdakilerden hangisidir?",
+                "options": [
+                  "Olay, kişiler (kahramanlar), yer ve zaman",
+                  "Sadece resimler ve sayfa sayısı",
+                  "Yalnızca yazarın adı",
+                  "Kitabın fiyatı ve kapağı"
+                ],
+                "ans": 0,
+                "hint": "Her hikaye bir olay, kişiler, mekan ve zaman etrafında şekillenir."
+              }
+            ]
+          }
+        ],
+        "exam": {
+          "id": "turkce_tema4_exam",
+          "title": "4. Tema Değerlendirme Sınavı",
+          "book_ref": "MEB Kitabı s. 174",
+          "tasks": [
+            {
+              "q": "\"Kitaplarla Aydınlanan Dünya\" metnine göre kütüphanelerin en önemli özelliği nedir? (s. 174)",
+              "options": [
+                "Kitapların düzenli saklandığı ve herkesin eşitçe okuyabildiği bilgi yuvaları olması",
+                "Sadece kitap satışı yapılan yerler olması",
+                "İçinde hiç kimsenin konuşmaması gereken karanlık yerler olması",
+                "Yalnızca yetişkinlere açık olması"
+              ],
+              "ans": 0,
+              "hint": "Kütüphaneler herkesin okuma hakkını kullandığı bilgi merkezleridir."
+            },
+            {
+              "q": "Tarih boyunca edebî şahsiyetler ne yaparak dilimizi zenginleştirmiştir? (s. 174)",
+              "options": [
+                "Güzel şiirler ve hikâyeler yazarak bize geçmişi ve geleceği anlatmışlardır.",
+                "Yabancı dillerde konuşarak",
+                "Kitapları saklayarak",
+                "Kimseye eserlerini göstermeyerek"
+              ],
+              "ans": 0,
+              "hint": "Yazarlar ve şairler eserleriyle dilimizin gücünü artırmıştır."
+            },
+            {
+              "q": "Düzenli kitap okuma alışkanlığı kazanan kişilerde hangi özellikler gelişir? (s. 174)",
+              "options": [
+                "Bilgili, duyarlı ve geniş bakış açısına sahip olurlar.",
+                "Bencil ve iletişimsiz olurlar.",
+                "Yalnız kalmaktan korkarlar.",
+                "Düşüncelerini ifade edemezler."
+              ],
+              "ans": 0,
+              "hint": "Okumak bireyin ufkunu genişletir ve duyarlılığını artırır."
+            },
+            {
+              "q": "\"Kütüpaneye gittiyimde raflarda kitap görürüm.\" cümlesinde altı çizili kelimelerin doğru yazılışı hangisidir? (s. 175)",
+              "options": [
+                "Kütüphaneye - gittiğimde",
+                "Kütüpaneye - gitiğimde",
+                "Kütühâneye - gittiğimde",
+                "Kütüphaneye - gittiyimde"
+              ],
+              "ans": 0,
+              "hint": "Kütüphane ('h' ile) ve gittiğimde ('ğ' ile) yazılır."
+            },
+            {
+              "q": "\"Her kitap farklı bir bilgi verir yada hikâye anlatır.\" cümlesindeki yazım yanlışı hangisidir? (s. 175)",
+              "options": [
+                "\"yada\" bitişik yazılmıştır, \"ya da\" şeklinde ayrı yazılmalıdır.",
+                "\"kitap\" büyük harfle yazılmalıdır.",
+                "\"farklı\" kelimesi yanlıştır.",
+                "Cümlenin sonuna nokta konmamalıdır."
+              ],
+              "ans": 0,
+              "hint": "'ya da' bağlacı her zaman ayrı yazılır."
+            },
+            {
+              "q": "\"Oysaki hergün biraz kitap okumak sözcük dağarcığımızı geliştirir.\" cümlesinde altı çizili ifadenin doğrusu nedir? (s. 175)",
+              "options": [
+                "her gün (ayrı yazılır)",
+                "hergünn",
+                "her-gün",
+                "hergun"
+              ],
+              "ans": 0,
+              "hint": "'her gün' ifadesi Türk Dil Kurumu kurallarına göre ayrı yazılır."
+            }
+          ]
+        }
+      }
+    ],
+    "final_exam": {
+      "id": "turkce_final_exam",
+      "title": "1. Dönem Türkçe Büyük Final Sınavı",
+      "book_ref": "MEB Türkçe 1. Kitap",
+      "tasks": [
+        {
+          "q": "Metinleri ve konuşmacıları dinlerken hangi davranış hem saygılı hem de etkilidir? (s. 22)",
+          "options": [
+            "Konuşmacının sözünü kesmeden göz teması kurarak dinlemek",
+            "Dinlerken etraftaki şeylerle oynamak",
+            "Söz verilmeden araya girmek",
+            "Arkamızı dönüp oturmak"
+          ],
+          "ans": 0,
+          "hint": "Saygılı bir dinleyici konuşmacıyı pürdikkat dinler."
+        },
+        {
+          "q": "Bilge bilim insanımız Aziz Sancar çocukken Anıtkabir'de kime ne sözü vermiştir? (s. 28)",
+          "options": [
+            "Atatürk'e çok çalışıp milletine faydalı olacağına",
+            "Futbolcu olacağına",
+            "Hiç ders çalışmayacağına",
+            "Yurt dışında kalacağına"
+          ],
+          "ans": 0,
+          "hint": "Aziz Sancar Anıtkabir'de ülkesine hizmet edeceğine ant içmiştir."
+        },
+        {
+          "q": "Yaşlı çınar ağacının yanındaki genç çam ağacına verdiği en önemli ders nedir? (s. 46)",
+          "options": [
+            "Sabırlı olmak ve kendi değerinin farkına varmak",
+            "Diğer ağaçları kıskanmak",
+            "Ormandan uzaklaşmak",
+            "Kuşları kovmak"
+          ],
+          "ans": 0,
+          "hint": "Sabır ve kanaat en yüce erdemlerdendir."
+        },
+        {
+          "q": "Mustafa Kemal Atatürk'ün kitap sevgisiyle ilgili bilinen en belirgin özellik nedir? (s. 66)",
+          "options": [
+            "Eline geçen paranın yarısıyla kitap alıp altını çizerek okuması",
+            "Kitapları sadece rafta dizili tutması",
+            "Kitapları okumadan biriktirmesi",
+            "Kitap okumaktan hoşlanmaması"
+          ],
+          "ans": 0,
+          "hint": "Atatürk ömrü boyunca binlerce kitap okumuş büyük bir aydındır."
+        },
+        {
+          "q": "Kurtuluş Savaşı'nda İnebolu'dan cepheye mermi taşırken donarak şehit olan kahraman Türk kadını kimdir? (s. 72)",
+          "options": [
+            "Şerife Bacı",
+            "Halide Edip",
+            "Sabiha Gökçen",
+            "Afet İnan"
+          ],
+          "ans": 0,
+          "hint": "Şerife Bacı cephaneleri korumak için canını feda etmiştir."
+        },
+        {
+          "q": "Mustafa Kemal Atatürk 23 Nisan gününü dünyada kime bayram olarak armağan etmiştir? (s. 88)",
+          "options": [
+            "Tüm dünya çocuklarına",
+            "Sadece büyüklere",
+            "Askerlere",
+            "Yazarlara"
+          ],
+          "ans": 0,
+          "hint": "23 Nisan çocuklara armağan edilmiş tek dünya bayramıdır."
+        },
+        {
+          "q": "Ağaç köklerinin toprağı tutarak su ve rüzgarla kayıp gitmesini önlemesine ne denir? (s. 116)",
+          "options": [
+            "Erozyonu önleme",
+            "Hava kirliliği",
+            "Su baskını",
+            "Kuraklık"
+          ],
+          "ans": 0,
+          "hint": "Ormanlar toprağın kaymasını (erozyonu) engeller."
+        },
+        {
+          "q": "Aşağıdaki atasözlerinden hangisi tutumlu olmayı ve küçük birikimlerin değerini anlatır? (s. 130)",
+          "options": [
+            "Damlaya damlaya göl olur.",
+            "Ağaç yaşken eğilir.",
+            "Gülme komşuna gelir başına.",
+            "Tatlı dil yılanı deliğinden çıkarır."
+          ],
+          "ans": 0,
+          "hint": "Tasarruf ve birikim geleceğin teminatıdır."
+        },
+        {
+          "q": "Pusulanın renkli ucu daima hangi yönü gösterir? (s. 162)",
+          "options": [
+            "Kuzey",
+            "Güney",
+            "Doğu",
+            "Batı"
+          ],
+          "ans": 0,
+          "hint": "Pusula ibresi Dünya'nın kuzey kutbunu gösterir."
+        },
+        {
+          "q": "\"Kaşağı\", \"Diyet\" ve \"Falaka\" gibi unutulmaz hikayelerin usta yazarı kimdir? (s. 168)",
+          "options": [
+            "Ömer Seyfettin",
+            "Mehmet Akif Ersoy",
+            "Ziya Gökalp",
+            "Reşat Nuri Güntekin"
+          ],
+          "ans": 0,
+          "hint": "Ömer Seyfettin Türk öykücülüğünün usta kurucusudur."
+        }
+      ]
+    }
+  },
   "general_exam": {
     "title": "👑 3. Sınıf 1. Dönem MEB Maarif Modeli Genel Değerlendirme Sınavı",
     "book_ref": "3. Sınıf 1. Dönem 4 Ana Ders Genel Başarı Sınavı (49 Kazanım)",

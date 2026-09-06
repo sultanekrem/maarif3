@@ -5426,3 +5426,56 @@ html, body {
   }
 }
 
+
+/* ============================================================
+   ARALIKLΙ TEKRAR - MASTERY ILERLEME CUBUGU (Kumbara)
+   ============================================================ */
+.kumbara-mastery-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(30, 41, 59, 0.7);
+  border: 1.5px solid rgba(251, 191, 36, 0.25);
+  border-radius: 12px;
+  padding: 8px 14px;
+  margin: 8px 0 12px 0;
+  flex-wrap: wrap;
+}
+
+.mastery-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #94A3B8;
+  flex: 1;
+  min-width: 120px;
+}
+
+.mastery-dots {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.mastery-dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(100, 116, 139, 0.3);
+  border: 2px solid rgba(100, 116, 139, 0.5);
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.mastery-dot.filled {
+  background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%);
+  border-color: #F59E0B;
+  box-shadow: 0 0 8px rgba(251, 191, 36, 0.5);
+  transform: scale(1.15);
+}
+
+.mastery-count {
+  font-size: 0.85rem;
+  font-weight: 900;
+  color: #FBBF24;
+  letter-spacing: 0.5px;
+}

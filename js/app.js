@@ -693,7 +693,8 @@
         ans: qData.ans,
         hint: qData.hint || 'MEB Ders Kitabındaki ilgili konuyu ve örnekleri inceleyebilirsin.',
         subjectKey: subjectKey || state.currentSubjectKey || 'matematik',
-        page: page || (state.currentTopic ? state.currentTopic.page : 12)
+        page: page || (state.currentTopic ? state.currentTopic.page : 12),
+        correctCount: 0   // Aralıklı tekrar: 3 kez doğru yapılınca kalıcı silinir
       });
       saveProgress();
       updateKumbaraBadge();
@@ -808,6 +809,30 @@
 
     const qTextEl = document.getElementById('kumbara-q-text');
     if (qTextEl) qTextEl.textContent = item.q;
+
+    // 🎯 Aralıklı Tekrar İlerleme Göstergesi (kaç kez doğru yapıldı)
+    const correctCount = item.correctCount || 0;
+    const MASTERY_TARGET = 3;
+    let masteryEl = document.getElementById('kumbara-mastery-bar');
+    if (!masteryEl) {
+      masteryEl = document.createElement('div');
+      masteryEl.id = 'kumbara-mastery-bar';
+      masteryEl.className = 'kumbara-mastery-bar';
+      const qTextNode = document.getElementById('kumbara-q-text');
+      if (qTextNode && qTextNode.parentNode) {
+        qTextNode.parentNode.insertBefore(masteryEl, qTextNode.nextSibling);
+      }
+    }
+    const dots = Array.from({ length: MASTERY_TARGET }, (_, i) =>
+      `<span class="mastery-dot ${i < correctCount ? 'filled' : ''}"></span>`
+    ).join('');
+    const masteryLabels = ['Henüz öğrenilmedi', 'Az daha!', 'Neredeyse!'];
+    const masteryLabel = correctCount >= MASTERY_TARGET ? '🎉 Kalıcı Öğrenildi!' : (masteryLabels[correctCount] || '');
+    masteryEl.innerHTML = `
+      <span class="mastery-label">${masteryLabel}</span>
+      <span class="mastery-dots">${dots}</span>
+      <span class="mastery-count">${correctCount}/${MASTERY_TARGET}</span>
+    `;
     ScratchpadService.close('kumbara');
 
     // 🔊 Kumbara Sorusu Sesli Oku Butonu
@@ -855,34 +880,79 @@
 
     if (isCorrect) {
       btnElement.classList.add('is-correct-choice');
-      btnElement.innerHTML = `
-        <span class="option-letter">✔</span>
-        <span class="option-text">${item.options[selectedIdx]}</span>
-        <span class="answer-badge badge-win">DOĞRU! +2 ⭐</span>
-      `;
-      playAudioChime('correct');
-      triggerHaptic('success');
 
-      // Kumbaradan temizle & +2 Yıldız ver!
-      state.progress.stars += 2;
-      state.progress.score += 50;
-      state.progress.mistakeBank = state.progress.mistakeBank.filter(q => q.id !== item.id);
-      saveProgress();
-      updateHeaderStats();
-      updateKumbaraBadge();
+      // Aralıklı tekrar: correctCount'u artır
+      const MASTERY_TARGET = 3;
+      if (typeof item.correctCount !== 'number') item.correctCount = 0;
+      item.correctCount += 1;
 
-      if (fbBox) {
-        fbBox.className = 'feedback-box feedback-correct';
-        if (fbTitle) fbTitle.textContent = '🌟 Harika! Bu Soruyu Yendin (+2 ⭐)!';
-        if (fbMsg) fbMsg.textContent = 'Doğru mantığı kavradın ve soruyu kumbarandan temizledin!';
-        fbBox.classList.remove('hidden');
+      const isMastered = item.correctCount >= MASTERY_TARGET;
+
+      if (isMastered) {
+        // 🎉 3/3 — Kalıcı öğrenildi! Kumbaradan sil
+        btnElement.innerHTML = `
+          <span class="option-letter">✔</span>
+          <span class="option-text">${item.options[selectedIdx]}</span>
+          <span class="answer-badge badge-win">ÖĞRENILDI! +3 ⭐</span>
+        `;
+        playAudioChime('fanfare');
+        triggerHaptic('success');
+
+        state.progress.stars += 3;
+        state.progress.score += 100;
+        state.progress.mistakeBank = state.progress.mistakeBank.filter(q => q.id !== item.id);
+        saveProgress();
+        updateHeaderStats();
+        updateKumbaraBadge();
+
+        if (fbBox) {
+          fbBox.className = 'feedback-box feedback-correct';
+          if (fbTitle) fbTitle.textContent = '🏆 Tebrikler! Bu soruyu kalıcı öğrendin! (+3 ⭐)';
+          if (fbMsg) fbMsg.textContent = '3 kez üst üste doğru yaptın — artık bu soru kumbarandan tamamen silindi!';
+          fbBox.classList.remove('hidden');
+        }
+
+        btnNext.textContent = state.progress.mistakeBank.length > 0 ? 'Sıradaki Kumbaraya Geç →' : 'Kumbarayı Tamamla 🎉';
+        btnNext.onclick = () => { renderKumbaraCurrent(); };
+
+      } else {
+        // 1/3 veya 2/3 — devam et, henüz silinmiyor
+        const milestoneMessages = {
+          1: { badge: 'DOĞRU! 1/3 ✅', title: '✅ Doğru! Ama henüz öğrenmedi sayılmaz…', msg: `2 kez daha doğru yapmalısın (${item.correctCount}/3). Devam et!`, stars: 1 },
+          2: { badge: 'DOĞRU! 2/3 ✅✅', title: '⭐ Çok yaklaştın! Neredeyse öğrendin!', msg: `Bir kez daha doğru yaparsan bu soru kumbarandan silinecek! (${item.correctCount}/3)`, stars: 1 }
+        };
+        const ms = milestoneMessages[item.correctCount];
+
+        btnElement.innerHTML = `
+          <span class="option-letter">✔</span>
+          <span class="option-text">${item.options[selectedIdx]}</span>
+          <span class="answer-badge badge-win">${ms.badge}</span>
+        `;
+        playAudioChime('correct');
+        triggerHaptic('success');
+
+        state.progress.stars += ms.stars;
+        state.progress.score += 25;
+        saveProgress();
+        updateHeaderStats();
+
+        if (fbBox) {
+          fbBox.className = 'feedback-box feedback-correct';
+          if (fbTitle) fbTitle.textContent = ms.title;
+          if (fbMsg) fbMsg.textContent = ms.msg;
+          fbBox.classList.remove('hidden');
+        }
+
+        btnNext.textContent = 'Devam Et →';
+        btnNext.onclick = () => { renderKumbaraCurrent(); };
+      }
+    } else {
+      // Yanlış — correctCount sıfırlanıyor (tekrar baştan)
+      if (typeof item.correctCount === 'number' && item.correctCount > 0) {
+        item.correctCount = 0;
+        saveProgress();
       }
 
-      btnNext.textContent = state.progress.mistakeBank.length > 0 ? 'Sıradaki Kumbaraya Geç →' : 'Kumbarayı Tamamla 🎉';
-      btnNext.onclick = () => {
-        renderKumbaraCurrent();
-      };
-    } else {
       btnElement.classList.add('is-wrong-choice');
       btnElement.innerHTML = `
         <span class="option-letter">✖</span>
@@ -900,9 +970,7 @@
       }
 
       btnNext.textContent = '🔄 Tekrar Dene';
-      btnNext.onclick = () => {
-        renderKumbaraCurrent();
-      };
+      btnNext.onclick = () => { renderKumbaraCurrent(); };
     }
   }
 

@@ -4109,3 +4109,69 @@ html, body {
     justify-content: center !important;
   }
 }
+
+/* ==========================================================================
+   🎯 MERKEZİ VE AKILLI KLAVYE UYUMLU MODAL SİSTEMİ
+   - Klavye kapalıyken: Ekranın tam ortasında (Center) başlar, çentikten taşmaz.
+   - Klavye açıldığında: Yumuşakça yukarı kayar ve input klavyenin üstünde kalır.
+   ========================================================================== */
+.app-modal-backdrop {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  height: 100dvh !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  padding: max(24px, env(safe-area-inset-top, 24px)) 16px max(24px, env(safe-area-inset-bottom, 24px)) 16px !important;
+  box-sizing: border-box !important;
+  z-index: 2000 !important;
+  display: none;
+}
+
+.app-modal-backdrop.open {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important; /* Varsayılan olarak tam ortada başlar */
+}
+
+.student-register-card {
+  margin: auto !important; /* Ekranın tam ortasına dengeli yerleşir */
+  max-width: 480px !important;
+  width: 100% !important;
+  background: linear-gradient(160deg, #1E1B4B 0%, #0F172A 100%) !important;
+  border: 2px solid #F59E0B !important;
+  border-radius: 24px !important;
+  padding: 24px 20px !important;
+  box-sizing: border-box !important;
+  color: #FFFFFF !important;
+  position: relative !important;
+  flex-shrink: 0 !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(245, 158, 11, 0.25) !important;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), padding 0.2s ease !important;
+}
+
+/* KLAVYE AÇILDIĞINDA AKTİFLEŞEN AKILLI KAYMA MODU */
+.app-modal-backdrop.keyboard-open {
+  justify-content: flex-start !important;
+  padding-top: max(16px, env(safe-area-inset-top, 16px)) !important;
+}
+
+.app-modal-backdrop.keyboard-open .student-register-card {
+  margin: 8px auto 320px auto !important; /* Alttaki klavye için geniş kaydırma payı */
+  padding: 16px 16px !important;
+  border-radius: 20px !important;
+}
+
+.app-modal-backdrop.keyboard-open .avatar-picker-section {
+  display: none !important; /* Klavye açıkken avatarları gizleyerek formu kompaktlaştırır */
+}
+
+.app-modal-backdrop.keyboard-open .register-header {
+  margin-bottom: 10px !important;
+}
+
+.app-modal-backdrop.keyboard-open .register-sub {
+  display: none !important; /* Klavye açıkken uzun açıklamayı gizler */
+}

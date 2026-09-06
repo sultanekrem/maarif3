@@ -984,6 +984,49 @@
   let tempSelectedAvatar = '👧';
 
   function initStudentProfileModal() {
+    // Akıllı Klavye Açılma / Kapanma Algılayıcı (Modal Centering & Sliding)
+    const registerModal = document.getElementById('modal-student-register');
+    const registerInputs = document.querySelectorAll('#modal-student-register input');
+
+    function onKeyboardShow() {
+      if (registerModal && registerModal.classList.contains('open')) {
+        registerModal.classList.add('keyboard-open');
+        setTimeout(() => {
+          if (document.activeElement && document.activeElement.tagName === 'INPUT') {
+            document.activeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }, 150);
+      }
+    }
+
+    function onKeyboardHide() {
+      if (registerModal) {
+        registerModal.classList.remove('keyboard-open');
+      }
+    }
+
+    registerInputs.forEach(input => {
+      input.addEventListener('focus', onKeyboardShow);
+      input.addEventListener('blur', () => {
+        setTimeout(() => {
+          const isAnotherInputFocused = Array.from(registerInputs).some(i => i === document.activeElement);
+          if (!isAnotherInputFocused) {
+            onKeyboardHide();
+          }
+        }, 100);
+      });
+    });
+
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', () => {
+        if (window.visualViewport.height < window.innerHeight * 0.75) {
+          onKeyboardShow();
+        } else {
+          onKeyboardHide();
+        }
+      });
+    }
+
     const modal = document.getElementById('modal-student-register');
     if (modal) {
       modal.addEventListener('click', (e) => {

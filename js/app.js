@@ -1086,9 +1086,17 @@
     container.innerHTML = '';
     const subjects = window.CURRICULUM_TERM1;
 
-    Object.keys(subjects).forEach(key => {
+    // Sabit ders sırası: Türkçe önce
+    const SUBJECT_ORDER = ['turkce', 'matematik', 'fenbilimleri', 'hayatbilgisi', 'ingilizce'];
+    const orderedKeys = [
+      ...SUBJECT_ORDER.filter(k => subjects[k]),
+      ...Object.keys(subjects).filter(k => k !== 'general_exam' && !SUBJECT_ORDER.includes(k))
+    ];
+
+    orderedKeys.forEach(key => {
       if (key === 'general_exam') return;
       const subj = subjects[key];
+
       
       let totalTopics = 0;
       let completedTopics = 0;

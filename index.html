@@ -218,23 +218,15 @@
         <!-- JS ile üniteler doldurulur -->
       </div>
 
-      <!-- O Ünitenin Değerlendirme Sınavı & Konuları Alanı -->
+      <!-- O Ünitenin Değerlendirme Sınavı & Konuları Alanı (Mobil Öncelikli: Önce Konular!) -->
       <div class="topics-scroll-area">
-        <!-- Ünite Değerlendirme Sınavı Banner'ı -->
-        
-        <!-- DERSİN 1. DÖNEM BÜYÜK FİNAL SINAVI BANNER'I -->
-        <div class="subject-final-exam-banner" id="subject-final-exam-banner">
-          <div class="final-banner-left">
-            <span class="final-badge" id="final-exam-badge">🏆 DERS BÜYÜK FİNAL SINAVI</span>
-            <h3 class="final-title" id="final-exam-title">1. Dönem Matematik Büyük Başarı Sınavı</h3>
-            <p class="final-sub" id="final-exam-sub">Bu dersin tüm ünitelerinden seçilmiş kapsamlı dönem sonu değerlendirmesi!</p>
-          </div>
-          <button id="btn-start-subject-final-exam" class="btn-final-exam-action">
-            <span>Ders Final Sınavına Başla</span>
-            <span>🌟</span>
-          </button>
+        <!-- 1. Konu Kartları Izgarası (Öğrencinin Hemen Konulara Ulaşması İçin En Üstte) -->
+        <div class="topics-grid" id="topics-list-container">
+          <!-- JS ile o ünitenin resmî konuları doldurulur -->
         </div>
-<div class="unit-exam-banner" id="unit-exam-banner">
+
+        <!-- 2. Ünite Değerlendirme Sınavı Banner'ı -->
+        <div class="unit-exam-banner" id="unit-exam-banner">
           <div class="exam-banner-info">
             <span class="exam-banner-tag">📝 MEB TEMA DEĞERLENDİRME SINAVI</span>
             <h3 class="exam-banner-title" id="exam-banner-title">1. Tema Değerlendirme Sınavı</h3>
@@ -246,9 +238,17 @@
           </button>
         </div>
 
-        <!-- Konu Kartları Izgarası -->
-        <div class="topics-grid" id="topics-list-container">
-          <!-- JS ile o ünitenin resmî konuları doldurulur -->
+        <!-- 3. DERSİN 1. DÖNEM BÜYÜK FİNAL SINAVI BANNER'I -->
+        <div class="subject-final-exam-banner" id="subject-final-exam-banner">
+          <div class="final-banner-left">
+            <span class="final-badge" id="final-exam-badge">🏆 DERS BÜYÜK FİNAL SINAVI</span>
+            <h3 class="final-title" id="final-exam-title">1. Dönem Matematik Büyük Başarı Sınavı</h3>
+            <p class="final-sub" id="final-exam-sub">Bu dersin tüm ünitelerinden seçilmiş kapsamlı dönem sonu değerlendirmesi!</p>
+          </div>
+          <button id="btn-start-subject-final-exam" class="btn-final-exam-action">
+            <span>Ders Final Sınavına Başla</span>
+            <span>🌟</span>
+          </button>
         </div>
       </div>
     </div>
@@ -527,14 +527,17 @@
         <button class="modal-close-x" id="btn-close-fact-x" title="Kapat">✕</button>
         
         <div class="fact-card-top">
-          <div class="fact-top-title-row">
-            <span class="fact-emoji-large" id="fact-card-emoji">💡</span>
-            <div>
-              <span class="fact-badge" id="fact-card-badge">3 ADIMDA HAP BİLGİ & KEŞİF</span>
-              <h2 class="fact-card-title" id="fact-card-title">Konu Başlığı</h2>
-            </div>
+          <!-- Üst Bilgi Satırı: Rozet ve Kitap Sayfası -->
+          <div class="fact-meta-bar">
+            <span class="fact-badge" id="fact-card-badge">💡 3 ADIMDA HAP BİLGİ</span>
+            <span class="fact-book-ref-badge" id="fact-book-page-ref">📖 MEB 3. Sınıf Ders Kitabı</span>
           </div>
-          <div class="fact-book-ref-badge" id="fact-book-page-ref">📖 Resmî MEB 3. Sınıf Ders Kitabı</div>
+          
+          <!-- Başlık Satırı: Emoji + Ferah Tek Satır Başlık -->
+          <div class="fact-title-banner">
+            <span class="fact-emoji-large" id="fact-card-emoji">💡</span>
+            <h2 class="fact-card-title" id="fact-card-title">Konu Başlığı</h2>
+          </div>
         </div>
 
         <!-- 3 Zengin Bilgi Kartı Izgarası -->

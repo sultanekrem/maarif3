@@ -4398,3 +4398,158 @@ html, body {
     font-size: 0.72rem !important;
   }
 }
+
+/* ==========================================================================
+   📱 4. MOBİL ÖNCELİKLİ (MOBILE-FIRST) KAMERA ÇENTİĞİ & HAP BİLGİ DÜZENLEMELERİ
+   ========================================================================== */
+
+/* A. Çentik / Kamera Deliği (Safe Area Insets) Desteği */
+:root {
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+}
+
+/* Splash Giriş Ekranı: Kamera Altında Kalmayan Ferah Başlık */
+#screen-splash {
+  padding-top: max(24px, calc(18px + env(safe-area-inset-top, 0px))) !important;
+  padding-bottom: max(20px, calc(16px + env(safe-area-inset-bottom, 0px))) !important;
+  padding-left: max(16px, calc(16px + env(safe-area-inset-left, 0px))) !important;
+  padding-right: max(16px, calc(16px + env(safe-area-inset-right, 0px))) !important;
+}
+
+/* Ana Başlık Barı (App Header): Kamera / Çentik Koruması */
+.app-header {
+  padding-top: max(12px, calc(10px + env(safe-area-inset-top, 0px))) !important;
+  padding-left: max(12px, calc(12px + env(safe-area-inset-left, 0px))) !important;
+  padding-right: max(12px, calc(12px + env(safe-area-inset-right, 0px))) !important;
+}
+
+/* Konu ve Sınav Başlık Barları: Kamera Koruması */
+.topics-header,
+.quiz-header,
+.exam-header {
+  padding-top: max(12px, calc(10px + env(safe-area-inset-top, 0px))) !important;
+  padding-left: max(14px, calc(14px + env(safe-area-inset-left, 0px))) !important;
+  padding-right: max(14px, calc(14px + env(safe-area-inset-right, 0px))) !important;
+}
+
+/* Modallar: Üst ve Alt Güvenli Alan Koruması */
+.app-modal-backdrop {
+  padding-top: max(20px, calc(16px + env(safe-area-inset-top, 0px))) !important;
+  padding-bottom: max(20px, calc(16px + env(safe-area-inset-bottom, 0px))) !important;
+  padding-left: max(12px, calc(12px + env(safe-area-inset-left, 0px))) !important;
+  padding-right: max(12px, calc(12px + env(safe-area-inset-right, 0px))) !important;
+}
+
+/* B. Hap Bilgi Modalı: Tek Satır Başlık ve Modern Yerleşim */
+.fact-card-modal-large {
+  position: relative !important;
+  max-width: 780px !important;
+  width: 95% !important;
+  max-height: 88vh !important;
+  overflow-y: auto !important;
+  background: linear-gradient(160deg, #1E1B4B 0%, #0F172A 100%) !important;
+  border: 2.5px solid #F59E0B !important;
+  border-radius: 24px !important;
+  padding: 20px 18px !important;
+  box-sizing: border-box !important;
+}
+
+.fact-card-modal-large .modal-close-x {
+  position: absolute !important;
+  top: 14px !important;
+  right: 14px !important;
+  width: 36px !important;
+  height: 36px !important;
+  z-index: 10 !important;
+}
+
+.fact-card-top {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 8px !important;
+  margin-bottom: 14px !important;
+  padding-right: 42px !important; /* Kapat '✕' butonu ile çakışmayı önler */
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.fact-meta-bar {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  width: 100% !important;
+}
+
+.fact-meta-bar .fact-badge {
+  font-size: 0.72rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.3px !important;
+  color: #FDE047 !important;
+  background: rgba(245, 158, 11, 0.22) !important;
+  padding: 3px 9px !important;
+  border-radius: 99px !important;
+  border: 1px solid rgba(245, 158, 11, 0.45) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  white-space: nowrap !important;
+  margin: 0 !important;
+}
+
+.fact-meta-bar .fact-book-ref-badge {
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  color: #93C5FD !important;
+  background: rgba(59, 130, 246, 0.18) !important;
+  padding: 3px 9px !important;
+  border-radius: 99px !important;
+  border: 1px solid rgba(96, 165, 250, 0.35) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+}
+
+.fact-title-banner {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+.fact-title-banner .fact-emoji-large {
+  font-size: 1.7rem !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+  filter: drop-shadow(0 2px 8px rgba(245, 158, 11, 0.4)) !important;
+  flex-shrink: 0 !important;
+}
+
+.fact-title-banner .fact-card-title {
+  font-size: clamp(1rem, 4vw, 1.3rem) !important;
+  font-weight: 800 !important;
+  color: #FFFFFF !important;
+  margin: 0 !important;
+  line-height: 1.25 !important;
+  text-align: left !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  flex: 1 !important;
+  min-width: 0 !important;
+}
+
+/* C. Konu Sayfası: Konular Üstte, Sınavlar Altta Şık Hiyerarşi */
+.topics-scroll-area {
+  padding-bottom: max(24px, calc(20px + env(safe-area-inset-bottom, 0px))) !important;
+}
+
+.unit-exam-banner {
+  margin-top: 10px !important;
+}
+

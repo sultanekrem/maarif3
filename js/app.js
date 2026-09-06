@@ -455,7 +455,7 @@
     if (titleEl) titleEl.textContent = fact.title || topic.title;
 
     const refEl = document.getElementById('fact-book-page-ref');
-    if (refEl) refEl.textContent = `📖 Resmî MEB 3. Sınıf Ders Kitabı (Sayfa ${topic.page})`;
+    if (refEl) refEl.textContent = `📖 MEB Kitabı s. ${topic.page}`;
 
     // 3 Kartı Doldur (Öğretici & Somut İçerik)
     const ruleEl = document.getElementById('fact-card-rule');

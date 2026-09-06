@@ -5272,12 +5272,12 @@ html, body {
 
 .scratchpad-box.is-open {
   display: flex !important;
-  animation: scratchFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  animation: scratchFadeIn 0.15s ease-out !important;
 }
 
 @keyframes scratchFadeIn {
-  from { opacity: 0; transform: scale(0.98); }
-  to { opacity: 1; transform: scale(1); }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .scratchpad-toolbar {

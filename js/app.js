@@ -450,6 +450,16 @@
         // Başlangıçta kesinlikle kapalı olduğundan emin ol
         this.close(type);
       });
+
+      // Pencere boyutu değiştiğinde açık olan tahtayı yeniden boyutlandır
+      window.addEventListener('resize', () => {
+        ['quiz', 'exam', 'kumbara'].forEach(type => {
+          if (this.isOpen[type]) {
+            const canvas = document.getElementById(`sp-canvas-${type}`);
+            if (canvas) this.initCanvas(canvas);
+          }
+        });
+      });
     },
 
     toggle: function(type) {
@@ -480,9 +490,10 @@
 
       const canvas = document.getElementById(`sp-canvas-${type}`);
       if (canvas) {
-        requestAnimationFrame(() => {
+        // DOM görünür hale gelip boyutları hesaplanınca tuvali ayarla
+        setTimeout(() => {
           this.initCanvas(canvas);
-        });
+        }, 30);
       }
       triggerHaptic('light');
     },
@@ -507,13 +518,14 @@
     },
 
     initCanvas: function(canvas) {
-      const parent = canvas.parentElement;
-      const rect = canvas.getBoundingClientRect();
-      const w = Math.floor(parent ? parent.clientWidth : rect.width) || 320;
-      const h = Math.floor(parent ? parent.clientHeight : rect.height) || 200;
+      if (!canvas) return;
+      const wrap = canvas.parentElement;
+      const rect = wrap ? wrap.getBoundingClientRect() : canvas.getBoundingClientRect();
+      const w = Math.floor((wrap && wrap.clientWidth > 50) ? wrap.clientWidth : (rect.width || 320));
+      const h = Math.floor((wrap && wrap.clientHeight > 50) ? wrap.clientHeight : (rect.height || 300));
 
+      // Sadece boyut değişmişse yeniden yapılandır (çizimi korumak için)
       if (canvas.width !== w || canvas.height !== h) {
-        // Çizim varsa korumak için geçici buffer
         let tempCanvas = null;
         if (canvas.width > 0 && canvas.height > 0) {
           tempCanvas = document.createElement('canvas');
@@ -546,60 +558,114 @@
       if (canvas._hasEvents) return;
       canvas._hasEvents = true;
 
+      const ctx = canvas.getContext('2d');
       let isDrawing = false;
       let lastX = 0;
       let lastY = 0;
 
       const getPos = (e) => {
         const r = canvas.getBoundingClientRect();
-        const clientX = e.touches ? e.touches[0].clientX : (e.changedTouches ? e.changedTouches[0].clientX : e.clientX);
-        const clientY = e.touches ? e.touches[0].clientY : (e.changedTouches ? e.changedTouches[0].clientY : e.clientY);
-        const scaleX = canvas.width / (r.width || 1);
-        const scaleY = canvas.height / (r.height || 1);
+        let clientX = e.clientX;
+        let clientY = e.clientY;
+        if (e.touches && e.touches.length > 0) {
+          clientX = e.touches[0].clientX;
+          clientY = e.touches[0].clientY;
+        } else if (e.changedTouches && e.changedTouches.length > 0) {
+          clientX = e.changedTouches[0].clientX;
+          clientY = e.changedTouches[0].clientY;
+        }
+        const scaleX = (r.width > 0) ? (canvas.width / r.width) : 1;
+        const scaleY = (r.height > 0) ? (canvas.height / r.height) : 1;
         return {
           x: (clientX - r.left) * scaleX,
           y: (clientY - r.top) * scaleY
         };
       };
 
-      const start = (e) => {
-        if (e.cancelable) e.preventDefault();
+      const startDrawing = (e) => {
         isDrawing = true;
         const pos = getPos(e);
         lastX = pos.x;
         lastY = pos.y;
         ctx.beginPath();
-        ctx.arc(pos.x, pos.y, 2, 0, Math.PI * 2);
-        ctx.fillStyle = this.strokeColor;
+        ctx.arc(pos.x, pos.y, ScratchpadService.lineWidth / 2, 0, Math.PI * 2);
+        ctx.fillStyle = ScratchpadService.strokeColor;
         ctx.fill();
       };
 
-      const move = (e) => {
+      const drawMove = (e) => {
         if (!isDrawing) return;
-        if (e.cancelable) e.preventDefault();
         const pos = getPos(e);
         ctx.beginPath();
         ctx.moveTo(lastX, lastY);
         ctx.lineTo(pos.x, pos.y);
-        ctx.strokeStyle = this.strokeColor;
-        ctx.lineWidth = this.lineWidth;
+        ctx.strokeStyle = ScratchpadService.strokeColor;
+        ctx.lineWidth = ScratchpadService.lineWidth;
         ctx.stroke();
         lastX = pos.x;
         lastY = pos.y;
       };
 
-      const end = () => {
+      const stopDrawing = () => {
         isDrawing = false;
       };
 
-      canvas.addEventListener('mousedown', start);
-      canvas.addEventListener('mousemove', move);
-      window.addEventListener('mouseup', end);
+      if (window.PointerEvent) {
+        // Modern PointerEvents API - Kusursuz mobil dokunmatik & kalem & mouse desteği
+        canvas.addEventListener('pointerdown', (e) => {
+          e.preventDefault();
+          try { canvas.setPointerCapture(e.pointerId); } catch(_) {}
+          startDrawing(e);
+        }, { passive: false });
 
-      canvas.addEventListener('touchstart', start, { passive: false });
-      canvas.addEventListener('touchmove', move, { passive: false });
-      canvas.addEventListener('touchend', end, { passive: false });
-      canvas.addEventListener('touchcancel', end, { passive: false });
+        canvas.addEventListener('pointermove', (e) => {
+          if (!isDrawing) return;
+          e.preventDefault();
+          drawMove(e);
+        }, { passive: false });
+
+        const onPointerUp = (e) => {
+          if (isDrawing) {
+            stopDrawing();
+            try { canvas.releasePointerCapture(e.pointerId); } catch(_) {}
+          }
+        };
+
+        canvas.addEventListener('pointerup', onPointerUp, { passive: false });
+        canvas.addEventListener('pointercancel', onPointerUp, { passive: false });
+      } else {
+        // Klasik Mouse & Dokunmatik fallback
+        canvas.addEventListener('mousedown', (e) => {
+          e.preventDefault();
+          startDrawing(e);
+        });
+        canvas.addEventListener('mousemove', (e) => {
+          if (!isDrawing) return;
+          e.preventDefault();
+          drawMove(e);
+        });
+        window.addEventListener('mouseup', stopDrawing);
+
+        canvas.addEventListener('touchstart', (e) => {
+          e.preventDefault();
+          startDrawing(e);
+        }, { passive: false });
+
+        canvas.addEventListener('touchmove', (e) => {
+          if (!isDrawing) return;
+          e.preventDefault();
+          drawMove(e);
+        }, { passive: false });
+
+        canvas.addEventListener('touchend', (e) => {
+          e.preventDefault();
+          stopDrawing();
+        }, { passive: false });
+
+        canvas.addEventListener('touchcancel', (e) => {
+          stopDrawing();
+        }, { passive: false });
+      }
     }
   };
 

@@ -303,24 +303,6 @@
               <span class="draw-text">Çiz & İşlem Yap</span>
             </button>
           </div>
-
-          <!-- Sihirli Karalama / Çözüm Tahtası Katmanı -->
-          <div id="scratchpad-box-quiz" class="scratchpad-box hidden">
-            <div class="scratchpad-toolbar">
-              <div class="sp-info">
-                <span class="sp-badge">✏️ Sihirli Çizim Tahtası</span>
-                <span class="sp-hint">Parmağınla serbestçe işlem yap</span>
-              </div>
-              <div class="sp-actions">
-                <button id="btn-clear-sp-quiz" class="btn-sp-clear" type="button">🧽 Temizle</button>
-                <button id="btn-close-sp-quiz" class="btn-sp-close" type="button">✖ Şıkları Gör</button>
-              </div>
-            </div>
-            <div id="sp-question-mirror-quiz" class="sp-question-mirror"></div>
-            <div class="sp-canvas-wrap">
-              <canvas id="sp-canvas-quiz" class="scratchpad-canvas"></canvas>
-            </div>
-          </div>
         </div>
 
         <!-- Şıklar Izgarası (Renkli, Taktil Dokunmatik Butonlar) -->
@@ -370,29 +352,12 @@
                 <span class="eq-bar"></span>
                 <span class="eq-bar"></span>
                 <span class="eq-bar"></span>
+              </span>
             </button>
             <button id="btn-draw-exam" class="btn-scratchpad-trigger" type="button" title="Sihirli Çizim Tahtası">
               <span class="draw-icon">✏️</span>
               <span class="draw-text">Çiz & İşlem Yap</span>
             </button>
-          </div>
-
-          <!-- Sihirli Karalama / Çözüm Tahtası Katmanı -->
-          <div id="scratchpad-box-exam" class="scratchpad-box hidden">
-            <div class="scratchpad-toolbar">
-              <div class="sp-info">
-                <span class="sp-badge">✏️ Sihirli Çizim Tahtası</span>
-                <span class="sp-hint">Parmağınla serbestçe işlem yap</span>
-              </div>
-              <div class="sp-actions">
-                <button id="btn-clear-sp-exam" class="btn-sp-clear" type="button">🧽 Temizle</button>
-                <button id="btn-close-sp-exam" class="btn-sp-close" type="button">✖ Şıkları Gör</button>
-              </div>
-            </div>
-            <div id="sp-question-mirror-exam" class="sp-question-mirror"></div>
-            <div class="sp-canvas-wrap">
-              <canvas id="sp-canvas-exam" class="scratchpad-canvas"></canvas>
-            </div>
           </div>
         </div>
 
@@ -731,29 +696,13 @@
               <span class="v-equalizer" aria-hidden="true">
                 <span class="eq-bar"></span>
                 <span class="eq-bar"></span>
+                <span class="eq-bar"></span>
+              </span>
             </button>
             <button id="btn-draw-kumbara" class="btn-scratchpad-trigger" type="button" title="Sihirli Çizim Tahtası">
               <span class="draw-icon">✏️</span>
               <span class="draw-text">Çiz & İşlem Yap</span>
             </button>
-          </div>
-
-          <!-- Sihirli Karalama / Çözüm Tahtası Katmanı -->
-          <div id="scratchpad-box-kumbara" class="scratchpad-box hidden">
-            <div class="scratchpad-toolbar">
-              <div class="sp-info">
-                <span class="sp-badge">✏️ Sihirli Çizim Tahtası</span>
-                <span class="sp-hint">Parmağınla serbestçe işlem yap</span>
-              </div>
-              <div class="sp-actions">
-                <button id="btn-clear-sp-kumbara" class="btn-sp-clear" type="button">🧽 Temizle</button>
-                <button id="btn-close-sp-kumbara" class="btn-sp-close" type="button">✖ Şıkları Gör</button>
-              </div>
-            </div>
-            <div id="sp-question-mirror-kumbara" class="sp-question-mirror"></div>
-            <div class="sp-canvas-wrap">
-              <canvas id="sp-canvas-kumbara" class="scratchpad-canvas"></canvas>
-            </div>
           </div>
           <div id="kumbara-options-grid" class="options-grid">
             <!-- Şıklar dinamik yüklenir -->
@@ -833,6 +782,64 @@
             <span>Kapat</span>
           </button>
         </div>
+      </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- SİHİRLİ KARALAMA TAHTALARI - ROOT MODALS (position:fixed çalışır) -->
+    <!-- ============================================================ -->
+
+    <!-- 1. Quiz Çizim Tahtası -->
+    <div id="scratchpad-box-quiz" class="scratchpad-box hidden">
+      <div class="scratchpad-toolbar">
+        <div class="sp-info">
+          <span class="sp-badge">✏️ Sihirli Çizim Tahtası</span>
+          <span class="sp-hint">Parmağınla serbestçe işlem yap</span>
+        </div>
+        <div class="sp-actions">
+          <button id="btn-clear-sp-quiz" class="btn-sp-clear" type="button">🧽 Temizle</button>
+          <button id="btn-close-sp-quiz" class="btn-sp-close" type="button">✖ Şıkları Gör</button>
+        </div>
+      </div>
+      <div id="sp-question-mirror-quiz" class="sp-question-mirror"></div>
+      <div class="sp-canvas-wrap">
+        <canvas id="sp-canvas-quiz" class="scratchpad-canvas"></canvas>
+      </div>
+    </div>
+
+    <!-- 2. Sınav Çizim Tahtası -->
+    <div id="scratchpad-box-exam" class="scratchpad-box hidden">
+      <div class="scratchpad-toolbar">
+        <div class="sp-info">
+          <span class="sp-badge">✏️ Sihirli Çizim Tahtası</span>
+          <span class="sp-hint">Parmağınla serbestçe işlem yap</span>
+        </div>
+        <div class="sp-actions">
+          <button id="btn-clear-sp-exam" class="btn-sp-clear" type="button">🧽 Temizle</button>
+          <button id="btn-close-sp-exam" class="btn-sp-close" type="button">✖ Şıkları Gör</button>
+        </div>
+      </div>
+      <div id="sp-question-mirror-exam" class="sp-question-mirror"></div>
+      <div class="sp-canvas-wrap">
+        <canvas id="sp-canvas-exam" class="scratchpad-canvas"></canvas>
+      </div>
+    </div>
+
+    <!-- 3. Kumbara Çizim Tahtası -->
+    <div id="scratchpad-box-kumbara" class="scratchpad-box hidden">
+      <div class="scratchpad-toolbar">
+        <div class="sp-info">
+          <span class="sp-badge">✏️ Sihirli Çizim Tahtası</span>
+          <span class="sp-hint">Parmağınla serbestçe işlem yap</span>
+        </div>
+        <div class="sp-actions">
+          <button id="btn-clear-sp-kumbara" class="btn-sp-clear" type="button">🧽 Temizle</button>
+          <button id="btn-close-sp-kumbara" class="btn-sp-close" type="button">✖ Şıkları Gör</button>
+        </div>
+      </div>
+      <div id="sp-question-mirror-kumbara" class="sp-question-mirror"></div>
+      <div class="sp-canvas-wrap">
+        <canvas id="sp-canvas-kumbara" class="scratchpad-canvas"></canvas>
       </div>
     </div>
 

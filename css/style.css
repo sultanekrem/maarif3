@@ -2898,8 +2898,8 @@ html, body {
 
 .splash-curriculum-showcase {
   display: grid !important;
-  grid-template-columns: repeat(4, 1fr) !important;
-  gap: 14px !important;
+  grid-template-columns: repeat(5, 1fr) !important;
+  gap: 10px !important;
   width: 100% !important;
   margin-bottom: 20px !important;
 }
@@ -2908,10 +2908,10 @@ html, body {
   background: rgba(30, 41, 59, 0.6) !important;
   border: 1.5px solid rgba(255, 255, 255, 0.12) !important;
   border-radius: 18px !important;
-  padding: 14px 12px !important;
+  padding: 14px 10px !important;
   display: flex !important;
   align-items: center !important;
-  gap: 10px !important;
+  gap: 8px !important;
   text-align: left !important;
   transition: transform 0.15s ease, border-color 0.15s ease !important;
 }
@@ -2919,6 +2919,15 @@ html, body {
 .showcase-card:hover {
   transform: translateY(-2px) !important;
   border-color: #818CF8 !important;
+}
+
+.showcase-turkce {
+  border-color: rgba(245, 158, 11, 0.35) !important;
+}
+
+.showcase-turkce:hover {
+  border-color: #F59E0B !important;
+  box-shadow: 0 4px 18px rgba(245, 158, 11, 0.22) !important;
 }
 
 .showcase-icon {
@@ -4024,6 +4033,9 @@ html, body {
     grid-template-columns: 1fr 1fr !important;
     gap: 8px !important;
     margin-bottom: 14px !important;
+  }
+  .splash-curriculum-showcase .showcase-card:last-child:nth-child(odd) {
+    grid-column: span 2 !important;
   }
   .showcase-card {
     padding: 10px 8px !important;

@@ -1,5 +1,20 @@
 const { MsEdgeTTS, OUTPUT_FORMAT } = require('msedge-tts');
 
+function sanitizeForSpeech(str) {
+  return String(str || '')
+    .replace(/&/g, ' ve ')
+    .replace(/</g, ' küçüktür ')
+    .replace(/>/g, ' büyüktür ')
+    .replace(/["']/g, '')
+    .replace(/\+/g, ' artı ')
+    .replace(/-/g, ' eksi ')
+    .replace(/×|\*/g, ' çarpı ')
+    .replace(/÷|\//g, ' bölü ')
+    .replace(/=/g, ' eşittir ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 module.exports = async (req, res) => {
   // CORS Headers
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -34,12 +49,18 @@ module.exports = async (req, res) => {
   // Voice selection: default Emel (friendly, warm Turkish female teacher voice)
   const voice = (req.query && req.query.voice === 'ahmet') ? 'tr-TR-AhmetNeural' : 'tr-TR-EmelNeural';
 
+  // Rate: -8% provides a calm, gentle, pedagogical tempo for 3rd graders
+  let rate = '-8%';
+  if (req.query && req.query.rate) {
+    rate = String(req.query.rate);
+  }
+
   try {
     const tts = new MsEdgeTTS();
     await tts.setMetadata(voice, OUTPUT_FORMAT.AUDIO_24KHZ_48KBITRATE_MONO_MP3);
 
-    const safeText = text.substring(0, 1000);
-    const { audioStream } = tts.toStream(safeText);
+    const safeText = sanitizeForSpeech(text).substring(0, 1000);
+    const { audioStream } = tts.toStream(safeText, { rate });
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'audio/mpeg');

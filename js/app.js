@@ -327,7 +327,7 @@
       if (navigator.onLine !== false && this.audioPlayer) {
         try {
           this.currentFallbackText = text;
-          const url = '/api/tts?text=' + encodeURIComponent(text) + '&voice=emel';
+          const url = '/api/tts?text=' + encodeURIComponent(text) + '&voice=emel&rate=' + encodeURIComponent('-8%');
           this.audioPlayer.src = url;
           const playPromise = this.audioPlayer.play();
           if (playPromise !== undefined) {
@@ -361,7 +361,7 @@
 
       const u = new SpeechSynthesisUtterance(text);
       u.lang = 'tr-TR';
-      u.rate = 1.0;
+      u.rate = 0.93; // 0.93: Tane tane, sakin, pedagojik ilkokul dinleme temposu
       u.pitch = 1.0;
 
       const bestVoice = this.getBestTurkishVoice();

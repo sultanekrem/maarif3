@@ -1,0 +1,9 @@
+{
+  "name": "maarif3",
+  "version": "1.0.0",
+  "private": true,
+  "description": "3. Sınıf MEB Maarif Modeli İnteraktif Öğrenme Platformu",
+  "dependencies": {
+    "msedge-tts": "^2.0.7"
+  }
+}

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'maarif3-v33';
+const CACHE_NAME = 'maarif3-v34';
 const CACHE_FILES = [
   './',
   './index.html',
@@ -52,6 +52,11 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', event => {
+  // API isteklerini Service Worker önbelleğine alma, doğrudan ağa ilet
+  if (event.request.url.includes('/api/')) {
+    return;
+  }
+
   event.respondWith(
     caches.match(event.request)
       .then(response => {

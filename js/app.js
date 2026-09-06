@@ -143,14 +143,37 @@
 
 
   // ==========================================================================
-  // 🔊 AKILLI DOĞAL TÜRKÇE SES MOTORU (Web Speech API - Hızlı, Güvenilir & Doğal)
+  // 🔊 PROFESYONEL DOĞAL TÜRKÇE SES MOTORU (Nöral Stüdyo Sesi + Web Speech Yedek)
   // ==========================================================================
   const SpeechService = {
     isSpeaking: false,
     activeButton: null,
     cachedVoices: [],
+    audioPlayer: null,
+    currentFallbackText: null,
 
     init: function() {
+      try {
+        this.audioPlayer = new Audio();
+        this.audioPlayer.preload = 'none';
+        this.audioPlayer.onended = () => {
+          this.stop();
+        };
+        this.audioPlayer.onerror = (e) => {
+          console.warn('Nöral ses akış hatası, Web Speech API devreye alınıyor:', e);
+          if (this.currentFallbackText && this.isSpeaking) {
+            const fbText = this.currentFallbackText;
+            const btn = this.activeButton;
+            this.currentFallbackText = null;
+            this.speakWebSpeech(fbText, btn);
+          } else {
+            this.stop();
+          }
+        };
+      } catch (err) {
+        console.warn('HTML5 Audio başlatılamadı:', err);
+      }
+
       if (!('speechSynthesis' in window)) return;
       this.loadVoices();
       if ('onvoiceschanged' in window.speechSynthesis) {
@@ -207,8 +230,7 @@
         .replace(/÷|\//g, ' bölü ')
         .replace(/=/g, ' eşittir ');
 
-      // Sayıların ardındaki noktayı kaldır (347. -> üç yüz kırk yedinci olmasını kesinlikle önler!)
-      // Sadece "3. sınıf", "1. tema" gibi kelimelerden önce geliyorsa sıra sayısı olarak koru
+      // Sayıların ardındaki noktayı kaldır (347. -> üç yüz kırk yedinci olmasını önler)
       res = res.replace(/(\d+)\.(?!\d)/g, (match, p1, offset, fullStr) => {
         const after = fullStr.slice(offset + match.length).trim();
         if (/^(sınıf|tema|ünite|adım|soru|sıra|kat|madde|bölüm)/i.test(after)) {
@@ -235,7 +257,7 @@
           let optClean = this.cleanText(opt);
           optParts.push(letters[idx] + ' şıkkı ' + optClean);
         });
-        // Şıklar arasına virgül koy (asla nokta değil! Sayıların ardına nokta gelmez!)
+        // Şıklar arasına virgül koy (asla nokta değil)
         speech += optParts.join(', ');
       }
 
@@ -261,6 +283,14 @@
     },
 
     stop: function() {
+      this.currentFallbackText = null;
+      if (this.audioPlayer) {
+        try {
+          this.audioPlayer.pause();
+          this.audioPlayer.currentTime = 0;
+          this.audioPlayer.removeAttribute('src');
+        } catch(e) {}
+      }
       if ('speechSynthesis' in window) {
         try {
           window.speechSynthesis.cancel();
@@ -283,16 +313,56 @@
     },
 
     speak: function(text, btnElement) {
-      if (!('speechSynthesis' in window) || !text) {
-        return;
-      }
+      if (!text) return;
 
       this.stop();
 
+      this.isSpeaking = true;
+      this.activeButton = btnElement;
+      if (btnElement) {
+        this.setButtonSpeaking(btnElement);
+      }
+
+      // 1. ÖNCELİK: Vercel Nöral İnsan Sesi Akışı (tr-TR-EmelNeural - Şefkatli, Net Öğretmen Sesi)
+      if (navigator.onLine !== false && this.audioPlayer) {
+        try {
+          this.currentFallbackText = text;
+          const url = '/api/tts?text=' + encodeURIComponent(text) + '&voice=emel';
+          this.audioPlayer.src = url;
+          const playPromise = this.audioPlayer.play();
+          if (playPromise !== undefined) {
+            playPromise.catch((err) => {
+              console.warn('Nöral ses tarayıcı kısıtlaması, Web Speech API devreye alınıyor:', err);
+              if (this.isSpeaking && this.currentFallbackText === text) {
+                this.currentFallbackText = null;
+                this.speakWebSpeech(text, btnElement);
+              }
+            });
+          }
+          return;
+        } catch (err) {
+          console.warn('Nöral ses başlatma istisnası:', err);
+        }
+      }
+
+      // 2. ÖNCELİK (Çevrimdışı / Hata Durumu): Cihazın Yerel Web Speech API Motoru
+      this.speakWebSpeech(text, btnElement);
+    },
+
+    speakWebSpeech: function(text, btnElement) {
+      if (!('speechSynthesis' in window) || !text) {
+        this.stop();
+        return;
+      }
+
+      try {
+        window.speechSynthesis.cancel();
+      } catch (e) {}
+
       const u = new SpeechSynthesisUtterance(text);
       u.lang = 'tr-TR';
-      u.rate = 1.0; // 1.0: Doğal, akıcı, gerçek konuşma hızı (asla yavaş ve robotik değil)
-      u.pitch = 1.0; // 1.0: Orijinal doğal ses perdesi
+      u.rate = 1.0;
+      u.pitch = 1.0;
 
       const bestVoice = this.getBestTurkishVoice();
       if (bestVoice) {
@@ -301,7 +371,6 @@
 
       this.isSpeaking = true;
       this.activeButton = btnElement;
-
       if (btnElement) {
         this.setButtonSpeaking(btnElement);
       }
@@ -316,14 +385,14 @@
 
       u.onend = onEndOrError;
       u.onerror = (e) => {
-        console.warn('Speech error:', e);
+        console.warn('Web Speech error:', e);
         onEndOrError();
       };
 
       try {
         window.speechSynthesis.speak(u);
       } catch (err) {
-        console.warn('SpeechSynthesis speak failed:', err);
+        console.warn('Web Speech speak failed:', err);
         onEndOrError();
       }
     }

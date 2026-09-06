@@ -6140,3 +6140,127 @@ body.dyslexia-mode #btn-dyslexia {
   .block-add-btn { min-height: 52px !important; }
   .num-pill { padding: 6px 0 !important; font-size: 0.78rem !important; }
 }
+
+/* ============================================================
+   🎯 SORU EYLEM VE ARAÇ ÇUBUĞU (UNIFIED QUESTION ACTION BAR)
+   Tüm butonlar eşit boyutta, eşit yükseklikte ve kusursuz oranda
+   ============================================================ */
+.question-audio-strip {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: stretch !important;
+  gap: 8px !important;
+  width: 100% !important;
+  margin: 10px 0 6px 0 !important;
+  box-sizing: border-box !important;
+}
+
+.kumbara-audio-strip {
+  margin: 10px 0 10px 0 !important;
+}
+
+/* Çubuktaki tüm butonların ortak temel ölçüleri (TAM EŞİT DÜZEN) */
+.btn-voice-premium,
+.btn-scratchpad-trigger,
+.btn-math-tools-trigger {
+  flex: 1 1 0 !important;
+  min-width: 0 !important;
+  height: 44px !important;
+  min-height: 44px !important;
+  max-height: 44px !important;
+  padding: 0 8px !important;
+  border-radius: 12px !important;
+  font-family: inherit !important;
+  font-size: 0.82rem !important;
+  font-weight: 800 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  box-sizing: border-box !important;
+  white-space: nowrap !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+  user-select: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+  margin: 0 !important;
+}
+
+.btn-voice-premium:active,
+.btn-scratchpad-trigger:active,
+.btn-math-tools-trigger:active {
+  transform: translateY(2px) !important;
+  border-bottom-width: 1.5px !important;
+}
+
+/* 1. Sesli Dinle Butonu (İndigo) */
+.btn-voice-premium {
+  background: #4F46E5 !important;
+  border: 1.5px solid #6366F1 !important;
+  border-bottom: 3.5px solid #3730A3 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.35) !important;
+}
+
+.btn-voice-premium.is-speaking {
+  background: #DC2626 !important;
+  border-color: #EF4444 !important;
+  border-bottom-color: #991B1B !important;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.6) !important;
+}
+
+.v-icon-bubble {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1rem !important;
+  flex-shrink: 0 !important;
+}
+
+.v-text, .draw-text, .tools-text {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  letter-spacing: 0.1px !important;
+}
+
+/* 2. Çizim Yap Butonu (Gök Mavisi) */
+.btn-scratchpad-trigger {
+  background: #0284C7 !important;
+  border: 1.5px solid #38BDF8 !important;
+  border-bottom: 3.5px solid #0369A1 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.35) !important;
+}
+
+.draw-icon, .tools-icon {
+  font-size: 1rem !important;
+  flex-shrink: 0 !important;
+}
+
+/* 3. Matematik Araçları Butonu (Zümrüt Yeşili) */
+.btn-math-tools-trigger {
+  display: none; /* Sadece Matematik dersinde görünür */
+  background: #059669 !important;
+  border: 1.5px solid #10B981 !important;
+  border-bottom: 3.5px solid #047857 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 2px 8px rgba(5, 150, 105, 0.35) !important;
+}
+
+.btn-math-tools-trigger.is-visible {
+  display: inline-flex !important;
+}
+
+@media (max-width: 480px) {
+  .question-audio-strip {
+    gap: 6px !important;
+  }
+  .btn-voice-premium,
+  .btn-scratchpad-trigger,
+  .btn-math-tools-trigger {
+    padding: 0 6px !important;
+    font-size: 0.78rem !important;
+    gap: 4px !important;
+  }
+}

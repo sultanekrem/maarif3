@@ -4712,3 +4712,368 @@ html, body {
   color: #FFFFFF !important;
 }
 
+/* ==========================================================================
+   💡 6. AKILLI ÇÖZÜM KARTI, YILDIZ KUMBARASI & SESLİ OKUMA STİLLERİ
+   ========================================================================== */
+
+/* 1. 💡 "Aha! Şimdi Anladım!" Çözüm Modalı */
+.solution-card-modal {
+  position: relative !important;
+  max-width: 580px !important;
+  width: 95% !important;
+  max-height: 88vh !important;
+  overflow-y: auto !important;
+  background: linear-gradient(160deg, #1E1B4B 0%, #0F172A 100%) !important;
+  border: 2.5px solid #F59E0B !important;
+  border-bottom: 6px solid #D97706 !important;
+  border-radius: 26px !important;
+  padding: 24px 20px !important;
+  box-sizing: border-box !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75), 0 0 35px rgba(245, 158, 11, 0.25) !important;
+  animation: popIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  color: #FFFFFF !important;
+}
+
+.solution-card-modal .modal-close-x {
+  position: absolute !important;
+  top: 14px !important;
+  right: 14px !important;
+  width: 36px !important;
+  height: 36px !important;
+  z-index: 10 !important;
+}
+
+.solution-card-top {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 6px !important;
+  margin-bottom: 16px !important;
+  padding-right: 42px !important;
+  text-align: left !important;
+}
+
+.sol-badge {
+  font-size: 0.74rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.5px !important;
+  color: #FDE047 !important;
+  background: rgba(245, 158, 11, 0.2) !important;
+  padding: 3px 10px !important;
+  border-radius: 99px !important;
+  border: 1px solid rgba(245, 158, 11, 0.4) !important;
+}
+
+.sol-title {
+  font-size: clamp(1.2rem, 4.5vw, 1.5rem) !important;
+  font-weight: 900 !important;
+  color: #FFFFFF !important;
+  line-height: 1.2 !important;
+}
+
+.sol-gentle-sub {
+  font-size: 0.88rem !important;
+  color: #93C5FD !important;
+  line-height: 1.35 !important;
+}
+
+.sol-correct-banner {
+  background: rgba(16, 185, 129, 0.18) !important;
+  border: 1.5px solid #10B981 !important;
+  border-radius: 14px !important;
+  padding: 12px 14px !important;
+  margin-bottom: 14px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: 0.95rem !important;
+}
+
+.sol-correct-label {
+  color: #34D399 !important;
+  font-weight: 800 !important;
+  font-size: 0.8rem !important;
+  letter-spacing: 0.5px !important;
+  white-space: nowrap !important;
+}
+
+.sol-correct-text {
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+}
+
+.sol-hint-card {
+  background: rgba(30, 58, 138, 0.35) !important;
+  border: 1.5px solid #60A5FA !important;
+  border-left: 5px solid #3B82F6 !important;
+  border-radius: 14px !important;
+  padding: 14px 16px !important;
+  margin-bottom: 20px !important;
+  text-align: left !important;
+}
+
+.sol-hint-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  font-size: 0.82rem !important;
+  font-weight: 800 !important;
+  color: #93C5FD !important;
+  margin-bottom: 8px !important;
+}
+
+.sol-book-pill {
+  font-size: 0.72rem !important;
+  background: rgba(59, 130, 246, 0.25) !important;
+  border: 1px solid rgba(96, 165, 250, 0.4) !important;
+  color: #EFF6FF !important;
+  padding: 2px 8px !important;
+  border-radius: 99px !important;
+  white-space: nowrap !important;
+}
+
+.sol-hint-body {
+  font-size: 0.95rem !important;
+  color: #EFF6FF !important;
+  line-height: 1.45 !important;
+  font-weight: 600 !important;
+}
+
+.sol-actions-row {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  width: 100% !important;
+}
+
+.btn-sol-retry {
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%) !important;
+  color: #FFFFFF !important;
+  border: 2px solid #FDE68A !important;
+  font-size: 1rem !important;
+  font-weight: 900 !important;
+  padding: 14px !important;
+  border-radius: 16px !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4) !important;
+  min-height: 48px !important;
+}
+
+.btn-sol-retry:active {
+  transform: scale(0.98) !important;
+}
+
+.btn-sol-next {
+  background: #334155 !important;
+  color: #FFFFFF !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.25) !important;
+  font-size: 0.92rem !important;
+  font-weight: 800 !important;
+  padding: 12px !important;
+  border-radius: 16px !important;
+  cursor: pointer !important;
+  min-height: 44px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* 2. 🧠 Yıldız Kumbarası Modalı & Butonu */
+.kumbara-circle-btn {
+  position: relative !important;
+}
+
+.kumbara-badge {
+  position: absolute !important;
+  top: -4px !important;
+  right: -4px !important;
+  background: #EF4444 !important;
+  color: #FFFFFF !important;
+  font-size: 0.65rem !important;
+  font-weight: 900 !important;
+  min-width: 18px !important;
+  height: 18px !important;
+  border-radius: 99px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 1.5px solid #0F172A !important;
+  box-shadow: 0 2px 6px rgba(239, 68, 68, 0.6) !important;
+  animation: pulseKumbara 2s infinite !important;
+}
+
+@keyframes pulseKumbara {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.18); }
+  100% { transform: scale(1); }
+}
+
+.kumbara-card-modal {
+  position: relative !important;
+  max-width: 640px !important;
+  width: 95% !important;
+  max-height: 88vh !important;
+  overflow-y: auto !important;
+  background: linear-gradient(160deg, #1E1B4B 0%, #0F172A 100%) !important;
+  border: 2.5px solid #818CF8 !important;
+  border-bottom: 6px solid #4F46E5 !important;
+  border-radius: 26px !important;
+  padding: 24px 20px !important;
+  box-sizing: border-box !important;
+  color: #FFFFFF !important;
+}
+
+.kumbara-header {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  margin-bottom: 18px !important;
+  text-align: left !important;
+}
+
+.kumbara-icon-wrap {
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 18px !important;
+  background: rgba(129, 140, 248, 0.2) !important;
+  border: 2px solid #818CF8 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.8rem !important;
+  flex-shrink: 0 !important;
+}
+
+.kumbara-tag {
+  font-size: 0.72rem !important;
+  font-weight: 800 !important;
+  color: #FDE047 !important;
+  background: rgba(245, 158, 11, 0.2) !important;
+  padding: 2px 8px !important;
+  border-radius: 99px !important;
+  border: 1px solid rgba(245, 158, 11, 0.4) !important;
+  display: inline-block !important;
+  margin-bottom: 3px !important;
+}
+
+.kumbara-title {
+  font-size: 1.35rem !important;
+  font-weight: 900 !important;
+  line-height: 1.2 !important;
+}
+
+.kumbara-sub {
+  font-size: 0.82rem !important;
+  color: #93C5FD !important;
+}
+
+.kumbara-active-area {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 20px !important;
+  padding: 16px !important;
+  margin-bottom: 16px !important;
+  text-align: left !important;
+}
+
+.kumbara-q-meta {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+  margin-bottom: 10px !important;
+}
+
+.kumbara-meta-pill {
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  padding: 3px 8px !important;
+  border-radius: 99px !important;
+  background: rgba(99, 102, 241, 0.25) !important;
+  border: 1px solid rgba(129, 140, 248, 0.4) !important;
+  color: #E0E7FF !important;
+}
+
+.kumbara-count-text {
+  font-size: 0.78rem !important;
+  font-weight: 800 !important;
+  color: #FBBF24 !important;
+  margin-left: auto !important;
+}
+
+.kumbara-q-text {
+  font-size: 1.05rem !important;
+  font-weight: 800 !important;
+  color: #FFFFFF !important;
+  margin-bottom: 14px !important;
+  line-height: 1.35 !important;
+}
+
+.kumbara-empty-state {
+  text-align: center !important;
+  padding: 30px 16px !important;
+}
+
+.kumbara-empty-state .empty-star-icon {
+  font-size: 3.5rem !important;
+  display: block !important;
+  margin-bottom: 12px !important;
+  animation: pulseCorrect 1.5s infinite !important;
+}
+
+.kumbara-empty-state h3 {
+  font-size: 1.35rem !important;
+  font-weight: 900 !important;
+  color: #FDE047 !important;
+  margin-bottom: 6px !important;
+}
+
+.kumbara-empty-state p {
+  font-size: 0.95rem !important;
+  color: #93C5FD !important;
+}
+
+/* 3. 🔊 Sesli Oku Butonu */
+.q-actions-inline {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.btn-voice-read {
+  background: rgba(129, 140, 248, 0.2) !important;
+  border: 1.5px solid rgba(129, 140, 248, 0.5) !important;
+  color: #E0E7FF !important;
+  font-size: 0.78rem !important;
+  font-weight: 800 !important;
+  border-radius: 99px !important;
+  padding: 4px 10px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.btn-voice-read:hover {
+  background: rgba(129, 140, 248, 0.35) !important;
+  color: #FFFFFF !important;
+}
+
+.btn-voice-read.is-speaking {
+  background: #EF4444 !important;
+  border-color: #F87171 !important;
+  color: #FFFFFF !important;
+  animation: pulseSpeak 1s infinite !important;
+}
+
+@keyframes pulseSpeak {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+

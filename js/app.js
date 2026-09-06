@@ -30,7 +30,8 @@
       stars: 0,
       score: 0,
       completedTopics: {}, // topicId: { stars: 3, completedAt: date }
-      completedExams: {}   // examKey: { attempts: 2, firstScore: 80, lastScore: 100, bestScore: 100, history: [...] }
+      completedExams: {},   // examKey: { attempts: 2, firstScore: 80, lastScore: 100, bestScore: 100, history: [...] }
+      mistakeBank: []       // Yanlış yapılan sorular kumbarası
     }
   };
 
@@ -51,6 +52,7 @@
       if (saved) {
         const parsed = JSON.parse(saved);
         state.progress = Object.assign(state.progress, parsed);
+        state.progress.mistakeBank = state.progress.mistakeBank || [];
       }
     } catch(e) {
       console.warn('Progress load error:', e);
@@ -117,8 +119,315 @@
     }
   }
 
+
+  // ==========================================================================
+  // 🔊 AKILLI TÜRKÇE SESLİ OKUMA ASİSTANI (Web Speech API)
+  // ==========================================================================
+  const SpeechService = {
+    isSpeaking: false,
+    activeButton: null,
+
+    speak: function(text, btnElement) {
+      if (!('speechSynthesis' in window)) {
+        return;
+      }
+      
+      if (this.isSpeaking) {
+        this.stop();
+        return;
+      }
+
+      this.stop();
+
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = 'tr-TR';
+      u.rate = 0.90; // 3. sınıf öğrencileri için tane tane ve berrak okuma
+      u.pitch = 1.05;
+
+      const voices = window.speechSynthesis.getVoices();
+      const trVoice = voices.find(v => v.lang && v.lang.startsWith('tr'));
+      if (trVoice) u.voice = trVoice;
+
+      this.isSpeaking = true;
+      this.activeButton = btnElement;
+
+      if (btnElement) {
+        btnElement.classList.add('is-speaking');
+        const txt = btnElement.querySelector('.v-text');
+        if (txt) txt.textContent = 'Durdur';
+      }
+
+      const resetBtn = () => {
+        this.isSpeaking = false;
+        if (this.activeButton) {
+          this.activeButton.classList.remove('is-speaking');
+          const txt = this.activeButton.querySelector('.v-text');
+          if (txt) txt.textContent = 'Dinle';
+          this.activeButton = null;
+        }
+      };
+
+      u.onend = resetBtn;
+      u.onerror = resetBtn;
+
+      window.speechSynthesis.speak(u);
+    },
+
+    stop: function() {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
+      this.isSpeaking = false;
+      if (this.activeButton) {
+        this.activeButton.classList.remove('is-speaking');
+        const txt = this.activeButton.querySelector('.v-text');
+        if (txt) txt.textContent = 'Dinle';
+        this.activeButton = null;
+      }
+    }
+  };
+
+  // 📳 Haptik Dokunmatik Titreşim (Destekleyen telefonlar için)
+  function triggerHaptic(type) {
+    if (typeof navigator !== 'undefined' && navigator.vibrate) {
+      try {
+        if (type === 'success') {
+          navigator.vibrate([30, 40, 60]);
+        } else if (type === 'warning') {
+          navigator.vibrate([40, 50]);
+        }
+      } catch(e) {}
+    }
+  }
+
+  // 🧠 YILDIZ KUMBARASI (Hata Kumbarası) YÖNETİMİ
+  function updateKumbaraBadge() {
+    const badgeEl = document.getElementById('kumbara-counter-badge');
+    if (!badgeEl) return;
+    const count = (state.progress.mistakeBank && state.progress.mistakeBank.length) || 0;
+    badgeEl.textContent = count;
+    if (count > 0) {
+      badgeEl.classList.remove('hidden');
+    } else {
+      badgeEl.classList.add('hidden');
+    }
+  }
+
+  function addToMistakeBank(qData, subjectKey, page) {
+    if (!state.progress.mistakeBank) state.progress.mistakeBank = [];
+    const exists = state.progress.mistakeBank.some(item => item.q === qData.q);
+    if (!exists) {
+      state.progress.mistakeBank.push({
+        id: 'mb_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4),
+        q: qData.q,
+        options: [...qData.options],
+        ans: qData.ans,
+        hint: qData.hint || 'MEB Ders Kitabındaki ilgili konuyu ve örnekleri inceleyebilirsin.',
+        subjectKey: subjectKey || state.currentSubjectKey || 'matematik',
+        page: page || (state.currentTopic ? state.currentTopic.page : 12)
+      });
+      saveProgress();
+      updateKumbaraBadge();
+    }
+  }
+
+  // 💡 "AHA! ŞİMDİ ANLADIM!" AKILLI ÇÖZÜM KARTI
+  function openSolutionCard(qData, page, onRetry, onNext) {
+    const modal = document.getElementById('modal-solution-card');
+    if (!modal) return;
+
+    const correctTextEl = document.getElementById('sol-correct-text');
+    if (correctTextEl) {
+      correctTextEl.textContent = qData.options[qData.ans];
+    }
+
+    const hintBodyEl = document.getElementById('sol-hint-body');
+    if (hintBodyEl) {
+      hintBodyEl.textContent = qData.hint || 'Bu sorunun püf noktasını dikkatle inceleyerek tekrar çözebilirsin!';
+    }
+
+    const bookRefEl = document.getElementById('sol-book-ref-pill');
+    if (bookRefEl) {
+      bookRefEl.textContent = page ? `📖 MEB Kitabı s. ${page}` : '📖 Resmî MEB Ders Kitabı';
+    }
+
+    const closeSolution = () => {
+      modal.classList.remove('open');
+      SpeechService.stop();
+    };
+
+    const btnRetry = document.getElementById('btn-sol-retry');
+    if (btnRetry) {
+      btnRetry.onclick = () => {
+        closeSolution();
+        if (typeof onRetry === 'function') onRetry();
+      };
+    }
+
+    const btnNext = document.getElementById('btn-sol-next');
+    if (btnNext) {
+      btnNext.onclick = () => {
+        closeSolution();
+        if (typeof onNext === 'function') onNext();
+      };
+    }
+
+    const btnCloseX = document.getElementById('btn-close-solution-x');
+    if (btnCloseX) {
+      btnCloseX.onclick = () => {
+        closeSolution();
+        if (typeof onNext === 'function') onNext();
+      };
+    }
+
+    modal.classList.add('open');
+  }
+
+  // 🧠 YILDIZ KUMBARASI ARENA MODALI
+  let currentKumbaraIndex = 0;
+
+  function openKumbaraArena() {
+    const modal = document.getElementById('modal-kumbara-arena');
+    if (!modal) return;
+    currentKumbaraIndex = 0;
+    renderKumbaraCurrent();
+    modal.classList.add('open');
+  }
+
+  function closeKumbaraArena() {
+    const modal = document.getElementById('modal-kumbara-arena');
+    if (modal) modal.classList.remove('open');
+    SpeechService.stop();
+  }
+
+  function renderKumbaraCurrent() {
+    const activeArea = document.getElementById('kumbara-active-area');
+    const emptyState = document.getElementById('kumbara-empty-state');
+    const bank = state.progress.mistakeBank || [];
+
+    if (bank.length === 0) {
+      if (activeArea) activeArea.classList.add('hidden');
+      if (emptyState) emptyState.classList.remove('hidden');
+      updateKumbaraBadge();
+      return;
+    }
+
+    if (activeArea) activeArea.classList.remove('hidden');
+    if (emptyState) emptyState.classList.add('hidden');
+
+    if (currentKumbaraIndex >= bank.length) {
+      currentKumbaraIndex = 0;
+    }
+
+    const item = bank[currentKumbaraIndex];
+    const subjNames = {
+      'matematik': 'Matematik 📐',
+      'fenbilimleri': 'Fen Bilimleri 🔬',
+      'hayatbilgisi': 'Hayat Bilgisi 🌱',
+      'ingilizce': 'İngilizce 🔤'
+    };
+
+    const subjEl = document.getElementById('kumbara-q-subject');
+    if (subjEl) subjEl.textContent = subjNames[item.subjectKey] || 'Ders';
+
+    const bookEl = document.getElementById('kumbara-q-book');
+    if (bookEl) bookEl.textContent = item.page ? `📖 MEB s. ${item.page}` : '📖 MEB Kitabı';
+
+    const countEl = document.getElementById('kumbara-count-text');
+    if (countEl) countEl.textContent = `Kalan Soru: ${bank.length}`;
+
+    const qTextEl = document.getElementById('kumbara-q-text');
+    if (qTextEl) qTextEl.textContent = item.q;
+
+    const optGrid = document.getElementById('kumbara-options-grid');
+    if (optGrid) {
+      optGrid.innerHTML = '';
+      const letters = ['A', 'B', 'C', 'D'];
+      item.options.forEach((optText, optIdx) => {
+        const btn = document.createElement('button');
+        btn.className = `option-btn letter-btn-${letters[optIdx].toLowerCase()}`;
+        btn.innerHTML = `
+          <span class="option-letter">${letters[optIdx]}</span>
+          <span class="option-text">${optText}</span>
+        `;
+
+        btn.onclick = () => {
+          handleKumbaraAnswer(optIdx, btn, item);
+        };
+        optGrid.appendChild(btn);
+      });
+    }
+
+    const fbBox = document.getElementById('kumbara-feedback-box');
+    if (fbBox) fbBox.classList.add('hidden');
+  }
+
+  function handleKumbaraAnswer(selectedIdx, btnElement, item) {
+    const allBtns = document.querySelectorAll('#kumbara-options-grid .option-btn');
+    allBtns.forEach(b => b.disabled = true);
+
+    const isCorrect = selectedIdx === item.ans;
+    const fbBox = document.getElementById('kumbara-feedback-box');
+    const fbTitle = document.getElementById('kumbara-feedback-title');
+    const fbMsg = document.getElementById('kumbara-feedback-message');
+    const btnNext = document.getElementById('btn-kumbara-next');
+
+    if (isCorrect) {
+      btnElement.classList.add('is-correct-choice');
+      btnElement.innerHTML = `
+        <span class="option-letter">✔</span>
+        <span class="option-text">${item.options[selectedIdx]}</span>
+        <span class="answer-badge badge-win">DOĞRU! +2 ⭐</span>
+      `;
+      playAudioChime('correct');
+      triggerHaptic('success');
+
+      // Kumbaradan temizle & +2 Yıldız ver!
+      state.progress.stars += 2;
+      state.progress.score += 50;
+      state.progress.mistakeBank = state.progress.mistakeBank.filter(q => q.id !== item.id);
+      saveProgress();
+      updateHeaderStats();
+      updateKumbaraBadge();
+
+      if (fbBox) {
+        fbBox.className = 'feedback-box feedback-correct';
+        if (fbTitle) fbTitle.textContent = '🌟 Harika! Bu Soruyu Yendin (+2 ⭐)!';
+        if (fbMsg) fbMsg.textContent = 'Doğru mantığı kavradın ve soruyu kumbarandan temizledin!';
+        fbBox.classList.remove('hidden');
+      }
+
+      btnNext.textContent = state.progress.mistakeBank.length > 0 ? 'Sıradaki Kumbaraya Geç →' : 'Kumbarayı Tamamla 🎉';
+      btnNext.onclick = () => {
+        renderKumbaraCurrent();
+      };
+    } else {
+      btnElement.classList.add('is-wrong-choice');
+      btnElement.innerHTML = `
+        <span class="option-letter">✖</span>
+        <span class="option-text">${item.options[selectedIdx]}</span>
+        <span class="answer-badge badge-fail">BİR DAHA DENE</span>
+      `;
+      playAudioChime('wrong');
+      triggerHaptic('warning');
+
+      if (fbBox) {
+        fbBox.className = 'feedback-box feedback-wrong';
+        if (fbTitle) fbTitle.textContent = '💡 İpucu:';
+        if (fbMsg) fbMsg.textContent = item.hint || 'Soruyu tekrar dikkatle incele.';
+        fbBox.classList.remove('hidden');
+      }
+
+      btnNext.textContent = '🔄 Tekrar Dene';
+      btnNext.onclick = () => {
+        renderKumbaraCurrent();
+      };
+    }
+  }
+
   // Ekran Değiştirici
   function showScreen(screenId) {
+    SpeechService.stop();
     document.querySelectorAll('.screen').forEach(s => {
       s.classList.remove('active');
     });
@@ -518,8 +827,21 @@
     const fillPercent = ((state.currentTaskIndex + 1) / totalTasks) * 100;
     document.getElementById('quiz-progress-bar').style.width = `${fillPercent}%`;
 
-    document.getElementById('quiz-question-text').textContent = task.q;
+document.getElementById('quiz-question-text').textContent = task.q;
     document.getElementById('quiz-streak-badge').textContent = `🔥 ${state.streak} Seri`;
+
+    // 🔊 Sesli Oku Butonu
+    const btnReadQuiz = document.getElementById('btn-read-quiz-q');
+    if (btnReadQuiz) {
+      btnReadQuiz.onclick = () => {
+        const letters = ['A', 'B', 'C', 'D'];
+        let speakText = task.q + '. ';
+        task.options.forEach((opt, idx) => {
+          speakText += letters[idx] + ' şıkkı: ' + opt + '. ';
+        });
+        SpeechService.speak(speakText, btnReadQuiz);
+      };
+    }
 
     const feedbackBox = document.getElementById('quiz-feedback-box');
     feedbackBox.classList.add('hidden');
@@ -568,6 +890,7 @@
       state.streak++;
       state.quizScore += 25;
       playAudioChime('correct');
+      triggerHaptic('success');
 
       feedbackIcon.textContent = '🌟';
       feedbackTitle.textContent = 'Mükemmel, Doğru Cevap!';
@@ -594,11 +917,34 @@
 
       state.streak = 0;
       playAudioChime('wrong');
+      triggerHaptic('warning');
+
+      // 🧠 Yıldız Kumbarasına Kaydet
+      addToMistakeBank(task, state.currentSubjectKey, state.currentTopic ? state.currentTopic.page : 12);
 
       feedbackIcon.textContent = '💡';
       feedbackTitle.textContent = 'Önemli Hatırlatma:';
       feedbackMsg.textContent = task.hint || 'Üzülme, dikkatini toplayarak bir dahaki sefere doğru yapacaksın!';
       feedbackBox.className = 'feedback-box feedback-wrong';
+
+      // 💡 "Aha! Şimdi Anladım!" Çözüm Kartını 650ms sonra aç
+      setTimeout(() => {
+        openSolutionCard(task, state.currentTopic ? state.currentTopic.page : 12,
+          // Tekrar Dene
+          () => {
+            renderCurrentQuestion();
+          },
+          // Sonraki Soru
+          () => {
+            if (state.currentTaskIndex < state.currentTopic.tasks.length - 1) {
+              state.currentTaskIndex++;
+              renderCurrentQuestion();
+            } else {
+              finishTopicQuiz();
+            }
+          }
+        );
+      }, 650);
     }
 
     feedbackBox.classList.remove('hidden');
@@ -668,7 +1014,20 @@
 
     document.getElementById('exam-counter-text').textContent = `Soru ${qIndex + 1} / ${totalQ}`;
     document.getElementById('exam-score-live').textContent = `Doğru: ${state.examCorrectCount}`;
-    document.getElementById('exam-question-text').textContent = qData.q;
+document.getElementById('exam-question-text').textContent = qData.q;
+
+    // 🔊 Sınav Sorusu Sesli Oku Butonu
+    const btnReadExam = document.getElementById('btn-read-exam-q');
+    if (btnReadExam) {
+      btnReadExam.onclick = () => {
+        const letters = ['A', 'B', 'C', 'D'];
+        let speakText = qData.q + '. ';
+        qData.options.forEach((opt, idx) => {
+          speakText += letters[idx] + ' şıkkı: ' + opt + '. ';
+        });
+        SpeechService.speak(speakText, btnReadExam);
+      };
+    }
 
     const container = document.getElementById('exam-options-container');
     container.innerHTML = '';
@@ -704,6 +1063,16 @@
       `;
       state.examCorrectCount++;
       playAudioChime('correct');
+      triggerHaptic('success');
+
+      setTimeout(() => {
+        if (state.currentExamQIndex < state.currentExam.questions.length - 1) {
+          state.currentExamQIndex++;
+          renderExamQuestion();
+        } else {
+          finishThemeExam();
+        }
+      }, 1000);
     } else {
       btnElement.classList.add('is-wrong-choice');
       btnElement.innerHTML = `
@@ -723,16 +1092,30 @@
       }
       state.examWrongCount++;
       playAudioChime('wrong');
-    }
+      triggerHaptic('warning');
 
-    setTimeout(() => {
-      if (state.currentExamQIndex < state.currentExam.questions.length - 1) {
-        state.currentExamQIndex++;
-        renderExamQuestion();
-      } else {
-        finishThemeExam();
-      }
-    }, 1100);
+      // 🧠 Yıldız Kumbarasına Kaydet
+      addToMistakeBank(qData, state.currentSubjectKey, state.currentExam ? state.currentExam.page : 12);
+
+      // 💡 Çözüm Kartı Aç
+      setTimeout(() => {
+        openSolutionCard(qData, state.currentExam ? state.currentExam.page : 12,
+          // Tekrar Dene
+          () => {
+            renderExamQuestion();
+          },
+          // Sonraki Soru
+          () => {
+            if (state.currentExamQIndex < state.currentExam.questions.length - 1) {
+              state.currentExamQIndex++;
+              renderExamQuestion();
+            } else {
+              finishThemeExam();
+            }
+          }
+        );
+      }, 650);
+    }
   }
 
   function finishThemeExam() {
@@ -1302,6 +1685,25 @@
           showScreen('screen-topics');
         }
       });
+    }
+
+
+    // 🧠 Yıldız Kumbarası Butonları
+    const btnKumbara = document.getElementById('btn-kumbara');
+    if (btnKumbara) {
+      btnKumbara.addEventListener('click', () => {
+        openKumbaraArena();
+      });
+    }
+
+    const btnCloseKumbaraX = document.getElementById('btn-close-kumbara-x');
+    if (btnCloseKumbaraX) {
+      btnCloseKumbaraX.addEventListener('click', closeKumbaraArena);
+    }
+
+    const btnCloseKumbaraBottom = document.getElementById('btn-close-kumbara-bottom');
+    if (btnCloseKumbaraBottom) {
+      btnCloseKumbaraBottom.addEventListener('click', closeKumbaraArena);
     }
 
     // Başarılar ekranı

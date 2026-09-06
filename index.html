@@ -137,6 +137,10 @@
         </div>
 
         <div class="header-actions">
+          <button id="btn-kumbara" class="action-circle-btn kumbara-circle-btn" title="Yıldız Kumbarası (Pekiştirme Soruları)">
+            <span>🧠</span>
+            <span id="kumbara-counter-badge" class="kumbara-badge hidden">0</span>
+          </button>
           <button id="btn-sound" class="action-circle-btn" title="Ses Aç/Kapat">🔊</button>
           <button id="btn-badges-nav" class="action-circle-btn" title="Başarılar & Rozetler">🏅</button>
         </div>
@@ -274,7 +278,13 @@
         <div class="question-container">
           <div class="question-badge-row">
             <span id="quiz-q-type-badge" class="q-type-badge">🎯 Kazanım Sorusu</span>
-            <span id="quiz-streak-badge" class="streak-badge">🔥 1 Seri</span>
+            <div class="q-actions-inline">
+              <button id="btn-read-quiz-q" class="btn-voice-read" title="Soruyu Sesli Dinle">
+                <span class="v-icon">🔊</span>
+                <span class="v-text">Dinle</span>
+              </button>
+              <span id="quiz-streak-badge" class="streak-badge">🔥 1 Seri</span>
+            </div>
           </div>
           <h3 id="quiz-question-text" class="question-text">Soru metni yükleniyor...</h3>
         </div>
@@ -315,7 +325,13 @@
         <div class="question-container">
           <div class="question-badge-row">
             <span class="q-type-badge">📝 MEB Değerlendirme Sorusu</span>
-            <span id="exam-score-live" class="streak-badge">Doğru: 0</span>
+            <div class="q-actions-inline">
+              <button id="btn-read-exam-q" class="btn-voice-read" title="Soruyu Sesli Dinle">
+                <span class="v-icon">🔊</span>
+                <span class="v-text">Dinle</span>
+              </button>
+              <span id="exam-score-live" class="streak-badge">Doğru: 0</span>
+            </div>
           </div>
           <h3 id="exam-question-text" class="question-text">Sınav sorusu yükleniyor...</h3>
         </div>
@@ -584,6 +600,93 @@
           </button>
           <button id="btn-close-fact" class="btn-secondary-action">
             <span>Kapat</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- C. 💡 "AHA! ŞİMDİ ANLADIM!" AKILLI ÇÖZÜM & ÖĞRETMEN KARTI MODALI -->
+    <div id="modal-solution-card" class="app-modal-backdrop">
+      <div class="solution-card-modal">
+        <button class="modal-close-x" id="btn-close-solution-x" title="Kapat">✕</button>
+        
+        <div class="solution-card-top">
+          <span class="sol-badge">💡 ÖĞRENME FIRSATI</span>
+          <h2 class="sol-title">Aha! Şimdi Anladım!</h2>
+          <p class="sol-gentle-sub">Hiç sorun değil, hata yaparak öğreniyoruz! İşte püf noktası:</p>
+        </div>
+
+        <div class="sol-correct-banner">
+          <span class="sol-correct-label">✔ DOĞRU CEVAP:</span>
+          <span class="sol-correct-text" id="sol-correct-text">Doğru şık yükleniyor...</span>
+        </div>
+
+        <div class="sol-hint-card">
+          <div class="sol-hint-header">
+            <span>🔍 Nasıl Düşünmeliyiz?</span>
+            <span id="sol-book-ref-pill" class="sol-book-pill">📖 MEB Kitabı</span>
+          </div>
+          <p id="sol-hint-body" class="sol-hint-body">Açıklama metni...</p>
+        </div>
+
+        <div class="sol-actions-row">
+          <button id="btn-sol-retry" class="btn-sol-retry">
+            <span>🔄</span>
+            <span>Soruyu Tekrar Dene!</span>
+          </button>
+          <button id="btn-sol-next" class="btn-sol-next">
+            <span>Sonraki Soruya Geç</span>
+            <span>→</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- D. 🧠 YILDIZ KUMBARASI (PEKİŞTİRME & HATA KUMBARASI ARENASI) -->
+    <div id="modal-kumbara-arena" class="app-modal-backdrop">
+      <div class="kumbara-card-modal">
+        <button class="modal-close-x" id="btn-close-kumbara-x" title="Kapat">✕</button>
+        
+        <div class="kumbara-header">
+          <div class="kumbara-icon-wrap">🧠</div>
+          <div class="kumbara-title-wrap">
+            <span class="kumbara-tag">⭐ SÜPER GÜÇ DEPOSU</span>
+            <h2 class="kumbara-title">Yıldız Kumbarası</h2>
+            <p class="kumbara-sub">Daha önce takıldığın soruları çöz, kumbarayı boşalt ve +2 ⭐ Yıldız kazan!</p>
+          </div>
+        </div>
+
+        <!-- Aktif Soru Çözüm Alanı -->
+        <div id="kumbara-active-area" class="kumbara-active-area">
+          <div class="kumbara-q-meta">
+            <span id="kumbara-q-subject" class="kumbara-meta-pill">Matematik</span>
+            <span id="kumbara-q-book" class="kumbara-meta-pill">📖 MEB s. 12</span>
+            <span id="kumbara-count-text" class="kumbara-count-text">Kalan Soru: 1 / 3</span>
+          </div>
+          <h3 id="kumbara-q-text" class="kumbara-q-text">Soru metni...</h3>
+          <div id="kumbara-options-grid" class="options-grid">
+            <!-- Şıklar dinamik yüklenir -->
+          </div>
+          <div id="kumbara-feedback-box" class="feedback-box hidden">
+            <div class="feedback-icon" id="kumbara-feedback-icon">🌟</div>
+            <div class="feedback-text-content">
+              <div id="kumbara-feedback-title" class="feedback-title">Harika!</div>
+              <div id="kumbara-feedback-message" class="feedback-message">Açıklama</div>
+            </div>
+            <button id="btn-kumbara-next" class="btn-next-action">Sıradaki Kumbaraya Geç →</button>
+          </div>
+        </div>
+
+        <!-- Kumbaranın Boş / Kutlama Durumu -->
+        <div id="kumbara-empty-state" class="kumbara-empty-state hidden">
+          <span class="empty-star-icon">🌟</span>
+          <h3>Tebrikler! Kumbaran Bomboş!</h3>
+          <p>Tüm pekiştirme sorularını başarıyla çözdün ve tüm kazanımları süper öğrendin!</p>
+        </div>
+
+        <div class="kumbara-footer">
+          <button id="btn-close-kumbara-bottom" class="btn-secondary-action">
+            <span>Tamam, Kapat</span>
           </button>
         </div>
       </div>

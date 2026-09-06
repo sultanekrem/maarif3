@@ -257,8 +257,11 @@
     cleanTurkishText: function(text) {
       if (!text) return '';
       let res = String(text)
+        .replace(/(\d+)\s*\+\s*(\d+)/g, '$1 artı $2')
         .replace(/\+/g, ' artı ')
-        .replace(/-/g, ' eksi ')
+        .replace(/(\d+)\s*-\s*(\d+)/g, '$1 eksi $2')
+        .replace(/\s*-\s*/g, ', ')
+        .replace(/['"“”‘’]/g, '')
         .replace(/×|\*/g, ' çarpı ')
         .replace(/÷|\//g, ' bölü ')
         .replace(/=/g, ' eşittir ');
@@ -278,7 +281,13 @@
     cleanEnglishText: function(text) {
       if (!text) return '';
       return String(text)
-        .replace(/\(\s*\d+\s*\)/g, '') // Remove (40) numbers in parens
+        // Strip any Turkish words or clues in parentheses: (sınıf arkadaşım), (kitaplıklar), (güneşli)
+        .replace(/\([^\)]*\)/g, '')
+        // Fill-in-the-blank dots become a brief natural breath pause
+        .replace(/[._]{2,}/g, ', ')
+        // Dialogue dash / hyphen becomes a pause comma (never minus or eksi)
+        .replace(/\s*-\s*/g, ', ')
+        .replace(/['"“”‘’]/g, '')
         .replace(/\.+$/, '')
         .replace(/\s+/g, ' ')
         .trim();

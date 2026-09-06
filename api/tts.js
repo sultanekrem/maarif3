@@ -4,7 +4,13 @@ function sanitizeForSpeech(str, isEnglish) {
   if (isEnglish) {
     return String(str || '')
       .replace(/&/g, ' and ')
-      .replace(/["']/g, '')
+      // Strip Turkish words in parentheses, e.g. (sınıf arkadaşım), (kitaplıklar), (güneşli)
+      .replace(/\([^\)]*\)/g, '')
+      // Replace fill-in-the-blank dots with a natural pause
+      .replace(/[._]{2,}/g, ', ')
+      // Strip dialogue dash / hyphen (never read as minus or dash)
+      .replace(/\s*-\s*/g, ', ')
+      .replace(/['"“”‘’]/g, '')
       .replace(/<[^>]*>/g, ' ')
       .replace(/\s+/g, ' ')
       .trim();
@@ -13,9 +19,13 @@ function sanitizeForSpeech(str, isEnglish) {
     .replace(/&/g, ' ve ')
     .replace(/</g, ' küçüktür ')
     .replace(/>/g, ' büyüktür ')
-    .replace(/["']/g, '')
+    .replace(/['"“”‘’]/g, '')
+    // Math operations: only turn + and - into 'artı' / 'eksi' when between numbers
+    .replace(/(\d+)\s*\+\s*(\d+)/g, '$1 artı $2')
     .replace(/\+/g, ' artı ')
-    .replace(/-/g, ' eksi ')
+    .replace(/(\d+)\s*-\s*(\d+)/g, '$1 eksi $2')
+    // Any remaining standalone dashes (dialogues, quotes, titles) become a natural pause comma
+    .replace(/\s*-\s*/g, ', ')
     .replace(/×|\*/g, ' çarpı ')
     .replace(/÷|\//g, ' bölü ')
     .replace(/=/g, ' eşittir ')

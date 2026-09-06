@@ -250,6 +250,9 @@
       let qText = this.cleanText(qData.q);
       
       let speech = qText + '. ';
+      if (qData.tr_q) {
+        speech += 'Türkçe anlamı: ' + this.cleanText(qData.tr_q) + '. ';
+      }
 
       if (Array.isArray(qData.options) && qData.options.length > 0) {
         const letters = ['A', 'B', 'C', 'D'];
@@ -486,7 +489,15 @@
       const qMirror = document.getElementById(`sp-question-mirror-${type}`);
       if (qTextSource && qMirror) {
         const fullText = qTextSource.innerText || qTextSource.textContent || '';
-        qMirror.innerHTML = `<span style="color:#FBBF24; margin-right:6px;">❓ Soru:</span> ${fullText.trim()}`;
+        const trSource = type === 'quiz' ? document.getElementById('quiz-tr-text') :
+                         type === 'exam' ? document.getElementById('exam-tr-text') :
+                         document.getElementById('kumbara-tr-text');
+        const trText = (trSource && trSource.textContent) ? trSource.textContent.trim() : '';
+        let mirrorHtml = `<div><span style="color:#FBBF24; margin-right:6px;">❓ Soru:</span> ${fullText.trim()}</div>`;
+        if (trText) {
+          mirrorHtml += `<div style="margin-top:6px; font-size:0.86em; color:#93C5FD; background:rgba(14,116,144,0.3); padding:4px 8px; border-radius:6px;"><span style="color:#38BDF8; font-weight:800;">🇹🇷 Çevirisi:</span> ${trText}</div>`;
+        }
+        qMirror.innerHTML = mirrorHtml;
       }
 
       const canvas = document.getElementById(`sp-canvas-${type}`);
@@ -824,6 +835,18 @@
 
     const qTextEl = document.getElementById('kumbara-q-text');
     if (qTextEl) qTextEl.textContent = item.q;
+
+    // 🇹🇷 İki Dilli Türkçe Çeviri Çubuğu
+    const kumbaraTrBanner = document.getElementById('kumbara-tr-banner');
+    const kumbaraTrText = document.getElementById('kumbara-tr-text');
+    if (kumbaraTrBanner && kumbaraTrText) {
+      if (item.tr_q) {
+        kumbaraTrText.textContent = item.tr_q;
+        kumbaraTrBanner.classList.remove('hidden');
+      } else {
+        kumbaraTrBanner.classList.add('hidden');
+      }
+    }
 
     // 🎯 Aralıklı Tekrar İlerleme Göstergesi (kaç kez doğru yapıldı)
     const correctCount = item.correctCount || 0;
@@ -1401,6 +1424,18 @@
     document.getElementById('quiz-question-text').textContent = task.q;
     document.getElementById('quiz-streak-badge').textContent = `🔥 ${state.streak} Seri`;
 
+    // 🇹🇷 İki Dilli Türkçe Çeviri Çubuğu
+    const quizTrBanner = document.getElementById('quiz-tr-banner');
+    const quizTrText = document.getElementById('quiz-tr-text');
+    if (quizTrBanner && quizTrText) {
+      if (task.tr_q) {
+        quizTrText.textContent = task.tr_q;
+        quizTrBanner.classList.remove('hidden');
+      } else {
+        quizTrBanner.classList.add('hidden');
+      }
+    }
+
     // Karalama tahtasını her yeni soruda kapat
     ScratchpadService.close('quiz');
 
@@ -1578,6 +1613,9 @@
   // 6. MEB TEMA VE GENEL DEĞERLENDİRME SINAVI MOTORU
   function startThemeExam(examData) {
     state.currentExam = examData;
+    if (!state.currentExam.questions && state.currentExam.tasks) {
+      state.currentExam.questions = state.currentExam.tasks;
+    }
     state.currentExamQIndex = 0;
     state.examScore = 0;
     state.examCorrectCount = 0;
@@ -1599,6 +1637,18 @@
     document.getElementById('exam-counter-text').textContent = `Soru ${qIndex + 1} / ${totalQ}`;
     document.getElementById('exam-score-live').textContent = `Doğru: ${state.examCorrectCount}`;
     document.getElementById('exam-question-text').textContent = qData.q;
+
+    // 🇹🇷 İki Dilli Türkçe Çeviri Çubuğu
+    const examTrBanner = document.getElementById('exam-tr-banner');
+    const examTrText = document.getElementById('exam-tr-text');
+    if (examTrBanner && examTrText) {
+      if (qData.tr_q) {
+        examTrText.textContent = qData.tr_q;
+        examTrBanner.classList.remove('hidden');
+      } else {
+        examTrBanner.classList.add('hidden');
+      }
+    }
     ScratchpadService.close('exam');
 
     // 🔊 Sınav Sorusu Sesli Oku Butonu

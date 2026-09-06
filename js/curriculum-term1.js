@@ -2437,7 +2437,8 @@ window.CURRICULUM_TERM1 = {
                   "A driver"
                 ],
                 "ans": 0,
-                "hint": "Library -> Librarian (Kütüphaneci)"
+                "hint": "Library -> Librarian (Kütüphaneci)",
+                "tr_q": "Okul kütüphanesinde çalışan ve kitap bulmamıza yardım eden kimdir?"
               },
               {
                 "q": "'Who is this?' - 'This is my ............. (sınıf arkadaşım).'",
@@ -2448,7 +2449,8 @@ window.CURRICULUM_TERM1 = {
                   "farmer"
                 ],
                 "ans": 0,
-                "hint": "Sınıf arkadaşı = Classmate"
+                "hint": "Sınıf arkadaşı = Classmate",
+                "tr_q": "'Bu kim?' - 'Bu benim ............. (sınıf arkadaşım).'"
               }
             ],
             "fact_card": {
@@ -2476,7 +2478,8 @@ window.CURRICULUM_TERM1 = {
                   "In the music room"
                 ],
                 "ans": 0,
-                "hint": "Spor salonu = Gym"
+                "hint": "Spor salonu = Gym",
+                "tr_q": "Öğrenciler okulda nerede basketbol oynar ve beden eğitimi yapar?"
               },
               {
                 "q": "'Where is Daphne?' - 'She is in the ........... playing the piano.'",
@@ -2487,7 +2490,8 @@ window.CURRICULUM_TERM1 = {
                   "office"
                 ],
                 "ans": 0,
-                "hint": "Piyano müzik odasındadır (music room)."
+                "hint": "Piyano müzik odasındadır (music room).",
+                "tr_q": "'Daphne nerede?' - 'O ........... odasında piyano çalıyor.'"
               }
             ],
             "fact_card": {
@@ -2515,7 +2519,8 @@ window.CURRICULUM_TERM1 = {
                   "August"
                 ],
                 "ans": 0,
-                "hint": "October (Ekim) -> November (Kasım)"
+                "hint": "October (Ekim) -> November (Kasım)",
+                "tr_q": "Ekim ayından (October) sonra hangi ay gelir?"
               },
               {
                 "q": "'How old are you?' sorusuna hangi cevap verilir?",
@@ -2526,7 +2531,8 @@ window.CURRICULUM_TERM1 = {
                   "Fine, thanks."
                 ],
                 "ans": 0,
-                "hint": "How old are you? = Kaç yaşındasın?"
+                "hint": "How old are you? = Kaç yaşındasın?",
+                "tr_q": "'Kaç yaşındasın?' (How old are you?) sorusuna hangi cevap verilir?"
               }
             ],
             "fact_card": {
@@ -2554,7 +2560,8 @@ window.CURRICULUM_TERM1 = {
                   "are"
                 ],
                 "ans": 0,
-                "hint": "Yasak ve yapılmaması gerekenler için mustn't kullanılır."
+                "hint": "Yasak ve yapılmaması gerekenler için mustn't kullanılır.",
+                "tr_q": "Okulda koridorda koşmamalısın! (Boşluğa hangisi gelir?)"
               },
               {
                 "q": "You ........... listen to your teacher carefully in the lesson.",
@@ -2565,7 +2572,8 @@ window.CURRICULUM_TERM1 = {
                   "don't"
                 ],
                 "ans": 0,
-                "hint": "Zorunluluk ve yapılması gerekenler için must kullanılır."
+                "hint": "Zorunluluk ve yapılması gerekenler için must kullanılır.",
+                "tr_q": "Derste öğretmeninizi dikkatlice dinlemelisiniz. (Boşluğa hangisi gelir?)"
               }
             ],
             "fact_card": {
@@ -2590,7 +2598,8 @@ window.CURRICULUM_TERM1 = {
                 "In the garden"
               ],
               "ans": 0,
-              "hint": "Experiments are done in the science lab (laboratuvar)."
+              "hint": "Experiments are done in the science lab (laboratuvar).",
+              "tr_q": "Öğrenciler fen deneylerini nerede yaparlar?"
             },
             {
               "q": "Which month is between June and August?",
@@ -2601,7 +2610,8 @@ window.CURRICULUM_TERM1 = {
                 "October"
               ],
               "ans": 0,
-              "hint": "June, July, August (Haziran, Temmuz, Ağustos)."
+              "hint": "June, July, August (Haziran, Temmuz, Ağustos).",
+              "tr_q": "Haziran (June) ile Ağustos (August) arasındaki ay hangisidir?"
             },
             {
               "q": "You ............ shout or run in the library!",
@@ -2612,7 +2622,32 @@ window.CURRICULUM_TERM1 = {
                 "are"
               ],
               "ans": 0,
-              "hint": "Kütüphanede bağırmak yasaktır -> mustn't."
+              "hint": "Kütüphanede bağırmak yasaktır -> mustn't.",
+              "tr_q": "Kütüphanede bağırmamalı veya koşmamalısın! (Boşluğa hangisi gelir?)"
+            },
+            {
+              "q": "Where is the headmaster (müdür)? - He is in the ...........",
+              "tr_q": "Okul müdürü nerede? - O ........... odasında.",
+              "options": [
+                "office",
+                "canteen",
+                "garden",
+                "gym"
+              ],
+              "ans": 0,
+              "hint": "Müdür ofiste / idare odasındadır (office)."
+            },
+            {
+              "q": "You ........... eat food or chew gum in the classroom!",
+              "tr_q": "Sınıfta yemek yememeli ve sakız çiğnememelisin!",
+              "options": [
+                "mustn't",
+                "must",
+                "can",
+                "are"
+              ],
+              "ans": 0,
+              "hint": "Sınıfta yemek yemek yasaktır -> mustn't."
             }
           ]
         }
@@ -2639,7 +2674,8 @@ window.CURRICULUM_TERM1 = {
                   "A schoolbag"
                 ],
                 "ans": 0,
-                "hint": "Cetvel = Ruler"
+                "hint": "Cetvel = Ruler",
+                "tr_q": "Bu nedir? (Düz çizgi çekmek için kullanılan cetvel)"
               },
               {
                 "q": "'What are they?' - 'They are ............. (kitaplıklar).'",
@@ -2650,7 +2686,8 @@ window.CURRICULUM_TERM1 = {
                   "erasers"
                 ],
                 "ans": 0,
-                "hint": "Bookshelf -> Bookshelves (Kitaplıklar)"
+                "hint": "Bookshelf -> Bookshelves (Kitaplıklar)",
+                "tr_q": "'Bunlar nedir?' - 'Onlar ............. (kitaplıklar).'"
               }
             ],
             "fact_card": {
@@ -2678,7 +2715,8 @@ window.CURRICULUM_TERM1 = {
                   "It is five past."
                 ],
                 "ans": 0,
-                "hint": "Tam saatlerde 'o'clock' kullanılır: It is five o'clock."
+                "hint": "Tam saatlerde 'o'clock' kullanılır: It is five o'clock.",
+                "tr_q": "Saat tam 5:00 iken İngilizce nasıl söylenir?"
               },
               {
                 "q": "'What time is it?' sorusu ne anlama gelir?",
@@ -2689,7 +2727,8 @@ window.CURRICULUM_TERM1 = {
                   "Kaç yaşındasın?"
                 ],
                 "ans": 0,
-                "hint": "What time is it? = Saat kaç?"
+                "hint": "What time is it? = Saat kaç?",
+                "tr_q": "'What time is it?' sorusunun Türkçe anlamı nedir?"
               }
             ],
             "fact_card": {
@@ -2717,7 +2756,8 @@ window.CURRICULUM_TERM1 = {
                   "Forty"
                 ],
                 "ans": 0,
-                "hint": "30 = Thirty, 13 = Thirteen"
+                "hint": "30 = Thirty, 13 = Thirteen",
+                "tr_q": "30 sayısının İngilizce kelime karşılığı hangisidir?"
               },
               {
                 "q": "'How many books have you got?' - 'I have got ........... (40) books.'",
@@ -2728,7 +2768,8 @@ window.CURRICULUM_TERM1 = {
                   "fifty"
                 ],
                 "ans": 0,
-                "hint": "40 = Forty"
+                "hint": "40 = Forty",
+                "tr_q": "'Kaç kitabın var?' - 'Benim ........... (40) kitabım var.'"
               }
             ],
             "fact_card": {
@@ -2756,7 +2797,8 @@ window.CURRICULUM_TERM1 = {
                   "snowy"
                 ],
                 "ans": 0,
-                "hint": "Güneşli = Sunny"
+                "hint": "Güneşli = Sunny",
+                "tr_q": "'Bugün hava nasıl?' - 'Hava ............ (güneşli).'"
               },
               {
                 "q": "Sayıları, toplamayı ve çarpmayı öğrendiğimiz dersin İngilizcesi nedir?",
@@ -2767,7 +2809,8 @@ window.CURRICULUM_TERM1 = {
                   "English"
                 ],
                 "ans": 0,
-                "hint": "Matematik dersi = Maths"
+                "hint": "Matematik dersi = Maths",
+                "tr_q": "Matematik dersinin İngilizce karşılığı nedir?"
               }
             ],
             "fact_card": {
@@ -2792,7 +2835,8 @@ window.CURRICULUM_TERM1 = {
                 "It is ten past."
               ],
               "ans": 0,
-              "hint": "Saat 10:00 -> It is ten o'clock."
+              "hint": "Saat 10:00 -> It is ten o'clock.",
+              "tr_q": "Saat kaç? (10:00)"
             },
             {
               "q": "We learn songs and play instruments in ............ lesson.",
@@ -2803,7 +2847,32 @@ window.CURRICULUM_TERM1 = {
                 "PE"
               ],
               "ans": 0,
-              "hint": "Müzik dersi -> Music lesson."
+              "hint": "Müzik dersi -> Music lesson.",
+              "tr_q": "Şarkılar öğrendiğimiz ve müzik aleti çaldığımız ders hangisidir?"
+            },
+            {
+              "q": "How many days are there in a week? (Bir haftada kaç gün vardır?)",
+              "tr_q": "Bir haftada kaç gün vardır?",
+              "options": [
+                "Seven (7)",
+                "Five (5)",
+                "Twelve (12)",
+                "Thirty (30)"
+              ],
+              "ans": 0,
+              "hint": "A week has seven days (7 gün)."
+            },
+            {
+              "q": "'It is rainy and windy today.' - Take your ........... (Şemsiyeni al).",
+              "tr_q": "'Bugün hava yağmurlu ve rüzgarlı.' - ........... al.",
+              "options": [
+                "umbrella",
+                "sunglasses",
+                "swimsuit",
+                "shorts"
+              ],
+              "ans": 0,
+              "hint": "Yağmurlu havada şemsiye (umbrella) alınır."
             }
           ]
         }
@@ -2830,7 +2899,8 @@ window.CURRICULUM_TERM1 = {
                   "footies"
                 ],
                 "ans": 0,
-                "hint": "Foot düzensiz çoğuldur ve feet olur."
+                "hint": "Foot düzensiz çoğuldur ve feet olur.",
+                "tr_q": "'Foot' (ayak) kelimesinin çoğulu (ayaklar) hangisidir?"
               },
               {
                 "q": "'She has got curly blonde hair.' cümlesinin Türkçe anlamı nedir?",
@@ -2841,7 +2911,8 @@ window.CURRICULUM_TERM1 = {
                   "Onun mavi gözleri var."
                 ],
                 "ans": 0,
-                "hint": "Curly = Kıvırcık, Blonde = Sarı saç"
+                "hint": "Curly = Kıvırcık, Blonde = Sarı saç",
+                "tr_q": "'She has got curly blonde hair.' cümlesi Türkçe ne demektir?"
               }
             ],
             "fact_card": {
@@ -2869,7 +2940,8 @@ window.CURRICULUM_TERM1 = {
                   "Shorts"
                 ],
                 "ans": 0,
-                "hint": "Kaban/palto = Coat"
+                "hint": "Kaban/palto = Coat",
+                "tr_q": "Soğuk havalarda giyilen kaban/paltonun İngilizcesi nedir?"
               },
               {
                 "q": "Güneşli günlerde gözlerimizi korumak için ne takarız?",
@@ -2880,7 +2952,8 @@ window.CURRICULUM_TERM1 = {
                   "Socks"
                 ],
                 "ans": 0,
-                "hint": "Güneş gözlüğü = Sunglasses"
+                "hint": "Güneş gözlüğü = Sunglasses",
+                "tr_q": "Güneşli günlerde gözlerimizi korumak için ne takarız? (Sunglasses)"
               }
             ],
             "fact_card": {
@@ -2908,7 +2981,8 @@ window.CURRICULUM_TERM1 = {
                   "I enjoy"
                 ],
                 "ans": 0,
-                "hint": "Dislike veya hate sevmemek anlamına gelir."
+                "hint": "Dislike veya hate sevmemek anlamına gelir.",
+                "tr_q": "Bir şeyi sevmediğimizi (hoşlanmadığımızı) belirtmek için hangisi kullanılır?"
               },
               {
                 "q": "'I love reading books in the library.' cümlesi ne anlama gelir?",
@@ -2919,7 +2993,8 @@ window.CURRICULUM_TERM1 = {
                   "Kitapları sevmiyorum."
                 ],
                 "ans": 0,
-                "hint": "Love = Çok sevmek"
+                "hint": "Love = Çok sevmek",
+                "tr_q": "'I love reading books in the library.' cümlesi ne anlama gelir?"
               }
             ],
             "fact_card": {
@@ -2944,7 +3019,8 @@ window.CURRICULUM_TERM1 = {
                 "I like apples."
               ],
               "ans": 0,
-              "hint": "Fiziksel görünüş tanımlanıyor: uzun kıvırcık saç ve yeşil gözler."
+              "hint": "Fiziksel görünüş tanımlanıyor: uzun kıvırcık saç ve yeşil gözler.",
+              "tr_q": "O dış görünüş olarak nasıl biri? (Fiziksel tarif)"
             },
             {
               "q": "It is cold and snowy today. You should wear your ............",
@@ -2955,7 +3031,32 @@ window.CURRICULUM_TERM1 = {
                 "T-shirt and shorts"
               ],
               "ans": 0,
-              "hint": "Soğuk ve karlı havada kaban ve bot (coat and boots) giyilir."
+              "hint": "Soğuk ve karlı havada kaban ve bot (coat and boots) giyilir.",
+              "tr_q": "Bugün hava soğuk ve karlı. ............ giymelisin."
+            },
+            {
+              "q": "Which one is an animal with four legs and long ears?",
+              "tr_q": "Dört bacağı ve uzun kulakları olan sevimli hayvan hangisidir?",
+              "options": [
+                "A rabbit (Tavşan)",
+                "A bird (Kuş)",
+                "A fish (Balık)",
+                "A bee (Arı)"
+              ],
+              "ans": 0,
+              "hint": "Tavşan (rabbit) uzun kulaklıdır."
+            },
+            {
+              "q": "'Do you like ice cream?' - 'Yes, ...........'",
+              "tr_q": "'Dondurma sever misin?' - 'Evet, ...........'",
+              "options": [
+                "I do.",
+                "I don't.",
+                "it is.",
+                "I am."
+              ],
+              "ans": 0,
+              "hint": "Do you like...? sorusuna 'Yes, I do' şeklinde olumlu cevap verilir."
             }
           ]
         }
@@ -2973,7 +3074,8 @@ window.CURRICULUM_TERM1 = {
             "Goodbye!",
             "See you!"
           ],
-          "ans": 1
+          "ans": 1,
+          "tr_q": "Sabahleyin 'Günaydın' demek için hangisi söylenir?"
         },
         {
           "q": "'What is your name?' sorusuna nasıl cevap verilir?",
@@ -2983,7 +3085,8 @@ window.CURRICULUM_TERM1 = {
             "I am fine.",
             "Yes, I am."
           ],
-          "ans": 1
+          "ans": 1,
+          "tr_q": "'Adın ne?' (What is your name?) sorusuna nasıl cevap verilir?"
         },
         {
           "q": "'How are you?' sorusunun anlamı nedir?",
@@ -2993,7 +3096,8 @@ window.CURRICULUM_TERM1 = {
             "Nasılsın?",
             "Nerelisin?"
           ],
-          "ans": 2
+          "ans": 2,
+          "tr_q": "'How are you?' sorusunun Türkçe karşılığı nedir?"
         },
         {
           "q": "'Mother' kelimesinin Türkçe karşılığı nedir?",
@@ -3003,7 +3107,8 @@ window.CURRICULUM_TERM1 = {
             "Kız kardeş",
             "Büyükbaba"
           ],
-          "ans": 1
+          "ans": 1,
+          "tr_q": "'Mother' kelimesinin Türkçe anlamı nedir?"
         },
         {
           "q": "Karnı acıkan bir çocuk kendini nasıl ifade eder?",
@@ -3013,7 +3118,8 @@ window.CURRICULUM_TERM1 = {
             "I am hungry.",
             "I am cold."
           ],
-          "ans": 2
+          "ans": 2,
+          "tr_q": "'Ben açım' demek isteyen çocuk hangisini söyler?"
         },
         {
           "q": "'The elephant is big.' cümlesi ne anlama gelir?",
@@ -3023,7 +3129,8 @@ window.CURRICULUM_TERM1 = {
             "Fil hızlıdır.",
             "Fil yavaştır."
           ],
-          "ans": 1
+          "ans": 1,
+          "tr_q": "'The elephant is big.' cümlesinin Türkçe anlamı nedir?"
         }
       ]
     }
@@ -3308,75 +3415,64 @@ window.CURRICULUM_TERM1 = {
           }
         ],
         "exam": {
-          "id": "turkce_tema1_exam",
-          "title": "1. Tema Değerlendirme Sınavı",
-          "book_ref": "MEB Kitabı s. 54",
-          "tasks": [
+          "id": "turkce_t1_exam",
+          "title": "1. Tema Değerlendirme Sınavı: Değerlerimizle Yaşıyoruz",
+          "book_ref": "MEB Türkçe 1. Kitap s. 18-55",
+          "questions": [
             {
-              "q": "Metne göre Bilge, sabah uyandığında anne ve babasına hangi nezaket sözcüğünü söylemiştir? (s. 54)",
+              "q": "Kelebek ile Lavanta dinleme metninde anlatılan en temel insani değer hangisidir? (s. 22)",
               "options": [
-                "Günaydın",
-                "İyi akşamlar",
-                "Görüşürüz",
-                "Hoşça kal"
+                "Nezaket, dostluk ve saygılı dinleme",
+                "Kibir ve bencillik",
+                "Hızlı konuşup başkasını dinlememek",
+                "Yalnız kalmayı istemek"
               ],
               "ans": 0,
-              "hint": "Bilge sabah kalktığında ailesine 'Günaydın' demiştir."
+              "hint": "Kelebek ve lavantanın diyaloğu nezaket ve dostluğu simgeler."
             },
             {
-              "q": "Bilge, apartmandan çıkarken zorlanan yaşlı komşusu Hasan amcaya nasıl yardımcı olmuştur? (s. 54)",
+              "q": "Nobel ödüllü bilim insanımız Aziz Sancar'a göre başarının en önemli sırrı nedir? (s. 28)",
               "options": [
-                "Eşyalarını alıp kapısına kadar taşıyarak",
-                "Sadece el sallayarak",
-                "Kapıyı yüzüne kapatarak",
-                "Hızlıca yanından uzaklaşarak"
+                "Çok ve sabırla, azimle çalışmak",
+                "Sadece şanslı olmak",
+                "Ders çalışmadan beklemek",
+                "Zorluk görünce vazgeçmek"
               ],
               "ans": 0,
-              "hint": "Hasan amcanın elindeki ağır eşyaları kapısına kadar taşımıştır."
+              "hint": "Aziz Sancar: 'Çoğu insan zekaya inanır, ben inanmam; bizi ayıran emektir, çalışmaktır' demiştir."
             },
             {
-              "q": "\"Nezaket ve Yardımlaşma\" metninin ana fikri aşağıdakilerden hangisidir? (s. 54)",
+              "q": "'Nermin Teyze Nerede?' metninde komşuluk ilişkileri hakkında hangi mesaj öne çıkar? (s. 40)",
               "options": [
-                "İnsanlara yardım etmek ve nazik olmak bizi mutlu ve iyi bir komşu yapar.",
-                "Sadece kendi işlerimizle ilgilenmeliyiz.",
-                "Sabahları kimseyle konuşmamalıyız.",
-                "Yaşlı insanlardan uzak durmalıyız."
+                "Komşular birbirinin halini sormalı ve yardımlaşmalıdır",
+                "Komşularla hiç konuşmamak gerekir",
+                "Sadece bayramlarda selam verilmelidir",
+                "Komşuluk önemli bir bağ değildir"
               ],
               "ans": 0,
-              "hint": "Yardımlaşmak hem yardım edeni hem de edileni mutlu eder."
+              "hint": "Komşuluk kültürü zor günlerde dayanışma demektir."
             },
             {
-              "q": "\"Hasan amca size yardım etmemi ister misiniz\" cümlesinin sonuna hangi noktalama işareti gelmelidir? (s. 54)",
+              "q": "'Köydeki yaşlı dede çocuklara gülümseyerek baktı.' cümlesindeki 'yaşlı' sözcüğünün zıt anlamlısı nedir? (s. 46)",
               "options": [
-                "Soru işareti (?)",
-                "Nokta (.)",
-                "Ünlem işareti (!)",
-                "Virgül (,)"
+                "Genç",
+                "İhtiyar",
+                "Büyük",
+                "Yorgun"
               ],
               "ans": 0,
-              "hint": "Cevap bekleyen bir soru cümlesidir."
+              "hint": "Yaşlının zıt (karşıt) anlamlısı gençtir."
             },
             {
-              "q": "Aşağıdaki bilgilerden hangisi doğrudur? (s. 55)",
+              "q": "Aşağıdaki cümlelerin hangisinin sonuna nokta (.) değil, soru işareti (?) konmalıdır? (s. 34)",
               "options": [
-                "Cümlelerin ilk harfi her zaman büyük yazılır.",
-                "Özel isimlerin ilk harfi küçük yazılır.",
-                "Soru cümlelerinin sonuna ünlem işareti konur.",
-                "Virgül cümlenin en sonuna konur."
+                "Bugün kütüphaneye kiminle gideceksin",
+                "Aziz Sancar ülkemize büyük gurur yaşattı",
+                "Köyde ilk sabah kuş sesleriyle uyandık",
+                "Çam ağaçları kışın da yeşil kalır"
               ],
               "ans": 0,
-              "hint": "Her cümlenin ilk harfi kural olarak büyük harfle başlar."
-            },
-            {
-              "q": "\"Annem mis gibi kokan çiçekleri vazoya yerleştirdi.\" cümlesinde altı çizili kelimenin anlamı nedir? (s. 55)",
-              "options": [
-                "Çok güzel ve hoş kokan",
-                "Kötü kokan",
-                "Eski ve solmuş",
-                "Renksiz"
-              ],
-              "ans": 0,
-              "hint": "Mis gibi kokmak tertemiz ve harika kokuları ifade eder."
+              "hint": "'Kiminle gideceksin' cümlesi bir soru cümlesidir."
             }
           ]
         }
@@ -3653,75 +3749,64 @@ window.CURRICULUM_TERM1 = {
           }
         ],
         "exam": {
-          "id": "turkce_tema2_exam",
-          "title": "2. Tema Değerlendirme Sınavı",
-          "book_ref": "MEB Kitabı s. 96",
-          "tasks": [
+          "id": "turkce_t2_exam",
+          "title": "2. Tema Değerlendirme Sınavı: Atatürk ve Kahramanlarımız",
+          "book_ref": "MEB Türkçe 1. Kitap s. 56-97",
+          "questions": [
             {
-              "q": "Metne göre Mustafa Kemal Atatürk, 19 Mayıs 1919'da nereye giderek halkı bağımsızlık için birleşmeye çağırmıştır? (s. 96)",
+              "q": "Ülkü'nün yeni kahverengi ayakkabılarını siyaha boyatmasının sebebi nedir? (s. 60)",
               "options": [
-                "Samsun'a",
-                "Ankara'ya",
-                "İzmir'e",
-                "Erzurum'a"
+                "Okuldaki arkadaşlarının ayakkabıları siyah olduğu için onlardan ayrı durmamak",
+                "Siyah rengi hiç sevmediği için",
+                "Ayakkabısı kirlendiği için",
+                "Ayakkabısı ayağına dar geldiği için"
               ],
               "ans": 0,
-              "hint": "Millî Mücadele'nin meşalesi 19 Mayıs 1919'da Samsun'da yakılmıştır."
+              "hint": "Ülkü, arkadaşlarından üstün veya farklı görünmek istemeyen örnek bir alçakgönüllülük sergilemiştir."
             },
             {
-              "q": "Mustafa Kemal Atatürk Türkiye Cumhuriyeti'ni hangi tarihte ilan etmiştir? (s. 96)",
+              "q": "Atatürk'ün çocukluğundan beri en büyük tutkusu ve zenginliği nedir? (s. 66)",
               "options": [
-                "29 Ekim 1923",
-                "23 Nisan 1920",
-                "19 Mayıs 1919",
-                "30 Ağustos 1922"
+                "Eline geçen her kuruşla kitap alıp altını çizerek okumak",
+                "Sadece askeri tatbikatları izlemek",
+                "Hiç kitap okumadan karar vermek",
+                "Kitapları sadece kütüphanede saklamak"
               ],
               "ans": 0,
-              "hint": "Cumhuriyetimiz 29 Ekim 1923 tarihinde kurulmuştur."
+              "hint": "Atatürk yaklaşık 4 bin kitap okumuş büyük bir aydındır."
             },
             {
-              "q": "Atatürk'ün \"Egemenlik kayıtsız şartsız milletindir!\" sözü ne anlama gelmektedir? (s. 96)",
+              "q": "Kurtuluş Savaşı'nda kağnısıyla cephane taşırken bebeğini ve mermileri koruyan kahraman kadınımız kimdir? (s. 72)",
               "options": [
-                "Ülke yönetiminde en üstün gücün halkın kendi iradesi olduğu",
-                "Yalnızca tek bir kişinin karar vermesi gerektiği",
-                "Yabancı devletlerin yönetime karışması",
-                "Halkın oy kullanmaması"
+                "Şerife Bacı",
+                "Sabiha Gökçen",
+                "Halide Edip",
+                "Nene Hatun"
               ],
               "ans": 0,
-              "hint": "Millet kendi temsilcilerini seçerek devleti kendisi yönetir."
+              "hint": "Kastamonu İnebolu yolunda şehit düşen kahramanımız Şerife Bacı'dır."
             },
             {
-              "q": "\"bağımsız\" sözcüğünün zıt anlamlısı aşağıdakilerden hangisidir? (s. 97)",
+              "q": "29 Ekim 1923'te kabul edilen ve milletin kendi kendini yönetmesini sağlayan rejim nedir? (s. 80)",
               "options": [
-                "tutsak (bağımlı)",
-                "özgür",
-                "hür",
-                "serbest"
+                "Cumhuriyet",
+                "Monarşi",
+                "Saltanat",
+                "Beylik"
               ],
               "ans": 0,
-              "hint": "Bağımsızın karşıtı tutsak veya bağımlıdır."
+              "hint": "Cumhuriyet millet egemenliğine dayanan en güzel yönetim biçimidir."
             },
             {
-              "q": "\"zafer\" sözcüğünün zıt anlamlısı hangisidir? (s. 97)",
+              "q": "Atatürk, 23 Nisan gününü dünyada kime armağan etmiştir? (s. 88)",
               "options": [
-                "yenilgi",
-                "başarı",
-                "kazanç",
-                "ödül"
+                "Tüm dünya çocuklarına",
+                "Sadece büyüklere",
+                "Yabancı diplomatlara",
+                "Sadece subaylara"
               ],
               "ans": 0,
-              "hint": "Zafer kazanmanın karşıtı yenilgidir."
-            },
-            {
-              "q": "\"Takımın başarısı için birlik içinde çalışmalıyız.\" cümlesinde altı çizili 'birlik' kelimesinin sözlük anlamı nedir? (s. 97)",
-              "options": [
-                "Birlikte olma, dayanışma ve uyum hali",
-                "Yalnız başına çalışma",
-                "Kavga etme",
-                "Yarışma"
-              ],
-              "ans": 0,
-              "hint": "Birlik; bir amaç doğrultusunda el ele vermek ve dayanışmaktır."
+              "hint": "23 Nisan Ulusal Egemenlik ve Çocuk Bayramı dünya çocuklarına armağan edilmiştir."
             }
           ]
         }
@@ -3998,75 +4083,64 @@ window.CURRICULUM_TERM1 = {
           }
         ],
         "exam": {
-          "id": "turkce_tema3_exam",
-          "title": "3. Tema Değerlendirme Sınavı",
-          "book_ref": "MEB Kitabı s. 138",
-          "tasks": [
+          "id": "turkce_t3_exam",
+          "title": "3. Tema Değerlendirme Sınavı: Doğayı Tanıyoruz",
+          "book_ref": "MEB Türkçe 1. Kitap s. 98-139",
+          "questions": [
             {
-              "q": "Metne göre gereksiz enerji kullanımı ve israf doğaya nasıl zarar verir? (s. 138)",
+              "q": "'Bir Orman' dinleme metnine göre ormanların canlılar için en büyük görevi nedir? (s. 102)",
               "options": [
-                "Doğal kaynakların tükenmesine ve çevrenin kirlenmesine yol açar.",
-                "Doğayı daha temiz yapar.",
-                "Ağaçların daha hızlı büyümesini sağlar.",
-                "Canlı sayısını artırır."
+                "Dünyamıza temiz oksijen üretmek ve hayvanlara güvenli yuva olmak",
+                "Sadece kereste üretmek",
+                "İnsanların piknik yapmasını engellemek",
+                "Şehirlerin büyümesini durdurmak"
               ],
               "ans": 0,
-              "hint": "Bilinçsiz tüketim doğal dengenin bozulmasına neden olur."
+              "hint": "Ormanlar dünyamızın akciğerleridir."
             },
             {
-              "q": "Geri dönüşüm yaparak doğayı nasıl korumuş oluruz? (s. 138)",
+              "q": "Karıncaların yuvalarına yiyecek taşırken çocuklara verdiği en büyük ders hangisidir? (s. 108)",
               "options": [
-                "Atıkları yeniden değerlendirip ağaçların kesilmesini ve kirliliği önleyerek",
-                "Bütün çöpleri denizlere dökerek",
-                "Daha çok plastik tüketerek",
-                "Çöpleri yakarak"
+                "Birlikten kuvvet doğar, iş bölümü ve dayanışma başarı getirir",
+                "Yalnız çalışmak her zaman daha iyidir",
+                "Yemekleri hemen bitirmek gerekir",
+                "Kış mevsimine hazırlık yapmaya gerek yoktur"
               ],
               "ans": 0,
-              "hint": "Geri dönüşüm hammadde ve enerji tasarrufu sağlar."
+              "hint": "Karıncalar yardımlaşma ve planlı çalışmanın en güzel örneğidir."
             },
             {
-              "q": "\"Ayşe teyze misafirlerine çay ikram etti.\" cümlesinde altı çizili 'misafir' sözcüğünün eş anlamlısı hangisidir? (s. 139)",
+              "q": "Ağaçların kökleriyle toprağı tutması hangi felaketi (toprak kaybını) engeller? (s. 116)",
               "options": [
-                "konuk",
-                "komşu",
-                "akraba",
-                "arkadaş"
+                "Erozyon",
+                "Deprem",
+                "Volkan patlaması",
+                "Kasırga"
               ],
               "ans": 0,
-              "hint": "Misafir ile konuk eş anlamlı sözcüklerdir."
+              "hint": "Ağaç kökleri toprağın kaymasını (erozyonu) önler."
             },
             {
-              "q": "\"Kardeşime çok güzel bir hediye aldım.\" cümlesinde altı çizili 'hediye' sözcüğünün eş anlamlısı hangisidir? (s. 139)",
+              "q": "Şiddetli bir fırtına uyarısı yapıldığında güvenliğimiz için ne yapmalıyız? (s. 122)",
               "options": [
-                "armağan",
-                "ödül",
-                "kitap",
-                "ücret"
+                "Pencerelerden ve gevşek çatılardan uzak güvenli kapalı alanda kalmalıyız",
+                "Dışarıda uzun ağaçların altında beklemeliyiz",
+                "Balkona çıkıp fırtınayı izlemeliyiz",
+                "Hemen elektrik direklerinin yanına gitmeliyiz"
               ],
               "ans": 0,
-              "hint": "Hediye ile armağan eş anlamlı sözcüklerdir."
+              "hint": "Fırtınada kapalı ve korunaklı binalarda beklemek en doğrusudur."
             },
             {
-              "q": "\"sabah okuluma gittim.\" cümlesinin yazım kurallarına uygun doğru yazılışı hangisidir? (s. 139)",
+              "q": "'Küçük Su Damlası' metninde suyun israf edilmemesi neden hayati bir görev sayılmıştır? (s. 130)",
               "options": [
-                "Sabah okuluma gittim.",
-                "sabah Okuluma gittim.",
-                "SABAH okuluma gittim.",
-                "sabah okuluma Gittim."
+                "Tatlı su kaynakları sınırlıdır ve susuz hiçbir canlı yaşayamaz",
+                "Su çok pahalı olduğu için",
+                "Yağmurlar bir daha hiç yağmayacağı için",
+                "Denizler kuruduğu için"
               ],
               "ans": 0,
-              "hint": "Cümlenin ilk harfi büyük harfle başlamalıdır."
-            },
-            {
-              "q": "\"Bugün Ankara'dan dayım gelecek.\" cümlesinde özel isme gelen eki ayırmak için hangi noktalama işareti kullanılır? (s. 139)",
-              "options": [
-                "Kesme işareti (')",
-                "Virgül (,)",
-                "Nokta (.)",
-                "Kısa çizgi (-)"
-              ],
-              "ans": 0,
-              "hint": "Özel adlara getirilen çekim ekleri kesme işareti ile ayrılır."
+              "hint": "Su tasarrufu geleceğimizin ve doğanın teminatıdır."
             }
           ]
         }
@@ -4343,75 +4417,64 @@ window.CURRICULUM_TERM1 = {
           }
         ],
         "exam": {
-          "id": "turkce_tema4_exam",
-          "title": "4. Tema Değerlendirme Sınavı",
-          "book_ref": "MEB Kitabı s. 174",
-          "tasks": [
+          "id": "turkce_t4_exam",
+          "title": "4. Tema Değerlendirme Sınavı: Bilgi Hazinemiz",
+          "book_ref": "MEB Türkçe 1. Kitap s. 140-179",
+          "questions": [
             {
-              "q": "\"Kitaplarla Aydınlanan Dünya\" metnine göre kütüphanelerin en önemli özelliği nedir? (s. 174)",
+              "q": "Kütüphanede uyulması gereken en temel görgü kuralı hangisidir? (s. 144)",
               "options": [
-                "Kitapların düzenli saklandığı ve herkesin eşitçe okuyabildiği bilgi yuvaları olması",
-                "Sadece kitap satışı yapılan yerler olması",
-                "İçinde hiç kimsenin konuşmaması gereken karanlık yerler olması",
-                "Yalnızca yetişkinlere açık olması"
+                "Sessiz olmak ve kitapları özenle korumak",
+                "Yüksek sesle şarkı söylemek",
+                "Kitap sayfalarına resim çizmek",
+                "Kitapları masalarda dağınık bırakmak"
               ],
               "ans": 0,
-              "hint": "Kütüphaneler herkesin okuma hakkını kullandığı bilgi merkezleridir."
+              "hint": "Kütüphaneler sessizliğin ve bilgiye saygının mabedidir."
             },
             {
-              "q": "Tarih boyunca edebî şahsiyetler ne yaparak dilimizi zenginleştirmiştir? (s. 174)",
+              "q": "Düzenli kitap okuyan bir öğrencinin dil ve düşünce dünyasında ne gibi gelişme olur? (s. 150)",
               "options": [
-                "Güzel şiirler ve hikâyeler yazarak bize geçmişi ve geleceği anlatmışlardır.",
-                "Yabancı dillerde konuşarak",
-                "Kitapları saklayarak",
-                "Kimseye eserlerini göstermeyerek"
+                "Kelime hazinesi zenginleşir ve anlama gücü artar",
+                "Kelime hazinesi azalır",
+                "Daha yavaş okumaya başlar",
+                "Arkadaşlarıyla iletişimi zorlaşır"
               ],
               "ans": 0,
-              "hint": "Yazarlar ve şairler eserleriyle dilimizin gücünü artırmıştır."
+              "hint": "Kitap okumak zihni açar ve kelime dağarcığını genişletir."
             },
             {
-              "q": "Düzenli kitap okuma alışkanlığı kazanan kişilerde hangi özellikler gelişir? (s. 174)",
+              "q": "Pusulanın renkli ucu Dünya'nın hangi ana yönünü gösterir? (s. 162)",
               "options": [
-                "Bilgili, duyarlı ve geniş bakış açısına sahip olurlar.",
-                "Bencil ve iletişimsiz olurlar.",
-                "Yalnız kalmaktan korkarlar.",
-                "Düşüncelerini ifade edemezler."
+                "Kuzey",
+                "Güney",
+                "Doğu",
+                "Batı"
               ],
               "ans": 0,
-              "hint": "Okumak bireyin ufkunu genişletir ve duyarlılığını artırır."
+              "hint": "Pusula ibresi her zaman manyetik kuzeyi gösterir."
             },
             {
-              "q": "\"Kütüpaneye gittiyimde raflarda kitap görürüm.\" cümlesinde altı çizili kelimelerin doğru yazılışı hangisidir? (s. 175)",
+              "q": "'Kaşağı', 'Diyet', 'Falaka' gibi etkileyici öyküleriyle tanınan usta Türk yazarı kimdir? (s. 168)",
               "options": [
-                "Kütüphaneye - gittiğimde",
-                "Kütüpaneye - gitiğimde",
-                "Kütühâneye - gittiğimde",
-                "Kütüphaneye - gittiyimde"
+                "Ömer Seyfettin",
+                "Cahit Sıtkı Tarancı",
+                "Halit Ziya Uşaklıgil",
+                "Mehmet Akif Ersoy"
               ],
               "ans": 0,
-              "hint": "Kütüphane ('h' ile) ve gittiğimde ('ğ' ile) yazılır."
+              "hint": "Ömer Seyfettin millî edebiyatımızın hikâye ustasıdır."
             },
             {
-              "q": "\"Her kitap farklı bir bilgi verir yada hikâye anlatır.\" cümlesindeki yazım yanlışı hangisidir? (s. 175)",
+              "q": "Aşağıdaki kelimeler sözlük sırasına konduğunda hangisi EN BAŞTA yer alır? (s. 156)",
               "options": [
-                "\"yada\" bitişik yazılmıştır, \"ya da\" şeklinde ayrı yazılmalıdır.",
-                "\"kitap\" büyük harfle yazılmalıdır.",
-                "\"farklı\" kelimesi yanlıştır.",
-                "Cümlenin sonuna nokta konmamalıdır."
+                "Bilgi",
+                "Kitap",
+                "Okul",
+                "Yazar"
               ],
               "ans": 0,
-              "hint": "'ya da' bağlacı her zaman ayrı yazılır."
-            },
-            {
-              "q": "\"Oysaki hergün biraz kitap okumak sözcük dağarcığımızı geliştirir.\" cümlesinde altı çizili ifadenin doğrusu nedir? (s. 175)",
-              "options": [
-                "her gün (ayrı yazılır)",
-                "hergünn",
-                "her-gün",
-                "hergun"
-              ],
-              "ans": 0,
-              "hint": "'her gün' ifadesi Türk Dil Kurumu kurallarına göre ayrı yazılır."
+              "hint": "'B' harfi 'K', 'O', 'Y' harflerinden önce gelir."
             }
           ]
         }
@@ -4532,92 +4595,404 @@ window.CURRICULUM_TERM1 = {
           "ans": 0,
           "hint": "Ömer Seyfettin Türk öykücülüğünün usta kurucusudur."
         }
+      ],
+      "questions": [
+        {
+          "q": "Metinleri ve konuşmacıları dinlerken hangi davranış hem saygılı hem de etkilidir? (s. 22)",
+          "options": [
+            "Konuşmacının sözünü kesmeden göz teması kurarak dinlemek",
+            "Dinlerken etraftaki şeylerle oynamak",
+            "Söz verilmeden araya girmek",
+            "Arkamızı dönüp oturmak"
+          ],
+          "ans": 0,
+          "hint": "Saygılı bir dinleyici konuşmacıyı pürdikkat dinler."
+        },
+        {
+          "q": "Bilge bilim insanımız Aziz Sancar çocukken Anıtkabir'de kime ne sözü vermiştir? (s. 28)",
+          "options": [
+            "Atatürk'e çok çalışıp milletine faydalı olacağına",
+            "Futbolcu olacağına",
+            "Hiç ders çalışmayacağına",
+            "Yurt dışında kalacağına"
+          ],
+          "ans": 0,
+          "hint": "Aziz Sancar Anıtkabir'de ülkesine hizmet edeceğine ant içmiştir."
+        },
+        {
+          "q": "Yaşlı çınar ağacının yanındaki genç çam ağacına verdiği en önemli ders nedir? (s. 46)",
+          "options": [
+            "Sabırlı olmak ve kendi değerinin farkına varmak",
+            "Diğer ağaçları kıskanmak",
+            "Ormandan uzaklaşmak",
+            "Kuşları kovmak"
+          ],
+          "ans": 0,
+          "hint": "Sabır ve kanaat en yüce erdemlerdendir."
+        },
+        {
+          "q": "Mustafa Kemal Atatürk'ün kitap sevgisiyle ilgili bilinen en belirgin özellik nedir? (s. 66)",
+          "options": [
+            "Eline geçen paranın yarısıyla kitap alıp altını çizerek okuması",
+            "Kitapları sadece rafta dizili tutması",
+            "Kitapları okumadan biriktirmesi",
+            "Kitap okumaktan hoşlanmaması"
+          ],
+          "ans": 0,
+          "hint": "Atatürk ömrü boyunca binlerce kitap okumuş büyük bir aydındır."
+        },
+        {
+          "q": "Kurtuluş Savaşı'nda İnebolu'dan cepheye mermi taşırken donarak şehit olan kahraman Türk kadını kimdir? (s. 72)",
+          "options": [
+            "Şerife Bacı",
+            "Halide Edip",
+            "Sabiha Gökçen",
+            "Afet İnan"
+          ],
+          "ans": 0,
+          "hint": "Şerife Bacı cephaneleri korumak için canını feda etmiştir."
+        },
+        {
+          "q": "Mustafa Kemal Atatürk 23 Nisan gününü dünyada kime bayram olarak armağan etmiştir? (s. 88)",
+          "options": [
+            "Tüm dünya çocuklarına",
+            "Sadece büyüklere",
+            "Askerlere",
+            "Yazarlara"
+          ],
+          "ans": 0,
+          "hint": "23 Nisan çocuklara armağan edilmiş tek dünya bayramıdır."
+        },
+        {
+          "q": "Ağaç köklerinin toprağı tutarak su ve rüzgarla kayıp gitmesini önlemesine ne denir? (s. 116)",
+          "options": [
+            "Erozyonu önleme",
+            "Hava kirliliği",
+            "Su baskını",
+            "Kuraklık"
+          ],
+          "ans": 0,
+          "hint": "Ormanlar toprağın kaymasını (erozyonu) engeller."
+        },
+        {
+          "q": "Aşağıdaki atasözlerinden hangisi tutumlu olmayı ve küçük birikimlerin değerini anlatır? (s. 130)",
+          "options": [
+            "Damlaya damlaya göl olur.",
+            "Ağaç yaşken eğilir.",
+            "Gülme komşuna gelir başına.",
+            "Tatlı dil yılanı deliğinden çıkarır."
+          ],
+          "ans": 0,
+          "hint": "Tasarruf ve birikim geleceğin teminatıdır."
+        },
+        {
+          "q": "Pusulanın renkli ucu daima hangi yönü gösterir? (s. 162)",
+          "options": [
+            "Kuzey",
+            "Güney",
+            "Doğu",
+            "Batı"
+          ],
+          "ans": 0,
+          "hint": "Pusula ibresi Dünya'nın kuzey kutbunu gösterir."
+        },
+        {
+          "q": "\"Kaşağı\", \"Diyet\" ve \"Falaka\" gibi unutulmaz hikayelerin usta yazarı kimdir? (s. 168)",
+          "options": [
+            "Ömer Seyfettin",
+            "Mehmet Akif Ersoy",
+            "Ziya Gökalp",
+            "Reşat Nuri Güntekin"
+          ],
+          "ans": 0,
+          "hint": "Ömer Seyfettin Türk öykücülüğünün usta kurucusudur."
+        }
       ]
     }
   },
   "general_exam": {
-    "title": "👑 3. Sınıf 1. Dönem MEB Maarif Modeli Genel Değerlendirme Sınavı",
-    "book_ref": "3. Sınıf 1. Dönem 4 Ana Ders Genel Başarı Sınavı (49 Kazanım)",
+    "title": "👑 3. Sınıf 1. Dönem MEB Maarif Modeli Büyük Türkiye Deneme Sınavı",
+    "book_ref": "Tüm Dersler 1. Dönem Resmî MEB Müfredatı (25 Kapsamlı Soru)",
     "questions": [
       {
-        "q": "[Matematik] 4 yüzlük, 6 onluk ve 3 birlikten oluşan sayı hangisidir?",
+        "q": "[Türkçe] Aziz Sancar'ın çocukken Anıtkabir ziyaretinde Atatürk'e verdiği ve hayatı boyunca tuttuğu söz nedir? (s. 28)",
         "options": [
-          "463",
-          "643",
-          "364",
-          "436"
+          "Milleti için gece gündüz çok çalışıp ilimde ilerlemek",
+          "Hiç kitap okumadan yaşamak",
+          "Ülkesini terk edip geri dönmemek",
+          "Yalnızca sporla ilgilenmek"
         ],
-        "ans": 0
+        "ans": 0,
+        "hint": "Aziz Sancar ülkemize ve milletimize hizmet etmek için azimle çalışmıştır."
       },
       {
-        "q": "[Matematik] 5 x 8 işleminin sonucu kaçtır?",
+        "q": "[Türkçe] Atatürk'ün kitap okurken uyguladığı ve günümüz öğrencilerine de örnek olan en önemli yöntem nedir? (s. 66)",
         "options": [
-          "35",
-          "40",
+          "Önemli yerlerin altını kırmızı ve mavi kalemle çizip notlar almak",
+          "Kitap sayfalarını rastgele çevirip bırakmak",
+          "Kitapları sadece kapağına bakarak seçmek",
+          "Kitap okurken müzik dinleyip dikkatini dağıtmak"
+        ],
+        "ans": 0,
+        "hint": "Atatürk kitapları aktif ve not alarak incelerdi."
+      },
+      {
+        "q": "[Türkçe] 'Sonbaharda sararan yapraklar rüzgarla uçuştu.' cümlesindeki 'sonbahar' kelimesinin eş anlamlısı nedir? (s. 46)",
+        "options": [
+          "Güz",
+          "İlkbahar",
+          "Kış",
+          "Yaz"
+        ],
+        "ans": 0,
+        "hint": "Sonbahar kelimesinin eş anlamlısı 'güz'dür."
+      },
+      {
+        "q": "[Türkçe] Kurtuluş Savaşı'nda cepheye mermi taşırken donarak şehit olan Türk kadını kimdir? (s. 72)",
+        "options": [
+          "Şerife Bacı",
+          "Halide Edip Adıvar",
+          "Sabiha Gökçen",
+          "Safiye Ali"
+        ],
+        "ans": 0,
+        "hint": "Kastamonulu Şerife Bacı fedakarlığın simgesidir."
+      },
+      {
+        "q": "[Türkçe] Aşağıdaki kelimelerden hangisi sözlükte DİĞERLERİNDEN SONRA gelir? (s. 156)",
+        "options": [
+          "Yıldız",
+          "Bilgi",
+          "Güneş",
+          "Deniz"
+        ],
+        "ans": 0,
+        "hint": "'Y' harfi alfabemizin 28. harfidir ve en sonda yer alır."
+      },
+      {
+        "q": "[Matematik] '7 yüzlük, 0 onluk ve 8 birlik'ten oluşan 3 basamaklı doğal sayı kaçtır? (s. 12)",
+        "options": [
+          "708",
+          "780",
+          "870",
+          "78"
+        ],
+        "ans": 0,
+        "hint": "Yüzler: 7, Onlar: 0, Birler: 8 -> 708."
+      },
+      {
+        "q": "[Matematik] 456 sayısındaki '5' rakamının basamak değeri kaçtır? (s. 18)",
+        "options": [
+          "50",
+          "5",
+          "500",
+          "56"
+        ],
+        "ans": 0,
+        "hint": "5 onlar basamağındadır: 5 x 10 = 50."
+      },
+      {
+        "q": "[Matematik] 348 + 275 işleminin sonucu kaçtır? (s. 32)",
+        "options": [
+          "623",
+          "613",
+          "523",
+          "633"
+        ],
+        "ans": 0,
+        "hint": "348 + 275 = 623 (eldeleri unutma)."
+      },
+      {
+        "q": "[Matematik] Bir okul kütüphanesinde 6 raf vardır. Her rafta 9 kitap olduğuna göre toplam kaç kitap vardır? (s. 64)",
+        "options": [
+          "54",
           "45",
+          "63",
           "48"
         ],
-        "ans": 1
+        "ans": 0,
+        "hint": "6 x 9 = 54 kitaptır."
       },
       {
-        "q": "[Matematik] 30 lirası olan Efe, tanesi 6 lira olan defterlerden kaç tane alabilir?",
+        "q": "[Matematik] 36 cevizi 4 arkadaş eşit olarak paylaştığında her birine kaç ceviz düşer? (s. 78)",
         "options": [
-          "4",
-          "5",
-          "6",
-          "7"
+          "9",
+          "8",
+          "7",
+          "6"
         ],
-        "ans": 1
+        "ans": 0,
+        "hint": "36 ÷ 4 = 9 ceviz düşer."
       },
       {
-        "q": "[Fen Bilimleri] Hangisi Dünya'nın yuvarlak olduğunu kanıtlayan olaylardan biridir?",
+        "q": "[Fen Bilimleri] Dünya'mızın uzaydan çekilen fotoğraflarında mavi renkte görünen en büyük katmanı hangisidir? (s. 16)",
         "options": [
-          "Güneşin her gün doğudan doğması",
-          "Hep aynı yöne giden uçağın başladığı yere dönmesi",
-          "Geceleri yıldızların görünmesi",
-          "Yağmurun yukarıdan yağması"
+          "Su katmanı (Okyanuslar ve denizler)",
+          "Kara katmanı",
+          "Hava katmanı",
+          "Ateş küre (Magma)"
         ],
-        "ans": 1
+        "ans": 0,
+        "hint": "Dünya yüzeyinin yaklaşık 4'te 3'ü sularla kaplıdır."
       },
       {
-        "q": "[Fen Bilimleri] Kuvvet uygulandığında şekil değiştiren, kuvvet kalkınca eski haline dönen madde hangisidir?",
+        "q": "[Fen Bilimleri] Televizyonu çok yakından izlemek ve loş ışıkta kitap okumak hangi duyu organımızın sağlığını bozar? (s. 34)",
         "options": [
-          "Hamur",
-          "Paket lastiği",
-          "Tahta",
-          "Cam"
+          "Göz",
+          "Kulak",
+          "Burun",
+          "Deri"
         ],
-        "ans": 1
+        "ans": 0,
+        "hint": "Göz sağlığı için uygun aydınlatma ve ekran mesafesi şarttır."
       },
       {
-        "q": "[Hayat Bilgisi] Kroki ile ilgili hangisi DOĞRUDUR?",
+        "q": "[Fen Bilimleri] Çekmeceyi açarken veya ip çekerken cisimlere hangi tür kuvvet uygularız? (s. 60)",
         "options": [
-          "Cetvelle milimetrik ölçülür",
-          "Kuş bakışı ve kabataslaktır",
-          "Yandan çizilir",
-          "Ölçeksiz çizilemez"
+          "Çekme kuvveti",
+          "İtme kuvveti",
+          "Dönme kuvveti",
+          "Sallanma kuvveti"
         ],
-        "ans": 1
+        "ans": 0,
+        "hint": "Kendimize doğru yaklaştırmak çekme kuvvetidir."
       },
       {
-        "q": "[Hayat Bilgisi] Aşağıdakilerden hangisi bir İSTEKTİR (temel ihtiyaç değildir)?",
+        "q": "[Fen Bilimleri] Kuvvet uygulandığında şekil değiştiren, bırakıldığında eski haline dönen cisimlere ne denir? (s. 88)",
         "options": [
-          "Su",
-          "Ekmek",
-          "Sıcak mont",
-          "Uzaktan kumandalı araba"
+          "Esnek madde (Sünger, lastik)",
+          "Kırılgan madde (Cam)",
+          "Sert madde (Taş)",
+          "Akışkan madde (Su)"
         ],
-        "ans": 3
+        "ans": 0,
+        "hint": "Sünger ve paket lastiği esnek maddelere örnektir."
       },
       {
-        "q": "[İngilizce] 'I am thirsty.' diyen biri ne istemektedir?",
+        "q": "[Fen Bilimleri] Aşağıdakilerden hangisi bir DOĞAL IŞIK kaynağıdır? (s. 72)",
         "options": [
-          "Water (Su)",
-          "Pizza",
-          "Book (Kitap)",
-          "Bed (Yatak)"
+          "Güneş ve Yıldızlar",
+          "El feneri",
+          "Mum",
+          "Ampul"
         ],
-        "ans": 0
+        "ans": 0,
+        "hint": "Güneş doğadaki en büyük doğal ışık kaynağımızdır."
+      },
+      {
+        "q": "[Hayat Bilgisi] Bir yerin kuş bakışı görünüşünün ölçeksiz, kabataslak çizimine ne denir? (s. 18)",
+        "options": [
+          "Kroki",
+          "Harita",
+          "Plan",
+          "Grafik"
+        ],
+        "ans": 0,
+        "hint": "Kroki ölçüsüz ve kabataslak kuş bakışı çizimdir."
+      },
+      {
+        "q": "[Hayat Bilgisi] Sınıf başkanlığı seçiminde oy kullanmak ve fikrini söylemek hangi demokratik değere örnektir? (s. 24)",
+        "options": [
+          "Katılımcılık ve düşünce özgürlüğü",
+          "Bencillik",
+          "Kararları tek başına almak",
+          "Kurallara uymamak"
+        ],
+        "ans": 0,
+        "hint": "Seçimlere katılmak demokrasinin temelidir."
+      },
+      {
+        "q": "[Hayat Bilgisi] Sağlıklı ve dengeli beslenmek isteyen bir 3. sınıf öğrencisinin kahvaltısında hangisi OLMALIDIR? (s. 44)",
+        "options": [
+          "Yumurta, peynir, süt ve zeytin",
+          "Cips ve asitli içecek",
+          "Çikolatalı gofret",
+          "Hazır şekerleme"
+        ],
+        "ans": 0,
+        "hint": "Protein, kalsiyum ve vitamin içeren doğal gıdalar şarttır."
+      },
+      {
+        "q": "[Hayat Bilgisi] Olası bir deprem sonrasında ilk saatlerde ihtiyaç duyacağımız eşyaların bulunduğu çantaya ne denir? (s. 62)",
+        "options": [
+          "Acil Durum ve Afet Çantası",
+          "Okul sırt çantası",
+          "Piknik sepeti",
+          "Valiz"
+        ],
+        "ans": 0,
+        "hint": "Afet çantasında su, düdük, el feneri ve ilk yardım seti bulunur."
+      },
+      {
+        "q": "[Hayat Bilgisi] 'Cumhuriyet en büyük bayramdır.' Atatürk Cumhuriyeti ne zaman ilan etmiştir? (s. 84)",
+        "options": [
+          "29 Ekim 1923",
+          "23 Nisan 1920",
+          "19 Mayıs 1919",
+          "30 Ağustos 1922"
+        ],
+        "ans": 0,
+        "hint": "29 Ekim 1923 Cumhuriyetimizin kuruluş günüdür."
+      },
+      {
+        "q": "[İngilizce] 'Where is the teacher?' - 'She is in the ........... (öğretmenler odası).'",
+        "tr_q": "'Öğretmen nerede?' - 'O ........... (öğretmenler odası) içinde.'",
+        "options": [
+          "teachers' room",
+          "canteen",
+          "garden",
+          "gym"
+        ],
+        "ans": 0,
+        "hint": "Öğretmenler odası = Teachers' room"
+      },
+      {
+        "q": "[İngilizce] What time is it? (Saat 08:00)",
+        "tr_q": "Saat kaç? (08:00)",
+        "options": [
+          "It is eight o'clock.",
+          "It is seven o'clock.",
+          "It is half past eight.",
+          "It is eight past."
+        ],
+        "ans": 0,
+        "hint": "Tam saatlerde 'o'clock' kullanılır: 8:00 = It is eight o'clock."
+      },
+      {
+        "q": "[İngilizce] 'How is the weather today?' - 'It is ............ (rüzgarlı).'",
+        "tr_q": "'Bugün hava nasıl?' - 'Hava ............ (rüzgarlı).'",
+        "options": [
+          "windy",
+          "sunny",
+          "hot",
+          "rainy"
+        ],
+        "ans": 0,
+        "hint": "Rüzgarlı = Windy"
+      },
+      {
+        "q": "[İngilizce] 'He has got short straight hair and blue eyes.' cümlesi ne anlama gelir?",
+        "tr_q": "'Onun kısa düz saçları ve mavi gözleri var.' anlamındadır.",
+        "options": [
+          "Onun kısa düz saçları ve mavi gözleri var.",
+          "Onun uzun kıvırcık sarı saçları var.",
+          "O çok uzun boyludur.",
+          "Onun kahverengi gözleri var."
+        ],
+        "ans": 0,
+        "hint": "Short = Kısa, Straight = Düz, Blue eyes = Mavi gözler."
+      },
+      {
+        "q": "[İngilizce] 'I love playing basketball with my friends.' cümlesi ne ifade eder?",
+        "tr_q": "'Arkadaşlarımla basketbol oynamayı çok severim.' anlamındadır.",
+        "options": [
+          "Arkadaşlarımla basketbol oynamayı çok severim.",
+          "Basketbol oynamaktan nefret ederim.",
+          "Bugün basketbol oynamak istemiyorum.",
+          "Topum kayboldu."
+        ],
+        "ans": 0,
+        "hint": "Love = Çok sevmek"
       }
     ]
   }

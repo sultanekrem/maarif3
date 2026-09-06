@@ -670,14 +670,13 @@ html, body {
 }
 
 .theme-tabs-nav {
-  display: flex;
-  gap: 8px;
-  padding: 10px 24px;
-  background: var(--bg-surface);
-  border-bottom: 1px solid var(--border-subtle);
-  overflow-x: auto;
-  scrollbar-width: none;
-  flex-shrink: 0;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  padding: 12px 24px !important;
+  background: var(--bg-surface) !important;
+  border-bottom: 1px solid var(--border-subtle) !important;
+  flex-shrink: 0 !important;
 }
 .theme-tabs-nav::-webkit-scrollbar { display: none; }
 
@@ -3103,9 +3102,15 @@ html, body {
 }
 
 /* 4. Ferah Konu Kartları & 3D Dokunmatik Butonlar */
+.topics-scroll-area {
+  max-width: 1480px !important;
+  margin: 0 auto !important;
+  width: 100% !important;
+}
+
 .topics-grid {
   display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)) !important;
   gap: 16px !important;
   width: 100% !important;
   box-sizing: border-box !important;
@@ -3125,6 +3130,8 @@ html, body {
   gap: 14px !important;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35) !important;
   transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
 }
 
 .topic-card-item:hover {
@@ -3134,31 +3141,37 @@ html, body {
 }
 
 .topic-card-footer {
-  display: flex !important;
-  align-items: center !important;
-  gap: 10px !important;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 8px !important;
   border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
   padding-top: 14px !important;
   margin-top: auto !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 
 .btn-topic-fact {
-  flex: 1 !important;
+  width: 100% !important;
+  min-width: 0 !important;
   background: rgba(245, 158, 11, 0.16) !important;
   border: 2px solid #F59E0B !important;
   border-bottom: 4px solid #D97706 !important;
   color: #FEF08A !important;
   border-radius: 12px !important;
-  padding: 10px 12px !important;
+  padding: 10px 6px !important;
   font-family: inherit !important;
-  font-size: 0.85rem !important;
+  font-size: 0.82rem !important;
   font-weight: 800 !important;
   cursor: pointer !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 6px !important;
+  gap: 4px !important;
   white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  box-sizing: border-box !important;
   transition: all 0.12s ease !important;
 }
 
@@ -3175,22 +3188,26 @@ html, body {
 }
 
 .btn-start-topic {
-  flex: 1 !important;
+  width: 100% !important;
+  min-width: 0 !important;
   background: linear-gradient(135deg, #4F46E5 0%, #6366F1 100%) !important;
   border: none !important;
   border-bottom: 4px solid #312E81 !important;
   color: #FFFFFF !important;
   border-radius: 12px !important;
-  padding: 10px 14px !important;
+  padding: 10px 6px !important;
   font-family: inherit !important;
-  font-size: 0.88rem !important;
+  font-size: 0.84rem !important;
   font-weight: 800 !important;
   cursor: pointer !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 6px !important;
+  gap: 4px !important;
   white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  box-sizing: border-box !important;
   transition: all 0.12s ease !important;
 }
 
@@ -5228,7 +5245,13 @@ html, body {
   border-bottom-width: 2px !important;
 }
 
+/* Evrensel Gizleme Kuralı */
+.hidden {
+  display: none !important;
+}
+
 .scratchpad-box {
+  display: none !important;
   position: absolute !important;
   top: 0 !important;
   left: 0 !important;
@@ -5239,11 +5262,14 @@ html, body {
   border: 2px solid #F59E0B !important;
   border-radius: inherit !important;
   z-index: 60 !important;
-  display: flex !important;
   flex-direction: column !important;
   padding: 12px 14px !important;
   backdrop-filter: blur(12px) !important;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6) !important;
+}
+
+.scratchpad-box.is-open {
+  display: flex !important;
   animation: scratchSlideIn 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 

@@ -421,11 +421,6 @@
   // ==========================================================================
   const ScratchpadService = {
     isOpen: { quiz: false, exam: false, kumbara: false },
-    activeCanvas: null,
-    ctx: null,
-    isDrawing: false,
-    lastX: 0,
-    lastY: 0,
     strokeColor: '#FBBF24',
     lineWidth: 3.5,
 
@@ -452,6 +447,8 @@
             this.close(type);
           };
         }
+        // Başlangıçta kesinlikle kapalı olduğundan emin ol
+        this.close(type);
       });
     },
 
@@ -468,8 +465,10 @@
       if (!box) return;
 
       box.classList.remove('hidden');
+      box.classList.add('is-open');
       this.isOpen[type] = true;
 
+      // Soru metnini karalama tahtasının tepesine kopyala
       const qTextSource = type === 'quiz' ? document.getElementById('quiz-question-text') :
                           type === 'exam' ? document.getElementById('exam-question-text') :
                           document.getElementById('kumbara-q-text');
@@ -480,21 +479,20 @@
 
       const canvas = document.getElementById(`sp-canvas-${type}`);
       if (canvas) {
-        this.activeCanvas = canvas;
-        this.ctx = canvas.getContext('2d');
         setTimeout(() => {
-          this.resizeCanvas(canvas);
-          this.bindEvents(canvas);
-        }, 50);
+          this.initCanvas(canvas);
+        }, 40);
       }
       triggerHaptic('light');
     },
 
     close: function(type) {
       const box = document.getElementById(`scratchpad-box-${type}`);
-      if (box) box.classList.add('hidden');
+      if (box) {
+        box.classList.remove('is-open');
+        box.classList.add('hidden');
+      }
       this.isOpen[type] = false;
-      this.isDrawing = false;
       triggerHaptic('light');
     },
 
@@ -507,58 +505,68 @@
       triggerHaptic('warning');
     },
 
-    resizeCanvas: function(canvas) {
+    initCanvas: function(canvas) {
+      const parent = canvas.parentElement;
       const rect = canvas.getBoundingClientRect();
-      if (rect.width === 0 || rect.height === 0) return;
-      const dpr = window.devicePixelRatio || 1;
-      canvas.width = rect.width * dpr;
-      canvas.height = rect.height * dpr;
+      const w = Math.floor(parent ? parent.clientWidth : rect.width) || 320;
+      const h = Math.floor(parent ? parent.clientHeight : rect.height) || 200;
+
+      canvas.width = w;
+      canvas.height = h;
+
       const ctx = canvas.getContext('2d');
-      ctx.scale(dpr, dpr);
       ctx.lineCap = 'round';
       ctx.lineJoin = 'round';
       ctx.strokeStyle = this.strokeColor;
       ctx.lineWidth = this.lineWidth;
-    },
 
-    bindEvents: function(canvas) {
       if (canvas._hasEvents) return;
       canvas._hasEvents = true;
 
+      let isDrawing = false;
+      let lastX = 0;
+      let lastY = 0;
+
       const getPos = (e) => {
-        const rect = canvas.getBoundingClientRect();
-        const touch = (e.touches && e.touches[0]) || (e.changedTouches && e.changedTouches[0]) || e;
+        const r = canvas.getBoundingClientRect();
+        const clientX = e.touches ? e.touches[0].clientX : (e.changedTouches ? e.changedTouches[0].clientX : e.clientX);
+        const clientY = e.touches ? e.touches[0].clientY : (e.changedTouches ? e.changedTouches[0].clientY : e.clientY);
+        const scaleX = canvas.width / (r.width || 1);
+        const scaleY = canvas.height / (r.height || 1);
         return {
-          x: touch.clientX - rect.left,
-          y: touch.clientY - rect.top
+          x: (clientX - r.left) * scaleX,
+          y: (clientY - r.top) * scaleY
         };
       };
 
       const start = (e) => {
         if (e.cancelable) e.preventDefault();
-        this.isDrawing = true;
+        isDrawing = true;
         const pos = getPos(e);
-        this.lastX = pos.x;
-        this.lastY = pos.y;
-        const ctx = canvas.getContext('2d');
+        lastX = pos.x;
+        lastY = pos.y;
         ctx.beginPath();
-        ctx.moveTo(this.lastX, this.lastY);
+        ctx.arc(pos.x, pos.y, 2, 0, Math.PI * 2);
+        ctx.fillStyle = this.strokeColor;
+        ctx.fill();
       };
 
       const move = (e) => {
-        if (!this.isDrawing) return;
+        if (!isDrawing) return;
         if (e.cancelable) e.preventDefault();
         const pos = getPos(e);
-        const ctx = canvas.getContext('2d');
+        ctx.beginPath();
+        ctx.moveTo(lastX, lastY);
         ctx.lineTo(pos.x, pos.y);
+        ctx.strokeStyle = this.strokeColor;
+        ctx.lineWidth = this.lineWidth;
         ctx.stroke();
-        this.lastX = pos.x;
-        this.lastY = pos.y;
+        lastX = pos.x;
+        lastY = pos.y;
       };
 
-      const end = (e) => {
-        if (e.cancelable) e.preventDefault();
-        this.isDrawing = false;
+      const end = () => {
+        isDrawing = false;
       };
 
       canvas.addEventListener('mousedown', start);
@@ -1104,12 +1112,11 @@
           <p class="topic-desc">${topic.desc}</p>
         </div>
         <div class="topic-card-footer">
-          <button class="btn-topic-fact" data-topic-id="${topic.id}">
-            <span>💡 3 Adımlı Hap Bilgi</span>
+          <button class="btn-topic-fact" data-topic-id="${topic.id}" title="3 Adımlı Hap Bilgi">
+            <span>💡 Hap Bilgi</span>
           </button>
-          <button class="btn-start-topic" style="background: ${subj.accent};">
-            <span>Çalış & Oyna</span>
-            <span>▶</span>
+          <button class="btn-start-topic" style="background: ${subj.accent};" title="Çalış ve Oyna">
+            <span>Çalış & Oyna ▶</span>
           </button>
         </div>
       `;

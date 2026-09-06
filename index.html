@@ -56,14 +56,14 @@
             </div>
           </div>
           <div class="showcase-card showcase-life">
-            <div class="showcase-icon">🇹🇷</div>
+            <div class="showcase-icon">🌱</div>
             <div class="showcase-info">
               <strong>Hayat Bilgisi</strong>
               <span>10 Konu • 2 Tema</span>
             </div>
           </div>
           <div class="showcase-card showcase-eng">
-            <div class="showcase-icon">🇬🇧</div>
+            <div class="showcase-icon">🔤</div>
             <div class="showcase-info">
               <strong>İngilizce</strong>
               <span>10 Konu • 2 Tema</span>
@@ -137,10 +137,8 @@
         </div>
 
         <div class="header-actions">
-          <button id="btn-fullscreen" class="action-circle-btn" title="Tam Ekran">⛶</button>
           <button id="btn-sound" class="action-circle-btn" title="Ses Aç/Kapat">🔊</button>
           <button id="btn-badges-nav" class="action-circle-btn" title="Başarılar & Rozetler">🏅</button>
-          <button id="btn-parent-dashboard" class="action-circle-btn" title="Veli & Öğretmen Takip Paneli">👨‍🏫</button>
         </div>
       </header>
 
@@ -331,6 +329,7 @@
     <!-- 6. SCREEN REPORT CARD (Öğrenci Başarı Karnesi & Deneme Denetim Raporu) -->
     <div id="screen-report-card" class="screen overlay">
       <div class="report-card-modal">
+        <button class="modal-close-x" id="btn-close-report-x" title="Kapat">✕</button>
         <div class="report-card-header">
           <img src="assets/maarif_logo.svg" class="report-card-logo" alt="Maarif Yıldızı">
           <span class="report-badge">T.C. MEB 3. SINIF BAŞARI KARNESİ (2026-2027)</span>
@@ -387,7 +386,10 @@
         </div>
 
         <div class="report-actions">
-          <button id="btn-close-report" class="btn-primary-action">Karnemi Kaydet ve Dön</button>
+          <button id="btn-close-report" class="btn-primary-action">
+            <span>✅</span>
+            <span>Karnemi Kaydet ve Dön</span>
+          </button>
         </div>
       </div>
     </div>
@@ -395,6 +397,7 @@
     <!-- 7. SCREEN RESULTS (Konu Sonu Kutlaması) -->
     <div id="screen-results" class="screen overlay">
       <div class="results-modern-card">
+        <button class="modal-close-x" id="btn-close-results-x" title="Kapat">✕</button>
         <div class="results-trophy-wrap">
           <img src="assets/maarif_logo.svg" class="results-avatar-logo" alt="Maarif Yıldızı">
           <div class="results-celebrate-badge">🎉 TEBRİKLER!</div>
@@ -425,8 +428,13 @@
         </div>
 
         <div class="results-actions">
-          <button id="btn-result-next-topic" class="btn-primary-action">Sonraki Konuya Geç →</button>
-          <button id="btn-result-back-topics" class="btn-secondary-action">Konu Listesine Dön</button>
+          <button id="btn-result-next-topic" class="btn-primary-action">
+            <span>Sonraki Konuya Geç</span>
+            <span>→</span>
+          </button>
+          <button id="btn-result-back-topics" class="btn-secondary-action">
+            <span>← Konu Listesine Dön</span>
+          </button>
         </div>
       </div>
     </div>

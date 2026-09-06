@@ -4553,3 +4553,162 @@ html, body {
   margin-top: 10px !important;
 }
 
+/* ==========================================================================
+   🎯 5. MOBİL DERS KARTLARI ORTALAMA & SINAV BİTİŞ BUTONLARI KESİN ÇÖZÜMÜ
+   ========================================================================== */
+
+/* A. Ana Menü ve Ders Kartlarının Mobilde %100 Ortalanması (Sağa Kayma Önleme) */
+@media (max-width: 768px) {
+  .menu-main-content {
+    padding: 12px !important;
+    padding-left: max(12px, calc(12px + env(safe-area-inset-left, 0px))) !important;
+    padding-right: max(12px, calc(12px + env(safe-area-inset-right, 0px))) !important;
+    padding-bottom: max(24px, calc(20px + env(safe-area-inset-bottom, 0px))) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    height: auto !important;
+    flex: 1 !important;
+  }
+
+  .section-title-wrap {
+    width: 100% !important;
+    max-width: 520px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 6px !important;
+    box-sizing: border-box !important;
+  }
+
+  .subjects-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 520px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    gap: 14px !important;
+    box-sizing: border-box !important;
+  }
+
+  .subject-card {
+    width: 100% !important;
+    max-width: 520px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .grand-general-exam-banner,
+  .classroom-summary-card {
+    width: 100% !important;
+    max-width: 520px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* B. Sınav Bitimi (Karne & Sonuç) Ekranında Görünmeyen Buton ve Yazıların Çözümü */
+#screen-report-card.screen.overlay,
+#screen-results.screen.overlay {
+  overflow-y: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: max(18px, calc(14px + env(safe-area-inset-top, 0px))) 12px max(24px, calc(18px + env(safe-area-inset-bottom, 0px))) !important;
+  box-sizing: border-box !important;
+}
+
+.report-card-modal,
+.results-modern-card {
+  position: relative !important;
+  max-width: 520px !important;
+  width: 100% !important;
+  max-height: 88vh !important;
+  overflow-y: auto !important;
+  background: linear-gradient(160deg, #1E1B4B 0%, #0F172A 100%) !important;
+  border: 2.5px solid #818CF8 !important;
+  border-radius: 26px !important;
+  padding: 24px 20px !important;
+  color: #FFFFFF !important;
+  box-sizing: border-box !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75) !important;
+}
+
+.report-card-modal .modal-close-x,
+.results-modern-card .modal-close-x {
+  position: absolute !important;
+  top: 14px !important;
+  right: 14px !important;
+  width: 36px !important;
+  height: 36px !important;
+  z-index: 10 !important;
+}
+
+/* Sınav ve Quiz Butonları — Kusursuz Görünürlük & Yüksek Kontrast */
+#btn-close-report {
+  background: linear-gradient(135deg, #4F46E5 0%, #3730A3 100%) !important;
+  color: #FFFFFF !important;
+  border: 2px solid #818CF8 !important;
+  font-size: 1rem !important;
+  font-weight: 900 !important;
+  padding: 14px 20px !important;
+  border-radius: 16px !important;
+  min-height: 48px !important;
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.45) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  width: 100% !important;
+  cursor: pointer !important;
+}
+
+#btn-result-next-topic {
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%) !important;
+  color: #FFFFFF !important;
+  border: 2px solid #34D399 !important;
+  font-size: 1rem !important;
+  font-weight: 900 !important;
+  padding: 14px 20px !important;
+  border-radius: 16px !important;
+  min-height: 48px !important;
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.45) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  width: 100% !important;
+  cursor: pointer !important;
+}
+
+#btn-result-back-topics {
+  background: #1E293B !important;
+  color: #FFFFFF !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  font-size: 0.95rem !important;
+  font-weight: 800 !important;
+  padding: 12px 20px !important;
+  border-radius: 16px !important;
+  min-height: 46px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  width: 100% !important;
+  cursor: pointer !important;
+}
+
+#btn-close-report *,
+#btn-result-next-topic *,
+#btn-result-back-topics * {
+  color: #FFFFFF !important;
+}
+

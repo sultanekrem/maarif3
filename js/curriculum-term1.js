@@ -1878,7 +1878,7 @@ window.CURRICULUM_TERM1 = {
   "hayatbilgisi": {
     "title": "Hayat Bilgisi",
     "subtitle": "3. Sınıf 1. Kitap (MEB Maarif Modeli)",
-    "icon": "🇹🇷",
+    "icon": "🌱",
     "badge": "9 Konu",
     "accent": "#E11D48",
     "bg_light": "#FFF1F2",
@@ -2410,7 +2410,7 @@ window.CURRICULUM_TERM1 = {
   "ingilizce": {
     "title": "İngilizce (English)",
     "subtitle": "3. Sınıf Ders & Çalışma Kitabı (1. Dönem / Themes 1-3)",
-    "icon": "🇬🇧",
+    "icon": "🔤",
     "badge": "11 Konu",
     "accent": "#0284C7",
     "bg_light": "#F0F9FF",

@@ -1250,24 +1250,41 @@
       });
     }
 
-    // Karneyi kapat
+    // Karneyi kapat & Sınavdan dön
+    const handleCloseReport = () => {
+      if (state.currentSubjectKey && window.CURRICULUM_TERM1 && window.CURRICULUM_TERM1[state.currentSubjectKey]) {
+        renderThemeTabs();
+        renderTopicsList();
+        showScreen('screen-topics');
+      } else {
+        renderSubjects();
+        showScreen('screen-menu');
+      }
+    };
+
     const btnCloseReport = document.getElementById('btn-close-report');
     if (btnCloseReport) {
-      btnCloseReport.addEventListener('click', () => {
-        renderThemeTabs();
-        renderTopicsList();
-        showScreen('screen-topics');
-      });
+      btnCloseReport.addEventListener('click', handleCloseReport);
+    }
+    const btnCloseReportX = document.getElementById('btn-close-report-x');
+    if (btnCloseReportX) {
+      btnCloseReportX.addEventListener('click', handleCloseReport);
     }
 
-    // Sonuç Ekranı Butonları
+    // Sonuç Ekranı Butonları (Quiz bitimi)
+    const handleCloseResults = () => {
+      renderThemeTabs();
+      renderTopicsList();
+      showScreen('screen-topics');
+    };
+
     const btnResBack = document.getElementById('btn-result-back-topics');
     if (btnResBack) {
-      btnResBack.addEventListener('click', () => {
-        renderThemeTabs();
-        renderTopicsList();
-        showScreen('screen-topics');
-      });
+      btnResBack.addEventListener('click', handleCloseResults);
+    }
+    const btnResCloseX = document.getElementById('btn-close-results-x');
+    if (btnResCloseX) {
+      btnResCloseX.addEventListener('click', handleCloseResults);
     }
 
     const btnResNext = document.getElementById('btn-result-next-topic');

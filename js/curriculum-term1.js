@@ -72,7 +72,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "3 basamaklı bir sayıyı okurken soldan sağa doğru: önce Yüzler basamağını söyler ve sonuna 'yüz' ekleriz, sonra Onlar basamağını ve en son Birler basamağını okuruz. Sayıları yazıyla yazarken her kelimeyi mutlaka ayrı yazarız.",
               "example": "452 sayısında: 4 yüzlük ('Dört yüz') + 5 onluk ('elli') + 2 birlik ('iki') = 'Dört yüz elli iki'. Markette 325 TL'lik bir mont gördüğünde bunu 'Üç yüz yirmi beş lira' diye okursun.",
               "tip": "Basamağında 0 (sıfır) olan yer okunmaz! 704 sayısı 'Yedi yüz dört' diye okunur ('yedi yüz sıfır dört' DEMEYİZ). Ayrıca sayılar yazıyla yazılırken bitişik değil AYRI yazılır: 'üçyüz' YANLIŞ, 'üç yüz' DOĞRU!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım!",
+                "icon": "🔙",
+                "content": "2. sınıfta 2 basamaklı sayıları öğrendik. Onlar ve birler basamağını hatırlayalım. Örneğin 54 sayısında: 5 onluk (50) + 4 birlik (4) = 54."
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "Artık 3 basamaklı sayıları öğreniyoruz! 100den büyük sayılarda YENİ bir basamak vardır: YÜZLER basamağı. 223 sayısında: 2 yüzlük + 2 onluk + 3 birlik bulunur. Yüzlük taban bloklarıyla sayıları modelleyebiliriz.",
+                "example_box": "348 sayısı:\n🟦 3 Yüzlük = 300\n🟩 4 Onluk = 40\n🟨 8 Birlik = 8\nToplam: 300 + 40 + 8 = 348"
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Dikkat!",
+                "icon": "⚠️",
+                "content": "Sıfır (0) olan basamak okunmaz! 704 sayısı Yedi yüz dört diye okunur. Yedi yüz sıfır dört YANLIŞ! Ayrıca sayılar yazıyla yazılırken ayrı yazılır: üç yüz DOĞRU, üçyüz YANLIŞ."
+              }
+            ]
           },
           {
             "id": "mat_t1_2",
@@ -133,7 +154,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Bir sayıyı çözümlerken her rakamı basamak değeriyle yazar veya basamak değerlerinin toplamı olarak ifade ederiz: (Yüzler x 100) + (Onlar x 10) + (Birler x 1).",
               "example": "748 sayısını çözümlersek: 7 yüzlük (700) + 4 onluk (40) + 8 birlik (8) -> 700 + 40 + 8 = 748 eder. Kumbaranda 7 tane 100 TL, 4 tane 10 TL ve 8 tane 1 TL olması gibidir.",
               "tip": "SAYI DEĞERİ ile BASAMAK DEĞERİNİ karıştırma! 748 sayısında 7'nin sayı değeri sadece 7'dir; ancak yüzler basamağında olduğu için basamak değeri 700'dür! 0'ın basamak değeri her zaman 0'dır."
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım!",
+                "icon": "🔙",
+                "content": "3 basamaklı sayılarda YÜZLER, ONLAR ve BİRLER basamağı vardır. Her basamağın bir değeri var."
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "Bir sayıyı ÇÖZÜMLEMEK, onu basamak değerlerine ayırmak demektir. Kumbarandaki paralar gibi düşünebilirsin: 100 TL, 10 TL ve 1 TL.",
+                "example_box": "748 sayısını çözümleyelim:\n7 x 100 = 700 (yüzler)\n4 x 10 = 40 (onlar)\n8 x 1 = 8 (birler)\n700 + 40 + 8 = 748"
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Bilgi Kutusu",
+                "icon": "💡",
+                "content": "SAYI DEĞERİ ile BASAMAK DEĞERİNİ karıştırma! 748 sayısında 7 rakamının sayı değeri 7dir ama BASAMAK DEĞERİ 700dür! 0in basamak değeri her zaman 0dir."
+              }
+            ]
           },
           {
             "id": "mat_t1_3",
@@ -182,7 +224,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "3 basamaklı sayıları sıralarken ilk önce en soldaki YÜZLER basamağına bakılır. Yüzler basamağı büyük olan sayı her zaman daha büyüktür. Yüzler eşitse onlar basamağına, onlar da eşitse birler basamağına bakılır.",
               "example": "645 ve 599 sayılarını karşılaştıralım: 6 yüzlük, 5 yüzlükten büyük olduğu için diğer basamaklara bakmaya gerek yoktur: 645 > 599!",
               "tip": "Timsah sembolünün (< veya >) açık olan geniş ağzı her zaman BÜYÜK sayıyı yemek ister! Sivri uç ise küçük sayıyı gösterir: 820 > 815."
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım!",
+                "icon": "🔙",
+                "content": "< ve > sembolleri sayıları karşılaştırmak için kullanılır. Timsahın ağzı her zaman büyük sayıyı yer!"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "3 basamaklı sayıları karşılaştırırken SOLDAN SAĞA bakarız. Önce YÜZLER basamağına! Yüzler aynıysa ONLAR, onlar da aynıysa BİRLER basamağına bakarız.",
+                "example_box": "645 ve 599 karşılaştırması:\nYüzler: 6 > 5 olduğu için\n645 > 599\n(Diğer basamaklara bakmaya gerek yok!)"
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Timsah Kuralı",
+                "icon": "🐊",
+                "content": "< ve > sembollerinin açık ağzı BÜYÜK sayıyı gösterir. Sivri ucu küçük sayıya bakar. Örnek: 820 > 815 (820, 815ten büyük)"
+              }
+            ]
           },
           {
             "id": "mat_t1_4",
@@ -243,7 +306,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Ritmik sayma belirli bir kurala göre ileriye veya geriye doğru eşit adımlarla saymaktır. 6'şar, 7'şer, 8'er ve 9'ar sayarken her adımda tam o sayı kadar eklenir veya çıkarılır.",
               "example": "6'şar ritmik sayma: 6, 12, 18, 24, 30, 36, 42, 48, 54, 60. Yumurtaları 6'şar paketlerken kaç yumurta olduğunu bu saymayla hemen bulabilirsin.",
               "tip": "Ritmik saymalar çarpım tablosunun temelidir! Örneğin 7'şer sayarken 4. söylediğin sayı (7, 14, 21, 28) doğrudan 4 x 7 = 28 işleminin sonucudur!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım!",
+                "icon": "🔙",
+                "content": "2şer, 5er, 10ar saymayı biliyoruz. Şimdi daha büyük sayılarla ritmik saymayı öğreneceğiz!"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "Ritmik sayma, eşit aralıklarla ileri veya geri saymaktır. 6şar, 7şer, 8er ve 9ar saymayı öğreneceğiz. 100lük tabloda ritmik sayma kalıplarını görebilirsin!",
+                "example_box": "6şar ileri sayma:\n6 → 12 → 18 → 24 → 30 → 36\n\n8er geri sayma:\n80 → 72 → 64 → 56 → 48 → 40"
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "İpucu",
+                "icon": "💡",
+                "content": "Ritmik saymada bir sayı eksikse: önceki sayıya adımı ekle ya da sonraki sayıdan adımı çıkar! Örnek: 6-12-?-24 → 12+6=18"
+              }
+            ]
           },
           {
             "id": "mat_t1_5",
@@ -293,7 +377,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Bir doğal sayının tek mi çift mi olduğunu anlamak için SADECE EN SAĞDAKİ BİRLER basamağına bakılır. Birler basamağı 0, 2, 4, 6, 8 ise ÇİFT; 1, 3, 5, 7, 9 ise TEK sayıdır.",
               "example": "748 sayısının birler basamağında 8 olduğu için ÇİFTTİR. 931 sayısının birler basamağında 1 olduğu için TEKTİR. Ayakkabılarımızı ikişer eşleştirdiğimizde tek kalmıyorsa çifttir.",
               "tip": "Yüzler ve onlar basamağındaki sayılar ne kadar büyük olursa olsun tekliği ve çiftliği DEĞİŞTİRMEZ! 991 sayısında yüzler ve onlar 9 olsa bile birler basamağı 1 olduğu için TEK sayıdır!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım!",
+                "icon": "🔙",
+                "content": "2şer saydığımızda geçtiğimiz sayılar ÇİFT, atladıklarımız TEK sayılardır. 2, 4, 6, 8, 10... çift; 1, 3, 5, 7, 9... tek."
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "3 basamaklı sayılarda da tek-çift kuralı BİRLER BASAMAĞINA göre belirlenir! Birler basamağındaki rakam 0, 2, 4, 6 veya 8 ise sayı ÇİFT; 1, 3, 5, 7 veya 9 ise sayı TEKtir.",
+                "example_box": "ÇİFT sayılar: 124, 350, 788, 996\n(Birler: 4, 0, 8, 6)\n\nTEK sayılar: 135, 271, 489, 653\n(Birler: 5, 1, 9, 3)"
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Kural",
+                "icon": "💡",
+                "content": "Hangi basamakta ne olduğuna bakmaya gerek yok! Sadece BİRLER basamağına bak. Birler 0, 2, 4, 6, 8 ise ÇİFT. Birler 1, 3, 5, 7, 9 ise TEK."
+              }
+            ]
           },
           {
             "id": "mat_t1_6",
@@ -343,7 +448,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "İki sayıyı toplarken: Tek + Tek = ÇİFT, Çift + Çift = ÇİFT olur. Sadece Tek + Çift toplandığında sonuç TEK olur!",
               "example": "3 (Tek) + 5 (Tek) = 8 (Çift). 4 (Çift) + 6 (Çift) = 10 (Çift). 3 (Tek) + 4 (Çift) = 7 (Tek).",
               "tip": "Aynı tür sayıların toplamı her zaman ÇİFTTİR (Tek+Tek=Çift, Çift+Çift=Çift). Sadece farklı türler toplandığında sonuç TEK çıkar!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım!",
+                "icon": "🔙",
+                "content": "Tek sayılar 1, 3, 5, 7, 9... ile biter. Çift sayılar 0, 2, 4, 6, 8... ile biter."
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "İki sayı topladığımızda sonuç tek mi çift mi olur? Bunu önceden tahmin edebiliriz!",
+                "example_box": "ÇİFT + ÇİFT = ÇİFT\n(4 + 6 = 10)\n\nTEK + TEK = ÇİFT\n(3 + 5 = 8)\n\nÇİFT + TEK = TEK\n(4 + 3 = 7)\n\nTEK + ÇİFT = TEK\n(5 + 2 = 7)"
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Kural",
+                "icon": "💡",
+                "content": "İki AYNI cinsten sayı (ikisi de tek veya ikisi de çift) toplandığında sonuç her zaman ÇİFTtir. FARKLI cinsten sayılar toplandığında sonuç her zaman TEKtir."
+              }
+            ]
           },
           {
             "id": "mat_t1_7",
@@ -382,7 +508,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Sayı veya şekil örüntüsünde sayılar arasındaki artış veya azalış miktarı her zaman kurala bağlıdır. Önce yan yana iki sayı arasındaki fark bulunarak kural belirlenir.",
               "example": "12 - 17 - 22 - 27 - ? örüntüsünde: 17 - 12 = 5 artmış. Kural: 'Sayılar 5'er artıyor'. O halde soru işareti yerine 27 + 5 = 32 gelmelidir.",
               "tip": "Bazen örüntüler iki farklı kural içerebilir (örneğin: 2 ekle, 1 çıkar). Sadece ilk iki sayıya değil, tüm sıraya bakarak kuralı doğrula!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım!",
+                "icon": "🔙",
+                "content": "Örüntü, tekrar eden düzenli bir sıradır. Hayatta birçok yerde örüntü görebiliriz: zemin desenleri, müzik ritimleri, sayı serileri."
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "Sayı örüntülerinde her sayı bir kurala göre değişir. Şekil örüntülerinde ise şekiller belirli bir sırayla tekrar eder. Örüntünün kuralını bulmak için ilk birkaç elemanı dikkatle inceleriz.",
+                "example_box": "Sayı örüntüsü: 3, 6, 9, 12, ? → Kural: +3, Sonraki: 15\n\nŞekil örüntüsü: ⬛🔴⬛🔴⬛? → Kural: Siyah-Kırmızı tekrar, Sonraki: 🔴"
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "İpucu",
+                "icon": "💡",
+                "content": "Örüntünün kuralını bulmak için: iki ardışık eleman arasındaki farkı veya ilişkiyi hesapla. Sonra bu kuralın devam edip etmediğini kontrol et!"
+              }
+            ]
           },
           {
             "id": "mat_t1_8",
@@ -432,7 +579,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Bir sayıyı en yakın ONLUĞA yuvarlarken birler basamağına bakılır: 1, 2, 3, 4 ise kendi onluğuna (aşağı), 5, 6, 7, 8, 9 ise bir üst onluğa (yukarı) yuvarlanır.",
               "example": "73 sayısı 70'e yuvarlanır (çünkü birler basamağı 3). 75 sayısı ise 80'e yuvarlanır (çünkü 5 ve üstü yukarı gider).",
               "tip": "5 sayısı tam ortadadır ve her zaman YUKARI (üst onluğa) yuvarlanır! Sayı 185 ise en yakın onluğu 190'dır."
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "En yakın onluğa ve yüzlüğe yuvarlama kuralları. (Yuvarlama)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "🎯",
+                "content": "Bir sayıyı en yakın ONLUĞA yuvarlarken birler basamağına bakılır: 1, 2, 3, 4 ise kendi onluğuna (aşağı), 5, 6, 7, 8, 9 ise bir üst onluğa (yukarı) yuvarlanır.",
+                "example_box": "73 sayısı 70'e yuvarlanır (çünkü birler basamağı 3). 75 sayısı ise 80'e yuvarlanır (çünkü 5 ve üstü yukarı gider)."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "5 sayısı tam ortadadır ve her zaman YUKARI (üst onluğa) yuvarlanır! Sayı 185 ise en yakın onluğu 190'dır."
+              }
+            ]
           }
         ],
         "exam": {
@@ -583,7 +751,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Bir bütünün tamamına BÜTÜN (1/1), iki eş parçasından her birine YARIM (1/2), dört eş parçasından her birine ÇEYREK (1/4) denir.",
               "example": "1 bütün elmayı ortadan ikiye kestiğimizde 2 yarım elma, dörde böldüğümüzde ise 4 çeyrek elma elde ederiz.",
               "tip": "Kesir gösteriminde alttaki sayı (payda) bütünün kaç parçaya bölündüğünü, üstteki sayı (pay) ise kaç parçanın alındığını gösterir!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım!",
+                "icon": "🔙",
+                "content": "Bir bütünü eşit parçalara bölebiliriz. Elmayı 2 eşit parçaya böldüğümüzde her parça yarım olur."
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "Kesirleri yazarken PAY ve PAYDA kullanırız. Payda (alt sayı) toplam parça sayısını, pay (üst sayı) alınan parça sayısını gösterir.",
+                "example_box": "Bütün = 1 (tüm parçalar)\nYarım = 1/2 (2 eşit parçanın 1i)\nÇeyrek = 1/4 (4 eşit parçanın 1i)"
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Kesir Nedir?",
+                "icon": "💡",
+                "content": "Kesirde PAYDA, bütünün kaç EŞİT parçaya bölündüğünü gösterir. PAY ise kaç parça aldığımızı gösterir. Parçalar EŞİT OLMALIDIR! Eşit olmayan parçalar kesir gösterilemez."
+              }
+            ]
           },
           {
             "id": "mat_t2_2",
@@ -622,7 +811,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Bir bütünün kesir oluşturabilmesi için parçaların mutlaka birbirine EŞİT (özdeş) büyüklükte olması şarttır.",
               "example": "Bir pizzayı biri büyük biri küçük iki parçaya bölersen bunlara 'yarım' denemez. Yarım olması için tam ortadan eşit bölünmelidir.",
               "tip": "Sorularda farklı büyüklükte bölünmüş şekiller gösterilirse tuzaktır; parçalar eşit değilse kesir ifade etmez!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Şekilleri eş parçalara bölme ve modelleme. (Eş Parçalar)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "🍰",
+                "content": "Bir bütünün kesir oluşturabilmesi için parçaların mutlaka birbirine EŞİT (özdeş) büyüklükte olması şarttır.",
+                "example_box": "Bir pizzayı biri büyük biri küçük iki parçaya bölersen bunlara 'yarım' denemez. Yarım olması için tam ortadan eşit bölünmelidir."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Sorularda farklı büyüklükte bölünmüş şekiller gösterilirse tuzaktır; parçalar eşit değilse kesir ifade etmez!"
+              }
+            ]
           },
           {
             "id": "mat_t2_3",
@@ -661,7 +871,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Kesir çizgisinin ÜSTÜNDEKİ sayı PAY (alınan parça sayısı), ALTINDAKİ sayı PAYDA (bütünün toplam eş parça sayısı) olarak adlandırılır.",
               "example": "3/4 kesrinde payda 4'tür (bütün 4 parçaya bölünmüş), pay ise 3'tür (3 parçası boyanmış veya yenmiş).",
               "tip": "Aklında tutmak için: PAYDA 'Padişah' gibi altta tahtında oturur (taban), PAY ise üstte gezer!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Pay ve payda terimlerinin anlamı ve birim kesirler. (Pay & Payda)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "⚖️",
+                "content": "Kesir çizgisinin ÜSTÜNDEKİ sayı PAY (alınan parça sayısı), ALTINDAKİ sayı PAYDA (bütünün toplam eş parça sayısı) olarak adlandırılır.",
+                "example_box": "3/4 kesrinde payda 4'tür (bütün 4 parçaya bölünmüş), pay ise 3'tür (3 parçası boyanmış veya yenmiş)."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Aklında tutmak için: PAYDA 'Padişah' gibi altta tahtında oturur (taban), PAY ise üstte gezer!"
+              }
+            ]
           },
           {
             "id": "mat_t2_4",
@@ -711,7 +942,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Analog saatte kısa kol AKREP (saati), uzun kol YELKOVAN (dakikayı) gösterir. Yelkovan 12'deyken tam saat, 6'dayken buçuk (30 dk), 3'teyken çeyrek geçe (15 dk), 9'dayken çeyrek vardır (45 dk).",
               "example": "Akrep 4 ile 5 arasında, yelkovan 6'da ise saat '04.30' veya 'Dördü buçuk geçiyor' demektir.",
               "tip": "Öğleden sonraki saatleri okurken saate 12 ekleriz! Örneğin öğleden sonra saat 3, dijital saatte 15.00 olarak görünür (3 + 12 = 15)."
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Öğleden önce ve öğleden sonra saat okuma, saat ve dakika ilişkisi. (Saat Okuma)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "⏰",
+                "content": "Analog saatte kısa kol AKREP (saati), uzun kol YELKOVAN (dakikayı) gösterir. Yelkovan 12'deyken tam saat, 6'dayken buçuk (30 dk), 3'teyken çeyrek geçe (15 dk), 9'dayken çeyrek vardır (45 dk).",
+                "example_box": "Akrep 4 ile 5 arasında, yelkovan 6'da ise saat '04.30' veya 'Dördü buçuk geçiyor' demektir."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Öğleden sonraki saatleri okurken saate 12 ekleriz! Örneğin öğleden sonra saat 3, dijital saatte 15.00 olarak görünür (3 + 12 = 15)."
+              }
+            ]
           },
           {
             "id": "mat_t2_5",
@@ -761,7 +1013,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "1 yıl = 12 ay = 52 hafta = 365 gün 6 saat. 1 ay = 30 gün (yaklaşık 4 hafta). 1 hafta = 7 gün. 1 gün = 24 saat. 1 saat = 60 dakika.",
               "example": "Okulda 2 ders saati 40 + 40 = 80 dakika sürer. Bu da 1 saat 20 dakikaya eşittir.",
               "tip": "Şubat ayı 4 yılda bir 29 gün çeker (Artık yıl). Diğer yıllar 28 gündür."
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Saat, dakika, gün, hafta, ay, mevsim, yıl dönüşümleri. (Zaman Birimleri)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📅",
+                "content": "1 yıl = 12 ay = 52 hafta = 365 gün 6 saat. 1 ay = 30 gün (yaklaşık 4 hafta). 1 hafta = 7 gün. 1 gün = 24 saat. 1 saat = 60 dakika.",
+                "example_box": "Okulda 2 ders saati 40 + 40 = 80 dakika sürer. Bu da 1 saat 20 dakikaya eşittir."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Şubat ayı 4 yılda bir 29 gün çeker (Artık yıl). Diğer yıllar 28 gündür."
+              }
+            ]
           },
           {
             "id": "mat_t2_6",
@@ -800,7 +1073,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Günlük olayların sürelerini tahmin ederken saniye, dakika, saat ve gün birimlerinden en uygun olanını seçeriz.",
               "example": "Göz kırpmak saniyeler sürer, diş fırçalamak 2-3 dakika, bir okul günü 6-7 saat, yaz tatili ise 3 ay (yaklaşık 90 gün) sürer.",
               "tip": "Soru çözerken birimlere dikkat et: 'Bir film kaç dakika sürer?' sorusuna saniye veya gün cevabı verilemez!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Günlük aktivitelerin sürelerini tahmin etme ve planlama. (Süre Tahmini)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "⏳",
+                "content": "Günlük olayların sürelerini tahmin ederken saniye, dakika, saat ve gün birimlerinden en uygun olanını seçeriz.",
+                "example_box": "Göz kırpmak saniyeler sürer, diş fırçalamak 2-3 dakika, bir okul günü 6-7 saat, yaz tatili ise 3 ay (yaklaşık 90 gün) sürer."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Soru çözerken birimlere dikkat et: 'Bir film kaç dakika sürer?' sorusuna saniye veya gün cevabı verilemez!"
+              }
+            ]
           },
           {
             "id": "mat_t2_7",
@@ -850,7 +1144,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Uzunlukları Metre (m) ve Santimetre (cm) ile; kütleleri (ağırlıkları) Kilogram (kg) ve Gram (g) ile ölçeriz. 1 m = 100 cm, 1 kg = 1000 g.",
               "example": "Boyumuz yaklaşık 130 cm'dir. Çantamızın ağırlığı yaklaşık 3 kg, bir elmanın ağırlığı ise yaklaşık 150 gramdır.",
               "tip": "Hafif nesneler (kalem, silgi, yüzük) GRAM ile; ağır nesneler (insan, karpuz, çanta) KİLOGRAM ile ölçülür!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Metre (m), santimetre (cm), kilogram (kg), gram (g) dönüşümleri. (Ölçme)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📏",
+                "content": "Uzunlukları Metre (m) ve Santimetre (cm) ile; kütleleri (ağırlıkları) Kilogram (kg) ve Gram (g) ile ölçeriz. 1 m = 100 cm, 1 kg = 1000 g.",
+                "example_box": "Boyumuz yaklaşık 130 cm'dir. Çantamızın ağırlığı yaklaşık 3 kg, bir elmanın ağırlığı ise yaklaşık 150 gramdır."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Hafif nesneler (kalem, silgi, yüzük) GRAM ile; ağır nesneler (insan, karpuz, çanta) KİLOGRAM ile ölçülür!"
+              }
+            ]
           },
           {
             "id": "mat_t2_8",
@@ -900,7 +1215,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Para birimimiz Türk Lirası (TL) ve Kuruş (kr)'tur. 1 TL = 100 Kuruştur. En büyük kağıt paramız 200 TL, en küçük madeni paramız 1 Kuruştur.",
               "example": "Tanesi 25 kuruş olan sakızdan 4 tane alırsan: 25 + 25 + 25 + 25 = 100 Kuruş, yani tam 1 TL ödersin.",
               "tip": "Kuruşları toplarken 100 kuruşa ulaştığında bunu 1 TL olarak sol tarafa devretmeyi unutma!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Lira ve kuruş ilişkisi (1 TL = 100 Kr), market hesabı ve para üstü. (Paralarımız)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "💰",
+                "content": "Para birimimiz Türk Lirası (TL) ve Kuruş (kr)'tur. 1 TL = 100 Kuruştur. En büyük kağıt paramız 200 TL, en küçük madeni paramız 1 Kuruştur.",
+                "example_box": "Tanesi 25 kuruş olan sakızdan 4 tane alırsan: 25 + 25 + 25 + 25 = 100 Kuruş, yani tam 1 TL ödersin."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Kuruşları toplarken 100 kuruşa ulaştığında bunu 1 TL olarak sol tarafa devretmeyi unutma!"
+              }
+            ]
           }
         ],
         "exam": {
@@ -1007,7 +1343,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Toplama ve çıkarma sonuçlarını tahmin ederken sayıları en yakın ONLUĞA yuvarlayıp zihinden hesaplarız. Gerçek sonuç ile tahmin arasındaki fark 'Hata Payı'dır.",
               "example": "218 + 173 işlemini tahmin edelim: 218 -> 220, 173 -> 170. Tahmin: 220 + 170 = 390. Gerçek sonuç: 391. Fark sadece 1'dir!",
               "tip": "Tahmin sorularında işlem yapmadan önce sayıları yuvarla. Asla önce tam sonucu bulup sonra yuvarlama, bu tahmin mantığına uymaz!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Yuvarlama yöntemiyle zihinden işlem tahmini ve karşılaştırma. (Tahmin & İşlem)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "🧠",
+                "content": "Toplama ve çıkarma sonuçlarını tahmin ederken sayıları en yakın ONLUĞA yuvarlayıp zihinden hesaplarız. Gerçek sonuç ile tahmin arasındaki fark 'Hata Payı'dır.",
+                "example_box": "218 + 173 işlemini tahmin edelim: 218 -> 220, 173 -> 170. Tahmin: 220 + 170 = 390. Gerçek sonuç: 391. Fark sadece 1'dir!"
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Tahmin sorularında işlem yapmadan önce sayıları yuvarla. Asla önce tam sonucu bulup sonra yuvarlama, bu tahmin mantığına uymaz!"
+              }
+            ]
           },
           {
             "id": "mat_t3_2",
@@ -1046,7 +1403,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "İşlemleri basamak değerlerine göre çözümleyerek yapmak hata yapmayı önler: Yüzlükleri kendi arasında, onlukları kendi arasında, birlikleri kendi arasında toplar veya çıkarırız.",
               "example": "345 + 231 = (300+200) + (40+30) + (5+1) = 500 + 70 + 6 = 576.",
               "tip": "Eldeli toplama yaparken elde edilen onluğu onlar basamağı toplamına eklemeyi unutma!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Basamaklara ayırarak işlem yapma ve verilmeyen terimi bulma (kutu hesabı). (Verilmeyeni Bul)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📦",
+                "content": "İşlemleri basamak değerlerine göre çözümleyerek yapmak hata yapmayı önler: Yüzlükleri kendi arasında, onlukları kendi arasında, birlikleri kendi arasında toplar veya çıkarırız.",
+                "example_box": "345 + 231 = (300+200) + (40+30) + (5+1) = 500 + 70 + 6 = 576."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Eldeli toplama yaparken elde edilen onluğu onlar basamağı toplamına eklemeyi unutma!"
+              }
+            ]
           }
         ],
         "exam": {
@@ -1227,7 +1605,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Güvenlik sembolleri deney ve günlük yaşamda tehlikelere karşı bizi uyarır: Kırılabilir cam, Isı ve yangın tehlikesi, Zehirli (toksik) madde, Koruyucu gözlük tak vb.",
               "example": "Çamaşır suyu şişesinde kuru kafa sembolü varsa bu maddenin ZEHİRLİ olduğunu ve asla koklanmaması gerektiğini gösterir.",
               "tip": "Güvenlik işaretleri süs değildir! Deney laboratuvarında veya evde bu işaretleri gördüğümüzde büyüklerimizin uyarılarına harfiyen uymalıyız."
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Laboratuvar ve deneylerde koruyucu gözlük, eldiven, ısı, elektrik, cam kırılması sembolleri. (Güvenlik)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "⚠️",
+                "content": "Güvenlik sembolleri deney ve günlük yaşamda tehlikelere karşı bizi uyarır: Kırılabilir cam, Isı ve yangın tehlikesi, Zehirli (toksik) madde, Koruyucu gözlük tak vb.",
+                "example_box": "Çamaşır suyu şişesinde kuru kafa sembolü varsa bu maddenin ZEHİRLİ olduğunu ve asla koklanmaması gerektiğini gösterir."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Güvenlik işaretleri süs değildir! Deney laboratuvarında veya evde bu işaretleri gördüğümüzde büyüklerimizin uyarılarına harfiyen uymalıyız."
+              }
+            ]
           },
           {
             "id": "fen_u1_2",
@@ -1266,7 +1665,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Bilimsel bilgiye; merak etmek, soru sormak, gözlem yapmak, deneyler tasarlamak ve güvenilir kaynaklardan araştırma yapmakla ulaşılır.",
               "example": "Bitkilerin güneşte mi yoksa karanlıkta mı hızlı büyüdüğünü anlamak için iki özdeş saksı alıp birini pencereye, birini dolaba koyarak gözlemlemek bilimsel bir yöntemdir.",
               "tip": "Bilim insanları bir deneyi sadece bir kez yapıp bırakmazlar; doğruluğundan emin olmak için birden fazla kez tekrarlarlar!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Gözlem yapma, merak etme, soru sorma, araştırma ve deney tasarlama adımları. (Bilimsel Yöntem)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "🔭",
+                "content": "Bilimsel bilgiye; merak etmek, soru sormak, gözlem yapmak, deneyler tasarlamak ve güvenilir kaynaklardan araştırma yapmakla ulaşılır.",
+                "example_box": "Bitkilerin güneşte mi yoksa karanlıkta mı hızlı büyüdüğünü anlamak için iki özdeş saksı alıp birini pencereye, birini dolaba koyarak gözlemlemek bilimsel bir yöntemdir."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Bilim insanları bir deneyi sadece bir kez yapıp bırakmazlar; doğruluğundan emin olmak için birden fazla kez tekrarlarlar!"
+              }
+            ]
           },
           {
             "id": "fen_u1_3",
@@ -1305,7 +1725,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Bilim insanları meraklı, gözlemci, sabırlı, sorgulayıcı, dürüst ve hata yapmaktan korkmayan kişilerdir (Örn: Aziz Sancar, İbn-i Sina, Marie Curie).",
               "example": "Thomas Edison ampulü bulana kadar yüzlerce deneme yapmış, hiç vazgeçmemiş ve sabırla çalışmaya devam etmiştir.",
               "tip": "Bilim insanı olmak için dahi olmaya gerek yoktur; çevreni merak etmek, çok kitap okumak ve yılmadan çalışmak yeterlidir!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Meraklı, sabırlı, sorgulayıcı, tarafsız, çalışkan ve azimli olma erdemleri. (Bilim İnsanı)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "💡",
+                "content": "Bilim insanları meraklı, gözlemci, sabırlı, sorgulayıcı, dürüst ve hata yapmaktan korkmayan kişilerdir (Örn: Aziz Sancar, İbn-i Sina, Marie Curie).",
+                "example_box": "Thomas Edison ampulü bulana kadar yüzlerce deneme yapmış, hiç vazgeçmemiş ve sabırla çalışmaya devam etmiştir."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Bilim insanı olmak için dahi olmaya gerek yoktur; çevreni merak etmek, çok kitap okumak ve yılmadan çalışmak yeterlidir!"
+              }
+            ]
           }
         ],
         "exam": {
@@ -1390,7 +1831,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Canlılar benzer özelliklerine göre sınıflandırılır: Bitkiler, Hayvanlar, Mantarlar ve Mikroskobik canlılar. Hayvanlar da omurgalı ve omurgasız olarak ayrılır.",
               "example": "Kedi, kuş, balık hayvanlar alemine; papatya, çam ağacı bitkiler alemine; yoğurt mayası ise mikroskobik canlılara örnektir.",
               "tip": "Bitkiler kendi besinlerini güneş ışığıyla kendileri üretir (fotosentez). Hayvanlar ise besinlerini dışarıdan hazır alırlar!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Bitkiler, Hayvanlar, Mantarlar ve Mikroskobik Canlıların temel özellikleri. (Canlılar Âlemi)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "🌿",
+                "content": "Canlılar benzer özelliklerine göre sınıflandırılır: Bitkiler, Hayvanlar, Mantarlar ve Mikroskobik canlılar. Hayvanlar da omurgalı ve omurgasız olarak ayrılır.",
+                "example_box": "Kedi, kuş, balık hayvanlar alemine; papatya, çam ağacı bitkiler alemine; yoğurt mayası ise mikroskobik canlılara örnektir."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Bitkiler kendi besinlerini güneş ışığıyla kendileri üretir (fotosentez). Hayvanlar ise besinlerini dışarıdan hazır alırlar!"
+              }
+            ]
           },
           {
             "id": "fen_u2_2",
@@ -1429,7 +1891,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "5 duyu organımız: Göz (Görme), Kulak (İşitme), Burun (Koklama), Dil (Tat), Deri (Dokunma). Duyu organlarımız çevremizi güvenle keşfetmemizi sağlar.",
               "example": "Sıcak bir çorbanın kokusunu burnumuzla, sıcaklığını derimizle, tadını dilimizle hissederiz.",
               "tip": "Tat ve koku duyuları birlikte çalışır. Nezle olduğunda burnun tıkandığı için yemeklerin tadını tam alamazsın!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Göz, Kulak, Burun, Dil, Deri ve duyu organlarının sağlığını koruma kuralları. (5 Duyumuz)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "👀",
+                "content": "5 duyu organımız: Göz (Görme), Kulak (İşitme), Burun (Koklama), Dil (Tat), Deri (Dokunma). Duyu organlarımız çevremizi güvenle keşfetmemizi sağlar.",
+                "example_box": "Sıcak bir çorbanın kokusunu burnumuzla, sıcaklığını derimizle, tadını dilimizle hissederiz."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Tat ve koku duyuları birlikte çalışır. Nezle olduğunda burnun tıkandığı için yemeklerin tadını tam alamazsın!"
+              }
+            ]
           },
           {
             "id": "fen_u2_3",
@@ -1468,7 +1951,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Canlılar doğar, büyür, gelişir, ürer ve ölürler. Buna 'Yaşam Döngüsü' denir. Kelebekler ve kurbağalar başkalaşım (değişim) geçirerek büyür.",
               "example": "Tırtıl koza örer, kozanın içinde bekler ve rengarenk kanatlı bir kelebek olarak dışarı çıkar.",
               "tip": "Bitkilerin yaşam döngüsü tohumla başlar. Tohumun çimlenmesi için SOS (Su, Oksijen, Sıcaklık) gereklidir; çimlenme aşamasında ışık şart DEĞİLDİR!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Tohumun çimlenmesi, bitkinin büyümesi ve hayvanların yaşam döngüsü aşamaları. (Yaşam Döngüsü)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "🌱",
+                "content": "Canlılar doğar, büyür, gelişir, ürer ve ölürler. Buna 'Yaşam Döngüsü' denir. Kelebekler ve kurbağalar başkalaşım (değişim) geçirerek büyür.",
+                "example_box": "Tırtıl koza örer, kozanın içinde bekler ve rengarenk kanatlı bir kelebek olarak dışarı çıkar."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Bitkilerin yaşam döngüsü tohumla başlar. Tohumun çimlenmesi için SOS (Su, Oksijen, Sıcaklık) gereklidir; çimlenme aşamasında ışık şart DEĞİLDİR!"
+              }
+            ]
           }
         ],
         "exam": {
@@ -1553,7 +2057,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Yer kabuğunu kayaçlar oluşturur. Kayaçların parçalanmasıyla taş, çakıl ve kum oluşur. Ekonomik değeri olan değerli kayaçlara ise MADEN denir (Altın, Bor, Bakır, Kömür).",
               "example": "Mutfak tezgahımız mermerden, elektrik kablolarının içindeki teller bakır madeninden yapılır.",
               "tip": "Bütün madenler birer kayaçtır ama her kayaç maden DEĞİLDİR! Bir kayacın maden olması için ekonomik değer taşıması gerekir."
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Yer kabuğu, kayaçlar, mineraller ve ekonomik değeri olan madenler (bor, bakır, altın, kömür). (Yer Kabuğu)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "💎",
+                "content": "Yer kabuğunu kayaçlar oluşturur. Kayaçların parçalanmasıyla taş, çakıl ve kum oluşur. Ekonomik değeri olan değerli kayaçlara ise MADEN denir (Altın, Bor, Bakır, Kömür).",
+                "example_box": "Mutfak tezgahımız mermerden, elektrik kablolarının içindeki teller bakır madeninden yapılır."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Bütün madenler birer kayaçtır ama her kayaç maden DEĞİLDİR! Bir kayacın maden olması için ekonomik değer taşıması gerekir."
+              }
+            ]
           },
           {
             "id": "fen_u3_2",
@@ -1592,7 +2117,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Geçmişte yaşamış canlıların kayaçlar arasında taşlaşmış kalıntı ve izlerine FOSİL denir. Fosilleri inceleyen bilim dalına Paleontoloji denir.",
               "example": "Milyonlarca yıl önce yaşamış dinozorların kemikleri veya kehribar reçinesinin içinde kalmış böcekler günümüze ulaşan fosillerdir.",
               "tip": "Fosiller sadece birkaç yılda oluşmaz! Bir kalıntının fosil sayılabilmesi için aradan en az milyonlarca yıl geçmesi ve hava almadan tortul tabakalar altında kalması gerekir."
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Fosiller nasıl oluşur? Milyonlarca yıllık tortul tabakalar ve geçmiş canlı kalıntıları. (Fosiller)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "🦖",
+                "content": "Geçmişte yaşamış canlıların kayaçlar arasında taşlaşmış kalıntı ve izlerine FOSİL denir. Fosilleri inceleyen bilim dalına Paleontoloji denir.",
+                "example_box": "Milyonlarca yıl önce yaşamış dinozorların kemikleri veya kehribar reçinesinin içinde kalmış böcekler günümüze ulaşan fosillerdir."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Fosiller sadece birkaç yılda oluşmaz! Bir kalıntının fosil sayılabilmesi için aradan en az milyonlarca yıl geçmesi ve hava almadan tortul tabakalar altında kalması gerekir."
+              }
+            ]
           }
         ],
         "exam": {
@@ -1666,7 +2212,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Maddeler doğada 3 temel halde bulunur: Katı (belirli şekli var: taş, tahta), Sıvı (akışkan, kabın şeklini alır: su, süt), Gaz (uçucu, ortama yayılır: hava, su buharı).",
               "example": "Buz KATI, eriyen su SIVI, kaynayan tencereden çıkan buhar ise MADDENİN GAZ HALİDİR.",
               "tip": "Kum, tuz, mercimek gibi küçük taneli katılar sıvılar gibi akabilir ve konuldukları kabın şeklini alır; ama taneciklerinin her biri YİNE DE KATIDIR!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Katı, sıvı ve gaz maddelerin belirgin özellikleri, akışkanlık ve şekil durumları. (Maddenin Hâlleri)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "🧊",
+                "content": "Maddeler doğada 3 temel halde bulunur: Katı (belirli şekli var: taş, tahta), Sıvı (akışkan, kabın şeklini alır: su, süt), Gaz (uçucu, ortama yayılır: hava, su buharı).",
+                "example_box": "Buz KATI, eriyen su SIVI, kaynayan tencereden çıkan buhar ise MADDENİN GAZ HALİDİR."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Kum, tuz, mercimek gibi küçük taneli katılar sıvılar gibi akabilir ve konuldukları kabın şeklini alır; ama taneciklerinin her biri YİNE DE KATIDIR!"
+              }
+            ]
           },
           {
             "id": "fen_u4_2",
@@ -1705,7 +2272,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "İki veya daha fazla maddenin özelliklerini kaybetmeden bir araya gelmesiyle KARIŞIM oluşur. Karışımlar süzme, eleme, mıknatısla çekme ve buharlaştırma yöntemleriyle ayrılır.",
               "example": "Demir tozu ve kumu ayırmak için mıknatıs kullanırız (mıknatıs demiri çeker, kumu bırakır). Makarnayı sudan ayırmak için süzgeç kullanırız.",
               "tip": "Mıknatıs sadece demir, nikel ve kobalt metallerini çeker; plastik, tahta veya altın mıknatısla çekilemez!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Eleme, süzme, mıknatısla ayırma ve buharlaştırma yöntemleri. (Karışım Ayırma)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "🔬",
+                "content": "İki veya daha fazla maddenin özelliklerini kaybetmeden bir araya gelmesiyle KARIŞIM oluşur. Karışımlar süzme, eleme, mıknatısla çekme ve buharlaştırma yöntemleriyle ayrılır.",
+                "example_box": "Demir tozu ve kumu ayırmak için mıknatıs kullanırız (mıknatıs demiri çeker, kumu bırakır). Makarnayı sudan ayırmak için süzgeç kullanırız."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Mıknatıs sadece demir, nikel ve kobalt metallerini çeker; plastik, tahta veya altın mıknatısla çekilemez!"
+              }
+            ]
           },
           {
             "id": "fen_u4_3",
@@ -1744,7 +2332,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Kullanılmış kağıt, cam, metal ve plastik atıkların fabrikalarda yeniden işlenerek kullanılabilir hale getirilmesine GERİ DÖNÜŞÜM denir.",
               "example": "1 ton kullanılmış kağıdın geri dönüştürülmesi doğada tam 17 tane yetişkin ağacın kesilmesini önler!",
               "tip": "Geri dönüşüm kutularına çöp değil, sadece temiz ve ayrıştırılmış geri dönüştürülebilir malzemeler atılmalıdır."
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Sıfır atık, kâğıt, cam, plastik ve metal atıkların geri dönüşümü ve çevre bilinci. (Sıfır Atık)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "♻️",
+                "content": "Kullanılmış kağıt, cam, metal ve plastik atıkların fabrikalarda yeniden işlenerek kullanılabilir hale getirilmesine GERİ DÖNÜŞÜM denir.",
+                "example_box": "1 ton kullanılmış kağıdın geri dönüştürülmesi doğada tam 17 tane yetişkin ağacın kesilmesini önler!"
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Geri dönüşüm kutularına çöp değil, sadece temiz ve ayrıştırılmış geri dönüştürülebilir malzemeler atılmalıdır."
+              }
+            ]
           }
         ],
         "exam": {
@@ -1925,7 +2534,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Her bireyin ilgi alanları, yetenekleri ve güçlendirmesi gereken yönleri farklıdır. Kendimizi tanımalı, güçlü yanlarımızı geliştirmeli, eksiklerimiz için sabırla çalışmalıyız.",
               "example": "Sen satrançta çok stratejik düşünebilirsin, arkadaşın ise resimde renkleri harika kullanabilir.",
               "tip": "Hiç kimse her konuda mükemmel olmak zorunda değildir; farklılıklar sınıfımızı ve dünyamızı zenginleştirir!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Kişisel güçlü yönleri, ilgi ve yetenekleri keşfetme ve hedefler belirleme. (Güçlü Yönlerim)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "🌟",
+                "content": "Her bireyin ilgi alanları, yetenekleri ve güçlendirmesi gereken yönleri farklıdır. Kendimizi tanımalı, güçlü yanlarımızı geliştirmeli, eksiklerimiz için sabırla çalışmalıyız.",
+                "example_box": "Sen satrançta çok stratejik düşünebilirsin, arkadaşın ise resimde renkleri harika kullanabilir."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Hiç kimse her konuda mükemmel olmak zorunda değildir; farklılıklar sınıfımızı ve dünyamızı zenginleştirir!"
+              }
+            ]
           },
           {
             "id": "hb_u1_2",
@@ -1964,7 +2594,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Haklarımız özgürlüklerimizi, sorumluluklarımız ise üstlendiğimiz görevleri ifade eder. Haklarımızı kullanırken başkalarının haklarına saygı göstermek en temel sorumluluğumuzdur.",
               "example": "Teneffüste bahçede oyun oynama HAKKIMIZ vardır; zil çaldığında zamanında sınıfa girme ve ders araçlarını koruma SORUMLULUĞUMUZ vardır.",
               "tip": "Sorumluluğunu bilmeyen birey haklarını da koruyamaz. Hak ve sorumluluk iki elin parmakları gibi birbirini tamamlar."
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Sınıf ve okul kuralları, okul kaynaklarını özenli kullanma ve sorumluluk bilinci. (Hak & Sorumluluk)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "🏫",
+                "content": "Haklarımız özgürlüklerimizi, sorumluluklarımız ise üstlendiğimiz görevleri ifade eder. Haklarımızı kullanırken başkalarının haklarına saygı göstermek en temel sorumluluğumuzdur.",
+                "example_box": "Teneffüste bahçede oyun oynama HAKKIMIZ vardır; zil çaldığında zamanında sınıfa girme ve ders araçlarını koruma SORUMLULUĞUMUZ vardır."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Sorumluluğunu bilmeyen birey haklarını da koruyamaz. Hak ve sorumluluk iki elin parmakları gibi birbirini tamamlar."
+              }
+            ]
           },
           {
             "id": "hb_u1_3",
@@ -2003,7 +2654,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Çocuk Hakları Sözleşmesi'ne göre 18 yaşına kadar her birey çocuktur. En temel haklarımız: Yaşama hakkı, Sağlık hakkı, Eğitim hakkı ve Oyun oynama hakkıdır.",
               "example": "Okula gidip ders dinleyebilmemiz EĞİTİM hakkımız; hastalandığımızda doktora gidebilmemiz SAĞLIK hakkımızdır.",
               "tip": "Çocuklar hiçbir koşulda ağır işlerde çalıştırılamaz; çocukların birinci görevi okumak, öğrenmek ve güvenle büyümektir!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Çocuk Hakları Sözleşmesi: Yaşama, korunma, eğitim ve oyun haklarımız. (Çocuk Hakları)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "🕊️",
+                "content": "Çocuk Hakları Sözleşmesi'ne göre 18 yaşına kadar her birey çocuktur. En temel haklarımız: Yaşama hakkı, Sağlık hakkı, Eğitim hakkı ve Oyun oynama hakkıdır.",
+                "example_box": "Okula gidip ders dinleyebilmemiz EĞİTİM hakkımız; hastalandığımızda doktora gidebilmemiz SAĞLIK hakkımızdır."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Çocuklar hiçbir koşulda ağır işlerde çalıştırılamaz; çocukların birinci görevi okumak, öğrenmek ve güvenle büyümektir!"
+              }
+            ]
           }
         ],
         "exam": {
@@ -2077,7 +2749,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Sağlığımızı korumak için kişisel temizliğe dikkat etmeli, dengeli beslenmeli, düzenli spor yapmalı ve mevsime uygun giyinmeliyiz.",
               "example": "Kışın soğukta dışarı çıkarken atkı, bere ve mont giymek bizi hastalıklardan korur.",
               "tip": "Hastalanınca hemen antibiyotiğe sarılmamalıyız; ilaçlar sadece doktor önerisiyle kullanılmalıdır."
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Dengeli beslenme, mevsim meyve ve sebzeleri, kişisel temizlik ve uyku düzeni. (Sağlıklı Yaşam)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "🥗",
+                "content": "Sağlığımızı korumak için kişisel temizliğe dikkat etmeli, dengeli beslenmeli, düzenli spor yapmalı ve mevsime uygun giyinmeliyiz.",
+                "example_box": "Kışın soğukta dışarı çıkarken atkı, bere ve mont giymek bizi hastalıklardan korur."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Hastalanınca hemen antibiyotiğe sarılmamalıyız; ilaçlar sadece doktor önerisiyle kullanılmalıdır."
+              }
+            ]
           },
           {
             "id": "hb_u2_2",
@@ -2116,7 +2809,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Evde, okulda ve sokakta güvenliğimizi tehdit eden durumlar: Islak zeminde koşmak, açık prizlere dokunmak, tanımadığımız yabancılarla konuşmak veya onların arabasına binmektir.",
               "example": "Evde gaz kokusu hissettiğimizde hemen pencereleri açmalı, elektrik düğmelerine dokunmamalı ve büyüklerimize haber vermeliyiz.",
               "tip": "Tanımadığın biri sana 'gel sana şeker alayım' veya 'anneni tanıyorum' derse ASLA inanma ve hemen güvenli bir yere (öğretmenin veya polisin yanına) koş!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Evde, okulda, sokakta güvenlik; tanımadığımız kişilere karşı sınırlar ve 112 Acil Çağrı. (Güvenlik & 112)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "🚨",
+                "content": "Evde, okulda ve sokakta güvenliğimizi tehdit eden durumlar: Islak zeminde koşmak, açık prizlere dokunmak, tanımadığımız yabancılarla konuşmak veya onların arabasına binmektir.",
+                "example_box": "Evde gaz kokusu hissettiğimizde hemen pencereleri açmalı, elektrik düğmelerine dokunmamalı ve büyüklerimize haber vermeliyiz."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Tanımadığın biri sana 'gel sana şeker alayım' veya 'anneni tanıyorum' derse ASLA inanma ve hemen güvenli bir yere (öğretmenin veya polisin yanına) koş!"
+              }
+            ]
           },
           {
             "id": "hb_u2_3",
@@ -2155,7 +2869,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Trafikte can güvenliğimiz için kurallara uymalıyız: Yaya geçidini ve üst geçitleri kullanmak, yeşil ışıkta geçmek, arabada arka koltuğa oturup emniyet kemerini takmak.",
               "example": "Yoldan karşıya geçerken: Önce sola, sonra sağa, tekrar sola bakarak dikkatlice geçmeliyiz.",
               "tip": "12 yaşından küçük çocukların arabanın ön koltuğunda oturması yasaktır ve son derece tehlikelidir!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Trafik işaret levhaları, yaya geçidi, emniyet kemeri ve güvenli oyun alanları. (Trafik Kuralları)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "🚦",
+                "content": "Trafikte can güvenliğimiz için kurallara uymalıyız: Yaya geçidini ve üst geçitleri kullanmak, yeşil ışıkta geçmek, arabada arka koltuğa oturup emniyet kemerini takmak.",
+                "example_box": "Yoldan karşıya geçerken: Önce sola, sonra sağa, tekrar sola bakarak dikkatlice geçmeliyiz."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "12 yaşından küçük çocukların arabanın ön koltuğunda oturması yasaktır ve son derece tehlikelidir!"
+              }
+            ]
           }
         ],
         "exam": {
@@ -2229,7 +2964,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Aile toplumun temel taşıdır. Aile içinde sevgi, saygı, dürüstlük, anlayış ve dayanışma olmalıdır.",
               "example": "Akşam ailece sofraya oturup günün nasıl geçtiğini paylaşmak aile bağlarını güçlendirir.",
               "tip": "Aile bireylerinin fikirleri dinlenmeli, önemli kararlar alınırken çocukların da görüşleri sorulmalıdır."
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Aile içi dayanışma, akrabalık bağları, komşuluk ilişkileri ve büyüklere saygı. (Bizim Aile)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "🏡",
+                "content": "Aile toplumun temel taşıdır. Aile içinde sevgi, saygı, dürüstlük, anlayış ve dayanışma olmalıdır.",
+                "example_box": "Akşam ailece sofraya oturup günün nasıl geçtiğini paylaşmak aile bağlarını güçlendirir."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Aile bireylerinin fikirleri dinlenmeli, önemli kararlar alınırken çocukların da görüşleri sorulmalıdır."
+              }
+            ]
           },
           {
             "id": "hb_u3_2",
@@ -2268,7 +3024,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Yardımlaşma ve dayanışma toplumda kardeşliği ve birliği pekiştirir. Kızılay, AFAD, Yeşilay gibi sivil toplum kuruluşları ihtiyaç sahiplerine el uzatır.",
               "example": "Deprem veya sel felaketinde ihtiyaç sahiplerine kıyafet ve battaniye yardımı göndermek milletimizin en güzel yardımlaşma örneğidir.",
               "tip": "Büyük yardımlar yapmak zorunda değilsin; yaşlı bir komşunun poşetini taşımak bile çok değerli bir yardımlaşmadır."
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Toplumsal yardımlaşma, imece kültürü, empati ve paylaşmanın önemi. (İmece & Paylaşım)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "🤝",
+                "content": "Yardımlaşma ve dayanışma toplumda kardeşliği ve birliği pekiştirir. Kızılay, AFAD, Yeşilay gibi sivil toplum kuruluşları ihtiyaç sahiplerine el uzatır.",
+                "example_box": "Deprem veya sel felaketinde ihtiyaç sahiplerine kıyafet ve battaniye yardımı göndermek milletimizin en güzel yardımlaşma örneğidir."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Büyük yardımlar yapmak zorunda değilsin; yaşlı bir komşunun poşetini taşımak bile çok değerli bir yardımlaşmadır."
+              }
+            ]
           },
           {
             "id": "hb_u3_3",
@@ -2307,7 +3084,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Toplumda her meslek bir ihtiyacı karşılar: Doktor sağlığımızı, Öğretmen eğitimimizi, Polis güvenliğimizi, Çiftçi besinlerimizi, İtfaiyeci canımızı korur.",
               "example": "Fırıncılar sabahın erken saatlerinde taze ekmek pişirerek soframıza ekmek gelmesini sağlarlar.",
               "tip": "Hiçbir meslek diğerinden üstün değildir; işini dürüst, özenli ve severek yapan her meslek sahibi saygıyı hak eder!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Toplumdaki meslekler, yaptıkları işler ve kullandıkları araç-gereçler. (Meslekler)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "👩‍⚕️",
+                "content": "Toplumda her meslek bir ihtiyacı karşılar: Doktor sağlığımızı, Öğretmen eğitimimizi, Polis güvenliğimizi, Çiftçi besinlerimizi, İtfaiyeci canımızı korur.",
+                "example_box": "Fırıncılar sabahın erken saatlerinde taze ekmek pişirerek soframıza ekmek gelmesini sağlarlar."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Hiçbir meslek diğerinden üstün değildir; işini dürüst, özenli ve severek yapan her meslek sahibi saygıyı hak eder!"
+              }
+            ]
           }
         ],
         "exam": {
@@ -2437,8 +3235,7 @@ window.CURRICULUM_TERM1 = {
                   "A driver"
                 ],
                 "ans": 0,
-                "hint": "Library -> Librarian (Kütüphaneci)",
-                "tr_q": "Okul kütüphanesinde çalışan ve kitap bulmamıza yardım eden kimdir?"
+                "hint": "Library -> Librarian (Kütüphaneci)"
               },
               {
                 "q": "'Who is this?' - 'This is my ............. (sınıf arkadaşım).'",
@@ -2449,8 +3246,7 @@ window.CURRICULUM_TERM1 = {
                   "farmer"
                 ],
                 "ans": 0,
-                "hint": "Sınıf arkadaşı = Classmate",
-                "tr_q": "'Bu kim?' - 'Bu benim ............. (sınıf arkadaşım).'"
+                "hint": "Sınıf arkadaşı = Classmate"
               }
             ],
             "fact_card": {
@@ -2459,7 +3255,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Selamlaşma ve okul kişileri: Good morning (Günaydın), Good afternoon (Tünaydın), Teacher (Öğretmen), Student (Öğrenci), Friend (Arkadaş).",
               "example": "'Good morning teacher!' (Günaydın öğretmenim!), 'This is my friend Ece.' (Bu benim arkadaşım Ece.)",
               "tip": "'Good night' (İyi geceler) sadece yatarken söylenir. Akşam karşılaştığımızda 'Good evening' (İyi akşamlar) deriz!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "classmate, teacher, librarian, school nurse, caretaker, headteacher ('Who is this?') (School People)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "🏫",
+                "content": "Selamlaşma ve okul kişileri: Good morning (Günaydın), Good afternoon (Tünaydın), Teacher (Öğretmen), Student (Öğrenci), Friend (Arkadaş).",
+                "example_box": "'Good morning teacher!' (Günaydın öğretmenim!), 'This is my friend Ece.' (Bu benim arkadaşım Ece.)"
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "'Good night' (İyi geceler) sadece yatarken söylenir. Akşam karşılaştığımızda 'Good evening' (İyi akşamlar) deriz!"
+              }
+            ]
           },
           {
             "id": "ing_t1_2",
@@ -2478,8 +3295,7 @@ window.CURRICULUM_TERM1 = {
                   "In the music room"
                 ],
                 "ans": 0,
-                "hint": "Spor salonu = Gym",
-                "tr_q": "Öğrenciler okulda nerede basketbol oynar ve beden eğitimi yapar?"
+                "hint": "Spor salonu = Gym"
               },
               {
                 "q": "'Where is Daphne?' - 'She is in the ........... playing the piano.'",
@@ -2490,8 +3306,7 @@ window.CURRICULUM_TERM1 = {
                   "office"
                 ],
                 "ans": 0,
-                "hint": "Piyano müzik odasındadır (music room).",
-                "tr_q": "'Daphne nerede?' - 'O ........... odasında piyano çalıyor.'"
+                "hint": "Piyano müzik odasındadır (music room)."
               }
             ],
             "fact_card": {
@@ -2500,7 +3315,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Okul bölümleri: Classroom (Sınıf), Library (Kütüphane), Canteen (Kantin), Playground (Oyun bahçesi), Music room (Müzik odası).",
               "example": "'Where are you?' -> 'I am in the library.' (Neredesin? -> Kütüphanedeyim.) 'Let's play in the playground.'",
               "tip": "Bölüm isimlerinin başına genellikle 'the' getirilir: 'in the canteen' (kantinde)."
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "library, art room, music room, gym, corridor, sports field ('Where is Daphne?') (School Places)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "🎨",
+                "content": "Okul bölümleri: Classroom (Sınıf), Library (Kütüphane), Canteen (Kantin), Playground (Oyun bahçesi), Music room (Müzik odası).",
+                "example_box": "'Where are you?' -> 'I am in the library.' (Neredesin? -> Kütüphanedeyim.) 'Let's play in the playground.'"
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Bölüm isimlerinin başına genellikle 'the' getirilir: 'in the canteen' (kantinde)."
+              }
+            ]
           },
           {
             "id": "ing_t1_3",
@@ -2519,8 +3355,7 @@ window.CURRICULUM_TERM1 = {
                   "August"
                 ],
                 "ans": 0,
-                "hint": "October (Ekim) -> November (Kasım)",
-                "tr_q": "Ekim ayından (October) sonra hangi ay gelir?"
+                "hint": "October (Ekim) -> November (Kasım)"
               },
               {
                 "q": "'How old are you?' sorusuna hangi cevap verilir?",
@@ -2531,8 +3366,7 @@ window.CURRICULUM_TERM1 = {
                   "Fine, thanks."
                 ],
                 "ans": 0,
-                "hint": "How old are you? = Kaç yaşındasın?",
-                "tr_q": "'Kaç yaşındasın?' (How old are you?) sorusuna hangi cevap verilir?"
+                "hint": "How old are you? = Kaç yaşındasın?"
               }
             ],
             "fact_card": {
@@ -2541,7 +3375,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Yılın 12 ayı: January, February, March, April, May, June, July, August, September, October, November, December.",
               "example": "'When is your birthday?' (Doğum günün ne zaman?) -> 'It is in May.' (Mayıs ayında.) 'Happy Birthday!' (İyi ki doğdun!)",
               "tip": "İngilizcede ay isimlerinin ilk harfi CÜMLENİN NERESİNDE OLURSA OLSUN her zaman BÜYÜK harfle yazılır (March, April vb.)!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Months of the year (January - December), candle, cake, gift ('When is your birthday?') (Months & Birthdays)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "🎂",
+                "content": "Yılın 12 ayı: January, February, March, April, May, June, July, August, September, October, November, December.",
+                "example_box": "'When is your birthday?' (Doğum günün ne zaman?) -> 'It is in May.' (Mayıs ayında.) 'Happy Birthday!' (İyi ki doğdun!)"
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "İngilizcede ay isimlerinin ilk harfi CÜMLENİN NERESİNDE OLURSA OLSUN her zaman BÜYÜK harfle yazılır (March, April vb.)!"
+              }
+            ]
           },
           {
             "id": "ing_t1_4",
@@ -2560,8 +3415,7 @@ window.CURRICULUM_TERM1 = {
                   "are"
                 ],
                 "ans": 0,
-                "hint": "Yasak ve yapılmaması gerekenler için mustn't kullanılır.",
-                "tr_q": "Okulda koridorda koşmamalısın! (Boşluğa hangisi gelir?)"
+                "hint": "Yasak ve yapılmaması gerekenler için mustn't kullanılır."
               },
               {
                 "q": "You ........... listen to your teacher carefully in the lesson.",
@@ -2572,8 +3426,7 @@ window.CURRICULUM_TERM1 = {
                   "don't"
                 ],
                 "ans": 0,
-                "hint": "Zorunluluk ve yapılması gerekenler için must kullanılır.",
-                "tr_q": "Derste öğretmeninizi dikkatlice dinlemelisiniz. (Boşluğa hangisi gelir?)"
+                "hint": "Zorunluluk ve yapılması gerekenler için must kullanılır."
               }
             ],
             "fact_card": {
@@ -2582,7 +3435,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Okul kuralları: 'Must' (yapmalısın - zorunluluk), 'Mustn't' (yapmamalısın - yasak).",
               "example": "'You must listen to the teacher.' (Öğretmeni dinlemelisin.) 'You mustn't run in the corridor.' (Koridorda koşmamalısın.)",
               "tip": "'Mustn't' = Must not birleşimidir; kurallara aykırı yasakları ifade eder."
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "You must follow rules. You mustn't run in the corridor. (Must / Mustn't)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "🛑",
+                "content": "Okul kuralları: 'Must' (yapmalısın - zorunluluk), 'Mustn't' (yapmamalısın - yasak).",
+                "example_box": "'You must listen to the teacher.' (Öğretmeni dinlemelisin.) 'You mustn't run in the corridor.' (Koridorda koşmamalısın.)"
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "'Mustn't' = Must not birleşimidir; kurallara aykırı yasakları ifade eder."
+              }
+            ]
           }
         ],
         "exam": {
@@ -2598,8 +3472,7 @@ window.CURRICULUM_TERM1 = {
                 "In the garden"
               ],
               "ans": 0,
-              "hint": "Experiments are done in the science lab (laboratuvar).",
-              "tr_q": "Öğrenciler fen deneylerini nerede yaparlar?"
+              "hint": "Experiments are done in the science lab (laboratuvar)."
             },
             {
               "q": "Which month is between June and August?",
@@ -2610,8 +3483,7 @@ window.CURRICULUM_TERM1 = {
                 "October"
               ],
               "ans": 0,
-              "hint": "June, July, August (Haziran, Temmuz, Ağustos).",
-              "tr_q": "Haziran (June) ile Ağustos (August) arasındaki ay hangisidir?"
+              "hint": "June, July, August (Haziran, Temmuz, Ağustos)."
             },
             {
               "q": "You ............ shout or run in the library!",
@@ -2622,32 +3494,7 @@ window.CURRICULUM_TERM1 = {
                 "are"
               ],
               "ans": 0,
-              "hint": "Kütüphanede bağırmak yasaktır -> mustn't.",
-              "tr_q": "Kütüphanede bağırmamalı veya koşmamalısın! (Boşluğa hangisi gelir?)"
-            },
-            {
-              "q": "Where is the headmaster (müdür)? - He is in the ...........",
-              "tr_q": "Okul müdürü nerede? - O ........... odasında.",
-              "options": [
-                "office",
-                "canteen",
-                "garden",
-                "gym"
-              ],
-              "ans": 0,
-              "hint": "Müdür ofiste / idare odasındadır (office)."
-            },
-            {
-              "q": "You ........... eat food or chew gum in the classroom!",
-              "tr_q": "Sınıfta yemek yememeli ve sakız çiğnememelisin!",
-              "options": [
-                "mustn't",
-                "must",
-                "can",
-                "are"
-              ],
-              "ans": 0,
-              "hint": "Sınıfta yemek yemek yasaktır -> mustn't."
+              "hint": "Kütüphanede bağırmak yasaktır -> mustn't."
             }
           ]
         }
@@ -2674,8 +3521,7 @@ window.CURRICULUM_TERM1 = {
                   "A schoolbag"
                 ],
                 "ans": 0,
-                "hint": "Cetvel = Ruler",
-                "tr_q": "Bu nedir? (Düz çizgi çekmek için kullanılan cetvel)"
+                "hint": "Cetvel = Ruler"
               },
               {
                 "q": "'What are they?' - 'They are ............. (kitaplıklar).'",
@@ -2686,8 +3532,7 @@ window.CURRICULUM_TERM1 = {
                   "erasers"
                 ],
                 "ans": 0,
-                "hint": "Bookshelf -> Bookshelves (Kitaplıklar)",
-                "tr_q": "'Bunlar nedir?' - 'Onlar ............. (kitaplıklar).'"
+                "hint": "Bookshelf -> Bookshelves (Kitaplıklar)"
               }
             ],
             "fact_card": {
@@ -2696,7 +3541,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Sınıf eşyaları: Desk (Sıra), Board (Yazı tahtası), Chair (Sandalye), Pencil case (Kalemlik), Book (Kitap), Ruler (Cetvel).",
               "example": "'What is this?' -> 'It is a ruler.' (Bu nedir? -> Bu bir cetveldir.)",
               "tip": "Sessiz harfle başlayan nesnelerin önüne 'a' (a book), sesli harfle başlayanların önüne 'an' (an eraser) gelir!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "pencil, ruler, teacher's desk, bookshelf, keyboard, duster, pen ('What are they?') (Classroom Objects)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "✏️",
+                "content": "Sınıf eşyaları: Desk (Sıra), Board (Yazı tahtası), Chair (Sandalye), Pencil case (Kalemlik), Book (Kitap), Ruler (Cetvel).",
+                "example_box": "'What is this?' -> 'It is a ruler.' (Bu nedir? -> Bu bir cetveldir.)"
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Sessiz harfle başlayan nesnelerin önüne 'a' (a book), sesli harfle başlayanların önüne 'an' (an eraser) gelir!"
+              }
+            ]
           },
           {
             "id": "ing_t2_2",
@@ -2715,8 +3581,7 @@ window.CURRICULUM_TERM1 = {
                   "It is five past."
                 ],
                 "ans": 0,
-                "hint": "Tam saatlerde 'o'clock' kullanılır: It is five o'clock.",
-                "tr_q": "Saat tam 5:00 iken İngilizce nasıl söylenir?"
+                "hint": "Tam saatlerde 'o'clock' kullanılır: It is five o'clock."
               },
               {
                 "q": "'What time is it?' sorusu ne anlama gelir?",
@@ -2727,8 +3592,7 @@ window.CURRICULUM_TERM1 = {
                   "Kaç yaşındasın?"
                 ],
                 "ans": 0,
-                "hint": "What time is it? = Saat kaç?",
-                "tr_q": "'What time is it?' sorusunun Türkçe anlamı nedir?"
+                "hint": "What time is it? = Saat kaç?"
               }
             ],
             "fact_card": {
@@ -2737,7 +3601,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Saati sorma: 'What time is it?' (Saat kaç?). Tam saatlerde 'It is ... o'clock' kalıbı kullanılır.",
               "example": "'What time is it?' -> 'It is three o'clock.' (Saat 3.) 'It is nine o'clock.' (Saat 9.)",
               "tip": "'o'clock' kelimesi sadece TAM saatlerde (saat 1.00, 2.00, 3.00) söylenir. Buçuklu saatlerde o'clock kullanılmaz!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "'What time is it? It's five o'clock.' / Saatleri İngilizce söyleme. (What time is it?)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "⏱️",
+                "content": "Saati sorma: 'What time is it?' (Saat kaç?). Tam saatlerde 'It is ... o'clock' kalıbı kullanılır.",
+                "example_box": "'What time is it?' -> 'It is three o'clock.' (Saat 3.) 'It is nine o'clock.' (Saat 9.)"
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "'o'clock' kelimesi sadece TAM saatlerde (saat 1.00, 2.00, 3.00) söylenir. Buçuklu saatlerde o'clock kullanılmaz!"
+              }
+            ]
           },
           {
             "id": "ing_t2_3",
@@ -2756,8 +3641,7 @@ window.CURRICULUM_TERM1 = {
                   "Forty"
                 ],
                 "ans": 0,
-                "hint": "30 = Thirty, 13 = Thirteen",
-                "tr_q": "30 sayısının İngilizce kelime karşılığı hangisidir?"
+                "hint": "30 = Thirty, 13 = Thirteen"
               },
               {
                 "q": "'How many books have you got?' - 'I have got ........... (40) books.'",
@@ -2768,8 +3652,7 @@ window.CURRICULUM_TERM1 = {
                   "fifty"
                 ],
                 "ans": 0,
-                "hint": "40 = Forty",
-                "tr_q": "'Kaç kitabın var?' - 'Benim ........... (40) kitabım var.'"
+                "hint": "40 = Forty"
               }
             ],
             "fact_card": {
@@ -2778,7 +3661,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "20-50 arası sayılar: 20 (Twenty), 30 (Thirty), 40 (Forty), 50 (Fifty). 'Have got' / 'Has got' (Sahip olmak).",
               "example": "'I have got thirty pencils.' (Benim otuz kurşun kalemim var.) 'She has got a cat.' (Onun bir kedisi var.)",
               "tip": "I, You, We, They ile 'HAVE GOT'; He, She, It ile 'HAS GOT' kullanılır!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "twenty to fifty; 'How many pencils have you got? I have got two pencils.' (Numbers & Have got)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "🔢",
+                "content": "20-50 arası sayılar: 20 (Twenty), 30 (Thirty), 40 (Forty), 50 (Fifty). 'Have got' / 'Has got' (Sahip olmak).",
+                "example_box": "'I have got thirty pencils.' (Benim otuz kurşun kalemim var.) 'She has got a cat.' (Onun bir kedisi var.)"
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "I, You, We, They ile 'HAVE GOT'; He, She, It ile 'HAS GOT' kullanılır!"
+              }
+            ]
           },
           {
             "id": "ing_t2_4",
@@ -2797,8 +3701,7 @@ window.CURRICULUM_TERM1 = {
                   "snowy"
                 ],
                 "ans": 0,
-                "hint": "Güneşli = Sunny",
-                "tr_q": "'Bugün hava nasıl?' - 'Hava ............ (güneşli).'"
+                "hint": "Güneşli = Sunny"
               },
               {
                 "q": "Sayıları, toplamayı ve çarpmayı öğrendiğimiz dersin İngilizcesi nedir?",
@@ -2809,8 +3712,7 @@ window.CURRICULUM_TERM1 = {
                   "English"
                 ],
                 "ans": 0,
-                "hint": "Matematik dersi = Maths",
-                "tr_q": "Matematik dersinin İngilizce karşılığı nedir?"
+                "hint": "Matematik dersi = Maths"
               }
             ],
             "fact_card": {
@@ -2819,7 +3721,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Hava durumu: Sunny (Güneşli), Rainy (Yağmurlu), Snowy (Karlı), Windy (Rüzgarlı). Dersler: Maths (Matematik), Science (Fen), Art (Resim).",
               "example": "'How is the weather today?' -> 'It is sunny today.' (Bugün hava nasıl? -> Bugün hava güneşli.)",
               "tip": "'I like Maths' (Matematiği severim), 'I like Science' (Feni severim) cümleleriyle sevdiğin dersleri anlatabilirsin."
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "sunny, rainy, cloudy, windy; Maths, Science, Life Study, English, Music, Art. (Weather & Subjects)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "☀️",
+                "content": "Hava durumu: Sunny (Güneşli), Rainy (Yağmurlu), Snowy (Karlı), Windy (Rüzgarlı). Dersler: Maths (Matematik), Science (Fen), Art (Resim).",
+                "example_box": "'How is the weather today?' -> 'It is sunny today.' (Bugün hava nasıl? -> Bugün hava güneşli.)"
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "'I like Maths' (Matematiği severim), 'I like Science' (Feni severim) cümleleriyle sevdiğin dersleri anlatabilirsin."
+              }
+            ]
           }
         ],
         "exam": {
@@ -2835,8 +3758,7 @@ window.CURRICULUM_TERM1 = {
                 "It is ten past."
               ],
               "ans": 0,
-              "hint": "Saat 10:00 -> It is ten o'clock.",
-              "tr_q": "Saat kaç? (10:00)"
+              "hint": "Saat 10:00 -> It is ten o'clock."
             },
             {
               "q": "We learn songs and play instruments in ............ lesson.",
@@ -2847,32 +3769,7 @@ window.CURRICULUM_TERM1 = {
                 "PE"
               ],
               "ans": 0,
-              "hint": "Müzik dersi -> Music lesson.",
-              "tr_q": "Şarkılar öğrendiğimiz ve müzik aleti çaldığımız ders hangisidir?"
-            },
-            {
-              "q": "How many days are there in a week? (Bir haftada kaç gün vardır?)",
-              "tr_q": "Bir haftada kaç gün vardır?",
-              "options": [
-                "Seven (7)",
-                "Five (5)",
-                "Twelve (12)",
-                "Thirty (30)"
-              ],
-              "ans": 0,
-              "hint": "A week has seven days (7 gün)."
-            },
-            {
-              "q": "'It is rainy and windy today.' - Take your ........... (Şemsiyeni al).",
-              "tr_q": "'Bugün hava yağmurlu ve rüzgarlı.' - ........... al.",
-              "options": [
-                "umbrella",
-                "sunglasses",
-                "swimsuit",
-                "shorts"
-              ],
-              "ans": 0,
-              "hint": "Yağmurlu havada şemsiye (umbrella) alınır."
+              "hint": "Müzik dersi -> Music lesson."
             }
           ]
         }
@@ -2899,8 +3796,7 @@ window.CURRICULUM_TERM1 = {
                   "footies"
                 ],
                 "ans": 0,
-                "hint": "Foot düzensiz çoğuldur ve feet olur.",
-                "tr_q": "'Foot' (ayak) kelimesinin çoğulu (ayaklar) hangisidir?"
+                "hint": "Foot düzensiz çoğuldur ve feet olur."
               },
               {
                 "q": "'She has got curly blonde hair.' cümlesinin Türkçe anlamı nedir?",
@@ -2911,8 +3807,7 @@ window.CURRICULUM_TERM1 = {
                   "Onun mavi gözleri var."
                 ],
                 "ans": 0,
-                "hint": "Curly = Kıvırcık, Blonde = Sarı saç",
-                "tr_q": "'She has got curly blonde hair.' cümlesi Türkçe ne demektir?"
+                "hint": "Curly = Kıvırcık, Blonde = Sarı saç"
               }
             ],
             "fact_card": {
@@ -2921,7 +3816,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Vücut bölümleri: Head (Baş), Eyes (Gözler), Ears (Kulaklar), Nose (Burun), Mouth (Ağız), Hands (Eller), Legs (Bacaklar).",
               "example": "'Touch your nose!' (Burnuna dokun!) 'I have got brown eyes.' (Benim kahverengi gözlerim var.)",
               "tip": "Çoğul olan uzuvların sonuna 's' takısı gelir: One eye (bir göz) -> Two eyes (iki göz)!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "head, eye, nose, curly blonde hair, tall, short ('What does she look like?') (Body & Looks)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "👧",
+                "content": "Vücut bölümleri: Head (Baş), Eyes (Gözler), Ears (Kulaklar), Nose (Burun), Mouth (Ağız), Hands (Eller), Legs (Bacaklar).",
+                "example_box": "'Touch your nose!' (Burnuna dokun!) 'I have got brown eyes.' (Benim kahverengi gözlerim var.)"
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Çoğul olan uzuvların sonuna 's' takısı gelir: One eye (bir göz) -> Two eyes (iki göz)!"
+              }
+            ]
           },
           {
             "id": "ing_t3_2",
@@ -2940,8 +3856,7 @@ window.CURRICULUM_TERM1 = {
                   "Shorts"
                 ],
                 "ans": 0,
-                "hint": "Kaban/palto = Coat",
-                "tr_q": "Soğuk havalarda giyilen kaban/paltonun İngilizcesi nedir?"
+                "hint": "Kaban/palto = Coat"
               },
               {
                 "q": "Güneşli günlerde gözlerimizi korumak için ne takarız?",
@@ -2952,8 +3867,7 @@ window.CURRICULUM_TERM1 = {
                   "Socks"
                 ],
                 "ans": 0,
-                "hint": "Güneş gözlüğü = Sunglasses",
-                "tr_q": "Güneşli günlerde gözlerimizi korumak için ne takarız? (Sunglasses)"
+                "hint": "Güneş gözlüğü = Sunglasses"
               }
             ],
             "fact_card": {
@@ -2962,7 +3876,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Kıyafetler ve Mevsimler: T-shirt (Tişört), Jacket (Ceket), Shoes (Ayakkabı), Hat (Şapka). Seasons: Spring (İlkbahar), Summer (Yaz), Autumn (Sonbahar), Winter (Kış).",
               "example": "'In summer, I wear a T-shirt.' (Yazın tişört giyerim.) 'In winter, I wear a coat and boots.'",
               "tip": "'Wear' (giymek) fiilidir: 'I wear my shoes' (Ayakkabılarımı giyerim)."
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "sweatshirt, jeans, coat, dress, sunglasses ('What are you wearing today?') (Clothes)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "🧥",
+                "content": "Kıyafetler ve Mevsimler: T-shirt (Tişört), Jacket (Ceket), Shoes (Ayakkabı), Hat (Şapka). Seasons: Spring (İlkbahar), Summer (Yaz), Autumn (Sonbahar), Winter (Kış).",
+                "example_box": "'In summer, I wear a T-shirt.' (Yazın tişört giyerim.) 'In winter, I wear a coat and boots.'"
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "'Wear' (giymek) fiilidir: 'I wear my shoes' (Ayakkabılarımı giyerim)."
+              }
+            ]
           },
           {
             "id": "ing_t3_3",
@@ -2981,8 +3916,7 @@ window.CURRICULUM_TERM1 = {
                   "I enjoy"
                 ],
                 "ans": 0,
-                "hint": "Dislike veya hate sevmemek anlamına gelir.",
-                "tr_q": "Bir şeyi sevmediğimizi (hoşlanmadığımızı) belirtmek için hangisi kullanılır?"
+                "hint": "Dislike veya hate sevmemek anlamına gelir."
               },
               {
                 "q": "'I love reading books in the library.' cümlesi ne anlama gelir?",
@@ -2993,8 +3927,7 @@ window.CURRICULUM_TERM1 = {
                   "Kitapları sevmiyorum."
                 ],
                 "ans": 0,
-                "hint": "Love = Çok sevmek",
-                "tr_q": "'I love reading books in the library.' cümlesi ne anlama gelir?"
+                "hint": "Love = Çok sevmek"
               }
             ],
             "fact_card": {
@@ -3003,7 +3936,28 @@ window.CURRICULUM_TERM1 = {
               "rule": "Duygular ve Beğeniler: 'I like ...' (Severim), 'I don't like ...' (Sevmem). Happy (Mutlu), Sad (Üzgün), Energetic (Enerjik).",
               "example": "'I like football, but I don't like tennis.' (Futbolu severim ama tenisi sevmem.) 'Are you happy?' -> 'Yes, I am!'",
               "tip": "'Like' kelimesinin olumsuzu 'don't like'tır. Sorularda 'Do you like apples?' (Elma sever misin?) diye sorulur!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "'I like sunny days', 'I dislike rainy days', preferences and feelings. (Likes / Dislikes)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "❤️",
+                "content": "Duygular ve Beğeniler: 'I like ...' (Severim), 'I don't like ...' (Sevmem). Happy (Mutlu), Sad (Üzgün), Energetic (Enerjik).",
+                "example_box": "'I like football, but I don't like tennis.' (Futbolu severim ama tenisi sevmem.) 'Are you happy?' -> 'Yes, I am!'"
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "'Like' kelimesinin olumsuzu 'don't like'tır. Sorularda 'Do you like apples?' (Elma sever misin?) diye sorulur!"
+              }
+            ]
           }
         ],
         "exam": {
@@ -3019,8 +3973,7 @@ window.CURRICULUM_TERM1 = {
                 "I like apples."
               ],
               "ans": 0,
-              "hint": "Fiziksel görünüş tanımlanıyor: uzun kıvırcık saç ve yeşil gözler.",
-              "tr_q": "O dış görünüş olarak nasıl biri? (Fiziksel tarif)"
+              "hint": "Fiziksel görünüş tanımlanıyor: uzun kıvırcık saç ve yeşil gözler."
             },
             {
               "q": "It is cold and snowy today. You should wear your ............",
@@ -3031,32 +3984,7 @@ window.CURRICULUM_TERM1 = {
                 "T-shirt and shorts"
               ],
               "ans": 0,
-              "hint": "Soğuk ve karlı havada kaban ve bot (coat and boots) giyilir.",
-              "tr_q": "Bugün hava soğuk ve karlı. ............ giymelisin."
-            },
-            {
-              "q": "Which one is an animal with four legs and long ears?",
-              "tr_q": "Dört bacağı ve uzun kulakları olan sevimli hayvan hangisidir?",
-              "options": [
-                "A rabbit (Tavşan)",
-                "A bird (Kuş)",
-                "A fish (Balık)",
-                "A bee (Arı)"
-              ],
-              "ans": 0,
-              "hint": "Tavşan (rabbit) uzun kulaklıdır."
-            },
-            {
-              "q": "'Do you like ice cream?' - 'Yes, ...........'",
-              "tr_q": "'Dondurma sever misin?' - 'Evet, ...........'",
-              "options": [
-                "I do.",
-                "I don't.",
-                "it is.",
-                "I am."
-              ],
-              "ans": 0,
-              "hint": "Do you like...? sorusuna 'Yes, I do' şeklinde olumlu cevap verilir."
+              "hint": "Soğuk ve karlı havada kaban ve bot (coat and boots) giyilir."
             }
           ]
         }
@@ -3074,8 +4002,7 @@ window.CURRICULUM_TERM1 = {
             "Goodbye!",
             "See you!"
           ],
-          "ans": 1,
-          "tr_q": "Sabahleyin 'Günaydın' demek için hangisi söylenir?"
+          "ans": 1
         },
         {
           "q": "'What is your name?' sorusuna nasıl cevap verilir?",
@@ -3085,8 +4012,7 @@ window.CURRICULUM_TERM1 = {
             "I am fine.",
             "Yes, I am."
           ],
-          "ans": 1,
-          "tr_q": "'Adın ne?' (What is your name?) sorusuna nasıl cevap verilir?"
+          "ans": 1
         },
         {
           "q": "'How are you?' sorusunun anlamı nedir?",
@@ -3096,8 +4022,7 @@ window.CURRICULUM_TERM1 = {
             "Nasılsın?",
             "Nerelisin?"
           ],
-          "ans": 2,
-          "tr_q": "'How are you?' sorusunun Türkçe karşılığı nedir?"
+          "ans": 2
         },
         {
           "q": "'Mother' kelimesinin Türkçe karşılığı nedir?",
@@ -3107,8 +4032,7 @@ window.CURRICULUM_TERM1 = {
             "Kız kardeş",
             "Büyükbaba"
           ],
-          "ans": 1,
-          "tr_q": "'Mother' kelimesinin Türkçe anlamı nedir?"
+          "ans": 1
         },
         {
           "q": "Karnı acıkan bir çocuk kendini nasıl ifade eder?",
@@ -3118,8 +4042,7 @@ window.CURRICULUM_TERM1 = {
             "I am hungry.",
             "I am cold."
           ],
-          "ans": 2,
-          "tr_q": "'Ben açım' demek isteyen çocuk hangisini söyler?"
+          "ans": 2
         },
         {
           "q": "'The elephant is big.' cümlesi ne anlama gelir?",
@@ -3129,8 +4052,7 @@ window.CURRICULUM_TERM1 = {
             "Fil hızlıdır.",
             "Fil yavaştır."
           ],
-          "ans": 1,
-          "tr_q": "'The elephant is big.' cümlesinin Türkçe anlamı nedir?"
+          "ans": 1
         }
       ]
     }
@@ -3199,6 +4121,26 @@ window.CURRICULUM_TERM1 = {
                 "ans": 0,
                 "hint": "Görseller metnin ana konusu hakkında güçlü ipuçları taşır."
               }
+            ],
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Dinleme kuralları, nezaket, dostluk ve yardımlaşma. (Nezaket & Dostluk)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "Dinleme kuralları, nezaket, dostluk ve yardımlaşma."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
+              }
             ]
           },
           {
@@ -3251,6 +4193,26 @@ window.CURRICULUM_TERM1 = {
                 ],
                 "ans": 0,
                 "hint": "Çalışkanın zıttı tembeldir."
+              }
+            ],
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Aziz Sancar'ın çocukluğu, Anıtkabir ziyareti, çalışma azmi ve dürüstlük. (Çalışma Azmi)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "Aziz Sancar'ın çocukluğu, Anıtkabir ziyareti, çalışma azmi ve dürüstlük."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
               }
             ]
           },
@@ -3305,6 +4267,26 @@ window.CURRICULUM_TERM1 = {
                 "ans": 0,
                 "hint": "Cümlede yapılan hareketi 'ötüyor' sözcüğü belirtir."
               }
+            ],
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Şiirde duygu ve tonlama, 5N1K metin anlama ve doğa sevgisi. (Şiir & Duygu)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "Şiirde duygu ve tonlama, 5N1K metin anlama ve doğa sevgisi."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
+              }
             ]
           },
           {
@@ -3357,6 +4339,26 @@ window.CURRICULUM_TERM1 = {
                 ],
                 "ans": 0,
                 "hint": "Tamamlanmış bir haber cümlesinin sonuna nokta konur."
+              }
+            ],
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Komşuluk ilişkileri, yardımlaşma, empati ve büyük harflerin yazımı. (Komşuluk & Empati)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "Komşuluk ilişkileri, yardımlaşma, empati ve büyük harflerin yazımı."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
               }
             ]
           },
@@ -3411,68 +4413,99 @@ window.CURRICULUM_TERM1 = {
                 "ans": 0,
                 "hint": "Çınarın durumunu ve özelliğini 'yaşlı' sözcüğü belirtmektedir."
               }
+            ],
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Sabır, kanaat, estetik değerler, eş ve zıt anlamlı kelimeler. (Eş & Zıt Anlam)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "Sabır, kanaat, estetik değerler, eş ve zıt anlamlı kelimeler."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
+              }
             ]
           }
         ],
         "exam": {
-          "id": "turkce_t1_exam",
-          "title": "1. Tema Değerlendirme Sınavı: Değerlerimizle Yaşıyoruz",
-          "book_ref": "MEB Türkçe 1. Kitap s. 18-55",
-          "questions": [
+          "id": "turkce_tema1_exam",
+          "title": "1. Tema Değerlendirme Sınavı",
+          "book_ref": "MEB Kitabı s. 54",
+          "tasks": [
             {
-              "q": "Kelebek ile Lavanta dinleme metninde anlatılan en temel insani değer hangisidir? (s. 22)",
+              "q": "Metne göre Bilge, sabah uyandığında anne ve babasına hangi nezaket sözcüğünü söylemiştir? (s. 54)",
               "options": [
-                "Nezaket, dostluk ve saygılı dinleme",
-                "Kibir ve bencillik",
-                "Hızlı konuşup başkasını dinlememek",
-                "Yalnız kalmayı istemek"
+                "Günaydın",
+                "İyi akşamlar",
+                "Görüşürüz",
+                "Hoşça kal"
               ],
               "ans": 0,
-              "hint": "Kelebek ve lavantanın diyaloğu nezaket ve dostluğu simgeler."
+              "hint": "Bilge sabah kalktığında ailesine 'Günaydın' demiştir."
             },
             {
-              "q": "Nobel ödüllü bilim insanımız Aziz Sancar'a göre başarının en önemli sırrı nedir? (s. 28)",
+              "q": "Bilge, apartmandan çıkarken zorlanan yaşlı komşusu Hasan amcaya nasıl yardımcı olmuştur? (s. 54)",
               "options": [
-                "Çok ve sabırla, azimle çalışmak",
-                "Sadece şanslı olmak",
-                "Ders çalışmadan beklemek",
-                "Zorluk görünce vazgeçmek"
+                "Eşyalarını alıp kapısına kadar taşıyarak",
+                "Sadece el sallayarak",
+                "Kapıyı yüzüne kapatarak",
+                "Hızlıca yanından uzaklaşarak"
               ],
               "ans": 0,
-              "hint": "Aziz Sancar: 'Çoğu insan zekaya inanır, ben inanmam; bizi ayıran emektir, çalışmaktır' demiştir."
+              "hint": "Hasan amcanın elindeki ağır eşyaları kapısına kadar taşımıştır."
             },
             {
-              "q": "'Nermin Teyze Nerede?' metninde komşuluk ilişkileri hakkında hangi mesaj öne çıkar? (s. 40)",
+              "q": "\"Nezaket ve Yardımlaşma\" metninin ana fikri aşağıdakilerden hangisidir? (s. 54)",
               "options": [
-                "Komşular birbirinin halini sormalı ve yardımlaşmalıdır",
-                "Komşularla hiç konuşmamak gerekir",
-                "Sadece bayramlarda selam verilmelidir",
-                "Komşuluk önemli bir bağ değildir"
+                "İnsanlara yardım etmek ve nazik olmak bizi mutlu ve iyi bir komşu yapar.",
+                "Sadece kendi işlerimizle ilgilenmeliyiz.",
+                "Sabahları kimseyle konuşmamalıyız.",
+                "Yaşlı insanlardan uzak durmalıyız."
               ],
               "ans": 0,
-              "hint": "Komşuluk kültürü zor günlerde dayanışma demektir."
+              "hint": "Yardımlaşmak hem yardım edeni hem de edileni mutlu eder."
             },
             {
-              "q": "'Köydeki yaşlı dede çocuklara gülümseyerek baktı.' cümlesindeki 'yaşlı' sözcüğünün zıt anlamlısı nedir? (s. 46)",
+              "q": "\"Hasan amca size yardım etmemi ister misiniz\" cümlesinin sonuna hangi noktalama işareti gelmelidir? (s. 54)",
               "options": [
-                "Genç",
-                "İhtiyar",
-                "Büyük",
-                "Yorgun"
+                "Soru işareti (?)",
+                "Nokta (.)",
+                "Ünlem işareti (!)",
+                "Virgül (,)"
               ],
               "ans": 0,
-              "hint": "Yaşlının zıt (karşıt) anlamlısı gençtir."
+              "hint": "Cevap bekleyen bir soru cümlesidir."
             },
             {
-              "q": "Aşağıdaki cümlelerin hangisinin sonuna nokta (.) değil, soru işareti (?) konmalıdır? (s. 34)",
+              "q": "Aşağıdaki bilgilerden hangisi doğrudur? (s. 55)",
               "options": [
-                "Bugün kütüphaneye kiminle gideceksin",
-                "Aziz Sancar ülkemize büyük gurur yaşattı",
-                "Köyde ilk sabah kuş sesleriyle uyandık",
-                "Çam ağaçları kışın da yeşil kalır"
+                "Cümlelerin ilk harfi her zaman büyük yazılır.",
+                "Özel isimlerin ilk harfi küçük yazılır.",
+                "Soru cümlelerinin sonuna ünlem işareti konur.",
+                "Virgül cümlenin en sonuna konur."
               ],
               "ans": 0,
-              "hint": "'Kiminle gideceksin' cümlesi bir soru cümlesidir."
+              "hint": "Her cümlenin ilk harfi kural olarak büyük harfle başlar."
+            },
+            {
+              "q": "\"Annem mis gibi kokan çiçekleri vazoya yerleştirdi.\" cümlesinde altı çizili kelimenin anlamı nedir? (s. 55)",
+              "options": [
+                "Çok güzel ve hoş kokan",
+                "Kötü kokan",
+                "Eski ve solmuş",
+                "Renksiz"
+              ],
+              "ans": 0,
+              "hint": "Mis gibi kokmak tertemiz ve harika kokuları ifade eder."
             }
           ]
         }
@@ -3533,6 +4566,26 @@ window.CURRICULUM_TERM1 = {
                 "ans": 0,
                 "hint": "Ülkü (1) okuluna (2) severek (3) giderdi (4) -> 4 sözcüktür."
               }
+            ],
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Atatürk'ün manevi kızı Ülkü, tevazu, eşitlik ve dinleme kuralları. (Tevazu & Eşitlik)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "Atatürk'ün manevi kızı Ülkü, tevazu, eşitlik ve dinleme kuralları."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
+              }
             ]
           },
           {
@@ -3585,6 +4638,26 @@ window.CURRICULUM_TERM1 = {
                 ],
                 "ans": 0,
                 "hint": "Gözlerinden okumak, hissetmek ve anlamak anlamında mecazdır."
+              }
+            ],
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Atatürk'ün kitap tutkusu, araştırmacı kişiliği ve Çocuklara Rehber Dergisi. (Kitap & Araştırma)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "Atatürk'ün kitap tutkusu, araştırmacı kişiliği ve Çocuklara Rehber Dergisi."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
               }
             ]
           },
@@ -3639,6 +4712,26 @@ window.CURRICULUM_TERM1 = {
                 "ans": 0,
                 "hint": "Kahramanlarımız vatanımızın bağımsızlığı için birlik olmuştur."
               }
+            ],
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Şerife Bacı, Nene Hatun, Gördesli Makbule ve Millî Mücadele kahramanları. (Millî Mücadele)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "Şerife Bacı, Nene Hatun, Gördesli Makbule ve Millî Mücadele kahramanları."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
+              }
             ]
           },
           {
@@ -3691,6 +4784,26 @@ window.CURRICULUM_TERM1 = {
                 ],
                 "ans": 0,
                 "hint": "Birbiri ardınca sıralanan cümleleri ayırmak için virgül konur."
+              }
+            ],
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Bayram sevinci, halk oyunları, bayramlıklar ve milli günler. (Milli Bayramlar)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "Bayram sevinci, halk oyunları, bayramlıklar ve milli günler."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
               }
             ]
           },
@@ -3745,68 +4858,99 @@ window.CURRICULUM_TERM1 = {
                 "ans": 0,
                 "hint": "Bu sevgi dolu ve yüreklendirici hitap Atatürk'e aittir."
               }
+            ],
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Atatürk'ün çocuklara verdiği değer ve 23 Nisan Çocuk Bayramı. (Çocuk Sevgisi)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "Atatürk'ün çocuklara verdiği değer ve 23 Nisan Çocuk Bayramı."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
+              }
             ]
           }
         ],
         "exam": {
-          "id": "turkce_t2_exam",
-          "title": "2. Tema Değerlendirme Sınavı: Atatürk ve Kahramanlarımız",
-          "book_ref": "MEB Türkçe 1. Kitap s. 56-97",
-          "questions": [
+          "id": "turkce_tema2_exam",
+          "title": "2. Tema Değerlendirme Sınavı",
+          "book_ref": "MEB Kitabı s. 96",
+          "tasks": [
             {
-              "q": "Ülkü'nün yeni kahverengi ayakkabılarını siyaha boyatmasının sebebi nedir? (s. 60)",
+              "q": "Metne göre Mustafa Kemal Atatürk, 19 Mayıs 1919'da nereye giderek halkı bağımsızlık için birleşmeye çağırmıştır? (s. 96)",
               "options": [
-                "Okuldaki arkadaşlarının ayakkabıları siyah olduğu için onlardan ayrı durmamak",
-                "Siyah rengi hiç sevmediği için",
-                "Ayakkabısı kirlendiği için",
-                "Ayakkabısı ayağına dar geldiği için"
+                "Samsun'a",
+                "Ankara'ya",
+                "İzmir'e",
+                "Erzurum'a"
               ],
               "ans": 0,
-              "hint": "Ülkü, arkadaşlarından üstün veya farklı görünmek istemeyen örnek bir alçakgönüllülük sergilemiştir."
+              "hint": "Millî Mücadele'nin meşalesi 19 Mayıs 1919'da Samsun'da yakılmıştır."
             },
             {
-              "q": "Atatürk'ün çocukluğundan beri en büyük tutkusu ve zenginliği nedir? (s. 66)",
+              "q": "Mustafa Kemal Atatürk Türkiye Cumhuriyeti'ni hangi tarihte ilan etmiştir? (s. 96)",
               "options": [
-                "Eline geçen her kuruşla kitap alıp altını çizerek okumak",
-                "Sadece askeri tatbikatları izlemek",
-                "Hiç kitap okumadan karar vermek",
-                "Kitapları sadece kütüphanede saklamak"
+                "29 Ekim 1923",
+                "23 Nisan 1920",
+                "19 Mayıs 1919",
+                "30 Ağustos 1922"
               ],
               "ans": 0,
-              "hint": "Atatürk yaklaşık 4 bin kitap okumuş büyük bir aydındır."
+              "hint": "Cumhuriyetimiz 29 Ekim 1923 tarihinde kurulmuştur."
             },
             {
-              "q": "Kurtuluş Savaşı'nda kağnısıyla cephane taşırken bebeğini ve mermileri koruyan kahraman kadınımız kimdir? (s. 72)",
+              "q": "Atatürk'ün \"Egemenlik kayıtsız şartsız milletindir!\" sözü ne anlama gelmektedir? (s. 96)",
               "options": [
-                "Şerife Bacı",
-                "Sabiha Gökçen",
-                "Halide Edip",
-                "Nene Hatun"
+                "Ülke yönetiminde en üstün gücün halkın kendi iradesi olduğu",
+                "Yalnızca tek bir kişinin karar vermesi gerektiği",
+                "Yabancı devletlerin yönetime karışması",
+                "Halkın oy kullanmaması"
               ],
               "ans": 0,
-              "hint": "Kastamonu İnebolu yolunda şehit düşen kahramanımız Şerife Bacı'dır."
+              "hint": "Millet kendi temsilcilerini seçerek devleti kendisi yönetir."
             },
             {
-              "q": "29 Ekim 1923'te kabul edilen ve milletin kendi kendini yönetmesini sağlayan rejim nedir? (s. 80)",
+              "q": "\"bağımsız\" sözcüğünün zıt anlamlısı aşağıdakilerden hangisidir? (s. 97)",
               "options": [
-                "Cumhuriyet",
-                "Monarşi",
-                "Saltanat",
-                "Beylik"
+                "tutsak (bağımlı)",
+                "özgür",
+                "hür",
+                "serbest"
               ],
               "ans": 0,
-              "hint": "Cumhuriyet millet egemenliğine dayanan en güzel yönetim biçimidir."
+              "hint": "Bağımsızın karşıtı tutsak veya bağımlıdır."
             },
             {
-              "q": "Atatürk, 23 Nisan gününü dünyada kime armağan etmiştir? (s. 88)",
+              "q": "\"zafer\" sözcüğünün zıt anlamlısı hangisidir? (s. 97)",
               "options": [
-                "Tüm dünya çocuklarına",
-                "Sadece büyüklere",
-                "Yabancı diplomatlara",
-                "Sadece subaylara"
+                "yenilgi",
+                "başarı",
+                "kazanç",
+                "ödül"
               ],
               "ans": 0,
-              "hint": "23 Nisan Ulusal Egemenlik ve Çocuk Bayramı dünya çocuklarına armağan edilmiştir."
+              "hint": "Zafer kazanmanın karşıtı yenilgidir."
+            },
+            {
+              "q": "\"Takımın başarısı için birlik içinde çalışmalıyız.\" cümlesinde altı çizili 'birlik' kelimesinin sözlük anlamı nedir? (s. 97)",
+              "options": [
+                "Birlikte olma, dayanışma ve uyum hali",
+                "Yalnız başına çalışma",
+                "Kavga etme",
+                "Yarışma"
+              ],
+              "ans": 0,
+              "hint": "Birlik; bir amaç doğrultusunda el ele vermek ve dayanışmaktır."
             }
           ]
         }
@@ -3867,6 +5011,26 @@ window.CURRICULUM_TERM1 = {
                 "ans": 0,
                 "hint": "Geri dönüşüm kutularını kullanmak doğayı ve doğal kaynakları korur."
               }
+            ],
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Orman ekosistemi, canlılar, çevre bilinci ve doğa sevgisi. (Çevre & Canlılar)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "Orman ekosistemi, canlılar, çevre bilinci ve doğa sevgisi."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
+              }
             ]
           },
           {
@@ -3919,6 +5083,26 @@ window.CURRICULUM_TERM1 = {
                 ],
                 "ans": 0,
                 "hint": "Hareketin biçimini ve durumunu 'hızla' kelimesi belirtir."
+              }
+            ],
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Karıncaların çalışkanlığı, iş bölümü, dayanışma ve doğadaki döngü. (Dayanışma & Çalışkanlık)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "Karıncaların çalışkanlığı, iş bölümü, dayanışma ve doğadaki döngü."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
               }
             ]
           },
@@ -3973,6 +5157,26 @@ window.CURRICULUM_TERM1 = {
                 "ans": 0,
                 "hint": "Yargı bildiren tamamlanmış kurallı bir cümledir."
               }
+            ],
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Ağaçların önemi, erozyonu önleme ve doğal zenginliklerimiz. (Doğa & Erozyon)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "Ağaçların önemi, erozyonu önleme ve doğal zenginliklerimiz."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
+              }
             ]
           },
           {
@@ -4025,6 +5229,26 @@ window.CURRICULUM_TERM1 = {
                 ],
                 "ans": 0,
                 "hint": "'Eyvah,' korku ve heyecan bildirdiği için cümlenin sonu ünlemle biter."
+              }
+            ],
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Doğa olayları, afet bilinci ve güvenli davranış kuralları. (Doğa Olayları & Afet)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "Doğa olayları, afet bilinci ve güvenli davranış kuralları."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
               }
             ]
           },
@@ -4079,68 +5303,99 @@ window.CURRICULUM_TERM1 = {
                 "ans": 0,
                 "hint": "Tasarruf ve sabırla yapılan küçük birikimler geleceğimizi korur."
               }
+            ],
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Suyun döngüsü, su tasarrufu ve doğal kaynakları koruma. (Su Tasarrufu)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "Suyun döngüsü, su tasarrufu ve doğal kaynakları koruma."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
+              }
             ]
           }
         ],
         "exam": {
-          "id": "turkce_t3_exam",
-          "title": "3. Tema Değerlendirme Sınavı: Doğayı Tanıyoruz",
-          "book_ref": "MEB Türkçe 1. Kitap s. 98-139",
-          "questions": [
+          "id": "turkce_tema3_exam",
+          "title": "3. Tema Değerlendirme Sınavı",
+          "book_ref": "MEB Kitabı s. 138",
+          "tasks": [
             {
-              "q": "'Bir Orman' dinleme metnine göre ormanların canlılar için en büyük görevi nedir? (s. 102)",
+              "q": "Metne göre gereksiz enerji kullanımı ve israf doğaya nasıl zarar verir? (s. 138)",
               "options": [
-                "Dünyamıza temiz oksijen üretmek ve hayvanlara güvenli yuva olmak",
-                "Sadece kereste üretmek",
-                "İnsanların piknik yapmasını engellemek",
-                "Şehirlerin büyümesini durdurmak"
+                "Doğal kaynakların tükenmesine ve çevrenin kirlenmesine yol açar.",
+                "Doğayı daha temiz yapar.",
+                "Ağaçların daha hızlı büyümesini sağlar.",
+                "Canlı sayısını artırır."
               ],
               "ans": 0,
-              "hint": "Ormanlar dünyamızın akciğerleridir."
+              "hint": "Bilinçsiz tüketim doğal dengenin bozulmasına neden olur."
             },
             {
-              "q": "Karıncaların yuvalarına yiyecek taşırken çocuklara verdiği en büyük ders hangisidir? (s. 108)",
+              "q": "Geri dönüşüm yaparak doğayı nasıl korumuş oluruz? (s. 138)",
               "options": [
-                "Birlikten kuvvet doğar, iş bölümü ve dayanışma başarı getirir",
-                "Yalnız çalışmak her zaman daha iyidir",
-                "Yemekleri hemen bitirmek gerekir",
-                "Kış mevsimine hazırlık yapmaya gerek yoktur"
+                "Atıkları yeniden değerlendirip ağaçların kesilmesini ve kirliliği önleyerek",
+                "Bütün çöpleri denizlere dökerek",
+                "Daha çok plastik tüketerek",
+                "Çöpleri yakarak"
               ],
               "ans": 0,
-              "hint": "Karıncalar yardımlaşma ve planlı çalışmanın en güzel örneğidir."
+              "hint": "Geri dönüşüm hammadde ve enerji tasarrufu sağlar."
             },
             {
-              "q": "Ağaçların kökleriyle toprağı tutması hangi felaketi (toprak kaybını) engeller? (s. 116)",
+              "q": "\"Ayşe teyze misafirlerine çay ikram etti.\" cümlesinde altı çizili 'misafir' sözcüğünün eş anlamlısı hangisidir? (s. 139)",
               "options": [
-                "Erozyon",
-                "Deprem",
-                "Volkan patlaması",
-                "Kasırga"
+                "konuk",
+                "komşu",
+                "akraba",
+                "arkadaş"
               ],
               "ans": 0,
-              "hint": "Ağaç kökleri toprağın kaymasını (erozyonu) önler."
+              "hint": "Misafir ile konuk eş anlamlı sözcüklerdir."
             },
             {
-              "q": "Şiddetli bir fırtına uyarısı yapıldığında güvenliğimiz için ne yapmalıyız? (s. 122)",
+              "q": "\"Kardeşime çok güzel bir hediye aldım.\" cümlesinde altı çizili 'hediye' sözcüğünün eş anlamlısı hangisidir? (s. 139)",
               "options": [
-                "Pencerelerden ve gevşek çatılardan uzak güvenli kapalı alanda kalmalıyız",
-                "Dışarıda uzun ağaçların altında beklemeliyiz",
-                "Balkona çıkıp fırtınayı izlemeliyiz",
-                "Hemen elektrik direklerinin yanına gitmeliyiz"
+                "armağan",
+                "ödül",
+                "kitap",
+                "ücret"
               ],
               "ans": 0,
-              "hint": "Fırtınada kapalı ve korunaklı binalarda beklemek en doğrusudur."
+              "hint": "Hediye ile armağan eş anlamlı sözcüklerdir."
             },
             {
-              "q": "'Küçük Su Damlası' metninde suyun israf edilmemesi neden hayati bir görev sayılmıştır? (s. 130)",
+              "q": "\"sabah okuluma gittim.\" cümlesinin yazım kurallarına uygun doğru yazılışı hangisidir? (s. 139)",
               "options": [
-                "Tatlı su kaynakları sınırlıdır ve susuz hiçbir canlı yaşayamaz",
-                "Su çok pahalı olduğu için",
-                "Yağmurlar bir daha hiç yağmayacağı için",
-                "Denizler kuruduğu için"
+                "Sabah okuluma gittim.",
+                "sabah Okuluma gittim.",
+                "SABAH okuluma gittim.",
+                "sabah okuluma Gittim."
               ],
               "ans": 0,
-              "hint": "Su tasarrufu geleceğimizin ve doğanın teminatıdır."
+              "hint": "Cümlenin ilk harfi büyük harfle başlamalıdır."
+            },
+            {
+              "q": "\"Bugün Ankara'dan dayım gelecek.\" cümlesinde özel isme gelen eki ayırmak için hangi noktalama işareti kullanılır? (s. 139)",
+              "options": [
+                "Kesme işareti (')",
+                "Virgül (,)",
+                "Nokta (.)",
+                "Kısa çizgi (-)"
+              ],
+              "ans": 0,
+              "hint": "Özel adlara getirilen çekim ekleri kesme işareti ile ayrılır."
             }
           ]
         }
@@ -4201,6 +5456,26 @@ window.CURRICULUM_TERM1 = {
                 "ans": 0,
                 "hint": "-lar / -ler eki kelimelere çoğul anlamı katar."
               }
+            ],
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Kütüphane kuralları, kitap seçimi, sessizlik ve okuma kültürü. (Kütüphane Kültürü)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "Kütüphane kuralları, kitap seçimi, sessizlik ve okuma kültürü."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
+              }
             ]
           },
           {
@@ -4253,6 +5528,26 @@ window.CURRICULUM_TERM1 = {
                 ],
                 "ans": 0,
                 "hint": "Kitap okumak hayal gücümüzle yeni dünyalara yolculuk yapmamızı sağlar."
+              }
+            ],
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Kitap okuma alışkanlığı, sözcük dağarcığı ve hayal gücü. (Kitap Sevgisi)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "Kitap okuma alışkanlığı, sözcük dağarcığı ve hayal gücü."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
               }
             ]
           },
@@ -4307,6 +5602,26 @@ window.CURRICULUM_TERM1 = {
                 "ans": 0,
                 "hint": "Kitap insana hiç bıkmadan bilgi veren bir dosta benzetilmiştir."
               }
+            ],
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Okur kimliği, eleştirel düşünme ve farklı bakış açıları kazanma. (Okur Kimliği)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "Okur kimliği, eleştirel düşünme ve farklı bakış açıları kazanma."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
+              }
             ]
           },
           {
@@ -4359,6 +5674,26 @@ window.CURRICULUM_TERM1 = {
                 ],
                 "ans": 0,
                 "hint": "Yönün bulunmasının nedeni pusulanın kullanılmasıdır."
+              }
+            ],
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Yön bulma, bilimin hayatımıza etkisi, merak ve keşif duygusu. (Bilim & Keşifler)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "Yön bulma, bilimin hayatımıza etkisi, merak ve keşif duygusu."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
               }
             ]
           },
@@ -4413,68 +5748,99 @@ window.CURRICULUM_TERM1 = {
                 "ans": 0,
                 "hint": "Her hikaye bir olay, kişiler, mekan ve zaman etrafında şekillenir."
               }
+            ],
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım ve Hazırlanalım",
+                "icon": "🔙",
+                "content": "Türk edebiyatının usta hikâyecisi Ömer Seyfettin ve eserleri. (Türk Edebiyatı)"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "Türk edebiyatının usta hikâyecisi Ömer Seyfettin ve eserleri."
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Önemli Bilgi Kutusu",
+                "icon": "💡",
+                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
+              }
             ]
           }
         ],
         "exam": {
-          "id": "turkce_t4_exam",
-          "title": "4. Tema Değerlendirme Sınavı: Bilgi Hazinemiz",
-          "book_ref": "MEB Türkçe 1. Kitap s. 140-179",
-          "questions": [
+          "id": "turkce_tema4_exam",
+          "title": "4. Tema Değerlendirme Sınavı",
+          "book_ref": "MEB Kitabı s. 174",
+          "tasks": [
             {
-              "q": "Kütüphanede uyulması gereken en temel görgü kuralı hangisidir? (s. 144)",
+              "q": "\"Kitaplarla Aydınlanan Dünya\" metnine göre kütüphanelerin en önemli özelliği nedir? (s. 174)",
               "options": [
-                "Sessiz olmak ve kitapları özenle korumak",
-                "Yüksek sesle şarkı söylemek",
-                "Kitap sayfalarına resim çizmek",
-                "Kitapları masalarda dağınık bırakmak"
+                "Kitapların düzenli saklandığı ve herkesin eşitçe okuyabildiği bilgi yuvaları olması",
+                "Sadece kitap satışı yapılan yerler olması",
+                "İçinde hiç kimsenin konuşmaması gereken karanlık yerler olması",
+                "Yalnızca yetişkinlere açık olması"
               ],
               "ans": 0,
-              "hint": "Kütüphaneler sessizliğin ve bilgiye saygının mabedidir."
+              "hint": "Kütüphaneler herkesin okuma hakkını kullandığı bilgi merkezleridir."
             },
             {
-              "q": "Düzenli kitap okuyan bir öğrencinin dil ve düşünce dünyasında ne gibi gelişme olur? (s. 150)",
+              "q": "Tarih boyunca edebî şahsiyetler ne yaparak dilimizi zenginleştirmiştir? (s. 174)",
               "options": [
-                "Kelime hazinesi zenginleşir ve anlama gücü artar",
-                "Kelime hazinesi azalır",
-                "Daha yavaş okumaya başlar",
-                "Arkadaşlarıyla iletişimi zorlaşır"
+                "Güzel şiirler ve hikâyeler yazarak bize geçmişi ve geleceği anlatmışlardır.",
+                "Yabancı dillerde konuşarak",
+                "Kitapları saklayarak",
+                "Kimseye eserlerini göstermeyerek"
               ],
               "ans": 0,
-              "hint": "Kitap okumak zihni açar ve kelime dağarcığını genişletir."
+              "hint": "Yazarlar ve şairler eserleriyle dilimizin gücünü artırmıştır."
             },
             {
-              "q": "Pusulanın renkli ucu Dünya'nın hangi ana yönünü gösterir? (s. 162)",
+              "q": "Düzenli kitap okuma alışkanlığı kazanan kişilerde hangi özellikler gelişir? (s. 174)",
               "options": [
-                "Kuzey",
-                "Güney",
-                "Doğu",
-                "Batı"
+                "Bilgili, duyarlı ve geniş bakış açısına sahip olurlar.",
+                "Bencil ve iletişimsiz olurlar.",
+                "Yalnız kalmaktan korkarlar.",
+                "Düşüncelerini ifade edemezler."
               ],
               "ans": 0,
-              "hint": "Pusula ibresi her zaman manyetik kuzeyi gösterir."
+              "hint": "Okumak bireyin ufkunu genişletir ve duyarlılığını artırır."
             },
             {
-              "q": "'Kaşağı', 'Diyet', 'Falaka' gibi etkileyici öyküleriyle tanınan usta Türk yazarı kimdir? (s. 168)",
+              "q": "\"Kütüpaneye gittiyimde raflarda kitap görürüm.\" cümlesinde altı çizili kelimelerin doğru yazılışı hangisidir? (s. 175)",
               "options": [
-                "Ömer Seyfettin",
-                "Cahit Sıtkı Tarancı",
-                "Halit Ziya Uşaklıgil",
-                "Mehmet Akif Ersoy"
+                "Kütüphaneye - gittiğimde",
+                "Kütüpaneye - gitiğimde",
+                "Kütühâneye - gittiğimde",
+                "Kütüphaneye - gittiyimde"
               ],
               "ans": 0,
-              "hint": "Ömer Seyfettin millî edebiyatımızın hikâye ustasıdır."
+              "hint": "Kütüphane ('h' ile) ve gittiğimde ('ğ' ile) yazılır."
             },
             {
-              "q": "Aşağıdaki kelimeler sözlük sırasına konduğunda hangisi EN BAŞTA yer alır? (s. 156)",
+              "q": "\"Her kitap farklı bir bilgi verir yada hikâye anlatır.\" cümlesindeki yazım yanlışı hangisidir? (s. 175)",
               "options": [
-                "Bilgi",
-                "Kitap",
-                "Okul",
-                "Yazar"
+                "\"yada\" bitişik yazılmıştır, \"ya da\" şeklinde ayrı yazılmalıdır.",
+                "\"kitap\" büyük harfle yazılmalıdır.",
+                "\"farklı\" kelimesi yanlıştır.",
+                "Cümlenin sonuna nokta konmamalıdır."
               ],
               "ans": 0,
-              "hint": "'B' harfi 'K', 'O', 'Y' harflerinden önce gelir."
+              "hint": "'ya da' bağlacı her zaman ayrı yazılır."
+            },
+            {
+              "q": "\"Oysaki hergün biraz kitap okumak sözcük dağarcığımızı geliştirir.\" cümlesinde altı çizili ifadenin doğrusu nedir? (s. 175)",
+              "options": [
+                "her gün (ayrı yazılır)",
+                "hergünn",
+                "her-gün",
+                "hergun"
+              ],
+              "ans": 0,
+              "hint": "'her gün' ifadesi Türk Dil Kurumu kurallarına göre ayrı yazılır."
             }
           ]
         }
@@ -4595,404 +5961,92 @@ window.CURRICULUM_TERM1 = {
           "ans": 0,
           "hint": "Ömer Seyfettin Türk öykücülüğünün usta kurucusudur."
         }
-      ],
-      "questions": [
-        {
-          "q": "Metinleri ve konuşmacıları dinlerken hangi davranış hem saygılı hem de etkilidir? (s. 22)",
-          "options": [
-            "Konuşmacının sözünü kesmeden göz teması kurarak dinlemek",
-            "Dinlerken etraftaki şeylerle oynamak",
-            "Söz verilmeden araya girmek",
-            "Arkamızı dönüp oturmak"
-          ],
-          "ans": 0,
-          "hint": "Saygılı bir dinleyici konuşmacıyı pürdikkat dinler."
-        },
-        {
-          "q": "Bilge bilim insanımız Aziz Sancar çocukken Anıtkabir'de kime ne sözü vermiştir? (s. 28)",
-          "options": [
-            "Atatürk'e çok çalışıp milletine faydalı olacağına",
-            "Futbolcu olacağına",
-            "Hiç ders çalışmayacağına",
-            "Yurt dışında kalacağına"
-          ],
-          "ans": 0,
-          "hint": "Aziz Sancar Anıtkabir'de ülkesine hizmet edeceğine ant içmiştir."
-        },
-        {
-          "q": "Yaşlı çınar ağacının yanındaki genç çam ağacına verdiği en önemli ders nedir? (s. 46)",
-          "options": [
-            "Sabırlı olmak ve kendi değerinin farkına varmak",
-            "Diğer ağaçları kıskanmak",
-            "Ormandan uzaklaşmak",
-            "Kuşları kovmak"
-          ],
-          "ans": 0,
-          "hint": "Sabır ve kanaat en yüce erdemlerdendir."
-        },
-        {
-          "q": "Mustafa Kemal Atatürk'ün kitap sevgisiyle ilgili bilinen en belirgin özellik nedir? (s. 66)",
-          "options": [
-            "Eline geçen paranın yarısıyla kitap alıp altını çizerek okuması",
-            "Kitapları sadece rafta dizili tutması",
-            "Kitapları okumadan biriktirmesi",
-            "Kitap okumaktan hoşlanmaması"
-          ],
-          "ans": 0,
-          "hint": "Atatürk ömrü boyunca binlerce kitap okumuş büyük bir aydındır."
-        },
-        {
-          "q": "Kurtuluş Savaşı'nda İnebolu'dan cepheye mermi taşırken donarak şehit olan kahraman Türk kadını kimdir? (s. 72)",
-          "options": [
-            "Şerife Bacı",
-            "Halide Edip",
-            "Sabiha Gökçen",
-            "Afet İnan"
-          ],
-          "ans": 0,
-          "hint": "Şerife Bacı cephaneleri korumak için canını feda etmiştir."
-        },
-        {
-          "q": "Mustafa Kemal Atatürk 23 Nisan gününü dünyada kime bayram olarak armağan etmiştir? (s. 88)",
-          "options": [
-            "Tüm dünya çocuklarına",
-            "Sadece büyüklere",
-            "Askerlere",
-            "Yazarlara"
-          ],
-          "ans": 0,
-          "hint": "23 Nisan çocuklara armağan edilmiş tek dünya bayramıdır."
-        },
-        {
-          "q": "Ağaç köklerinin toprağı tutarak su ve rüzgarla kayıp gitmesini önlemesine ne denir? (s. 116)",
-          "options": [
-            "Erozyonu önleme",
-            "Hava kirliliği",
-            "Su baskını",
-            "Kuraklık"
-          ],
-          "ans": 0,
-          "hint": "Ormanlar toprağın kaymasını (erozyonu) engeller."
-        },
-        {
-          "q": "Aşağıdaki atasözlerinden hangisi tutumlu olmayı ve küçük birikimlerin değerini anlatır? (s. 130)",
-          "options": [
-            "Damlaya damlaya göl olur.",
-            "Ağaç yaşken eğilir.",
-            "Gülme komşuna gelir başına.",
-            "Tatlı dil yılanı deliğinden çıkarır."
-          ],
-          "ans": 0,
-          "hint": "Tasarruf ve birikim geleceğin teminatıdır."
-        },
-        {
-          "q": "Pusulanın renkli ucu daima hangi yönü gösterir? (s. 162)",
-          "options": [
-            "Kuzey",
-            "Güney",
-            "Doğu",
-            "Batı"
-          ],
-          "ans": 0,
-          "hint": "Pusula ibresi Dünya'nın kuzey kutbunu gösterir."
-        },
-        {
-          "q": "\"Kaşağı\", \"Diyet\" ve \"Falaka\" gibi unutulmaz hikayelerin usta yazarı kimdir? (s. 168)",
-          "options": [
-            "Ömer Seyfettin",
-            "Mehmet Akif Ersoy",
-            "Ziya Gökalp",
-            "Reşat Nuri Güntekin"
-          ],
-          "ans": 0,
-          "hint": "Ömer Seyfettin Türk öykücülüğünün usta kurucusudur."
-        }
       ]
     }
   },
   "general_exam": {
-    "title": "👑 3. Sınıf 1. Dönem MEB Maarif Modeli Büyük Türkiye Deneme Sınavı",
-    "book_ref": "Tüm Dersler 1. Dönem Resmî MEB Müfredatı (25 Kapsamlı Soru)",
+    "title": "👑 3. Sınıf 1. Dönem MEB Maarif Modeli Genel Değerlendirme Sınavı",
+    "book_ref": "3. Sınıf 1. Dönem 4 Ana Ders Genel Başarı Sınavı (49 Kazanım)",
     "questions": [
       {
-        "q": "[Türkçe] Aziz Sancar'ın çocukken Anıtkabir ziyaretinde Atatürk'e verdiği ve hayatı boyunca tuttuğu söz nedir? (s. 28)",
+        "q": "[Matematik] 4 yüzlük, 6 onluk ve 3 birlikten oluşan sayı hangisidir?",
         "options": [
-          "Milleti için gece gündüz çok çalışıp ilimde ilerlemek",
-          "Hiç kitap okumadan yaşamak",
-          "Ülkesini terk edip geri dönmemek",
-          "Yalnızca sporla ilgilenmek"
+          "463",
+          "643",
+          "364",
+          "436"
         ],
-        "ans": 0,
-        "hint": "Aziz Sancar ülkemize ve milletimize hizmet etmek için azimle çalışmıştır."
+        "ans": 0
       },
       {
-        "q": "[Türkçe] Atatürk'ün kitap okurken uyguladığı ve günümüz öğrencilerine de örnek olan en önemli yöntem nedir? (s. 66)",
+        "q": "[Matematik] 5 x 8 işleminin sonucu kaçtır?",
         "options": [
-          "Önemli yerlerin altını kırmızı ve mavi kalemle çizip notlar almak",
-          "Kitap sayfalarını rastgele çevirip bırakmak",
-          "Kitapları sadece kapağına bakarak seçmek",
-          "Kitap okurken müzik dinleyip dikkatini dağıtmak"
-        ],
-        "ans": 0,
-        "hint": "Atatürk kitapları aktif ve not alarak incelerdi."
-      },
-      {
-        "q": "[Türkçe] 'Sonbaharda sararan yapraklar rüzgarla uçuştu.' cümlesindeki 'sonbahar' kelimesinin eş anlamlısı nedir? (s. 46)",
-        "options": [
-          "Güz",
-          "İlkbahar",
-          "Kış",
-          "Yaz"
-        ],
-        "ans": 0,
-        "hint": "Sonbahar kelimesinin eş anlamlısı 'güz'dür."
-      },
-      {
-        "q": "[Türkçe] Kurtuluş Savaşı'nda cepheye mermi taşırken donarak şehit olan Türk kadını kimdir? (s. 72)",
-        "options": [
-          "Şerife Bacı",
-          "Halide Edip Adıvar",
-          "Sabiha Gökçen",
-          "Safiye Ali"
-        ],
-        "ans": 0,
-        "hint": "Kastamonulu Şerife Bacı fedakarlığın simgesidir."
-      },
-      {
-        "q": "[Türkçe] Aşağıdaki kelimelerden hangisi sözlükte DİĞERLERİNDEN SONRA gelir? (s. 156)",
-        "options": [
-          "Yıldız",
-          "Bilgi",
-          "Güneş",
-          "Deniz"
-        ],
-        "ans": 0,
-        "hint": "'Y' harfi alfabemizin 28. harfidir ve en sonda yer alır."
-      },
-      {
-        "q": "[Matematik] '7 yüzlük, 0 onluk ve 8 birlik'ten oluşan 3 basamaklı doğal sayı kaçtır? (s. 12)",
-        "options": [
-          "708",
-          "780",
-          "870",
-          "78"
-        ],
-        "ans": 0,
-        "hint": "Yüzler: 7, Onlar: 0, Birler: 8 -> 708."
-      },
-      {
-        "q": "[Matematik] 456 sayısındaki '5' rakamının basamak değeri kaçtır? (s. 18)",
-        "options": [
-          "50",
-          "5",
-          "500",
-          "56"
-        ],
-        "ans": 0,
-        "hint": "5 onlar basamağındadır: 5 x 10 = 50."
-      },
-      {
-        "q": "[Matematik] 348 + 275 işleminin sonucu kaçtır? (s. 32)",
-        "options": [
-          "623",
-          "613",
-          "523",
-          "633"
-        ],
-        "ans": 0,
-        "hint": "348 + 275 = 623 (eldeleri unutma)."
-      },
-      {
-        "q": "[Matematik] Bir okul kütüphanesinde 6 raf vardır. Her rafta 9 kitap olduğuna göre toplam kaç kitap vardır? (s. 64)",
-        "options": [
-          "54",
+          "35",
+          "40",
           "45",
-          "63",
           "48"
         ],
-        "ans": 0,
-        "hint": "6 x 9 = 54 kitaptır."
+        "ans": 1
       },
       {
-        "q": "[Matematik] 36 cevizi 4 arkadaş eşit olarak paylaştığında her birine kaç ceviz düşer? (s. 78)",
+        "q": "[Matematik] 30 lirası olan Efe, tanesi 6 lira olan defterlerden kaç tane alabilir?",
         "options": [
-          "9",
-          "8",
-          "7",
-          "6"
+          "4",
+          "5",
+          "6",
+          "7"
         ],
-        "ans": 0,
-        "hint": "36 ÷ 4 = 9 ceviz düşer."
+        "ans": 1
       },
       {
-        "q": "[Fen Bilimleri] Dünya'mızın uzaydan çekilen fotoğraflarında mavi renkte görünen en büyük katmanı hangisidir? (s. 16)",
+        "q": "[Fen Bilimleri] Hangisi Dünya'nın yuvarlak olduğunu kanıtlayan olaylardan biridir?",
         "options": [
-          "Su katmanı (Okyanuslar ve denizler)",
-          "Kara katmanı",
-          "Hava katmanı",
-          "Ateş küre (Magma)"
+          "Güneşin her gün doğudan doğması",
+          "Hep aynı yöne giden uçağın başladığı yere dönmesi",
+          "Geceleri yıldızların görünmesi",
+          "Yağmurun yukarıdan yağması"
         ],
-        "ans": 0,
-        "hint": "Dünya yüzeyinin yaklaşık 4'te 3'ü sularla kaplıdır."
+        "ans": 1
       },
       {
-        "q": "[Fen Bilimleri] Televizyonu çok yakından izlemek ve loş ışıkta kitap okumak hangi duyu organımızın sağlığını bozar? (s. 34)",
+        "q": "[Fen Bilimleri] Kuvvet uygulandığında şekil değiştiren, kuvvet kalkınca eski haline dönen madde hangisidir?",
         "options": [
-          "Göz",
-          "Kulak",
-          "Burun",
-          "Deri"
+          "Hamur",
+          "Paket lastiği",
+          "Tahta",
+          "Cam"
         ],
-        "ans": 0,
-        "hint": "Göz sağlığı için uygun aydınlatma ve ekran mesafesi şarttır."
+        "ans": 1
       },
       {
-        "q": "[Fen Bilimleri] Çekmeceyi açarken veya ip çekerken cisimlere hangi tür kuvvet uygularız? (s. 60)",
+        "q": "[Hayat Bilgisi] Kroki ile ilgili hangisi DOĞRUDUR?",
         "options": [
-          "Çekme kuvveti",
-          "İtme kuvveti",
-          "Dönme kuvveti",
-          "Sallanma kuvveti"
+          "Cetvelle milimetrik ölçülür",
+          "Kuş bakışı ve kabataslaktır",
+          "Yandan çizilir",
+          "Ölçeksiz çizilemez"
         ],
-        "ans": 0,
-        "hint": "Kendimize doğru yaklaştırmak çekme kuvvetidir."
+        "ans": 1
       },
       {
-        "q": "[Fen Bilimleri] Kuvvet uygulandığında şekil değiştiren, bırakıldığında eski haline dönen cisimlere ne denir? (s. 88)",
+        "q": "[Hayat Bilgisi] Aşağıdakilerden hangisi bir İSTEKTİR (temel ihtiyaç değildir)?",
         "options": [
-          "Esnek madde (Sünger, lastik)",
-          "Kırılgan madde (Cam)",
-          "Sert madde (Taş)",
-          "Akışkan madde (Su)"
+          "Su",
+          "Ekmek",
+          "Sıcak mont",
+          "Uzaktan kumandalı araba"
         ],
-        "ans": 0,
-        "hint": "Sünger ve paket lastiği esnek maddelere örnektir."
+        "ans": 3
       },
       {
-        "q": "[Fen Bilimleri] Aşağıdakilerden hangisi bir DOĞAL IŞIK kaynağıdır? (s. 72)",
+        "q": "[İngilizce] 'I am thirsty.' diyen biri ne istemektedir?",
         "options": [
-          "Güneş ve Yıldızlar",
-          "El feneri",
-          "Mum",
-          "Ampul"
+          "Water (Su)",
+          "Pizza",
+          "Book (Kitap)",
+          "Bed (Yatak)"
         ],
-        "ans": 0,
-        "hint": "Güneş doğadaki en büyük doğal ışık kaynağımızdır."
-      },
-      {
-        "q": "[Hayat Bilgisi] Bir yerin kuş bakışı görünüşünün ölçeksiz, kabataslak çizimine ne denir? (s. 18)",
-        "options": [
-          "Kroki",
-          "Harita",
-          "Plan",
-          "Grafik"
-        ],
-        "ans": 0,
-        "hint": "Kroki ölçüsüz ve kabataslak kuş bakışı çizimdir."
-      },
-      {
-        "q": "[Hayat Bilgisi] Sınıf başkanlığı seçiminde oy kullanmak ve fikrini söylemek hangi demokratik değere örnektir? (s. 24)",
-        "options": [
-          "Katılımcılık ve düşünce özgürlüğü",
-          "Bencillik",
-          "Kararları tek başına almak",
-          "Kurallara uymamak"
-        ],
-        "ans": 0,
-        "hint": "Seçimlere katılmak demokrasinin temelidir."
-      },
-      {
-        "q": "[Hayat Bilgisi] Sağlıklı ve dengeli beslenmek isteyen bir 3. sınıf öğrencisinin kahvaltısında hangisi OLMALIDIR? (s. 44)",
-        "options": [
-          "Yumurta, peynir, süt ve zeytin",
-          "Cips ve asitli içecek",
-          "Çikolatalı gofret",
-          "Hazır şekerleme"
-        ],
-        "ans": 0,
-        "hint": "Protein, kalsiyum ve vitamin içeren doğal gıdalar şarttır."
-      },
-      {
-        "q": "[Hayat Bilgisi] Olası bir deprem sonrasında ilk saatlerde ihtiyaç duyacağımız eşyaların bulunduğu çantaya ne denir? (s. 62)",
-        "options": [
-          "Acil Durum ve Afet Çantası",
-          "Okul sırt çantası",
-          "Piknik sepeti",
-          "Valiz"
-        ],
-        "ans": 0,
-        "hint": "Afet çantasında su, düdük, el feneri ve ilk yardım seti bulunur."
-      },
-      {
-        "q": "[Hayat Bilgisi] 'Cumhuriyet en büyük bayramdır.' Atatürk Cumhuriyeti ne zaman ilan etmiştir? (s. 84)",
-        "options": [
-          "29 Ekim 1923",
-          "23 Nisan 1920",
-          "19 Mayıs 1919",
-          "30 Ağustos 1922"
-        ],
-        "ans": 0,
-        "hint": "29 Ekim 1923 Cumhuriyetimizin kuruluş günüdür."
-      },
-      {
-        "q": "[İngilizce] 'Where is the teacher?' - 'She is in the ........... (öğretmenler odası).'",
-        "tr_q": "'Öğretmen nerede?' - 'O ........... (öğretmenler odası) içinde.'",
-        "options": [
-          "teachers' room",
-          "canteen",
-          "garden",
-          "gym"
-        ],
-        "ans": 0,
-        "hint": "Öğretmenler odası = Teachers' room"
-      },
-      {
-        "q": "[İngilizce] What time is it? (Saat 08:00)",
-        "tr_q": "Saat kaç? (08:00)",
-        "options": [
-          "It is eight o'clock.",
-          "It is seven o'clock.",
-          "It is half past eight.",
-          "It is eight past."
-        ],
-        "ans": 0,
-        "hint": "Tam saatlerde 'o'clock' kullanılır: 8:00 = It is eight o'clock."
-      },
-      {
-        "q": "[İngilizce] 'How is the weather today?' - 'It is ............ (rüzgarlı).'",
-        "tr_q": "'Bugün hava nasıl?' - 'Hava ............ (rüzgarlı).'",
-        "options": [
-          "windy",
-          "sunny",
-          "hot",
-          "rainy"
-        ],
-        "ans": 0,
-        "hint": "Rüzgarlı = Windy"
-      },
-      {
-        "q": "[İngilizce] 'He has got short straight hair and blue eyes.' cümlesi ne anlama gelir?",
-        "tr_q": "'Onun kısa düz saçları ve mavi gözleri var.' anlamındadır.",
-        "options": [
-          "Onun kısa düz saçları ve mavi gözleri var.",
-          "Onun uzun kıvırcık sarı saçları var.",
-          "O çok uzun boyludur.",
-          "Onun kahverengi gözleri var."
-        ],
-        "ans": 0,
-        "hint": "Short = Kısa, Straight = Düz, Blue eyes = Mavi gözler."
-      },
-      {
-        "q": "[İngilizce] 'I love playing basketball with my friends.' cümlesi ne ifade eder?",
-        "tr_q": "'Arkadaşlarımla basketbol oynamayı çok severim.' anlamındadır.",
-        "options": [
-          "Arkadaşlarımla basketbol oynamayı çok severim.",
-          "Basketbol oynamaktan nefret ederim.",
-          "Bugün basketbol oynamak istemiyorum.",
-          "Topum kayboldu."
-        ],
-        "ans": 0,
-        "hint": "Love = Çok sevmek"
+        "ans": 0
       }
     ]
   }

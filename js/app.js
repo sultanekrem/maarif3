@@ -951,16 +951,12 @@
       }
     }
 
-    // 🧮 Somut Matematik Araçları Sadece Matematik Sorularında Görünür
+    // 🧮 Somut Matematik Araçları ve Çizim Tahtası SADECE Matematik Sorularında Görünür
+    const isMathKumbara = (item.subjectKey === 'matematik') || (item.q && item.q.includes('[Matematik]'));
     const btnToolsKumbara = document.getElementById('btn-tools-kumbara');
-    if (btnToolsKumbara) {
-      const isMath = (item.subjectKey === 'matematik') || (item.q && item.q.includes('[Matematik]'));
-      if (isMath) {
-        btnToolsKumbara.classList.add('is-visible');
-      } else {
-        btnToolsKumbara.classList.remove('is-visible');
-      }
-    }
+    const btnDrawKumbara = document.getElementById('btn-draw-kumbara');
+    if (btnToolsKumbara) btnToolsKumbara.classList.toggle('is-visible', isMathKumbara);
+    if (btnDrawKumbara) btnDrawKumbara.classList.toggle('is-visible', isMathKumbara);
 
     // 🎯 Aralıklı Tekrar İlerleme Göstergesi (kaç kez doğru yapıldı)
     const correctCount = item.correctCount || 0;
@@ -1416,7 +1412,6 @@
     // Konuları Render Et
     currentTheme.topics.forEach((topic, idx) => {
       const isCompleted = state.progress.completedTopics[topic.id];
-      const hasReading = topic.reading_pages && topic.reading_pages.length > 0;
       const card = document.createElement('div');
       card.className = 'topic-card-item';
 
@@ -1430,19 +1425,24 @@
           <p class="topic-desc">${topic.desc}</p>
         </div>
         <div class="topic-card-footer">
-          ${hasReading ? `<button class="btn-read-topic" data-topic-id="${topic.id}" title="Konuyu Oku">📖 Oku</button>` : ''}
-          <button class="btn-topic-fact" data-topic-id="${topic.id}" title="3 Adımlı Hap Bilgi">
-            <span>💡 Hap Bilgi</span>
+          <button class="btn-read-topic" data-topic-id="${topic.id}" title="Konuyu Ders Kitabından Oku">
+            <span>📖 Konuyu Oku (Ders Kitabı)</span>
           </button>
-          <button class="btn-start-topic" style="background: ${subj.accent};" title="Çalış ve Oyna">
-            <span>Çalış & Oyna ▶</span>
-          </button>
+          <div class="topic-card-footer-actions">
+            <button class="btn-topic-fact" data-topic-id="${topic.id}" title="3 Adımlı Hap Bilgi">
+              <span>💡 Hap Bilgi</span>
+            </button>
+            <button class="btn-start-topic" style="background: ${subj.accent};" title="Soruları Çöz ve Oyna">
+              <span>Soruları Çöz ▶</span>
+            </button>
+          </div>
         </div>
       `;
 
       // 📖 Oku Butonu — Okuma Ekranına Git
-      if (hasReading) {
-        card.querySelector('.btn-read-topic').addEventListener('click', (e) => {
+      const readBtn = card.querySelector('.btn-read-topic');
+      if (readBtn) {
+        readBtn.addEventListener('click', (e) => {
           e.stopPropagation();
           openReadingScreen(topic);
         });
@@ -1475,10 +1475,30 @@
     readingPageIndex = 0;
     state.currentTopic = topic;
 
-    // Eğer reading_pages yoksa direk fact card'a git
+    // Eğer reading_pages yoksa dinamik oluştur
     if (!topic.reading_pages || topic.reading_pages.length === 0) {
-      openFactCard(topic);
-      return;
+      const fc = topic.fact_card || {};
+      topic.reading_pages = [
+        {
+          type: 'hatirlayalim',
+          title: 'Hatırlayalım ve Hazırlanalım',
+          icon: '🔙',
+          content: topic.desc + (topic.badge ? ' (' + topic.badge + ')' : '')
+        },
+        {
+          type: 'birlikte_ogrenelim',
+          title: 'Birlikte Öğrenelim',
+          icon: fc.emoji || '📚',
+          content: fc.rule || topic.desc,
+          example_box: fc.example || undefined
+        },
+        {
+          type: 'bilgi_kutusu',
+          title: 'Önemli Bilgi Kutusu',
+          icon: '💡',
+          content: fc.tip || 'Soruları çözerken dikkatli oku, yönergeleri takip et!'
+        }
+      ];
     }
 
     // Header bilgilerini doldur
@@ -1714,15 +1734,12 @@
     // Karalama tahtasını her yeni soruda kapat
     ScratchpadService.close('quiz');
 
-    // 🧮 Somut Matematik Araçları Sadece Matematik Dersinde Görünür
+    // 🧮 Somut Matematik Araçları ve Çizim Tahtası SADECE Matematik Dersinde Görünür
+    const isMathQuiz = state.currentSubjectKey === 'matematik';
     const btnToolsQuiz = document.getElementById('btn-tools-quiz');
-    if (btnToolsQuiz) {
-      if (state.currentSubjectKey === 'matematik') {
-        btnToolsQuiz.classList.add('is-visible');
-      } else {
-        btnToolsQuiz.classList.remove('is-visible');
-      }
-    }
+    const btnDrawQuiz = document.getElementById('btn-draw-quiz');
+    if (btnToolsQuiz) btnToolsQuiz.classList.toggle('is-visible', isMathQuiz);
+    if (btnDrawQuiz) btnDrawQuiz.classList.toggle('is-visible', isMathQuiz);
 
     // 🌟 Çocuk Odaklı Macera Görev Rozeti
     const qBadgeEl = document.getElementById('quiz-q-type-badge');
@@ -1936,16 +1953,12 @@
     }
     ScratchpadService.close('exam');
 
-    // 🧮 Somut Matematik Araçları Sadece Matematik Sınavında Görünür
+    // 🧮 Somut Matematik Araçları ve Çizim Tahtası SADECE Matematik Sınavında Görünür
+    const isMathExam = (state.currentSubjectKey === 'matematik') || (qData.q && qData.q.includes('[Matematik]'));
     const btnToolsExam = document.getElementById('btn-tools-exam');
-    if (btnToolsExam) {
-      const isMath = (state.currentSubjectKey === 'matematik') || (qData.q && qData.q.includes('[Matematik]'));
-      if (isMath) {
-        btnToolsExam.classList.add('is-visible');
-      } else {
-        btnToolsExam.classList.remove('is-visible');
-      }
-    }
+    const btnDrawExam = document.getElementById('btn-draw-exam');
+    if (btnToolsExam) btnToolsExam.classList.toggle('is-visible', isMathExam);
+    if (btnDrawExam) btnDrawExam.classList.toggle('is-visible', isMathExam);
 
     // 🔊 Sınav Sorusu Sesli Oku Butonu
     const btnReadExam = document.getElementById('btn-read-exam-q');

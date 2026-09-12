@@ -671,33 +671,50 @@ html, body {
 
 .theme-tabs-nav {
   display: flex !important;
-  flex-wrap: wrap !important;
-  gap: 10px !important;
-  padding: 12px 24px !important;
-  background: var(--bg-surface) !important;
-  border-bottom: 1px solid var(--border-subtle) !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  scrollbar-width: none !important;
+  gap: 8px !important;
+  padding: 8px 16px !important;
+  background: rgba(15, 23, 42, 0.85) !important;
+  backdrop-filter: blur(14px) !important;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.12) !important;
   flex-shrink: 0 !important;
 }
-.theme-tabs-nav::-webkit-scrollbar { display: none; }
+.theme-tabs-nav::-webkit-scrollbar {
+  display: none !important;
+}
 
 .theme-tab-item {
-  background: #F8FAFC;
-  border: 1px solid var(--border-subtle);
-  padding: 8px 16px;
-  border-radius: var(--radius-sm);
-  font-family: inherit;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--text-secondary);
-  cursor: pointer;
-  white-space: nowrap;
-  transition: all 0.15s ease;
+  flex-shrink: 0 !important;
+  white-space: nowrap !important;
+  height: 38px !important;
+  padding: 0 16px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-family: inherit !important;
+  font-size: 0.82rem !important;
+  font-weight: 800 !important;
+  color: #CBD5E1 !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.16) !important;
+  border-radius: 20px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+.theme-tab-item:active {
+  transform: scale(0.96) !important;
 }
 
 .theme-tab-item.active {
-  background: var(--math-accent);
-  color: #FFFFFF;
-  border-color: var(--math-accent);
+  background: linear-gradient(135deg, #4F46E5 0%, #6366F1 100%) !important;
+  color: #FFFFFF !important;
+  border-color: #818CF8 !important;
+  box-shadow: 0 3px 12px rgba(99, 102, 241, 0.45) !important;
 }
 
 .topics-scroll-area {
@@ -2576,20 +2593,7 @@ body, html {
   color: #93C5FD !important;
 }
 
-.theme-tab-item {
-  background: rgba(255, 255, 255, 0.08) !important;
-  border: 1.5px solid rgba(255, 255, 255, 0.15) !important;
-  color: #CBD5E1 !important;
-  border-radius: 12px !important;
-  font-weight: 800 !important;
-  transition: all 0.15s ease !important;
-}
-.theme-tab-item.active {
-  background: linear-gradient(135deg, #4F46E5 0%, #6366F1 100%) !important;
-  color: #FFFFFF !important;
-  border-color: #818CF8 !important;
-  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4) !important;
-}
+
 
 .unit-exam-banner {
   background: rgba(30, 41, 59, 0.8) !important;

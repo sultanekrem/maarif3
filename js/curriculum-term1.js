@@ -23,45 +23,45 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Modellenen 3 basamaklı sayıyı bulun: 3 Yüzlük, 4 Onluk, 7 Birlik",
                 "options": [
+                  "734",
                   "347",
-                  "374",
                   "437",
-                  "734"
+                  "374"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "3 yüzlük = 300, 4 onluk = 40, 7 birlik = 7"
               },
               {
                 "q": "Okunuşu 'Dört yüz seksen beş' olan sayının rakamla yazılışı nedir?",
                 "options": [
+                  "845",
                   "458",
                   "485",
-                  "845",
                   "405"
                 ],
-                "ans": 1,
+                "ans": 2,
                 "hint": "4 yüzlük, 8 onluk ve 5 birlikten oluşur."
               },
               {
                 "q": "692 sayısında '9' rakamının basamak değeri kaçtır?",
                 "options": [
-                  "9",
-                  "90",
                   "900",
-                  "92"
+                  "92",
+                  "9",
+                  "90"
                 ],
-                "ans": 1,
+                "ans": 3,
                 "hint": "9 rakamı onlar basamağında olduğundan değeri 9 x 10 = 90 dır."
               },
               {
                 "q": "Birler basamağında 3, yüzler basamağında 8, onlar basamağında 0 olan sayı kaçtır?",
                 "options": [
+                  "803",
                   "308",
                   "830",
-                  "803",
                   "83"
                 ],
-                "ans": 2,
+                "ans": 0,
                 "hint": "Yüzler: 8, Onlar: 0, Birler: 3 -> 803"
               }
             ],
@@ -105,7 +105,7 @@ window.CURRICULUM_TERM1 = {
                   "🚌 145: Okulumuzun önünden geçen belediye otobüsünün hat numarası."
                 ],
                 "try_box": {
-                  "question": "Sen de Dene: Birler basamağında 6, yüzler basamağında 5, onlar basamağında 0 olan sayı kaçtır ve nasıl okunur?",
+                  "question": "Birler basamağında 6, yüzler basamağında 5, onlar basamağında 0 olan sayı kaçtır ve nasıl okunur?",
                   "answer": "Sayı: 506. Okunuşu: 'Beş yüz altı'. Onlar basamağında sıfır olduğu için onlar basamağını atlayarak doğrudan birler basamağını okuruz!"
                 }
               }
@@ -133,34 +133,34 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "700 + 40 + 8 şeklinde çözümlenen sayı kaçtır?",
                 "options": [
-                  "748",
-                  "784",
                   "704",
-                  "478"
+                  "748",
+                  "478",
+                  "784"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Yüzler 7, Onlar 4, Birler 8 = 748"
               },
               {
                 "q": "9 yüzlük ve 5 birlikten oluşan sayının çözümlenişi nasıldır?",
                 "options": [
-                  "900 + 50",
-                  "900 + 5",
+                  "900 + 50 + 5",
                   "90 + 5",
-                  "900 + 50 + 5"
+                  "900 + 5",
+                  "900 + 50"
                 ],
-                "ans": 1,
+                "ans": 2,
                 "hint": "Onlar basamağı 0 olduğu için 900 + 5 = 905"
               },
               {
                 "q": "319 sayısında basamak değeri en büyük olan rakamın basamak değeri kaçtır?",
                 "options": [
-                  "9",
                   "10",
-                  "300",
-                  "319"
+                  "9",
+                  "319",
+                  "300"
                 ],
-                "ans": 2,
+                "ans": 3,
                 "hint": "Yüzler basamağındaki 3 rakamının basamak değeri 300 dür."
               }
             ],
@@ -192,7 +192,7 @@ window.CURRICULUM_TERM1 = {
                   "content": "0 (sıfır) rakamı hangi basamakta olursa olsun basamak değeri her zaman 0'dır! Örneğin 809 sayısında onlar basamağında 0 vardır ve değeri 0'dır. Çözümlerken 800 + 9 yazmamız yeterlidir."
                 },
                 "try_box": {
-                  "question": "Sen de Dene: 500 + 7 şeklinde çözümlenen sayı kaçtır?",
+                  "question": "500 + 7 şeklinde çözümlenen sayı kaçtır?",
                   "answer": "Cevap: 507! Yüzler: 5, Onlar: 0, Birler: 7 -> 507 (Beş yüz yedi)."
                 }
               }
@@ -209,33 +209,33 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "478 .... 482 ifadesinde noktalı yere hangi sembol gelmelidir?",
                 "options": [
+                  "=",
                   "<",
-                  ">",
-                  "="
+                  ">"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Yüzler basamakları aynı (4), onlar basamağına bakarsak 7 < 8 dir."
               },
               {
                 "q": "Aşağıdaki sıralamalardan hangisi DOĞRUDUR?",
                 "options": [
-                  "345 > 354 > 360",
                   "712 < 721 < 750",
                   "605 > 650 > 655",
-                  "820 < 802 < 890"
+                  "820 < 802 < 890",
+                  "345 > 354 > 360"
                 ],
-                "ans": 1,
+                "ans": 0,
                 "hint": "712 < 721 < 750 küçükten büyüğe doğru sıralanmıştır."
               },
               {
                 "q": "654, 621, 689 sayılarını BÜYÜKTEN KÜÇÜĞE doğru sıralayınız.",
                 "options": [
+                  "689 > 621 > 654",
                   "689 > 654 > 621",
-                  "621 > 654 > 689",
                   "654 > 689 > 621",
-                  "689 > 621 > 654"
+                  "621 > 654 > 689"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "En büyük 689, sonra 654, en küçük 621 dir."
               }
             ],
@@ -267,7 +267,7 @@ window.CURRICULUM_TERM1 = {
                   "3. ADIM: Yüzler ve onlar eşitse BİRLER basamağına bakılır. (Örn: 638 > 632 çünkü 8 > 2)."
                 ],
                 "try_box": {
-                  "question": "Sen de Dene: 645, 621, 689 sayılarını BÜYÜKTEN KÜÇÜĞE sıralayınız.",
+                  "question": "645, 621, 689 sayılarını BÜYÜKTEN KÜÇÜĞE sıralayınız.",
                   "answer": "Cevap: 689 > 645 > 621! Yüzler basamakları aynı (6), onlar basamaklarına baktığımızda 8 > 4 > 2 olduğu için sıralama böyledir."
                 }
               }
@@ -284,10 +284,10 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "6 - 12 - 18 - ? - 30 ritmik saymasında soru işareti yerine hangi sayı gelmelidir?",
                 "options": [
-                  "20",
+                  "26",
                   "22",
                   "24",
-                  "26"
+                  "20"
                 ],
                 "ans": 2,
                 "hint": "6 şar artıyor: 18 + 6 = 24"
@@ -295,34 +295,34 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "7 den başlayıp 7 şer sayarken 4. söylediğimiz sayı hangisidir?",
                 "options": [
-                  "21",
-                  "28",
+                  "14",
                   "35",
-                  "14"
+                  "21",
+                  "28"
                 ],
-                "ans": 1,
+                "ans": 3,
                 "hint": "1. (7), 2. (14), 3. (21), 4. (28)"
               },
               {
                 "q": "8 - 16 - 24 - 32 - 40 - ? dizisinde sıradaki sayı kaçtır?",
                 "options": [
-                  "44",
-                  "46",
                   "48",
+                  "46",
+                  "44",
                   "50"
                 ],
-                "ans": 2,
+                "ans": 0,
                 "hint": "8 er ritmik sayma: 40 + 8 = 48"
               },
               {
                 "q": "9 - 18 - 27 - 36 - ? dizisinde sıradaki sayı kaçtır?",
                 "options": [
-                  "45",
                   "42",
-                  "49",
-                  "54"
+                  "45",
+                  "54",
+                  "49"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "9 ar ritmik sayma: 36 + 9 = 45"
               }
             ],
@@ -353,7 +353,7 @@ window.CURRICULUM_TERM1 = {
                   "2. Eksik sayıdan önceki sayıya bu adımı ekle veya sonraki sayıdan bu adımı çıkar."
                 ],
                 "try_box": {
-                  "question": "Sen de Dene: 24 - 32 - ? - 48 - 56 dizisinde soru işareti yerine hangi sayı gelmelidir?",
+                  "question": "24 - 32 - ? - 48 - 56 dizisinde soru işareti yerine hangi sayı gelmelidir?",
                   "answer": "Cevap: 40! Fark: 32 - 24 = 8'er saymadır. 32 + 8 = 40 (veya 48 - 8 = 40)."
                 }
               }
@@ -370,21 +370,21 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Bir sayının ÇİFT sayı olduğunu anlamak için hangi basamağına bakarız?",
                 "options": [
-                  "Yüzler basamağına",
-                  "Onlar basamağına",
+                  "İlk basamağına",
                   "Birler basamağına",
-                  "İlk basamağına"
+                  "Onlar basamağına",
+                  "Yüzler basamağına"
                 ],
-                "ans": 2,
+                "ans": 1,
                 "hint": "Birler basamağı 0, 2, 4, 6, 8 olan sayılar çifttir."
               },
               {
                 "q": "Aşağıdaki sayılardan hangisi TEK sayıdır?",
                 "options": [
                   "438",
-                  "560",
+                  "824",
                   "719",
-                  "824"
+                  "560"
                 ],
                 "ans": 2,
                 "hint": "719 sayısının birler basamağında 9 vardır, dolayısıyla tektir."
@@ -394,10 +394,10 @@ window.CURRICULUM_TERM1 = {
                 "options": [
                   "311",
                   "505",
-                  "672",
-                  "897"
+                  "897",
+                  "672"
                 ],
-                "ans": 2,
+                "ans": 3,
                 "hint": "672 sayısının birler basamağında 2 vardır (çift)."
               }
             ],
@@ -421,7 +421,7 @@ window.CURRICULUM_TERM1 = {
                   "content": "Sayı ne kadar büyük olursa olsun (isterse 998 olsun), yüzler ve onlar basamağına hiç bakmana gerek yoktur! Sadece en sondaki BİRLER basamağına bak: Birler 0, 2, 4, 6, 8 ise sayı ÇİFT'tir; 1, 3, 5, 7, 9 ise sayı TEK'tir."
                 },
                 "try_box": {
-                  "question": "Sen de Dene: 875 sayısı tek midir, çift midir? Neden?",
+                  "question": "875 sayısı tek midir, çift midir? Neden?",
                   "answer": "Cevap: TEK sayıdır! Çünkü birler basamağında 5 rakamı vardır."
                 }
               }
@@ -438,20 +438,20 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "İki TEK sayının toplamı her zaman nasıl bir sayıdır? (Örn: 3 + 5 = ?)",
                 "options": [
-                  "Her zaman Tek",
                   "Her zaman Çift",
+                  "0 olur",
                   "Bazen tek, bazen çift",
-                  "0 olur"
+                  "Her zaman Tek"
                 ],
-                "ans": 1,
+                "ans": 0,
                 "hint": "3 + 5 = 8 (Çift), Tek + Tek = ÇİFT"
               },
               {
                 "q": "Bir ÇİFT sayı ile bir TEK sayıyı toplarsak sonuç ne olur? (Örn: 4 + 3 = ?)",
                 "options": [
-                  "Çift sayı",
-                  "Tek sayı",
                   "Değişir",
+                  "Tek sayı",
+                  "Çift sayı",
                   "Asal sayı"
                 ],
                 "ans": 1,
@@ -460,12 +460,12 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "İki ÇİFT sayının toplamı nasıldır? (Örn: 6 + 4 = ?)",
                 "options": [
-                  "Çift sayı",
-                  "Tek sayı",
+                  "Negatif",
                   "10 dur",
-                  "Negatif"
+                  "Çift sayı",
+                  "Tek sayı"
                 ],
-                "ans": 0,
+                "ans": 2,
                 "hint": "Çift + Çift = ÇİFT"
               }
             ],
@@ -506,7 +506,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Tek ve Çift Sayıları Toplama konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: İki TEK sayının toplamı her zaman nasıl bir sayıdır? (Örn: 3 + 5 = ?)",
+                  "question": "İki TEK sayının toplamı her zaman nasıl bir sayıdır? (Örn: 3 + 5 = ?)",
                   "answer": "Doğru Cevap: Her zaman Çift (3 + 5 = 8 (Çift), Tek + Tek = ÇİFT)"
                 }
               }
@@ -523,23 +523,23 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "15 - 22 - 29 - 36 - ? örüntüsünün kuralı ve sıradaki sayısı nedir?",
                 "options": [
-                  "7 şer artıyor, 43",
+                  "5 er artıyor, 41",
                   "6 şar artıyor, 42",
                   "8 er artıyor, 44",
-                  "5 er artıyor, 41"
+                  "7 şer artıyor, 43"
                 ],
-                "ans": 0,
+                "ans": 3,
                 "hint": "Farklar: 22-15 = 7. 36 + 7 = 43"
               },
               {
                 "q": "80 - 75 - 70 - 65 - ? azalan örüntüsünde soru işareti yerine ne gelir?",
                 "options": [
-                  "55",
                   "60",
+                  "62",
                   "50",
-                  "62"
+                  "55"
                 ],
-                "ans": 1,
+                "ans": 0,
                 "hint": "5 er azalan örüntü: 65 - 5 = 60"
               }
             ],
@@ -580,7 +580,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Sayı ve Şekil Örüntüleri konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: 15 - 22 - 29 - 36 - ? örüntüsünün kuralı ve sıradaki sayısı nedir?",
+                  "question": "15 - 22 - 29 - 36 - ? örüntüsünün kuralı ve sıradaki sayısı nedir?",
                   "answer": "Doğru Cevap: 7 şer artıyor, 43 (Farklar: 22-15 = 7. 36 + 7 = 43)"
                 }
               }
@@ -597,34 +597,34 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "467 sayısı en yakın ONLUĞA yuvarlandığında hangi sayı elde edilir?",
                 "options": [
-                  "460",
-                  "470",
+                  "400",
                   "500",
-                  "400"
+                  "470",
+                  "460"
                 ],
-                "ans": 1,
+                "ans": 2,
                 "hint": "Birler basamağı 7 (>= 5) olduğu için sonraki onluğa yani 470 e yuvarlanır."
               },
               {
                 "q": "342 sayısı en yakın ONLUĞA yuvarlandığında hangisi olur?",
                 "options": [
-                  "340",
                   "350",
                   "300",
-                  "345"
+                  "345",
+                  "340"
                 ],
-                "ans": 0,
+                "ans": 3,
                 "hint": "Birler basamağı 2 (< 5) olduğundan kendi onluğuna yani 340 a yuvarlanır."
               },
               {
                 "q": "584 sayısı en yakın YÜZLÜĞE yuvarlandığında hangisi olur?",
                 "options": [
-                  "500",
                   "600",
-                  "580",
-                  "590"
+                  "590",
+                  "500",
+                  "580"
                 ],
-                "ans": 1,
+                "ans": 0,
                 "hint": "Son iki basamağı 84 (>= 50) olduğundan 600 e yuvarlanır."
               }
             ],
@@ -665,7 +665,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Nesnelerin Sayılarını Tahmin Etme & Yuvarlama konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: 467 sayısı en yakın ONLUĞA yuvarlandığında hangi sayı elde edilir?",
+                  "question": "467 sayısı en yakın ONLUĞA yuvarlandığında hangi sayı elde edilir?",
                   "answer": "Doğru Cevap: 470 (Birler basamağı 7 (>= 5) olduğu için sonraki onluğa yani 470 e yuvarlanır.)"
                 }
               }
@@ -679,10 +679,10 @@ window.CURRICULUM_TERM1 = {
             {
               "q": "7 yüzlük, 0 onluk ve 4 birlikten oluşan doğal sayının okunuşu nedir?",
               "options": [
-                "Yedi yüz kırk",
+                "Yedi yüz kırk dört",
                 "Yedi yüz dört",
-                "Yetmiş dört",
-                "Yedi yüz kırk dört"
+                "Yedi yüz kırk",
+                "Yetmiş dört"
               ],
               "ans": 1,
               "hint": "704 sayısı \"Yedi yüz dört\" diye okunur."
@@ -690,21 +690,21 @@ window.CURRICULUM_TERM1 = {
             {
               "q": "583 sayısının basamak değerleri toplamı kaçtır?",
               "options": [
-                "583",
-                "16",
                 "500 + 80",
+                "16",
+                "583",
                 "580"
               ],
-              "ans": 0,
+              "ans": 2,
               "hint": "Bir sayının basamak değerleri toplamı sayının kendisine eşittir (500+80+3=583)."
             },
             {
               "q": "346 < A < 352 sıralamasında A yerine yazılabilecek EN BÜYÜK ÇİFT sayı kaçtır?",
               "options": [
                 "350",
+                "352",
                 "351",
-                "348",
-                "352"
+                "348"
               ],
               "ans": 0,
               "hint": "352 den küçük sayılar: 351, 350, 349... En büyük çift sayı 350 dir."
@@ -712,43 +712,43 @@ window.CURRICULUM_TERM1 = {
             {
               "q": "42 den başlayarak 6 şar ileriye doğru sayarken 5. söylediğimiz sayı kaçtır?",
               "options": [
+                "54",
                 "60",
-                "66",
                 "72",
-                "54"
+                "66"
               ],
-              "ans": 1,
+              "ans": 3,
               "hint": "1.(42), 2.(48), 3.(54), 4.(60), 5.(66)"
             },
             {
               "q": "İki basamaklı en büyük tek sayı ile üç basamaklı en küçük çift sayının toplamı kaçtır?",
               "options": [
-                "199",
                 "200",
-                "198",
-                "201"
+                "201",
+                "199",
+                "198"
               ],
-              "ans": 0,
+              "ans": 2,
               "hint": "İki basamaklı en büyük tek: 99. Üç basamaklı en küçük çift: 100. Toplam: 99 + 100 = 199."
             },
             {
               "q": "Tek bir sayı ile çift bir sayının toplamı her zaman nasıl bir sayıdır?",
               "options": [
                 "Çift",
-                "Tek",
+                "Belli olmaz",
                 "Sıfır",
-                "Belli olmaz"
+                "Tek"
               ],
-              "ans": 1,
+              "ans": 3,
               "hint": "Tek + Çift = Tek (Örn: 3 + 4 = 7)"
             },
             {
               "q": "34 - 42 - 50 - 58 - ? örüntüsünde soru işareti yerine hangi sayı gelmelidir?",
               "options": [
-                "64",
+                "70",
                 "66",
-                "68",
-                "70"
+                "64",
+                "68"
               ],
               "ans": 1,
               "hint": "8 er artan bir örüntüdür: 58 + 8 = 66."
@@ -757,9 +757,9 @@ window.CURRICULUM_TERM1 = {
               "q": "674 sayısı en yakın ONLUĞA ve YÜZLÜĞE yuvarlandığında sırasıyla hangi sayılar elde edilir?",
               "options": [
                 "670 ve 700",
-                "680 ve 700",
+                "680 ve 600",
                 "670 ve 600",
-                "680 ve 600"
+                "680 ve 700"
               ],
               "ans": 0,
               "hint": "Birler basamağı 4 olduğundan 670, son iki basamağı 74 olduğundan 700."
@@ -783,10 +783,10 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Bir bütünün 2 eş parçaya bölünmesiyle oluşan parçalardan birine ne ad verilir ve nasıl yazılır?",
                 "options": [
-                  "Çeyrek, 1/4",
-                  "Yarım, 1/2",
                   "Bütün, 1/1",
-                  "Payda, 2/1"
+                  "Yarım, 1/2",
+                  "Payda, 2/1",
+                  "Çeyrek, 1/4"
                 ],
                 "ans": 1,
                 "hint": "1 bütün = 2 yarım (1/2)"
@@ -794,10 +794,10 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Bir bütünün 4 eş parçasından birini gösteren kesir hangisidir?",
                 "options": [
+                  "4/1",
                   "1/2",
-                  "1/3",
                   "1/4",
-                  "4/1"
+                  "1/3"
                 ],
                 "ans": 2,
                 "hint": "Çeyrek 1/4 olarak gösterilir."
@@ -805,12 +805,12 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "2 tam elma kaç tane yarım elma eder?",
                 "options": [
-                  "2",
+                  "8",
                   "3",
-                  "4",
-                  "8"
+                  "2",
+                  "4"
                 ],
-                "ans": 2,
+                "ans": 3,
                 "hint": "1 tam = 2 yarım ise 2 tam = 2 x 2 = 4 yarım."
               }
             ],
@@ -851,7 +851,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Bütün, Yarım ve Çeyreğin Kesir Gösterimi konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Bir bütünün 2 eş parçaya bölünmesiyle oluşan parçalardan birine ne ad verilir ve nasıl yazılır?",
+                  "question": "Bir bütünün 2 eş parçaya bölünmesiyle oluşan parçalardan birine ne ad verilir ve nasıl yazılır?",
                   "answer": "Doğru Cevap: Yarım, 1/2 (1 bütün = 2 yarım (1/2))"
                 }
               }
@@ -869,9 +869,9 @@ window.CURRICULUM_TERM1 = {
                 "q": "Bir pastayı 6 eş dilime böldük ve 2 dilimini yedik. Yenen kısmı ifade eden kesir hangisidir?",
                 "options": [
                   "2/6",
-                  "6/2",
+                  "1/6",
                   "4/6",
-                  "1/6"
+                  "6/2"
                 ],
                 "ans": 0,
                 "hint": "Bütün 6 parça (payda=6), alınan 2 parça (pay=2) -> 2/6"
@@ -879,10 +879,10 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Payı 3, paydası 8 olan kesir nasıl yazılır?",
                 "options": [
-                  "8/3",
+                  "1/3",
                   "3/8",
-                  "38",
-                  "1/3"
+                  "8/3",
+                  "38"
                 ],
                 "ans": 1,
                 "hint": "Pay üste, payda alta yazılır: 3/8"
@@ -925,7 +925,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Bir Bütünü Oluşturan Eş Parçalar konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Bir pastayı 6 eş dilime böldük ve 2 dilimini yedik. Yenen kısmı ifade eden kesir hangisidir?",
+                  "question": "Bir pastayı 6 eş dilime böldük ve 2 dilimini yedik. Yenen kısmı ifade eden kesir hangisidir?",
                   "answer": "Doğru Cevap: 2/6 (Bütün 6 parça (payda=6), alınan 2 parça (pay=2) -> 2/6)"
                 }
               }
@@ -942,21 +942,21 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Bir kesirde bütünün kaç eş parçaya ayrıldığını hangi terim gösterir?",
                 "options": [
-                  "Pay",
+                  "Bölüm",
                   "Kesir çizgisi",
-                  "Payda",
-                  "Bölüm"
+                  "Pay",
+                  "Payda"
                 ],
-                "ans": 2,
+                "ans": 3,
                 "hint": "Payda bütünü bölen eş parça sayısını gösterir."
               },
               {
                 "q": "Payı 1 olan kesirlere ne ad verilir? (Örn: 1/2, 1/3, 1/5)",
                 "options": [
                   "Birim Kesir",
-                  "Bileşik Kesir",
                   "Tam Kesir",
-                  "Çift Kesir"
+                  "Çift Kesir",
+                  "Bileşik Kesir"
                 ],
                 "ans": 0,
                 "hint": "Payı 1 olan her kesre Birim Kesir denir."
@@ -999,7 +999,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Pay ve Payda Arasındaki İlişki konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Bir kesirde bütünün kaç eş parçaya ayrıldığını hangi terim gösterir?",
+                  "question": "Bir kesirde bütünün kaç eş parçaya ayrıldığını hangi terim gösterir?",
                   "answer": "Doğru Cevap: Payda (Payda bütünü bölen eş parça sayısını gösterir.)"
                 }
               }
@@ -1017,9 +1017,9 @@ window.CURRICULUM_TERM1 = {
                 "q": "Öğleden sonra saat 3, dijital saatte nasıl gösterilir?",
                 "options": [
                   "03:00",
-                  "13:00",
+                  "18:00",
                   "15:00",
-                  "18:00"
+                  "13:00"
                 ],
                 "ans": 2,
                 "hint": "Öğleden sonra için 12 ekleriz: 12 + 3 = 15:00"
@@ -1028,11 +1028,11 @@ window.CURRICULUM_TERM1 = {
                 "q": "Yelkovan 6'nın üzerindeyken saat neyi gösterir?",
                 "options": [
                   "Çeyrek geçiyor",
-                  "Buçuk (:30)",
                   "Tam saat",
-                  "Çeyrek var"
+                  "Çeyrek var",
+                  "Buçuk (:30)"
                 ],
-                "ans": 1,
+                "ans": 3,
                 "hint": "6 rakamı 30 dakikayı (buçuğu) temsil eder."
               },
               {
@@ -1084,7 +1084,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Analog ve Dijital Saatler konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Öğleden sonra saat 3, dijital saatte nasıl gösterilir?",
+                  "question": "Öğleden sonra saat 3, dijital saatte nasıl gösterilir?",
                   "answer": "Doğru Cevap: 15:00 (Öğleden sonra için 12 ekleriz: 12 + 3 = 15:00)"
                 }
               }
@@ -1101,10 +1101,10 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "1 saat kaç dakikadır?",
                 "options": [
-                  "30 dakika",
-                  "60 dakika",
                   "100 dakika",
-                  "24 dakika"
+                  "60 dakika",
+                  "24 dakika",
+                  "30 dakika"
                 ],
                 "ans": 1,
                 "hint": "1 saat tam olarak 60 dakikadır."
@@ -1112,23 +1112,23 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "1 yılda kaç mevsim ve kaç ay vardır?",
                 "options": [
-                  "4 mevsim, 12 ay",
                   "2 mevsim, 6 ay",
-                  "4 mevsim, 10 ay",
-                  "12 mevsim, 4 ay"
+                  "12 mevsim, 4 ay",
+                  "4 mevsim, 12 ay",
+                  "4 mevsim, 10 ay"
                 ],
-                "ans": 0,
+                "ans": 2,
                 "hint": "Sonbahar, Kış, İlkbahar, Yaz (4 mevsim) ve 12 ay."
               },
               {
                 "q": "1 gün kaç saattir?",
                 "options": [
+                  "60 saat",
                   "12 saat",
-                  "24 saat",
                   "48 saat",
-                  "60 saat"
+                  "24 saat"
                 ],
-                "ans": 1,
+                "ans": 3,
                 "hint": "Dünya kendi ekseni etrafında 1 tam turunu 24 saatte tamamlar."
               }
             ],
@@ -1169,7 +1169,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Zaman Ölçü Birimleri konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: 1 saat kaç dakikadır?",
+                  "question": "1 saat kaç dakikadır?",
                   "answer": "Doğru Cevap: 60 dakika (1 saat tam olarak 60 dakikadır.)"
                 }
               }
@@ -1186,23 +1186,23 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Diş fırçalama süresi yaklaşık olarak ne kadardır?",
                 "options": [
-                  "2 saniye",
                   "2 dakika",
-                  "2 saat",
-                  "2 gün"
+                  "2 gün",
+                  "2 saniye",
+                  "2 saat"
                 ],
-                "ans": 1,
+                "ans": 0,
                 "hint": "Dişlerimizi günde 2 kez en az 2 dakika fırçalamalıyız."
               },
               {
                 "q": "Bir teneffüs süresi okullarda genellikle kaç dakikadır?",
                 "options": [
+                  "3 saat",
                   "15 dakika",
                   "60 dakika",
-                  "1 dakika",
-                  "3 saat"
+                  "1 dakika"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Standart okul teneffüsleri 10-15 dakika sürer."
               }
             ],
@@ -1243,7 +1243,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Olayların Oluş Sürelerini Tahmin Etme konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Diş fırçalama süresi yaklaşık olarak ne kadardır?",
+                  "question": "Diş fırçalama süresi yaklaşık olarak ne kadardır?",
                   "answer": "Doğru Cevap: 2 dakika (Dişlerimizi günde 2 kez en az 2 dakika fırçalamalıyız.)"
                 }
               }
@@ -1261,33 +1261,33 @@ window.CURRICULUM_TERM1 = {
                 "q": "1 metre (m) kaç santimetredir (cm)?",
                 "options": [
                   "10 cm",
-                  "100 cm",
+                  "60 cm",
                   "1000 cm",
-                  "60 cm"
+                  "100 cm"
                 ],
-                "ans": 1,
+                "ans": 3,
                 "hint": "1 m = 100 cm"
               },
               {
                 "q": "1 kilogram (kg) kaç gramdır (g)?",
                 "options": [
-                  "100 g",
-                  "500 g",
                   "1000 g",
-                  "10 g"
+                  "500 g",
+                  "10 g",
+                  "100 g"
                 ],
-                "ans": 2,
+                "ans": 0,
                 "hint": "1 kg = 1000 g"
               },
               {
                 "q": "Silgimizin boyunu ölçerken en uygun birim hangisidir?",
                 "options": [
                   "Kilometre",
-                  "Metre",
                   "Santimetre",
-                  "Kilogram"
+                  "Kilogram",
+                  "Metre"
                 ],
-                "ans": 2,
+                "ans": 1,
                 "hint": "Küçük nesnelerin boyunu santimetre (cm) ile ölçeriz."
               }
             ],
@@ -1328,7 +1328,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Uzunluk ve Kütle Ölçü Birimleri konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: 1 metre (m) kaç santimetredir (cm)?",
+                  "question": "1 metre (m) kaç santimetredir (cm)?",
                   "answer": "Doğru Cevap: 100 cm (1 m = 100 cm)"
                 }
               }
@@ -1346,9 +1346,9 @@ window.CURRICULUM_TERM1 = {
                 "q": "1 Türk Lirası kaç kuruştur?",
                 "options": [
                   "10 Kuruş",
-                  "50 Kuruş",
+                  "1000 Kuruş",
                   "100 Kuruş",
-                  "1000 Kuruş"
+                  "50 Kuruş"
                 ],
                 "ans": 2,
                 "hint": "1 TL = 100 Kuruştur."
@@ -1356,23 +1356,23 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Fiyatı 35 TL olan kitaba 50 TL veren Ali kaç TL para üstü alır?",
                 "options": [
-                  "10 TL",
-                  "15 TL",
+                  "20 TL",
                   "25 TL",
-                  "20 TL"
+                  "10 TL",
+                  "15 TL"
                 ],
-                "ans": 1,
+                "ans": 3,
                 "hint": "50 - 35 = 15 TL para üstü alır."
               },
               {
                 "q": "4 adet 25 kuruş toplam kaç TL eder?",
                 "options": [
-                  "50 Kuruş",
                   "1 TL",
+                  "4 TL",
                   "2 TL",
-                  "4 TL"
+                  "50 Kuruş"
                 ],
-                "ans": 1,
+                "ans": 0,
                 "hint": "25 x 4 = 100 Kuruş = 1 TL"
               }
             ],
@@ -1413,7 +1413,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Madenî ve Kâğıt Paralar konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: 1 Türk Lirası kaç kuruştur?",
+                  "question": "1 Türk Lirası kaç kuruştur?",
                   "answer": "Doğru Cevap: 100 Kuruş (1 TL = 100 Kuruştur.)"
                 }
               }
@@ -1427,32 +1427,32 @@ window.CURRICULUM_TERM1 = {
             {
               "q": "Payı 1 olan ve bir bütünün eş parçalarından birini gösteren kesirlere ne ad verilir?",
               "options": [
-                "Birim Kesir",
                 "Bileşik Kesir",
+                "Birim Kesir",
                 "Tam Kesir",
                 "Yarım Kesir"
               ],
-              "ans": 0,
+              "ans": 1,
               "hint": "Payı 1 olan kesirler birim kesirdir (1/2, 1/4, 1/8 gibi)."
             },
             {
               "q": "8 dilime ayrılmış bir pizzanın 3 dilimini yiyen Burak, pizzanın kaçta kaçını yemiştir?",
               "options": [
-                "3/8",
-                "8/3",
                 "5/8",
+                "8/3",
+                "3/8",
                 "1/8"
               ],
-              "ans": 0,
+              "ans": 2,
               "hint": "Bütün dilim sayısı payda (8), yenen kısım pay (3) -> 3/8."
             },
             {
               "q": "Öğleden sonra saat 4'ü 20 geçe dijital saatte nasıl gösterilir?",
               "options": [
                 "16:20",
-                "04:20",
+                "18:20",
                 "14:20",
-                "18:20"
+                "04:20"
               ],
               "ans": 0,
               "hint": "Öğleden sonra saat 4: 12 + 4 = 16. Dakika 20 -> 16:20."
@@ -1460,23 +1460,23 @@ window.CURRICULUM_TERM1 = {
             {
               "q": "Bir terzi 4 metre kumaşın 160 santimetresini kullandı. Geriye kaç cm kumaş kaldı?",
               "options": [
-                "240 cm",
-                "260 cm",
                 "140 cm",
-                "340 cm"
+                "260 cm",
+                "340 cm",
+                "240 cm"
               ],
-              "ans": 0,
+              "ans": 3,
               "hint": "4 m = 400 cm. 400 - 160 = 240 cm."
             },
             {
               "q": "Tanesi 75 kuruş olan sakızlardan 4 tane alan Ece, satıcıya 5 TL verirse kaç TL para üstü alır?",
               "options": [
-                "2 TL",
+                "2 TL 50 Kr",
                 "3 TL",
-                "1 TL",
-                "2 TL 50 Kr"
+                "2 TL",
+                "1 TL"
               ],
-              "ans": 0,
+              "ans": 2,
               "hint": "4 x 75 Kr = 300 Kr = 3 TL. 5 TL - 3 TL = 2 TL para üstü."
             }
           ]
@@ -1498,10 +1498,10 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "48 + 31 işleminin sonucunu en yakın onluğa yuvarlayarak tahmin ediniz.",
                 "options": [
-                  "70",
-                  "80",
                   "90",
-                  "75"
+                  "80",
+                  "75",
+                  "70"
                 ],
                 "ans": 1,
                 "hint": "48 -> 50, 31 -> 30; 50 + 30 = 80"
@@ -1509,12 +1509,12 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "72 - 29 işleminin onluğa yuvarlanarak yapılan tahmini sonucu kaçtır?",
                 "options": [
-                  "40",
-                  "50",
                   "30",
+                  "50",
+                  "40",
                   "45"
                 ],
-                "ans": 0,
+                "ans": 2,
                 "hint": "72 -> 70, 29 -> 30; 70 - 30 = 40"
               }
             ],
@@ -1555,7 +1555,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Toplama ve Çıkarma Sonuçlarını Tahmin Etme konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: 48 + 31 işleminin sonucunu en yakın onluğa yuvarlayarak tahmin ediniz.",
+                  "question": "48 + 31 işleminin sonucunu en yakın onluğa yuvarlayarak tahmin ediniz.",
                   "answer": "Doğru Cevap: 80 (48 -> 50, 31 -> 30; 50 + 30 = 80)"
                 }
               }
@@ -1574,8 +1574,8 @@ window.CURRICULUM_TERM1 = {
                 "options": [
                   "37",
                   "47",
-                  "27",
-                  "35"
+                  "35",
+                  "27"
                 ],
                 "ans": 0,
                 "hint": "Toplama işleminde verilmeyeni bulmak için: 82 - 45 = 37"
@@ -1583,12 +1583,12 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "[ ? ] - 26 = 54 işleminde eksilen sayı kaçtır?",
                 "options": [
-                  "28",
                   "70",
                   "80",
+                  "28",
                   "78"
                 ],
-                "ans": 2,
+                "ans": 1,
                 "hint": "Eksileni bulmak için çıkan ile fark toplanır: 54 + 26 = 80"
               }
             ],
@@ -1629,7 +1629,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Toplama ve Çıkarma İşlemlerini Çözümleme konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: 45 + [ ? ] = 82 işleminde verilmeyen toplanan kaçtır?",
+                  "question": "45 + [ ? ] = 82 işleminde verilmeyen toplanan kaçtır?",
                   "answer": "Doğru Cevap: 37 (Toplama işleminde verilmeyeni bulmak için: 82 - 45 = 37)"
                 }
               }
@@ -1643,23 +1643,23 @@ window.CURRICULUM_TERM1 = {
             {
               "q": "58 + 39 işleminin sonucunu en yakın onluklara yuvarlayarak tahmin ettiğimizde sonuç kaç olur?",
               "options": [
+                "110",
                 "100",
                 "90",
-                "110",
                 "95"
               ],
-              "ans": 0,
+              "ans": 1,
               "hint": "58 -> 60, 39 -> 40. 60 + 40 = 100."
             },
             {
               "q": "[ ▲ ] + 148 = 362 işleminde verilmeyen toplanan [ ▲ ] kaçtır?",
               "options": [
-                "214",
-                "224",
+                "510",
                 "114",
-                "510"
+                "214",
+                "224"
               ],
-              "ans": 0,
+              "ans": 2,
               "hint": "Verilmeyen toplanan = Toplam - Verilen toplanan: 362 - 148 = 214."
             },
             {
@@ -1667,8 +1667,8 @@ window.CURRICULUM_TERM1 = {
               "options": [
                 "325",
                 "335",
-                "675",
-                "425"
+                "425",
+                "675"
               ],
               "ans": 0,
               "hint": "Çıkan = Eksilen - Fark: 500 - 175 = 325."
@@ -1684,52 +1684,52 @@ window.CURRICULUM_TERM1 = {
         {
           "q": "600 + 50 + 9 şeklinde çözümlenen sayı hangisidir?",
           "options": [
-            "659",
-            "695",
+            "650",
             "569",
-            "650"
+            "659",
+            "695"
           ],
-          "ans": 0
+          "ans": 2
         },
         {
           "q": "348 sayısının en yakın onluğa yuvarlanmış hali nedir?",
           "options": [
-            "340",
             "350",
-            "400",
-            "300"
-          ],
-          "ans": 1
-        },
-        {
-          "q": "245 + 138 işleminin sonucu kaçtır?",
-          "options": [
-            "373",
-            "383",
-            "385",
-            "393"
-          ],
-          "ans": 1
-        },
-        {
-          "q": "500 - 165 işleminin sonucu kaçtır?",
-          "options": [
-            "335",
-            "345",
-            "435",
-            "325"
+            "300",
+            "340",
+            "400"
           ],
           "ans": 0
         },
         {
+          "q": "245 + 138 işleminin sonucu kaçtır?",
+          "options": [
+            "393",
+            "385",
+            "373",
+            "383"
+          ],
+          "ans": 3
+        },
+        {
+          "q": "500 - 165 işleminin sonucu kaçtır?",
+          "options": [
+            "345",
+            "335",
+            "325",
+            "435"
+          ],
+          "ans": 1
+        },
+        {
           "q": "4 kutunun her birinde 8 çikolata vardır. Toplam kaç çikolata vardır?",
           "options": [
-            "24",
-            "28",
             "32",
-            "36"
+            "24",
+            "36",
+            "28"
           ],
-          "ans": 2
+          "ans": 0
         },
         {
           "q": "27 bilyeyi 3 arkadaş eşit paylaşırsa her birine kaç bilye düşer?",
@@ -1744,22 +1744,22 @@ window.CURRICULUM_TERM1 = {
         {
           "q": "Aşağıdaki sayılardan hangisi ÇİFT sayıdır?",
           "options": [
-            "341",
-            "587",
+            "705",
             "690",
-            "705"
+            "587",
+            "341"
           ],
-          "ans": 2
+          "ans": 1
         },
         {
           "q": "15, 21, 27, 33, ? örüntüsünde soru işareti yerine hangi sayı gelmelidir?",
           "options": [
             "37",
             "38",
-            "39",
-            "40"
+            "40",
+            "39"
           ],
-          "ans": 2
+          "ans": 3
         }
       ]
     }
@@ -1788,23 +1788,23 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Üzerinde eldiven resmi olan laboratuvar sembolü neyi ifade eder?",
                 "options": [
+                  "Sıcak yüzey vardır",
                   "Ellerimizi korumak için koruyucu eldiven takmalıyız",
                   "Ellerimizi yıkamalıyız",
-                  "Sıcak yüzey vardır",
                   "Cam kırıktır"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Eldiven sembolü kimyasallardan ve kesiklerden elleri korumayı belirtir."
               },
               {
                 "q": "Deneylerde gözlerimizi korumak için hangi aracı kullanmalıyız?",
                 "options": [
                   "Güneş gözlüğü",
-                  "Koruyucu laboratuvar gözlüğü",
                   "Büyüteç",
+                  "Koruyucu laboratuvar gözlüğü",
                   "Mikroskop"
                 ],
-                "ans": 1,
+                "ans": 2,
                 "hint": "Koruyucu gözlük göze yabancı madde sıçramasını engeller."
               }
             ],
@@ -1838,23 +1838,23 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Bilimsel bir araştırmanın ilk adımı genellikle hangisidir?",
                 "options": [
-                  "Rapor yazmak",
                   "Merak etmek ve gözlem yapmak",
                   "Sonucu ilan etmek",
-                  "Malzemeleri çöpe atmak"
+                  "Malzemeleri çöpe atmak",
+                  "Rapor yazmak"
                 ],
-                "ans": 1,
+                "ans": 0,
                 "hint": "Her bilimsel keşif çevreyi merak etmek ve gözlemlemekle başlar."
               },
               {
                 "q": "Bir fikrin doğruluğunu test etmek için kontrollü koşullarda yapılan uygulamaya ne denir?",
                 "options": [
-                  "Deney",
-                  "Şarkı",
                   "Örüntü",
-                  "Resim"
+                  "Deney",
+                  "Resim",
+                  "Şarkı"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Gözlemleri sınamak için deney yaparız."
               }
             ],
@@ -1895,7 +1895,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Bilimsel Bilgiye Ulaşma Yolları konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Bilimsel bir araştırmanın ilk adımı genellikle hangisidir?",
+                  "question": "Bilimsel bir araştırmanın ilk adımı genellikle hangisidir?",
                   "answer": "Doğru Cevap: Merak etmek ve gözlem yapmak (Her bilimsel keşif çevreyi merak etmek ve gözlemlemekle başlar.)"
                 }
               }
@@ -1912,12 +1912,12 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Aşağıdakilerden hangisi bir bilim insanının temel özelliklerinden BİRİDİR?",
                 "options": [
-                  "Hemen pes etmek",
-                  "Meraklı ve sorgulayıcı olmak",
                   "Sadece başkalarını taklit etmek",
-                  "Deney yapmaktan korkmak"
+                  "Hemen pes etmek",
+                  "Deney yapmaktan korkmak",
+                  "Meraklı ve sorgulayıcı olmak"
                 ],
-                "ans": 1,
+                "ans": 3,
                 "hint": "Bilim insanları merak eder, araştırır ve sabırla sorgular."
               },
               {
@@ -1969,7 +1969,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Bilim İnsanlarının Özellikleri konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Aşağıdakilerden hangisi bir bilim insanının temel özelliklerinden BİRİDİR?",
+                  "question": "Aşağıdakilerden hangisi bir bilim insanının temel özelliklerinden BİRİDİR?",
                   "answer": "Doğru Cevap: Meraklı ve sorgulayıcı olmak (Bilim insanları merak eder, araştırır ve sabırla sorgular.)"
                 }
               }
@@ -1983,32 +1983,32 @@ window.CURRICULUM_TERM1 = {
             {
               "q": "Deney yaparken ellerimizi kimyasal maddelerden korumak için hangi güvenlik ekipmanını kullanmalıyız?",
               "options": [
+                "Maske",
                 "Eldiven",
                 "Gözlük",
-                "Önlük",
-                "Maske"
+                "Önlük"
               ],
-              "ans": 0,
+              "ans": 1,
               "hint": "Eldiven ellerimizi asit, boya ve zararlı sıvılardan korur."
             },
             {
               "q": "Bilimsel bir araştırmada bir probleme geçici olarak üretilen çözüm önerisine ne denir?",
               "options": [
-                "Hipotez (Ön Fikir)",
-                "Sonuç",
                 "Rapor",
-                "Tablo"
+                "Tablo",
+                "Hipotez (Ön Fikir)",
+                "Sonuç"
               ],
-              "ans": 0,
+              "ans": 2,
               "hint": "Hipotez, araştırmanın başında kurulan test edilebilir tahmindir."
             },
             {
               "q": "Bilim insanlarının başarısızlık karşısında vazgeçmeyip yeni yöntemler denemesi hangi özelliğidir?",
               "options": [
                 "Sabır ve Azim",
-                "Meraksızlık",
                 "Acelecilik",
-                "Ön Yargı"
+                "Ön Yargı",
+                "Meraksızlık"
               ],
               "ans": 0,
               "hint": "Bilim insanının en önemli gücü sabır ve azmidir."
@@ -2032,23 +2032,23 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Gözle görülemeyecek kadar küçük olan ve sadece mikroskopla görülebilen canlı grubu hangisidir?",
                 "options": [
+                  "Ağaçlar",
                   "Mikroskobik canlılar",
-                  "Bitkiler",
                   "Omurgalılar",
-                  "Ağaçlar"
+                  "Bitkiler"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Bakteriler ve amip mikroskobik canlılardır."
               },
               {
                 "q": "Mantarlar fotosentez yaparak kendi besinini üretebilir mi? (Bitki midir?)",
                 "options": [
-                  "Evet, bitkidir",
-                  "Hayır, bitki değildir, kendi besinini üretemez",
+                  "Güneş görünce üretir",
                   "Sadece suda üretir",
-                  "Güneş görünce üretir"
+                  "Hayır, bitki değildir, kendi besinini üretemez",
+                  "Evet, bitkidir"
                 ],
-                "ans": 1,
+                "ans": 2,
                 "hint": "Mantarlar bitki değildir; klorofilleri yoktur, kendi besinini üretemezler."
               }
             ],
@@ -2076,7 +2076,7 @@ window.CURRICULUM_TERM1 = {
                 ],
                 "table_html": "\n        <div class=\"cat-comparison-grid\">\n          <div class=\"cat-card cat-plants\">\n            <div class=\"cat-title\">🌿 Bitkiler Alemi</div>\n            <div class=\"cat-item\">🌸 <strong>Örnek Canlılar:</strong> Papatya, Çam Ağacı, Buğday, Gül</div>\n            <div class=\"cat-item\">☀️ <strong>Temel Özellikleri:</strong> Kendi besinini güneş ışığıyla kendisi üretir. Kökleriyle toprağa bağlıdır, yer değiştiremez.</div>\n          </div>\n          <div class=\"cat-card cat-animals\">\n            <div class=\"cat-title\">🦁 Hayvanlar Alemi</div>\n            <div class=\"cat-item\">🐾 <strong>Örnek Canlılar:</strong> Kedi, Kartal, Yunus, Karınca, Balık</div>\n            <div class=\"cat-item\">🏃 <strong>Temel Özellikleri:</strong> Aktif olarak yer değiştirebilir ve hareket eder. Besinlerini dışarıdan hazır alırlar.</div>\n          </div>\n        </div>\n  ",
                 "try_box": {
-                  "question": "Sen de Dene: Bitkiler hareket eder mi? Nasıl?",
+                  "question": "Bitkiler hareket eder mi? Nasıl?",
                   "answer": "Evet, bitkiler de hareket eder! Ancak yer değiştirmezler; yapraklarını ve çiçeklerini güneşe doğru çevirerek (yönelme hareketi) hareket ederler (Örnek: Ayçiçeği)."
                 }
               }
@@ -2093,21 +2093,21 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Çevremizdeki nesnelerin sertlik, yumuşaklık ve sıcaklık özelliklerini hangi duyu organımızla algılarız?",
                 "options": [
-                  "Göz",
                   "Deri (Dokunma)",
+                  "Kulak",
                   "Burun",
-                  "Kulak"
+                  "Göz"
                 ],
-                "ans": 1,
+                "ans": 0,
                 "hint": "Deri dokunma duyusu organımızdır."
               },
               {
                 "q": "Yüksek sesli ortamlarda bulunmak öncelikle hangi duyu organımıza zarar verir?",
                 "options": [
-                  "Göz",
+                  "Burun",
                   "Kulak",
-                  "Dil",
-                  "Burun"
+                  "Göz",
+                  "Dil"
                 ],
                 "ans": 1,
                 "hint": "Yüksek ses kulak zarına ve işitme duyumuza zarar verir."
@@ -2150,7 +2150,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Duyu Organlarının İşlevleri konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Çevremizdeki nesnelerin sertlik, yumuşaklık ve sıcaklık özelliklerini hangi duyu organımızla algılarız?",
+                  "question": "Çevremizdeki nesnelerin sertlik, yumuşaklık ve sıcaklık özelliklerini hangi duyu organımızla algılarız?",
                   "answer": "Doğru Cevap: Deri (Dokunma) (Deri dokunma duyusu organımızdır.)"
                 }
               }
@@ -2167,20 +2167,20 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Bir tohumun çimlenmesi için gereken 3 temel faktör hangisidir?",
                 "options": [
-                  "Su, Sıcaklık (Isı), Hava (Oksijen)",
-                  "Sadece Gübre",
+                  "Tuz, Şeker, Işık",
                   "Sadece Karanlık",
-                  "Tuz, Şeker, Işık"
+                  "Sadece Gübre",
+                  "Su, Sıcaklık (Isı), Hava (Oksijen)"
                 ],
-                "ans": 0,
+                "ans": 3,
                 "hint": "Tohum çimlenirken fotosentez yapmadığı için ışığa değil Su, Isı ve Havaya ihtiyaç duyar."
               },
               {
                 "q": "Kelebeğin yaşam döngüsündeki sıralama hangisidir?",
                 "options": [
                   "Yumurta -> Tırtıl -> Pupa (Koza) -> Kelebek",
-                  "Kelebek -> Pupa -> Yumurta -> Tırtıl",
                   "Tırtıl -> Kelebek -> Yumurta -> Pupa",
+                  "Kelebek -> Pupa -> Yumurta -> Tırtıl",
                   "Yumurta -> Kelebek -> Tırtıl"
                 ],
                 "ans": 0,
@@ -2224,7 +2224,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Canlıların Yaşam Döngüleri konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Bir tohumun çimlenmesi için gereken 3 temel faktör hangisidir?",
+                  "question": "Bir tohumun çimlenmesi için gereken 3 temel faktör hangisidir?",
                   "answer": "Doğru Cevap: Su, Sıcaklık (Isı), Hava (Oksijen) (Tohum çimlenirken fotosentez yapmadığı için ışığa değil Su, Isı ve Havaya ihtiyaç duyar.)"
                 }
               }
@@ -2238,23 +2238,23 @@ window.CURRICULUM_TERM1 = {
             {
               "q": "Sütten yoğurt yapılmasını sağlayan faydalı canlılar hangi canlı grubundadır?",
               "options": [
-                "Mikroskobik Canlılar",
                 "Bitkiler",
+                "Mikroskobik Canlılar",
                 "Hayvanlar",
                 "Mantarlar"
               ],
-              "ans": 0,
+              "ans": 1,
               "hint": "Sütü yoğurda dönüştüren mikroskobik bakterilerdir."
             },
             {
               "q": "Kulağımızın ve işitme duyumuzun sağlığını korumak için hangisini yapmamalıyız?",
               "options": [
-                "Sert cisimlerle kulağımızı karıştırmak",
+                "Düzenli doktora gitmek",
                 "Yüksek sesten kaçınmak",
-                "Kulağımızı temiz tutmak",
-                "Düzenli doktora gitmek"
+                "Sert cisimlerle kulağımızı karıştırmak",
+                "Kulağımızı temiz tutmak"
               ],
-              "ans": 0,
+              "ans": 2,
               "hint": "Kulağa sivri ve sert cisimler sokmak kulak zarına zarar verir."
             },
             {
@@ -2262,8 +2262,8 @@ window.CURRICULUM_TERM1 = {
               "options": [
                 "Işık",
                 "Su (Nem)",
-                "Uygun Sıcaklık",
-                "Hava (Oksijen)"
+                "Hava (Oksijen)",
+                "Uygun Sıcaklık"
               ],
               "ans": 0,
               "hint": "Tohum toprak altında karanlıkta da çimlenir, çimlenme için ışık zorunlu değildir."
@@ -2287,10 +2287,10 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Kayaçlara farklı renk, parlaklık ve sertlik veren yapılar hangileridir?",
                 "options": [
-                  "Toprak",
+                  "Hava kabarcıkları",
                   "Mineraller",
                   "Su damlaları",
-                  "Hava kabarcıkları"
+                  "Toprak"
                 ],
                 "ans": 1,
                 "hint": "Kayaçların yapısını ve özelliklerini mineraller belirler."
@@ -2299,11 +2299,11 @@ window.CURRICULUM_TERM1 = {
                 "q": "Ekonomik değeri olan kayaç ve minerallere ne ad verilir? (Bor, altın, bakır gibi)",
                 "options": [
                   "Kum",
+                  "Çakıl",
                   "Maden",
-                  "Fosil",
-                  "Çakıl"
+                  "Fosil"
                 ],
-                "ans": 1,
+                "ans": 2,
                 "hint": "Ekonomik değeri yüksek olan yer altı zenginliklerine maden denir."
               }
             ],
@@ -2344,7 +2344,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Kayaçlar, Madenler ve Mineraller konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Kayaçlara farklı renk, parlaklık ve sertlik veren yapılar hangileridir?",
+                  "question": "Kayaçlara farklı renk, parlaklık ve sertlik veren yapılar hangileridir?",
                   "answer": "Doğru Cevap: Mineraller (Kayaçların yapısını ve özelliklerini mineraller belirler.)"
                 }
               }
@@ -2361,23 +2361,23 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Milyonlarca yıl önce yaşamış canlıların kayaç tabakaları arasında taşlaşmış kalıntılarına ne ad verilir?",
                 "options": [
-                  "Mineral",
                   "Fosil",
+                  "Linyit",
                   "Maden",
-                  "Linyit"
+                  "Mineral"
                 ],
-                "ans": 1,
+                "ans": 0,
                 "hint": "Geçmiş canlı kalıntılarına fosil denir."
               },
               {
                 "q": "Fosilleri ve eski yaşam izlerini inceleyen bilim dalına ne denir?",
                 "options": [
+                  "Meteoroloji",
                   "Paleontoloji (Taşıl Bilim)",
-                  "Zooloji",
                   "Astronomi",
-                  "Meteoroloji"
+                  "Zooloji"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Fosil bilimcilerine paleontolog, bilim dalına paleontoloji denir."
               }
             ],
@@ -2418,7 +2418,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Fosil Oluşumu konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Milyonlarca yıl önce yaşamış canlıların kayaç tabakaları arasında taşlaşmış kalıntılarına ne ad verilir?",
+                  "question": "Milyonlarca yıl önce yaşamış canlıların kayaç tabakaları arasında taşlaşmış kalıntılarına ne ad verilir?",
                   "answer": "Doğru Cevap: Fosil (Geçmiş canlı kalıntılarına fosil denir.)"
                 }
               }
@@ -2432,23 +2432,23 @@ window.CURRICULUM_TERM1 = {
             {
               "q": "Ülkemizde dünya rezervlerinin çok büyük kısmı bulunan ve roket yakıtından deterjana kadar kullanılan maden hangisidir?",
               "options": [
-                "Bor",
                 "Kömür",
+                "Bor",
                 "Altın",
                 "Krom"
               ],
-              "ans": 0,
+              "ans": 1,
               "hint": "Türkiye dünyada en zengin bor madeni yataklarına sahiptir."
             },
             {
               "q": "Fosiller hangi kayaç türlerinin tabakaları arasında daha kolay ve bozulmadan oluşur?",
               "options": [
-                "Tortul (Tortullaşmış) kayaçlar",
                 "Volkanik lavlar",
-                "Erimiş magma",
-                "Kızgın kireç"
+                "Kızgın kireç",
+                "Tortul (Tortullaşmış) kayaçlar",
+                "Erimiş magma"
               ],
-              "ans": 0,
+              "ans": 2,
               "hint": "Fosiller göl ve deniz tabanındaki tortul katmanlar arasında sıkışarak oluşur."
             }
           ]
@@ -2470,23 +2470,23 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Belirli bir şekli olan ve dışarıdan bir etki olmadıkça şeklini koruyan maddeler hangi haldedir?",
                 "options": [
+                  "Buhar",
                   "Katı",
-                  "Sıvı",
                   "Gaz",
-                  "Buhar"
+                  "Sıvı"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Taş, masa, kalem gibi katı maddelerin belirli bir şekli vardır."
               },
               {
                 "q": "Bulunduğu kabın şeklini alan ve akışkan olan su ve süt hangi maddedir?",
                 "options": [
+                  "Gaz",
                   "Katı",
                   "Sıvı",
-                  "Gaz",
                   "Plazma"
                 ],
-                "ans": 1,
+                "ans": 2,
                 "hint": "Sıvılar akışkandır ve kabın şeklini alır."
               }
             ],
@@ -2527,7 +2527,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Maddenin Katı, Sıvı ve Gaz Hâli konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Belirli bir şekli olan ve dışarıdan bir etki olmadıkça şeklini koruyan maddeler hangi haldedir?",
+                  "question": "Belirli bir şekli olan ve dışarıdan bir etki olmadıkça şeklini koruyan maddeler hangi haldedir?",
                   "answer": "Doğru Cevap: Katı (Taş, masa, kalem gibi katı maddelerin belirli bir şekli vardır.)"
                 }
               }
@@ -2544,23 +2544,23 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Demir tozları ile talaş karışımını en kolay hangi yöntemle ayırabiliriz?",
                 "options": [
-                  "Süzme ile",
                   "Mıknatıs ile",
                   "Eleme ile",
+                  "Süzme ile",
                   "Buharlaştırma ile"
                 ],
-                "ans": 1,
+                "ans": 0,
                 "hint": "Mıknatıs demir tozlarını çeker, talaş geride kalır."
               },
               {
                 "q": "Makarna ile suyu birbirinden ayırmak için hangi aleti kullanırız?",
                 "options": [
+                  "Elek",
                   "Süzgeç",
-                  "Mıknatıs",
                   "Büyüteç",
-                  "Elek"
+                  "Mıknatıs"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Katı-sıvı karışımları süzgeç yardımıyla süzerek ayırırız."
               }
             ],
@@ -2601,7 +2601,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Karışımlar ve Karışımların Ayrılması konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Demir tozları ile talaş karışımını en kolay hangi yöntemle ayırabiliriz?",
+                  "question": "Demir tozları ile talaş karışımını en kolay hangi yöntemle ayırabiliriz?",
                   "answer": "Doğru Cevap: Mıknatıs ile (Mıknatıs demir tozlarını çeker, talaş geride kalır.)"
                 }
               }
@@ -2618,12 +2618,12 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Kullanılmış defter ve karton kutuları hangi geri dönüşüm kutusuna atmalıyız?",
                 "options": [
-                  "Mavi - Kâğıt Kutusu",
                   "Yeşil - Cam Kutusu",
+                  "Gri - Metal Kutusu",
                   "Sarı - Plastik Kutusu",
-                  "Gri - Metal Kutusu"
+                  "Mavi - Kâğıt Kutusu"
                 ],
-                "ans": 0,
+                "ans": 3,
                 "hint": "Kâğıt ve karton atıklar kâğıt geri dönüşüm kutusuna atılır."
               },
               {
@@ -2675,7 +2675,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Atıkların Ayrıştırılması & Geri Dönüşüm konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Kullanılmış defter ve karton kutuları hangi geri dönüşüm kutusuna atmalıyız?",
+                  "question": "Kullanılmış defter ve karton kutuları hangi geri dönüşüm kutusuna atmalıyız?",
                   "answer": "Doğru Cevap: Mavi - Kâğıt Kutusu (Kâğıt ve karton atıklar kâğıt geri dönüşüm kutusuna atılır.)"
                 }
               }
@@ -2689,31 +2689,31 @@ window.CURRICULUM_TERM1 = {
             {
               "q": "Bulunduğu kabın şeklini alan ve akışkan olan maddelere ne denir?",
               "options": [
+                "Taş",
                 "Sıvı",
-                "Katı",
                 "Buz",
-                "Taş"
+                "Katı"
               ],
-              "ans": 0,
+              "ans": 1,
               "hint": "Su, süt, yağ sıvıdır ve kabın şeklini alır."
             },
             {
               "q": "Tuzlu sudan tuzu ayırmak için hangi yöntem kullanılır?",
               "options": [
-                "Buharlaştırma",
-                "Süzme",
                 "Eleme",
-                "Mıknatısla ayırma"
+                "Mıknatısla ayırma",
+                "Buharlaştırma",
+                "Süzme"
               ],
-              "ans": 0,
+              "ans": 2,
               "hint": "Su buharlaştırıldığında tuz kabın dibinde kristal halde kalır."
             },
             {
               "q": "Plastik ve metal kutuların çöp yerine geri dönüşüm kutusuna atılmasının en büyük yararı nedir?",
               "options": [
                 "Doğal kaynakları korur ve çevre kirliliğini önler",
-                "Daha çok çöp oluşturur",
                 "Zaman kaybettirir",
+                "Daha çok çöp oluşturur",
                 "Maliyeti artırır"
               ],
               "ans": 0,
@@ -2730,82 +2730,82 @@ window.CURRICULUM_TERM1 = {
         {
           "q": "Ufuktan yaklaşan bir geminin önce bacası, sonra gövdesi görünür. Bu durum neyi kanıtlar?",
           "options": [
-            "Dünya'nın küreye benzediğini",
             "Dünya'nın düz olduğunu",
-            "Geminin çok hızlı gittiğini",
-            "Denizlerin çok derin olduğunu"
-          ],
-          "ans": 0
-        },
-        {
-          "q": "Canlıların üzerinde yaşadığı, dağların ve ovaların bulunduğu katman hangisidir?",
-          "options": [
-            "Su Katmanı",
-            "Hava Katmanı",
-            "Yer Kabuğu (Kara Katmanı)",
-            "Çekirdek"
+            "Denizlerin çok derin olduğunu",
+            "Dünya'nın küreye benzediğini",
+            "Geminin çok hızlı gittiğini"
           ],
           "ans": 2
         },
         {
+          "q": "Canlıların üzerinde yaşadığı, dağların ve ovaların bulunduğu katman hangisidir?",
+          "options": [
+            "Yer Kabuğu (Kara Katmanı)",
+            "Hava Katmanı",
+            "Çekirdek",
+            "Su Katmanı"
+          ],
+          "ans": 0
+        },
+        {
           "q": "Koku alma duyusu ile hangi duyu organımız birlikte uyum içinde çalışır?",
           "options": [
-            "Göz",
-            "Dil (Tat alma)",
             "Kulak",
-            "Deri"
+            "Göz",
+            "Deri",
+            "Dil (Tat alma)"
           ],
-          "ans": 1
+          "ans": 3
         },
         {
           "q": "Güneşe doğrudan çıplak gözle bakmak hangi duyu organımıza zarar verir?",
           "options": [
             "Kulak",
-            "Deri",
             "Göz",
+            "Deri",
             "Burun"
           ],
-          "ans": 2
+          "ans": 1
         },
         {
           "q": "Yokuş aşağı hızla inen bir topun önüne ayak koyarak durdurmak hangi kuvvet etkisidir?",
           "options": [
-            "Hızlandırma",
             "Yavaşlatma ve Durdurma",
             "Sallanma",
+            "Hızlandırma",
             "Dönme"
           ],
-          "ans": 1
+          "ans": 0
         },
         {
           "q": "Kuvvet uygulandığında şekil değiştiren, kuvvet ortadan kalktığında ESKİ HALİNE DÖNEN madde hangisidir?",
           "options": [
-            "Oyun hamuru",
-            "Paket lastiği (Esnek)",
             "Cam bardak",
-            "Tahta blok"
+            "Tahta blok",
+            "Paket lastiği (Esnek)",
+            "Oyun hamuru"
           ],
-          "ans": 1
+          "ans": 2
         },
         {
           "q": "Evdeki deterjan, çamaşır suyu gibi kimyasallarla ilgili hangisi DOĞRUDUR?",
           "options": [
             "Koklayarak ne olduğunu anlamalıyız",
-            "Tadına bakmalıyız",
             "Kesinlikle koklamamalı ve dokunmamalıyız",
+            "Tadına bakmalıyız",
             "Gözümüze damlatmalıyız"
           ],
-          "ans": 2
+          "ans": 1
         },
         {
           "q": "Aşağıdakilerden hangisi pürüzsüz bir maddedir?",
           "options": [
-            "Ağaç kabuğu",
             "Zımpara kağıdı",
-            "Ayna yüzeyi",
-            "Ceviz kabuğu"
+            "Ağaç kabuğu",
+            "Ceviz kabuğu",
+            "Ayna yüzeyi"
           ],
-          "ans": 2
+          "ans": 3
         }
       ]
     }
@@ -2834,23 +2834,23 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Bir arkadaşımızın resmi çok güzel yapması onun hangi yönünü gösterir?",
                 "options": [
-                  "Güçlü olduğu bir yeteneğini",
-                  "Kötü bir yönünü",
                   "Tembelliğini",
-                  "Bencil olduğunu"
+                  "Güçlü olduğu bir yeteneğini",
+                  "Bencil olduğunu",
+                  "Kötü bir yönünü"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Her bireyin farklı ilgi ve yetenek alanları güçlü yönleridir."
               },
               {
                 "q": "Geliştirmek istediğimiz bir alanda (örneğin satrançta) başarılı olmak için ne yapmalıyız?",
                 "options": [
                   "Hemen vazgeçmeliyiz",
+                  "Hiç oynamamalıyız",
                   "Düzenli pratik yapmalı ve pes etmemeliyiz",
-                  "Arkadaşımızı kıskanmalıyız",
-                  "Hiç oynamamalıyız"
+                  "Arkadaşımızı kıskanmalıyız"
                 ],
-                "ans": 1,
+                "ans": 2,
                 "hint": "Çalışmak ve pes etmemek bizi geliştirir."
               }
             ],
@@ -2895,23 +2895,23 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Aşağıdakilerden hangisi okuldaki SORUMLULUKLARIMIZDAN biridir?",
                 "options": [
-                  "Ders sırasında arkadaşımızla yüksek sesle konuşmak",
                   "Okul kaynaklarını ve sıraları temiz kullanmak",
+                  "Ders sırasında arkadaşımızla yüksek sesle konuşmak",
                   "Koridorda koşarak çarpmak",
                   "Çöpleri sıranın altına atmak"
                 ],
-                "ans": 1,
+                "ans": 0,
                 "hint": "Sıraları ve sınıfı korumak ortak sorumluluğumuzdur."
               },
               {
                 "q": "Derste söz alarak konuşmak neyin göstergesidir?",
                 "options": [
+                  "Kuralları çiğnemenin",
                   "Sınıf kurallarına ve arkadaşlarına saygının",
-                  "Korkaklığın",
                   "Zaman kaybetmenin",
-                  "Kuralları çiğnemenin"
+                  "Korkaklığın"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Parmak kaldırıp söz hakkı almak temel nezaket ve kuraldır."
               }
             ],
@@ -2952,7 +2952,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Hakkım da Var Sorumluluğum da konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Aşağıdakilerden hangisi okuldaki SORUMLULUKLARIMIZDAN biridir?",
+                  "question": "Aşağıdakilerden hangisi okuldaki SORUMLULUKLARIMIZDAN biridir?",
                   "answer": "Doğru Cevap: Okul kaynaklarını ve sıraları temiz kullanmak (Sıraları ve sınıfı korumak ortak sorumluluğumuzdur.)"
                 }
               }
@@ -2969,23 +2969,23 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Tüm dünyadaki çocukların okula gidip bilgi öğrenmesi hangi hakla güvenceye alınmıştır?",
                 "options": [
-                  "Eğitim Hakkı",
+                  "Yolculuk Hakkı",
                   "Çalışma Hakkı",
                   "Alışveriş Hakkı",
-                  "Yolculuk Hakkı"
+                  "Eğitim Hakkı"
                 ],
-                "ans": 0,
+                "ans": 3,
                 "hint": "Her çocuğun eğitim alma hakkı vardır."
               },
               {
                 "q": "Oyun oynamak ve dinlenmek çocuklar için nedir?",
                 "options": [
-                  "Bir suçtur",
                   "Temel bir çocuk hakkıdır",
-                  "Yasaklanmalıdır",
-                  "Sadece tatillerde yapılır"
+                  "Bir suçtur",
+                  "Sadece tatillerde yapılır",
+                  "Yasaklanmalıdır"
                 ],
-                "ans": 1,
+                "ans": 0,
                 "hint": "Oyun oynamak Çocuk Hakları Sözleşmesi ile korunan bir haktır."
               }
             ],
@@ -3026,7 +3026,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Çocuğum, Haklarımla Varım konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Tüm dünyadaki çocukların okula gidip bilgi öğrenmesi hangi hakla güvenceye alınmıştır?",
+                  "question": "Tüm dünyadaki çocukların okula gidip bilgi öğrenmesi hangi hakla güvenceye alınmıştır?",
                   "answer": "Doğru Cevap: Eğitim Hakkı (Her çocuğun eğitim alma hakkı vardır.)"
                 }
               }
@@ -3040,23 +3040,23 @@ window.CURRICULUM_TERM1 = {
             {
               "q": "Sınıf içi kararlar alınırken her öğrencinin görüşünü belirtmesi hangi hak ile ilgilidir?",
               "options": [
+                "Yolculuk hakkı",
                 "Düşüncesini özgürce ifade etme hakkı",
-                "Beslenme hakkı",
                 "Sağlık hakkı",
-                "Yolculuk hakkı"
+                "Beslenme hakkı"
               ],
-              "ans": 0,
+              "ans": 1,
               "hint": "Her çocuğun düşüncelerini ifade etme hakkı vardır."
             },
             {
               "q": "Okulun kütüphanesini ve laboratuvarını kullanırken hangisine dikkat etmeliyiz?",
               "options": [
-                "Ortak kaynakları özenle korumaya ve temiz bırakmaya",
-                "Kitapları eve götürüp getirmemeye",
                 "Yüksek sesle bağırmaya",
-                "Eşyaları kırmaya"
+                "Eşyaları kırmaya",
+                "Ortak kaynakları özenle korumaya ve temiz bırakmaya",
+                "Kitapları eve götürüp getirmemeye"
               ],
-              "ans": 0,
+              "ans": 2,
               "hint": "Ortak kullanım alanları özenli kullanılmalıdır."
             }
           ]
@@ -3078,10 +3078,10 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Vücudumuzun sağlıklı büyümesi için her besin grubundan yeteri kadar tüketmeye ne denir?",
                 "options": [
-                  "Dengesiz beslenme",
-                  "Dengeli ve düzenli beslenme",
                   "Sürekli abur cubur yeme",
-                  "Tek yönlü beslenme"
+                  "Dengeli ve düzenli beslenme",
+                  "Tek yönlü beslenme",
+                  "Dengesiz beslenme"
                 ],
                 "ans": 1,
                 "hint": "Protein, karbonhidrat, vitamin dengeli alınmalıdır."
@@ -3089,12 +3089,12 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Kış mevsiminde sağlığımızı korumak için hangi meyveleri tüketmek C vitamini sağlar?",
                 "options": [
+                  "Kiraz, vişne",
                   "Karpuz, kavun",
                   "Portakal, mandalina",
-                  "Kiraz, vişne",
                   "İncir, üzüm"
                 ],
-                "ans": 1,
+                "ans": 2,
                 "hint": "Narenciye meyveleri kışın bağışıklığımızı güçlendirir."
               }
             ],
@@ -3135,7 +3135,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Sağlığımı Koruyorum konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Vücudumuzun sağlıklı büyümesi için her besin grubundan yeteri kadar tüketmeye ne denir?",
+                  "question": "Vücudumuzun sağlıklı büyümesi için her besin grubundan yeteri kadar tüketmeye ne denir?",
                   "answer": "Doğru Cevap: Dengeli ve düzenli beslenme (Protein, karbonhidrat, vitamin dengeli alınmalıdır.)"
                 }
               }
@@ -3153,8 +3153,8 @@ window.CURRICULUM_TERM1 = {
                 "q": "Türkiye'de polis, ambulans, itfaiye gibi tüm acil durumlar için aranan tek numara hangisidir?",
                 "options": [
                   "112",
-                  "155",
                   "110",
+                  "155",
                   "156"
                 ],
                 "ans": 0,
@@ -3163,9 +3163,9 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Sokakta tanımadığımız bir kişi bize şeker verip kendisiyle gelmemizi isterse ne yapmalıyız?",
                 "options": [
-                  "Hemen onunla gitmeliyiz",
-                  "Teklifi kesinlikle reddedip güvenli bir büyüğün yanına gitmeliyiz",
                   "Şekeri alıp beklemeliyiz",
+                  "Teklifi kesinlikle reddedip güvenli bir büyüğün yanına gitmeliyiz",
+                  "Hemen onunla gitmeliyiz",
                   "Arkadaşımızı çağırmalıyız"
                 ],
                 "ans": 1,
@@ -3209,7 +3209,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Güvenliğimizi Tehdit Eden Durumlar konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Türkiye'de polis, ambulans, itfaiye gibi tüm acil durumlar için aranan tek numara hangisidir?",
+                  "question": "Türkiye'de polis, ambulans, itfaiye gibi tüm acil durumlar için aranan tek numara hangisidir?",
                   "answer": "Doğru Cevap: 112 (Tüm acil yardım hatları 112 Tek Acil Çağrı Merkezinde birleştirilmiştir.)"
                 }
               }
@@ -3226,23 +3226,23 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Karşıdan karşıya geçerken hangisini KULLANMALIYIZ?",
                 "options": [
-                  "Araba yolunun ortasını",
-                  "Yaya geçidini veya üst geçidi",
                   "Kavşağın tam ortasını",
-                  "Araçların arasından koşarak"
+                  "Araba yolunun ortasını",
+                  "Araçların arasından koşarak",
+                  "Yaya geçidini veya üst geçidi"
                 ],
-                "ans": 1,
+                "ans": 3,
                 "hint": "Yaya geçitleri yayaların güvenle karşıya geçmesini sağlar."
               },
               {
                 "q": "Araç içinde seyahat ederken can güvenliğimiz için mutlaka ne takmalıyız?",
                 "options": [
-                  "Kulaklık",
                   "Emniyet kemeri",
-                  "Gözlük",
-                  "Şapka"
+                  "Kulaklık",
+                  "Şapka",
+                  "Gözlük"
                 ],
-                "ans": 1,
+                "ans": 0,
                 "hint": "Emniyet kemeri olası kazalarda hayat kurtarır."
               }
             ],
@@ -3283,7 +3283,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Trafik Kurallarının Önemi konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Karşıdan karşıya geçerken hangisini KULLANMALIYIZ?",
+                  "question": "Karşıdan karşıya geçerken hangisini KULLANMALIYIZ?",
                   "answer": "Doğru Cevap: Yaya geçidini veya üst geçidi (Yaya geçitleri yayaların güvenle karşıya geçmesini sağlar.)"
                 }
               }
@@ -3297,23 +3297,23 @@ window.CURRICULUM_TERM1 = {
             {
               "q": "Acil bir durumda (yangın, kaza, sağlık) tek bir numarayı arayarak yardım çağırabiliriz. Bu numara kaçtır?",
               "options": [
-                "112",
                 "155",
-                "110",
-                "186"
+                "112",
+                "186",
+                "110"
               ],
-              "ans": 0,
+              "ans": 1,
               "hint": "Tüm acil çağrılar 112 numaralı merkezde toplanmıştır."
             },
             {
               "q": "Okul servis aracına bindiğimizde ilk yapmamız gereken güvenlik kuralı hangisidir?",
               "options": [
-                "Emniyet kemerini takmak",
+                "Şoförle bağırmak",
                 "Pencereden dışarı sarkmak",
-                "Ayağa kalkıp oynamak",
-                "Şoförle bağırmak"
+                "Emniyet kemerini takmak",
+                "Ayağa kalkıp oynamak"
               ],
-              "ans": 0,
+              "ans": 2,
               "hint": "Emniyet kemeri takmak hayati bir güvenlik kuralıdır."
             }
           ]
@@ -3335,23 +3335,23 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Annemizin ve babamızın annesine ne ad veririz?",
                 "options": [
+                  "Yenge",
                   "Büyükanne / Nine",
-                  "Teyze",
                   "Hala",
-                  "Yenge"
+                  "Teyze"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Büyükanne veya nine denir."
               },
               {
                 "q": "Komşularımızla iyi ilişkiler kurmak toplum hayatına nasıl katkı sağlar?",
                 "options": [
-                  "Huzur ve dayanışmayı artırır",
-                  "Sorun çıkarır",
                   "Gereksizdir",
-                  "Kavga ettirir"
+                  "Kavga ettirir",
+                  "Huzur ve dayanışmayı artırır",
+                  "Sorun çıkarır"
                 ],
-                "ans": 0,
+                "ans": 2,
                 "hint": "Ev alma komşu al atasözü komşuluğun değerini anlatır."
               }
             ],
@@ -3392,7 +3392,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Aile ve Toplum konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Annemizin ve babamızın annesine ne ad veririz?",
+                  "question": "Annemizin ve babamızın annesine ne ad veririz?",
                   "answer": "Doğru Cevap: Büyükanne / Nine (Büyükanne veya nine denir.)"
                 }
               }
@@ -3410,9 +3410,9 @@ window.CURRICULUM_TERM1 = {
                 "q": "Bir işin köylüler veya komşular tarafından el birliğiyle gönüllü olarak yapılmasına ne ad verilir?",
                 "options": [
                   "İmece",
-                  "Yarışma",
+                  "Ticaret",
                   "Münazara",
-                  "Ticaret"
+                  "Yarışma"
                 ],
                 "ans": 0,
                 "hint": "El birliğiyle yardımlaşarak iş yapmaya imece denir."
@@ -3420,12 +3420,12 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "İhtiyaç sahibi insanlara yardım etmek hangi duygunun sonucudur?",
                 "options": [
-                  "Empati ve sevgi",
-                  "Kıskançlık",
                   "Kibir",
-                  "Öfke"
+                  "Empati ve sevgi",
+                  "Öfke",
+                  "Kıskançlık"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Paylaşmak ve yardımlaşmak toplumu bir arada tutar."
               }
             ],
@@ -3466,7 +3466,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Yardımlaşma konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Bir işin köylüler veya komşular tarafından el birliğiyle gönüllü olarak yapılmasına ne ad verilir?",
+                  "question": "Bir işin köylüler veya komşular tarafından el birliğiyle gönüllü olarak yapılmasına ne ad verilir?",
                   "answer": "Doğru Cevap: İmece (El birliğiyle yardımlaşarak iş yapmaya imece denir.)"
                 }
               }
@@ -3483,12 +3483,12 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Hastaları muayene eden, teşhis koyup tedavi eden meslek sahibi kimdir?",
                 "options": [
-                  "Doktor / Hekim",
                   "Mimar",
+                  "Kaptan",
                   "Aşçı",
-                  "Kaptan"
+                  "Doktor / Hekim"
                 ],
-                "ans": 0,
+                "ans": 3,
                 "hint": "Doktorlar sağlık hizmeti verir ve stetoskop kullanır."
               },
               {
@@ -3496,8 +3496,8 @@ window.CURRICULUM_TERM1 = {
                 "options": [
                   "Mimar",
                   "Şoför",
-                  "Fırıncı",
-                  "Terzi"
+                  "Terzi",
+                  "Fırıncı"
                 ],
                 "ans": 0,
                 "hint": "Mimarlar yapıları tasarlar ve projelerini çizer."
@@ -3540,7 +3540,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Meslekler konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Hastaları muayene eden, teşhis koyup tedavi eden meslek sahibi kimdir?",
+                  "question": "Hastaları muayene eden, teşhis koyup tedavi eden meslek sahibi kimdir?",
                   "answer": "Doğru Cevap: Doktor / Hekim (Doktorlar sağlık hizmeti verir ve stetoskop kullanır.)"
                 }
               }
@@ -3554,23 +3554,23 @@ window.CURRICULUM_TERM1 = {
             {
               "q": "Toplumda insanların birbirine yardım ederek zor işleri kolayca bitirmesine ne denir?",
               "options": [
+                "Bencillik",
                 "Dayanışma ve İmece",
                 "Rekabet",
-                "Kavga",
-                "Bencillik"
+                "Kavga"
               ],
-              "ans": 0,
+              "ans": 1,
               "hint": "Birlikten kuvvet doğar, dayanışma toplumu güçlendirir."
             },
             {
               "q": "Evlerimizin güvenliğini sağlayan ve asayişi koruyan meslek hangisidir?",
               "options": [
-                "Polis / Güvenlik Görevlisi",
-                "Aşçı",
                 "Berber",
+                "Aşçı",
+                "Polis / Güvenlik Görevlisi",
                 "Fırıncı"
               ],
-              "ans": 0,
+              "ans": 2,
               "hint": "Polis ve güvenlik güçleri güvenliğimizi sağlar."
             }
           ]
@@ -3584,62 +3584,62 @@ window.CURRICULUM_TERM1 = {
         {
           "q": "Bir yerin kuş bakışı görünüşünün ölçüsüz ve kabataslak kağıda çizilmesine ne denir?",
           "options": [
-            "Harita",
-            "Kroki",
+            "Plan",
             "Resim",
-            "Plan"
+            "Kroki",
+            "Harita"
           ],
-          "ans": 1
+          "ans": 2
         },
         {
           "q": "Sınıfta ders dinlerken söz almak isteyen bir öğrenci ne yapmalıdır?",
           "options": [
-            "Ayağa fırlamalıdır",
             "Parmak kaldırıp öğretmenden izin istemelidir",
             "Bağırarak konuşmalıdır",
+            "Ayağa fırlamalıdır",
             "Sıraya vurmalıdır"
-          ],
-          "ans": 1
-        },
-        {
-          "q": "Aşağıdakilerden hangisi bir İHTİYAÇTIR?",
-          "options": [
-            "Yeni bir video oyunu",
-            "Kışlık sıcak bir mont",
-            "Altıncı oyuncak araba",
-            "Pahalı bir çikolata"
-          ],
-          "ans": 1
-        },
-        {
-          "q": "Evimizde ve okulumuzda kaynakları tasarruflu kullanmak için hangisini yapmalıyız?",
-          "options": [
-            "Gereksiz yanan lambaları kapatmalıyız",
-            "Musluğu açık bırakmalıyız",
-            "Televizyonu sürekli açık tutmalıyız",
-            "Sayfaları boşa yırtmalıyız"
           ],
           "ans": 0
         },
         {
-          "q": "Sağlıklı büyümek ve gelişmek için hangisi DOĞRUDUR?",
+          "q": "Aşağıdakilerden hangisi bir İHTİYAÇTIR?",
           "options": [
-            "Sadece abur cuburla beslenmek",
-            "Mevsiminde taze sebze ve meyve tüketmek",
-            "Gece 02.00'de uyumak",
-            "Hiç su içmemek"
+            "Pahalı bir çikolata",
+            "Altıncı oyuncak araba",
+            "Yeni bir video oyunu",
+            "Kışlık sıcak bir mont"
+          ],
+          "ans": 3
+        },
+        {
+          "q": "Evimizde ve okulumuzda kaynakları tasarruflu kullanmak için hangisini yapmalıyız?",
+          "options": [
+            "Musluğu açık bırakmalıyız",
+            "Gereksiz yanan lambaları kapatmalıyız",
+            "Sayfaları boşa yırtmalıyız",
+            "Televizyonu sürekli açık tutmalıyız"
           ],
           "ans": 1
         },
         {
+          "q": "Sağlıklı büyümek ve gelişmek için hangisi DOĞRUDUR?",
+          "options": [
+            "Mevsiminde taze sebze ve meyve tüketmek",
+            "Gece 02.00'de uyumak",
+            "Hiç su içmemek",
+            "Sadece abur cuburla beslenmek"
+          ],
+          "ans": 0
+        },
+        {
           "q": "Arkadaşlarımızla oyun oynarken hangisi doğru bir davranıştır?",
           "options": [
+            "Sadece kendi istediğimiz oyunu oynamak",
             "Kaybedince küsüp oyunu bozmak",
             "Kurallara uymak ve kazananı tebrik etmek",
-            "Arkadaşımıza lakap takmak",
-            "Sadece kendi istediğimiz oyunu oynamak"
+            "Arkadaşımıza lakap takmak"
           ],
-          "ans": 1
+          "ans": 2
         }
       ]
     }
@@ -3668,23 +3668,23 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Who works in the school library and helps us find books?",
                 "options": [
-                  "A librarian",
-                  "A school nurse",
                   "A caretaker",
-                  "A driver"
+                  "A librarian",
+                  "A driver",
+                  "A school nurse"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Library -> Librarian (Kütüphaneci)"
               },
               {
                 "q": "'Who is this?' - 'This is my ............. (sınıf arkadaşım).'",
                 "options": [
-                  "classmate",
                   "doctor",
                   "pilot",
+                  "classmate",
                   "farmer"
                 ],
-                "ans": 0,
+                "ans": 2,
                 "hint": "Sınıf arkadaşı = Classmate"
               }
             ],
@@ -3733,12 +3733,12 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "'Where is Daphne?' - 'She is in the ........... playing the piano.'",
                 "options": [
+                  "office",
                   "music room",
                   "canteen",
-                  "garden",
-                  "office"
+                  "garden"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Piyano müzik odasındadır (music room)."
               }
             ],
@@ -3779,7 +3779,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Places at School konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Where do students play basketball and do physical exercises at school?",
+                  "question": "Where do students play basketball and do physical exercises at school?",
                   "answer": "Doğru Cevap: In the gym (Spor salonu = Gym)"
                 }
               }
@@ -3796,21 +3796,21 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Which month comes after October?",
                 "options": [
-                  "November",
+                  "August",
                   "September",
                   "December",
-                  "August"
+                  "November"
                 ],
-                "ans": 0,
+                "ans": 3,
                 "hint": "October (Ekim) -> November (Kasım)"
               },
               {
                 "q": "'How old are you?' sorusuna hangi cevap verilir?",
                 "options": [
                   "I am 8 years old.",
-                  "It is in July.",
                   "Yes, I am.",
-                  "Fine, thanks."
+                  "Fine, thanks.",
+                  "It is in July."
                 ],
                 "ans": 0,
                 "hint": "How old are you? = Kaç yaşındasın?"
@@ -3853,7 +3853,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Months & Birthday Celebrations konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Which month comes after October?",
+                  "question": "Which month comes after October?",
                   "answer": "Doğru Cevap: November (October (Ekim) -> November (Kasım))"
                 }
               }
@@ -3870,23 +3870,23 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "You ........... run in the corridor at school! (Koridorda koşmamalısın!)",
                 "options": [
-                  "mustn't",
                   "must",
                   "can",
+                  "mustn't",
                   "are"
                 ],
-                "ans": 0,
+                "ans": 2,
                 "hint": "Yasak ve yapılmaması gerekenler için mustn't kullanılır."
               },
               {
                 "q": "You ........... listen to your teacher carefully in the lesson.",
                 "options": [
-                  "must",
-                  "mustn't",
                   "aren't",
-                  "don't"
+                  "mustn't",
+                  "don't",
+                  "must"
                 ],
-                "ans": 0,
+                "ans": 3,
                 "hint": "Zorunluluk ve yapılması gerekenler için must kullanılır."
               }
             ],
@@ -3927,7 +3927,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! School Rules & Must / Mustn't konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: You ........... run in the corridor at school! (Koridorda koşmamalısın!)",
+                  "question": "You ........... run in the corridor at school! (Koridorda koşmamalısın!)",
                   "answer": "Doğru Cevap: mustn't (Yasak ve yapılmaması gerekenler için mustn't kullanılır.)"
                 }
               }
@@ -3941,31 +3941,31 @@ window.CURRICULUM_TERM1 = {
             {
               "q": "Where do students do science experiments?",
               "options": [
-                "In the science lab",
-                "In the canteen",
                 "In the corridor",
-                "In the garden"
+                "In the science lab",
+                "In the garden",
+                "In the canteen"
               ],
-              "ans": 0,
+              "ans": 1,
               "hint": "Experiments are done in the science lab (laboratuvar)."
             },
             {
               "q": "Which month is between June and August?",
               "options": [
-                "July",
                 "May",
                 "September",
+                "July",
                 "October"
               ],
-              "ans": 0,
+              "ans": 2,
               "hint": "June, July, August (Haziran, Temmuz, Ağustos)."
             },
             {
               "q": "You ............ shout or run in the library!",
               "options": [
                 "mustn't",
-                "must",
                 "can",
+                "must",
                 "are"
               ],
               "ans": 0,
@@ -3990,23 +3990,23 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "What is this? (Çizim yaparken düz çizgi çekmek için kullanılan cetvel)",
                 "options": [
-                  "A ruler",
                   "A duster",
+                  "A ruler",
                   "A chair",
                   "A schoolbag"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Cetvel = Ruler"
               },
               {
                 "q": "'What are they?' - 'They are ............. (kitaplıklar).'",
                 "options": [
-                  "bookshelves",
                   "rulers",
-                  "pencils",
-                  "erasers"
+                  "erasers",
+                  "bookshelves",
+                  "pencils"
                 ],
-                "ans": 0,
+                "ans": 2,
                 "hint": "Bookshelf -> Bookshelves (Kitaplıklar)"
               }
             ],
@@ -4047,7 +4047,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Classroom Objects & Furniture konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: What is this? (Çizim yaparken düz çizgi çekmek için kullanılan cetvel)",
+                  "question": "What is this? (Çizim yaparken düz çizgi çekmek için kullanılan cetvel)",
                   "answer": "Doğru Cevap: A ruler (Cetvel = Ruler)"
                 }
               }
@@ -4065,9 +4065,9 @@ window.CURRICULUM_TERM1 = {
                 "q": "Saat tam 5:00 iken nasıl söylenir?",
                 "options": [
                   "It is five o'clock.",
-                  "It is four o'clock.",
                   "It is half past five.",
-                  "It is five past."
+                  "It is five past.",
+                  "It is four o'clock."
                 ],
                 "ans": 0,
                 "hint": "Tam saatlerde 'o'clock' kullanılır: It is five o'clock."
@@ -4075,12 +4075,12 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "'What time is it?' sorusu ne anlama gelir?",
                 "options": [
-                  "Saat kaç?",
                   "Bugün günlerden ne?",
-                  "Hava nasıl?",
-                  "Kaç yaşındasın?"
+                  "Saat kaç?",
+                  "Kaç yaşındasın?",
+                  "Hava nasıl?"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "What time is it? = Saat kaç?"
               }
             ],
@@ -4121,7 +4121,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Telling the Time konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Saat tam 5:00 iken nasıl söylenir?",
+                  "question": "Saat tam 5:00 iken nasıl söylenir?",
                   "answer": "Doğru Cevap: It is five o'clock. (Tam saatlerde 'o'clock' kullanılır: It is five o'clock.)"
                 }
               }
@@ -4138,21 +4138,21 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "30 sayısının İngilizce yazılışı hangisidir?",
                 "options": [
-                  "Thirty",
-                  "Thirteen",
+                  "Forty",
                   "Twenty",
-                  "Forty"
+                  "Thirteen",
+                  "Thirty"
                 ],
-                "ans": 0,
+                "ans": 3,
                 "hint": "30 = Thirty, 13 = Thirteen"
               },
               {
                 "q": "'How many books have you got?' - 'I have got ........... (40) books.'",
                 "options": [
                   "forty",
-                  "fourteen",
+                  "fifty",
                   "four",
-                  "fifty"
+                  "fourteen"
                 ],
                 "ans": 0,
                 "hint": "40 = Forty"
@@ -4195,7 +4195,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Numbers 20-50 & Have got / Has got konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: 30 sayısının İngilizce yazılışı hangisidir?",
+                  "question": "30 sayısının İngilizce yazılışı hangisidir?",
                   "answer": "Doğru Cevap: Thirty (30 = Thirty, 13 = Thirteen)"
                 }
               }
@@ -4212,23 +4212,23 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "'How is the weather today?' - 'It is ............ (güneşli).'",
                 "options": [
-                  "sunny",
-                  "rainy",
                   "cloudy",
+                  "rainy",
+                  "sunny",
                   "snowy"
                 ],
-                "ans": 0,
+                "ans": 2,
                 "hint": "Güneşli = Sunny"
               },
               {
                 "q": "Sayıları, toplamayı ve çarpmayı öğrendiğimiz dersin İngilizcesi nedir?",
                 "options": [
-                  "Maths",
-                  "Music",
+                  "English",
                   "Art",
-                  "English"
+                  "Music",
+                  "Maths"
                 ],
-                "ans": 0,
+                "ans": 3,
                 "hint": "Matematik dersi = Maths"
               }
             ],
@@ -4269,7 +4269,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Weather & School Subjects konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: 'How is the weather today?' - 'It is ............ (güneşli).'",
+                  "question": "'How is the weather today?' - 'It is ............ (güneşli).'",
                   "answer": "Doğru Cevap: sunny (Güneşli = Sunny)"
                 }
               }
@@ -4283,23 +4283,23 @@ window.CURRICULUM_TERM1 = {
             {
               "q": "What time is it? (10:00)",
               "options": [
+                "It is half past ten.",
                 "It is ten o'clock.",
                 "It is nine o'clock.",
-                "It is half past ten.",
                 "It is ten past."
               ],
-              "ans": 0,
+              "ans": 1,
               "hint": "Saat 10:00 -> It is ten o'clock."
             },
             {
               "q": "We learn songs and play instruments in ............ lesson.",
               "options": [
-                "Music",
                 "Maths",
-                "Science",
-                "PE"
+                "PE",
+                "Music",
+                "Science"
               ],
-              "ans": 0,
+              "ans": 2,
               "hint": "Müzik dersi -> Music lesson."
             }
           ]
@@ -4321,23 +4321,23 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "'Foot' (ayak) kelimesinin çoğul hali hangisidir?",
                 "options": [
-                  "feet",
                   "foots",
-                  "feets",
-                  "footies"
+                  "feet",
+                  "footies",
+                  "feets"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Foot düzensiz çoğuldur ve feet olur."
               },
               {
                 "q": "'She has got curly blonde hair.' cümlesinin Türkçe anlamı nedir?",
                 "options": [
-                  "Onun kıvırcık sarı saçları var.",
                   "Onun düz siyah saçları var.",
                   "O uzun boyludur.",
+                  "Onun kıvırcık sarı saçları var.",
                   "Onun mavi gözleri var."
                 ],
-                "ans": 0,
+                "ans": 2,
                 "hint": "Curly = Kıvırcık, Blonde = Sarı saç"
               }
             ],
@@ -4378,7 +4378,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Parts of the Body & Appearance konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: 'Foot' (ayak) kelimesinin çoğul hali hangisidir?",
+                  "question": "'Foot' (ayak) kelimesinin çoğul hali hangisidir?",
                   "answer": "Doğru Cevap: feet (Foot düzensiz çoğuldur ve feet olur.)"
                 }
               }
@@ -4396,9 +4396,9 @@ window.CURRICULUM_TERM1 = {
                 "q": "Kışın soğuk havalarda dışarı çıkarken giydiğimiz palto/kabanın İngilizcesi nedir?",
                 "options": [
                   "A coat",
-                  "A T-shirt",
                   "A skirt",
-                  "Shorts"
+                  "Shorts",
+                  "A T-shirt"
                 ],
                 "ans": 0,
                 "hint": "Kaban/palto = Coat"
@@ -4406,12 +4406,12 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Güneşli günlerde gözlerimizi korumak için ne takarız?",
                 "options": [
+                  "Gloves",
                   "Sunglasses",
                   "Boots",
-                  "Gloves",
                   "Socks"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Güneş gözlüğü = Sunglasses"
               }
             ],
@@ -4452,7 +4452,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Clothes & Seasons konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Kışın soğuk havalarda dışarı çıkarken giydiğimiz palto/kabanın İngilizcesi nedir?",
+                  "question": "Kışın soğuk havalarda dışarı çıkarken giydiğimiz palto/kabanın İngilizcesi nedir?",
                   "answer": "Doğru Cevap: A coat (Kaban/palto = Coat)"
                 }
               }
@@ -4469,12 +4469,12 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Bir şeyi SEVMEDİĞİMİZİ belirtmek için hangisini kullanırız?",
                 "options": [
-                  "I dislike / hate",
-                  "I love",
+                  "I enjoy",
                   "I like",
-                  "I enjoy"
+                  "I love",
+                  "I dislike / hate"
                 ],
-                "ans": 0,
+                "ans": 3,
                 "hint": "Dislike veya hate sevmemek anlamına gelir."
               },
               {
@@ -4526,7 +4526,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Feelings & Preferences (Like / Dislike) konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Bir şeyi SEVMEDİĞİMİZİ belirtmek için hangisini kullanırız?",
+                  "question": "Bir şeyi SEVMEDİĞİMİZİ belirtmek için hangisini kullanırız?",
                   "answer": "Doğru Cevap: I dislike / hate (Dislike veya hate sevmemek anlamına gelir.)"
                 }
               }
@@ -4540,23 +4540,23 @@ window.CURRICULUM_TERM1 = {
             {
               "q": "What does she look like? (O nasıl görünüyor?)",
               "options": [
+                "It is rainy today.",
                 "She has got long curly hair and green eyes.",
                 "She is in the classroom.",
-                "It is rainy today.",
                 "I like apples."
               ],
-              "ans": 0,
+              "ans": 1,
               "hint": "Fiziksel görünüş tanımlanıyor: uzun kıvırcık saç ve yeşil gözler."
             },
             {
               "q": "It is cold and snowy today. You should wear your ............",
               "options": [
-                "coat and boots",
-                "sunglasses",
+                "T-shirt and shorts",
                 "swimsuit",
-                "T-shirt and shorts"
+                "coat and boots",
+                "sunglasses"
               ],
-              "ans": 0,
+              "ans": 2,
               "hint": "Soğuk ve karlı havada kaban ve bot (coat and boots) giyilir."
             }
           ]
@@ -4570,62 +4570,62 @@ window.CURRICULUM_TERM1 = {
         {
           "q": "Sabah okula geldiğinde öğretmenine nasıl selam verirsin?",
           "options": [
-            "Good night!",
-            "Good morning!",
             "Goodbye!",
-            "See you!"
-          ],
-          "ans": 1
-        },
-        {
-          "q": "'What is your name?' sorusuna nasıl cevap verilir?",
-          "options": [
-            "I am eight years old.",
-            "My name is Can.",
-            "I am fine.",
-            "Yes, I am."
-          ],
-          "ans": 1
-        },
-        {
-          "q": "'How are you?' sorusunun anlamı nedir?",
-          "options": [
-            "Kaç yaşındasın?",
-            "Adın ne?",
-            "Nasılsın?",
-            "Nerelisin?"
+            "See you!",
+            "Good morning!",
+            "Good night!"
           ],
           "ans": 2
         },
         {
+          "q": "'What is your name?' sorusuna nasıl cevap verilir?",
+          "options": [
+            "My name is Can.",
+            "I am eight years old.",
+            "Yes, I am.",
+            "I am fine."
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'How are you?' sorusunun anlamı nedir?",
+          "options": [
+            "Nerelisin?",
+            "Kaç yaşındasın?",
+            "Adın ne?",
+            "Nasılsın?"
+          ],
+          "ans": 3
+        },
+        {
           "q": "'Mother' kelimesinin Türkçe karşılığı nedir?",
           "options": [
-            "Baba",
+            "Büyükbaba",
             "Anne",
-            "Kız kardeş",
-            "Büyükbaba"
+            "Baba",
+            "Kız kardeş"
           ],
           "ans": 1
         },
         {
           "q": "Karnı acıkan bir çocuk kendini nasıl ifade eder?",
           "options": [
-            "I am happy.",
-            "I am tired.",
             "I am hungry.",
-            "I am cold."
+            "I am cold.",
+            "I am happy.",
+            "I am tired."
           ],
-          "ans": 2
+          "ans": 0
         },
         {
           "q": "'The elephant is big.' cümlesi ne anlama gelir?",
           "options": [
-            "Fil küçüktür.",
-            "Fil büyüktür.",
+            "Fil yavaştır.",
             "Fil hızlıdır.",
-            "Fil yavaştır."
+            "Fil büyüktür.",
+            "Fil küçüktür."
           ],
-          "ans": 1
+          "ans": 2
         }
       ]
     }
@@ -4653,34 +4653,34 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Bir konuşmacıyı ya da metni dinlerken hangi davranış doğru ve nezaketlidir?",
                 "options": [
+                  "Söz verilmeden yüksek sesle araya girmek",
                   "Konuşmacının sözünü kesmeden, dikkatle dinlemek",
                   "Dinlerken etraftaki başka şeylerle ilgilenmek",
-                  "Konuşmacıya bakmadan yere bakmak",
-                  "Söz verilmeden yüksek sesle araya girmek"
+                  "Konuşmacıya bakmadan yere bakmak"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "İyi bir dinleyici konuşmacıyı göz teması kurarak ve dikkatle dinler."
               },
               {
                 "q": "\"Kelebek ile Lavanta\" metninde vurgulanan temel değer hangisidir?",
                 "options": [
-                  "Dostluk ve karşılıklı yardımlaşma",
+                  "Her şeyi tek başına yapmak",
                   "Yalnız yaşamak",
-                  "Kibirli olmak",
-                  "Her şeyi tek başına yapmak"
+                  "Dostluk ve karşılıklı yardımlaşma",
+                  "Kibirli olmak"
                 ],
-                "ans": 0,
+                "ans": 2,
                 "hint": "Doğadaki canlılar birbirine destek olarak güzellikleri paylaşırlar."
               },
               {
                 "q": "Aşağıdaki sözcüklerden hangisi bir nezaket ifadesidir?",
                 "options": [
-                  "Rica ederim",
-                  "Çekil şuradan",
                   "Bana ne",
-                  "Sus artık"
+                  "Çekil şuradan",
+                  "Sus artık",
+                  "Rica ederim"
                 ],
-                "ans": 0,
+                "ans": 3,
                 "hint": "Teşekkür edildiğinde 'Rica ederim' demek güzel bir nezaket örneğidir."
               },
               {
@@ -4714,7 +4714,7 @@ window.CURRICULUM_TERM1 = {
                 "content": "Metni daha iyi anlamak için bilmediğimiz sözcüklerin TDK sözlük anlamlarını öğrenelim:",
                 "table_html": "\n        <div class=\"book-vocab-grid\">\n          <div class=\"vocab-card\">\n            <div class=\"vocab-header\">\n              <span class=\"vocab-badge\">SÖZCÜK</span>\n              <span class=\"vocab-word\">🌱 Kibir</span>\n            </div>\n            <div class=\"vocab-body\">\n              <div class=\"vocab-meaning\">📖 <strong>Anlamı:</strong> Kendini herkesten üstün görme, büyüklük taslama.</div>\n              <div class=\"vocab-sentence\">💬 <strong>Örnek Cümle:</strong> <em>\"Kibirli insanlar çevrelerindeki dostlarını kaybederler.\"</em></div>\n            </div>\n          </div>\n          <div class=\"vocab-card\">\n            <div class=\"vocab-header\">\n              <span class=\"vocab-badge\">SÖZCÜK</span>\n              <span class=\"vocab-word\">🌸 Nezaket</span>\n            </div>\n            <div class=\"vocab-body\">\n              <div class=\"vocab-meaning\">📖 <strong>Anlamı:</strong> Başkalarına karşı saygılı, ince ve terbiyeli davranma.</div>\n              <div class=\"vocab-sentence\">💬 <strong>Örnek Cümle:</strong> <em>\"Arkadaşına teşekkür etmek bir nezaket kuralıdır.\"</em></div>\n            </div>\n          </div>\n          <div class=\"vocab-card\">\n            <div class=\"vocab-header\">\n              <span class=\"vocab-badge\">SÖZCÜK</span>\n              <span class=\"vocab-word\">⭐ Erdem</span>\n            </div>\n            <div class=\"vocab-body\">\n              <div class=\"vocab-meaning\">📖 <strong>Anlamı:</strong> Ahlakın övdüğü iyi, dürüst ve doğru olma niteliği.</div>\n              <div class=\"vocab-sentence\">💬 <strong>Örnek Cümle:</strong> <em>\"Doğru sözlü olmak en büyük erdemlerden biridir.\"</em></div>\n            </div>\n          </div>\n        </div>\n  ",
                 "try_box": {
-                  "question": "Sen de Dene: Lavanta çiçeği kelebeği neden hemen kabul etmedi?",
+                  "question": "Lavanta çiçeği kelebeği neden hemen kabul etmedi?",
                   "answer": "Çünkü kelebek kendini herkesten üstün görüyor, kibirli ve kırıcı konuşuyordu. Hatasını anlayıp samimiyetle özür diledikten sonra onu şefkatle kabul etti."
                 }
               }
@@ -4741,34 +4741,34 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "\"Aziz Sancar tıp alanında büyük bir başarıya imza attı.\" cümlesinde özel isim hangisidir?",
                 "options": [
-                  "Aziz Sancar",
-                  "başarıya",
                   "büyük",
-                  "tıp"
+                  "Aziz Sancar",
+                  "tıp",
+                  "başarıya"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Kişi ad ve soyadları özel isimdir ve ilk harfleri büyük yazılır."
               },
               {
                 "q": "Bir insanın kendine ve çevresine karşı dürüst olması ne anlama gelir?",
                 "options": [
-                  "Her zaman doğruyu söylemek ve sözünde durmak",
+                  "Söz verip yerine getirmemek",
                   "Hata yaptığında başkalarını suçlamak",
-                  "Kendi çıkarı için gerçeği saklamak",
-                  "Söz verip yerine getirmemek"
+                  "Her zaman doğruyu söylemek ve sözünde durmak",
+                  "Kendi çıkarı için gerçeği saklamak"
                 ],
-                "ans": 0,
+                "ans": 2,
                 "hint": "Dürüstlük; doğru sözlü ve güvenilir birey olmanın temelidir."
               },
               {
                 "q": "\"çalışkan\" sözcüğünün zıt (karşıt) anlamlısı hangisidir?",
                 "options": [
-                  "tembel",
-                  "akıllı",
                   "başarılı",
-                  "gayretli"
+                  "gayretli",
+                  "akıllı",
+                  "tembel"
                 ],
-                "ans": 0,
+                "ans": 3,
                 "hint": "Çalışkanın zıttı tembeldir."
               }
             ],
@@ -4797,7 +4797,7 @@ window.CURRICULUM_TERM1 = {
                   "NASIL BAŞARDI? -> Gece gündüz demeden, sabırla ve pes etmeden laboratuvarda çalışarak."
                 ],
                 "try_box": {
-                  "question": "Sen de Dene: Aziz Sancar kazandığı Nobel Ödülü madalyasını nereye bağışlamıştır?",
+                  "question": "Aziz Sancar kazandığı Nobel Ödülü madalyasını nereye bağışlamıştır?",
                   "answer": "Ankara Anıtkabir Müzesi'ne bağışlamıştır; çünkü başarısını Atatürk'ün kurduğu Cumhuriyet'e borçlu olduğunu belirtmiştir."
                 }
               }
@@ -4813,20 +4813,20 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "\"Köyde İlk Sabah\" şiirinde çocuğun avucuna konan ve ona günaydın diyen canlı hangisidir?",
                 "options": [
-                  "Bir serçe kuşu",
-                  "Sevimli bir kedi",
+                  "Renkli bir kelebek",
                   "Küçük bir kuzu",
-                  "Renkli bir kelebek"
+                  "Sevimli bir kedi",
+                  "Bir serçe kuşu"
                 ],
-                "ans": 0,
+                "ans": 3,
                 "hint": "Şiirde rüyadaki serçe pencerede öterek çocuğa günaydın der."
               },
               {
                 "q": "Şiir okurken en çok nelere dikkat etmeliyiz?",
                 "options": [
                   "Vurgu, tonlama ve duyguyu yansıtmaya",
-                  "Çok hızlı okumaya",
                   "Fısıldayarak okumaya",
+                  "Çok hızlı okumaya",
                   "Nefes almadan bitirmeye"
                 ],
                 "ans": 0,
@@ -4835,23 +4835,23 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "\"Köyde ilk sabahım, hava mis gibi.\" dizesinde altı çizili 'mis' sözcüğü neyi ifade eder?",
                 "options": [
+                  "Karanlık olduğunu",
                   "Çok güzel ve temiz koktuğunu",
-                  "Havanın soğuk olduğunu",
                   "Rüzgarlı olduğunu",
-                  "Karanlık olduğunu"
+                  "Havanın soğuk olduğunu"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Mis gibi kokmak, tertemiz ve ferahlatıcı kokuyu anlatır."
               },
               {
                 "q": "\"Kuşlar ağaçlarda neşeyle ötüyor.\" cümlesinde iş (eylem) bildiren sözcük hangisidir?",
                 "options": [
-                  "ötüyor",
+                  "neşeyle",
                   "Kuşlar",
-                  "ağaçlarda",
-                  "neşeyle"
+                  "ötüyor",
+                  "ağaçlarda"
                 ],
-                "ans": 0,
+                "ans": 2,
                 "hint": "Cümlede yapılan hareketi 'ötüyor' sözcüğü belirtir."
               }
             ],
@@ -4884,7 +4884,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Köyde İlk Sabah konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: \"Köyde İlk Sabah\" şiirinde çocuğun avucuna konan ve ona günaydın diyen canlı hangisidir?",
+                  "question": "\"Köyde İlk Sabah\" şiirinde çocuğun avucuna konan ve ona günaydın diyen canlı hangisidir?",
                   "answer": "Doğru Cevap: Bir serçe kuşu (Şiirde rüyadaki serçe pencerede öterek çocuğa günaydın der.)"
                 }
               }
@@ -4900,32 +4900,32 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Kültürümüzde komşuluk ilişkilerine neden büyük önem verilir?",
                 "options": [
-                  "Zor ve sevinçli günlerde birbirimize destek olmak için",
+                  "Sadece bayramlarda hediye almak için",
                   "Komşuların işine karışmak için",
-                  "Yalnızlığı sevdiğimiz için",
-                  "Sadece bayramlarda hediye almak için"
+                  "Zor ve sevinçli günlerde birbirimize destek olmak için",
+                  "Yalnızlığı sevdiğimiz için"
                 ],
-                "ans": 0,
+                "ans": 2,
                 "hint": "Komşular günlük hayatımızda en yakın yardımcımızdır."
               },
               {
                 "q": "Aşağıdaki cümlelerin hangisinde yazım yanlışı yapılmıştır?",
                 "options": [
-                  "ali ve kemal parkta kaykay sürdüler.",
+                  "Yaşlılara her zaman yardım etmeliyiz.",
                   "Dün Nermin teyze bize kek getirdi.",
                   "Sabahları okula beraber gideriz.",
-                  "Yaşlılara her zaman yardım etmeliyiz."
+                  "ali ve kemal parkta kaykay sürdüler."
                 ],
-                "ans": 0,
+                "ans": 3,
                 "hint": "Cümle başı ve özel isimler (Ali ve Kemal) büyük harfle başlar."
               },
               {
                 "q": "Bir kimsenin kendini başkasının yerine koyarak onun duygularını anlamasına ne denir?",
                 "options": [
                   "Empati",
-                  "Kıskançlık",
                   "Öfke",
-                  "Bencillik"
+                  "Bencillik",
+                  "Kıskançlık"
                 ],
                 "ans": 0,
                 "hint": "Empati; karşımızdakini anlamanın ve yardım etmenin anahtarıdır."
@@ -4933,12 +4933,12 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "\"Komşumuz Hasan amca poşetleri taşımakta zorlanıyordu\" cümlesinin sonuna hangi noktalama işareti konmalıdır?",
                 "options": [
-                  "Nokta (.)",
                   "Soru işareti (?)",
+                  "Nokta (.)",
                   "Ünlem işareti (!)",
                   "Virgül (,)"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Tamamlanmış bir haber cümlesinin sonuna nokta konur."
               }
             ],
@@ -4971,7 +4971,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Nermin Teyze Nerede? konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Kültürümüzde komşuluk ilişkilerine neden büyük önem verilir?",
+                  "question": "Kültürümüzde komşuluk ilişkilerine neden büyük önem verilir?",
                   "answer": "Doğru Cevap: Zor ve sevinçli günlerde birbirimize destek olmak için (Komşular günlük hayatımızda en yakın yardımcımızdır.)"
                 }
               }
@@ -4987,43 +4987,43 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "\"Çam Ağacı\" metninde yaşlı çınar ağacı, genç çam ağacına hangi öğüdü vermiştir?",
                 "options": [
-                  "Sabırlı olmasını ve kendi güzelliğinin farkına varmasını",
-                  "Hemen ormandan kaçmasını",
                   "Diğer ağaçlarla kavga etmesini",
-                  "Kuşları kovmasını"
+                  "Sabırlı olmasını ve kendi güzelliğinin farkına varmasını",
+                  "Kuşları kovmasını",
+                  "Hemen ormandan kaçmasını"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Her varlığın kendine has bir değeri ve güzelliği vardır; sabırlı olmak gerekir."
               },
               {
                 "q": "\"yaşlı\" sözcüğünün eş anlamlısı aşağıdakilerden hangisidir?",
                 "options": [
-                  "ihtiyar",
+                  "güçlü",
                   "genç",
-                  "küçük",
-                  "güçlü"
+                  "ihtiyar",
+                  "küçük"
                 ],
-                "ans": 0,
+                "ans": 2,
                 "hint": "Yaşlı ile ihtiyar aynı anlama gelen eş anlamlı sözcüklerdir."
               },
               {
                 "q": "\"üzgün\" sözcüğünün zıt anlamlısı hangisidir?",
                 "options": [
-                  "mutlu",
-                  "kederli",
                   "yorgun",
-                  "kırgın"
+                  "kederli",
+                  "kırgın",
+                  "mutlu"
                 ],
-                "ans": 0,
+                "ans": 3,
                 "hint": "Üzgünün karşıtı sevinçli ya da mutludur."
               },
               {
                 "q": "\"Dere kenarında yaşlı bir çınar ağacı vardı.\" cümlesinde niteleme (özellik belirten) sözcük hangisidir?",
                 "options": [
                   "yaşlı",
+                  "ağacı",
                   "dere",
-                  "vardı",
-                  "ağacı"
+                  "vardı"
                 ],
                 "ans": 0,
                 "hint": "Çınarın durumunu ve özelliğini 'yaşlı' sözcüğü belirtmektedir."
@@ -5058,7 +5058,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Çam Ağacı konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: \"Çam Ağacı\" metninde yaşlı çınar ağacı, genç çam ağacına hangi öğüdü vermiştir?",
+                  "question": "\"Çam Ağacı\" metninde yaşlı çınar ağacı, genç çam ağacına hangi öğüdü vermiştir?",
                   "answer": "Doğru Cevap: Sabırlı olmasını ve kendi güzelliğinin farkına varmasını (Her varlığın kendine has bir değeri ve güzelliği vardır; sabırlı olmak gerekir.)"
                 }
               }
@@ -5072,32 +5072,32 @@ window.CURRICULUM_TERM1 = {
             {
               "q": "\"Kelebek ile Lavanta\" masalında kelebeğin hatasını anlayıp özür dilemesi hangi güzel davranışı gösterir?",
               "options": [
+                "Öfke ve sabırsızlık",
                 "Alçakgönüllülük ve dürüstlük",
                 "Kibir ve büyüklük taslama",
-                "Tembellik ve vurdumduymazlık",
-                "Öfke ve sabırsızlık"
+                "Tembellik ve vurdumduymazlık"
               ],
-              "ans": 0,
+              "ans": 1,
               "hint": "Hatasını kabul edip özür dilemek ve affedici olmak alçakgönüllülüktür."
             },
             {
               "q": "\"Aziz Sancar çocukluğundan beri bıkmadan usanmadan çalıştı.\" cümlesinde özel isim (özel ad) olan sözcük hangisidir?",
               "options": [
-                "Aziz Sancar",
                 "çocukluğundan",
-                "çalıştı",
-                "bıkmadan"
+                "bıkmadan",
+                "Aziz Sancar",
+                "çalıştı"
               ],
-              "ans": 0,
+              "ans": 2,
               "hint": "Kişi ad ve soyadları özel isimdir ve ilk harfleri daima büyük yazılır."
             },
             {
               "q": "Aşağıdaki sözcüklerden hangisi alfabetik sıralamada (sözlükte) DİĞERLERİNDEN DAHA ÖNCE gelir?",
               "options": [
                 "Balta",
-                "Kitap",
+                "Sevgi",
                 "Orman",
-                "Sevgi"
+                "Kitap"
               ],
               "ans": 0,
               "hint": "Alfabemizde 'B' harfi 'K', 'O' ve 'S' harflerinden daha önce yer alır."
@@ -5105,34 +5105,34 @@ window.CURRICULUM_TERM1 = {
             {
               "q": "\"Yaşasın, yarın kütüphaneye gideceğiz( )\" cümlesinin sonuna hangi noktalama işareti konmalıdır?",
               "options": [
-                "Ünlem işareti (!)",
-                "Nokta (.)",
+                "Virgül (,)",
                 "Soru işareti (?)",
-                "Virgül (,)"
+                "Nokta (.)",
+                "Ünlem işareti (!)"
               ],
-              "ans": 0,
+              "ans": 3,
               "hint": "Sevinç, coşku, heyecan bildiren ünlem cümlelerinin sonuna ünlem işareti (!) konur."
             },
             {
               "q": "\"Doğru sözlü olmak insana güven kazandırır.\" cümlesindeki \"doğru\" sözcüğünün ZIT (karşıt) anlamlısı hangisidir?",
               "options": [
-                "Yanlış",
-                "Dürüst",
                 "Güzel",
-                "Temiz"
+                "Temiz",
+                "Yanlış",
+                "Dürüst"
               ],
-              "ans": 0,
+              "ans": 2,
               "hint": "Doğru kelimesinin zıt anlamlısı yanlış (veya yalan) sözcüğüdür."
             },
             {
               "q": "\"Kibir\" sözcüğünün Türkçe sözlük anlamı aşağıdakilerden hangisidir?",
               "options": [
-                "Kendini herkesten üstün görme, büyüklük taslama",
+                "Çalışkan ve azimli olma",
                 "Herkese yardım etmeyi sevme, cömert olma",
                 "Çok neşeli, hareketli ve sevimli olma",
-                "Çalışkan ve azimli olma"
+                "Kendini herkesten üstün görme, büyüklük taslama"
               ],
-              "ans": 0,
+              "ans": 3,
               "hint": "Kibir; kendini başkalarından üstün görme ve büyüklük taslama durumudur."
             }
           ]
@@ -5153,34 +5153,34 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Ülkü, ayakkabılarını neden siyaha boyamak istemiştir?",
                 "options": [
-                  "Okuldaki diğer arkadaşlarıyla eşit olmak ve dikkat çekmemek için",
-                  "Kahverengiyi sevmediği için",
                   "Ayakkabısı kirlendiği için",
-                  "Boya yapmayı oyun sandığı için"
+                  "Okuldaki diğer arkadaşlarıyla eşit olmak ve dikkat çekmemek için",
+                  "Boya yapmayı oyun sandığı için",
+                  "Kahverengiyi sevmediği için"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Ülkü, diğer çocuklardan farklı görünmek istememiş ve tevazu göstermiştir."
               },
               {
                 "q": "Bu metinde Atatürk'ün ve ailesinin hangi erdemi ön plana çıkarılmıştır?",
                 "options": [
-                  "Alçakgönüllülük ve adalet duygusu",
                   "Gösteriş merakı",
-                  "Pahalı eşyalar sevmesi",
-                  "Arkadaş edinmemesi"
+                  "Arkadaş edinmemesi",
+                  "Alçakgönüllülük ve adalet duygusu",
+                  "Pahalı eşyalar sevmesi"
                 ],
-                "ans": 0,
+                "ans": 2,
                 "hint": "Atatürk ve ailesi her zaman mütevazı ve halkla iç içe olmuştur."
               },
               {
                 "q": "\"siyah\" sözcüğünün eş anlamlısı hangisidir?",
                 "options": [
-                  "kara",
                   "beyaz",
+                  "renkli",
                   "koyu",
-                  "renkli"
+                  "kara"
                 ],
-                "ans": 0,
+                "ans": 3,
                 "hint": "Siyah ile kara eş anlamlı sözcüklerdir."
               },
               {
@@ -5224,7 +5224,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Kahverengi Ayakkabıları Siyaha Boyayan Ülkü konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Ülkü, ayakkabılarını neden siyaha boyamak istemiştir?",
+                  "question": "Ülkü, ayakkabılarını neden siyaha boyamak istemiştir?",
                   "answer": "Doğru Cevap: Okuldaki diğer arkadaşlarıyla eşit olmak ve dikkat çekmemek için (Ülkü, diğer çocuklardan farklı görünmek istememiş ve tevazu göstermiştir.)"
                 }
               }
@@ -5242,8 +5242,8 @@ window.CURRICULUM_TERM1 = {
                 "options": [
                   "Kitap",
                   "Oyuncak",
-                  "Şeker",
-                  "Kıyafet"
+                  "Kıyafet",
+                  "Şeker"
                 ],
                 "ans": 0,
                 "hint": "Atatürk eline geçen paranın yarısıyla kitap alıp kendini geliştirirdi."
@@ -5251,34 +5251,34 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Atatürk kitap okurken önemli gördüğü yerleri nasıl incelerdi?",
                 "options": [
+                  "Hiç okumadan geçerek",
                   "Altını çizerek ve kenarına notlar alarak",
-                  "Hemen sayfayı yırtarak",
                   "Kitabı kapatarak",
-                  "Hiç okumadan geçerek"
+                  "Hemen sayfayı yırtarak"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Atatürk kitapların altını kırmızı ve mavi kalemlerle çizerek okurdu."
               },
               {
                 "q": "Atatürk hangi dergide matematik sorularına verdiği yanıtları yayımlatmıştır?",
                 "options": [
-                  "Çocuklara Rehber Dergisi",
                   "Bilim Çocuk",
-                  "Genç Matematik",
-                  "Tarih Rehberi"
+                  "Tarih Rehberi",
+                  "Çocuklara Rehber Dergisi",
+                  "Genç Matematik"
                 ],
-                "ans": 0,
+                "ans": 2,
                 "hint": "Haftalık Çocuklara Rehber Dergisi'nde matematik çözümleri çıkmıştır."
               },
               {
                 "q": "\"okumak\" sözcüğü aşağıdaki cümlelerin hangisinde mecaz (farklı) anlamda kullanılmıştır?",
                 "options": [
-                  "Gözlerinden ne kadar mutlu olduğunu okudum.",
                   "Kütüphaneden aldığım kitabı okudum.",
                   "Sabah gazetesini baştan sona okudu.",
-                  "Öğretmenimiz tahtadaki şiiri okudu."
+                  "Öğretmenimiz tahtadaki şiiri okudu.",
+                  "Gözlerinden ne kadar mutlu olduğunu okudum."
                 ],
-                "ans": 0,
+                "ans": 3,
                 "hint": "Gözlerinden okumak, hissetmek ve anlamak anlamında mecazdır."
               }
             ],
@@ -5311,7 +5311,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Atatürk Çok Kitap Okurmuş konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Metne göre Atatürk çocukken eline biraz para geçse yarısıyla ne alırmış?",
+                  "question": "Metne göre Atatürk çocukken eline biraz para geçse yarısıyla ne alırmış?",
                   "answer": "Doğru Cevap: Kitap (Atatürk eline geçen paranın yarısıyla kitap alıp kendini geliştirirdi.)"
                 }
               }
@@ -5327,12 +5327,12 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Kastamonu'dan İnebolu'ya cephane taşırken bebeğinin üzerindeki battaniyeyi ıslanmasın diye mermilere örten kahraman kadınımız kimdir?",
                 "options": [
-                  "Şerife Bacı",
                   "Nene Hatun",
+                  "Kara Fatma",
                   "Halide Edip",
-                  "Kara Fatma"
+                  "Şerife Bacı"
                 ],
-                "ans": 0,
+                "ans": 3,
                 "hint": "Şerife Bacı vatanı için canını feda eden fedakar Türk anasıdır."
               },
               {
@@ -5340,8 +5340,8 @@ window.CURRICULUM_TERM1 = {
                 "options": [
                   "Nene Hatun",
                   "Gördesli Makbule",
-                  "Halime Çavuş",
-                  "Çete Emir Ayşe"
+                  "Çete Emir Ayşe",
+                  "Halime Çavuş"
                 ],
                 "ans": 0,
                 "hint": "Nene Hatun Erzurum Aziziye Tabyaları'nda destan yazmıştır."
@@ -5349,23 +5349,23 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "\"cesur\" sözcüğünün zıt anlamlısı aşağıdakilerden hangisidir?",
                 "options": [
+                  "güçlü",
                   "korkak",
-                  "yiğit",
                   "kahraman",
-                  "güçlü"
+                  "yiğit"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Cesurun karşıtı korkaktır."
               },
               {
                 "q": "Millî Mücadele kahramanlarımızın ortak özelliği hangisidir?",
                 "options": [
-                  "Vatan ve millet sevgisiyle fedakarlık yapmaları",
                   "Kişisel zenginlik aramaları",
-                  "Zorluklardan kaçmaları",
-                  "Yabancı ülkelere gitmeleri"
+                  "Yabancı ülkelere gitmeleri",
+                  "Vatan ve millet sevgisiyle fedakarlık yapmaları",
+                  "Zorluklardan kaçmaları"
                 ],
-                "ans": 0,
+                "ans": 2,
                 "hint": "Kahramanlarımız vatanımızın bağımsızlığı için birlik olmuştur."
               }
             ],
@@ -5398,7 +5398,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Anadolu'nun Kadınları konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Kastamonu'dan İnebolu'ya cephane taşırken bebeğinin üzerindeki battaniyeyi ıslanmasın diye mermilere örten kahraman kadınımız kimdir?",
+                  "question": "Kastamonu'dan İnebolu'ya cephane taşırken bebeğinin üzerindeki battaniyeyi ıslanmasın diye mermilere örten kahraman kadınımız kimdir?",
                   "answer": "Doğru Cevap: Şerife Bacı (Şerife Bacı vatanı için canını feda eden fedakar Türk anasıdır.)"
                 }
               }
@@ -5414,32 +5414,32 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "\"Dün Gibi\" metninde yazar çocukluğundaki hangi coşkulu anıyı anlatmaktadır?",
                 "options": [
-                  "Milli bayramlarda giyilen bayramlıkları ve halk oyunu heyecanını",
                   "Yaz tatilinde denize gitmesini",
-                  "Pazara alışverişe gitmesini",
-                  "Evde tek başına kalmasını"
+                  "Evde tek başına kalmasını",
+                  "Milli bayramlarda giyilen bayramlıkları ve halk oyunu heyecanını",
+                  "Pazara alışverişe gitmesini"
                 ],
-                "ans": 0,
+                "ans": 2,
                 "hint": "Metin bayramlık kıyafetlerin ve milli bayramların sevincini anlatır."
               },
               {
                 "q": "Aşağıdakilerden hangisi milli bayramlarımızdan biridir?",
                 "options": [
-                  "23 Nisan Ulusal Egemenlik ve Çocuk Bayramı",
                   "Kurban Bayramı",
                   "Ramazan Bayramı",
-                  "Anneler Günü"
+                  "Anneler Günü",
+                  "23 Nisan Ulusal Egemenlik ve Çocuk Bayramı"
                 ],
-                "ans": 0,
+                "ans": 3,
                 "hint": "23 Nisan, Atatürk'ün çocuklara armağan ettiği milli bayramımızdır."
               },
               {
                 "q": "\"kırmızı\" sözcüğünün eş anlamlısı hangisidir?",
                 "options": [
                   "al",
+                  "sarı",
                   "ak",
-                  "kara",
-                  "sarı"
+                  "kara"
                 ],
                 "ans": 0,
                 "hint": "Kırmızı ile al eş anlamlıdır (Al bayrak = Kırmızı bayrak)."
@@ -5447,12 +5447,12 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "\"Bayram sabahı erkenden uyandım ( ) yepyeni kıyafetlerimi giydim.\" cümlesinde yay ayraç içine ne gelmelidir?",
                 "options": [
-                  "Virgül (,)",
-                  "Nokta (.)",
                   "Soru işareti (?)",
-                  "Ünlem işareti (!)"
+                  "Virgül (,)",
+                  "Ünlem işareti (!)",
+                  "Nokta (.)"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Birbiri ardınca sıralanan cümleleri ayırmak için virgül konur."
               }
             ],
@@ -5485,7 +5485,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Dün Gibi konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: \"Dün Gibi\" metninde yazar çocukluğundaki hangi coşkulu anıyı anlatmaktadır?",
+                  "question": "\"Dün Gibi\" metninde yazar çocukluğundaki hangi coşkulu anıyı anlatmaktadır?",
                   "answer": "Doğru Cevap: Milli bayramlarda giyilen bayramlıkları ve halk oyunu heyecanını (Metin bayramlık kıyafetlerin ve milli bayramların sevincini anlatır.)"
                 }
               }
@@ -5501,43 +5501,43 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Mustafa Kemal Atatürk dünyada çocuklara bayram armağan eden tek liderdir. Bu bayram hangisidir?",
                 "options": [
+                  "30 Ağustos Zafer Bayramı",
                   "23 Nisan Ulusal Egemenlik ve Çocuk Bayramı",
                   "19 Mayıs Gençlik Bayramı",
-                  "29 Ekim Cumhuriyet Bayramı",
-                  "30 Ağustos Zafer Bayramı"
+                  "29 Ekim Cumhuriyet Bayramı"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "TBMM'nin açıldığı 23 Nisan günü tüm dünya çocuklarına armağan edilmiştir."
               },
               {
                 "q": "Atatürk çocukları neden 'geleceğin ışığı ve mimarı' olarak görmüştür?",
                 "options": [
-                  "Ülkeyi daha aydınlık günlere çocukların taşıyacağına inandığı için",
-                  "Sadece oyun oynadıkları için",
                   "Okula gittikleri için",
-                  "Küçük oldukları için"
+                  "Küçük oldukları için",
+                  "Ülkeyi daha aydınlık günlere çocukların taşıyacağına inandığı için",
+                  "Sadece oyun oynadıkları için"
                 ],
-                "ans": 0,
+                "ans": 2,
                 "hint": "Cumhuriyet yeni nesillere ve çocukların çalışkanlığına emanet edilmiştir."
               },
               {
                 "q": "\"barış\" sözcüğünün zıt anlamlısı hangisidir?",
                 "options": [
-                  "savaş",
                   "sevgi",
+                  "huzur",
                   "dostluk",
-                  "huzur"
+                  "savaş"
                 ],
-                "ans": 0,
+                "ans": 3,
                 "hint": "Barışın karşıtı savaştır."
               },
               {
                 "q": "\"Küçük hanımlar, küçük beyler! Sizler geleceğin bir gülü, yıldızısınız.\" sözü kime aittir?",
                 "options": [
                   "Mustafa Kemal Atatürk",
+                  "Ziya Gökalp",
                   "Mehmet Akif Ersoy",
-                  "Ömer Seyfettin",
-                  "Ziya Gökalp"
+                  "Ömer Seyfettin"
                 ],
                 "ans": 0,
                 "hint": "Bu sevgi dolu ve yüreklendirici hitap Atatürk'e aittir."
@@ -5572,7 +5572,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Atatürk'ün Çocuk Sevgisi konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Mustafa Kemal Atatürk dünyada çocuklara bayram armağan eden tek liderdir. Bu bayram hangisidir?",
+                  "question": "Mustafa Kemal Atatürk dünyada çocuklara bayram armağan eden tek liderdir. Bu bayram hangisidir?",
                   "answer": "Doğru Cevap: 23 Nisan Ulusal Egemenlik ve Çocuk Bayramı (TBMM'nin açıldığı 23 Nisan günü tüm dünya çocuklarına armağan edilmiştir.)"
                 }
               }
@@ -5586,32 +5586,32 @@ window.CURRICULUM_TERM1 = {
             {
               "q": "Cumhuriyetimizin kurucusu Gazi Mustafa Kemal Atatürk hangi şehirde ve kaç yılında doğmuştur?",
               "options": [
+                "Manastır - 1893",
                 "Selanik - 1881",
                 "Ankara - 1923",
-                "İstanbul - 1919",
-                "Manastır - 1893"
+                "İstanbul - 1919"
               ],
-              "ans": 0,
+              "ans": 1,
               "hint": "Mustafa Kemal Atatürk 1881 yılında Selanik'te dünyaya gelmiştir."
             },
             {
               "q": "29 Ekim'de milletçe büyük bir coşkuyla kutladığımız millî bayramımız hangisidir?",
               "options": [
-                "Cumhuriyet Bayramı",
+                "30 Ağustos Zafer Bayramı",
                 "23 Nisan Ulusal Egemenlik Bayramı",
-                "19 Mayıs Gençlik ve Spor Bayramı",
-                "30 Ağustos Zafer Bayramı"
+                "Cumhuriyet Bayramı",
+                "19 Mayıs Gençlik ve Spor Bayramı"
               ],
-              "ans": 0,
+              "ans": 2,
               "hint": "Cumhuriyetimiz 29 Ekim 1923'te ilan edilmiştir."
             },
             {
               "q": "Kurtuluş Savaşı'nda cepheye mermi taşırken cephaneyi korumak uğruna donarak şehit olan kadın kahramanımız kimdir?",
               "options": [
                 "Şerife Bacı",
+                "Afet İnan",
                 "Halide Edib Adıvar",
-                "Sabiha Gökçen",
-                "Afet İnan"
+                "Sabiha Gökçen"
               ],
               "ans": 0,
               "hint": "Kastamonulu Şerife Bacı, İnebolu'dan cepheye mermi taşırken canını feda eden kahramanımızdır."
@@ -5619,34 +5619,34 @@ window.CURRICULUM_TERM1 = {
             {
               "q": "\"Vatan\" sözcüğünün EŞ ANLAMLISI (anlamdaşı) aşağıdakilerden hangisidir?",
               "options": [
-                "Yurt",
+                "Toprak",
                 "Bayrak",
                 "Millet",
-                "Toprak"
+                "Yurt"
               ],
-              "ans": 0,
+              "ans": 3,
               "hint": "Vatan ve Yurt sözcükleri aynı anlamı ifade eder."
             },
             {
               "q": "Aşağıdaki cümlelerin hangisinde büyük harflerin yazımıyla ilgili bir KURAL İHLALİ yapılmıştır?",
               "options": [
-                "Arkadaşım ahmet ile parka gittik.",
-                "Mustafa Kemal Selanik'te doğdu.",
                 "Türkiye Cumhuriyeti ilelebet payidar kalacaktır.",
+                "Mustafa Kemal Selanik'te doğdu.",
+                "Arkadaşım ahmet ile parka gittik.",
                 "Ankara başkentimizdir."
               ],
-              "ans": 0,
+              "ans": 2,
               "hint": "Kişi adları (Ahmet) özel isimdir ve daima büyük harfle başlamalıdır."
             },
             {
               "q": "\"Cesur\" sözcüğünün ZIT (karşıt) anlamlısı hangisidir?",
               "options": [
-                "Korkak",
-                "Kahraman",
                 "Yiğit",
-                "Güçlü"
+                "Kahraman",
+                "Güçlü",
+                "Korkak"
               ],
-              "ans": 0,
+              "ans": 3,
               "hint": "Cesur olanın zıttı, çabuk korkuya kapılan yani 'korkak'tır."
             }
           ]
@@ -5667,43 +5667,43 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Ormanlar neden 'dünyanın akciğerleri' olarak adlandırılır?",
                 "options": [
-                  "Oksijen üreterek havayı temizledikleri için",
-                  "Kışın kar yağdırdıkları için",
                   "Çok ses çıkardıkları için",
-                  "Sadece odun verdikleri için"
+                  "Oksijen üreterek havayı temizledikleri için",
+                  "Sadece odun verdikleri için",
+                  "Kışın kar yağdırdıkları için"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Ağaçlar fotosentez yaparak canlılar için temiz oksijen üretir."
               },
               {
                 "q": "Orman yangınlarını önlemek için piknik sonrası yapılması gereken en önemli şey nedir?",
                 "options": [
-                  "Ateşin tamamen söndüğünden emin olmak ve çöpleri toplamak",
+                  "Cam şişeleri ağaç diplerine atmak",
                   "Çöpleri ormanda bırakmak",
-                  "Ateşi yanar halde bırakıp gitmek",
-                  "Cam şişeleri ağaç diplerine atmak"
+                  "Ateşin tamamen söndüğünden emin olmak ve çöpleri toplamak",
+                  "Ateşi yanar halde bırakıp gitmek"
                 ],
-                "ans": 0,
+                "ans": 2,
                 "hint": "Kıvılcımlar ve cam kırıkları büyük orman yangınlarına yol açabilir."
               },
               {
                 "q": "\"ırmak\" sözcüğünün eş anlamlısı hangisidir?",
                 "options": [
-                  "nehir",
-                  "deniz",
                   "göl",
-                  "okyanus"
+                  "okyanus",
+                  "deniz",
+                  "nehir"
                 ],
-                "ans": 0,
+                "ans": 3,
                 "hint": "Irmak ile nehir eş anlamlı sözcüklerdir."
               },
               {
                 "q": "Aşağıdaki cümlelerin hangisinde doğayı korumaya yönelik bir davranış vardır?",
                 "options": [
                   "Emre, plastik şişeyi geri dönüşüm kutusuna attı.",
+                  "Ece, musluğu açık bıraktı.",
                   "Can, yere şeker jelatini attı.",
-                  "Mert, parktaki ağacın dallarını kırdı.",
-                  "Ece, musluğu açık bıraktı."
+                  "Mert, parktaki ağacın dallarını kırdı."
                 ],
                 "ans": 0,
                 "hint": "Geri dönüşüm kutularını kullanmak doğayı ve doğal kaynakları korur."
@@ -5738,7 +5738,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Bir Orman (Dinleme Metni) konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Ormanlar neden 'dünyanın akciğerleri' olarak adlandırılır?",
+                  "question": "Ormanlar neden 'dünyanın akciğerleri' olarak adlandırılır?",
                   "answer": "Doğru Cevap: Oksijen üreterek havayı temizledikleri için (Ağaçlar fotosentez yaparak canlılar için temiz oksijen üretir.)"
                 }
               }
@@ -5755,9 +5755,9 @@ window.CURRICULUM_TERM1 = {
                 "q": "Karıncalar kış mevsimine nasıl hazırlanırlar?",
                 "options": [
                   "Yaz boyu yuvalarına yiyecek taşıyıp depolayarak",
+                  "Kışı bekleyerek",
                   "Sadece uyuyarak",
-                  "Başka yuvalara taşınarak",
-                  "Kışı bekleyerek"
+                  "Başka yuvalara taşınarak"
                 ],
                 "ans": 0,
                 "hint": "Karıncalar çalışkanlıkları ve yiyecek depolamaları ile bilinir."
@@ -5765,34 +5765,34 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Karınca yuvasındaki iş bölümü bize hangi insani değeri öğretir?",
                 "options": [
-                  "İş birliği, planlı çalışma ve dayanışmayı",
                   "Tembellik yapmayı",
+                  "İş birliği, planlı çalışma ve dayanışmayı",
                   "Bencilliği",
                   "Kavga etmeyi"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Karıncalar organize şekilde yardımlaşarak zor işleri başarır."
               },
               {
                 "q": "\"Küçük karınca büyük bir buğday tanesini sırtladı.\" cümlesindeki zıt anlamlı kelimeler hangileridir?",
                 "options": [
-                  "Küçük - büyük",
-                  "karınca - buğday",
                   "tanesini - sırtladı",
-                  "büyük - buğday"
+                  "büyük - buğday",
+                  "Küçük - büyük",
+                  "karınca - buğday"
                 ],
-                "ans": 0,
+                "ans": 2,
                 "hint": "Küçük ve büyük zıt anlamlı kelimelerdir."
               },
               {
                 "q": "\"Karıncalar yuvalarına doğru hızla ilerliyordu.\" cümlesinde nasıl ilerlediklerini belirten sözcük hangisidir?",
                 "options": [
-                  "hızla",
-                  "yuvalarına",
                   "Karıncalar",
-                  "doğru"
+                  "yuvalarına",
+                  "doğru",
+                  "hızla"
                 ],
-                "ans": 0,
+                "ans": 3,
                 "hint": "Hareketin biçimini ve durumunu 'hızla' kelimesi belirtir."
               }
             ],
@@ -5825,7 +5825,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Karıncalar konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Karıncalar kış mevsimine nasıl hazırlanırlar?",
+                  "question": "Karıncalar kış mevsimine nasıl hazırlanırlar?",
                   "answer": "Doğru Cevap: Yaz boyu yuvalarına yiyecek taşıyıp depolayarak (Karıncalar çalışkanlıkları ve yiyecek depolamaları ile bilinir.)"
                 }
               }
@@ -5841,20 +5841,20 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Ağaç köklerinin toprağı tutarak rüzgar ve yağmurla kaymasını önlemesine ne denir?",
                 "options": [
-                  "Erozyonu önleme",
                   "Hava kirliliği",
                   "Kuraklık",
-                  "Geri dönüşüm"
+                  "Geri dönüşüm",
+                  "Erozyonu önleme"
                 ],
-                "ans": 0,
+                "ans": 3,
                 "hint": "Ağaçlar erozyonu engelleyerek verimli toprağı korur."
               },
               {
                 "q": "Ormanların sağladığı faydalardan biri hangisi değildir?",
                 "options": [
                   "Hava kirliliğini artırmak",
-                  "Yaban hayvanlarına barınak olmak",
                   "Oksijen üretmek",
+                  "Yaban hayvanlarına barınak olmak",
                   "Toprağı erozyondan korumak"
                 ],
                 "ans": 0,
@@ -5863,23 +5863,23 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "\"yurt\" sözcüğünün eş anlamlısı hangisidir?",
                 "options": [
-                  "vatan",
                   "şehir",
+                  "vatan",
                   "köy",
                   "sokak"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Yurt ile vatan aynı anlama gelir."
               },
               {
                 "q": "\"Ormanları korumak her vatandaşın görevidir.\" cümlesi ne tür bir cümledir?",
                 "options": [
-                  "Kurallı bir olumlu cümle",
-                  "Soru cümlesi",
+                  "Olumsuz cümle",
                   "Ünlem cümlesi",
-                  "Olumsuz cümle"
+                  "Kurallı bir olumlu cümle",
+                  "Soru cümlesi"
                 ],
-                "ans": 0,
+                "ans": 2,
                 "hint": "Yargı bildiren tamamlanmış kurallı bir cümledir."
               }
             ],
@@ -5912,7 +5912,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Orman konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Ağaç köklerinin toprağı tutarak rüzgar ve yağmurla kaymasını önlemesine ne denir?",
+                  "question": "Ağaç köklerinin toprağı tutarak rüzgar ve yağmurla kaymasını önlemesine ne denir?",
                   "answer": "Doğru Cevap: Erozyonu önleme (Ağaçlar erozyonu engelleyerek verimli toprağı korur.)"
                 }
               }
@@ -5928,32 +5928,32 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Şiddetli rüzgar ve yağmurun birleşmesiyle oluşan doğa olayına ne ad verilir?",
                 "options": [
-                  "Fırtına",
                   "Sis",
                   "Kırağı",
+                  "Fırtına",
                   "Gökkuşağı"
                 ],
-                "ans": 0,
+                "ans": 2,
                 "hint": "Fırtına güçlü rüzgar ve yağış getiren bir hava olayıdır."
               },
               {
                 "q": "Fırtınalı havalarda güvenliğimiz için hangisini yapmamalıyız?",
                 "options": [
-                  "Ağaç altlarında ve elektrik direkleri yanında beklemek",
                   "Evde pencerelerden uzak durmak",
+                  "Balkondaki uçabilecek eşyaları içeri almak",
                   "Gereksiz yere dışarı çıkmamak",
-                  "Balkondaki uçabilecek eşyaları içeri almak"
+                  "Ağaç altlarında ve elektrik direkleri yanında beklemek"
                 ],
-                "ans": 0,
+                "ans": 3,
                 "hint": "Fırtınada devrilebilecek ağaç ve direklerin altı çok tehlikelidir."
               },
               {
                 "q": "\"rüzgar\" sözcüğünün eş anlamlısı hangisidir?",
                 "options": [
                   "yel",
-                  "fırtına",
                   "yağmur",
-                  "bulut"
+                  "bulut",
+                  "fırtına"
                 ],
                 "ans": 0,
                 "hint": "Rüzgar ile yel eş anlamlıdır."
@@ -5961,12 +5961,12 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "\"Eyvah ( ) çatıdaki kiremitler uçuyor ( )\" cümlesindeki parantezlere sırasıyla hangileri gelmelidir?",
                 "options": [
+                  "soru işareti (?), nokta (.)",
                   "virgül (,), ünlem (!)",
                   "nokta (.), nokta (.)",
-                  "soru işareti (?), nokta (.)",
                   "iki nokta (:), virgül (,)"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "'Eyvah,' korku ve heyecan bildirdiği için cümlenin sonu ünlemle biter."
               }
             ],
@@ -5999,7 +5999,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Fırtına konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Şiddetli rüzgar ve yağmurun birleşmesiyle oluşan doğa olayına ne ad verilir?",
+                  "question": "Şiddetli rüzgar ve yağmurun birleşmesiyle oluşan doğa olayına ne ad verilir?",
                   "answer": "Doğru Cevap: Fırtına (Fırtına güçlü rüzgar ve yağış getiren bir hava olayıdır.)"
                 }
               }
@@ -6015,42 +6015,42 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Güneşin ısıtmasıyla buharlaşan suların gökyüzünde bulut olup yağmur olarak yere inmesine ne ad verilir?",
                 "options": [
+                  "Su baskını",
                   "Su döngüsü",
                   "Su israfı",
-                  "Su kirliliği",
-                  "Su baskını"
+                  "Su kirliliği"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Su döngüsü sayesinde yeryüzündeki tatlı su kaynakları yenilenir."
               },
               {
                 "q": "Evimizde su tasarrufu yapmak için hangi davranışı sergilemeliyiz?",
                 "options": [
-                  "Diş fırçalarken musluğu kapatmak",
+                  "Hortumla uzun süre araba yıkamak",
                   "Musluğu sonuna kadar açık bırakmak",
-                  "Bulaşıkları elde su akarken yıkamak",
-                  "Hortumla uzun süre araba yıkamak"
+                  "Diş fırçalarken musluğu kapatmak",
+                  "Bulaşıkları elde su akarken yıkamak"
                 ],
-                "ans": 0,
+                "ans": 2,
                 "hint": "Musluğu kapatmak tonlarca suyun boşa gitmesini engeller."
               },
               {
                 "q": "\"tüketim\" sözcüğünün zıt anlamlısı hangisidir?",
                 "options": [
-                  "üretim",
-                  "israf",
                   "masraf",
-                  "satış"
+                  "israf",
+                  "satış",
+                  "üretim"
                 ],
-                "ans": 0,
+                "ans": 3,
                 "hint": "Tüketimin karşıtı üretimdir."
               },
               {
                 "q": "\"Damlaya damlaya göl olur.\" atasözü bize neyi öğütler?",
                 "options": [
                   "Küçük birikimlerin ve tasarrufun zamanla büyük değer taşıdığını",
-                  "Suyla oyun oynamayı",
                   "Göllerde yüzmeyi",
+                  "Suyla oyun oynamayı",
                   "Hemen para harcamayı"
                 ],
                 "ans": 0,
@@ -6086,7 +6086,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Küçük Su Damlası konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Güneşin ısıtmasıyla buharlaşan suların gökyüzünde bulut olup yağmur olarak yere inmesine ne ad verilir?",
+                  "question": "Güneşin ısıtmasıyla buharlaşan suların gökyüzünde bulut olup yağmur olarak yere inmesine ne ad verilir?",
                   "answer": "Doğru Cevap: Su döngüsü (Su döngüsü sayesinde yeryüzündeki tatlı su kaynakları yenilenir.)"
                 }
               }
@@ -6100,32 +6100,32 @@ window.CURRICULUM_TERM1 = {
             {
               "q": "Toprağa ekilen bir tohumun uyanıp çimlenmesi ve fidan olması için en temel ihtiyaçları nelerdir?",
               "options": [
-                "Su, hava (oksijen) ve uygun sıcaklık",
                 "Yalnızca şiddetli rüzgar ve koyu gölge",
-                "Sadece tuzlu su ve zifiri karanlık",
-                "Buzdolabı soğukluğu ve kış havası"
+                "Su, hava (oksijen) ve uygun sıcaklık",
+                "Buzdolabı soğukluğu ve kış havası",
+                "Sadece tuzlu su ve zifiri karanlık"
               ],
-              "ans": 0,
+              "ans": 1,
               "hint": "Tohumun çimlenmesi için suya, havaya ve ılık bir sıcaklığa ihtiyacı vardır."
             },
             {
               "q": "Aşağıdaki cümlelerin hangisinde \"HAYAL ÜRÜNÜ\" (gerçekte gerçekleşmesi imkansız) bir durum anlatılmıştır?",
               "options": [
-                "Bulut neşeyle gökyüzünde şarkı söyleyip dans etti.",
-                "Göçmen kuşlar sonbaharda sıcak ülkelere uçar.",
                 "Bahar gelince ormandaki ağaçlar çiçek açtı.",
-                "Güneş sabahları doğudan doğar."
+                "Güneş sabahları doğudan doğar.",
+                "Bulut neşeyle gökyüzünde şarkı söyleyip dans etti.",
+                "Göçmen kuşlar sonbaharda sıcak ülkelere uçar."
               ],
-              "ans": 0,
+              "ans": 2,
               "hint": "Bulutların şarkı söyleyip dans etmesi insan dışı varlıklara hayalî özellikler verilmesidir."
             },
             {
               "q": "\"Deniz dün ormanda sincapları fotoğrafladı.\" cümlesinde eylemi gerçekleştiren kişiyi bulmak için hangi soru sorulmalıdır?",
               "options": [
                 "Kim?",
-                "Ne zaman?",
                 "Nerede?",
-                "Nasıl?"
+                "Nasıl?",
+                "Ne zaman?"
               ],
               "ans": 0,
               "hint": "İşi, eylemi yapan kişiyi (özneyi) bulmak için 'Kim?' sorusu sorulur."
@@ -6133,34 +6133,34 @@ window.CURRICULUM_TERM1 = {
             {
               "q": "Yeryüzündeki suların buharlaşarak göğe yükselmesi ve yağmur olarak yeryüzüne dönmesine ne ad verilir?",
               "options": [
-                "Su döngüsü",
+                "Fırtına etkisi",
                 "Hava kirliliği",
                 "Toprak kayması",
-                "Fırtına etkisi"
+                "Su döngüsü"
               ],
-              "ans": 0,
+              "ans": 3,
               "hint": "Suyun yeryüzü ve atmosfer arasındaki sürekli çevrimine su döngüsü denir."
             },
             {
               "q": "\"Küçük tohum toprağın altında sabırla baharı bekledi.\" cümlesinde toplam kaç sözcük (kelime) bulunmaktadır?",
               "options": [
-                "7",
                 "6",
                 "8",
+                "7",
                 "5"
               ],
-              "ans": 0,
+              "ans": 2,
               "hint": "Küçük(1) tohum(2) toprağın(3) altında(4) sabırla(5) baharı(6) bekledi(7) = 7 kelime."
             },
             {
               "q": "Okuduğunu anlama yöntemlerinden 5N1K kuralında olayın ZAMANINI bulmak için hangi soru yöneltilir?",
               "options": [
-                "Ne zaman?",
+                "Nasıl?",
                 "Nerede?",
                 "Niçin?",
-                "Nasıl?"
+                "Ne zaman?"
               ],
-              "ans": 0,
+              "ans": 3,
               "hint": "Zaman bildiren cevaba ulaşmak için 'Ne zaman?' diye sorulur."
             }
           ]
@@ -6181,42 +6181,42 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Kütüphanede kitap okurken ve araştırma yaparken uyulması gereken en temel kural hangisidir?",
                 "options": [
+                  "Kütüphanede koşup oyun oynamak",
                   "Sessiz olmak ve başkalarının dikkatini dağıtmamak",
                   "Yüksek sesle müzik dinlemek",
-                  "Kitapların sayfalarını çizmek",
-                  "Kütüphanede koşup oyun oynamak"
+                  "Kitapların sayfalarını çizmek"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Kütüphane sessizce odaklanılan ve bilgi edinilen saygın bir alandır."
               },
               {
                 "q": "Ödünç aldığımız bir kütüphane kitabını okuduktan sonra ne yapmalıyız?",
                 "options": [
-                  "Zamanında, temiz ve yıpratmadan kütüphaneye teslim etmeliyiz.",
                   "Evde sonsuza kadar saklamalıyız.",
                   "Arkadaşımıza hediye etmeliyiz.",
+                  "Zamanında, temiz ve yıpratmadan kütüphaneye teslim etmeliyiz.",
                   "Sayfalarına resim yapmalıyız."
                 ],
-                "ans": 0,
+                "ans": 2,
                 "hint": "Kütüphane kitapları herkesin ortak mirasıdır, özenle korunmalıdır."
               },
               {
                 "q": "Kitapların türlerine ve konularına göre raflara dizilmesinin amacı nedir?",
                 "options": [
-                  "Aranan kitabın kolayca ve hızlıca bulunabilmesi için",
-                  "Kitapların rengini sergilemek için",
+                  "Rastgele koymak için",
                   "Rafları doldurmak için",
-                  "Rastgele koymak için"
+                  "Kitapların rengini sergilemek için",
+                  "Aranan kitabın kolayca ve hızlıca bulunabilmesi için"
                 ],
-                "ans": 0,
+                "ans": 3,
                 "hint": "Kütüphane tasnif sistemi aradığımız bilgiye çabuk ulaşmamızı sağlar."
               },
               {
                 "q": "\"kitap\" sözcüğünün çoğul hâli aşağıdakilerden hangisidir?",
                 "options": [
                   "kitaplar",
-                  "kitapçık",
                   "kitaplık",
+                  "kitapçık",
                   "kitapçı"
                 ],
                 "ans": 0,
@@ -6252,7 +6252,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Kütüphanemiz (İzleme Metni) konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Kütüphanede kitap okurken ve araştırma yaparken uyulması gereken en temel kural hangisidir?",
+                  "question": "Kütüphanede kitap okurken ve araştırma yaparken uyulması gereken en temel kural hangisidir?",
                   "answer": "Doğru Cevap: Sessiz olmak ve başkalarının dikkatini dağıtmamak (Kütüphane sessizce odaklanılan ve bilgi edinilen saygın bir alandır.)"
                 }
               }
@@ -6269,9 +6269,9 @@ window.CURRICULUM_TERM1 = {
                 "q": "Düzenli kitap okumak bir çocuğun gelişimine nasıl katkı sağlar?",
                 "options": [
                   "Kelime dağarcığını zenginleştirir ve düşünme becerisini artırır.",
-                  "Sadece gözlerini yorar.",
                   "Yeni şeyler öğrenmesini engeller.",
-                  "Arkadaşlarıyla iletişimini koparır."
+                  "Arkadaşlarıyla iletişimini koparır.",
+                  "Sadece gözlerini yorar."
                 ],
                 "ans": 0,
                 "hint": "Kitap okumak hayal gücünü besler, doğru konuşmayı ve yazmayı sağlar."
@@ -6279,34 +6279,34 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Bir hikaye kitabında olayın geçtiği yer, zaman ve kahramanların anlatıldığı bölüme ne denir?",
                 "options": [
-                  "Serim (Giriş) bölümü",
-                  "Sonuç bölümü",
                   "Kaynaklar",
-                  "İçindekiler"
+                  "Serim (Giriş) bölümü",
+                  "İçindekiler",
+                  "Sonuç bölümü"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Hikayelerin başında olay, mekan ve kişiler tanıtılır."
               },
               {
                 "q": "\"fikir\" sözcüğünün eş anlamlısı hangisidir?",
                 "options": [
-                  "düşünce",
                   "akıl",
                   "bilgi",
+                  "düşünce",
                   "hayal"
                 ],
-                "ans": 0,
+                "ans": 2,
                 "hint": "Fikir ile düşünce eş anlamlı sözcüklerdir."
               },
               {
                 "q": "\"Kitaplar bize bilmediğimiz diyarların kapısını açar.\" cümlesinde anlatılmak istenen nedir?",
                 "options": [
-                  "Kitapların yeni dünyalar ve bilgiler keşfettirdiği",
                   "Kitapların kapı kolu olduğu",
                   "Sadece resimlere bakıldığı",
-                  "Kitapların seyahat bileti olduğu"
+                  "Kitapların seyahat bileti olduğu",
+                  "Kitapların yeni dünyalar ve bilgiler keşfettirdiği"
                 ],
-                "ans": 0,
+                "ans": 3,
                 "hint": "Kitap okumak hayal gücümüzle yeni dünyalara yolculuk yapmamızı sağlar."
               }
             ],
@@ -6339,7 +6339,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Kitap Sevgisi konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Düzenli kitap okumak bir çocuğun gelişimine nasıl katkı sağlar?",
+                  "question": "Düzenli kitap okumak bir çocuğun gelişimine nasıl katkı sağlar?",
                   "answer": "Doğru Cevap: Kelime dağarcığını zenginleştirir ve düşünme becerisini artırır. (Kitap okumak hayal gücünü besler, doğru konuşmayı ve yazmayı sağlar.)"
                 }
               }
@@ -6355,21 +6355,21 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Bir kitabı okuduktan sonra 'okur kimliği' geliştiren bir kişi ne yapar?",
                 "options": [
-                  "Okuduğu kitap üzerine düşünür, yorum yapar ve ana fikrini sorgular.",
-                  "Kitabı hemen çöpe atar.",
                   "Kimseye kitaptan bahsetmez.",
-                  "Sadece kapağına bakar."
+                  "Kitabı hemen çöpe atar.",
+                  "Sadece kapağına bakar.",
+                  "Okuduğu kitap üzerine düşünür, yorum yapar ve ana fikrini sorgular."
                 ],
-                "ans": 0,
+                "ans": 3,
                 "hint": "Bilinçli okur, okuduklarından yeni anlamlar çıkarır ve fikir üretir."
               },
               {
                 "q": "Farklı yazarların kitaplarını okumak bize ne kazandırır?",
                 "options": [
                   "Olaylara farklı pencerelerden bakabilme yeteneği",
+                  "Zaman kaybı",
                   "Sadece aynı şeyleri tekrar etme",
-                  "Kafa karışıklığı",
-                  "Zaman kaybı"
+                  "Kafa karışıklığı"
                 ],
                 "ans": 0,
                 "hint": "Her yazar bize hayata dair zengin ve farklı bir bakış açısı sunar."
@@ -6377,23 +6377,23 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "\"öğrenci\" sözcüğünün eş anlamlısı hangisidir?",
                 "options": [
-                  "talebe",
                   "öğretmen",
+                  "talebe",
                   "okul",
                   "müdür"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Öğrenci ile talebe eş anlamlıdır."
               },
               {
                 "q": "\"En iyi dost kitaptır.\" cümlesinde kitap neye benzetilmiştir?",
                 "options": [
-                  "Güvenilir bir dosta",
-                  "Bir oyuncağa",
                   "Bir öğretmene",
-                  "Bir çiçeğe"
+                  "Bir çiçeğe",
+                  "Güvenilir bir dosta",
+                  "Bir oyuncağa"
                 ],
-                "ans": 0,
+                "ans": 2,
                 "hint": "Kitap insana hiç bıkmadan bilgi veren bir dosta benzetilmiştir."
               }
             ],
@@ -6426,7 +6426,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Kitaplar Bize Ne Söyler? konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Bir kitabı okuduktan sonra 'okur kimliği' geliştiren bir kişi ne yapar?",
+                  "question": "Bir kitabı okuduktan sonra 'okur kimliği' geliştiren bir kişi ne yapar?",
                   "answer": "Doğru Cevap: Okuduğu kitap üzerine düşünür, yorum yapar ve ana fikrini sorgular. (Bilinçli okur, okuduklarından yeni anlamlar çıkarır ve fikir üretir.)"
                 }
               }
@@ -6442,23 +6442,23 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Pusulanın renkli (genelde kırmızı) ucu her zaman hangi ana yönü gösterir?",
                 "options": [
-                  "Kuzey",
+                  "Batı",
                   "Güney",
-                  "Doğu",
-                  "Batı"
+                  "Kuzey",
+                  "Doğu"
                 ],
-                "ans": 0,
+                "ans": 2,
                 "hint": "Pusula ibresinin renkli ucu Dünya'nın manyetik kuzeyini gösterir."
               },
               {
                 "q": "İnsanların doğayı gözlemleyerek pusula gibi araçları icat etmesi neyin sonucudur?",
                 "options": [
-                  "Merak, araştırma ve bilimsel düşüncenin",
                   "Şans eseri olmanın",
                   "Sadece bekleyişin",
-                  "Tembellik yapmanın"
+                  "Tembellik yapmanın",
+                  "Merak, araştırma ve bilimsel düşüncenin"
                 ],
-                "ans": 0,
+                "ans": 3,
                 "hint": "Bilim ve teknoloji insanın merak duygusu ve araştırmaları ile gelişir."
               },
               {
@@ -6466,8 +6466,8 @@ window.CURRICULUM_TERM1 = {
                 "options": [
                   "Doğu",
                   "Kuzeydoğu",
-                  "Güneybatı",
-                  "Güneydoğu"
+                  "Güneydoğu",
+                  "Güneybatı"
                 ],
                 "ans": 0,
                 "hint": "Kuzey, Güney, Doğu ve Batı 4 ana yöndür."
@@ -6475,12 +6475,12 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "\"Denizciler pusula sayesinde fırtınalı denizde yönlerini kolayca buldular.\" cümlesinde sebep-sonuç ilişkisi bildiren ifade hangisidir?",
                 "options": [
-                  "pusula sayesinde",
-                  "denizciler",
                   "kolayca buldular",
-                  "fırtınalı denizde"
+                  "pusula sayesinde",
+                  "fırtınalı denizde",
+                  "denizciler"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Yönün bulunmasının nedeni pusulanın kullanılmasıdır."
               }
             ],
@@ -6513,7 +6513,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Pusula konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Pusulanın renkli (genelde kırmızı) ucu her zaman hangi ana yönü gösterir?",
+                  "question": "Pusulanın renkli (genelde kırmızı) ucu her zaman hangi ana yönü gösterir?",
                   "answer": "Doğru Cevap: Kuzey (Pusula ibresinin renkli ucu Dünya'nın manyetik kuzeyini gösterir.)"
                 }
               }
@@ -6529,42 +6529,42 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Türk edebiyatında modern hikâyeciliğin kurucularından olan ve 'Kaşağı', 'Diyet', 'Falaka' gibi unutulmaz eserler yazan yazarımız kimdir?",
                 "options": [
-                  "Ömer Seyfettin",
                   "Mehmet Akif Ersoy",
-                  "Cahit Sıtkı Tarancı",
-                  "Kemalettin Tuğcu"
+                  "Ömer Seyfettin",
+                  "Kemalettin Tuğcu",
+                  "Cahit Sıtkı Tarancı"
                 ],
-                "ans": 0,
+                "ans": 1,
                 "hint": "Ömer Seyfettin 3. sınıf çocuklarının severek okuduğu milli hikayecimizdir."
               },
               {
                 "q": "Ömer Seyfettin'in hikâyelerinde Türkçeyi nasıl kullandığı bilinir?",
                 "options": [
-                  "Sade, yalın ve herkesin anlayabileceği duru bir Türkçe ile",
                   "Çok karmaşık yabancı kelimelerle",
                   "Sadece şiir yazarak",
+                  "Sade, yalın ve herkesin anlayabileceği duru bir Türkçe ile",
                   "Hiç noktalama işareti kullanmadan"
                 ],
-                "ans": 0,
+                "ans": 2,
                 "hint": "Ömer Seyfettin 'Yeni Lisan' akımıyla Türkçeyi sadeleştirmiştir."
               },
               {
                 "q": "\"yazar\" sözcüğünün eş anlamlısı hangisidir?",
                 "options": [
-                  "edip (müellif)",
+                  "ressam",
                   "okur",
                   "şair",
-                  "ressam"
+                  "edip (müellif)"
                 ],
-                "ans": 0,
+                "ans": 3,
                 "hint": "Yazı yazan, edebi eser üreten kişiye edip veya yazar denir."
               },
               {
                 "q": "Bir hikayenin temel unsurları (öğeleri) aşağıdakilerden hangisidir?",
                 "options": [
                   "Olay, kişiler (kahramanlar), yer ve zaman",
-                  "Sadece resimler ve sayfa sayısı",
                   "Yalnızca yazarın adı",
+                  "Sadece resimler ve sayfa sayısı",
                   "Kitabın fiyatı ve kapağı"
                 ],
                 "ans": 0,
@@ -6600,7 +6600,7 @@ window.CURRICULUM_TERM1 = {
                 "title": "Öğrendiklerimizi Pekiştirelim",
                 "content": "Harika! Ömer Seyfettin konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
                 "try_box": {
-                  "question": "Sen de Dene: Türk edebiyatında modern hikâyeciliğin kurucularından olan ve 'Kaşağı', 'Diyet', 'Falaka' gibi unutulmaz eserler yazan yazarımız kimdir?",
+                  "question": "Türk edebiyatında modern hikâyeciliğin kurucularından olan ve 'Kaşağı', 'Diyet', 'Falaka' gibi unutulmaz eserler yazan yazarımız kimdir?",
                   "answer": "Doğru Cevap: Ömer Seyfettin (Ömer Seyfettin 3. sınıf çocuklarının severek okuduğu milli hikayecimizdir.)"
                 }
               }
@@ -6614,23 +6614,23 @@ window.CURRICULUM_TERM1 = {
             {
               "q": "Kütüphanede araştırma yaparken ve kitap okurken herkesin uyması gereken EN ÖNEMLİ kural nedir?",
               "options": [
-                "Sessiz olmak ve başkalarının dikkatini dağıtmamak",
                 "Kulaklıksız yüksek sesle müzik dinlemek",
+                "Sessiz olmak ve başkalarının dikkatini dağıtmamak",
                 "Kitapların sayfalarını katlayıp resimler çizmek",
                 "Kütüphane içinde koşup oyun oynamak"
               ],
-              "ans": 0,
+              "ans": 1,
               "hint": "Kütüphaneler ortak çalışma alanlarıdır; sessizlik temel kuraldır."
             },
             {
               "q": "Aşağıdaki cümlelerin hangisi kurallı bir cümledir (yüklemi/eylemi sonda olan)?",
               "options": [
-                "Zeynep kütüphaneden harika bir kitap ödünç aldı.",
-                "Ödünç aldı Zeynep kütüphaneden harika bir kitap.",
+                "Gidiyorum her gün erkenden okula ben.",
                 "Kitap okudu dün akşam Ali odasında.",
-                "Gidiyorum her gün erkenden okula ben."
+                "Zeynep kütüphaneden harika bir kitap ödünç aldı.",
+                "Ödünç aldı Zeynep kütüphaneden harika bir kitap."
               ],
-              "ans": 0,
+              "ans": 2,
               "hint": "Kurallı cümlelerde iş, oluş veya hareket bildiren kelime cümlenin en sonunda yer alır."
             },
             {
@@ -6638,8 +6638,8 @@ window.CURRICULUM_TERM1 = {
               "options": [
                 "Dize (Mısra)",
                 "Kıta (Dörtlük)",
-                "Paragraf",
-                "Bölüm"
+                "Bölüm",
+                "Paragraf"
               ],
               "ans": 0,
               "hint": "Şiirlerdeki tek bir satıra dize veya mısra denir."
@@ -6647,34 +6647,34 @@ window.CURRICULUM_TERM1 = {
             {
               "q": "İnsanlığa faydalı yeni bir buluş, alet veya yöntem keşfeden kişilere ne ad verilir?",
               "options": [
-                "Mucit",
-                "Kâşif",
+                "Ressam",
                 "Yazar",
-                "Ressam"
+                "Kâşif",
+                "Mucit"
               ],
-              "ans": 0,
+              "ans": 3,
               "hint": "Daha önce var olmayan yeni bir şey icat eden kişiye mucit denir."
             },
             {
               "q": "\"Akıl akıldan üstündür.\" atasözünün bize öğütlediği asıl fikir nedir?",
               "options": [
-                "Önemli konularda başkalarının bilgi ve fikrine danışmak faydalıdır.",
-                "Herkes her işi tek başına en mükemmel şekilde bilir.",
+                "Sadece yetişkin insanların aklı vardır.",
                 "Yeni bir şeyler öğrenmek için çalışmaya gerek yoktur.",
-                "Sadece yetişkin insanların aklı vardır."
+                "Önemli konularda başkalarının bilgi ve fikrine danışmak faydalıdır.",
+                "Herkes her işi tek başına en mükemmel şekilde bilir."
               ],
-              "ans": 0,
+              "ans": 2,
               "hint": "Bu atasözü dayanışmayı ve bilene danışmanın kıymetini anlatır."
             },
             {
               "q": "Bir varlığın rengini, biçimini ve özelliklerini kelimelerle resim çizer gibi anlatmaya ne ad verilir?",
               "options": [
-                "Betimleme (Tasvir)",
-                "Özetleme",
+                "Sıralama",
                 "Tekerleme",
-                "Sıralama"
+                "Özetleme",
+                "Betimleme (Tasvir)"
               ],
-              "ans": 0,
+              "ans": 3,
               "hint": "Görülen bir yeri, nesneyi veya canlıyı kelimelerle canlandırmaya betimleme denir."
             }
           ]
@@ -6806,59 +6806,59 @@ window.CURRICULUM_TERM1 = {
       {
         "q": "[Matematik] 4 yüzlük, 6 onluk ve 3 birlikten oluşan sayı hangisidir?",
         "options": [
+          "364",
           "463",
           "643",
-          "364",
           "436"
         ],
-        "ans": 0
+        "ans": 1
       },
       {
         "q": "[Matematik] 5 x 8 işleminin sonucu kaçtır?",
         "options": [
-          "35",
-          "40",
+          "48",
           "45",
-          "48"
+          "35",
+          "40"
         ],
-        "ans": 1
+        "ans": 3
       },
       {
         "q": "[Matematik] 30 lirası olan Efe, tanesi 6 lira olan defterlerden kaç tane alabilir?",
         "options": [
-          "4",
           "5",
           "6",
+          "4",
           "7"
         ],
-        "ans": 1
+        "ans": 0
       },
       {
         "q": "[Fen Bilimleri] Hangisi Dünya'nın yuvarlak olduğunu kanıtlayan olaylardan biridir?",
         "options": [
           "Güneşin her gün doğudan doğması",
-          "Hep aynı yöne giden uçağın başladığı yere dönmesi",
           "Geceleri yıldızların görünmesi",
+          "Hep aynı yöne giden uçağın başladığı yere dönmesi",
           "Yağmurun yukarıdan yağması"
         ],
-        "ans": 1
+        "ans": 2
       },
       {
         "q": "[Fen Bilimleri] Kuvvet uygulandığında şekil değiştiren, kuvvet kalkınca eski haline dönen madde hangisidir?",
         "options": [
           "Hamur",
-          "Paket lastiği",
+          "Cam",
           "Tahta",
-          "Cam"
+          "Paket lastiği"
         ],
-        "ans": 1
+        "ans": 3
       },
       {
         "q": "[Hayat Bilgisi] Kroki ile ilgili hangisi DOĞRUDUR?",
         "options": [
-          "Cetvelle milimetrik ölçülür",
-          "Kuş bakışı ve kabataslaktır",
           "Yandan çizilir",
+          "Kuş bakışı ve kabataslaktır",
+          "Cetvelle milimetrik ölçülür",
           "Ölçeksiz çizilemez"
         ],
         "ans": 1
@@ -6867,19 +6867,19 @@ window.CURRICULUM_TERM1 = {
         "q": "[Hayat Bilgisi] Aşağıdakilerden hangisi bir İSTEKTİR (temel ihtiyaç değildir)?",
         "options": [
           "Su",
-          "Ekmek",
           "Sıcak mont",
-          "Uzaktan kumandalı araba"
+          "Uzaktan kumandalı araba",
+          "Ekmek"
         ],
-        "ans": 3
+        "ans": 2
       },
       {
         "q": "[İngilizce] 'I am thirsty.' diyen biri ne istemektedir?",
         "options": [
           "Water (Su)",
+          "Bed (Yatak)",
           "Pizza",
-          "Book (Kitap)",
-          "Bed (Yatak)"
+          "Book (Kitap)"
         ],
         "ans": 0
       }

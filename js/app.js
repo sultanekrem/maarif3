@@ -1373,7 +1373,8 @@
 
     subj.themes.forEach((th, idx) => {
       const tab = document.createElement('button');
-      tab.className = 'theme-tab-item' + (idx === state.currentThemeIndex ? ' active' : '');
+      const isActive = idx === state.currentThemeIndex;
+      tab.className = 'theme-tab-item' + (isActive ? ' active' : '');
       tab.innerHTML = `<span>${th.title}</span>`;
       tab.addEventListener('click', () => {
         state.currentThemeIndex = idx;
@@ -1381,6 +1382,12 @@
         renderTopicsList();
       });
       tabsContainer.appendChild(tab);
+
+      if (isActive) {
+        requestAnimationFrame(() => {
+          tab.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        });
+      }
     });
   }
 
@@ -1634,7 +1641,8 @@
 
     // 9. İnteraktif "Sen de Dene!" Mini Alıştırması
     if (page.try_box) {
-      const qText = page.try_box.question || '';
+      const rawQ = page.try_box.question || '';
+      const qText = rawQ.replace(/^(Sen\s+de\s+Dene\s*[:\-–—]?\s*)+/i, '').trim();
       const aText = page.try_box.answer || '';
       html += `
         <div class="book-try-interactive">

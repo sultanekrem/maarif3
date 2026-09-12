@@ -6375,28 +6375,7 @@ body.dyslexia-mode #btn-dyslexia {
   box-sizing: border-box !important;
 }
 
-/* Dokunarak Kaydırma İpucu */
-.swipe-hint-pill {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 20px;
-  padding: 4px 14px;
-  font-size: 0.74rem;
-  font-weight: 700;
-  color: #A5B4FC;
-  margin: 0 auto 10px auto;
-  user-select: none;
-  animation: pulseHint 2.5s infinite ease-in-out;
-}
 
-@keyframes pulseHint {
-  0%, 100% { opacity: 0.8; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.02); }
-}
 
 .reading-page-card {
   background: rgba(30, 41, 59, 0.85) !important;
@@ -6559,40 +6538,215 @@ body.dyslexia-mode #btn-dyslexia {
 .book-prose-content p { margin: 0 0 10px 0; }
 .book-prose-content strong { color: #FFFFFF; }
 
-/* 7. Tablo Bölümü */
+/* 7. Tablo Bölümü (Tamamen Scrollsuz & Mobil Uyumlu) */
 .book-table-wrap {
-  width: 100%;
-  overflow-x: auto;
+  width: 100% !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
   border-radius: 14px;
   border: 1.5px solid rgba(255, 255, 255, 0.12);
   background: rgba(15, 23, 42, 0.8);
 }
 .book-table {
-  width: 100%;
+  width: 100% !important;
+  table-layout: fixed !important;
   border-collapse: collapse;
   text-align: center;
+  word-break: break-word !important;
   background: transparent;
 }
 .book-table th {
-  padding: 10px 12px;
-  font-size: 0.85rem;
+  padding: 8px 4px !important;
+  font-size: clamp(0.72rem, 2.8vw, 0.85rem) !important;
   font-weight: 800;
   background: #4338CA;
   color: #FFFFFF;
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
 .book-table td {
-  padding: 10px 12px;
-  font-size: 0.92rem;
+  padding: 8px 4px !important;
+  font-size: clamp(0.78rem, 2.9vw, 0.92rem) !important;
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: #F1F5F9;
 }
 .book-table .t-reading {
   background: rgba(16, 185, 129, 0.2);
   color: #6EE7B7;
-  font-size: 1rem;
+  font-size: clamp(0.85rem, 3.2vw, 1rem) !important;
   font-weight: 800;
-  padding: 12px;
+  padding: 10px;
+}
+
+/* 7b. Kelime ve Anlam Kartları (Sözlük Tablosu Yerine Scrollsuz Kartlar) */
+.book-vocab-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.vocab-card {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1.5px solid rgba(168, 85, 247, 0.35);
+  border-left: 5px solid #A855F7;
+  border-radius: 14px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+.vocab-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.vocab-badge {
+  background: rgba(168, 85, 247, 0.25);
+  color: #D8B4FE;
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+}
+.vocab-word {
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #FFFFFF;
+}
+.vocab-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.vocab-meaning {
+  font-size: 0.92rem;
+  color: #F1F5F9;
+  line-height: 1.5;
+}
+.vocab-meaning strong {
+  color: #38BDF8;
+}
+.vocab-sentence {
+  font-size: 0.88rem;
+  color: #FEF08A;
+  background: rgba(234, 179, 8, 0.1);
+  border: 1px dashed rgba(234, 179, 8, 0.25);
+  border-radius: 8px;
+  padding: 6px 10px;
+  line-height: 1.45;
+}
+.vocab-sentence strong {
+  color: #FDE047;
+}
+
+/* 7c. Sayı Çözümleme Kartları (Scrollsuz) */
+.decomp-cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.decomp-card {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1.5px solid rgba(56, 189, 248, 0.35);
+  border-left: 5px solid #0284C7;
+  border-radius: 14px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+.decomp-badge {
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: #38BDF8;
+}
+.decomp-row {
+  font-size: 0.9rem;
+  color: #E2E8F0;
+  line-height: 1.4;
+}
+.decomp-math {
+  color: #A7F3D0;
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+/* 7d. Canlılar Sınıflandırma Kartları (Scrollsuz) */
+.cat-comparison-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+.cat-card {
+  background: rgba(15, 23, 42, 0.75);
+  border-radius: 14px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+.cat-card.cat-plants {
+  border: 1.5px solid rgba(16, 185, 129, 0.35);
+  border-left: 5px solid #10B981;
+}
+.cat-card.cat-animals {
+  border: 1.5px solid rgba(249, 115, 22, 0.35);
+  border-left: 5px solid #F97316;
+}
+.cat-title {
+  font-size: 1.1rem;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+.cat-plants .cat-title { color: #34D399; }
+.cat-animals .cat-title { color: #FB923C; }
+.cat-item {
+  font-size: 0.9rem;
+  color: #E2E8F0;
+  line-height: 1.5;
+}
+
+/* 7e. İngilizce Selamlaşma & İfade Kartları (Scrollsuz) */
+.phrase-list-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+.phrase-card {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1.5px solid rgba(99, 102, 241, 0.35);
+  border-left: 5px solid #6366F1;
+  border-radius: 12px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+}
+.phrase-en {
+  font-size: 0.95rem;
+  color: #FFFFFF;
+}
+.phrase-en strong {
+  color: #A5B4FC;
+  font-size: 1.05rem;
+}
+.phrase-pron {
+  font-size: 0.82rem;
+  color: #94A3B8;
+  margin-left: 6px;
+  font-style: italic;
+}
+.phrase-tr {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #34D399;
 }
 
 /* 8. Adım Adım Kazanım Maddeleri */

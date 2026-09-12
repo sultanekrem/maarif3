@@ -186,7 +186,7 @@
                 "badge": "📊 2. BÖLÜM: ÇÖZÜMLEME YÖNTEMLERİ",
                 "title": "Farklı Şekillerde Çözümleme",
                 "content": "Bir sayıyı iki farklı şekilde çözümleyebiliriz: Basamak adlarıyla veya basamak değerleriyle.",
-                "table_html": "\n        <div class=\"book-table-wrap\">\n          <table class=\"book-table\">\n            <thead>\n              <tr>\n                <th>Sayı</th>\n                <th>Basamak Adlarıyla Çözümleme</th>\n                <th>Basamak Değerleriyle Toplam</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td><strong>652</strong></td>\n                <td>6 yüzlük + 5 onluk + 2 birlik</td>\n                <td>600 + 50 + 2</td>\n              </tr>\n              <tr>\n                <td><strong>809</strong></td>\n                <td>8 yüzlük + 0 onluk + 9 birlik</td>\n                <td>800 + 9</td>\n              </tr>\n              <tr>\n                <td><strong>940</strong></td>\n                <td>9 yüzlük + 4 onluk + 0 birlik</td>\n                <td>900 + 40</td>\n              </tr>\n            </tbody>\n          </table>\n        </div>\n        ",
+                "table_html": "\n        <div class=\"decomp-cards-grid\">\n          <div class=\"decomp-card\">\n            <div class=\"decomp-badge\">🔢 652 Sayısı</div>\n            <div class=\"decomp-row\"><strong>Basamak Adlarıyla:</strong> 6 yüzlük + 5 onluk + 2 birlik</div>\n            <div class=\"decomp-row decomp-math\"><strong>Basamak Değerleriyle:</strong> 600 + 50 + 2 = 652</div>\n          </div>\n          <div class=\"decomp-card\">\n            <div class=\"decomp-badge\">🔢 809 Sayısı</div>\n            <div class=\"decomp-row\"><strong>Basamak Adlarıyla:</strong> 8 yüzlük + 0 onluk + 9 birlik</div>\n            <div class=\"decomp-row decomp-math\"><strong>Basamak Değerleriyle:</strong> 800 + 0 + 9 = 809</div>\n          </div>\n          <div class=\"decomp-card\">\n            <div class=\"decomp-badge\">🔢 940 Sayısı</div>\n            <div class=\"decomp-row\"><strong>Basamak Adlarıyla:</strong> 9 yüzlük + 4 onluk + 0 birlik</div>\n            <div class=\"decomp-row decomp-math\"><strong>Basamak Değerleriyle:</strong> 900 + 40 + 0 = 940</div>\n          </div>\n        </div>\n  ",
                 "info_box": {
                   "title": "MEB DİKKAT KUTUSU: SIFIRIN BASAMAK DEĞERİ",
                   "content": "0 (sıfır) rakamı hangi basamakta olursa olsun basamak değeri her zaman 0'dır! Örneğin 809 sayısında onlar basamağında 0 vardır ve değeri 0'dır. Çözümlerken 800 + 9 yazmamız yeterlidir."
@@ -2074,7 +2074,7 @@
                   "5. Çoğalma (Üreme): Canlılar kendi türlerinin devamı için yavru meydana getirirler.",
                   "6. Tepki Verme: Dokununca kapanan küstüm çiçeği, sesten kaçan kuş."
                 ],
-                "table_html": "\n        <div class=\"book-table-wrap\">\n          <table class=\"book-table\">\n            <thead>\n              <tr>\n                <th>Grup</th>\n                <th>Örnek Canlılar</th>\n                <th>Temel Özellikleri</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td><strong>Bitkiler</strong></td>\n                <td>Papatya, Çam Ağacı, Buğday</td>\n                <td>Kendi besinini kendi üretir, kökleriyle toprağa bağlıdır.</td>\n              </tr>\n              <tr>\n                <td><strong>Hayvanlar</strong></td>\n                <td>Kedi, Kartal, Yunus, Karınca</td>\n                <td>Hareket edebilir, besinlerini dışarıdan hazır alırlar.</td>\n              </tr>\n            </tbody>\n          </table>\n        </div>\n        ",
+                "table_html": "\n        <div class=\"cat-comparison-grid\">\n          <div class=\"cat-card cat-plants\">\n            <div class=\"cat-title\">🌿 Bitkiler Alemi</div>\n            <div class=\"cat-item\">🌸 <strong>Örnek Canlılar:</strong> Papatya, Çam Ağacı, Buğday, Gül</div>\n            <div class=\"cat-item\">☀️ <strong>Temel Özellikleri:</strong> Kendi besinini güneş ışığıyla kendisi üretir. Kökleriyle toprağa bağlıdır, yer değiştiremez.</div>\n          </div>\n          <div class=\"cat-card cat-animals\">\n            <div class=\"cat-title\">🦁 Hayvanlar Alemi</div>\n            <div class=\"cat-item\">🐾 <strong>Örnek Canlılar:</strong> Kedi, Kartal, Yunus, Karınca, Balık</div>\n            <div class=\"cat-item\">🏃 <strong>Temel Özellikleri:</strong> Aktif olarak yer değiştirebilir ve hareket eder. Besinlerini dışarıdan hazır alırlar.</div>\n          </div>\n        </div>\n  ",
                 "try_box": {
                   "question": "Sen de Dene: Bitkiler hareket eder mi? Nasıl?",
                   "answer": "Evet, bitkiler de hareket eder! Ancak yer değiştirmezler; yapraklarını ve çiçeklerini güneşe doğru çevirerek (yönelme hareketi) hareket ederler (Örnek: Ayçiçeği)."
@@ -3703,7 +3703,7 @@
                 "story": "Welcome to 3rd Grade English! Let's learn how to greet friends and teachers at school!",
                 "content": "İngilizce konuşurken günün saatine göre farklı selamlaşma ifadeleri kullanırız. Kendimizi tanıtırken adımızı ve yaşımızı söyleriz.",
                 "model_html": "\n        <div class=\"english-dialog-card\">\n          <div class=\"dialog-bubble bubble-left\">\n            <span class=\"d-avatar\">👦</span>\n            <div class=\"d-text\">\n              <strong>Hello! My name is Emre. What is your name?</strong>\n              <em>(Merhaba! Benim adım Emre. Senin adın ne?)</em>\n            </div>\n          </div>\n          <div class=\"dialog-bubble bubble-right\">\n            <span class=\"d-avatar\">👧</span>\n            <div class=\"d-text\">\n              <strong>Hi Emre! I am Zeynep. Nice to meet you!</strong>\n              <em>(Selam Emre! Ben Zeynep. Tanıştığıma memnun oldum!)</em>\n            </div>\n          </div>\n        </div>\n        ",
-                "table_html": "\n        <div class=\"book-table-wrap\">\n          <table class=\"book-table\">\n            <thead>\n              <tr>\n                <th>English Expression</th>\n                <th>Pronunciation (Okunuşu)</th>\n                <th>Türkçe Anlamı</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td><strong>Good morning!</strong></td>\n                <td>Gud mornink</td>\n                <td>Günaydın!</td>\n              </tr>\n              <tr>\n                <td><strong>Good afternoon!</strong></td>\n                <td>Gud aftırnuun</td>\n                <td>Tünaydın / İyi günler!</td>\n              </tr>\n              <tr>\n                <td><strong>Good evening!</strong></td>\n                <td>Gud iivnink</td>\n                <td>İyi akşamlar!</td>\n              </tr>\n              <tr>\n                <td><strong>How are you?</strong></td>\n                <td>Hav ar yu?</td>\n                <td>Nasılsın?</td>\n              </tr>\n              <tr>\n                <td><strong>I am fine, thank you.</strong></td>\n                <td>Ay em fayn, tenk yu.</td>\n                <td>İyiyim, teşekkür ederim.</td>\n              </tr>\n            </tbody>\n          </table>\n        </div>\n        ",
+                "table_html": "\n        <div class=\"phrase-list-grid\">\n          <div class=\"phrase-card\">\n            <div class=\"phrase-en\">🇬🇧 <strong>Good morning!</strong> <span class=\"phrase-pron\">[Gud mornink]</span></div>\n            <div class=\"phrase-tr\">🇹🇷 Günaydın!</div>\n          </div>\n          <div class=\"phrase-card\">\n            <div class=\"phrase-en\">🇬🇧 <strong>Good afternoon!</strong> <span class=\"phrase-pron\">[Gud aftırnuun]</span></div>\n            <div class=\"phrase-tr\">🇹🇷 Tünaydın / İyi günler!</div>\n          </div>\n          <div class=\"phrase-card\">\n            <div class=\"phrase-en\">🇬🇧 <strong>Good evening!</strong> <span class=\"phrase-pron\">[Gud iivnink]</span></div>\n            <div class=\"phrase-tr\">🇹🇷 İyi akşamlar!</div>\n          </div>\n          <div class=\"phrase-card\">\n            <div class=\"phrase-en\">🇬🇧 <strong>How are you?</strong> <span class=\"phrase-pron\">[Hav ar yu?]</span></div>\n            <div class=\"phrase-tr\">🇹🇷 Nasılsın?</div>\n          </div>\n          <div class=\"phrase-card\">\n            <div class=\"phrase-en\">🇬🇧 <strong>I am fine, thank you.</strong> <span class=\"phrase-pron\">[Ay em fayn, tenk yu]</span></div>\n            <div class=\"phrase-tr\">🇹🇷 İyiyim, teşekkür ederim.</div>\n          </div>\n        </div>\n  ",
                 "try_box": {
                   "question": "Can you say it? Arkadaşına 'Tanıştığıma memnun oldum' demek için hangi İngilizce ifadeyi kullanırsın?",
                   "answer": "'Nice to meet you!' (Nays tu miit yu!)"
@@ -4712,7 +4712,7 @@
                 "badge": "📚 2. BÖLÜM: KELİME HAZİNEMİZ",
                 "title": "Metinde Geçen Yeni Sözcükler ve Anlamları",
                 "content": "Metni daha iyi anlamak için bilmediğimiz sözcüklerin TDK sözlük anlamlarını öğrenelim:",
-                "table_html": "\n        <div class=\"book-table-wrap\">\n          <table class=\"book-table\">\n            <thead>\n              <tr>\n                <th>Sözcük</th>\n                <th>Sözlük Anlamı</th>\n                <th>Cümle İçinde Kullanımı</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td><strong>Kibir</strong></td>\n                <td>Kendini herkesten üstün görme, büyüklük taslama.</td>\n                <td>Kibirli insanlar çevrelerindeki dostlarını kaybederler.</td>\n              </tr>\n              <tr>\n                <td><strong>Nezaket</strong></td>\n                <td>Başkalarına karşı saygılı, ince ve terbiyeli davranma.</td>\n                <td>Arkadaşına teşekkür etmek bir nezaket kuralıdır.</td>\n              </tr>\n              <tr>\n                <td><strong>Erdem</strong></td>\n                <td>Ahlakın övdüğü iyi, dürüst ve doğru olma niteliği.</td>\n                <td>Doğru sözlü olmak en büyük erdemlerden biridir.</td>\n              </tr>\n            </tbody>\n          </table>\n        </div>\n        ",
+                "table_html": "\n        <div class=\"book-vocab-grid\">\n          <div class=\"vocab-card\">\n            <div class=\"vocab-header\">\n              <span class=\"vocab-badge\">SÖZCÜK</span>\n              <span class=\"vocab-word\">🌱 Kibir</span>\n            </div>\n            <div class=\"vocab-body\">\n              <div class=\"vocab-meaning\">📖 <strong>Anlamı:</strong> Kendini herkesten üstün görme, büyüklük taslama.</div>\n              <div class=\"vocab-sentence\">💬 <strong>Örnek Cümle:</strong> <em>\"Kibirli insanlar çevrelerindeki dostlarını kaybederler.\"</em></div>\n            </div>\n          </div>\n          <div class=\"vocab-card\">\n            <div class=\"vocab-header\">\n              <span class=\"vocab-badge\">SÖZCÜK</span>\n              <span class=\"vocab-word\">🌸 Nezaket</span>\n            </div>\n            <div class=\"vocab-body\">\n              <div class=\"vocab-meaning\">📖 <strong>Anlamı:</strong> Başkalarına karşı saygılı, ince ve terbiyeli davranma.</div>\n              <div class=\"vocab-sentence\">💬 <strong>Örnek Cümle:</strong> <em>\"Arkadaşına teşekkür etmek bir nezaket kuralıdır.\"</em></div>\n            </div>\n          </div>\n          <div class=\"vocab-card\">\n            <div class=\"vocab-header\">\n              <span class=\"vocab-badge\">SÖZCÜK</span>\n              <span class=\"vocab-word\">⭐ Erdem</span>\n            </div>\n            <div class=\"vocab-body\">\n              <div class=\"vocab-meaning\">📖 <strong>Anlamı:</strong> Ahlakın övdüğü iyi, dürüst ve doğru olma niteliği.</div>\n              <div class=\"vocab-sentence\">💬 <strong>Örnek Cümle:</strong> <em>\"Doğru sözlü olmak en büyük erdemlerden biridir.\"</em></div>\n            </div>\n          </div>\n        </div>\n  ",
                 "try_box": {
                   "question": "Sen de Dene: Lavanta çiçeği kelebeği neden hemen kabul etmedi?",
                   "answer": "Çünkü kelebek kendini herkesten üstün görüyor, kibirli ve kırıcı konuşuyordu. Hatasını anlayıp samimiyetle özür diledikten sonra onu şefkatle kabul etti."
@@ -5066,75 +5066,74 @@
           }
         ],
         "exam": {
-          "id": "turkce_tema1_exam",
-          "title": "1. Tema Değerlendirme Sınavı",
-          "book_ref": "MEB Kitabı s. 54",
-          "tasks": [
+          "title": "1. Tema Değerlendirme Sınavı (Değerlerimizle Yaşıyoruz)",
+          "book_ref": "MEB Türkçe 1. Kitap s. 38 - 45",
+          "questions": [
             {
-              "q": "Metne göre Bilge, sabah uyandığında anne ve babasına hangi nezaket sözcüğünü söylemiştir? (s. 54)",
+              "q": "\"Kelebek ile Lavanta\" masalında kelebeğin hatasını anlayıp özür dilemesi hangi güzel davranışı gösterir?",
               "options": [
-                "Günaydın",
-                "İyi akşamlar",
-                "Görüşürüz",
-                "Hoşça kal"
+                "Alçakgönüllülük ve dürüstlük",
+                "Kibir ve büyüklük taslama",
+                "Tembellik ve vurdumduymazlık",
+                "Öfke ve sabırsızlık"
               ],
               "ans": 0,
-              "hint": "Bilge sabah kalktığında ailesine 'Günaydın' demiştir."
+              "hint": "Hatasını kabul edip özür dilemek ve affedici olmak alçakgönüllülüktür."
             },
             {
-              "q": "Bilge, apartmandan çıkarken zorlanan yaşlı komşusu Hasan amcaya nasıl yardımcı olmuştur? (s. 54)",
+              "q": "\"Aziz Sancar çocukluğundan beri bıkmadan usanmadan çalıştı.\" cümlesinde özel isim (özel ad) olan sözcük hangisidir?",
               "options": [
-                "Eşyalarını alıp kapısına kadar taşıyarak",
-                "Sadece el sallayarak",
-                "Kapıyı yüzüne kapatarak",
-                "Hızlıca yanından uzaklaşarak"
+                "Aziz Sancar",
+                "çocukluğundan",
+                "çalıştı",
+                "bıkmadan"
               ],
               "ans": 0,
-              "hint": "Hasan amcanın elindeki ağır eşyaları kapısına kadar taşımıştır."
+              "hint": "Kişi ad ve soyadları özel isimdir ve ilk harfleri daima büyük yazılır."
             },
             {
-              "q": "\"Nezaket ve Yardımlaşma\" metninin ana fikri aşağıdakilerden hangisidir? (s. 54)",
+              "q": "Aşağıdaki sözcüklerden hangisi alfabetik sıralamada (sözlükte) DİĞERLERİNDEN DAHA ÖNCE gelir?",
               "options": [
-                "İnsanlara yardım etmek ve nazik olmak bizi mutlu ve iyi bir komşu yapar.",
-                "Sadece kendi işlerimizle ilgilenmeliyiz.",
-                "Sabahları kimseyle konuşmamalıyız.",
-                "Yaşlı insanlardan uzak durmalıyız."
+                "Balta",
+                "Kitap",
+                "Orman",
+                "Sevgi"
               ],
               "ans": 0,
-              "hint": "Yardımlaşmak hem yardım edeni hem de edileni mutlu eder."
+              "hint": "Alfabemizde 'B' harfi 'K', 'O' ve 'S' harflerinden daha önce yer alır."
             },
             {
-              "q": "\"Hasan amca size yardım etmemi ister misiniz\" cümlesinin sonuna hangi noktalama işareti gelmelidir? (s. 54)",
+              "q": "\"Yaşasın, yarın kütüphaneye gideceğiz( )\" cümlesinin sonuna hangi noktalama işareti konmalıdır?",
               "options": [
-                "Soru işareti (?)",
-                "Nokta (.)",
                 "Ünlem işareti (!)",
+                "Nokta (.)",
+                "Soru işareti (?)",
                 "Virgül (,)"
               ],
               "ans": 0,
-              "hint": "Cevap bekleyen bir soru cümlesidir."
+              "hint": "Sevinç, coşku, heyecan bildiren ünlem cümlelerinin sonuna ünlem işareti (!) konur."
             },
             {
-              "q": "Aşağıdaki bilgilerden hangisi doğrudur? (s. 55)",
+              "q": "\"Doğru sözlü olmak insana güven kazandırır.\" cümlesindeki \"doğru\" sözcüğünün ZIT (karşıt) anlamlısı hangisidir?",
               "options": [
-                "Cümlelerin ilk harfi her zaman büyük yazılır.",
-                "Özel isimlerin ilk harfi küçük yazılır.",
-                "Soru cümlelerinin sonuna ünlem işareti konur.",
-                "Virgül cümlenin en sonuna konur."
+                "Yanlış",
+                "Dürüst",
+                "Güzel",
+                "Temiz"
               ],
               "ans": 0,
-              "hint": "Her cümlenin ilk harfi kural olarak büyük harfle başlar."
+              "hint": "Doğru kelimesinin zıt anlamlısı yanlış (veya yalan) sözcüğüdür."
             },
             {
-              "q": "\"Annem mis gibi kokan çiçekleri vazoya yerleştirdi.\" cümlesinde altı çizili kelimenin anlamı nedir? (s. 55)",
+              "q": "\"Kibir\" sözcüğünün Türkçe sözlük anlamı aşağıdakilerden hangisidir?",
               "options": [
-                "Çok güzel ve hoş kokan",
-                "Kötü kokan",
-                "Eski ve solmuş",
-                "Renksiz"
+                "Kendini herkesten üstün görme, büyüklük taslama",
+                "Herkese yardım etmeyi sevme, cömert olma",
+                "Çok neşeli, hareketli ve sevimli olma",
+                "Çalışkan ve azimli olma"
               ],
               "ans": 0,
-              "hint": "Mis gibi kokmak tertemiz ve harika kokuları ifade eder."
+              "hint": "Kibir; kendini başkalarından üstün görme ve büyüklük taslama durumudur."
             }
           ]
         }
@@ -5581,75 +5580,74 @@
           }
         ],
         "exam": {
-          "id": "turkce_tema2_exam",
-          "title": "2. Tema Değerlendirme Sınavı",
-          "book_ref": "MEB Kitabı s. 96",
-          "tasks": [
+          "title": "2. Tema Değerlendirme Sınavı (Atatürk ve Kahramanlarımız)",
+          "book_ref": "MEB Türkçe 1. Kitap s. 80 - 87",
+          "questions": [
             {
-              "q": "Metne göre Mustafa Kemal Atatürk, 19 Mayıs 1919'da nereye giderek halkı bağımsızlık için birleşmeye çağırmıştır? (s. 96)",
+              "q": "Cumhuriyetimizin kurucusu Gazi Mustafa Kemal Atatürk hangi şehirde ve kaç yılında doğmuştur?",
               "options": [
-                "Samsun'a",
-                "Ankara'ya",
-                "İzmir'e",
-                "Erzurum'a"
+                "Selanik - 1881",
+                "Ankara - 1923",
+                "İstanbul - 1919",
+                "Manastır - 1893"
               ],
               "ans": 0,
-              "hint": "Millî Mücadele'nin meşalesi 19 Mayıs 1919'da Samsun'da yakılmıştır."
+              "hint": "Mustafa Kemal Atatürk 1881 yılında Selanik'te dünyaya gelmiştir."
             },
             {
-              "q": "Mustafa Kemal Atatürk Türkiye Cumhuriyeti'ni hangi tarihte ilan etmiştir? (s. 96)",
+              "q": "29 Ekim'de milletçe büyük bir coşkuyla kutladığımız millî bayramımız hangisidir?",
               "options": [
-                "29 Ekim 1923",
-                "23 Nisan 1920",
-                "19 Mayıs 1919",
-                "30 Ağustos 1922"
+                "Cumhuriyet Bayramı",
+                "23 Nisan Ulusal Egemenlik Bayramı",
+                "19 Mayıs Gençlik ve Spor Bayramı",
+                "30 Ağustos Zafer Bayramı"
               ],
               "ans": 0,
-              "hint": "Cumhuriyetimiz 29 Ekim 1923 tarihinde kurulmuştur."
+              "hint": "Cumhuriyetimiz 29 Ekim 1923'te ilan edilmiştir."
             },
             {
-              "q": "Atatürk'ün \"Egemenlik kayıtsız şartsız milletindir!\" sözü ne anlama gelmektedir? (s. 96)",
+              "q": "Kurtuluş Savaşı'nda cepheye mermi taşırken cephaneyi korumak uğruna donarak şehit olan kadın kahramanımız kimdir?",
               "options": [
-                "Ülke yönetiminde en üstün gücün halkın kendi iradesi olduğu",
-                "Yalnızca tek bir kişinin karar vermesi gerektiği",
-                "Yabancı devletlerin yönetime karışması",
-                "Halkın oy kullanmaması"
+                "Şerife Bacı",
+                "Halide Edib Adıvar",
+                "Sabiha Gökçen",
+                "Afet İnan"
               ],
               "ans": 0,
-              "hint": "Millet kendi temsilcilerini seçerek devleti kendisi yönetir."
+              "hint": "Kastamonulu Şerife Bacı, İnebolu'dan cepheye mermi taşırken canını feda eden kahramanımızdır."
             },
             {
-              "q": "\"bağımsız\" sözcüğünün zıt anlamlısı aşağıdakilerden hangisidir? (s. 97)",
+              "q": "\"Vatan\" sözcüğünün EŞ ANLAMLISI (anlamdaşı) aşağıdakilerden hangisidir?",
               "options": [
-                "tutsak (bağımlı)",
-                "özgür",
-                "hür",
-                "serbest"
+                "Yurt",
+                "Bayrak",
+                "Millet",
+                "Toprak"
               ],
               "ans": 0,
-              "hint": "Bağımsızın karşıtı tutsak veya bağımlıdır."
+              "hint": "Vatan ve Yurt sözcükleri aynı anlamı ifade eder."
             },
             {
-              "q": "\"zafer\" sözcüğünün zıt anlamlısı hangisidir? (s. 97)",
+              "q": "Aşağıdaki cümlelerin hangisinde büyük harflerin yazımıyla ilgili bir KURAL İHLALİ yapılmıştır?",
               "options": [
-                "yenilgi",
-                "başarı",
-                "kazanç",
-                "ödül"
+                "Arkadaşım ahmet ile parka gittik.",
+                "Mustafa Kemal Selanik'te doğdu.",
+                "Türkiye Cumhuriyeti ilelebet payidar kalacaktır.",
+                "Ankara başkentimizdir."
               ],
               "ans": 0,
-              "hint": "Zafer kazanmanın karşıtı yenilgidir."
+              "hint": "Kişi adları (Ahmet) özel isimdir ve daima büyük harfle başlamalıdır."
             },
             {
-              "q": "\"Takımın başarısı için birlik içinde çalışmalıyız.\" cümlesinde altı çizili 'birlik' kelimesinin sözlük anlamı nedir? (s. 97)",
+              "q": "\"Cesur\" sözcüğünün ZIT (karşıt) anlamlısı hangisidir?",
               "options": [
-                "Birlikte olma, dayanışma ve uyum hali",
-                "Yalnız başına çalışma",
-                "Kavga etme",
-                "Yarışma"
+                "Korkak",
+                "Kahraman",
+                "Yiğit",
+                "Güçlü"
               ],
               "ans": 0,
-              "hint": "Birlik; bir amaç doğrultusunda el ele vermek ve dayanışmaktır."
+              "hint": "Cesur olanın zıttı, çabuk korkuya kapılan yani 'korkak'tır."
             }
           ]
         }
@@ -6096,75 +6094,74 @@
           }
         ],
         "exam": {
-          "id": "turkce_tema3_exam",
-          "title": "3. Tema Değerlendirme Sınavı",
-          "book_ref": "MEB Kitabı s. 138",
-          "tasks": [
+          "title": "3. Tema Değerlendirme Sınavı (Doğayı Tanıyoruz)",
+          "book_ref": "MEB Türkçe 2. Kitap s. 36 - 43",
+          "questions": [
             {
-              "q": "Metne göre gereksiz enerji kullanımı ve israf doğaya nasıl zarar verir? (s. 138)",
+              "q": "Toprağa ekilen bir tohumun uyanıp çimlenmesi ve fidan olması için en temel ihtiyaçları nelerdir?",
               "options": [
-                "Doğal kaynakların tükenmesine ve çevrenin kirlenmesine yol açar.",
-                "Doğayı daha temiz yapar.",
-                "Ağaçların daha hızlı büyümesini sağlar.",
-                "Canlı sayısını artırır."
+                "Su, hava (oksijen) ve uygun sıcaklık",
+                "Yalnızca şiddetli rüzgar ve koyu gölge",
+                "Sadece tuzlu su ve zifiri karanlık",
+                "Buzdolabı soğukluğu ve kış havası"
               ],
               "ans": 0,
-              "hint": "Bilinçsiz tüketim doğal dengenin bozulmasına neden olur."
+              "hint": "Tohumun çimlenmesi için suya, havaya ve ılık bir sıcaklığa ihtiyacı vardır."
             },
             {
-              "q": "Geri dönüşüm yaparak doğayı nasıl korumuş oluruz? (s. 138)",
+              "q": "Aşağıdaki cümlelerin hangisinde \"HAYAL ÜRÜNÜ\" (gerçekte gerçekleşmesi imkansız) bir durum anlatılmıştır?",
               "options": [
-                "Atıkları yeniden değerlendirip ağaçların kesilmesini ve kirliliği önleyerek",
-                "Bütün çöpleri denizlere dökerek",
-                "Daha çok plastik tüketerek",
-                "Çöpleri yakarak"
+                "Bulut neşeyle gökyüzünde şarkı söyleyip dans etti.",
+                "Göçmen kuşlar sonbaharda sıcak ülkelere uçar.",
+                "Bahar gelince ormandaki ağaçlar çiçek açtı.",
+                "Güneş sabahları doğudan doğar."
               ],
               "ans": 0,
-              "hint": "Geri dönüşüm hammadde ve enerji tasarrufu sağlar."
+              "hint": "Bulutların şarkı söyleyip dans etmesi insan dışı varlıklara hayalî özellikler verilmesidir."
             },
             {
-              "q": "\"Ayşe teyze misafirlerine çay ikram etti.\" cümlesinde altı çizili 'misafir' sözcüğünün eş anlamlısı hangisidir? (s. 139)",
+              "q": "\"Deniz dün ormanda sincapları fotoğrafladı.\" cümlesinde eylemi gerçekleştiren kişiyi bulmak için hangi soru sorulmalıdır?",
               "options": [
-                "konuk",
-                "komşu",
-                "akraba",
-                "arkadaş"
+                "Kim?",
+                "Ne zaman?",
+                "Nerede?",
+                "Nasıl?"
               ],
               "ans": 0,
-              "hint": "Misafir ile konuk eş anlamlı sözcüklerdir."
+              "hint": "İşi, eylemi yapan kişiyi (özneyi) bulmak için 'Kim?' sorusu sorulur."
             },
             {
-              "q": "\"Kardeşime çok güzel bir hediye aldım.\" cümlesinde altı çizili 'hediye' sözcüğünün eş anlamlısı hangisidir? (s. 139)",
+              "q": "Yeryüzündeki suların buharlaşarak göğe yükselmesi ve yağmur olarak yeryüzüne dönmesine ne ad verilir?",
               "options": [
-                "armağan",
-                "ödül",
-                "kitap",
-                "ücret"
+                "Su döngüsü",
+                "Hava kirliliği",
+                "Toprak kayması",
+                "Fırtına etkisi"
               ],
               "ans": 0,
-              "hint": "Hediye ile armağan eş anlamlı sözcüklerdir."
+              "hint": "Suyun yeryüzü ve atmosfer arasındaki sürekli çevrimine su döngüsü denir."
             },
             {
-              "q": "\"sabah okuluma gittim.\" cümlesinin yazım kurallarına uygun doğru yazılışı hangisidir? (s. 139)",
+              "q": "\"Küçük tohum toprağın altında sabırla baharı bekledi.\" cümlesinde toplam kaç sözcük (kelime) bulunmaktadır?",
               "options": [
-                "Sabah okuluma gittim.",
-                "sabah Okuluma gittim.",
-                "SABAH okuluma gittim.",
-                "sabah okuluma Gittim."
+                "7",
+                "6",
+                "8",
+                "5"
               ],
               "ans": 0,
-              "hint": "Cümlenin ilk harfi büyük harfle başlamalıdır."
+              "hint": "Küçük(1) tohum(2) toprağın(3) altında(4) sabırla(5) baharı(6) bekledi(7) = 7 kelime."
             },
             {
-              "q": "\"Bugün Ankara'dan dayım gelecek.\" cümlesinde özel isme gelen eki ayırmak için hangi noktalama işareti kullanılır? (s. 139)",
+              "q": "Okuduğunu anlama yöntemlerinden 5N1K kuralında olayın ZAMANINI bulmak için hangi soru yöneltilir?",
               "options": [
-                "Kesme işareti (')",
-                "Virgül (,)",
-                "Nokta (.)",
-                "Kısa çizgi (-)"
+                "Ne zaman?",
+                "Nerede?",
+                "Niçin?",
+                "Nasıl?"
               ],
               "ans": 0,
-              "hint": "Özel adlara getirilen çekim ekleri kesme işareti ile ayrılır."
+              "hint": "Zaman bildiren cevaba ulaşmak için 'Ne zaman?' diye sorulur."
             }
           ]
         }
@@ -6611,75 +6608,74 @@
           }
         ],
         "exam": {
-          "id": "turkce_tema4_exam",
-          "title": "4. Tema Değerlendirme Sınavı",
-          "book_ref": "MEB Kitabı s. 174",
-          "tasks": [
+          "title": "4. Tema Değerlendirme Sınavı (Bilgi Hazinemiz)",
+          "book_ref": "MEB Türkçe 2. Kitap s. 82 - 89",
+          "questions": [
             {
-              "q": "\"Kitaplarla Aydınlanan Dünya\" metnine göre kütüphanelerin en önemli özelliği nedir? (s. 174)",
+              "q": "Kütüphanede araştırma yaparken ve kitap okurken herkesin uyması gereken EN ÖNEMLİ kural nedir?",
               "options": [
-                "Kitapların düzenli saklandığı ve herkesin eşitçe okuyabildiği bilgi yuvaları olması",
-                "Sadece kitap satışı yapılan yerler olması",
-                "İçinde hiç kimsenin konuşmaması gereken karanlık yerler olması",
-                "Yalnızca yetişkinlere açık olması"
+                "Sessiz olmak ve başkalarının dikkatini dağıtmamak",
+                "Kulaklıksız yüksek sesle müzik dinlemek",
+                "Kitapların sayfalarını katlayıp resimler çizmek",
+                "Kütüphane içinde koşup oyun oynamak"
               ],
               "ans": 0,
-              "hint": "Kütüphaneler herkesin okuma hakkını kullandığı bilgi merkezleridir."
+              "hint": "Kütüphaneler ortak çalışma alanlarıdır; sessizlik temel kuraldır."
             },
             {
-              "q": "Tarih boyunca edebî şahsiyetler ne yaparak dilimizi zenginleştirmiştir? (s. 174)",
+              "q": "Aşağıdaki cümlelerin hangisi kurallı bir cümledir (yüklemi/eylemi sonda olan)?",
               "options": [
-                "Güzel şiirler ve hikâyeler yazarak bize geçmişi ve geleceği anlatmışlardır.",
-                "Yabancı dillerde konuşarak",
-                "Kitapları saklayarak",
-                "Kimseye eserlerini göstermeyerek"
+                "Zeynep kütüphaneden harika bir kitap ödünç aldı.",
+                "Ödünç aldı Zeynep kütüphaneden harika bir kitap.",
+                "Kitap okudu dün akşam Ali odasında.",
+                "Gidiyorum her gün erkenden okula ben."
               ],
               "ans": 0,
-              "hint": "Yazarlar ve şairler eserleriyle dilimizin gücünü artırmıştır."
+              "hint": "Kurallı cümlelerde iş, oluş veya hareket bildiren kelime cümlenin en sonunda yer alır."
             },
             {
-              "q": "Düzenli kitap okuma alışkanlığı kazanan kişilerde hangi özellikler gelişir? (s. 174)",
+              "q": "Bir şiirin her bir satırına ne ad verilir?",
               "options": [
-                "Bilgili, duyarlı ve geniş bakış açısına sahip olurlar.",
-                "Bencil ve iletişimsiz olurlar.",
-                "Yalnız kalmaktan korkarlar.",
-                "Düşüncelerini ifade edemezler."
+                "Dize (Mısra)",
+                "Kıta (Dörtlük)",
+                "Paragraf",
+                "Bölüm"
               ],
               "ans": 0,
-              "hint": "Okumak bireyin ufkunu genişletir ve duyarlılığını artırır."
+              "hint": "Şiirlerdeki tek bir satıra dize veya mısra denir."
             },
             {
-              "q": "\"Kütüpaneye gittiyimde raflarda kitap görürüm.\" cümlesinde altı çizili kelimelerin doğru yazılışı hangisidir? (s. 175)",
+              "q": "İnsanlığa faydalı yeni bir buluş, alet veya yöntem keşfeden kişilere ne ad verilir?",
               "options": [
-                "Kütüphaneye - gittiğimde",
-                "Kütüpaneye - gitiğimde",
-                "Kütühâneye - gittiğimde",
-                "Kütüphaneye - gittiyimde"
+                "Mucit",
+                "Kâşif",
+                "Yazar",
+                "Ressam"
               ],
               "ans": 0,
-              "hint": "Kütüphane ('h' ile) ve gittiğimde ('ğ' ile) yazılır."
+              "hint": "Daha önce var olmayan yeni bir şey icat eden kişiye mucit denir."
             },
             {
-              "q": "\"Her kitap farklı bir bilgi verir yada hikâye anlatır.\" cümlesindeki yazım yanlışı hangisidir? (s. 175)",
+              "q": "\"Akıl akıldan üstündür.\" atasözünün bize öğütlediği asıl fikir nedir?",
               "options": [
-                "\"yada\" bitişik yazılmıştır, \"ya da\" şeklinde ayrı yazılmalıdır.",
-                "\"kitap\" büyük harfle yazılmalıdır.",
-                "\"farklı\" kelimesi yanlıştır.",
-                "Cümlenin sonuna nokta konmamalıdır."
+                "Önemli konularda başkalarının bilgi ve fikrine danışmak faydalıdır.",
+                "Herkes her işi tek başına en mükemmel şekilde bilir.",
+                "Yeni bir şeyler öğrenmek için çalışmaya gerek yoktur.",
+                "Sadece yetişkin insanların aklı vardır."
               ],
               "ans": 0,
-              "hint": "'ya da' bağlacı her zaman ayrı yazılır."
+              "hint": "Bu atasözü dayanışmayı ve bilene danışmanın kıymetini anlatır."
             },
             {
-              "q": "\"Oysaki hergün biraz kitap okumak sözcük dağarcığımızı geliştirir.\" cümlesinde altı çizili ifadenin doğrusu nedir? (s. 175)",
+              "q": "Bir varlığın rengini, biçimini ve özelliklerini kelimelerle resim çizer gibi anlatmaya ne ad verilir?",
               "options": [
-                "her gün (ayrı yazılır)",
-                "hergünn",
-                "her-gün",
-                "hergun"
+                "Betimleme (Tasvir)",
+                "Özetleme",
+                "Tekerleme",
+                "Sıralama"
               ],
               "ans": 0,
-              "hint": "'her gün' ifadesi Türk Dil Kurumu kurallarına göre ayrı yazılır."
+              "hint": "Görülen bir yeri, nesneyi veya canlıyı kelimelerle canlandırmaya betimleme denir."
             }
           ]
         }

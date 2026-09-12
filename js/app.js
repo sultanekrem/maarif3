@@ -1416,6 +1416,7 @@
     // Konuları Render Et
     currentTheme.topics.forEach((topic, idx) => {
       const isCompleted = state.progress.completedTopics[topic.id];
+      const hasReading = topic.reading_pages && topic.reading_pages.length > 0;
       const card = document.createElement('div');
       card.className = 'topic-card-item';
 
@@ -1429,6 +1430,7 @@
           <p class="topic-desc">${topic.desc}</p>
         </div>
         <div class="topic-card-footer">
+          ${hasReading ? `<button class="btn-read-topic" data-topic-id="${topic.id}" title="Konuyu Oku">📖 Oku</button>` : ''}
           <button class="btn-topic-fact" data-topic-id="${topic.id}" title="3 Adımlı Hap Bilgi">
             <span>💡 Hap Bilgi</span>
           </button>
@@ -1437,6 +1439,14 @@
           </button>
         </div>
       `;
+
+      // 📖 Oku Butonu — Okuma Ekranına Git
+      if (hasReading) {
+        card.querySelector('.btn-read-topic').addEventListener('click', (e) => {
+          e.stopPropagation();
+          openReadingScreen(topic);
+        });
+      }
 
       // Hap Bilgi Kartı Butonu (3 Adımlı Gerçek Öğretici Modal)
       card.querySelector('.btn-topic-fact').addEventListener('click', (e) => {
@@ -1451,6 +1461,157 @@
       });
 
       listContainer.appendChild(card);
+    });
+  }
+
+  // ============================================================
+  // 📖 KONU OKUMA EKRANI (Reading Pages)
+  // ============================================================
+  let readingPageIndex = 0;
+  let readingTopic = null;
+
+  function openReadingScreen(topic) {
+    readingTopic = topic;
+    readingPageIndex = 0;
+    state.currentTopic = topic;
+
+    // Eğer reading_pages yoksa direk fact card'a git
+    if (!topic.reading_pages || topic.reading_pages.length === 0) {
+      openFactCard(topic);
+      return;
+    }
+
+    // Header bilgilerini doldur
+    const titleEl = document.getElementById('reading-topic-title');
+    if (titleEl) titleEl.textContent = topic.title || '';
+
+    const pageEl = document.getElementById('reading-book-page');
+    if (pageEl) pageEl.textContent = topic.page ? `📖 Sayfa ${topic.page}` : '📖 MEB Ders Kitabı';
+
+    renderReadingPage();
+    showScreen('screen-reading');
+  }
+
+  function renderReadingPage() {
+    if (!readingTopic || !readingTopic.reading_pages) return;
+    const pages = readingTopic.reading_pages;
+    const page = pages[readingPageIndex];
+    if (!page) return;
+
+    // Sayfa sayacı
+    const counterEl = document.getElementById('reading-page-num');
+    if (counterEl) counterEl.textContent = `${readingPageIndex + 1} / ${pages.length}`;
+
+    // Nokta göstergeleri
+    const dotsEl = document.getElementById('reading-dots');
+    if (dotsEl) {
+      dotsEl.innerHTML = pages.map((_, i) =>
+        `<div class="reading-dot${i === readingPageIndex ? ' active' : ''}"></div>`
+      ).join('');
+    }
+
+    // Kart tipi rengi
+    const card = document.getElementById('reading-page-card');
+    if (card) {
+      card.className = `reading-page-card type-${(page.type || '').replace(/[^a-z_]/g, '_')}`;
+    }
+
+    // Rozet (tip label)
+    const badgeEl = document.getElementById('reading-page-badge');
+    const typeLabels = {
+      hatirlayalim: '🔙 HATIRLAYALIM',
+      birlikte_ogrenelim: '📚 BİRLİKTE ÖĞRENELİM',
+      bilgi_kutusu: '💡 BİLGİ KUTUSU',
+      baglanti: '🔗 BAĞLANTI KURALIM',
+      etkinlik: '✏️ ETKİNLİK',
+      pekistir: '🎯 PEKİŞTİRELİM'
+    };
+    if (badgeEl) badgeEl.textContent = typeLabels[page.type] || '📖 OKUMA';
+
+    // İkon
+    const iconEl = document.getElementById('reading-page-icon');
+    if (iconEl) iconEl.textContent = page.icon || '📚';
+
+    // Başlık
+    const titleEl = document.getElementById('reading-page-title');
+    if (titleEl) titleEl.textContent = page.title || '';
+
+    // İçerik
+    const contentEl = document.getElementById('reading-page-content');
+    if (contentEl) contentEl.textContent = page.content || '';
+
+    // Örnek kutusu
+    const exampleBox = document.getElementById('reading-example-box');
+    const exampleText = document.getElementById('reading-example-text');
+    if (exampleBox && exampleText) {
+      if (page.example_box) {
+        exampleBox.classList.remove('hidden');
+        exampleText.textContent = page.example_box;
+      } else {
+        exampleBox.classList.add('hidden');
+      }
+    }
+
+    // Navigasyon butonları
+    const prevBtn = document.getElementById('btn-reading-prev');
+    const nextBtn = document.getElementById('btn-reading-next');
+    const ctaBar = document.getElementById('reading-cta-bar');
+
+    if (prevBtn) prevBtn.disabled = readingPageIndex === 0;
+
+    const isLastPage = readingPageIndex === pages.length - 1;
+    if (nextBtn) {
+      nextBtn.style.display = isLastPage ? 'none' : '';
+    }
+    if (ctaBar) ctaBar.style.display = isLastPage ? 'flex' : 'none';
+  }
+
+  function initReadingScreenEvents() {
+    const prevBtn = document.getElementById('btn-reading-prev');
+    const nextBtn = document.getElementById('btn-reading-next');
+    const voiceBtn = document.getElementById('btn-reading-voice');
+    const backBtn = document.getElementById('btn-back-from-reading');
+    const toFactBtn = document.getElementById('btn-reading-to-fact');
+    const toQuizBtn = document.getElementById('btn-reading-to-quiz');
+
+    if (prevBtn) prevBtn.addEventListener('click', () => {
+      if (readingPageIndex > 0) {
+        readingPageIndex--;
+        renderReadingPage();
+      }
+    });
+
+    if (nextBtn) nextBtn.addEventListener('click', () => {
+      if (readingTopic && readingPageIndex < readingTopic.reading_pages.length - 1) {
+        readingPageIndex++;
+        renderReadingPage();
+      }
+    });
+
+    if (voiceBtn) voiceBtn.addEventListener('click', () => {
+      if (!readingTopic || !readingTopic.reading_pages) return;
+      const page = readingTopic.reading_pages[readingPageIndex];
+      if (!page) return;
+      const text = `${page.title}. ${page.content}${page.example_box ? '. Örnek: ' + page.example_box : ''}`;
+      // Use SpeechService.toggleQuestion with a synthetic TR-only task
+      SpeechService.toggleQuestion({ q: text, options: [] }, voiceBtn);
+    });
+
+    if (backBtn) backBtn.addEventListener('click', () => {
+      SpeechService.stop();
+      renderThemeTabs();
+      renderTopicsList();
+      showScreen('screen-topics');
+    });
+
+    if (toFactBtn) toFactBtn.addEventListener('click', () => {
+      SpeechService.stop();
+      if (readingTopic) openFactCard(readingTopic);
+    });
+
+    if (toQuizBtn) toQuizBtn.addEventListener('click', () => {
+      SpeechService.stop();
+      if (readingTopic) startTopicQuiz(readingTopic);
     });
   }
 
@@ -2333,6 +2494,7 @@
   // 8. Genel Olay Dinleyicileri
   function initEventListeners() {
     initStudentProfileModal();
+    initReadingScreenEvents();
 
     // Splash Başlat Butonu
     const btnStart = document.getElementById('btn-start-app');

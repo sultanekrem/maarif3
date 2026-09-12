@@ -71,7 +71,28 @@
               "rule": "3 basamaklı bir sayıyı okurken soldan sağa doğru: önce Yüzler basamağını söyler ve sonuna 'yüz' ekleriz, sonra Onlar basamağını ve en son Birler basamağını okuruz. Sayıları yazıyla yazarken her kelimeyi mutlaka ayrı yazarız.",
               "example": "452 sayısında: 4 yüzlük ('Dört yüz') + 5 onluk ('elli') + 2 birlik ('iki') = 'Dört yüz elli iki'. Markette 325 TL'lik bir mont gördüğünde bunu 'Üç yüz yirmi beş lira' diye okursun.",
               "tip": "Basamağında 0 (sıfır) olan yer okunmaz! 704 sayısı 'Yedi yüz dört' diye okunur ('yedi yüz sıfır dört' DEMEYİZ). Ayrıca sayılar yazıyla yazılırken bitişik değil AYRI yazılır: 'üçyüz' YANLIŞ, 'üç yüz' DOĞRU!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım!",
+                "icon": "🔙",
+                "content": "2. sınıfta 2 basamaklı sayıları öğrendik. Onlar ve birler basamağını hatırlayalım. Örneğin 54 sayısında: 5 onluk (50) + 4 birlik (4) = 54."
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "Artık 3 basamaklı sayıları öğreniyoruz! 100den büyük sayılarda YENİ bir basamak vardır: YÜZLER basamağı. 223 sayısında: 2 yüzlük + 2 onluk + 3 birlik bulunur. Yüzlük taban bloklarıyla sayıları modelleyebiliriz.",
+                "example_box": "348 sayısı:\n🟦 3 Yüzlük = 300\n🟩 4 Onluk = 40\n🟨 8 Birlik = 8\nToplam: 300 + 40 + 8 = 348"
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Dikkat!",
+                "icon": "⚠️",
+                "content": "Sıfır (0) olan basamak okunmaz! 704 sayısı Yedi yüz dört diye okunur. Yedi yüz sıfır dört YANLIŞ! Ayrıca sayılar yazıyla yazılırken ayrı yazılır: üç yüz DOĞRU, üçyüz YANLIŞ."
+              }
+            ]
           },
           {
             "id": "mat_t1_2",
@@ -132,7 +153,28 @@
               "rule": "Bir sayıyı çözümlerken her rakamı basamak değeriyle yazar veya basamak değerlerinin toplamı olarak ifade ederiz: (Yüzler x 100) + (Onlar x 10) + (Birler x 1).",
               "example": "748 sayısını çözümlersek: 7 yüzlük (700) + 4 onluk (40) + 8 birlik (8) -> 700 + 40 + 8 = 748 eder. Kumbaranda 7 tane 100 TL, 4 tane 10 TL ve 8 tane 1 TL olması gibidir.",
               "tip": "SAYI DEĞERİ ile BASAMAK DEĞERİNİ karıştırma! 748 sayısında 7'nin sayı değeri sadece 7'dir; ancak yüzler basamağında olduğu için basamak değeri 700'dür! 0'ın basamak değeri her zaman 0'dır."
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım!",
+                "icon": "🔙",
+                "content": "3 basamaklı sayılarda YÜZLER, ONLAR ve BİRLER basamağı vardır. Her basamağın bir değeri var."
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "Bir sayıyı ÇÖZÜMLEMEK, onu basamak değerlerine ayırmak demektir. Kumbarandaki paralar gibi düşünebilirsin: 100 TL, 10 TL ve 1 TL.",
+                "example_box": "748 sayısını çözümleyelim:\n7 x 100 = 700 (yüzler)\n4 x 10 = 40 (onlar)\n8 x 1 = 8 (birler)\n700 + 40 + 8 = 748"
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Bilgi Kutusu",
+                "icon": "💡",
+                "content": "SAYI DEĞERİ ile BASAMAK DEĞERİNİ karıştırma! 748 sayısında 7 rakamının sayı değeri 7dir ama BASAMAK DEĞERİ 700dür! 0in basamak değeri her zaman 0dir."
+              }
+            ]
           },
           {
             "id": "mat_t1_3",
@@ -181,7 +223,28 @@
               "rule": "3 basamaklı sayıları sıralarken ilk önce en soldaki YÜZLER basamağına bakılır. Yüzler basamağı büyük olan sayı her zaman daha büyüktür. Yüzler eşitse onlar basamağına, onlar da eşitse birler basamağına bakılır.",
               "example": "645 ve 599 sayılarını karşılaştıralım: 6 yüzlük, 5 yüzlükten büyük olduğu için diğer basamaklara bakmaya gerek yoktur: 645 > 599!",
               "tip": "Timsah sembolünün (< veya >) açık olan geniş ağzı her zaman BÜYÜK sayıyı yemek ister! Sivri uç ise küçük sayıyı gösterir: 820 > 815."
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım!",
+                "icon": "🔙",
+                "content": "< ve > sembolleri sayıları karşılaştırmak için kullanılır. Timsahın ağzı her zaman büyük sayıyı yer!"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "3 basamaklı sayıları karşılaştırırken SOLDAN SAĞA bakarız. Önce YÜZLER basamağına! Yüzler aynıysa ONLAR, onlar da aynıysa BİRLER basamağına bakarız.",
+                "example_box": "645 ve 599 karşılaştırması:\nYüzler: 6 > 5 olduğu için\n645 > 599\n(Diğer basamaklara bakmaya gerek yok!)"
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Timsah Kuralı",
+                "icon": "🐊",
+                "content": "< ve > sembollerinin açık ağzı BÜYÜK sayıyı gösterir. Sivri ucu küçük sayıya bakar. Örnek: 820 > 815 (820, 815ten büyük)"
+              }
+            ]
           },
           {
             "id": "mat_t1_4",
@@ -242,7 +305,28 @@
               "rule": "Ritmik sayma belirli bir kurala göre ileriye veya geriye doğru eşit adımlarla saymaktır. 6'şar, 7'şer, 8'er ve 9'ar sayarken her adımda tam o sayı kadar eklenir veya çıkarılır.",
               "example": "6'şar ritmik sayma: 6, 12, 18, 24, 30, 36, 42, 48, 54, 60. Yumurtaları 6'şar paketlerken kaç yumurta olduğunu bu saymayla hemen bulabilirsin.",
               "tip": "Ritmik saymalar çarpım tablosunun temelidir! Örneğin 7'şer sayarken 4. söylediğin sayı (7, 14, 21, 28) doğrudan 4 x 7 = 28 işleminin sonucudur!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım!",
+                "icon": "🔙",
+                "content": "2şer, 5er, 10ar saymayı biliyoruz. Şimdi daha büyük sayılarla ritmik saymayı öğreneceğiz!"
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "Ritmik sayma, eşit aralıklarla ileri veya geri saymaktır. 6şar, 7şer, 8er ve 9ar saymayı öğreneceğiz. 100lük tabloda ritmik sayma kalıplarını görebilirsin!",
+                "example_box": "6şar ileri sayma:\n6 → 12 → 18 → 24 → 30 → 36\n\n8er geri sayma:\n80 → 72 → 64 → 56 → 48 → 40"
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "İpucu",
+                "icon": "💡",
+                "content": "Ritmik saymada bir sayı eksikse: önceki sayıya adımı ekle ya da sonraki sayıdan adımı çıkar! Örnek: 6-12-?-24 → 12+6=18"
+              }
+            ]
           },
           {
             "id": "mat_t1_5",
@@ -292,7 +376,28 @@
               "rule": "Bir doğal sayının tek mi çift mi olduğunu anlamak için SADECE EN SAĞDAKİ BİRLER basamağına bakılır. Birler basamağı 0, 2, 4, 6, 8 ise ÇİFT; 1, 3, 5, 7, 9 ise TEK sayıdır.",
               "example": "748 sayısının birler basamağında 8 olduğu için ÇİFTTİR. 931 sayısının birler basamağında 1 olduğu için TEKTİR. Ayakkabılarımızı ikişer eşleştirdiğimizde tek kalmıyorsa çifttir.",
               "tip": "Yüzler ve onlar basamağındaki sayılar ne kadar büyük olursa olsun tekliği ve çiftliği DEĞİŞTİRMEZ! 991 sayısında yüzler ve onlar 9 olsa bile birler basamağı 1 olduğu için TEK sayıdır!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım!",
+                "icon": "🔙",
+                "content": "2şer saydığımızda geçtiğimiz sayılar ÇİFT, atladıklarımız TEK sayılardır. 2, 4, 6, 8, 10... çift; 1, 3, 5, 7, 9... tek."
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "3 basamaklı sayılarda da tek-çift kuralı BİRLER BASAMAĞINA göre belirlenir! Birler basamağındaki rakam 0, 2, 4, 6 veya 8 ise sayı ÇİFT; 1, 3, 5, 7 veya 9 ise sayı TEKtir.",
+                "example_box": "ÇİFT sayılar: 124, 350, 788, 996\n(Birler: 4, 0, 8, 6)\n\nTEK sayılar: 135, 271, 489, 653\n(Birler: 5, 1, 9, 3)"
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Kural",
+                "icon": "💡",
+                "content": "Hangi basamakta ne olduğuna bakmaya gerek yok! Sadece BİRLER basamağına bak. Birler 0, 2, 4, 6, 8 ise ÇİFT. Birler 1, 3, 5, 7, 9 ise TEK."
+              }
+            ]
           },
           {
             "id": "mat_t1_6",
@@ -342,7 +447,28 @@
               "rule": "İki sayıyı toplarken: Tek + Tek = ÇİFT, Çift + Çift = ÇİFT olur. Sadece Tek + Çift toplandığında sonuç TEK olur!",
               "example": "3 (Tek) + 5 (Tek) = 8 (Çift). 4 (Çift) + 6 (Çift) = 10 (Çift). 3 (Tek) + 4 (Çift) = 7 (Tek).",
               "tip": "Aynı tür sayıların toplamı her zaman ÇİFTTİR (Tek+Tek=Çift, Çift+Çift=Çift). Sadece farklı türler toplandığında sonuç TEK çıkar!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım!",
+                "icon": "🔙",
+                "content": "Tek sayılar 1, 3, 5, 7, 9... ile biter. Çift sayılar 0, 2, 4, 6, 8... ile biter."
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "İki sayı topladığımızda sonuç tek mi çift mi olur? Bunu önceden tahmin edebiliriz!",
+                "example_box": "ÇİFT + ÇİFT = ÇİFT\n(4 + 6 = 10)\n\nTEK + TEK = ÇİFT\n(3 + 5 = 8)\n\nÇİFT + TEK = TEK\n(4 + 3 = 7)\n\nTEK + ÇİFT = TEK\n(5 + 2 = 7)"
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Kural",
+                "icon": "💡",
+                "content": "İki AYNI cinsten sayı (ikisi de tek veya ikisi de çift) toplandığında sonuç her zaman ÇİFTtir. FARKLI cinsten sayılar toplandığında sonuç her zaman TEKtir."
+              }
+            ]
           },
           {
             "id": "mat_t1_7",
@@ -381,7 +507,28 @@
               "rule": "Sayı veya şekil örüntüsünde sayılar arasındaki artış veya azalış miktarı her zaman kurala bağlıdır. Önce yan yana iki sayı arasındaki fark bulunarak kural belirlenir.",
               "example": "12 - 17 - 22 - 27 - ? örüntüsünde: 17 - 12 = 5 artmış. Kural: 'Sayılar 5'er artıyor'. O halde soru işareti yerine 27 + 5 = 32 gelmelidir.",
               "tip": "Bazen örüntüler iki farklı kural içerebilir (örneğin: 2 ekle, 1 çıkar). Sadece ilk iki sayıya değil, tüm sıraya bakarak kuralı doğrula!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım!",
+                "icon": "🔙",
+                "content": "Örüntü, tekrar eden düzenli bir sıradır. Hayatta birçok yerde örüntü görebiliriz: zemin desenleri, müzik ritimleri, sayı serileri."
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "Sayı örüntülerinde her sayı bir kurala göre değişir. Şekil örüntülerinde ise şekiller belirli bir sırayla tekrar eder. Örüntünün kuralını bulmak için ilk birkaç elemanı dikkatle inceleriz.",
+                "example_box": "Sayı örüntüsü: 3, 6, 9, 12, ? → Kural: +3, Sonraki: 15\n\nŞekil örüntüsü: ⬛🔴⬛🔴⬛? → Kural: Siyah-Kırmızı tekrar, Sonraki: 🔴"
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "İpucu",
+                "icon": "💡",
+                "content": "Örüntünün kuralını bulmak için: iki ardışık eleman arasındaki farkı veya ilişkiyi hesapla. Sonra bu kuralın devam edip etmediğini kontrol et!"
+              }
+            ]
           },
           {
             "id": "mat_t1_8",
@@ -582,7 +729,28 @@
               "rule": "Bir bütünün tamamına BÜTÜN (1/1), iki eş parçasından her birine YARIM (1/2), dört eş parçasından her birine ÇEYREK (1/4) denir.",
               "example": "1 bütün elmayı ortadan ikiye kestiğimizde 2 yarım elma, dörde böldüğümüzde ise 4 çeyrek elma elde ederiz.",
               "tip": "Kesir gösteriminde alttaki sayı (payda) bütünün kaç parçaya bölündüğünü, üstteki sayı (pay) ise kaç parçanın alındığını gösterir!"
-            }
+            },
+            "reading_pages": [
+              {
+                "type": "hatirlayalim",
+                "title": "Hatırlayalım!",
+                "icon": "🔙",
+                "content": "Bir bütünü eşit parçalara bölebiliriz. Elmayı 2 eşit parçaya böldüğümüzde her parça yarım olur."
+              },
+              {
+                "type": "birlikte_ogrenelim",
+                "title": "Birlikte Öğrenelim",
+                "icon": "📚",
+                "content": "Kesirleri yazarken PAY ve PAYDA kullanırız. Payda (alt sayı) toplam parça sayısını, pay (üst sayı) alınan parça sayısını gösterir.",
+                "example_box": "Bütün = 1 (tüm parçalar)\nYarım = 1/2 (2 eşit parçanın 1i)\nÇeyrek = 1/4 (4 eşit parçanın 1i)"
+              },
+              {
+                "type": "bilgi_kutusu",
+                "title": "Kesir Nedir?",
+                "icon": "💡",
+                "content": "Kesirde PAYDA, bütünün kaç EŞİT parçaya bölündüğünü gösterir. PAY ise kaç parça aldığımızı gösterir. Parçalar EŞİT OLMALIDIR! Eşit olmayan parçalar kesir gösterilemez."
+              }
+            ]
           },
           {
             "id": "mat_t2_2",

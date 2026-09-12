@@ -334,6 +334,55 @@
       </main>
     </div>
 
+    <!-- 3b. SCREEN READING (Konu Okuma & İçerik Kartları) -->
+    <div id="screen-reading" class="screen">
+      <header class="reading-header">
+        <button id="btn-back-from-reading" class="btn-back">
+          <span class="back-arrow">←</span> <span id="reading-back-label">Konular</span>
+        </button>
+        <div class="reading-header-info">
+          <span id="reading-topic-title" class="reading-topic-name">Konu Başlığı</span>
+          <span id="reading-book-page" class="reading-page-badge">📖 Sayfa 12</span>
+        </div>
+        <div class="reading-page-counter">
+          <span id="reading-page-num">1 / 3</span>
+        </div>
+      </header>
+
+      <main class="reading-main">
+        <!-- Reading page content -->
+        <div class="reading-page-card" id="reading-page-card">
+          <div class="reading-page-type-badge" id="reading-page-badge">📚 BİRLİKTE ÖĞRENELİM</div>
+          <div class="reading-page-icon" id="reading-page-icon">📚</div>
+          <h2 class="reading-page-title" id="reading-page-title">Birlikte Öğrenelim</h2>
+          <div class="reading-page-content" id="reading-page-content">İçerik yükleniyor...</div>
+          <div class="reading-example-box hidden" id="reading-example-box">
+            <div class="reading-example-label">📝 Örnek:</div>
+            <div class="reading-example-text" id="reading-example-text"></div>
+          </div>
+        </div>
+
+        <!-- Page dots indicator -->
+        <div class="reading-dots" id="reading-dots"></div>
+      </main>
+
+      <!-- Fixed bottom navigation -->
+      <div class="reading-nav-bar">
+        <button id="btn-reading-prev" class="btn-reading-nav btn-reading-prev" disabled>← Önceki</button>
+        <button id="btn-reading-voice" class="btn-reading-voice" type="button">
+          <span>🔊</span>
+          <span class="reading-voice-text">Sesli Dinle</span>
+        </button>
+        <button id="btn-reading-next" class="btn-reading-nav btn-reading-next">Sonraki →</button>
+      </div>
+
+      <!-- Bottom CTA (shown on last page) -->
+      <div class="reading-cta-bar" id="reading-cta-bar" style="display:none">
+        <button id="btn-reading-to-fact" class="btn-reading-cta-secondary">💡 Hap Bilgiyi Gör</button>
+        <button id="btn-reading-to-quiz" class="btn-reading-cta-primary">🚀 Soruları Çöz!</button>
+      </div>
+    </div>
+
     <!-- 5. SCREEN EXAM (Resmî MEB Tema Değerlendirme Deneme Sınavı - Oyun Arenası) -->
     <div id="screen-exam" class="screen arena-screen">
       <header class="exam-header">

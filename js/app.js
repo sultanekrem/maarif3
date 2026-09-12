@@ -1512,7 +1512,7 @@
     showScreen('screen-reading');
   }
 
-  function renderReadingPage() {
+  function renderReadingPage(direction = 'none') {
     if (!readingTopic || !readingTopic.reading_pages) return;
     const pages = readingTopic.reading_pages;
     const page = pages[readingPageIndex];
@@ -1659,6 +1659,16 @@
 
     card.innerHTML = html;
 
+    // Sayfa geçiş animasyonu
+    card.classList.remove('slide-from-right', 'slide-from-left');
+    if (direction === 'next') {
+      void card.offsetWidth; // Reflow tetikle
+      card.classList.add('slide-from-right');
+    } else if (direction === 'prev') {
+      void card.offsetWidth; // Reflow tetikle
+      card.classList.add('slide-from-left');
+    }
+
     // Scroll'u sayfanın başına al
     const mainContainer = document.querySelector('.reading-main');
     if (mainContainer) mainContainer.scrollTop = 0;
@@ -1688,16 +1698,62 @@
     if (prevBtn) prevBtn.addEventListener('click', () => {
       if (readingPageIndex > 0) {
         readingPageIndex--;
-        renderReadingPage();
+        renderReadingPage('prev');
       }
     });
 
     if (nextBtn) nextBtn.addEventListener('click', () => {
       if (readingTopic && readingPageIndex < readingTopic.reading_pages.length - 1) {
         readingPageIndex++;
-        renderReadingPage();
+        renderReadingPage('next');
       }
     });
+
+    // Mobil & Tablet dokunarak sayfa kaydırma (Touch Swipe)
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchStartTime = 0;
+
+    const readingMain = document.querySelector('.reading-main');
+    if (readingMain) {
+      readingMain.addEventListener('touchstart', (e) => {
+        if (!e.touches || e.touches.length !== 1) return;
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+        touchStartTime = Date.now();
+      }, { passive: true });
+
+      readingMain.addEventListener('touchend', (e) => {
+        if (!readingTopic || !readingTopic.reading_pages) return;
+        if (!e.changedTouches || e.changedTouches.length !== 1) return;
+
+        const touchEndX = e.changedTouches[0].clientX;
+        const touchEndY = e.changedTouches[0].clientY;
+        const diffX = touchEndX - touchStartX;
+        const diffY = touchEndY - touchStartY;
+        const duration = Date.now() - touchStartTime;
+
+        // Çok yavaş kaydırmalar veya uzun basmaları filtrele
+        if (duration > 800) return;
+
+        // Yatay kaydırma dikey içerik kaydırmasından belirgin şekilde büyük olmalı
+        if (Math.abs(diffX) > 45 && Math.abs(diffX) > Math.abs(diffY) * 1.3) {
+          if (diffX < 0) {
+            // Sola kaydırıldı -> Sonraki sayfa
+            if (readingPageIndex < readingTopic.reading_pages.length - 1) {
+              readingPageIndex++;
+              renderReadingPage('next');
+            }
+          } else {
+            // Sağa kaydırıldı -> Önceki sayfa
+            if (readingPageIndex > 0) {
+              readingPageIndex--;
+              renderReadingPage('prev');
+            }
+          }
+        }
+      }, { passive: true });
+    }
 
     if (voiceBtn) voiceBtn.addEventListener('click', () => {
       if (!readingTopic || !readingTopic.reading_pages) return;

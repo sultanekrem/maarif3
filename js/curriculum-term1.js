@@ -75,23 +75,40 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım!",
-                "icon": "🔙",
-                "content": "2. sınıfta 2 basamaklı sayıları öğrendik. Onlar ve birler basamağını hatırlayalım. Örneğin 54 sayısında: 5 onluk (50) + 4 birlik (4) = 54."
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: KEŞİF VE MODELLEME",
+                "title": "3 Basamaklı Sayıların Doğuşu & Taban Blokları",
+                "story": "Pazarcı Ali Amca kasadaki elmaları sayıyordu. 99 elmaya 1 elma daha ekleyince tam 100 elma oldu! İki basamaklı sayılar bitti, artık 3 basamaklı sayılar dünyasındayız!",
+                "content": "Üç basamaklı doğal sayılar 100 ile başlar, 999'a kadar devam eder. Bir sayıda üç basamak vardır: soldan sağa doğru YÜZLER, ONLAR ve BİRLER basamağı.",
+                "model_html": "\n        <div class=\"book-visual-blocks\">\n          <div class=\"block-card block-hundreds\">\n            <div class=\"block-icon\">🟦 🟦 🟦</div>\n            <div class=\"block-title\">3 Yüzlük Levha</div>\n            <div class=\"block-val\">300</div>\n          </div>\n          <span class=\"block-math-sign\">+</span>\n          <div class=\"block-card block-tens\">\n            <div class=\"block-icon\">🟩 🟩 🟩 🟩</div>\n            <div class=\"block-title\">4 Onluk Çubuk</div>\n            <div class=\"block-val\">40</div>\n          </div>\n          <span class=\"block-math-sign\">+</span>\n          <div class=\"block-card block-ones\">\n            <div class=\"block-icon\">🟨 🟨 🟨 🟨 🟨 🟨 🟨 🟨</div>\n            <div class=\"block-title\">8 Birlik Küp</div>\n            <div class=\"block-val\">8</div>\n          </div>\n          <span class=\"block-math-sign\">=</span>\n          <div class=\"block-card block-result\">\n            <div class=\"block-title\">Oluşan Sayı</div>\n            <div class=\"block-val\">348</div>\n          </div>\n        </div>\n        ",
+                "tip": "10 tane birlik bir araya gelince 1 ONLUK eder. 10 tane onluk bir araya gelince 1 YÜZLÜK eder!"
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "📚",
-                "content": "Artık 3 basamaklı sayıları öğreniyoruz! 100den büyük sayılarda YENİ bir basamak vardır: YÜZLER basamağı. 223 sayısında: 2 yüzlük + 2 onluk + 3 birlik bulunur. Yüzlük taban bloklarıyla sayıları modelleyebiliriz.",
-                "example_box": "348 sayısı:\n🟦 3 Yüzlük = 300\n🟩 4 Onluk = 40\n🟨 8 Birlik = 8\nToplam: 300 + 40 + 8 = 348"
+                "type": "tablo",
+                "badge": "📊 2. BÖLÜM: BASAMAK TABLOSU VE OKUMA",
+                "title": "Sayıları Doğru Okuma ve Yazma Kuralları",
+                "content": "Üç basamaklı bir sayıyı okurken soldan sağa doğru: önce Yüzler basamağındaki rakamı söyler ve sonuna 'yüz' kelimesini ekleriz, sonra Onlar basamağını, en son Birler basamağını okuruz.",
+                "table_html": "\n        <div class=\"book-table-wrap\">\n          <table class=\"book-table\">\n            <thead>\n              <tr>\n                <th style=\"background:#4F46E5;color:#fff;\">Yüzler Basamağı</th>\n                <th style=\"background:#0284C7;color:#fff;\">Onlar Basamağı</th>\n                <th style=\"background:#059669;color:#fff;\">Birler Basamağı</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr class=\"t-digits\">\n                <td><strong>4</strong></td>\n                <td><strong>7</strong></td>\n                <td><strong>2</strong></td>\n              </tr>\n              <tr class=\"t-values\">\n                <td>4 × 100 = <strong>400</strong></td>\n                <td>7 × 10 = <strong>70</strong></td>\n                <td>2 × 1 = <strong>2</strong></td>\n              </tr>\n            </tbody>\n            <tfoot>\n              <tr>\n                <td colspan=\"3\" class=\"t-reading\">🗣️ Okunuşu: <strong>\"Dört yüz yetmiş iki\"</strong></td>\n              </tr>\n            </tfoot>\n          </table>\n        </div>\n        ",
+                "info_box": {
+                  "title": "MEB ALTIN BİLGİ KUTUSU & PÜF NOKTASI",
+                  "content": "⚠️ Sıfır (0) olan basamak okunmaz! Örnek: 704 sayısı 'Yedi yüz dört' diye okunur ('yedi yüz sıfır dört' DEMEYİZ!).\\n✍️ Sayılar yazıyla yazılırken her kelime AYRI yazılır: 'üç yüz elli' DOĞRU, 'üçyüzelli' YANLIŞ!"
+                }
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Dikkat!",
-                "icon": "⚠️",
-                "content": "Sıfır (0) olan basamak okunmaz! 704 sayısı Yedi yüz dört diye okunur. Yedi yüz sıfır dört YANLIŞ! Ayrıca sayılar yazıyla yazılırken ayrı yazılır: üç yüz DOĞRU, üçyüz YANLIŞ."
+                "type": "uygulama",
+                "badge": "🔍 3. BÖLÜM: GÜNLÜK HAYAT & SEN DE DENE",
+                "title": "Hayatımızdaki 3 Basamaklı Sayılar",
+                "content": "Çevremize baktığımızda her gün üç basamaklı sayılarla karşılaşırız.",
+                "daily_life": [
+                  "🚑 112: Türkiye'deki tüm acil durumlar için aranan tek numara.",
+                  "📖 186: 3. sınıf Türkçe ders kitabımızın toplam sayfa sayısı.",
+                  "💰 350 TL: Bir montun veya spor ayakkabının mağazadaki fiyatı.",
+                  "🚌 145: Okulumuzun önünden geçen belediye otobüsünün hat numarası."
+                ],
+                "try_box": {
+                  "question": "Sen de Dene: Birler basamağında 6, yüzler basamağında 5, onlar basamağında 0 olan sayı kaçtır ve nasıl okunur?",
+                  "answer": "Sayı: 506. Okunuşu: 'Beş yüz altı'. Onlar basamağında sıfır olduğu için onlar basamağını atlayarak doğrudan birler basamağını okuruz!"
+                }
               }
             ]
           },
@@ -157,23 +174,28 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım!",
-                "icon": "🔙",
-                "content": "3 basamaklı sayılarda YÜZLER, ONLAR ve BİRLER basamağı vardır. Her basamağın bir değeri var."
+                "type": "kesif",
+                "badge": "🧱 1. BÖLÜM: ÇÖZÜMLEME NEDİR?",
+                "title": "Sayıları Parçalarına Ayırma Sanatı",
+                "story": "Kumbaranı açtığında içindeki paraları sayarken ne yaparsın? Önce 100 TL'lik banknotları, sonra 10 TL'likleri, en son 1 TL'lik madenî paraları ayırırsın değil mi? İşte matematikçiler buna ÇÖZÜMLEME der!",
+                "content": "Bir sayıyı basamak değerlerinin toplamı şeklinde yazmaya sayıyı ÇÖZÜMLEME denir. Sayıyı yüzlük, onluk ve birliklerine ayırarak değerini daha kolay anlarız.",
+                "model_html": "\n        <div class=\"book-formula-card\">\n          <div class=\"formula-title\">748 Sayısını Çözümleyelim:</div>\n          <div class=\"formula-steps\">\n            <div class=\"f-step\">🟦 7 Yüzlük = 7 × 100 = <strong>700</strong></div>\n            <div class=\"f-step\">🟩 4 Onluk = 4 × 10 = <strong>40</strong></div>\n            <div class=\"f-step\">🟨 8 Birlik = 8 × 1 = <strong>8</strong></div>\n          </div>\n          <div class=\"formula-result\">Toplam: 700 + 40 + 8 = <strong>748</strong></div>\n        </div>\n        ",
+                "tip": "Sayı değeri ile basamak değerini karıştırma! 748 sayısında 7'nin sayı değeri sadece 7'dir; ama basamak değeri tam 700'dür!"
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "📚",
-                "content": "Bir sayıyı ÇÖZÜMLEMEK, onu basamak değerlerine ayırmak demektir. Kumbarandaki paralar gibi düşünebilirsin: 100 TL, 10 TL ve 1 TL.",
-                "example_box": "748 sayısını çözümleyelim:\n7 x 100 = 700 (yüzler)\n4 x 10 = 40 (onlar)\n8 x 1 = 8 (birler)\n700 + 40 + 8 = 748"
-              },
-              {
-                "type": "bilgi_kutusu",
-                "title": "Bilgi Kutusu",
-                "icon": "💡",
-                "content": "SAYI DEĞERİ ile BASAMAK DEĞERİNİ karıştırma! 748 sayısında 7 rakamının sayı değeri 7dir ama BASAMAK DEĞERİ 700dür! 0in basamak değeri her zaman 0dir."
+                "type": "tablo",
+                "badge": "📊 2. BÖLÜM: ÇÖZÜMLEME YÖNTEMLERİ",
+                "title": "Farklı Şekillerde Çözümleme",
+                "content": "Bir sayıyı iki farklı şekilde çözümleyebiliriz: Basamak adlarıyla veya basamak değerleriyle.",
+                "table_html": "\n        <div class=\"book-table-wrap\">\n          <table class=\"book-table\">\n            <thead>\n              <tr>\n                <th>Sayı</th>\n                <th>Basamak Adlarıyla Çözümleme</th>\n                <th>Basamak Değerleriyle Toplam</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td><strong>652</strong></td>\n                <td>6 yüzlük + 5 onluk + 2 birlik</td>\n                <td>600 + 50 + 2</td>\n              </tr>\n              <tr>\n                <td><strong>809</strong></td>\n                <td>8 yüzlük + 0 onluk + 9 birlik</td>\n                <td>800 + 9</td>\n              </tr>\n              <tr>\n                <td><strong>940</strong></td>\n                <td>9 yüzlük + 4 onluk + 0 birlik</td>\n                <td>900 + 40</td>\n              </tr>\n            </tbody>\n          </table>\n        </div>\n        ",
+                "info_box": {
+                  "title": "MEB DİKKAT KUTUSU: SIFIRIN BASAMAK DEĞERİ",
+                  "content": "0 (sıfır) rakamı hangi basamakta olursa olsun basamak değeri her zaman 0'dır! Örneğin 809 sayısında onlar basamağında 0 vardır ve değeri 0'dır. Çözümlerken 800 + 9 yazmamız yeterlidir."
+                },
+                "try_box": {
+                  "question": "Sen de Dene: 500 + 7 şeklinde çözümlenen sayı kaçtır?",
+                  "answer": "Cevap: 507! Yüzler: 5, Onlar: 0, Birler: 7 -> 507 (Beş yüz yedi)."
+                }
               }
             ]
           },
@@ -227,23 +249,28 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım!",
-                "icon": "🔙",
-                "content": "< ve > sembolleri sayıları karşılaştırmak için kullanılır. Timsahın ağzı her zaman büyük sayıyı yer!"
+                "type": "kesif",
+                "badge": "🐊 1. BÖLÜM: TİMSAH KURALI",
+                "title": "Sayıları Karşılaştırma (< ve > Sembolleri)",
+                "story": "Nehir kenarında yaşayan Timsah Tontiş çok oburdur! Önüne iki sayı koyduğunda ağzını her zaman BÜYÜK olan sayıya doğru açar!",
+                "content": "İki sayıyı karşılaştırırken küçüktür (<), büyüktür (>) veya eşittir (=) sembollerini kullanırız. Timsahın geniş açık ağzı her zaman büyük sayıyı gösterir.",
+                "model_html": "\n        <div class=\"book-compare-demo\">\n          <div class=\"compare-box\">\n            <span class=\"c-num\">820</span>\n            <span class=\"c-sign\">&gt;</span>\n            <span class=\"c-num\">650</span>\n          </div>\n          <div class=\"c-explain\">\"820 büyüktür 650'den\" (Ağız 820'ye bakıyor!)</div>\n          <div class=\"compare-box\" style=\"margin-top:10px;\">\n            <span class=\"c-num\">315</span>\n            <span class=\"c-sign\">&lt;</span>\n            <span class=\"c-num\">490</span>\n          </div>\n          <div class=\"c-explain\">\"315 küçüktür 490'dan\" (Ağız 490'a bakıyor!)</div>\n        </div>\n        ",
+                "tip": "Sembolün sol tarafına düz bir çizgi çektiğinde 'k' harfi oluyorsa KÜÇÜKTÜR (<), 'b' harfi oluyorsa BÜYÜKTÜR (>) demektir!"
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "📚",
-                "content": "3 basamaklı sayıları karşılaştırırken SOLDAN SAĞA bakarız. Önce YÜZLER basamağına! Yüzler aynıysa ONLAR, onlar da aynıysa BİRLER basamağına bakarız.",
-                "example_box": "645 ve 599 karşılaştırması:\nYüzler: 6 > 5 olduğu için\n645 > 599\n(Diğer basamaklara bakmaya gerek yok!)"
-              },
-              {
-                "type": "bilgi_kutusu",
-                "title": "Timsah Kuralı",
-                "icon": "🐊",
-                "content": "< ve > sembollerinin açık ağzı BÜYÜK sayıyı gösterir. Sivri ucu küçük sayıya bakar. Örnek: 820 > 815 (820, 815ten büyük)"
+                "type": "tablo",
+                "badge": "📋 2. BÖLÜM: ADIM ADIM SIRALAMA KURALI",
+                "title": "3 Basamaklı Sayıları Sıralama Adımları",
+                "content": "Sayıları sıralarken soldan sağa doğru şu 3 adımı takip ederiz:",
+                "key_points": [
+                  "1. ADIM: Önce en soldaki YÜZLER basamağına bakılır. Yüzler basamağındaki rakamı büyük olan sayı kesinlikle daha büyüktür! (Örn: 712 > 599 çünkü 7 > 5).",
+                  "2. ADIM: Yüzler basamakları eşitse ONLAR basamağına bakılır. Onlar basamağı büyük olan kazanır! (Örn: 482 > 459 çünkü 8 > 5).",
+                  "3. ADIM: Yüzler ve onlar eşitse BİRLER basamağına bakılır. (Örn: 638 > 632 çünkü 8 > 2)."
+                ],
+                "try_box": {
+                  "question": "Sen de Dene: 645, 621, 689 sayılarını BÜYÜKTEN KÜÇÜĞE sıralayınız.",
+                  "answer": "Cevap: 689 > 645 > 621! Yüzler basamakları aynı (6), onlar basamaklarına baktığımızda 8 > 4 > 2 olduğu için sıralama böyledir."
+                }
               }
             ]
           },
@@ -309,23 +336,27 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım!",
-                "icon": "🔙",
-                "content": "2şer, 5er, 10ar saymayı biliyoruz. Şimdi daha büyük sayılarla ritmik saymayı öğreneceğiz!"
+                "type": "kesif",
+                "badge": "🎶 1. BÖLÜM: SAYILARIN ŞARKISI",
+                "title": "6, 7, 8 ve 9'ar İleri ve Geri Ritmik Sayma",
+                "story": "Müzikte belirli bir vuruş ve ritim olduğu gibi, sayılarda da düzenli adımlarla ilerlemeye RİTMİK SAYMA denir. Çarpım tablosunun temel sırrı buradadır!",
+                "content": "Ritmik sayarken her adımda hep AYNI miktarı ekleriz (ileri sayma) veya aynı miktarı çıkarırız (geri sayma).",
+                "model_html": "\n        <div class=\"rhythm-showcase\">\n          <div class=\"r-row\"><span class=\"r-tag\">6'şar:</span> 6, 12, 18, 24, 30, 36, 42, 48, 54, 60</div>\n          <div class=\"r-row\"><span class=\"r-tag\">7'şer:</span> 7, 14, 21, 28, 35, 42, 49, 56, 63, 70</div>\n          <div class=\"r-row\"><span class=\"r-tag\">8'er:</span> 8, 16, 24, 32, 40, 48, 56, 64, 72, 80</div>\n          <div class=\"r-row\"><span class=\"r-tag\">9'ar:</span> 9, 18, 27, 36, 45, 54, 63, 72, 81, 90</div>\n        </div>\n        ",
+                "tip": "9'ar sayarken harika bir sır vardır: Sayıların basamaklarındaki rakamları topladığında her zaman 9 eder! 18 -> 1+8=9, 27 -> 2+7=9, 36 -> 3+6=9!"
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "📚",
-                "content": "Ritmik sayma, eşit aralıklarla ileri veya geri saymaktır. 6şar, 7şer, 8er ve 9ar saymayı öğreneceğiz. 100lük tabloda ritmik sayma kalıplarını görebilirsin!",
-                "example_box": "6şar ileri sayma:\n6 → 12 → 18 → 24 → 30 → 36\n\n8er geri sayma:\n80 → 72 → 64 → 56 → 48 → 40"
-              },
-              {
-                "type": "bilgi_kutusu",
-                "title": "İpucu",
-                "icon": "💡",
-                "content": "Ritmik saymada bir sayı eksikse: önceki sayıya adımı ekle ya da sonraki sayıdan adımı çıkar! Örnek: 6-12-?-24 → 12+6=18"
+                "type": "tablo",
+                "badge": "🔍 2. BÖLÜM: EKSİK SAYIYI BULMA",
+                "title": "Ritmik Saymada Verilmeyen Adımı Bulma",
+                "content": "Bir ritmik sayma dizisinde soru işareti verildiğinde:",
+                "key_points": [
+                  "1. İki komşu sayıyı seç ve aralarındaki farkı bul: Bu fark saymanın 'adım büyüklüğü'dür.",
+                  "2. Eksik sayıdan önceki sayıya bu adımı ekle veya sonraki sayıdan bu adımı çıkar."
+                ],
+                "try_box": {
+                  "question": "Sen de Dene: 24 - 32 - ? - 48 - 56 dizisinde soru işareti yerine hangi sayı gelmelidir?",
+                  "answer": "Cevap: 40! Fark: 32 - 24 = 8'er saymadır. 32 + 8 = 40 (veya 48 - 8 = 40)."
+                }
               }
             ]
           },
@@ -380,23 +411,20 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım!",
-                "icon": "🔙",
-                "content": "2şer saydığımızda geçtiğimiz sayılar ÇİFT, atladıklarımız TEK sayılardır. 2, 4, 6, 8, 10... çift; 1, 3, 5, 7, 9... tek."
-              },
-              {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "📚",
-                "content": "3 basamaklı sayılarda da tek-çift kuralı BİRLER BASAMAĞINA göre belirlenir! Birler basamağındaki rakam 0, 2, 4, 6 veya 8 ise sayı ÇİFT; 1, 3, 5, 7 veya 9 ise sayı TEKtir.",
-                "example_box": "ÇİFT sayılar: 124, 350, 788, 996\n(Birler: 4, 0, 8, 6)\n\nTEK sayılar: 135, 271, 489, 653\n(Birler: 5, 1, 9, 3)"
-              },
-              {
-                "type": "bilgi_kutusu",
-                "title": "Kural",
-                "icon": "💡",
-                "content": "Hangi basamakta ne olduğuna bakmaya gerek yok! Sadece BİRLER basamağına bak. Birler 0, 2, 4, 6, 8 ise ÇİFT. Birler 1, 3, 5, 7, 9 ise TEK."
+                "type": "kesif",
+                "badge": "👥 1. BÖLÜM: ARKADAŞINI BULAN SAYILAR",
+                "title": "Tek ve Çift Doğal Sayılar",
+                "story": "Sınıfta eşli dans oyunu oynuyorsunuz. Herkes kendine bir eş seçiyor. Eğer hiç kimse açıkta kalmıyorsa sayı ÇİFT, 1 kişi tek başına kalıyorsa sayı TEK'tir!",
+                "content": "İkiye tam bölünebilen, ikişerli gruplandığında hiç artmayan sayılara ÇİFT SAYILAR; ikişerli gruplandığında 1 artıran sayılara TEK SAYILAR denir.",
+                "model_html": "\n        <div class=\"parity-card-grid\">\n          <div class=\"p-card p-even\">\n            <div class=\"p-title\">🟢 ÇİFT SAYILAR</div>\n            <div class=\"p-desc\">Birler basamağında şunlar vardır:</div>\n            <div class=\"p-digits\">0, 2, 4, 6, 8</div>\n            <div class=\"p-examples\">Örnek: 124, 350, 788, 996</div>\n          </div>\n          <div class=\"p-card p-odd\">\n            <div class=\"p-title\">🟣 TEK SAYILAR</div>\n            <div class=\"p-desc\">Birler basamağında şunlar vardır:</div>\n            <div class=\"p-digits\">1, 3, 5, 7, 9</div>\n            <div class=\"p-examples\">Örnek: 135, 271, 489, 653</div>\n          </div>\n        </div>\n        ",
+                "info_box": {
+                  "title": "MEB SÜPER KURALI: SADECE BİRLER BASAMAĞINA BAK!",
+                  "content": "Sayı ne kadar büyük olursa olsun (isterse 998 olsun), yüzler ve onlar basamağına hiç bakmana gerek yoktur! Sadece en sondaki BİRLER basamağına bak: Birler 0, 2, 4, 6, 8 ise sayı ÇİFT'tir; 1, 3, 5, 7, 9 ise sayı TEK'tir."
+                },
+                "try_box": {
+                  "question": "Sen de Dene: 875 sayısı tek midir, çift midir? Neden?",
+                  "answer": "Cevap: TEK sayıdır! Çünkü birler basamağında 5 rakamı vardır."
+                }
               }
             ]
           },
@@ -451,23 +479,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım!",
-                "icon": "🔙",
-                "content": "Tek sayılar 1, 3, 5, 7, 9... ile biter. Çift sayılar 0, 2, 4, 6, 8... ile biter."
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: TEK VE ÇIFT SAYILARI TOPLAMA KONUSUNA GİRİŞ",
+                "title": "Tek ve Çift Sayıları Toplama Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Matematik dersimizin bu konusunda Tek ve Çift Sayıları Toplama konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Tek+Tek=Çift, Çift+Çift=Çift, Tek+Çift=Tek toplam kuralı ve genellemeler.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Toplam Kuralları",
+                  "📌 MEB Ders Kitabı: Sayfa 63 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Tek+Tek=Çift, Çift+Çift=Çift, Tek+Çift=Tek toplam kuralı ve genellemeler."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "📚",
-                "content": "İki sayı topladığımızda sonuç tek mi çift mi olur? Bunu önceden tahmin edebiliriz!",
-                "example_box": "ÇİFT + ÇİFT = ÇİFT\n(4 + 6 = 10)\n\nTEK + TEK = ÇİFT\n(3 + 5 = 8)\n\nÇİFT + TEK = TEK\n(4 + 3 = 7)\n\nTEK + ÇİFT = TEK\n(5 + 2 = 7)"
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Tek ve Çift Sayıları Toplama ile İlgili Altın Kurallar",
+                "content": "İki sayıyı toplarken: Tek + Tek = ÇİFT, Çift + Çift = ÇİFT olur. Sadece Tek + Çift toplandığında sonuç TEK olur!",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Aynı tür sayıların toplamı her zaman ÇİFTTİR (Tek+Tek=Çift, Çift+Çift=Çift). Sadece farklı türler toplandığında sonuç TEK çıkar!"
+                },
+                "example_box": "3 (Tek) + 5 (Tek) = 8 (Çift). 4 (Çift) + 6 (Çift) = 10 (Çift). 3 (Tek) + 4 (Çift) = 7 (Tek)."
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Kural",
-                "icon": "💡",
-                "content": "İki AYNI cinsten sayı (ikisi de tek veya ikisi de çift) toplandığında sonuç her zaman ÇİFTtir. FARKLI cinsten sayılar toplandığında sonuç her zaman TEKtir."
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Tek ve Çift Sayıları Toplama konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: İki TEK sayının toplamı her zaman nasıl bir sayıdır? (Örn: 3 + 5 = ?)",
+                  "answer": "Doğru Cevap: Her zaman Çift (3 + 5 = 8 (Çift), Tek + Tek = ÇİFT)"
+                }
               }
             ]
           },
@@ -511,23 +553,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım!",
-                "icon": "🔙",
-                "content": "Örüntü, tekrar eden düzenli bir sıradır. Hayatta birçok yerde örüntü görebiliriz: zemin desenleri, müzik ritimleri, sayı serileri."
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: SAYI VE ŞEKIL ÖRÜNTÜLERI KONUSUNA GİRİŞ",
+                "title": "Sayı ve Şekil Örüntüleri Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Matematik dersimizin bu konusunda Sayı ve Şekil Örüntüleri konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Örüntünün kuralını belirleme, eksik terimi tamamlama.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Örüntü",
+                  "📌 MEB Ders Kitabı: Sayfa 68 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Örüntünün kuralını belirleme, eksik terimi tamamlama."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "📚",
-                "content": "Sayı örüntülerinde her sayı bir kurala göre değişir. Şekil örüntülerinde ise şekiller belirli bir sırayla tekrar eder. Örüntünün kuralını bulmak için ilk birkaç elemanı dikkatle inceleriz.",
-                "example_box": "Sayı örüntüsü: 3, 6, 9, 12, ? → Kural: +3, Sonraki: 15\n\nŞekil örüntüsü: ⬛🔴⬛🔴⬛? → Kural: Siyah-Kırmızı tekrar, Sonraki: 🔴"
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Sayı ve Şekil Örüntüleri ile İlgili Altın Kurallar",
+                "content": "Sayı veya şekil örüntüsünde sayılar arasındaki artış veya azalış miktarı her zaman kurala bağlıdır. Önce yan yana iki sayı arasındaki fark bulunarak kural belirlenir.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Bazen örüntüler iki farklı kural içerebilir (örneğin: 2 ekle, 1 çıkar). Sadece ilk iki sayıya değil, tüm sıraya bakarak kuralı doğrula!"
+                },
+                "example_box": "12 - 17 - 22 - 27 - ? örüntüsünde: 17 - 12 = 5 artmış. Kural: 'Sayılar 5'er artıyor'. O halde soru işareti yerine 27 + 5 = 32 gelmelidir."
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "İpucu",
-                "icon": "💡",
-                "content": "Örüntünün kuralını bulmak için: iki ardışık eleman arasındaki farkı veya ilişkiyi hesapla. Sonra bu kuralın devam edip etmediğini kontrol et!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Sayı ve Şekil Örüntüleri konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: 15 - 22 - 29 - 36 - ? örüntüsünün kuralı ve sıradaki sayısı nedir?",
+                  "answer": "Doğru Cevap: 7 şer artıyor, 43 (Farklar: 22-15 = 7. 36 + 7 = 43)"
+                }
               }
             ]
           },
@@ -582,23 +638,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "En yakın onluğa ve yüzlüğe yuvarlama kuralları. (Yuvarlama)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: NESNELERIN SAYILARINI TAHMIN ETME & YUVARLAMA KONUSUNA GİRİŞ",
+                "title": "Nesnelerin Sayılarını Tahmin Etme & Yuvarlama Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Matematik dersimizin bu konusunda Nesnelerin Sayılarını Tahmin Etme & Yuvarlama konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "En yakın onluğa ve yüzlüğe yuvarlama kuralları.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Yuvarlama",
+                  "📌 MEB Ders Kitabı: Sayfa 74 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: En yakın onluğa ve yüzlüğe yuvarlama kuralları."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "🎯",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Nesnelerin Sayılarını Tahmin Etme & Yuvarlama ile İlgili Altın Kurallar",
                 "content": "Bir sayıyı en yakın ONLUĞA yuvarlarken birler basamağına bakılır: 1, 2, 3, 4 ise kendi onluğuna (aşağı), 5, 6, 7, 8, 9 ise bir üst onluğa (yukarı) yuvarlanır.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "5 sayısı tam ortadadır ve her zaman YUKARI (üst onluğa) yuvarlanır! Sayı 185 ise en yakın onluğu 190'dır."
+                },
                 "example_box": "73 sayısı 70'e yuvarlanır (çünkü birler basamağı 3). 75 sayısı ise 80'e yuvarlanır (çünkü 5 ve üstü yukarı gider)."
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "5 sayısı tam ortadadır ve her zaman YUKARI (üst onluğa) yuvarlanır! Sayı 185 ise en yakın onluğu 190'dır."
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Nesnelerin Sayılarını Tahmin Etme & Yuvarlama konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: 467 sayısı en yakın ONLUĞA yuvarlandığında hangi sayı elde edilir?",
+                  "answer": "Doğru Cevap: 470 (Birler basamağı 7 (>= 5) olduğu için sonraki onluğa yani 470 e yuvarlanır.)"
+                }
               }
             ]
           }
@@ -754,23 +824,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım!",
-                "icon": "🔙",
-                "content": "Bir bütünü eşit parçalara bölebiliriz. Elmayı 2 eşit parçaya böldüğümüzde her parça yarım olur."
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: BÜTÜN, YARIM VE ÇEYREĞIN KESIR GÖSTERIMI KONUSUNA GİRİŞ",
+                "title": "Bütün, Yarım ve Çeyreğin Kesir Gösterimi Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Matematik dersimizin bu konusunda Bütün, Yarım ve Çeyreğin Kesir Gösterimi konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Kesir kavramı, birim kesir, bütün, yarım ve çeyrek modelleri.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Kesirler",
+                  "📌 MEB Ders Kitabı: Sayfa 86 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Kesir kavramı, birim kesir, bütün, yarım ve çeyrek modelleri."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "📚",
-                "content": "Kesirleri yazarken PAY ve PAYDA kullanırız. Payda (alt sayı) toplam parça sayısını, pay (üst sayı) alınan parça sayısını gösterir.",
-                "example_box": "Bütün = 1 (tüm parçalar)\nYarım = 1/2 (2 eşit parçanın 1i)\nÇeyrek = 1/4 (4 eşit parçanın 1i)"
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Bütün, Yarım ve Çeyreğin Kesir Gösterimi ile İlgili Altın Kurallar",
+                "content": "Bir bütünün tamamına BÜTÜN (1/1), iki eş parçasından her birine YARIM (1/2), dört eş parçasından her birine ÇEYREK (1/4) denir.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Kesir gösteriminde alttaki sayı (payda) bütünün kaç parçaya bölündüğünü, üstteki sayı (pay) ise kaç parçanın alındığını gösterir!"
+                },
+                "example_box": "1 bütün elmayı ortadan ikiye kestiğimizde 2 yarım elma, dörde böldüğümüzde ise 4 çeyrek elma elde ederiz."
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Kesir Nedir?",
-                "icon": "💡",
-                "content": "Kesirde PAYDA, bütünün kaç EŞİT parçaya bölündüğünü gösterir. PAY ise kaç parça aldığımızı gösterir. Parçalar EŞİT OLMALIDIR! Eşit olmayan parçalar kesir gösterilemez."
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Bütün, Yarım ve Çeyreğin Kesir Gösterimi konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Bir bütünün 2 eş parçaya bölünmesiyle oluşan parçalardan birine ne ad verilir ve nasıl yazılır?",
+                  "answer": "Doğru Cevap: Yarım, 1/2 (1 bütün = 2 yarım (1/2))"
+                }
               }
             ]
           },
@@ -814,23 +898,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Şekilleri eş parçalara bölme ve modelleme. (Eş Parçalar)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: BIR BÜTÜNÜ OLUŞTURAN EŞ PARÇALAR KONUSUNA GİRİŞ",
+                "title": "Bir Bütünü Oluşturan Eş Parçalar Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Matematik dersimizin bu konusunda Bir Bütünü Oluşturan Eş Parçalar konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Şekilleri eş parçalara bölme ve modelleme.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Eş Parçalar",
+                  "📌 MEB Ders Kitabı: Sayfa 92 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Şekilleri eş parçalara bölme ve modelleme."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "🍰",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Bir Bütünü Oluşturan Eş Parçalar ile İlgili Altın Kurallar",
                 "content": "Bir bütünün kesir oluşturabilmesi için parçaların mutlaka birbirine EŞİT (özdeş) büyüklükte olması şarttır.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Sorularda farklı büyüklükte bölünmüş şekiller gösterilirse tuzaktır; parçalar eşit değilse kesir ifade etmez!"
+                },
                 "example_box": "Bir pizzayı biri büyük biri küçük iki parçaya bölersen bunlara 'yarım' denemez. Yarım olması için tam ortadan eşit bölünmelidir."
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Sorularda farklı büyüklükte bölünmüş şekiller gösterilirse tuzaktır; parçalar eşit değilse kesir ifade etmez!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Bir Bütünü Oluşturan Eş Parçalar konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Bir pastayı 6 eş dilime böldük ve 2 dilimini yedik. Yenen kısmı ifade eden kesir hangisidir?",
+                  "answer": "Doğru Cevap: 2/6 (Bütün 6 parça (payda=6), alınan 2 parça (pay=2) -> 2/6)"
+                }
               }
             ]
           },
@@ -874,23 +972,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Pay ve payda terimlerinin anlamı ve birim kesirler. (Pay & Payda)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: PAY VE PAYDA ARASINDAKI İLIŞKI KONUSUNA GİRİŞ",
+                "title": "Pay ve Payda Arasındaki İlişki Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Matematik dersimizin bu konusunda Pay ve Payda Arasındaki İlişki konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Pay ve payda terimlerinin anlamı ve birim kesirler.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Pay & Payda",
+                  "📌 MEB Ders Kitabı: Sayfa 97 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Pay ve payda terimlerinin anlamı ve birim kesirler."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "⚖️",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Pay ve Payda Arasındaki İlişki ile İlgili Altın Kurallar",
                 "content": "Kesir çizgisinin ÜSTÜNDEKİ sayı PAY (alınan parça sayısı), ALTINDAKİ sayı PAYDA (bütünün toplam eş parça sayısı) olarak adlandırılır.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Aklında tutmak için: PAYDA 'Padişah' gibi altta tahtında oturur (taban), PAY ise üstte gezer!"
+                },
                 "example_box": "3/4 kesrinde payda 4'tür (bütün 4 parçaya bölünmüş), pay ise 3'tür (3 parçası boyanmış veya yenmiş)."
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Aklında tutmak için: PAYDA 'Padişah' gibi altta tahtında oturur (taban), PAY ise üstte gezer!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Pay ve Payda Arasındaki İlişki konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Bir kesirde bütünün kaç eş parçaya ayrıldığını hangi terim gösterir?",
+                  "answer": "Doğru Cevap: Payda (Payda bütünü bölen eş parça sayısını gösterir.)"
+                }
               }
             ]
           },
@@ -945,23 +1057,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Öğleden önce ve öğleden sonra saat okuma, saat ve dakika ilişkisi. (Saat Okuma)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: ANALOG VE DIJITAL SAATLER KONUSUNA GİRİŞ",
+                "title": "Analog ve Dijital Saatler Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Matematik dersimizin bu konusunda Analog ve Dijital Saatler konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Öğleden önce ve öğleden sonra saat okuma, saat ve dakika ilişkisi.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Saat Okuma",
+                  "📌 MEB Ders Kitabı: Sayfa 108 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Öğleden önce ve öğleden sonra saat okuma, saat ve dakika ilişkisi."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "⏰",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Analog ve Dijital Saatler ile İlgili Altın Kurallar",
                 "content": "Analog saatte kısa kol AKREP (saati), uzun kol YELKOVAN (dakikayı) gösterir. Yelkovan 12'deyken tam saat, 6'dayken buçuk (30 dk), 3'teyken çeyrek geçe (15 dk), 9'dayken çeyrek vardır (45 dk).",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Öğleden sonraki saatleri okurken saate 12 ekleriz! Örneğin öğleden sonra saat 3, dijital saatte 15.00 olarak görünür (3 + 12 = 15)."
+                },
                 "example_box": "Akrep 4 ile 5 arasında, yelkovan 6'da ise saat '04.30' veya 'Dördü buçuk geçiyor' demektir."
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Öğleden sonraki saatleri okurken saate 12 ekleriz! Örneğin öğleden sonra saat 3, dijital saatte 15.00 olarak görünür (3 + 12 = 15)."
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Analog ve Dijital Saatler konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Öğleden sonra saat 3, dijital saatte nasıl gösterilir?",
+                  "answer": "Doğru Cevap: 15:00 (Öğleden sonra için 12 ekleriz: 12 + 3 = 15:00)"
+                }
               }
             ]
           },
@@ -1016,23 +1142,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Saat, dakika, gün, hafta, ay, mevsim, yıl dönüşümleri. (Zaman Birimleri)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: ZAMAN ÖLÇÜ BIRIMLERI KONUSUNA GİRİŞ",
+                "title": "Zaman Ölçü Birimleri Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Matematik dersimizin bu konusunda Zaman Ölçü Birimleri konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Saat, dakika, gün, hafta, ay, mevsim, yıl dönüşümleri.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Zaman Birimleri",
+                  "📌 MEB Ders Kitabı: Sayfa 114 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Saat, dakika, gün, hafta, ay, mevsim, yıl dönüşümleri."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "📅",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Zaman Ölçü Birimleri ile İlgili Altın Kurallar",
                 "content": "1 yıl = 12 ay = 52 hafta = 365 gün 6 saat. 1 ay = 30 gün (yaklaşık 4 hafta). 1 hafta = 7 gün. 1 gün = 24 saat. 1 saat = 60 dakika.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Şubat ayı 4 yılda bir 29 gün çeker (Artık yıl). Diğer yıllar 28 gündür."
+                },
                 "example_box": "Okulda 2 ders saati 40 + 40 = 80 dakika sürer. Bu da 1 saat 20 dakikaya eşittir."
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Şubat ayı 4 yılda bir 29 gün çeker (Artık yıl). Diğer yıllar 28 gündür."
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Zaman Ölçü Birimleri konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: 1 saat kaç dakikadır?",
+                  "answer": "Doğru Cevap: 60 dakika (1 saat tam olarak 60 dakikadır.)"
+                }
               }
             ]
           },
@@ -1076,23 +1216,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Günlük aktivitelerin sürelerini tahmin etme ve planlama. (Süre Tahmini)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: OLAYLARIN OLUŞ SÜRELERINI TAHMIN ETME KONUSUNA GİRİŞ",
+                "title": "Olayların Oluş Sürelerini Tahmin Etme Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Matematik dersimizin bu konusunda Olayların Oluş Sürelerini Tahmin Etme konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Günlük aktivitelerin sürelerini tahmin etme ve planlama.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Süre Tahmini",
+                  "📌 MEB Ders Kitabı: Sayfa 124 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Günlük aktivitelerin sürelerini tahmin etme ve planlama."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "⏳",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Olayların Oluş Sürelerini Tahmin Etme ile İlgili Altın Kurallar",
                 "content": "Günlük olayların sürelerini tahmin ederken saniye, dakika, saat ve gün birimlerinden en uygun olanını seçeriz.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Soru çözerken birimlere dikkat et: 'Bir film kaç dakika sürer?' sorusuna saniye veya gün cevabı verilemez!"
+                },
                 "example_box": "Göz kırpmak saniyeler sürer, diş fırçalamak 2-3 dakika, bir okul günü 6-7 saat, yaz tatili ise 3 ay (yaklaşık 90 gün) sürer."
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Soru çözerken birimlere dikkat et: 'Bir film kaç dakika sürer?' sorusuna saniye veya gün cevabı verilemez!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Olayların Oluş Sürelerini Tahmin Etme konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Diş fırçalama süresi yaklaşık olarak ne kadardır?",
+                  "answer": "Doğru Cevap: 2 dakika (Dişlerimizi günde 2 kez en az 2 dakika fırçalamalıyız.)"
+                }
               }
             ]
           },
@@ -1147,23 +1301,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Metre (m), santimetre (cm), kilogram (kg), gram (g) dönüşümleri. (Ölçme)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: UZUNLUK VE KÜTLE ÖLÇÜ BIRIMLERI KONUSUNA GİRİŞ",
+                "title": "Uzunluk ve Kütle Ölçü Birimleri Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Matematik dersimizin bu konusunda Uzunluk ve Kütle Ölçü Birimleri konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Metre (m), santimetre (cm), kilogram (kg), gram (g) dönüşümleri.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Ölçme",
+                  "📌 MEB Ders Kitabı: Sayfa 126 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Metre (m), santimetre (cm), kilogram (kg), gram (g) dönüşümleri."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "📏",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Uzunluk ve Kütle Ölçü Birimleri ile İlgili Altın Kurallar",
                 "content": "Uzunlukları Metre (m) ve Santimetre (cm) ile; kütleleri (ağırlıkları) Kilogram (kg) ve Gram (g) ile ölçeriz. 1 m = 100 cm, 1 kg = 1000 g.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Hafif nesneler (kalem, silgi, yüzük) GRAM ile; ağır nesneler (insan, karpuz, çanta) KİLOGRAM ile ölçülür!"
+                },
                 "example_box": "Boyumuz yaklaşık 130 cm'dir. Çantamızın ağırlığı yaklaşık 3 kg, bir elmanın ağırlığı ise yaklaşık 150 gramdır."
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Hafif nesneler (kalem, silgi, yüzük) GRAM ile; ağır nesneler (insan, karpuz, çanta) KİLOGRAM ile ölçülür!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Uzunluk ve Kütle Ölçü Birimleri konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: 1 metre (m) kaç santimetredir (cm)?",
+                  "answer": "Doğru Cevap: 100 cm (1 m = 100 cm)"
+                }
               }
             ]
           },
@@ -1218,23 +1386,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Lira ve kuruş ilişkisi (1 TL = 100 Kr), market hesabı ve para üstü. (Paralarımız)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: MADENÎ VE KÂĞIT PARALAR KONUSUNA GİRİŞ",
+                "title": "Madenî ve Kâğıt Paralar Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Matematik dersimizin bu konusunda Madenî ve Kâğıt Paralar konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Lira ve kuruş ilişkisi (1 TL = 100 Kr), market hesabı ve para üstü.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Paralarımız",
+                  "📌 MEB Ders Kitabı: Sayfa 144 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Lira ve kuruş ilişkisi (1 TL = 100 Kr), market hesabı ve para üstü."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "💰",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Madenî ve Kâğıt Paralar ile İlgili Altın Kurallar",
                 "content": "Para birimimiz Türk Lirası (TL) ve Kuruş (kr)'tur. 1 TL = 100 Kuruştur. En büyük kağıt paramız 200 TL, en küçük madeni paramız 1 Kuruştur.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Kuruşları toplarken 100 kuruşa ulaştığında bunu 1 TL olarak sol tarafa devretmeyi unutma!"
+                },
                 "example_box": "Tanesi 25 kuruş olan sakızdan 4 tane alırsan: 25 + 25 + 25 + 25 = 100 Kuruş, yani tam 1 TL ödersin."
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Kuruşları toplarken 100 kuruşa ulaştığında bunu 1 TL olarak sol tarafa devretmeyi unutma!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Madenî ve Kâğıt Paralar konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: 1 Türk Lirası kaç kuruştur?",
+                  "answer": "Doğru Cevap: 100 Kuruş (1 TL = 100 Kuruştur.)"
+                }
               }
             ]
           }
@@ -1346,23 +1528,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Yuvarlama yöntemiyle zihinden işlem tahmini ve karşılaştırma. (Tahmin & İşlem)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: TOPLAMA VE ÇIKARMA SONUÇLARINI TAHMIN ETME KONUSUNA GİRİŞ",
+                "title": "Toplama ve Çıkarma Sonuçlarını Tahmin Etme Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Matematik dersimizin bu konusunda Toplama ve Çıkarma Sonuçlarını Tahmin Etme konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Yuvarlama yöntemiyle zihinden işlem tahmini ve karşılaştırma.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Tahmin & İşlem",
+                  "📌 MEB Ders Kitabı: Sayfa 160 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Yuvarlama yöntemiyle zihinden işlem tahmini ve karşılaştırma."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "🧠",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Toplama ve Çıkarma Sonuçlarını Tahmin Etme ile İlgili Altın Kurallar",
                 "content": "Toplama ve çıkarma sonuçlarını tahmin ederken sayıları en yakın ONLUĞA yuvarlayıp zihinden hesaplarız. Gerçek sonuç ile tahmin arasındaki fark 'Hata Payı'dır.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Tahmin sorularında işlem yapmadan önce sayıları yuvarla. Asla önce tam sonucu bulup sonra yuvarlama, bu tahmin mantığına uymaz!"
+                },
                 "example_box": "218 + 173 işlemini tahmin edelim: 218 -> 220, 173 -> 170. Tahmin: 220 + 170 = 390. Gerçek sonuç: 391. Fark sadece 1'dir!"
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Tahmin sorularında işlem yapmadan önce sayıları yuvarla. Asla önce tam sonucu bulup sonra yuvarlama, bu tahmin mantığına uymaz!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Toplama ve Çıkarma Sonuçlarını Tahmin Etme konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: 48 + 31 işleminin sonucunu en yakın onluğa yuvarlayarak tahmin ediniz.",
+                  "answer": "Doğru Cevap: 80 (48 -> 50, 31 -> 30; 50 + 30 = 80)"
+                }
               }
             ]
           },
@@ -1406,23 +1602,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Basamaklara ayırarak işlem yapma ve verilmeyen terimi bulma (kutu hesabı). (Verilmeyeni Bul)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: TOPLAMA VE ÇIKARMA İŞLEMLERINI ÇÖZÜMLEME KONUSUNA GİRİŞ",
+                "title": "Toplama ve Çıkarma İşlemlerini Çözümleme Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Matematik dersimizin bu konusunda Toplama ve Çıkarma İşlemlerini Çözümleme konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Basamaklara ayırarak işlem yapma ve verilmeyen terimi bulma (kutu hesabı).\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Verilmeyeni Bul",
+                  "📌 MEB Ders Kitabı: Sayfa 181 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Basamaklara ayırarak işlem yapma ve verilmeyen terimi bulma (kutu hesabı)."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "📦",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Toplama ve Çıkarma İşlemlerini Çözümleme ile İlgili Altın Kurallar",
                 "content": "İşlemleri basamak değerlerine göre çözümleyerek yapmak hata yapmayı önler: Yüzlükleri kendi arasında, onlukları kendi arasında, birlikleri kendi arasında toplar veya çıkarırız.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Eldeli toplama yaparken elde edilen onluğu onlar basamağı toplamına eklemeyi unutma!"
+                },
                 "example_box": "345 + 231 = (300+200) + (40+30) + (5+1) = 500 + 70 + 6 = 576."
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Eldeli toplama yaparken elde edilen onluğu onlar basamağı toplamına eklemeyi unutma!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Toplama ve Çıkarma İşlemlerini Çözümleme konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: 45 + [ ? ] = 82 işleminde verilmeyen toplanan kaçtır?",
+                  "answer": "Doğru Cevap: 37 (Toplama işleminde verilmeyeni bulmak için: 82 - 45 = 37)"
+                }
               }
             ]
           }
@@ -1608,23 +1818,13 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Laboratuvar ve deneylerde koruyucu gözlük, eldiven, ısı, elektrik, cam kırılması sembolleri. (Güvenlik)"
-              },
-              {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "⚠️",
-                "content": "Güvenlik sembolleri deney ve günlük yaşamda tehlikelere karşı bizi uyarır: Kırılabilir cam, Isı ve yangın tehlikesi, Zehirli (toksik) madde, Koruyucu gözlük tak vb.",
-                "example_box": "Çamaşır suyu şişesinde kuru kafa sembolü varsa bu maddenin ZEHİRLİ olduğunu ve asla koklanmaması gerektiğini gösterir."
-              },
-              {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Güvenlik işaretleri süs değildir! Deney laboratuvarında veya evde bu işaretleri gördüğümüzde büyüklerimizin uyarılarına harfiyen uymalıyız."
+                "type": "kesif",
+                "badge": "⚠️ 1. ÜNİTE: BİLİMSEL KEŞİF YOLCULUĞU",
+                "title": "Laboratuvarda Güvenlik Sembolleri",
+                "story": "Fen bilimleri dersinde deney yapmak çok eğlencelidir! Ancak deney yaparken kendimizi ve arkadaşlarımızı korumak için Güvenlik Sembollerini tanımalıyız.",
+                "content": "Bilim insanları tehlikeleri önceden fark etmek için evrensel semboller kullanırlar. Bu semboller bize neye dikkat etmemiz gerektiğini söyler.",
+                "model_html": "\n        <div class=\"safety-symbols-grid\">\n          <div class=\"sym-card\">\n            <div class=\"sym-icon\">👓</div>\n            <div class=\"sym-name\">Gözlük Tak</div>\n            <div class=\"sym-desc\">Gözlerimizi sıçrayan maddelerden korumak için koruyucu gözlük takmalıyız.</div>\n          </div>\n          <div class=\"sym-card\">\n            <div class=\"sym-icon\">🧤</div>\n            <div class=\"sym-name\">Eldiven Kullan</div>\n            <div class=\"sym-desc\">Cildimize zarar verebilecek maddelere çıplak elle dokunmamalıyız.</div>\n          </div>\n          <div class=\"sym-card\">\n            <div class=\"sym-icon\">🔥</div>\n            <div class=\"sym-name\">Isı Güvenliği</div>\n            <div class=\"sym-desc\">Sıcak kaplara çıplak elle dokunulmaz, yanıklara karşı dikkatli olunur.</div>\n          </div>\n          <div class=\"sym-card\">\n            <div class=\"sym-icon\">✂️</div>\n            <div class=\"sym-name\">Kesici Alet</div>\n            <div class=\"sym-desc\">Makas ve bisturi gibi sivri uçlu aletleri dikkatli kullanmalıyız.</div>\n          </div>\n        </div>\n        ",
+                "tip": "Öğretmenimizin izni olmadan fen laboratuvarındaki hiçbir maddeyi koklamamalı, tadına bakmamalı ve birbirine karıştırmamalıyız!"
               }
             ]
           },
@@ -1668,23 +1868,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Gözlem yapma, merak etme, soru sorma, araştırma ve deney tasarlama adımları. (Bilimsel Yöntem)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: BILIMSEL BILGIYE ULAŞMA YOLLARI KONUSUNA GİRİŞ",
+                "title": "Bilimsel Bilgiye Ulaşma Yolları Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Fen Bilimleri dersimizin bu konusunda Bilimsel Bilgiye Ulaşma Yolları konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Gözlem yapma, merak etme, soru sorma, araştırma ve deney tasarlama adımları.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Bilimsel Yöntem",
+                  "📌 MEB Ders Kitabı: Sayfa 16 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Gözlem yapma, merak etme, soru sorma, araştırma ve deney tasarlama adımları."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "🔭",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Bilimsel Bilgiye Ulaşma Yolları ile İlgili Altın Kurallar",
                 "content": "Bilimsel bilgiye; merak etmek, soru sormak, gözlem yapmak, deneyler tasarlamak ve güvenilir kaynaklardan araştırma yapmakla ulaşılır.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Bilim insanları bir deneyi sadece bir kez yapıp bırakmazlar; doğruluğundan emin olmak için birden fazla kez tekrarlarlar!"
+                },
                 "example_box": "Bitkilerin güneşte mi yoksa karanlıkta mı hızlı büyüdüğünü anlamak için iki özdeş saksı alıp birini pencereye, birini dolaba koyarak gözlemlemek bilimsel bir yöntemdir."
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Bilim insanları bir deneyi sadece bir kez yapıp bırakmazlar; doğruluğundan emin olmak için birden fazla kez tekrarlarlar!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Bilimsel Bilgiye Ulaşma Yolları konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Bilimsel bir araştırmanın ilk adımı genellikle hangisidir?",
+                  "answer": "Doğru Cevap: Merak etmek ve gözlem yapmak (Her bilimsel keşif çevreyi merak etmek ve gözlemlemekle başlar.)"
+                }
               }
             ]
           },
@@ -1728,23 +1942,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Meraklı, sabırlı, sorgulayıcı, tarafsız, çalışkan ve azimli olma erdemleri. (Bilim İnsanı)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: BILIM İNSANLARININ ÖZELLIKLERI KONUSUNA GİRİŞ",
+                "title": "Bilim İnsanlarının Özellikleri Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Fen Bilimleri dersimizin bu konusunda Bilim İnsanlarının Özellikleri konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Meraklı, sabırlı, sorgulayıcı, tarafsız, çalışkan ve azimli olma erdemleri.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Bilim İnsanı",
+                  "📌 MEB Ders Kitabı: Sayfa 26 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Meraklı, sabırlı, sorgulayıcı, tarafsız, çalışkan ve azimli olma erdemleri."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "💡",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Bilim İnsanlarının Özellikleri ile İlgili Altın Kurallar",
                 "content": "Bilim insanları meraklı, gözlemci, sabırlı, sorgulayıcı, dürüst ve hata yapmaktan korkmayan kişilerdir (Örn: Aziz Sancar, İbn-i Sina, Marie Curie).",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Bilim insanı olmak için dahi olmaya gerek yoktur; çevreni merak etmek, çok kitap okumak ve yılmadan çalışmak yeterlidir!"
+                },
                 "example_box": "Thomas Edison ampulü bulana kadar yüzlerce deneme yapmış, hiç vazgeçmemiş ve sabırla çalışmaya devam etmiştir."
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Bilim insanı olmak için dahi olmaya gerek yoktur; çevreni merak etmek, çok kitap okumak ve yılmadan çalışmak yeterlidir!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Bilim İnsanlarının Özellikleri konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Aşağıdakilerden hangisi bir bilim insanının temel özelliklerinden BİRİDİR?",
+                  "answer": "Doğru Cevap: Meraklı ve sorgulayıcı olmak (Bilim insanları merak eder, araştırır ve sabırla sorgular.)"
+                }
               }
             ]
           }
@@ -1834,23 +2062,24 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Bitkiler, Hayvanlar, Mantarlar ve Mikroskobik Canlıların temel özellikleri. (Canlılar Âlemi)"
-              },
-              {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "🌿",
-                "content": "Canlılar benzer özelliklerine göre sınıflandırılır: Bitkiler, Hayvanlar, Mantarlar ve Mikroskobik canlılar. Hayvanlar da omurgalı ve omurgasız olarak ayrılır.",
-                "example_box": "Kedi, kuş, balık hayvanlar alemine; papatya, çam ağacı bitkiler alemine; yoğurt mayası ise mikroskobik canlılara örnektir."
-              },
-              {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Bitkiler kendi besinlerini güneş ışığıyla kendileri üretir (fotosentez). Hayvanlar ise besinlerini dışarıdan hazır alırlar!"
+                "type": "kesif",
+                "badge": "🦁 2. ÜNİTE: CANLILAR DÜNYASINA YOLCULUK",
+                "title": "Canlıların Ortak Özellikleri ve Sınıflandırma",
+                "story": "Bahçede bir taş ile bir karıncayı yan yana koyduğunda aralarındaki farkı hiç düşündün mü? Karınca hareket eder, nefes alır, yemek arar; taş ise hiç değişmeden öylece durur!",
+                "content": "Çevremizdeki varlıklar CANLI ve CANSIZ varlıklar olarak ikiye ayrılır. Canlı varlıkların hepsinde bulunan ortak yaşam özellikleri vardır.",
+                "key_points": [
+                  "1. Büyüme ve Gelişme: Fidanın ağaç olması, yavru kedinin büyümesi.",
+                  "2. Beslenme: Enerji elde etmek için bitkiler güneşten, hayvanlar besinlerden faydalanır.",
+                  "3. Solunum: Canlılar nefes alıp vererek oksijen kullanırlar.",
+                  "4. Hareket Etme: Hayvanlar yürür, uçar, yüzer; bitkiler ise güneşe doğru yönelir.",
+                  "5. Çoğalma (Üreme): Canlılar kendi türlerinin devamı için yavru meydana getirirler.",
+                  "6. Tepki Verme: Dokununca kapanan küstüm çiçeği, sesten kaçan kuş."
+                ],
+                "table_html": "\n        <div class=\"book-table-wrap\">\n          <table class=\"book-table\">\n            <thead>\n              <tr>\n                <th>Grup</th>\n                <th>Örnek Canlılar</th>\n                <th>Temel Özellikleri</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td><strong>Bitkiler</strong></td>\n                <td>Papatya, Çam Ağacı, Buğday</td>\n                <td>Kendi besinini kendi üretir, kökleriyle toprağa bağlıdır.</td>\n              </tr>\n              <tr>\n                <td><strong>Hayvanlar</strong></td>\n                <td>Kedi, Kartal, Yunus, Karınca</td>\n                <td>Hareket edebilir, besinlerini dışarıdan hazır alırlar.</td>\n              </tr>\n            </tbody>\n          </table>\n        </div>\n        ",
+                "try_box": {
+                  "question": "Sen de Dene: Bitkiler hareket eder mi? Nasıl?",
+                  "answer": "Evet, bitkiler de hareket eder! Ancak yer değiştirmezler; yapraklarını ve çiçeklerini güneşe doğru çevirerek (yönelme hareketi) hareket ederler (Örnek: Ayçiçeği)."
+                }
               }
             ]
           },
@@ -1894,23 +2123,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Göz, Kulak, Burun, Dil, Deri ve duyu organlarının sağlığını koruma kuralları. (5 Duyumuz)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: DUYU ORGANLARININ İŞLEVLERI KONUSUNA GİRİŞ",
+                "title": "Duyu Organlarının İşlevleri Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Fen Bilimleri dersimizin bu konusunda Duyu Organlarının İşlevleri konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Göz, Kulak, Burun, Dil, Deri ve duyu organlarının sağlığını koruma kuralları.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: 5 Duyumuz",
+                  "📌 MEB Ders Kitabı: Sayfa 58 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Göz, Kulak, Burun, Dil, Deri ve duyu organlarının sağlığını koruma kuralları."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "👀",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Duyu Organlarının İşlevleri ile İlgili Altın Kurallar",
                 "content": "5 duyu organımız: Göz (Görme), Kulak (İşitme), Burun (Koklama), Dil (Tat), Deri (Dokunma). Duyu organlarımız çevremizi güvenle keşfetmemizi sağlar.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Tat ve koku duyuları birlikte çalışır. Nezle olduğunda burnun tıkandığı için yemeklerin tadını tam alamazsın!"
+                },
                 "example_box": "Sıcak bir çorbanın kokusunu burnumuzla, sıcaklığını derimizle, tadını dilimizle hissederiz."
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Tat ve koku duyuları birlikte çalışır. Nezle olduğunda burnun tıkandığı için yemeklerin tadını tam alamazsın!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Duyu Organlarının İşlevleri konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Çevremizdeki nesnelerin sertlik, yumuşaklık ve sıcaklık özelliklerini hangi duyu organımızla algılarız?",
+                  "answer": "Doğru Cevap: Deri (Dokunma) (Deri dokunma duyusu organımızdır.)"
+                }
               }
             ]
           },
@@ -1954,23 +2197,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Tohumun çimlenmesi, bitkinin büyümesi ve hayvanların yaşam döngüsü aşamaları. (Yaşam Döngüsü)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: CANLILARIN YAŞAM DÖNGÜLERI KONUSUNA GİRİŞ",
+                "title": "Canlıların Yaşam Döngüleri Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Fen Bilimleri dersimizin bu konusunda Canlıların Yaşam Döngüleri konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Tohumun çimlenmesi, bitkinin büyümesi ve hayvanların yaşam döngüsü aşamaları.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Yaşam Döngüsü",
+                  "📌 MEB Ders Kitabı: Sayfa 69 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Tohumun çimlenmesi, bitkinin büyümesi ve hayvanların yaşam döngüsü aşamaları."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "🌱",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Canlıların Yaşam Döngüleri ile İlgili Altın Kurallar",
                 "content": "Canlılar doğar, büyür, gelişir, ürer ve ölürler. Buna 'Yaşam Döngüsü' denir. Kelebekler ve kurbağalar başkalaşım (değişim) geçirerek büyür.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Bitkilerin yaşam döngüsü tohumla başlar. Tohumun çimlenmesi için SOS (Su, Oksijen, Sıcaklık) gereklidir; çimlenme aşamasında ışık şart DEĞİLDİR!"
+                },
                 "example_box": "Tırtıl koza örer, kozanın içinde bekler ve rengarenk kanatlı bir kelebek olarak dışarı çıkar."
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Bitkilerin yaşam döngüsü tohumla başlar. Tohumun çimlenmesi için SOS (Su, Oksijen, Sıcaklık) gereklidir; çimlenme aşamasında ışık şart DEĞİLDİR!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Canlıların Yaşam Döngüleri konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Bir tohumun çimlenmesi için gereken 3 temel faktör hangisidir?",
+                  "answer": "Doğru Cevap: Su, Sıcaklık (Isı), Hava (Oksijen) (Tohum çimlenirken fotosentez yapmadığı için ışığa değil Su, Isı ve Havaya ihtiyaç duyar.)"
+                }
               }
             ]
           }
@@ -2060,23 +2317,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Yer kabuğu, kayaçlar, mineraller ve ekonomik değeri olan madenler (bor, bakır, altın, kömür). (Yer Kabuğu)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: KAYAÇLAR, MADENLER VE MINERALLER KONUSUNA GİRİŞ",
+                "title": "Kayaçlar, Madenler ve Mineraller Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Fen Bilimleri dersimizin bu konusunda Kayaçlar, Madenler ve Mineraller konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Yer kabuğu, kayaçlar, mineraller ve ekonomik değeri olan madenler (bor, bakır, altın, kömür).\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Yer Kabuğu",
+                  "📌 MEB Ders Kitabı: Sayfa 84 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Yer kabuğu, kayaçlar, mineraller ve ekonomik değeri olan madenler (bor, bakır, altın, kömür)."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "💎",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Kayaçlar, Madenler ve Mineraller ile İlgili Altın Kurallar",
                 "content": "Yer kabuğunu kayaçlar oluşturur. Kayaçların parçalanmasıyla taş, çakıl ve kum oluşur. Ekonomik değeri olan değerli kayaçlara ise MADEN denir (Altın, Bor, Bakır, Kömür).",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Bütün madenler birer kayaçtır ama her kayaç maden DEĞİLDİR! Bir kayacın maden olması için ekonomik değer taşıması gerekir."
+                },
                 "example_box": "Mutfak tezgahımız mermerden, elektrik kablolarının içindeki teller bakır madeninden yapılır."
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Bütün madenler birer kayaçtır ama her kayaç maden DEĞİLDİR! Bir kayacın maden olması için ekonomik değer taşıması gerekir."
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Kayaçlar, Madenler ve Mineraller konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Kayaçlara farklı renk, parlaklık ve sertlik veren yapılar hangileridir?",
+                  "answer": "Doğru Cevap: Mineraller (Kayaçların yapısını ve özelliklerini mineraller belirler.)"
+                }
               }
             ]
           },
@@ -2120,23 +2391,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Fosiller nasıl oluşur? Milyonlarca yıllık tortul tabakalar ve geçmiş canlı kalıntıları. (Fosiller)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: FOSIL OLUŞUMU KONUSUNA GİRİŞ",
+                "title": "Fosil Oluşumu Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Fen Bilimleri dersimizin bu konusunda Fosil Oluşumu konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Fosiller nasıl oluşur? Milyonlarca yıllık tortul tabakalar ve geçmiş canlı kalıntıları.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Fosiller",
+                  "📌 MEB Ders Kitabı: Sayfa 93 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Fosiller nasıl oluşur? Milyonlarca yıllık tortul tabakalar ve geçmiş canlı kalıntıları."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "🦖",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Fosil Oluşumu ile İlgili Altın Kurallar",
                 "content": "Geçmişte yaşamış canlıların kayaçlar arasında taşlaşmış kalıntı ve izlerine FOSİL denir. Fosilleri inceleyen bilim dalına Paleontoloji denir.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Fosiller sadece birkaç yılda oluşmaz! Bir kalıntının fosil sayılabilmesi için aradan en az milyonlarca yıl geçmesi ve hava almadan tortul tabakalar altında kalması gerekir."
+                },
                 "example_box": "Milyonlarca yıl önce yaşamış dinozorların kemikleri veya kehribar reçinesinin içinde kalmış böcekler günümüze ulaşan fosillerdir."
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Fosiller sadece birkaç yılda oluşmaz! Bir kalıntının fosil sayılabilmesi için aradan en az milyonlarca yıl geçmesi ve hava almadan tortul tabakalar altında kalması gerekir."
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Fosil Oluşumu konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Milyonlarca yıl önce yaşamış canlıların kayaç tabakaları arasında taşlaşmış kalıntılarına ne ad verilir?",
+                  "answer": "Doğru Cevap: Fosil (Geçmiş canlı kalıntılarına fosil denir.)"
+                }
               }
             ]
           }
@@ -2215,23 +2500,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Katı, sıvı ve gaz maddelerin belirgin özellikleri, akışkanlık ve şekil durumları. (Maddenin Hâlleri)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: MADDENIN KATI, SIVI VE GAZ HÂLI KONUSUNA GİRİŞ",
+                "title": "Maddenin Katı, Sıvı ve Gaz Hâli Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Fen Bilimleri dersimizin bu konusunda Maddenin Katı, Sıvı ve Gaz Hâli konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Katı, sıvı ve gaz maddelerin belirgin özellikleri, akışkanlık ve şekil durumları.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Maddenin Hâlleri",
+                  "📌 MEB Ders Kitabı: Sayfa 108 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Katı, sıvı ve gaz maddelerin belirgin özellikleri, akışkanlık ve şekil durumları."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "🧊",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Maddenin Katı, Sıvı ve Gaz Hâli ile İlgili Altın Kurallar",
                 "content": "Maddeler doğada 3 temel halde bulunur: Katı (belirli şekli var: taş, tahta), Sıvı (akışkan, kabın şeklini alır: su, süt), Gaz (uçucu, ortama yayılır: hava, su buharı).",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Kum, tuz, mercimek gibi küçük taneli katılar sıvılar gibi akabilir ve konuldukları kabın şeklini alır; ama taneciklerinin her biri YİNE DE KATIDIR!"
+                },
                 "example_box": "Buz KATI, eriyen su SIVI, kaynayan tencereden çıkan buhar ise MADDENİN GAZ HALİDİR."
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Kum, tuz, mercimek gibi küçük taneli katılar sıvılar gibi akabilir ve konuldukları kabın şeklini alır; ama taneciklerinin her biri YİNE DE KATIDIR!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Maddenin Katı, Sıvı ve Gaz Hâli konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Belirli bir şekli olan ve dışarıdan bir etki olmadıkça şeklini koruyan maddeler hangi haldedir?",
+                  "answer": "Doğru Cevap: Katı (Taş, masa, kalem gibi katı maddelerin belirli bir şekli vardır.)"
+                }
               }
             ]
           },
@@ -2275,23 +2574,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Eleme, süzme, mıknatısla ayırma ve buharlaştırma yöntemleri. (Karışım Ayırma)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: KARIŞIMLAR VE KARIŞIMLARIN AYRILMASI KONUSUNA GİRİŞ",
+                "title": "Karışımlar ve Karışımların Ayrılması Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Fen Bilimleri dersimizin bu konusunda Karışımlar ve Karışımların Ayrılması konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Eleme, süzme, mıknatısla ayırma ve buharlaştırma yöntemleri.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Karışım Ayırma",
+                  "📌 MEB Ders Kitabı: Sayfa 118 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Eleme, süzme, mıknatısla ayırma ve buharlaştırma yöntemleri."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "🔬",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Karışımlar ve Karışımların Ayrılması ile İlgili Altın Kurallar",
                 "content": "İki veya daha fazla maddenin özelliklerini kaybetmeden bir araya gelmesiyle KARIŞIM oluşur. Karışımlar süzme, eleme, mıknatısla çekme ve buharlaştırma yöntemleriyle ayrılır.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Mıknatıs sadece demir, nikel ve kobalt metallerini çeker; plastik, tahta veya altın mıknatısla çekilemez!"
+                },
                 "example_box": "Demir tozu ve kumu ayırmak için mıknatıs kullanırız (mıknatıs demiri çeker, kumu bırakır). Makarnayı sudan ayırmak için süzgeç kullanırız."
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Mıknatıs sadece demir, nikel ve kobalt metallerini çeker; plastik, tahta veya altın mıknatısla çekilemez!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Karışımlar ve Karışımların Ayrılması konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Demir tozları ile talaş karışımını en kolay hangi yöntemle ayırabiliriz?",
+                  "answer": "Doğru Cevap: Mıknatıs ile (Mıknatıs demir tozlarını çeker, talaş geride kalır.)"
+                }
               }
             ]
           },
@@ -2335,23 +2648,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Sıfır atık, kâğıt, cam, plastik ve metal atıkların geri dönüşümü ve çevre bilinci. (Sıfır Atık)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: ATIKLARIN AYRIŞTIRILMASI & GERI DÖNÜŞÜM KONUSUNA GİRİŞ",
+                "title": "Atıkların Ayrıştırılması & Geri Dönüşüm Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Fen Bilimleri dersimizin bu konusunda Atıkların Ayrıştırılması & Geri Dönüşüm konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Sıfır atık, kâğıt, cam, plastik ve metal atıkların geri dönüşümü ve çevre bilinci.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Sıfır Atık",
+                  "📌 MEB Ders Kitabı: Sayfa 127 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Sıfır atık, kâğıt, cam, plastik ve metal atıkların geri dönüşümü ve çevre bilinci."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "♻️",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Atıkların Ayrıştırılması & Geri Dönüşüm ile İlgili Altın Kurallar",
                 "content": "Kullanılmış kağıt, cam, metal ve plastik atıkların fabrikalarda yeniden işlenerek kullanılabilir hale getirilmesine GERİ DÖNÜŞÜM denir.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Geri dönüşüm kutularına çöp değil, sadece temiz ve ayrıştırılmış geri dönüştürülebilir malzemeler atılmalıdır."
+                },
                 "example_box": "1 ton kullanılmış kağıdın geri dönüştürülmesi doğada tam 17 tane yetişkin ağacın kesilmesini önler!"
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Geri dönüşüm kutularına çöp değil, sadece temiz ve ayrıştırılmış geri dönüştürülebilir malzemeler atılmalıdır."
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Atıkların Ayrıştırılması & Geri Dönüşüm konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Kullanılmış defter ve karton kutuları hangi geri dönüşüm kutusuna atmalıyız?",
+                  "answer": "Doğru Cevap: Mavi - Kâğıt Kutusu (Kâğıt ve karton atıklar kâğıt geri dönüşüm kutusuna atılır.)"
+                }
               }
             ]
           }
@@ -2537,23 +2864,24 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Kişisel güçlü yönleri, ilgi ve yetenekleri keşfetme ve hedefler belirleme. (Güçlü Yönlerim)"
-              },
-              {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "🌟",
-                "content": "Her bireyin ilgi alanları, yetenekleri ve güçlendirmesi gereken yönleri farklıdır. Kendimizi tanımalı, güçlü yanlarımızı geliştirmeli, eksiklerimiz için sabırla çalışmalıyız.",
-                "example_box": "Sen satrançta çok stratejik düşünebilirsin, arkadaşın ise resimde renkleri harika kullanabilir."
-              },
-              {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Hiç kimse her konuda mükemmel olmak zorunda değildir; farklılıklar sınıfımızı ve dünyamızı zenginleştirir!"
+                "type": "kesif",
+                "badge": "🌱 1. ÖĞRENME ALANI: BEN VE OKULUM",
+                "title": "Güçlü Yönlerim ve Geliştirmek İstediklerim",
+                "story": "Her çocuk benzersiz bir hazinedir! Kimimiz çok güzel resim yapar, kimimiz matematikte hızlı işlem yapar, kimimiz ise çok iyi futbol oynar veya bağlama çalar.",
+                "content": "Kendimizi iyi tanımak, neleri çok iyi yaptığımızı bilmek (güçlü yönlerimiz) ve hangi konularda daha çok çalışmamız gerektiğini fark etmek (gelişmeye açık yönlerimiz) bizi başarıya götürür.",
+                "key_points": [
+                  "🌟 Güçlü Yönler: Kolayca ve severek yaptığımız, başarılı olduğumuz yeteneklerimiz.",
+                  "🎯 Geliştirebileceğimiz Yönler: Henüz öğrenme aşamasında olduğumuz, pratik yaptıkça ilerleyeceğimiz alanlar.",
+                  "🤝 Farklılıklara Saygı: Arkadaşımızın bizden farklı bir yeteneğe sahip olması zenginliktir. Birbirimizi tamamlarız!"
+                ],
+                "info_box": {
+                  "title": "MEB DEĞERLERİMİZ",
+                  "content": "Hiç kimse her şeyi mükemmel yapamaz. Önemli olan eksiklerimizi kabul edip azimle çalışmak ve arkadaşlarımızın başarılarını tebrik etmektir."
+                },
+                "try_box": {
+                  "question": "Sen de Düşün: Senin en güçlü olduğun yönün nedir? Bir düşün ve arkadaşınla paylaş!",
+                  "answer": "Resim yapmak, kitap okumak, arkadaşlarına yardım etmek, satranç oynamak... Hepsi senin harika birer güçlü yönündür!"
+                }
               }
             ]
           },
@@ -2597,23 +2925,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Sınıf ve okul kuralları, okul kaynaklarını özenli kullanma ve sorumluluk bilinci. (Hak & Sorumluluk)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: HAKKIM DA VAR SORUMLULUĞUM DA KONUSUNA GİRİŞ",
+                "title": "Hakkım da Var Sorumluluğum da Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Hayat Bilgisi dersimizin bu konusunda Hakkım da Var Sorumluluğum da konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Sınıf ve okul kuralları, okul kaynaklarını özenli kullanma ve sorumluluk bilinci.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Hak & Sorumluluk",
+                  "📌 MEB Ders Kitabı: Sayfa 24 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Sınıf ve okul kuralları, okul kaynaklarını özenli kullanma ve sorumluluk bilinci."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "🏫",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Hakkım da Var Sorumluluğum da ile İlgili Altın Kurallar",
                 "content": "Haklarımız özgürlüklerimizi, sorumluluklarımız ise üstlendiğimiz görevleri ifade eder. Haklarımızı kullanırken başkalarının haklarına saygı göstermek en temel sorumluluğumuzdur.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Sorumluluğunu bilmeyen birey haklarını da koruyamaz. Hak ve sorumluluk iki elin parmakları gibi birbirini tamamlar."
+                },
                 "example_box": "Teneffüste bahçede oyun oynama HAKKIMIZ vardır; zil çaldığında zamanında sınıfa girme ve ders araçlarını koruma SORUMLULUĞUMUZ vardır."
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Sorumluluğunu bilmeyen birey haklarını da koruyamaz. Hak ve sorumluluk iki elin parmakları gibi birbirini tamamlar."
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Hakkım da Var Sorumluluğum da konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Aşağıdakilerden hangisi okuldaki SORUMLULUKLARIMIZDAN biridir?",
+                  "answer": "Doğru Cevap: Okul kaynaklarını ve sıraları temiz kullanmak (Sıraları ve sınıfı korumak ortak sorumluluğumuzdur.)"
+                }
               }
             ]
           },
@@ -2657,23 +2999,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Çocuk Hakları Sözleşmesi: Yaşama, korunma, eğitim ve oyun haklarımız. (Çocuk Hakları)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: ÇOCUĞUM, HAKLARIMLA VARIM KONUSUNA GİRİŞ",
+                "title": "Çocuğum, Haklarımla Varım Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Hayat Bilgisi dersimizin bu konusunda Çocuğum, Haklarımla Varım konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Çocuk Hakları Sözleşmesi: Yaşama, korunma, eğitim ve oyun haklarımız.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Çocuk Hakları",
+                  "📌 MEB Ders Kitabı: Sayfa 33 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Çocuk Hakları Sözleşmesi: Yaşama, korunma, eğitim ve oyun haklarımız."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "🕊️",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Çocuğum, Haklarımla Varım ile İlgili Altın Kurallar",
                 "content": "Çocuk Hakları Sözleşmesi'ne göre 18 yaşına kadar her birey çocuktur. En temel haklarımız: Yaşama hakkı, Sağlık hakkı, Eğitim hakkı ve Oyun oynama hakkıdır.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Çocuklar hiçbir koşulda ağır işlerde çalıştırılamaz; çocukların birinci görevi okumak, öğrenmek ve güvenle büyümektir!"
+                },
                 "example_box": "Okula gidip ders dinleyebilmemiz EĞİTİM hakkımız; hastalandığımızda doktora gidebilmemiz SAĞLIK hakkımızdır."
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Çocuklar hiçbir koşulda ağır işlerde çalıştırılamaz; çocukların birinci görevi okumak, öğrenmek ve güvenle büyümektir!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Çocuğum, Haklarımla Varım konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Tüm dünyadaki çocukların okula gidip bilgi öğrenmesi hangi hakla güvenceye alınmıştır?",
+                  "answer": "Doğru Cevap: Eğitim Hakkı (Her çocuğun eğitim alma hakkı vardır.)"
+                }
               }
             ]
           }
@@ -2752,23 +3108,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Dengeli beslenme, mevsim meyve ve sebzeleri, kişisel temizlik ve uyku düzeni. (Sağlıklı Yaşam)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: SAĞLIĞIMI KORUYORUM KONUSUNA GİRİŞ",
+                "title": "Sağlığımı Koruyorum Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Hayat Bilgisi dersimizin bu konusunda Sağlığımı Koruyorum konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Dengeli beslenme, mevsim meyve ve sebzeleri, kişisel temizlik ve uyku düzeni.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Sağlıklı Yaşam",
+                  "📌 MEB Ders Kitabı: Sayfa 46 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Dengeli beslenme, mevsim meyve ve sebzeleri, kişisel temizlik ve uyku düzeni."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "🥗",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Sağlığımı Koruyorum ile İlgili Altın Kurallar",
                 "content": "Sağlığımızı korumak için kişisel temizliğe dikkat etmeli, dengeli beslenmeli, düzenli spor yapmalı ve mevsime uygun giyinmeliyiz.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Hastalanınca hemen antibiyotiğe sarılmamalıyız; ilaçlar sadece doktor önerisiyle kullanılmalıdır."
+                },
                 "example_box": "Kışın soğukta dışarı çıkarken atkı, bere ve mont giymek bizi hastalıklardan korur."
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Hastalanınca hemen antibiyotiğe sarılmamalıyız; ilaçlar sadece doktor önerisiyle kullanılmalıdır."
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Sağlığımı Koruyorum konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Vücudumuzun sağlıklı büyümesi için her besin grubundan yeteri kadar tüketmeye ne denir?",
+                  "answer": "Doğru Cevap: Dengeli ve düzenli beslenme (Protein, karbonhidrat, vitamin dengeli alınmalıdır.)"
+                }
               }
             ]
           },
@@ -2812,23 +3182,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Evde, okulda, sokakta güvenlik; tanımadığımız kişilere karşı sınırlar ve 112 Acil Çağrı. (Güvenlik & 112)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: GÜVENLIĞIMIZI TEHDIT EDEN DURUMLAR KONUSUNA GİRİŞ",
+                "title": "Güvenliğimizi Tehdit Eden Durumlar Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Hayat Bilgisi dersimizin bu konusunda Güvenliğimizi Tehdit Eden Durumlar konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Evde, okulda, sokakta güvenlik; tanımadığımız kişilere karşı sınırlar ve 112 Acil Çağrı.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Güvenlik & 112",
+                  "📌 MEB Ders Kitabı: Sayfa 53 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Evde, okulda, sokakta güvenlik; tanımadığımız kişilere karşı sınırlar ve 112 Acil Çağrı."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "🚨",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Güvenliğimizi Tehdit Eden Durumlar ile İlgili Altın Kurallar",
                 "content": "Evde, okulda ve sokakta güvenliğimizi tehdit eden durumlar: Islak zeminde koşmak, açık prizlere dokunmak, tanımadığımız yabancılarla konuşmak veya onların arabasına binmektir.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Tanımadığın biri sana 'gel sana şeker alayım' veya 'anneni tanıyorum' derse ASLA inanma ve hemen güvenli bir yere (öğretmenin veya polisin yanına) koş!"
+                },
                 "example_box": "Evde gaz kokusu hissettiğimizde hemen pencereleri açmalı, elektrik düğmelerine dokunmamalı ve büyüklerimize haber vermeliyiz."
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Tanımadığın biri sana 'gel sana şeker alayım' veya 'anneni tanıyorum' derse ASLA inanma ve hemen güvenli bir yere (öğretmenin veya polisin yanına) koş!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Güvenliğimizi Tehdit Eden Durumlar konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Türkiye'de polis, ambulans, itfaiye gibi tüm acil durumlar için aranan tek numara hangisidir?",
+                  "answer": "Doğru Cevap: 112 (Tüm acil yardım hatları 112 Tek Acil Çağrı Merkezinde birleştirilmiştir.)"
+                }
               }
             ]
           },
@@ -2872,23 +3256,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Trafik işaret levhaları, yaya geçidi, emniyet kemeri ve güvenli oyun alanları. (Trafik Kuralları)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: TRAFIK KURALLARININ ÖNEMI KONUSUNA GİRİŞ",
+                "title": "Trafik Kurallarının Önemi Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Hayat Bilgisi dersimizin bu konusunda Trafik Kurallarının Önemi konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Trafik işaret levhaları, yaya geçidi, emniyet kemeri ve güvenli oyun alanları.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Trafik Kuralları",
+                  "📌 MEB Ders Kitabı: Sayfa 63 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Trafik işaret levhaları, yaya geçidi, emniyet kemeri ve güvenli oyun alanları."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "🚦",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Trafik Kurallarının Önemi ile İlgili Altın Kurallar",
                 "content": "Trafikte can güvenliğimiz için kurallara uymalıyız: Yaya geçidini ve üst geçitleri kullanmak, yeşil ışıkta geçmek, arabada arka koltuğa oturup emniyet kemerini takmak.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "12 yaşından küçük çocukların arabanın ön koltuğunda oturması yasaktır ve son derece tehlikelidir!"
+                },
                 "example_box": "Yoldan karşıya geçerken: Önce sola, sonra sağa, tekrar sola bakarak dikkatlice geçmeliyiz."
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "12 yaşından küçük çocukların arabanın ön koltuğunda oturması yasaktır ve son derece tehlikelidir!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Trafik Kurallarının Önemi konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Karşıdan karşıya geçerken hangisini KULLANMALIYIZ?",
+                  "answer": "Doğru Cevap: Yaya geçidini veya üst geçidi (Yaya geçitleri yayaların güvenle karşıya geçmesini sağlar.)"
+                }
               }
             ]
           }
@@ -2967,23 +3365,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Aile içi dayanışma, akrabalık bağları, komşuluk ilişkileri ve büyüklere saygı. (Bizim Aile)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: AILE VE TOPLUM KONUSUNA GİRİŞ",
+                "title": "Aile ve Toplum Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Hayat Bilgisi dersimizin bu konusunda Aile ve Toplum konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Aile içi dayanışma, akrabalık bağları, komşuluk ilişkileri ve büyüklere saygı.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Bizim Aile",
+                  "📌 MEB Ders Kitabı: Sayfa 78 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Aile içi dayanışma, akrabalık bağları, komşuluk ilişkileri ve büyüklere saygı."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "🏡",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Aile ve Toplum ile İlgili Altın Kurallar",
                 "content": "Aile toplumun temel taşıdır. Aile içinde sevgi, saygı, dürüstlük, anlayış ve dayanışma olmalıdır.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Aile bireylerinin fikirleri dinlenmeli, önemli kararlar alınırken çocukların da görüşleri sorulmalıdır."
+                },
                 "example_box": "Akşam ailece sofraya oturup günün nasıl geçtiğini paylaşmak aile bağlarını güçlendirir."
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Aile bireylerinin fikirleri dinlenmeli, önemli kararlar alınırken çocukların da görüşleri sorulmalıdır."
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Aile ve Toplum konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Annemizin ve babamızın annesine ne ad veririz?",
+                  "answer": "Doğru Cevap: Büyükanne / Nine (Büyükanne veya nine denir.)"
+                }
               }
             ]
           },
@@ -3027,23 +3439,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Toplumsal yardımlaşma, imece kültürü, empati ve paylaşmanın önemi. (İmece & Paylaşım)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: YARDIMLAŞMA KONUSUNA GİRİŞ",
+                "title": "Yardımlaşma Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Hayat Bilgisi dersimizin bu konusunda Yardımlaşma konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Toplumsal yardımlaşma, imece kültürü, empati ve paylaşmanın önemi.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: İmece & Paylaşım",
+                  "📌 MEB Ders Kitabı: Sayfa 86 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Toplumsal yardımlaşma, imece kültürü, empati ve paylaşmanın önemi."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "🤝",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Yardımlaşma ile İlgili Altın Kurallar",
                 "content": "Yardımlaşma ve dayanışma toplumda kardeşliği ve birliği pekiştirir. Kızılay, AFAD, Yeşilay gibi sivil toplum kuruluşları ihtiyaç sahiplerine el uzatır.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Büyük yardımlar yapmak zorunda değilsin; yaşlı bir komşunun poşetini taşımak bile çok değerli bir yardımlaşmadır."
+                },
                 "example_box": "Deprem veya sel felaketinde ihtiyaç sahiplerine kıyafet ve battaniye yardımı göndermek milletimizin en güzel yardımlaşma örneğidir."
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Büyük yardımlar yapmak zorunda değilsin; yaşlı bir komşunun poşetini taşımak bile çok değerli bir yardımlaşmadır."
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Yardımlaşma konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Bir işin köylüler veya komşular tarafından el birliğiyle gönüllü olarak yapılmasına ne ad verilir?",
+                  "answer": "Doğru Cevap: İmece (El birliğiyle yardımlaşarak iş yapmaya imece denir.)"
+                }
               }
             ]
           },
@@ -3087,23 +3513,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Toplumdaki meslekler, yaptıkları işler ve kullandıkları araç-gereçler. (Meslekler)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: MESLEKLER KONUSUNA GİRİŞ",
+                "title": "Meslekler Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Hayat Bilgisi dersimizin bu konusunda Meslekler konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Toplumdaki meslekler, yaptıkları işler ve kullandıkları araç-gereçler.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Meslekler",
+                  "📌 MEB Ders Kitabı: Sayfa 93 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Toplumdaki meslekler, yaptıkları işler ve kullandıkları araç-gereçler."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "👩‍⚕️",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Meslekler ile İlgili Altın Kurallar",
                 "content": "Toplumda her meslek bir ihtiyacı karşılar: Doktor sağlığımızı, Öğretmen eğitimimizi, Polis güvenliğimizi, Çiftçi besinlerimizi, İtfaiyeci canımızı korur.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Hiçbir meslek diğerinden üstün değildir; işini dürüst, özenli ve severek yapan her meslek sahibi saygıyı hak eder!"
+                },
                 "example_box": "Fırıncılar sabahın erken saatlerinde taze ekmek pişirerek soframıza ekmek gelmesini sağlarlar."
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Hiçbir meslek diğerinden üstün değildir; işini dürüst, özenli ve severek yapan her meslek sahibi saygıyı hak eder!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Meslekler konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Hastaları muayene eden, teşhis koyup tedavi eden meslek sahibi kimdir?",
+                  "answer": "Doğru Cevap: Doktor / Hekim (Doktorlar sağlık hizmeti verir ve stetoskop kullanır.)"
+                }
               }
             ]
           }
@@ -3258,23 +3698,17 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "classmate, teacher, librarian, school nurse, caretaker, headteacher ('Who is this?') (School People)"
-              },
-              {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "🏫",
-                "content": "Selamlaşma ve okul kişileri: Good morning (Günaydın), Good afternoon (Tünaydın), Teacher (Öğretmen), Student (Öğrenci), Friend (Arkadaş).",
-                "example_box": "'Good morning teacher!' (Günaydın öğretmenim!), 'This is my friend Ece.' (Bu benim arkadaşım Ece.)"
-              },
-              {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "'Good night' (İyi geceler) sadece yatarken söylenir. Akşam karşılaştığımızda 'Good evening' (İyi akşamlar) deriz!"
+                "type": "kesif",
+                "badge": "🇬🇧 THEME 1: SCHOOL LIFE",
+                "title": "Greetings & Introducing Yourself (Selamlaşma ve Tanışma)",
+                "story": "Welcome to 3rd Grade English! Let's learn how to greet friends and teachers at school!",
+                "content": "İngilizce konuşurken günün saatine göre farklı selamlaşma ifadeleri kullanırız. Kendimizi tanıtırken adımızı ve yaşımızı söyleriz.",
+                "model_html": "\n        <div class=\"english-dialog-card\">\n          <div class=\"dialog-bubble bubble-left\">\n            <span class=\"d-avatar\">👦</span>\n            <div class=\"d-text\">\n              <strong>Hello! My name is Emre. What is your name?</strong>\n              <em>(Merhaba! Benim adım Emre. Senin adın ne?)</em>\n            </div>\n          </div>\n          <div class=\"dialog-bubble bubble-right\">\n            <span class=\"d-avatar\">👧</span>\n            <div class=\"d-text\">\n              <strong>Hi Emre! I am Zeynep. Nice to meet you!</strong>\n              <em>(Selam Emre! Ben Zeynep. Tanıştığıma memnun oldum!)</em>\n            </div>\n          </div>\n        </div>\n        ",
+                "table_html": "\n        <div class=\"book-table-wrap\">\n          <table class=\"book-table\">\n            <thead>\n              <tr>\n                <th>English Expression</th>\n                <th>Pronunciation (Okunuşu)</th>\n                <th>Türkçe Anlamı</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td><strong>Good morning!</strong></td>\n                <td>Gud mornink</td>\n                <td>Günaydın!</td>\n              </tr>\n              <tr>\n                <td><strong>Good afternoon!</strong></td>\n                <td>Gud aftırnuun</td>\n                <td>Tünaydın / İyi günler!</td>\n              </tr>\n              <tr>\n                <td><strong>Good evening!</strong></td>\n                <td>Gud iivnink</td>\n                <td>İyi akşamlar!</td>\n              </tr>\n              <tr>\n                <td><strong>How are you?</strong></td>\n                <td>Hav ar yu?</td>\n                <td>Nasılsın?</td>\n              </tr>\n              <tr>\n                <td><strong>I am fine, thank you.</strong></td>\n                <td>Ay em fayn, tenk yu.</td>\n                <td>İyiyim, teşekkür ederim.</td>\n              </tr>\n            </tbody>\n          </table>\n        </div>\n        ",
+                "try_box": {
+                  "question": "Can you say it? Arkadaşına 'Tanıştığıma memnun oldum' demek için hangi İngilizce ifadeyi kullanırsın?",
+                  "answer": "'Nice to meet you!' (Nays tu miit yu!)"
+                }
               }
             ]
           },
@@ -3318,23 +3752,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "library, art room, music room, gym, corridor, sports field ('Where is Daphne?') (School Places)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: PLACES AT SCHOOL KONUSUNA GİRİŞ",
+                "title": "Places at School Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf İngilizce (English) dersimizin bu konusunda Places at School konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "library, art room, music room, gym, corridor, sports field ('Where is Daphne?')\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: School Places",
+                  "📌 MEB Ders Kitabı: Sayfa 22 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: library, art room, music room, gym, corridor, sports field ('Where is Daphne?')"
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "🎨",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Places at School ile İlgili Altın Kurallar",
                 "content": "Okul bölümleri: Classroom (Sınıf), Library (Kütüphane), Canteen (Kantin), Playground (Oyun bahçesi), Music room (Müzik odası).",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Bölüm isimlerinin başına genellikle 'the' getirilir: 'in the canteen' (kantinde)."
+                },
                 "example_box": "'Where are you?' -> 'I am in the library.' (Neredesin? -> Kütüphanedeyim.) 'Let's play in the playground.'"
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Bölüm isimlerinin başına genellikle 'the' getirilir: 'in the canteen' (kantinde)."
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Places at School konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Where do students play basketball and do physical exercises at school?",
+                  "answer": "Doğru Cevap: In the gym (Spor salonu = Gym)"
+                }
               }
             ]
           },
@@ -3378,23 +3826,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Months of the year (January - December), candle, cake, gift ('When is your birthday?') (Months & Birthdays)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: MONTHS & BIRTHDAY CELEBRATIONS KONUSUNA GİRİŞ",
+                "title": "Months & Birthday Celebrations Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf İngilizce (English) dersimizin bu konusunda Months & Birthday Celebrations konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Months of the year (January - December), candle, cake, gift ('When is your birthday?')\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Months & Birthdays",
+                  "📌 MEB Ders Kitabı: Sayfa 28 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Months of the year (January - December), candle, cake, gift ('When is your birthday?')"
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "🎂",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Months & Birthday Celebrations ile İlgili Altın Kurallar",
                 "content": "Yılın 12 ayı: January, February, March, April, May, June, July, August, September, October, November, December.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "İngilizcede ay isimlerinin ilk harfi CÜMLENİN NERESİNDE OLURSA OLSUN her zaman BÜYÜK harfle yazılır (March, April vb.)!"
+                },
                 "example_box": "'When is your birthday?' (Doğum günün ne zaman?) -> 'It is in May.' (Mayıs ayında.) 'Happy Birthday!' (İyi ki doğdun!)"
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "İngilizcede ay isimlerinin ilk harfi CÜMLENİN NERESİNDE OLURSA OLSUN her zaman BÜYÜK harfle yazılır (March, April vb.)!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Months & Birthday Celebrations konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Which month comes after October?",
+                  "answer": "Doğru Cevap: November (October (Ekim) -> November (Kasım))"
+                }
               }
             ]
           },
@@ -3438,23 +3900,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "You must follow rules. You mustn't run in the corridor. (Must / Mustn't)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: SCHOOL RULES & MUST / MUSTN'T KONUSUNA GİRİŞ",
+                "title": "School Rules & Must / Mustn't Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf İngilizce (English) dersimizin bu konusunda School Rules & Must / Mustn't konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "You must follow rules. You mustn't run in the corridor.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Must / Mustn't",
+                  "📌 MEB Ders Kitabı: Sayfa 32 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: You must follow rules. You mustn't run in the corridor."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "🛑",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "School Rules & Must / Mustn't ile İlgili Altın Kurallar",
                 "content": "Okul kuralları: 'Must' (yapmalısın - zorunluluk), 'Mustn't' (yapmamalısın - yasak).",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "'Mustn't' = Must not birleşimidir; kurallara aykırı yasakları ifade eder."
+                },
                 "example_box": "'You must listen to the teacher.' (Öğretmeni dinlemelisin.) 'You mustn't run in the corridor.' (Koridorda koşmamalısın.)"
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "'Mustn't' = Must not birleşimidir; kurallara aykırı yasakları ifade eder."
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! School Rules & Must / Mustn't konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: You ........... run in the corridor at school! (Koridorda koşmamalısın!)",
+                  "answer": "Doğru Cevap: mustn't (Yasak ve yapılmaması gerekenler için mustn't kullanılır.)"
+                }
               }
             ]
           }
@@ -3544,23 +4020,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "pencil, ruler, teacher's desk, bookshelf, keyboard, duster, pen ('What are they?') (Classroom Objects)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: CLASSROOM OBJECTS & FURNITURE KONUSUNA GİRİŞ",
+                "title": "Classroom Objects & Furniture Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf İngilizce (English) dersimizin bu konusunda Classroom Objects & Furniture konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "pencil, ruler, teacher's desk, bookshelf, keyboard, duster, pen ('What are they?')\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Classroom Objects",
+                  "📌 MEB Ders Kitabı: Sayfa 37 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: pencil, ruler, teacher's desk, bookshelf, keyboard, duster, pen ('What are they?')"
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "✏️",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Classroom Objects & Furniture ile İlgili Altın Kurallar",
                 "content": "Sınıf eşyaları: Desk (Sıra), Board (Yazı tahtası), Chair (Sandalye), Pencil case (Kalemlik), Book (Kitap), Ruler (Cetvel).",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Sessiz harfle başlayan nesnelerin önüne 'a' (a book), sesli harfle başlayanların önüne 'an' (an eraser) gelir!"
+                },
                 "example_box": "'What is this?' -> 'It is a ruler.' (Bu nedir? -> Bu bir cetveldir.)"
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Sessiz harfle başlayan nesnelerin önüne 'a' (a book), sesli harfle başlayanların önüne 'an' (an eraser) gelir!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Classroom Objects & Furniture konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: What is this? (Çizim yaparken düz çizgi çekmek için kullanılan cetvel)",
+                  "answer": "Doğru Cevap: A ruler (Cetvel = Ruler)"
+                }
               }
             ]
           },
@@ -3604,23 +4094,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "'What time is it? It's five o'clock.' / Saatleri İngilizce söyleme. (What time is it?)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: TELLING THE TIME KONUSUNA GİRİŞ",
+                "title": "Telling the Time Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf İngilizce (English) dersimizin bu konusunda Telling the Time konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "'What time is it? It's five o'clock.' / Saatleri İngilizce söyleme.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: What time is it?",
+                  "📌 MEB Ders Kitabı: Sayfa 42 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: 'What time is it? It's five o'clock.' / Saatleri İngilizce söyleme."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "⏱️",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Telling the Time ile İlgili Altın Kurallar",
                 "content": "Saati sorma: 'What time is it?' (Saat kaç?). Tam saatlerde 'It is ... o'clock' kalıbı kullanılır.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "'o'clock' kelimesi sadece TAM saatlerde (saat 1.00, 2.00, 3.00) söylenir. Buçuklu saatlerde o'clock kullanılmaz!"
+                },
                 "example_box": "'What time is it?' -> 'It is three o'clock.' (Saat 3.) 'It is nine o'clock.' (Saat 9.)"
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "'o'clock' kelimesi sadece TAM saatlerde (saat 1.00, 2.00, 3.00) söylenir. Buçuklu saatlerde o'clock kullanılmaz!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Telling the Time konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Saat tam 5:00 iken nasıl söylenir?",
+                  "answer": "Doğru Cevap: It is five o'clock. (Tam saatlerde 'o'clock' kullanılır: It is five o'clock.)"
+                }
               }
             ]
           },
@@ -3664,23 +4168,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "twenty to fifty; 'How many pencils have you got? I have got two pencils.' (Numbers & Have got)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: NUMBERS 20-50 & HAVE GOT / HAS GOT KONUSUNA GİRİŞ",
+                "title": "Numbers 20-50 & Have got / Has got Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf İngilizce (English) dersimizin bu konusunda Numbers 20-50 & Have got / Has got konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "twenty to fifty; 'How many pencils have you got? I have got two pencils.'\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Numbers & Have got",
+                  "📌 MEB Ders Kitabı: Sayfa 46 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: twenty to fifty; 'How many pencils have you got? I have got two pencils.'"
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "🔢",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Numbers 20-50 & Have got / Has got ile İlgili Altın Kurallar",
                 "content": "20-50 arası sayılar: 20 (Twenty), 30 (Thirty), 40 (Forty), 50 (Fifty). 'Have got' / 'Has got' (Sahip olmak).",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "I, You, We, They ile 'HAVE GOT'; He, She, It ile 'HAS GOT' kullanılır!"
+                },
                 "example_box": "'I have got thirty pencils.' (Benim otuz kurşun kalemim var.) 'She has got a cat.' (Onun bir kedisi var.)"
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "I, You, We, They ile 'HAVE GOT'; He, She, It ile 'HAS GOT' kullanılır!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Numbers 20-50 & Have got / Has got konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: 30 sayısının İngilizce yazılışı hangisidir?",
+                  "answer": "Doğru Cevap: Thirty (30 = Thirty, 13 = Thirteen)"
+                }
               }
             ]
           },
@@ -3724,23 +4242,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "sunny, rainy, cloudy, windy; Maths, Science, Life Study, English, Music, Art. (Weather & Subjects)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: WEATHER & SCHOOL SUBJECTS KONUSUNA GİRİŞ",
+                "title": "Weather & School Subjects Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf İngilizce (English) dersimizin bu konusunda Weather & School Subjects konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "sunny, rainy, cloudy, windy; Maths, Science, Life Study, English, Music, Art.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Weather & Subjects",
+                  "📌 MEB Ders Kitabı: Sayfa 50 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: sunny, rainy, cloudy, windy; Maths, Science, Life Study, English, Music, Art."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "☀️",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Weather & School Subjects ile İlgili Altın Kurallar",
                 "content": "Hava durumu: Sunny (Güneşli), Rainy (Yağmurlu), Snowy (Karlı), Windy (Rüzgarlı). Dersler: Maths (Matematik), Science (Fen), Art (Resim).",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "'I like Maths' (Matematiği severim), 'I like Science' (Feni severim) cümleleriyle sevdiğin dersleri anlatabilirsin."
+                },
                 "example_box": "'How is the weather today?' -> 'It is sunny today.' (Bugün hava nasıl? -> Bugün hava güneşli.)"
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "'I like Maths' (Matematiği severim), 'I like Science' (Feni severim) cümleleriyle sevdiğin dersleri anlatabilirsin."
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Weather & School Subjects konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: 'How is the weather today?' - 'It is ............ (güneşli).'",
+                  "answer": "Doğru Cevap: sunny (Güneşli = Sunny)"
+                }
               }
             ]
           }
@@ -3819,23 +4351,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "head, eye, nose, curly blonde hair, tall, short ('What does she look like?') (Body & Looks)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: PARTS OF THE BODY & APPEARANCE KONUSUNA GİRİŞ",
+                "title": "Parts of the Body & Appearance Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf İngilizce (English) dersimizin bu konusunda Parts of the Body & Appearance konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "head, eye, nose, curly blonde hair, tall, short ('What does she look like?')\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Body & Looks",
+                  "📌 MEB Ders Kitabı: Sayfa 57 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: head, eye, nose, curly blonde hair, tall, short ('What does she look like?')"
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "👧",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Parts of the Body & Appearance ile İlgili Altın Kurallar",
                 "content": "Vücut bölümleri: Head (Baş), Eyes (Gözler), Ears (Kulaklar), Nose (Burun), Mouth (Ağız), Hands (Eller), Legs (Bacaklar).",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Çoğul olan uzuvların sonuna 's' takısı gelir: One eye (bir göz) -> Two eyes (iki göz)!"
+                },
                 "example_box": "'Touch your nose!' (Burnuna dokun!) 'I have got brown eyes.' (Benim kahverengi gözlerim var.)"
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Çoğul olan uzuvların sonuna 's' takısı gelir: One eye (bir göz) -> Two eyes (iki göz)!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Parts of the Body & Appearance konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: 'Foot' (ayak) kelimesinin çoğul hali hangisidir?",
+                  "answer": "Doğru Cevap: feet (Foot düzensiz çoğuldur ve feet olur.)"
+                }
               }
             ]
           },
@@ -3879,23 +4425,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "sweatshirt, jeans, coat, dress, sunglasses ('What are you wearing today?') (Clothes)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: CLOTHES & SEASONS KONUSUNA GİRİŞ",
+                "title": "Clothes & Seasons Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf İngilizce (English) dersimizin bu konusunda Clothes & Seasons konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "sweatshirt, jeans, coat, dress, sunglasses ('What are you wearing today?')\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Clothes",
+                  "📌 MEB Ders Kitabı: Sayfa 64 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: sweatshirt, jeans, coat, dress, sunglasses ('What are you wearing today?')"
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "🧥",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Clothes & Seasons ile İlgili Altın Kurallar",
                 "content": "Kıyafetler ve Mevsimler: T-shirt (Tişört), Jacket (Ceket), Shoes (Ayakkabı), Hat (Şapka). Seasons: Spring (İlkbahar), Summer (Yaz), Autumn (Sonbahar), Winter (Kış).",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "'Wear' (giymek) fiilidir: 'I wear my shoes' (Ayakkabılarımı giyerim)."
+                },
                 "example_box": "'In summer, I wear a T-shirt.' (Yazın tişört giyerim.) 'In winter, I wear a coat and boots.'"
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "'Wear' (giymek) fiilidir: 'I wear my shoes' (Ayakkabılarımı giyerim)."
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Clothes & Seasons konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Kışın soğuk havalarda dışarı çıkarken giydiğimiz palto/kabanın İngilizcesi nedir?",
+                  "answer": "Doğru Cevap: A coat (Kaban/palto = Coat)"
+                }
               }
             ]
           },
@@ -3939,23 +4499,37 @@ window.CURRICULUM_TERM1 = {
             },
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "'I like sunny days', 'I dislike rainy days', preferences and feelings. (Likes / Dislikes)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: FEELINGS & PREFERENCES (LIKE / DISLIKE) KONUSUNA GİRİŞ",
+                "title": "Feelings & Preferences (Like / Dislike) Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf İngilizce (English) dersimizin bu konusunda Feelings & Preferences (Like / Dislike) konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "'I like sunny days', 'I dislike rainy days', preferences and feelings.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Likes / Dislikes",
+                  "📌 MEB Ders Kitabı: Sayfa 70 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: 'I like sunny days', 'I dislike rainy days', preferences and feelings."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "❤️",
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Feelings & Preferences (Like / Dislike) ile İlgili Altın Kurallar",
                 "content": "Duygular ve Beğeniler: 'I like ...' (Severim), 'I don't like ...' (Sevmem). Happy (Mutlu), Sad (Üzgün), Energetic (Enerjik).",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "'Like' kelimesinin olumsuzu 'don't like'tır. Sorularda 'Do you like apples?' (Elma sever misin?) diye sorulur!"
+                },
                 "example_box": "'I like football, but I don't like tennis.' (Futbolu severim ama tenisi sevmem.) 'Are you happy?' -> 'Yes, I am!'"
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "'Like' kelimesinin olumsuzu 'don't like'tır. Sorularda 'Do you like apples?' (Elma sever misin?) diye sorulur!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Feelings & Preferences (Like / Dislike) konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Bir şeyi SEVMEDİĞİMİZİ belirtmek için hangisini kullanırız?",
+                  "answer": "Doğru Cevap: I dislike / hate (Dislike veya hate sevmemek anlamına gelir.)"
+                }
               }
             ]
           }
@@ -4124,22 +4698,26 @@ window.CURRICULUM_TERM1 = {
             ],
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Dinleme kuralları, nezaket, dostluk ve yardımlaşma. (Nezaket & Dostluk)"
+                "type": "metin",
+                "badge": "📖 1. TEMA: DEĞERLERİMİZLE YAŞIYORUZ",
+                "title": "Kelebek ile Lavanta (Dinleme ve Okuma Metni)",
+                "story": "Ormanın en güzel köşesinde mis gibi kokan mor bir lavanta çiçeği ile rengarenk kanatlarıyla gururlanan sevimli bir kelebek yaşarmış...",
+                "content": "Bir bahar sabahı rengarenk kanatlı kelebek, kırlarda neşeyle uçuyormuş. Kendini ormandaki bütün canlılardan güzel görüyor, diğer çiçekleri küçümsüyormuş. \n\nYorulunca mor renkli lavanta çiçeğinin yaprağına konmak istemiş. Ancak lavanta nazikçe:\n— Sevgili kelebek, kanatların çok güzel ama kalbin kırıcı konuşuyor. Başkalarını küçümsemek doğru değil, demiş.\n\nKelebek önce öfkelenmiş ama akşam olunca rüzgar çıkmış, yağmur başlamış. Sığınacak sıcak bir yaprak bulamamış. Hatasını anlayıp lavantanın yanına gitmiş:\n— Özür dilerim lavanta kardeş, kibirli davrandım. Beni affeder misin?\n\nLavanta gülümsemiş ve yapraklarını açmış:\n— Hatasını anlayan ve özür dileyen herkes sevgiyi hak eder. Gel, fırtına dinene kadar yaprağımın altına saklan, demiş.",
+                "info_box": {
+                  "title": "💡 METNİN ANA FİKRİ VE DERSİ",
+                  "content": "Kibirli olmak insanı yalnızlaştırır; alçakgönüllü olmak, hatasını kabul edip özür dileyebilmek ve affedici olmak ise en değerli erdemdir."
+                }
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "📚",
-                "content": "Dinleme kuralları, nezaket, dostluk ve yardımlaşma."
-              },
-              {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
+                "type": "tablo",
+                "badge": "📚 2. BÖLÜM: KELİME HAZİNEMİZ",
+                "title": "Metinde Geçen Yeni Sözcükler ve Anlamları",
+                "content": "Metni daha iyi anlamak için bilmediğimiz sözcüklerin TDK sözlük anlamlarını öğrenelim:",
+                "table_html": "\n        <div class=\"book-table-wrap\">\n          <table class=\"book-table\">\n            <thead>\n              <tr>\n                <th>Sözcük</th>\n                <th>Sözlük Anlamı</th>\n                <th>Cümle İçinde Kullanımı</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td><strong>Kibir</strong></td>\n                <td>Kendini herkesten üstün görme, büyüklük taslama.</td>\n                <td>Kibirli insanlar çevrelerindeki dostlarını kaybederler.</td>\n              </tr>\n              <tr>\n                <td><strong>Nezaket</strong></td>\n                <td>Başkalarına karşı saygılı, ince ve terbiyeli davranma.</td>\n                <td>Arkadaşına teşekkür etmek bir nezaket kuralıdır.</td>\n              </tr>\n              <tr>\n                <td><strong>Erdem</strong></td>\n                <td>Ahlakın övdüğü iyi, dürüst ve doğru olma niteliği.</td>\n                <td>Doğru sözlü olmak en büyük erdemlerden biridir.</td>\n              </tr>\n            </tbody>\n          </table>\n        </div>\n        ",
+                "try_box": {
+                  "question": "Sen de Dene: Lavanta çiçeği kelebeği neden hemen kabul etmedi?",
+                  "answer": "Çünkü kelebek kendini herkesten üstün görüyor, kibirli ve kırıcı konuşuyordu. Hatasını anlayıp samimiyetle özür diledikten sonra onu şefkatle kabul etti."
+                }
               }
             ]
           },
@@ -4197,22 +4775,32 @@ window.CURRICULUM_TERM1 = {
             ],
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Aziz Sancar'ın çocukluğu, Anıtkabir ziyareti, çalışma azmi ve dürüstlük. (Çalışma Azmi)"
+                "type": "metin",
+                "badge": "🔬 BİLİM KAHRAMANIMIZ",
+                "title": "Ben Kimim? — Prof. Dr. Aziz Sancar",
+                "story": "Mardin'in Savur ilçesinde sekiz çocuklu bir ailede doğan ve Nobel Kimya Ödülü'nü kazanan Türk bilim insanı Aziz Sancar'ın ilham dolu hikayesi...",
+                "content": "İlkokul üçüncü sınıftayken başkentimiz Ankara'ya gittim. Anıtkabir'i ilk ziyaretimde Atatürk'ün huzurunda kendi kendime bir söz verdim:\n'Çok çalışıp başarılı olacağım ve güzel ülkeme hizmet edeceğim!'\n\nKararımı vermiştim. Önce doktor olup yurdumdaki insanları iyileştirecektim, sonra da bilim insanı olup bilime yeni keşifler kazandıracaktım.\n\nGeceleri saatlerce çalıştım. Laboratuvarda hücrelerin DNA'larını nasıl onardığını araştırdım. Yıllar süren sabırlı çalışmalarımın sonunda 2015 yılında Nobel Kimya Ödülü'nü kazandım. Ödülümü de çocukken söz verdiğim yere, Anıtkabir'e hediye ettim.\n\nÇocuklar; başarı zekayla değil, çok ve sabırla çalışmakla gelir. Asla pes etmeyin!",
+                "info_box": {
+                  "title": "🇹🇷 AZİZ SANCAR'IN ÖĞÜDÜ",
+                  "content": "Çoğu insan zekaya inanır, ben inanmıyorum. Bizi birbirimizden ayıran emektir, çalışmaktır. Memleketinizi sevin ve ona hizmet etmek için elinizden gelenin en iyisini yapın."
+                }
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "📚",
-                "content": "Aziz Sancar'ın çocukluğu, Anıtkabir ziyareti, çalışma azmi ve dürüstlük."
-              },
-              {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
+                "type": "tablo",
+                "badge": "✍️ 2. BÖLÜM: 5N1K SORULARI",
+                "title": "Okuduğunu Anlama ve Çözümleme",
+                "content": "Metinle ilgili 5N 1K sorularını yanıtlayalım:",
+                "key_points": [
+                  "KİM? -> Nobel ödüllü Türk bilim insanı Prof. Dr. Aziz Sancar.",
+                  "NEREDE? -> Mardin Savur'da doğdu, Ankara Anıtkabir'de kendine söz verdi.",
+                  "NE ZAMAN? -> İlkokul 3. sınıfta iken ilk büyük hedefini belirledi.",
+                  "NEDEN? -> Ülkesine ve insanlığa faydalı olmak, bilime katkı sağlamak için.",
+                  "NASIL BAŞARDI? -> Gece gündüz demeden, sabırla ve pes etmeden laboratuvarda çalışarak."
+                ],
+                "try_box": {
+                  "question": "Sen de Dene: Aziz Sancar kazandığı Nobel Ödülü madalyasını nereye bağışlamıştır?",
+                  "answer": "Ankara Anıtkabir Müzesi'ne bağışlamıştır; çünkü başarısını Atatürk'ün kurduğu Cumhuriyet'e borçlu olduğunu belirtmiştir."
+                }
               }
             ]
           },
@@ -4270,22 +4858,36 @@ window.CURRICULUM_TERM1 = {
             ],
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Şiirde duygu ve tonlama, 5N1K metin anlama ve doğa sevgisi. (Şiir & Duygu)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: KÖYDE İLK SABAH KONUSUNA GİRİŞ",
+                "title": "Köyde İlk Sabah Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Türkçe dersimizin bu konusunda Köyde İlk Sabah konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Şiirde duygu ve tonlama, 5N1K metin anlama ve doğa sevgisi.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Şiir & Duygu",
+                  "📌 MEB Ders Kitabı: Sayfa 34 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Şiirde duygu ve tonlama, 5N1K metin anlama ve doğa sevgisi."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "📚",
-                "content": "Şiirde duygu ve tonlama, 5N1K metin anlama ve doğa sevgisi."
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Köyde İlk Sabah ile İlgili Altın Kurallar",
+                "content": "Şiirde duygu ve tonlama, 5N1K metin anlama ve doğa sevgisi.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Soruları dikkatle oku, seçenekleri ele ve acele etmeden karar ver!"
+                }
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Köyde İlk Sabah konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: \"Köyde İlk Sabah\" şiirinde çocuğun avucuna konan ve ona günaydın diyen canlı hangisidir?",
+                  "answer": "Doğru Cevap: Bir serçe kuşu (Şiirde rüyadaki serçe pencerede öterek çocuğa günaydın der.)"
+                }
               }
             ]
           },
@@ -4343,22 +4945,36 @@ window.CURRICULUM_TERM1 = {
             ],
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Komşuluk ilişkileri, yardımlaşma, empati ve büyük harflerin yazımı. (Komşuluk & Empati)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: NERMIN TEYZE NEREDE? KONUSUNA GİRİŞ",
+                "title": "Nermin Teyze Nerede? Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Türkçe dersimizin bu konusunda Nermin Teyze Nerede? konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Komşuluk ilişkileri, yardımlaşma, empati ve büyük harflerin yazımı.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Komşuluk & Empati",
+                  "📌 MEB Ders Kitabı: Sayfa 40 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Komşuluk ilişkileri, yardımlaşma, empati ve büyük harflerin yazımı."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "📚",
-                "content": "Komşuluk ilişkileri, yardımlaşma, empati ve büyük harflerin yazımı."
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Nermin Teyze Nerede? ile İlgili Altın Kurallar",
+                "content": "Komşuluk ilişkileri, yardımlaşma, empati ve büyük harflerin yazımı.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Soruları dikkatle oku, seçenekleri ele ve acele etmeden karar ver!"
+                }
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Nermin Teyze Nerede? konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Kültürümüzde komşuluk ilişkilerine neden büyük önem verilir?",
+                  "answer": "Doğru Cevap: Zor ve sevinçli günlerde birbirimize destek olmak için (Komşular günlük hayatımızda en yakın yardımcımızdır.)"
+                }
               }
             ]
           },
@@ -4416,22 +5032,36 @@ window.CURRICULUM_TERM1 = {
             ],
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Sabır, kanaat, estetik değerler, eş ve zıt anlamlı kelimeler. (Eş & Zıt Anlam)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: ÇAM AĞACI KONUSUNA GİRİŞ",
+                "title": "Çam Ağacı Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Türkçe dersimizin bu konusunda Çam Ağacı konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Sabır, kanaat, estetik değerler, eş ve zıt anlamlı kelimeler.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Eş & Zıt Anlam",
+                  "📌 MEB Ders Kitabı: Sayfa 46 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Sabır, kanaat, estetik değerler, eş ve zıt anlamlı kelimeler."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "📚",
-                "content": "Sabır, kanaat, estetik değerler, eş ve zıt anlamlı kelimeler."
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Çam Ağacı ile İlgili Altın Kurallar",
+                "content": "Sabır, kanaat, estetik değerler, eş ve zıt anlamlı kelimeler.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Soruları dikkatle oku, seçenekleri ele ve acele etmeden karar ver!"
+                }
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Çam Ağacı konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: \"Çam Ağacı\" metninde yaşlı çınar ağacı, genç çam ağacına hangi öğüdü vermiştir?",
+                  "answer": "Doğru Cevap: Sabırlı olmasını ve kendi güzelliğinin farkına varmasını (Her varlığın kendine has bir değeri ve güzelliği vardır; sabırlı olmak gerekir.)"
+                }
               }
             ]
           }
@@ -4569,22 +5199,36 @@ window.CURRICULUM_TERM1 = {
             ],
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Atatürk'ün manevi kızı Ülkü, tevazu, eşitlik ve dinleme kuralları. (Tevazu & Eşitlik)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: KAHVERENGI AYAKKABILARI SIYAHA BOYAYAN ÜLKÜ KONUSUNA GİRİŞ",
+                "title": "Kahverengi Ayakkabıları Siyaha Boyayan Ülkü Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Türkçe dersimizin bu konusunda Kahverengi Ayakkabıları Siyaha Boyayan Ülkü konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Atatürk'ün manevi kızı Ülkü, tevazu, eşitlik ve dinleme kuralları.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Tevazu & Eşitlik",
+                  "📌 MEB Ders Kitabı: Sayfa 60 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Atatürk'ün manevi kızı Ülkü, tevazu, eşitlik ve dinleme kuralları."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "📚",
-                "content": "Atatürk'ün manevi kızı Ülkü, tevazu, eşitlik ve dinleme kuralları."
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Kahverengi Ayakkabıları Siyaha Boyayan Ülkü ile İlgili Altın Kurallar",
+                "content": "Atatürk'ün manevi kızı Ülkü, tevazu, eşitlik ve dinleme kuralları.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Soruları dikkatle oku, seçenekleri ele ve acele etmeden karar ver!"
+                }
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Kahverengi Ayakkabıları Siyaha Boyayan Ülkü konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Ülkü, ayakkabılarını neden siyaha boyamak istemiştir?",
+                  "answer": "Doğru Cevap: Okuldaki diğer arkadaşlarıyla eşit olmak ve dikkat çekmemek için (Ülkü, diğer çocuklardan farklı görünmek istememiş ve tevazu göstermiştir.)"
+                }
               }
             ]
           },
@@ -4642,22 +5286,36 @@ window.CURRICULUM_TERM1 = {
             ],
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Atatürk'ün kitap tutkusu, araştırmacı kişiliği ve Çocuklara Rehber Dergisi. (Kitap & Araştırma)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: ATATÜRK ÇOK KITAP OKURMUŞ KONUSUNA GİRİŞ",
+                "title": "Atatürk Çok Kitap Okurmuş Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Türkçe dersimizin bu konusunda Atatürk Çok Kitap Okurmuş konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Atatürk'ün kitap tutkusu, araştırmacı kişiliği ve Çocuklara Rehber Dergisi.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Kitap & Araştırma",
+                  "📌 MEB Ders Kitabı: Sayfa 66 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Atatürk'ün kitap tutkusu, araştırmacı kişiliği ve Çocuklara Rehber Dergisi."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "📚",
-                "content": "Atatürk'ün kitap tutkusu, araştırmacı kişiliği ve Çocuklara Rehber Dergisi."
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Atatürk Çok Kitap Okurmuş ile İlgili Altın Kurallar",
+                "content": "Atatürk'ün kitap tutkusu, araştırmacı kişiliği ve Çocuklara Rehber Dergisi.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Soruları dikkatle oku, seçenekleri ele ve acele etmeden karar ver!"
+                }
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Atatürk Çok Kitap Okurmuş konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Metne göre Atatürk çocukken eline biraz para geçse yarısıyla ne alırmış?",
+                  "answer": "Doğru Cevap: Kitap (Atatürk eline geçen paranın yarısıyla kitap alıp kendini geliştirirdi.)"
+                }
               }
             ]
           },
@@ -4715,22 +5373,36 @@ window.CURRICULUM_TERM1 = {
             ],
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Şerife Bacı, Nene Hatun, Gördesli Makbule ve Millî Mücadele kahramanları. (Millî Mücadele)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: ANADOLU'NUN KADINLARI KONUSUNA GİRİŞ",
+                "title": "Anadolu'nun Kadınları Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Türkçe dersimizin bu konusunda Anadolu'nun Kadınları konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Şerife Bacı, Nene Hatun, Gördesli Makbule ve Millî Mücadele kahramanları.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Millî Mücadele",
+                  "📌 MEB Ders Kitabı: Sayfa 72 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Şerife Bacı, Nene Hatun, Gördesli Makbule ve Millî Mücadele kahramanları."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "📚",
-                "content": "Şerife Bacı, Nene Hatun, Gördesli Makbule ve Millî Mücadele kahramanları."
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Anadolu'nun Kadınları ile İlgili Altın Kurallar",
+                "content": "Şerife Bacı, Nene Hatun, Gördesli Makbule ve Millî Mücadele kahramanları.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Soruları dikkatle oku, seçenekleri ele ve acele etmeden karar ver!"
+                }
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Anadolu'nun Kadınları konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Kastamonu'dan İnebolu'ya cephane taşırken bebeğinin üzerindeki battaniyeyi ıslanmasın diye mermilere örten kahraman kadınımız kimdir?",
+                  "answer": "Doğru Cevap: Şerife Bacı (Şerife Bacı vatanı için canını feda eden fedakar Türk anasıdır.)"
+                }
               }
             ]
           },
@@ -4788,22 +5460,36 @@ window.CURRICULUM_TERM1 = {
             ],
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Bayram sevinci, halk oyunları, bayramlıklar ve milli günler. (Milli Bayramlar)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: DÜN GIBI KONUSUNA GİRİŞ",
+                "title": "Dün Gibi Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Türkçe dersimizin bu konusunda Dün Gibi konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Bayram sevinci, halk oyunları, bayramlıklar ve milli günler.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Milli Bayramlar",
+                  "📌 MEB Ders Kitabı: Sayfa 80 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Bayram sevinci, halk oyunları, bayramlıklar ve milli günler."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "📚",
-                "content": "Bayram sevinci, halk oyunları, bayramlıklar ve milli günler."
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Dün Gibi ile İlgili Altın Kurallar",
+                "content": "Bayram sevinci, halk oyunları, bayramlıklar ve milli günler.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Soruları dikkatle oku, seçenekleri ele ve acele etmeden karar ver!"
+                }
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Dün Gibi konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: \"Dün Gibi\" metninde yazar çocukluğundaki hangi coşkulu anıyı anlatmaktadır?",
+                  "answer": "Doğru Cevap: Milli bayramlarda giyilen bayramlıkları ve halk oyunu heyecanını (Metin bayramlık kıyafetlerin ve milli bayramların sevincini anlatır.)"
+                }
               }
             ]
           },
@@ -4861,22 +5547,36 @@ window.CURRICULUM_TERM1 = {
             ],
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Atatürk'ün çocuklara verdiği değer ve 23 Nisan Çocuk Bayramı. (Çocuk Sevgisi)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: ATATÜRK'ÜN ÇOCUK SEVGISI KONUSUNA GİRİŞ",
+                "title": "Atatürk'ün Çocuk Sevgisi Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Türkçe dersimizin bu konusunda Atatürk'ün Çocuk Sevgisi konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Atatürk'ün çocuklara verdiği değer ve 23 Nisan Çocuk Bayramı.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Çocuk Sevgisi",
+                  "📌 MEB Ders Kitabı: Sayfa 88 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Atatürk'ün çocuklara verdiği değer ve 23 Nisan Çocuk Bayramı."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "📚",
-                "content": "Atatürk'ün çocuklara verdiği değer ve 23 Nisan Çocuk Bayramı."
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Atatürk'ün Çocuk Sevgisi ile İlgili Altın Kurallar",
+                "content": "Atatürk'ün çocuklara verdiği değer ve 23 Nisan Çocuk Bayramı.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Soruları dikkatle oku, seçenekleri ele ve acele etmeden karar ver!"
+                }
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Atatürk'ün Çocuk Sevgisi konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Mustafa Kemal Atatürk dünyada çocuklara bayram armağan eden tek liderdir. Bu bayram hangisidir?",
+                  "answer": "Doğru Cevap: 23 Nisan Ulusal Egemenlik ve Çocuk Bayramı (TBMM'nin açıldığı 23 Nisan günü tüm dünya çocuklarına armağan edilmiştir.)"
+                }
               }
             ]
           }
@@ -5014,22 +5714,36 @@ window.CURRICULUM_TERM1 = {
             ],
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Orman ekosistemi, canlılar, çevre bilinci ve doğa sevgisi. (Çevre & Canlılar)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: BIR ORMAN (DINLEME METNI) KONUSUNA GİRİŞ",
+                "title": "Bir Orman (Dinleme Metni) Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Türkçe dersimizin bu konusunda Bir Orman (Dinleme Metni) konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Orman ekosistemi, canlılar, çevre bilinci ve doğa sevgisi.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Çevre & Canlılar",
+                  "📌 MEB Ders Kitabı: Sayfa 102 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Orman ekosistemi, canlılar, çevre bilinci ve doğa sevgisi."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "📚",
-                "content": "Orman ekosistemi, canlılar, çevre bilinci ve doğa sevgisi."
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Bir Orman (Dinleme Metni) ile İlgili Altın Kurallar",
+                "content": "Orman ekosistemi, canlılar, çevre bilinci ve doğa sevgisi.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Soruları dikkatle oku, seçenekleri ele ve acele etmeden karar ver!"
+                }
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Bir Orman (Dinleme Metni) konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Ormanlar neden 'dünyanın akciğerleri' olarak adlandırılır?",
+                  "answer": "Doğru Cevap: Oksijen üreterek havayı temizledikleri için (Ağaçlar fotosentez yaparak canlılar için temiz oksijen üretir.)"
+                }
               }
             ]
           },
@@ -5087,22 +5801,36 @@ window.CURRICULUM_TERM1 = {
             ],
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Karıncaların çalışkanlığı, iş bölümü, dayanışma ve doğadaki döngü. (Dayanışma & Çalışkanlık)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: KARINCALAR KONUSUNA GİRİŞ",
+                "title": "Karıncalar Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Türkçe dersimizin bu konusunda Karıncalar konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Karıncaların çalışkanlığı, iş bölümü, dayanışma ve doğadaki döngü.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Dayanışma & Çalışkanlık",
+                  "📌 MEB Ders Kitabı: Sayfa 108 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Karıncaların çalışkanlığı, iş bölümü, dayanışma ve doğadaki döngü."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "📚",
-                "content": "Karıncaların çalışkanlığı, iş bölümü, dayanışma ve doğadaki döngü."
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Karıncalar ile İlgili Altın Kurallar",
+                "content": "Karıncaların çalışkanlığı, iş bölümü, dayanışma ve doğadaki döngü.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Soruları dikkatle oku, seçenekleri ele ve acele etmeden karar ver!"
+                }
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Karıncalar konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Karıncalar kış mevsimine nasıl hazırlanırlar?",
+                  "answer": "Doğru Cevap: Yaz boyu yuvalarına yiyecek taşıyıp depolayarak (Karıncalar çalışkanlıkları ve yiyecek depolamaları ile bilinir.)"
+                }
               }
             ]
           },
@@ -5160,22 +5888,36 @@ window.CURRICULUM_TERM1 = {
             ],
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Ağaçların önemi, erozyonu önleme ve doğal zenginliklerimiz. (Doğa & Erozyon)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: ORMAN KONUSUNA GİRİŞ",
+                "title": "Orman Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Türkçe dersimizin bu konusunda Orman konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Ağaçların önemi, erozyonu önleme ve doğal zenginliklerimiz.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Doğa & Erozyon",
+                  "📌 MEB Ders Kitabı: Sayfa 116 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Ağaçların önemi, erozyonu önleme ve doğal zenginliklerimiz."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "📚",
-                "content": "Ağaçların önemi, erozyonu önleme ve doğal zenginliklerimiz."
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Orman ile İlgili Altın Kurallar",
+                "content": "Ağaçların önemi, erozyonu önleme ve doğal zenginliklerimiz.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Soruları dikkatle oku, seçenekleri ele ve acele etmeden karar ver!"
+                }
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Orman konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Ağaç köklerinin toprağı tutarak rüzgar ve yağmurla kaymasını önlemesine ne denir?",
+                  "answer": "Doğru Cevap: Erozyonu önleme (Ağaçlar erozyonu engelleyerek verimli toprağı korur.)"
+                }
               }
             ]
           },
@@ -5233,22 +5975,36 @@ window.CURRICULUM_TERM1 = {
             ],
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Doğa olayları, afet bilinci ve güvenli davranış kuralları. (Doğa Olayları & Afet)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: FIRTINA KONUSUNA GİRİŞ",
+                "title": "Fırtına Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Türkçe dersimizin bu konusunda Fırtına konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Doğa olayları, afet bilinci ve güvenli davranış kuralları.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Doğa Olayları & Afet",
+                  "📌 MEB Ders Kitabı: Sayfa 122 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Doğa olayları, afet bilinci ve güvenli davranış kuralları."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "📚",
-                "content": "Doğa olayları, afet bilinci ve güvenli davranış kuralları."
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Fırtına ile İlgili Altın Kurallar",
+                "content": "Doğa olayları, afet bilinci ve güvenli davranış kuralları.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Soruları dikkatle oku, seçenekleri ele ve acele etmeden karar ver!"
+                }
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Fırtına konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Şiddetli rüzgar ve yağmurun birleşmesiyle oluşan doğa olayına ne ad verilir?",
+                  "answer": "Doğru Cevap: Fırtına (Fırtına güçlü rüzgar ve yağış getiren bir hava olayıdır.)"
+                }
               }
             ]
           },
@@ -5306,22 +6062,36 @@ window.CURRICULUM_TERM1 = {
             ],
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Suyun döngüsü, su tasarrufu ve doğal kaynakları koruma. (Su Tasarrufu)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: KÜÇÜK SU DAMLASI KONUSUNA GİRİŞ",
+                "title": "Küçük Su Damlası Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Türkçe dersimizin bu konusunda Küçük Su Damlası konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Suyun döngüsü, su tasarrufu ve doğal kaynakları koruma.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Su Tasarrufu",
+                  "📌 MEB Ders Kitabı: Sayfa 130 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Suyun döngüsü, su tasarrufu ve doğal kaynakları koruma."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "📚",
-                "content": "Suyun döngüsü, su tasarrufu ve doğal kaynakları koruma."
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Küçük Su Damlası ile İlgili Altın Kurallar",
+                "content": "Suyun döngüsü, su tasarrufu ve doğal kaynakları koruma.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Soruları dikkatle oku, seçenekleri ele ve acele etmeden karar ver!"
+                }
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Küçük Su Damlası konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Güneşin ısıtmasıyla buharlaşan suların gökyüzünde bulut olup yağmur olarak yere inmesine ne ad verilir?",
+                  "answer": "Doğru Cevap: Su döngüsü (Su döngüsü sayesinde yeryüzündeki tatlı su kaynakları yenilenir.)"
+                }
               }
             ]
           }
@@ -5459,22 +6229,36 @@ window.CURRICULUM_TERM1 = {
             ],
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Kütüphane kuralları, kitap seçimi, sessizlik ve okuma kültürü. (Kütüphane Kültürü)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: KÜTÜPHANEMIZ (İZLEME METNI) KONUSUNA GİRİŞ",
+                "title": "Kütüphanemiz (İzleme Metni) Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Türkçe dersimizin bu konusunda Kütüphanemiz (İzleme Metni) konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Kütüphane kuralları, kitap seçimi, sessizlik ve okuma kültürü.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Kütüphane Kültürü",
+                  "📌 MEB Ders Kitabı: Sayfa 144 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Kütüphane kuralları, kitap seçimi, sessizlik ve okuma kültürü."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "📚",
-                "content": "Kütüphane kuralları, kitap seçimi, sessizlik ve okuma kültürü."
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Kütüphanemiz (İzleme Metni) ile İlgili Altın Kurallar",
+                "content": "Kütüphane kuralları, kitap seçimi, sessizlik ve okuma kültürü.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Soruları dikkatle oku, seçenekleri ele ve acele etmeden karar ver!"
+                }
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Kütüphanemiz (İzleme Metni) konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Kütüphanede kitap okurken ve araştırma yaparken uyulması gereken en temel kural hangisidir?",
+                  "answer": "Doğru Cevap: Sessiz olmak ve başkalarının dikkatini dağıtmamak (Kütüphane sessizce odaklanılan ve bilgi edinilen saygın bir alandır.)"
+                }
               }
             ]
           },
@@ -5532,22 +6316,36 @@ window.CURRICULUM_TERM1 = {
             ],
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Kitap okuma alışkanlığı, sözcük dağarcığı ve hayal gücü. (Kitap Sevgisi)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: KITAP SEVGISI KONUSUNA GİRİŞ",
+                "title": "Kitap Sevgisi Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Türkçe dersimizin bu konusunda Kitap Sevgisi konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Kitap okuma alışkanlığı, sözcük dağarcığı ve hayal gücü.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Kitap Sevgisi",
+                  "📌 MEB Ders Kitabı: Sayfa 150 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Kitap okuma alışkanlığı, sözcük dağarcığı ve hayal gücü."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "📚",
-                "content": "Kitap okuma alışkanlığı, sözcük dağarcığı ve hayal gücü."
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Kitap Sevgisi ile İlgili Altın Kurallar",
+                "content": "Kitap okuma alışkanlığı, sözcük dağarcığı ve hayal gücü.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Soruları dikkatle oku, seçenekleri ele ve acele etmeden karar ver!"
+                }
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Kitap Sevgisi konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Düzenli kitap okumak bir çocuğun gelişimine nasıl katkı sağlar?",
+                  "answer": "Doğru Cevap: Kelime dağarcığını zenginleştirir ve düşünme becerisini artırır. (Kitap okumak hayal gücünü besler, doğru konuşmayı ve yazmayı sağlar.)"
+                }
               }
             ]
           },
@@ -5605,22 +6403,36 @@ window.CURRICULUM_TERM1 = {
             ],
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Okur kimliği, eleştirel düşünme ve farklı bakış açıları kazanma. (Okur Kimliği)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: KITAPLAR BIZE NE SÖYLER? KONUSUNA GİRİŞ",
+                "title": "Kitaplar Bize Ne Söyler? Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Türkçe dersimizin bu konusunda Kitaplar Bize Ne Söyler? konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Okur kimliği, eleştirel düşünme ve farklı bakış açıları kazanma.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Okur Kimliği",
+                  "📌 MEB Ders Kitabı: Sayfa 156 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Okur kimliği, eleştirel düşünme ve farklı bakış açıları kazanma."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "📚",
-                "content": "Okur kimliği, eleştirel düşünme ve farklı bakış açıları kazanma."
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Kitaplar Bize Ne Söyler? ile İlgili Altın Kurallar",
+                "content": "Okur kimliği, eleştirel düşünme ve farklı bakış açıları kazanma.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Soruları dikkatle oku, seçenekleri ele ve acele etmeden karar ver!"
+                }
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Kitaplar Bize Ne Söyler? konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Bir kitabı okuduktan sonra 'okur kimliği' geliştiren bir kişi ne yapar?",
+                  "answer": "Doğru Cevap: Okuduğu kitap üzerine düşünür, yorum yapar ve ana fikrini sorgular. (Bilinçli okur, okuduklarından yeni anlamlar çıkarır ve fikir üretir.)"
+                }
               }
             ]
           },
@@ -5678,22 +6490,36 @@ window.CURRICULUM_TERM1 = {
             ],
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Yön bulma, bilimin hayatımıza etkisi, merak ve keşif duygusu. (Bilim & Keşifler)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: PUSULA KONUSUNA GİRİŞ",
+                "title": "Pusula Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Türkçe dersimizin bu konusunda Pusula konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Yön bulma, bilimin hayatımıza etkisi, merak ve keşif duygusu.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Bilim & Keşifler",
+                  "📌 MEB Ders Kitabı: Sayfa 162 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Yön bulma, bilimin hayatımıza etkisi, merak ve keşif duygusu."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "📚",
-                "content": "Yön bulma, bilimin hayatımıza etkisi, merak ve keşif duygusu."
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Pusula ile İlgili Altın Kurallar",
+                "content": "Yön bulma, bilimin hayatımıza etkisi, merak ve keşif duygusu.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Soruları dikkatle oku, seçenekleri ele ve acele etmeden karar ver!"
+                }
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Pusula konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Pusulanın renkli (genelde kırmızı) ucu her zaman hangi ana yönü gösterir?",
+                  "answer": "Doğru Cevap: Kuzey (Pusula ibresinin renkli ucu Dünya'nın manyetik kuzeyini gösterir.)"
+                }
               }
             ]
           },
@@ -5751,22 +6577,36 @@ window.CURRICULUM_TERM1 = {
             ],
             "reading_pages": [
               {
-                "type": "hatirlayalim",
-                "title": "Hatırlayalım ve Hazırlanalım",
-                "icon": "🔙",
-                "content": "Türk edebiyatının usta hikâyecisi Ömer Seyfettin ve eserleri. (Türk Edebiyatı)"
+                "type": "kesif",
+                "badge": "🌟 1. BÖLÜM: ÖMER SEYFETTIN KONUSUNA GİRİŞ",
+                "title": "Ömer Seyfettin Nedir ve Neden Öğreniriz?",
+                "story": "3. Sınıf Türkçe dersimizin bu konusunda Ömer Seyfettin konusunu tüm ayrıntılarıyla keşfediyoruz!",
+                "content": "Türk edebiyatının usta hikâyecisi Ömer Seyfettin ve eserleri.\\n\\nBu konuyu öğrendiğinde ders kitabındaki ilgili alıştırmaları ve sınavlardaki soruları çok daha kolay çözeceksin.",
+                "key_points": [
+                  "📌 Temel Kavram: Türk Edebiyatı",
+                  "📌 MEB Ders Kitabı: Sayfa 168 - Konu etkinlikleri ve örnekleri",
+                  "📌 Kazanım: Türk edebiyatının usta hikâyecisi Ömer Seyfettin ve eserleri."
+                ]
               },
               {
-                "type": "birlikte_ogrenelim",
-                "title": "Birlikte Öğrenelim",
-                "icon": "📚",
-                "content": "Türk edebiyatının usta hikâyecisi Ömer Seyfettin ve eserleri."
+                "type": "tablo",
+                "badge": "💡 2. BÖLÜM: ÖNEMLİ KURAL VE ADIMLAR",
+                "title": "Ömer Seyfettin ile İlgili Altın Kurallar",
+                "content": "Türk edebiyatının usta hikâyecisi Ömer Seyfettin ve eserleri.",
+                "info_box": {
+                  "title": "MEB BİLGİ KUTUSU & DİKKAT EDİLECEK NOKTALAR",
+                  "content": "Soruları dikkatle oku, seçenekleri ele ve acele etmeden karar ver!"
+                }
               },
               {
-                "type": "bilgi_kutusu",
-                "title": "Önemli Bilgi Kutusu",
-                "icon": "💡",
-                "content": "Soruları çözerken dikkatli oku, yönergeleri takip et!"
+                "type": "uygulama",
+                "badge": "🎯 3. BÖLÜM: PEKİŞTİRME & SEN DE DENE",
+                "title": "Öğrendiklerimizi Pekiştirelim",
+                "content": "Harika! Ömer Seyfettin konusunun tüm kurallarını öğrendin. Şimdi öğrendiklerini pekiştirmek için aşağıdaki soruyu kendi başına dene:",
+                "try_box": {
+                  "question": "Sen de Dene: Türk edebiyatında modern hikâyeciliğin kurucularından olan ve 'Kaşağı', 'Diyet', 'Falaka' gibi unutulmaz eserler yazan yazarımız kimdir?",
+                  "answer": "Doğru Cevap: Ömer Seyfettin (Ömer Seyfettin 3. sınıf çocuklarının severek okuduğu milli hikayecimizdir.)"
+                }
               }
             ]
           }

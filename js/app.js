@@ -1520,7 +1520,7 @@
 
     // Sayfa sayacı
     const counterEl = document.getElementById('reading-page-num');
-    if (counterEl) counterEl.textContent = `${readingPageIndex + 1} / ${pages.length}`;
+    if (counterEl) counterEl.textContent = `Sayfa ${readingPageIndex + 1} / ${pages.length}`;
 
     // Nokta göstergeleri
     const dotsEl = document.getElementById('reading-dots');
@@ -1530,47 +1530,138 @@
       ).join('');
     }
 
-    // Kart tipi rengi
     const card = document.getElementById('reading-page-card');
-    if (card) {
-      card.className = `reading-page-card type-${(page.type || '').replace(/[^a-z_]/g, '_')}`;
+    if (!card) return;
+
+    // Header rozeti & Başlık
+    const badgeText = page.badge || '📖 MEB DERS KİTABI ETKİNLİĞİ';
+    const pageTitle = page.title || readingTopic.title;
+
+    let html = `
+      <div class="book-sheet-header">
+        <div class="book-ribbon-tag">${badgeText}</div>
+        <h2 class="book-sheet-title">${pageTitle}</h2>
+      </div>
+    `;
+
+    // 1. Hikayeli Açılış / Gerçek Hayat Durumu
+    if (page.story) {
+      html += `
+        <div class="book-story-box">
+          <div class="story-avatar">💡</div>
+          <div class="story-text">${page.story.replace(/\n/g, '<br>')}</div>
+        </div>
+      `;
     }
 
-    // Rozet (tip label)
-    const badgeEl = document.getElementById('reading-page-badge');
-    const typeLabels = {
-      hatirlayalim: '🔙 HATIRLAYALIM',
-      birlikte_ogrenelim: '📚 BİRLİKTE ÖĞRENELİM',
-      bilgi_kutusu: '💡 BİLGİ KUTUSU',
-      baglanti: '🔗 BAĞLANTI KURALIM',
-      etkinlik: '✏️ ETKİNLİK',
-      pekistir: '🎯 PEKİŞTİRELİM'
-    };
-    if (badgeEl) badgeEl.textContent = typeLabels[page.type] || '📖 OKUMA';
-
-    // İkon
-    const iconEl = document.getElementById('reading-page-icon');
-    if (iconEl) iconEl.textContent = page.icon || '📚';
-
-    // Başlık
-    const titleEl = document.getElementById('reading-page-title');
-    if (titleEl) titleEl.textContent = page.title || '';
-
-    // İçerik
-    const contentEl = document.getElementById('reading-page-content');
-    if (contentEl) contentEl.textContent = page.content || '';
-
-    // Örnek kutusu
-    const exampleBox = document.getElementById('reading-example-box');
-    const exampleText = document.getElementById('reading-example-text');
-    if (exampleBox && exampleText) {
-      if (page.example_box) {
-        exampleBox.classList.remove('hidden');
-        exampleText.textContent = page.example_box;
-      } else {
-        exampleBox.classList.add('hidden');
-      }
+    // 2. Somut Görsel Modelleme (Taban Blokları vb.)
+    if (page.model_html) {
+      html += `<div class="book-model-section">${page.model_html}</div>`;
     }
+
+    // 3. Ana Konu Anlatımı
+    if (page.content) {
+      html += `
+        <div class="book-prose-content">
+          ${page.content.replace(/\n\n/g, '</p><p>').replace(/\n/g, '<br>')}
+        </div>
+      `;
+    }
+
+    // 4. Pedagojik Tablo (Basamak Tablosu, Kelimeler vb.)
+    if (page.table_html) {
+      html += `<div class="book-table-section">${page.table_html}</div>`;
+    }
+
+    // 5. Madde Madde Kazanım ve Adımlar
+    if (page.key_points && page.key_points.length > 0) {
+      html += `
+        <div class="book-keypoints-card">
+          <div class="kp-title">📌 Adım Adım İnceleyelim:</div>
+          <ul class="kp-list">
+            ${page.key_points.map(pt => `<li>${pt}</li>`).join('')}
+          </ul>
+        </div>
+      `;
+    }
+
+    // 6. Örnek İnceleme Kutusu
+    if (page.example_box) {
+      html += `
+        <div class="book-example-banner">
+          <div class="ex-label">📝 Örnek İnceleme:</div>
+          <div class="ex-body">${page.example_box.replace(/\n/g, '<br>')}</div>
+        </div>
+      `;
+    }
+
+    // 7. MEB Altın Bilgi Kutusu & Püf Noktası
+    if (page.info_box) {
+      html += `
+        <div class="book-golden-infobox">
+          <div class="info-header">
+            <span class="info-icon">💡</span>
+            <strong>${page.info_box.title || 'MEB BİLGİ KUTUSU'}</strong>
+          </div>
+          <div class="info-body">
+            ${page.info_box.content.replace(/\n/g, '<br>')}
+          </div>
+        </div>
+      `;
+    } else if (page.tip) {
+      html += `
+        <div class="book-golden-infobox">
+          <div class="info-header">
+            <span class="info-icon">💡</span>
+            <strong>PÜF NOKTASI & DİKKAT</strong>
+          </div>
+          <div class="info-body">${page.tip.replace(/\n/g, '<br>')}</div>
+        </div>
+      `;
+    }
+
+    // 8. Günlük Yaşam Kartı
+    if (page.daily_life && page.daily_life.length > 0) {
+      html += `
+        <div class="book-daily-card">
+          <div class="daily-title">🔍 Günlük Hayatta Nerede Karşılaşırız?</div>
+          <ul class="daily-list">
+            ${page.daily_life.map(d => `<li>${d}</li>`).join('')}
+          </ul>
+        </div>
+      `;
+    }
+
+    // 9. İnteraktif "Sen de Dene!" Mini Alıştırması
+    if (page.try_box) {
+      const qText = page.try_box.question || '';
+      const aText = page.try_box.answer || '';
+      html += `
+        <div class="book-try-interactive">
+          <div class="try-question">🤔 <strong>Sen de Dene:</strong> ${qText}</div>
+          <button type="button" class="btn-try-reveal" onclick="
+            const ans = this.nextElementSibling;
+            if (ans.classList.contains('hidden')) {
+              ans.classList.remove('hidden');
+              this.textContent = '🙈 Cevabı Gizle';
+            } else {
+              ans.classList.add('hidden');
+              this.textContent = '👁️ Cevabı Gör';
+            }
+          ">👁️ Cevabı Gör</button>
+          <div class="try-answer-box hidden">
+            <span class="try-sparkle">✨</span>
+            <span class="try-answer-text">${aText}</span>
+          </div>
+        </div>
+      `;
+    }
+
+    card.innerHTML = html;
+
+    // Scroll'u sayfanın başına al
+    const mainContainer = document.querySelector('.reading-main');
+    if (mainContainer) mainContainer.scrollTop = 0;
 
     // Navigasyon butonları
     const prevBtn = document.getElementById('btn-reading-prev');
@@ -1612,8 +1703,15 @@
       if (!readingTopic || !readingTopic.reading_pages) return;
       const page = readingTopic.reading_pages[readingPageIndex];
       if (!page) return;
-      const text = `${page.title}. ${page.content}${page.example_box ? '. Örnek: ' + page.example_box : ''}`;
-      // Use SpeechService.toggleQuestion with a synthetic TR-only task
+      let text = page.title || '';
+      if (page.story) text += '. ' + page.story;
+      if (page.content) text += '. ' + page.content;
+      if (page.info_box && page.info_box.content) text += '. Önemli Bilgi: ' + page.info_box.content;
+      else if (page.tip) text += '. Püf noktası: ' + page.tip;
+      if (page.example_box) text += '. Örnek: ' + page.example_box;
+      
+      // HTML etiketlerini ve markdown işaretlerini temizle
+      text = text.replace(/<[^>]*>/g, ' ').replace(/[\n\r]+/g, ' ').replace(/[#*_`]/g, '');
       SpeechService.toggleQuestion({ q: text, options: [] }, voiceBtn);
     });
 

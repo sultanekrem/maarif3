@@ -4,21 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <title>Maarif Yıldızı 3</title>
-  <link rel="stylesheet" href="css/design.css?v=73">
-  <link rel="manifest" href="manifest.json?v=73">
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png?v=73">
-  <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png?v=73">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png?v=73">
+  <link rel="stylesheet" href="css/design.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <meta name="theme-color" content="#ffb300">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="apple-mobile-web-app-title" content="Maarif Yıldızı 3">
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js?v=73').then(reg => {
-          reg.update();
-        }).catch(() => {});
+        navigator.serviceWorker.register('sw.js').catch(() => {});
       });
     }
   </script>
@@ -26,16 +21,13 @@
 <body>
 <div id="app-wrapper">
 
-  <!-- ===================== SCREEN 1: SPLASH ===================== -->
+  <!-- ===================== SCREEN: SPLASH ===================== -->
   <div id="screen-splash" class="maarif-screen active">
     <div class="splash-center-box">
-      <img src="assets/maarif_yildizi_3_logo.png?v=73" alt="Maarif Yıldızı 3" class="splash-hero-logo">
-      <h1 class="text-headline-md font-comfortaa" style="color:var(--primary); font-size: 28px; font-weight: 800; margin: 18px 0 2px 0;">Maarif Yıldızı 3</h1>
-      <p class="text-label-sm" style="color:var(--on-surface-variant); font-size: 14px; font-weight: 700; margin: 0;">3. Sınıf MEB Eğlenceli Öğrenme Dünyası</p>
-      <div class="splash-dots" style="margin-top: 24px;">
-        <div class="splash-dot"></div>
-        <div class="splash-dot"></div>
-        <div class="splash-dot"></div>
+      <img src="assets/maarif_yildizi_3_logo.png" alt="Maarif Yıldızı 3" class="splash-hero-logo">
+      <h1 class="splash-title">Maarif Yıldızı 3</h1>
+      <div class="splash-dots">
+        <div class="splash-dot"></div><div class="splash-dot"></div><div class="splash-dot"></div>
       </div>
     </div>
   </div>
@@ -43,732 +35,196 @@
   <!-- ===================== SHARED HEADER ===================== -->
   <header id="maarif-header" class="hidden">
     <div class="header-inner">
-      <div class="header-logo" onclick="setActiveTab('macera')" style="cursor:pointer;">
-        <img src="assets/maarif_yildizi_3_logo.png?v=73" alt="Maarif Yıldızı 3" class="header-brand-img">
+      <div class="header-logo">
+        <img src="assets/maarif_yildizi_3_logo.png" alt="Logo" class="header-brand-img">
         <div class="header-logo-text">
           <span class="header-logo-title">Maarif Yıldızı 3</span>
-          <span id="header-subtitle" class="header-logo-sub">3. Sınıf • Macera</span>
+          <span id="header-subtitle" class="header-logo-sub">3. Sınıf</span>
         </div>
       </div>
       <div class="header-badges">
-        <div id="header-streak" class="header-badge header-badge-streak" title="Günlük Seri">
-          <span class="material-symbols-outlined" style="font-size:16px;">local_fire_department</span>
+        <div class="header-badge header-badge-streak">
+          <span class="material-symbols-outlined">local_fire_department</span>
           <span id="header-streak-val">1</span>
         </div>
-        <div id="header-stars" class="header-badge header-badge-stars" title="Toplanan Yıldızlar">
-          <span class="material-symbols-outlined icon-fill" style="font-size:16px;color:var(--primary-container)">star</span>
+        <div class="header-badge header-badge-stars">
+          <span class="material-symbols-outlined icon-fill">star</span>
           <span id="header-stars-val">0</span>
         </div>
-        <div id="header-avatar" class="header-avatar" title="Profilim & Avatar" onclick="setActiveTab('gelisim')">🦊</div>
       </div>
     </div>
   </header>
 
-  <!-- ===================== SCREEN 2: MACERA ===================== -->
-  <div id="screen-macera" class="maarif-screen">
+  <!-- ===================== TAB 1: ANA SAYFA ===================== -->
+  <div id="screen-home" class="maarif-screen">
     <div class="screen-content">
-      <!-- Greeting card -->
-      <div class="greeting-card">
-        <div style="display:flex;align-items:flex-start;gap:12px">
-          <div class="greeting-mascot-bubble">🦉</div>
-          <div style="flex:1;min-width:0">
-            <div class="daily-goal-badge">
-              <span class="material-symbols-outlined icon-fill" style="font-size:14px;color:var(--primary-container)">bolt</span>
-              Bugün harika gidiyorsun!
-            </div>
-            <h2 id="greeting-name" class="text-headline-md font-comfortaa" style="color:var(--on-surface)">Merhaba, Kahraman! 🚀</h2>
-            <p id="greeting-task" class="text-body-sm" style="color:var(--on-surface-variant);margin-top:2px">Günün Görevi: <strong style="color:var(--primary)">Maceraya Başla!</strong></p>
-          </div>
-        </div>
-        <div style="margin-top:12px">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
-            <span class="text-label-sm" style="color:var(--on-surface-variant);display:flex;align-items:center;gap:4px">
-              <span class="material-symbols-outlined icon-fill" style="font-size:16px;color:var(--primary-container)">flag</span>
-              Günün Hedefi
-            </span>
-            <span id="daily-progress-label" class="text-label-md font-comfortaa" style="color:var(--primary);background:var(--surface-container);padding:2px 8px;border-radius:9999px">0 / 5 Tamamlandı</span>
-          </div>
-          <div class="progress-track">
-            <div id="daily-progress-bar" class="progress-bar" style="width:0%"></div>
-          </div>
+      <h2 id="home-greeting" class="home-greeting">Merhaba, Kahraman! 🚀</h2>
+      
+      <div class="daily-task-card">
+        <h3>Bugünün Görevi</h3>
+        <p id="home-task-desc">Harika gidiyorsun! Yeni şeyler öğrenmeye hazır mısın?</p>
+        <button id="btn-home-cta" class="btn-amber">Devam Et 🚀</button>
+        <div class="progress-wrap">
+          <div class="progress-label">Günlük İlerleme: <span id="home-progress-text">0/5</span></div>
+          <div class="progress-track"><div id="home-progress-bar" class="progress-bar"></div></div>
         </div>
       </div>
 
-      <!-- Map title -->
-      <div class="section-title-row">
-        <div style="display:flex;align-items:center;gap:6px">
-          <span class="material-symbols-outlined" style="color:var(--secondary);font-size:22px">explore</span>
-          <h3 class="text-headline-sm font-comfortaa" style="color:var(--on-surface)">Macera Patikası</h3>
-        </div>
-        <span class="section-label">6 MEB Dersi</span>
-      </div>
-
-      <!-- Island map (6 subjects) -->
-      <div id="island-map"></div>
-
-      <!-- Quick practice -->
-      <div style="display:flex;flex-direction:column;gap:8px">
-        <h3 class="text-headline-sm font-comfortaa" style="color:var(--on-surface);padding:0 4px">Eğlenceli Hızlı Alıştırmalar</h3>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-          <div class="quick-practice-card" id="qp-matematik">
-            <div style="display:flex;align-items:center;justify-content:space-between">
-              <div class="practice-icon-circle" style="background:rgba(255,179,0,0.15)">
-                <span class="material-symbols-outlined" style="color:var(--primary);font-size:18px">calculate</span>
-              </div>
-              <span class="text-label-sm" style="color:var(--secondary);background:var(--surface-container);padding:2px 8px;border-radius:9999px">3 dk</span>
-            </div>
-            <div style="margin-top:auto">
-              <h4 class="text-headline-sm font-comfortaa" style="color:var(--on-surface);font-size:15px">Matematik</h4>
-              <p class="text-body-sm" style="color:var(--on-surface-variant)">Hızlı Sınav</p>
-            </div>
-          </div>
-          <div class="quick-practice-card" id="qp-turkce">
-            <div style="display:flex;align-items:center;justify-content:space-between">
-              <div class="practice-icon-circle" style="background:rgba(0,91,179,0.1)">
-                <span class="material-symbols-outlined" style="color:var(--secondary);font-size:18px">menu_book</span>
-              </div>
-              <span class="text-label-sm" style="color:var(--tertiary);background:var(--surface-container);padding:2px 8px;border-radius:9999px">5 dk</span>
-            </div>
-            <div style="margin-top:auto">
-              <h4 class="text-headline-sm font-comfortaa" style="color:var(--on-surface);font-size:15px">Türkçe</h4>
-              <p class="text-body-sm" style="color:var(--on-surface-variant)">Kelime ve Anlam</p>
-            </div>
-          </div>
-        </div>
+      <h3>Hızlı Ders Seçimi</h3>
+      <div class="home-subjects-row">
+        <!-- populated by js -->
       </div>
     </div>
   </div>
 
-  <!-- ===================== SCREEN 3: ETKİNLİK ===================== -->
-  <div id="screen-etkinlik" class="maarif-screen">
+  <!-- ===================== TAB 2: DERSLER ===================== -->
+  <div id="screen-subjects" class="maarif-screen">
     <div class="screen-content">
-      <!-- Focus Task Hero -->
-      <div class="focus-task-hero">
-        <div style="position:relative;z-index:1">
-          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
-            <span style="display:inline-flex;align-items:center;gap:6px;padding:3px 10px;background:rgba(255,255,255,0.9);border-radius:9999px;font-family:'Comfortaa',sans-serif;font-size:11px;font-weight:700;color:var(--on-surface)">
-              <span class="material-symbols-outlined icon-fill" style="font-size:14px;color:var(--primary-container)">bolt</span>
-              Günün Odak Görevi
-            </span>
-            <span style="display:inline-flex;align-items:center;gap:4px;padding:3px 8px;background:rgba(255,255,255,0.8);border-radius:9999px;font-family:'Comfortaa',sans-serif;font-size:11px;font-weight:700;color:var(--on-surface-variant)">⏱️ 10-15 Dk</span>
-          </div>
-          <h2 id="focus-task-title" class="text-headline-md font-comfortaa" style="color:var(--on-primary-fixed);font-size:18px;margin-bottom:2px">Matematik • 1. Ünite</h2>
-          <p id="focus-task-desc" class="text-body-sm" style="color:var(--on-primary-fixed-variant);font-size:13px;margin:0">Sayıları Okuma ve Yazma</p>
-          <div style="margin-top:8px;background:rgba(255,255,255,0.7);backdrop-filter:blur(4px);padding:8px 12px;border-radius:var(--radius-md)">
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
-              <span class="text-label-sm" style="color:var(--on-surface);font-size:11px">Görev Durumu: <span id="focus-progress-label">0 / 3 Tamam</span></span>
-              <span id="focus-progress-pct" class="font-comfortaa" style="color:var(--primary);font-size:13px;font-weight:700">%0</span>
-            </div>
-            <div class="progress-track" style="height:6px">
-              <div id="focus-progress-bar" class="progress-bar" style="width:0%;background:var(--tertiary);height:100%"></div>
-            </div>
-          </div>
-          <button id="btn-start-focus" class="btn-primary" style="margin-top:10px;min-height:44px;padding:8px 16px;font-size:14px">
-            <span>Göreve Başla!</span>
-            <span class="material-symbols-outlined" style="font-size:18px">rocket_launch</span>
-          </button>
-        </div>
+      <h2>Dersler</h2>
+      <div class="subjects-grid" id="subjects-grid">
+        <!-- populated by js -->
       </div>
-
-      <!-- Curriculum Tree Header -->
-      <div style="display:flex;align-items:center;justify-content:space-between;padding-top:2px">
-        <div style="display:flex;align-items:center;gap:6px">
-          <span class="material-symbols-outlined" style="color:var(--primary);font-size:20px">account_tree</span>
-          <h3 class="text-headline-sm font-comfortaa" style="color:var(--on-surface);font-size:16px">Tüm Dersler & Üniteler</h3>
-        </div>
-        <span class="section-label">3. Sınıf MEB</span>
-      </div>
-
-      <!-- Subject List (opens detailed subject explorer) -->
-      <div id="curriculum-tree"></div>
     </div>
   </div>
 
-  <!-- ===================== SCREEN 4: DERS DETAYI (ÜNİTELER & KONULAR) ===================== -->
-  <div id="screen-subject-detail" class="maarif-screen">
+  <!-- ===================== SCREEN: UNIT LIST ===================== -->
+  <div id="screen-unit-list" class="maarif-screen">
     <div class="screen-content">
-      <div class="screen-sub-header">
-        <button id="btn-back-from-subject" class="btn-back-circle" onclick="setActiveTab('etkinlik')" title="Geri">
-          <span class="material-symbols-outlined" style="font-size:22px;color:var(--on-surface)">arrow_back</span>
-        </button>
-        <div style="flex:1;min-width:0">
-          <div style="display:flex;align-items:center;gap:6px">
-            <span id="subj-detail-emoji" style="font-size:24px">📐</span>
-            <h2 id="subj-detail-title" class="text-headline-sm font-comfortaa" style="color:var(--primary);font-size:17px">Matematik</h2>
-          </div>
-          <p id="subj-detail-stats" class="text-label-sm" style="color:var(--on-surface-variant);margin-top:2px">0 / 18 Konu Tamamlandı</p>
-        </div>
-        <div class="header-badge header-badge-stars">
-          <span class="material-symbols-outlined icon-fill" style="font-size:14px;color:var(--primary-container)">star</span>
-          <span id="subj-detail-stars">0</span>
-        </div>
+      <button class="btn-back" onclick="setActiveTab('subjects')">← Geri</button>
+      <h2 id="unit-list-title">Ders Adı</h2>
+      <div class="unit-accordion" id="unit-accordion">
+        <!-- populated by js -->
       </div>
-
-      <!-- Themes and Topics list -->
-      <div id="subj-themes-container" style="display:flex;flex-direction:column;gap:12px"></div>
     </div>
   </div>
 
-  <!-- ===================== SCREEN 5: ÇALIŞMA KİTABI / DERS ANLATIMI ===================== -->
+  <!-- ===================== SCREEN: TOPIC LIST ===================== -->
+  <div id="screen-topic-list" class="maarif-screen">
+    <div class="screen-content">
+      <button class="btn-back" id="btn-back-topic-list">← Geri</button>
+      <h2 id="topic-list-title">Ünite Adı</h2>
+      <div class="topic-list" id="topic-list">
+        <!-- populated by js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== TAB 3: BEN (PROFILE) ===================== -->
+  <div id="screen-profile" class="maarif-screen">
+    <div class="screen-content">
+      <div class="profile-header">
+        <div class="profile-avatar" id="profile-avatar">🦊</div>
+        <h2 id="profile-name">Kahraman</h2>
+        <div class="profile-level">Seviye <span id="profile-level-val">1</span></div>
+      </div>
+      <div class="profile-stats">
+        <div class="stat-box">
+          <div class="stat-icon">⭐</div>
+          <div class="stat-val" id="profile-stars">0</div>
+          <div class="stat-lbl">Yıldız</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-icon">🔥</div>
+          <div class="stat-val" id="profile-streak">1</div>
+          <div class="stat-lbl">Seri</div>
+        </div>
+      </div>
+      <h3>Ders İlerlemeleri</h3>
+      <div class="profile-progress-list" id="profile-progress-list">
+        <!-- populated by js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== SCREEN: WORKBOOK ===================== -->
   <div id="screen-workbook" class="maarif-screen">
     <div class="screen-content">
-      <div class="screen-sub-header">
-        <button id="btn-back-from-workbook" class="btn-back-circle" title="Konulara Dön">
-          <span class="material-symbols-outlined" style="font-size:22px;color:var(--on-surface)">arrow_back</span>
-        </button>
-        <div style="flex:1;min-width:0">
-          <span id="wb-badge" class="quiz-subject-badge">Matematik • s. 12</span>
-          <h2 id="wb-title" class="text-headline-sm font-comfortaa" style="color:var(--on-surface);font-size:16px;margin-top:2px">Sayıları Okuma ve Yazma</h2>
-        </div>
-        <button id="btn-listen-workbook" class="btn-speech-trigger" title="Dersi Sesli Dinle">
-          <span class="material-symbols-outlined" style="font-size:18px">volume_up</span>
-          <span class="v-text">Dersi Dinle</span>
-        </button>
+      <button class="btn-back" id="btn-back-workbook">← Geri</button>
+      <div class="wb-header">
+        <span id="wb-subject-badge" class="subject-badge">Matematik</span>
+        <h2 id="wb-title">Konu Başlığı</h2>
+        <button id="btn-read-wb" class="btn-speech">🔊 Sesli Oku</button>
+      </div>
+      
+      <div id="wb-content" class="wb-content">
+        <!-- populated by js -->
       </div>
 
-      <!-- Workbook Content Rendered dynamically -->
-      <div id="workbook-content" style="display:flex;flex-direction:column;gap:12px"></div>
-
-      <!-- Start Exam CTA -->
-      <div style="margin-top:8px">
-        <button id="btn-start-exam-from-wb" class="btn-amber">
-          <span>Bu Konunun Sınavını Başlat!</span>
-          <span class="material-symbols-outlined">quiz</span>
-        </button>
-      </div>
+      <button id="btn-start-exam-wb" class="btn-amber" style="margin-top: 20px;">Sınava Başla! 🎯</button>
     </div>
   </div>
 
-  
-  <!-- ===================== SCREEN: FEN BİLİMLERİ LABORATUVARI ===================== -->
-  <div id="screen-fen-lab" class="maarif-screen">
-    <div class="screen-content" style="padding-top:16px">
-      <div class="screen-sub-header">
-        <button id="btn-back-from-fen-lab" class="btn-back-circle" onclick="setActiveTab('macera')" title="Geri">
-          <span class="material-symbols-outlined" style="font-size:22px;color:var(--on-surface)">arrow_back</span>
-        </button>
-        <div style="flex:1;min-width:0">
-          <div style="display:flex;align-items:center;gap:6px">
-            <span style="font-size:22px">🔬</span>
-            <h2 class="text-headline-sm font-comfortaa" style="color:var(--tertiary);font-size:16px">Fen Laboratuvarı</h2>
-          </div>
-          <p class="text-label-sm" style="color:var(--on-surface-variant);margin-top:2px">3. Sınıf • Maddenin Halleri Fanusu</p>
-        </div>
-        <div class="header-badge header-badge-stars">
-          <span class="material-symbols-outlined icon-fill" style="font-size:14px;color:var(--primary-container)">star</span>
-          <span id="fen-lab-stars">+25</span>
-        </div>
-      </div>
-
-      <!-- Mascot Guidance Speech Bubble -->
-      <div class="mascot-tip-row">
-        <div class="mascot-tip-avatar">🦉</div>
-        <div class="mascot-tip-bubble" style="flex:1">
-          <div class="mascot-tip-title">
-            <span class="material-symbols-outlined icon-fill" style="font-size:14px;color:var(--tertiary)">psychology</span>
-            Bilge Kuş ile Deney:
-          </div>
-          <p id="fen-lab-prompt" style="font-size:13px;font-weight:700;color:var(--on-surface);margin:4px 0 0 0">
-            Maddeleri doğru fanusa ayıralım! Aşağıdaki maddelerden birini seç ve uygun fanusa yerleştir! 💡
-          </p>
-        </div>
-      </div>
-
-      <!-- State Classifier Pods (Fanuslar) -->
-      <div class="fen-lab-container">
-        <div class="pod-targets-row">
-          <!-- Fanus 1: Katı -->
-          <div id="pod-solid" class="pod-target-box" onclick="classifySelectedMatter('solid')">
-            <div class="pod-head-pill" style="background:var(--primary-fixed);color:var(--on-primary-fixed)">1. Katı 🧊</div>
-            <div class="pod-icon-bubble">🧱</div>
-            <span class="pod-counter-badge" id="solid-count">0 / 2 Madde</span>
-            <span style="font-size:10px;color:var(--on-surface-variant);font-weight:700">Taş, Buz</span>
-          </div>
-
-          <!-- Fanus 2: Sıvı -->
-          <div id="pod-liquid" class="pod-target-box" onclick="classifySelectedMatter('liquid')">
-            <div class="pod-head-pill" style="background:var(--secondary-fixed);color:var(--on-secondary-fixed)">2. Sıvı 💧</div>
-            <div class="pod-icon-bubble">🧃</div>
-            <span class="pod-counter-badge" id="liquid-count">0 / 2 Madde</span>
-            <span style="font-size:10px;color:var(--on-surface-variant);font-weight:700">Su, Süt</span>
-          </div>
-
-          <!-- Fanus 3: Gaz -->
-          <div id="pod-gas" class="pod-target-box" onclick="classifySelectedMatter('gas')">
-            <div class="pod-head-pill" style="background:var(--tertiary-fixed);color:var(--on-tertiary-fixed)">3. Gaz 🎈</div>
-            <div class="pod-icon-bubble">💨</div>
-            <span class="pod-counter-badge" id="gas-count">0 / 2 Madde</span>
-            <span style="font-size:10px;color:var(--on-surface-variant);font-weight:700">Hava, Buhar</span>
-          </div>
-        </div>
-
-        <div style="display:flex;align-items:center;justify-content:space-between;padding:0 2px">
-          <span class="text-label-sm" style="color:var(--on-surface);font-weight:800;text-transform:uppercase">Maddeni Seç ve Fanusa Dokun 👇</span>
-          <span id="fen-progress-label" class="section-label">0 / 6 Tamamlandı</span>
-        </div>
-
-        <!-- Selectable Matter Tokens -->
-        <div id="fen-matter-tokens" class="matter-tokens-grid">
-          <div class="matter-token-card" data-type="solid" data-name="Buz Küpü" onclick="selectMatterToken(this, 'solid', 'Buz Küpü')">
-            <span style="font-size:28px">🧊</span>
-            <div>
-              <div style="font-family:'Comfortaa',sans-serif;font-weight:700;font-size:13px">Buz Küpü</div>
-              <div style="font-size:11px;color:var(--on-surface-variant)">Sert & Belirli Şekil</div>
-            </div>
-          </div>
-          <div class="matter-token-card" data-type="liquid" data-name="Elma Suyu" onclick="selectMatterToken(this, 'liquid', 'Elma Suyu')">
-            <span style="font-size:28px">🧃</span>
-            <div>
-              <div style="font-family:'Comfortaa',sans-serif;font-weight:700;font-size:13px">Elma Suyu</div>
-              <div style="font-size:11px;color:var(--on-surface-variant)">Kabın Şeklini Alır</div>
-            </div>
-          </div>
-          <div class="matter-token-card" data-type="gas" data-name="Su Buharı" onclick="selectMatterToken(this, 'gas', 'Su Buharı')">
-            <span style="font-size:28px">💨</span>
-            <div>
-              <div style="font-family:'Comfortaa',sans-serif;font-weight:700;font-size:13px">Su Buharı</div>
-              <div style="font-size:11px;color:var(--on-surface-variant)">Ortama Yayılır</div>
-            </div>
-          </div>
-          <div class="matter-token-card" data-type="solid" data-name="Tahta Kalem" onclick="selectMatterToken(this, 'solid', 'Tahta Kalem')">
-            <span style="font-size:28px">✏️</span>
-            <div>
-              <div style="font-family:'Comfortaa',sans-serif;font-weight:700;font-size:13px">Tahta Kalem</div>
-              <div style="font-size:11px;color:var(--on-surface-variant)">Sert Cisim</div>
-            </div>
-          </div>
-          <div class="matter-token-card" data-type="liquid" data-name="Taze Süt" onclick="selectMatterToken(this, 'liquid', 'Taze Süt')">
-            <span style="font-size:28px">🥛</span>
-            <div>
-              <div style="font-family:'Comfortaa',sans-serif;font-weight:700;font-size:13px">Taze Süt</div>
-              <div style="font-size:11px;color:var(--on-surface-variant)">Akıcı İçecek</div>
-            </div>
-          </div>
-          <div class="matter-token-card" data-type="gas" data-name="Uçan Balon Gazı" onclick="selectMatterToken(this, 'gas', 'Uçan Balon Gazı')">
-            <span style="font-size:28px">🎈</span>
-            <div>
-              <div style="font-family:'Comfortaa',sans-serif;font-weight:700;font-size:13px">Helyum Gazı</div>
-              <div style="font-size:11px;color:var(--on-surface-variant)">Hafif & Uçucu</div>
-            </div>
-          </div>
-        </div>
-
-        <div id="fen-feedback-banner" class="info-box-golden" style="display:none;margin-top:6px">
-          <div class="info-box-title"><span>🎉</span> <span id="fen-feedback-title">Tebrikler!</span></div>
-          <div class="info-box-content" id="fen-feedback-text">Harika sınıflandırma!</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===================== SCREEN: MATEMATİK ELMA SEPETİ MİNİ OYUNU ===================== -->
-  <div id="screen-mat-game" class="maarif-screen">
-    <div class="screen-content" style="padding-top:16px">
-      <div class="screen-sub-header">
-        <button id="btn-back-from-mat-game" class="btn-back-circle" onclick="setActiveTab('macera')" title="Geri">
-          <span class="material-symbols-outlined" style="font-size:22px;color:var(--on-surface)">arrow_back</span>
-        </button>
-        <div style="flex:1;min-width:0">
-          <div style="display:flex;align-items:center;gap:6px">
-            <span style="font-size:22px">🏰</span>
-            <h2 class="text-headline-sm font-comfortaa" style="color:var(--primary);font-size:16px">Çarpma Adası Mini Oyunu</h2>
-          </div>
-          <p class="text-label-sm" style="color:var(--on-surface-variant);margin-top:2px">Matematik Şatosu • 3. Sınıf</p>
-        </div>
-        <div style="display:flex;align-items:center;gap:4px">
-          <span style="font-size:16px">❤️</span><span style="font-size:16px">❤️</span><span style="font-size:16px">❤️</span>
-        </div>
-      </div>
-
-      <!-- Bilge Kuş Mascot Dialogue -->
-      <div class="mascot-tip-row">
-        <div class="mascot-tip-avatar">🦉</div>
-        <div class="mascot-tip-bubble" style="flex:1">
-          <div class="mascot-tip-title">
-            <span class="material-symbols-outlined icon-fill" style="font-size:14px;color:var(--primary)">lightbulb</span>
-            Bilge Kuş İpucu:
-          </div>
-          <p style="font-size:13px;font-weight:700;color:var(--on-surface);margin:4px 0 0 0">
-            "4 x 3 demek, 4 sepetin her birinde 3 elma var demektir! 🍎 Hadi elmaları toplayalım!"
-          </p>
-        </div>
-      </div>
-
-      <!-- Visual Problem Card -->
-      <div class="maarif-card" style="padding:14px">
-        <h3 class="text-headline-sm font-comfortaa" style="font-size:15px;color:var(--on-surface)">
-          Ağaçtaki <span style="color:var(--primary);text-decoration:underline">4 sepette</span> <span style="color:var(--primary);text-decoration:underline">3'er adet</span> parlak elma var. Toplam kaç elma topladık?
-        </h3>
-
-        <div class="baskets-quad-grid">
-          <div class="basket-quad-box">
-            <div class="basket-apples-pile">🍎🍎🍎</div>
-            <span class="text-label-sm" style="color:var(--on-surface-variant)">🧺 1. Sepet (3)</span>
-          </div>
-          <div class="basket-quad-box">
-            <div class="basket-apples-pile">🍎🍎🍎</div>
-            <span class="text-label-sm" style="color:var(--on-surface-variant)">🧺 2. Sepet (3)</span>
-          </div>
-          <div class="basket-quad-box">
-            <div class="basket-apples-pile">🍎🍎🍎</div>
-            <span class="text-label-sm" style="color:var(--on-surface-variant)">🧺 3. Sepet (3)</span>
-          </div>
-          <div class="basket-quad-box">
-            <div class="basket-apples-pile">🍎🍎🍎</div>
-            <span class="text-label-sm" style="color:var(--on-surface-variant)">🧺 4. Sepet (3)</span>
-          </div>
-        </div>
-
-        <div class="mat-formula-pill">
-          3 + 3 + 3 + 3 = 4 × 3 = ?
-        </div>
-      </div>
-
-      <!-- 2x2 Answer Grid -->
-      <div style="display:flex;flex-direction:column;gap:8px;margin-top:6px">
-        <span class="text-label-sm" style="color:var(--on-surface-variant);font-weight:800;text-transform:uppercase;padding:0 4px">Cevabını Seç:</span>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-          <button class="quiz-option-tactile" onclick="handleMatGameChoice(10, this)">
-            <div class="opt-letter-badge">A</div>
-            <div class="opt-text">10 Elma</div>
-            <span class="material-symbols-outlined opt-indicator-icon">radio_button_unchecked</span>
-          </button>
-          <button class="quiz-option-tactile" onclick="handleMatGameChoice(12, this)">
-            <div class="opt-letter-badge">B</div>
-            <div class="opt-text">12 Elma</div>
-            <span class="material-symbols-outlined opt-indicator-icon">radio_button_unchecked</span>
-          </button>
-          <button class="quiz-option-tactile" onclick="handleMatGameChoice(15, this)">
-            <div class="opt-letter-badge">C</div>
-            <div class="opt-text">15 Elma</div>
-            <span class="material-symbols-outlined opt-indicator-icon">radio_button_unchecked</span>
-          </button>
-          <button class="quiz-option-tactile" onclick="handleMatGameChoice(9, this)">
-            <div class="opt-letter-badge">D</div>
-            <div class="opt-text">9 Elma</div>
-            <span class="material-symbols-outlined opt-indicator-icon">radio_button_unchecked</span>
-          </button>
-        </div>
-      </div>
-
-      <div id="mat-game-feedback" class="quiz-feedback" style="display:none;margin-top:10px">
-        <span style="font-size:26px">🎉</span>
-        <div>
-          <p id="mat-feedback-title" style="font-weight:700;font-size:14px">Harikasın!</p>
-          <p id="mat-feedback-text" class="text-body-sm" style="color:inherit">4 kere 3 eşittir 12 elma eder!</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-<!-- ===================== SCREEN 6: QUIZ & ALIŞTIRMALAR ===================== -->
+  <!-- ===================== SCREEN: QUIZ ===================== -->
   <div id="screen-quiz" class="maarif-screen">
-    <div class="screen-content" style="padding-top:20px">
-      <!-- Quiz top bar -->
-      <div class="quiz-header">
-        <button id="btn-quit-quiz" class="btn-back-circle" title="Sınavdan Çık">
-          <span class="material-symbols-outlined" style="font-size:22px;color:var(--on-surface-variant)">arrow_back</span>
-        </button>
-        <div class="quiz-progress-dots" id="quiz-dots"></div>
-        <div class="header-badge header-badge-streak">
-          <span class="material-symbols-outlined" style="font-size:14px">local_fire_department</span>
-          <span id="quiz-streak">1</span>
+    <div class="quiz-top-bar">
+      <button class="btn-back" id="btn-quit-quiz">← Geri</button>
+      <div class="quiz-header-info">
+        <span id="quiz-subject-indicator">Matematik • 1/5</span>
+        <span class="quiz-stars">⭐ <span id="quiz-reward-val">50</span></span>
+      </div>
+    </div>
+    <div class="quiz-progress-track">
+      <div id="quiz-progress-bar" class="quiz-progress-bar"></div>
+    </div>
+    
+    <div class="screen-content quiz-content">
+      <div class="quiz-question-box">
+        <h3 id="quiz-question-text">Soru metni...</h3>
+      </div>
+
+      <div id="quiz-interactive-area" class="quiz-options-area">
+        <!-- populated by js -->
+      </div>
+
+      <button id="btn-read-question" class="btn-speech" style="margin-top: 10px;">🔊 Sesli Oku</button>
+
+      <div class="quiz-feedback-banner" id="quiz-feedback-banner" style="display:none;">
+        <div class="feedback-icon" id="feedback-icon">✅</div>
+        <div class="feedback-text">
+          <strong id="feedback-title">Harika!</strong>
+          <p id="feedback-desc">Açıklama veya ipucu</p>
         </div>
       </div>
 
-      <!-- Question Card -->
-      <div class="quiz-question-card">
-        <div style="display:flex;align-items:center;justify-content:space-between">
-          <span id="quiz-subject-badge" class="quiz-subject-badge">Matematik</span>
-          <button id="btn-read-question" class="btn-speech-trigger" title="Soruyu Sesli Dinle">
-            <span class="material-symbols-outlined" style="font-size:18px">volume_up</span>
-            <span class="v-text">Sesli Dinle</span>
-          </button>
-        </div>
-        <p id="quiz-question-text" class="quiz-question-text">Soru yükleniyor...</p>
-      </div>
-
-      <!-- Bilge Kuş Mascot Tip Dialogue Bubble -->
-      <div id="quiz-mascot-tip-row" class="mascot-tip-row" style="display:none">
-        <div class="mascot-tip-avatar">🦉</div>
-        <div class="mascot-tip-bubble">
-          <div class="mascot-tip-title">
-            <span class="material-symbols-outlined icon-fill" style="font-size:14px;color:var(--primary)">tips_and_updates</span>
-            Bilge Kuş İpucu:
-          </div>
-          <div id="quiz-mascot-tip-text">İpucu yükleniyor...</div>
-        </div>
-      </div>
-
-      <!-- Visual Problem Aid Container (Baskets, Blocks, Matter Pods) -->
-      <div id="quiz-visual-aid-area" style="display:none"></div>
-
-      <!-- Dynamic Question Container (Mode 1: Choice, Mode 2: True/False, Mode 3: Matching) -->
-      <div id="quiz-interactive-area"></div>
-
-      <!-- Reward & Confidence Strip -->
-      <div id="quiz-reward-strip" class="quiz-reward-strip">
-        <span class="quiz-reward-item">
-          <span class="material-symbols-outlined icon-fill" style="color:var(--primary-container);font-size:16px">stars</span>
-          <span>+20 Yıldız</span>
-        </span>
-        <span class="quiz-reward-item">
-          <span class="material-symbols-outlined icon-fill" style="color:var(--tertiary);font-size:16px">military_tech</span>
-          <span>Rozet Puanı</span>
-        </span>
-      </div>
-
-      <!-- Feedback -->
-      <div class="quiz-feedback" id="quiz-feedback" style="display:none">
-        <span id="quiz-feedback-icon" style="font-size:26px;flex-shrink:0">🎉</span>
-        <div style="flex:1">
-          <p id="quiz-feedback-title" style="font-weight:700;font-size:14px"></p>
-          <p id="quiz-feedback-text" class="text-body-sm" style="color:inherit;margin-top:2px"></p>
-        </div>
-      </div>
-
-      <!-- Next Button -->
-      <div id="quiz-next-wrap" style="display:none;padding:0 14px;margin-top:4px">
-        <button id="btn-quiz-next" class="btn-primary" style="width:100%">
-          <span id="quiz-next-label">Sonraki Soru</span>
-          <span class="material-symbols-outlined">arrow_forward</span>
-        </button>
-      </div>
+      <button id="btn-quiz-next" class="btn-primary" style="display:none; margin-top:10px; width:100%;">Sonraki →</button>
     </div>
   </div>
 
-  <!-- ===================== SCREEN 7: VICTORY ===================== -->
+  <!-- ===================== SCREEN: VICTORY ===================== -->
   <div id="screen-victory" class="maarif-screen">
-    <canvas id="victory-canvas" class="victory-canvas"></canvas>
-    <div class="victory-body">
-      <div class="victory-trophy">
-        <span class="material-symbols-outlined icon-fill" style="font-size:52px;color:#ffffff">emoji_events</span>
+    <div class="screen-content victory-content">
+      <div class="victory-icon">🏆</div>
+      <h1 class="victory-title">Tebrikler!</h1>
+      <p id="victory-desc" class="victory-desc">Bölümü başarıyla tamamladın.</p>
+      
+      <div class="victory-stats">
+        <div>⭐ +30 Yıldız</div>
       </div>
-      <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,222,172,0.8);padding:5px 14px;border-radius:9999px;">
-        <span class="material-symbols-outlined icon-fill" style="color:var(--primary);font-size:16px">celebration</span>
-        <span class="text-label-sm font-comfortaa" style="color:var(--primary);text-transform:uppercase;letter-spacing:0.05em">Bölüm Tamamlandı</span>
-      </div>
-      <h1 id="victory-title" class="text-headline-xl-m font-comfortaa" style="color:var(--primary)">HARİKASIN! 🎉</h1>
-      <p id="victory-subtitle" class="text-body-md" style="color:var(--on-surface-variant)">Matematik • 1. Ünite</p>
-
-      <div class="maarif-card" style="width:100%;padding:10px 14px">
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
-          <span class="text-label-md font-comfortaa" style="color:var(--on-surface)">Seviye <span id="victory-level-num">1</span></span>
-          <span class="text-label-md font-comfortaa" style="color:var(--tertiary)">Seviye <span id="victory-next-level">2</span> 🚀</span>
-        </div>
-        <div class="progress-track" style="height:8px">
-          <div id="victory-level-bar" class="progress-bar" style="width:20%;background:var(--tertiary)"></div>
-        </div>
-      </div>
-
-      <div class="victory-rewards">
-        <div class="victory-reward">
-          <div class="victory-reward-icon" style="background:var(--primary-fixed)">
-            <span class="material-symbols-outlined icon-fill" style="color:var(--primary-container);font-size:22px">star</span>
-          </div>
-          <span class="text-headline-sm font-comfortaa" id="victory-stars">+30</span>
-          <span class="text-label-sm" style="color:var(--on-surface-variant)">Yıldız</span>
-        </div>
-        <div class="victory-reward">
-          <div class="victory-reward-icon" style="background:var(--surface-container)">
-            <span class="material-symbols-outlined icon-fill" style="color:var(--primary);font-size:22px">workspace_premium</span>
-          </div>
-          <span class="text-headline-sm font-comfortaa" style="color:var(--primary)">Rozet</span>
-          <span class="text-label-sm" style="color:var(--on-surface-variant)">Kazanıldı</span>
-        </div>
-        <div class="victory-reward">
-          <div class="victory-reward-icon" style="background:var(--secondary-fixed)">
-            <span class="material-symbols-outlined icon-fill" style="color:var(--secondary);font-size:22px">bolt</span>
-          </div>
-          <span class="text-headline-sm font-comfortaa" id="victory-xp">+100</span>
-          <span class="text-label-sm" style="color:var(--on-surface-variant)">XP</span>
-        </div>
-      </div>
-
-      <p id="victory-note" class="text-body-sm" style="color:var(--on-surface-variant);background:var(--surface-container-low);padding:8px 12px;border-radius:10px;width:100%">
-        🦉 Bilge Kuş: "Harika bir adım attın, düzenli çalışmayla serini koru!"
-      </p>
-
-      <div style="display:flex;flex-direction:column;gap:8px;width:100%">
-        <button id="btn-next-mission" class="btn-amber">
-          <span>Sonraki Maceraya Geç!</span>
-          <span class="material-symbols-outlined">rocket_launch</span>
-        </button>
-        <button id="btn-back-to-topics" class="btn-ghost">
-          <span class="material-symbols-outlined">menu_book</span>
-          <span>Ders Konularına Dön</span>
-        </button>
-        <button id="btn-back-to-map" class="btn-ghost" onclick="setActiveTab('macera')">
-          <span class="material-symbols-outlined">map</span>
-          <span>Haritaya Dön</span>
-        </button>
-      </div>
-    </div>
-  </div>
-
-    <!-- ===================== SCREEN 8: KİTAPLIK ===================== -->
-  <div id="screen-kitaplik" class="maarif-screen">
-    <div class="screen-content" style="padding-top:16px">
-      <!-- Reading Goal Capsule -->
-      <div class="reading-goal-card">
-        <div style="display:flex;align-items:center;justify-content:space-between">
-          <div style="display:flex;align-items:center;gap:6px">
-            <span class="text-headline-sm font-comfortaa" style="color:var(--primary);font-size:16px">Kitap Dünyası</span>
-            <span style="font-size:20px">📚</span>
-          </div>
-          <span style="background:var(--secondary-fixed);color:var(--on-secondary-fixed);padding:3px 10px;border-radius:9999px;font-size:11px;font-weight:800;display:inline-flex;align-items:center;gap:4px">
-            <span class="material-symbols-outlined" style="font-size:14px">timer</span> 15 Dk Hedefi
-          </span>
-        </div>
-        <p class="text-body-sm" style="color:var(--on-surface-variant);font-size:12px;margin:0">
-          Bugün <strong style="color:var(--primary)">12 dakika</strong> okudun! Hedefe 3 dakika kaldı ⏳
-        </p>
-        <div class="progress-track" style="height:8px">
-          <div class="progress-bar" style="width:80%;background:var(--tertiary)"></div>
-        </div>
-      </div>
-
-      <!-- Featured Spotlight Book: Kaldığın Yerden Devam Et -->
-      <div class="book-spotlight-card">
-        <div style="display:flex;align-items:center;justify-content:space-between">
-          <span class="text-label-sm" style="color:var(--secondary);font-weight:800;display:flex;align-items:center;gap:4px">
-            <span class="material-symbols-outlined icon-fill" style="font-size:16px;color:var(--primary)">auto_stories</span>
-            Kaldığın Yerden Devam Et
-          </span>
-          <span class="section-label">s. 42 / 65</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:12px">
-          <div style="width:60px;height:75px;border-radius:10px;background:var(--primary-fixed);display:flex;align-items:center;justify-content:center;font-size:32px;flex-shrink:0;box-shadow:0 3px 0 var(--primary-fixed-dim)">
-            ⭐
-          </div>
-          <div style="flex:1;min-width:0">
-            <span style="font-size:11px;color:var(--secondary);font-weight:700">MEB Hikaye Dizisi</span>
-            <h4 class="text-headline-sm font-comfortaa" style="font-size:15px;color:var(--on-surface);margin:2px 0">Küçük Yıldızın Yolculuğu</h4>
-            <div class="progress-track-thin" style="margin-top:4px">
-              <div class="progress-bar-thin" style="width:65%;background:var(--tertiary)"></div>
-            </div>
-            <span style="font-size:10px;color:var(--tertiary);font-weight:700">%65 Okundu</span>
-          </div>
-        </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-          <button id="btn-spotlight-listen" class="btn-primary" style="padding:6px 10px;font-size:12px;min-height:40px">
-            <span class="material-symbols-outlined icon-fill" style="font-size:16px">headphones</span>
-            <span>Sesli Dinle</span>
-          </button>
-          <button id="btn-spotlight-read" class="btn-amber" style="padding:6px 10px;font-size:12px;min-height:40px" onclick="openStoryModal('Küçük Yıldızın Yolculuğu', 'Göklerin en parlak yıldızı olmak isteyen minik dostumuz, gökkuşağı köprüsünden geçerken arkadaşlarına yardım etmeyi öğrendi. Parlamak sadece ışık saçmak değil, kalpleri ısıtmaktır.')">
-            <span class="material-symbols-outlined" style="font-size:16px">menu_book</span>
-            <span>Devam Et</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Filter Tabs -->
-      <div class="filter-chips-scroll">
-        <button class="filter-chip-btn active-chip" data-cat="all" onclick="filterStories('all', this)">Tümü</button>
-        <button class="filter-chip-btn" data-cat="masal" onclick="filterStories('masal', this)">✨ Masallar</button>
-        <button class="filter-chip-btn" data-cat="bilim" onclick="filterStories('bilim', this)">🚀 Bilim & Keşif</button>
-        <button class="filter-chip-btn" data-cat="siir" onclick="filterStories('siir', this)">🎵 Şiirler</button>
-        <button class="filter-chip-btn" data-cat="degerler" onclick="filterStories('degerler', this)">❤️ Değerler</button>
-      </div>
-
-      <!-- Story List -->
-      <div id="story-list"></div>
-    </div>
-  </div>
-
-    <!-- ===================== SCREEN 9: GELİŞİM & AVATAR ATÖLYESİ ===================== -->
-  <div id="screen-gelisim" class="maarif-screen">
-    <div class="screen-content" style="padding-top:16px">
-      <!-- Stats Summary -->
-      <div class="maarif-card" style="padding:12px">
-        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;text-align:center">
-          <div>
-            <p class="text-headline-md font-comfortaa" id="stat-stars" style="color:var(--primary);font-size:20px;margin:0">0</p>
-            <p class="text-label-sm" style="color:var(--on-surface-variant);font-size:11px;margin:2px 0 0 0">Altın Yıldız ⭐</p>
-          </div>
-          <div>
-            <p class="text-headline-md font-comfortaa" id="stat-streak" style="color:var(--error);font-size:20px;margin:0">1</p>
-            <p class="text-label-sm" style="color:var(--on-surface-variant);font-size:11px;margin:2px 0 0 0">Gün Seri 🔥</p>
-          </div>
-          <div>
-            <p class="text-headline-md font-comfortaa" id="stat-level" style="color:var(--tertiary);font-size:20px;margin:0">1</p>
-            <p class="text-label-sm" style="color:var(--on-surface-variant);font-size:11px;margin:2px 0 0 0">Seviye 🚀</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Stitch Avatar Workshop & Live Dressing Stage -->
-      <div class="avatar-workshop-card">
-        <div style="display:flex;align-items:center;justify-content:space-between;width:100%">
-          <span class="text-headline-sm font-comfortaa" style="font-size:15px;color:var(--primary)">Avatar Atölyesi 🎨</span>
-          <span class="section-label">Canlı Önizleme</span>
-        </div>
-
-        <!-- Live Avatar Dressing Stage -->
-        <div class="avatar-stage-box">
-          <span id="equipped-hat" class="avatar-hat-accessory"></span>
-          <span id="stage-mascot-emoji">🦊</span>
-          <span id="equipped-glasses" class="avatar-glasses-accessory"></span>
-        </div>
-
-        <p class="text-body-sm" style="color:var(--on-surface-variant);font-size:12px;margin:0">
-          Ders çalıştıkça kazandığın yıldızlarla maskotunu süsle!
-        </p>
-
-        <!-- Mascot Base Selection -->
-        <div style="width:100%">
-          <span class="text-label-sm" style="color:var(--on-surface);font-weight:800;display:block;margin-bottom:6px">Karakterini Seç:</span>
-          <div id="avatar-area" class="avatar-area" style="justify-content:center"></div>
-        </div>
-      </div>
-
-      <!-- Star Shop / Aksesuar Mağazası -->
-      <div style="display:flex;align-items:center;justify-content:space-between;padding:0 2px">
-        <div style="display:flex;align-items:center;gap:6px">
-          <span class="material-symbols-outlined" style="color:var(--primary);font-size:20px">storefront</span>
-          <h3 class="text-headline-sm font-comfortaa" style="color:var(--on-surface);font-size:16px">Yıldız Mağazası</h3>
-        </div>
-        <span id="shop-star-balance" style="background:var(--primary-fixed);color:var(--on-primary-fixed);padding:3px 10px;border-radius:9999px;font-family:'Comfortaa',sans-serif;font-size:11px;font-weight:800">
-          ⭐ 0 Yıldız
-        </span>
-      </div>
-
-      <div class="star-shop-grid" id="star-shop-grid"></div>
-
-      <!-- Badges -->
-      <h3 class="text-label-md font-comfortaa" style="color:var(--on-surface);margin-top:4px">Kazanılan Rozetler 🏅</h3>
-      <div id="badge-grid" class="badge-grid"></div>
+      
+      <button id="btn-victory-home" class="btn-amber" onclick="setActiveTab('home')" style="width:100%;">Ana Sayfaya Dön</button>
     </div>
   </div>
 
   <!-- ===================== BOTTOM NAV ===================== -->
   <nav id="maarif-nav" class="hidden">
-    <div class="nav-inner">
-      <div class="nav-items">
-        <button class="nav-tab active" data-tab="macera" onclick="setActiveTab('macera')" type="button">
-          <span class="material-symbols-outlined">explore</span>
-          <span class="nav-label">Macera</span>
-        </button>
-        <button class="nav-tab" data-tab="etkinlik" onclick="setActiveTab('etkinlik')" type="button">
-          <span class="material-symbols-outlined">sports_esports</span>
-          <span class="nav-label">Etkinlik</span>
-        </button>
-        <button class="nav-tab" data-tab="kitaplik" onclick="setActiveTab('kitaplik')" type="button">
-          <span class="material-symbols-outlined">auto_stories</span>
-          <span class="nav-label">Kitaplık</span>
-        </button>
-        <button class="nav-tab" data-tab="gelisim" onclick="setActiveTab('gelisim')" type="button">
-          <span class="material-symbols-outlined">military_tech</span>
-          <span class="nav-label">Gelişim</span>
-        </button>
-      </div>
-    </div>
+    <button class="nav-tab active" data-tab="home" onclick="setActiveTab('home')">
+      <span class="nav-icon">🏠</span>
+      <span class="nav-label">Ana Sayfa</span>
+    </button>
+    <button class="nav-tab" data-tab="subjects" onclick="setActiveTab('subjects')">
+      <span class="nav-icon">📚</span>
+      <span class="nav-label">Dersler</span>
+    </button>
+    <button class="nav-tab" data-tab="profile" onclick="setActiveTab('profile')">
+      <span class="nav-icon">⭐</span>
+      <span class="nav-label">Ben</span>
+    </button>
   </nav>
 
-</div><!-- /app-wrapper -->
+</div>
 
-<script src="js/engine/audio.js?v=73"></script>
-<script src="js/curriculum-term1.js?v=73"></script>
-<script src="js/app.js?v=73"></script>
+<script src="js/engine/audio.js"></script>
+<script src="js/curriculum-term1.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>

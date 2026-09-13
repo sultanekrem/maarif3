@@ -123,13 +123,12 @@ body {
 }
 
 .stitch-brand-mascot {
-  width: 36px;
-  height: 36px;
-  object-fit: contain;
+  width: 38px;
+  height: 38px;
+  object-fit: cover;
   border-radius: 50%;
-  background: #FFF;
   box-shadow: 0 2px 8px rgba(255, 179, 0, 0.25);
-  padding: 2px;
+  border: 1.5px solid #FFE082;
 }
 
 .stitch-brand-text {
@@ -248,9 +247,10 @@ body {
 }
 
 .stitch-guide-avatar-img {
-  width: 34px;
-  height: 34px;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .stitch-guide-badge-check {
@@ -970,21 +970,24 @@ body {
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  background: #FFFFFF;
-  box-shadow: 0 14px 36px rgba(255, 179, 0, 0.35), 0 2px 10px rgba(0, 0, 0, 0.04);
+  background: radial-gradient(circle, #FFFFFF 60%, #FFF8E1 100%);
+  box-shadow: 0 12px 32px rgba(255, 179, 0, 0.35), 0 2px 10px rgba(0, 0, 0, 0.04);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: 6px;
   margin-bottom: 20px;
   border: 4px solid #FFE082;
   animation: stitchFloatMascot 3s ease-in-out infinite;
+  overflow: hidden;
 }
 
 .stitch-welcome-mascot-img {
-  width: 110px;
-  height: 110px;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
 }
 
 @keyframes stitchFloatMascot {

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'maarif3-v63';
+const CACHE_NAME = 'maarif3-v64';
 const CACHE_FILES = [
   './',
   './index.html',
@@ -24,6 +24,7 @@ const CACHE_FILES = [
   './assets/icon-192.png',
   './assets/icon-512.png',
   './assets/mascot_star.png',
+  './assets/mascot_star_circular.png',
   './assets/icons/subj_turkce.svg',
   './assets/icons/subj_matematik.svg',
   './assets/icons/subj_hayat.svg',

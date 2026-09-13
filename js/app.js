@@ -24,43 +24,106 @@
   };
   const SUBJECT_ORDER = ['matematik','fenbilimleri','turkce','hayatbilgisi','ingilizce','muzik'];
 
-  // --- MOCK SPEECH SERVICE (Keep signature) ---
+  // --- SPEECH SERVICE (Real dual-voice TTS) ---
   const SpeechService = {
     isSpeaking: false,
-    init: function() {},
-    stop: function() { this.isSpeaking = false; },
-    speak: function(text, isEng, btn) {
-      if (this.isSpeaking) { this.stop(); return; }
+    activeButton: null,
+    audioPlayer: null,
+    cachedVoices: [],
+
+    init: function() {
+      try {
+        this.audioPlayer = new Audio();
+        this.audioPlayer.preload = 'none';
+        this.audioPlayer.onended = () => this.stop();
+        this.audioPlayer.onerror = () => this.stop();
+      } catch(e) {}
+      if ('speechSynthesis' in window) {
+        this.cachedVoices = window.speechSynthesis.getVoices() || [];
+        if ('onvoiceschanged' in window.speechSynthesis) {
+          window.speechSynthesis.onvoiceschanged = () => {
+            this.cachedVoices = window.speechSynthesis.getVoices() || [];
+          };
+        }
+      }
+    },
+
+    stop: function() {
+      if (this.audioPlayer) {
+        try { this.audioPlayer.pause(); this.audioPlayer.currentTime = 0; this.audioPlayer.removeAttribute('src'); } catch(e) {}
+      }
+      if ('speechSynthesis' in window) { try { window.speechSynthesis.cancel(); } catch(e) {} }
+      this.isSpeaking = false;
+      if (this.activeButton) { this._resetBtn(this.activeButton); this.activeButton = null; }
+    },
+
+    _resetBtn: function(btn) {
+      if (!btn) return;
+      btn.classList.remove('is-speaking');
+      const t = btn.querySelector('.v-text');
+      if (t) t.textContent = btn.dataset.defaultText || 'Sesli Oku';
+    },
+
+    speak: function(text, isEnglish, btnEl) {
+      if (!text) return;
+      if (this.isSpeaking && this.activeButton === btnEl) { this.stop(); return; }
+      this.stop();
       this.isSpeaking = true;
-      if (btn) btn.classList.add('is-speaking');
-      setTimeout(() => { this.stop(); if (btn) btn.classList.remove('is-speaking'); }, 2000);
+      this.activeButton = btnEl;
+      if (btnEl) {
+        if (!btnEl.dataset.defaultText) btnEl.dataset.defaultText = btnEl.textContent || 'Sesli Oku';
+        btnEl.classList.add('is-speaking');
+      }
+      const voice = isEnglish ? 'jenny' : 'emel';
+      if (navigator.onLine !== false && this.audioPlayer) {
+        try {
+          const url = '/api/tts?text=' + encodeURIComponent(text.slice(0, 500)) + '&voice=' + voice;
+          this.audioPlayer.src = url;
+          const p = this.audioPlayer.play();
+          if (p && p.catch) p.catch(() => this._fallbackTTS(text, isEnglish));
+          return;
+        } catch(e) {}
+      }
+      this._fallbackTTS(text, isEnglish);
+    },
+
+    _fallbackTTS: function(text, isEnglish) {
+      if (!('speechSynthesis' in window)) { this.stop(); return; }
+      const utt = new SpeechSynthesisUtterance(text);
+      utt.lang = isEnglish ? 'en-US' : 'tr-TR';
+      utt.rate = 0.9;
+      const voices = this.cachedVoices;
+      const preferred = voices.find(v => isEnglish ? v.lang.startsWith('en') : v.lang.startsWith('tr'));
+      if (preferred) utt.voice = preferred;
+      utt.onend = () => this.stop();
+      utt.onerror = () => this.stop();
+      window.speechSynthesis.speak(utt);
     }
   };
 
-  function playSound(type) {
-    if (window.MH && window.MH.Audio) {
-      try { new window.MH.Audio().play(type); } catch(e){}
-    }
+  // --- DATA CLEANERS ---
+  const PDF_NOISE = /===\s*PAGE\s*\d+\s*===.*$|\d+\s*ÖLÇME.*$|ÖLÇME,?\s*DEĞERLENDİRME.*$|SINAV\s*HİZMETLERİ.*$|GENEL\s*MÜDÜRLÜĞÜ.*$/gi;
+  const ANSWER_SPOILER = /MEB\s*Kazanımı\s*:\s*Doğru\s*cevap\s+.*?\([A-D]\s*seçeneği\)\.?|MEB\s*Kazanımı\s*:\s*/gi;
+  const GENERIC_HINTS = [
+    'Soruyu dikkatlice oku ve tüm şıkları karşılaştır! 🦉',
+    'Konuyu hatırla ve adım adım düşün. Yapabilirsin! 💪',
+    'İlk önce kesin yanlış olanları elemeyi dene! 🎯',
+    'Bu konuyu çalışma kitabından gözden geçirebilirsin! 📖',
+    'Her şık için "Bu doğru mu?" diye kendine sor! 🤔',
+  ];
+  let _hintIdx = 0;
+
+  function cleanOption(text) {
+    if (!text) return '';
+    let t = String(text).replace(PDF_NOISE, '').trim().replace(/\|+$/, '').trim();
+    return t.length > 70 ? t.slice(0, 67) + '…' : (t || String(text).slice(0, 40));
   }
 
-  function saveState() {
-    try {
-      localStorage.setItem('maarif3_profile', JSON.stringify(state.profile));
-      localStorage.setItem('maarif3_progress', JSON.stringify(state.progress));
-    } catch(e) {}
+  function cleanHint(text) {
+    if (!text) return GENERIC_HINTS[_hintIdx++ % GENERIC_HINTS.length];
+    let t = String(text).replace(ANSWER_SPOILER, '').replace(/^\s*:\s*/, '').trim();
+    return t.length < 6 ? GENERIC_HINTS[_hintIdx++ % GENERIC_HINTS.length] : t;
   }
-
-  function loadState() {
-    try {
-      const p = localStorage.getItem('maarif3_profile');
-      const r = localStorage.getItem('maarif3_progress');
-      if (p) Object.assign(state.profile, JSON.parse(p));
-      if (r) Object.assign(state.progress, JSON.parse(r));
-    } catch(e) {}
-  }
-
-  function cleanOption(text) { return text ? text.replace(/\\n/g, ' ') : ''; }
-  function cleanHint(text) { return text || ''; }
 
   function getCurriculum() { return window.CURRICULUM_TERM1 || {}; }
   function getAllTopics(subj) {
@@ -278,22 +341,85 @@
   window.openWorkbook = openWorkbook;
 
 
+  function playSound(type) {
+    try {
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain); gain.connect(ctx.destination);
+      if (type === 'correct') { osc.frequency.value = 880; gain.gain.setValueAtTime(0.3, ctx.currentTime); gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.4); }
+      else if (type === 'wrong') { osc.frequency.value = 220; gain.gain.setValueAtTime(0.3, ctx.currentTime); gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.4); }
+      else { osc.frequency.value = 440; gain.gain.setValueAtTime(0.2, ctx.currentTime); gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.2); }
+      osc.start(); osc.stop(ctx.currentTime + 0.5);
+    } catch(e) {}
+  }
+
+  function saveState() {
+    try {
+      localStorage.setItem('maarif3_profile', JSON.stringify(state.profile));
+      localStorage.setItem('maarif3_progress', JSON.stringify(state.progress));
+    } catch(e) {}
+  }
+
+  function loadState() {
+    try {
+      const p = localStorage.getItem('maarif3_profile');
+      const r = localStorage.getItem('maarif3_progress');
+      if (p) Object.assign(state.profile, JSON.parse(p));
+      if (r) Object.assign(state.progress, JSON.parse(r));
+    } catch(e) {}
+  }
+
+  function buildQuestions(subjKey, topic) {
+    const list = [];
+    const tasks = topic.tasks || [];
+
+    tasks.forEach(task => {
+      const qText = task.q || task.question;
+      const opts = (task.options || []).map(cleanOption).filter(o => o.length > 0);
+      const ans = typeof task.ans === 'number' ? task.ans : (typeof task.correct === 'number' ? task.correct : 0);
+      const hint = cleanHint(task.hint || task.explanation);
+      if (qText && opts.length >= 2) {
+        list.push({ type: 'choice', question: qText, options: opts, correct: Math.min(ans, opts.length - 1), hint, isEnglish: subjKey === 'ingilizce' });
+      }
+    });
+
+    if (topic.fact_card && topic.fact_card.rule && list.length > 0) {
+      list.push({
+        type: 'true_false',
+        question: '🧠 DOĞRU MU, YANLIŞ MI?\n' + topic.fact_card.rule.slice(0, 120),
+        isTrue: true,
+        hint: cleanHint(topic.fact_card.tip),
+        isEnglish: false
+      });
+    }
+
+    if (!list.length) {
+      list.push({ type: 'choice', question: '"' + topic.title + '" konusuna hazır mısın?', options: ['Evet, Hazırım! 🚀', 'Önce Tekrar Bakayım 📖', 'Hadi Başlayalım! 💪', 'Kolay Gelsin! ⭐'], correct: 0, hint: 'Harika, devam et!', isEnglish: false });
+    }
+    return list;
+  }
+
   // --- QUIZ SCREEN ---
   function startQuiz(subjKey, topicId) {
     const tops = getAllTopics(subjKey);
-    const top = tops.find(t=>t.id===topicId) || tops[0];
-    if(!top || !top.questions) return;
-    
+    const top = tops.find(t => t.id === topicId) || tops[0];
+    if (!top) return;
+
+    const questions = buildQuestions(subjKey, top);
+
     state.quiz = {
       subject: subjKey,
       topicId: topicId,
       topicTitle: top.title,
-      questions: top.questions,
+      questions: questions,
       currentIdx: 0,
       score: 0
     };
-    
-    document.getElementById('btn-quit-quiz').onclick = () => openSubject(subjKey);
+
+    document.getElementById('btn-quit-quiz').onclick = () => {
+      showScreen('screen-topic-list');
+    };
     document.getElementById('btn-quiz-next').onclick = () => {
       playSound('click');
       state.quiz.currentIdx++;

@@ -1,12 +1,13 @@
 /* ============================================================
-   MAARIF YILDIZI 3 — App Controller (Responsive & Multi-Screen)
+   MAARIF YILDIZI 3 — Complete App Controller (v72)
+   Robust Multi-Screen SPA, Responsive Layout & Educational Game
    ============================================================ */
-(function () {
+(function (window) {
   'use strict';
 
   /* ─── STATE ──────────────────────────────────────────────── */
   const state = {
-    profile: { name: 'Kahraman', avatar: '🦊', stars: 0, streak: 0, level: 1, xp: 0 },
+    profile: { name: 'Kahraman', avatar: '🦊', stars: 0, streak: 1, level: 1, xp: 0 },
     progress: { completedTopics: [], completedUnits: {} },
     quiz: { subject: null, topicId: null, topicTitle: '', questions: [], currentIdx: 0, score: 0 },
     currentTab: 'macera',
@@ -15,8 +16,6 @@
   };
 
   /* ─── SUBJECT CONFIG ─────────────────────────────────────── */
-  // Keys must match window.CURRICULUM_TERM1 keys:
-  // 'matematik', 'fenbilimleri', 'turkce', 'hayatbilgisi', 'ingilizce', 'muzik'
   const SUBJECTS = {
     matematik:    { title: 'Matematik',    icon: 'calculate',    bg: 'rgba(255,179,0,0.15)',   accent: 'var(--primary)',    emoji: '🔢', shadow: '#b37d00' },
     fenbilimleri: { title: 'Fen Bilimleri',icon: 'science',       bg: 'rgba(72,217,158,0.15)',  accent: 'var(--tertiary)',   emoji: '🔬', shadow: '#2dbb7d' },
@@ -69,6 +68,9 @@
       if (header) header.classList.add('hidden');
       if (nav) nav.classList.add('hidden');
     }
+
+    // Scroll to top of active screen
+    window.scrollTo(0, 0);
   }
 
   function setActiveTab(tab) {
@@ -92,6 +94,10 @@
     else if (tab === 'kitaplik') renderKitaplik();
     else if (tab === 'gelisim') renderGelisim();
   }
+
+  // EXPOSE GLOBALLY FOR INLINE ONCLICK & CONSOLE
+  window.setActiveTab = setActiveTab;
+  window.showScreen = showScreen;
 
   /* ─── HEADER ─────────────────────────────────────────────── */
   function updateHeader() {
@@ -334,8 +340,8 @@
 
     if (!questions.length) {
       questions = [
-        { question: topic.title + ' ile ilgili alıştırmaya hazır mısın?', options: ['Hazırım 🚀', 'Biraz Bakayım', 'Kolay Gelsin', 'Hadi Başlayalım'], correct: 0, explanation: 'Tebrikler! Maceraya tam gaz devam!' },
-        { question: '3. sınıf ' + (SUBJECTS[subjectKey]?.title || '') + ' konularını düzenli tekrar ediyor musun?', options: ['Her Gün', 'Haftada Bir', 'Yeni Başladım', 'Severek'], correct: 0, explanation: 'Harika bir alışkanlık!' },
+        { question: topic.title + ' ile ilgili MEB alıştırmasına hazır mısın?', options: ['Hazırım 🚀', 'Biraz Bakayım', 'Kolay Gelsin', 'Hadi Başlayalım'], correct: 0, explanation: 'Tebrikler! Maceraya tam gaz devam!' },
+        { question: '3. sınıf ' + (SUBJECTS[subjectKey]?.title || '') + ' konularını düzenli tekrar ediyor musun?', options: ['Her Gün Düzenli ⭐', 'Haftada Bir', 'Yeni Başladım', 'Severek'], correct: 0, explanation: 'Harika bir alışkanlık!' },
         { question: 'Günün hedefini tamamlamak için son adım!', options: ['Tamamla 🌟', 'Sonra', 'Mola Ver', 'Görüşürüz'], correct: 0, explanation: 'Muhteşem performans!' }
       ];
     }
@@ -354,28 +360,29 @@
   }
 
   function renderQuestion() {
-    const q   = state.quiz.questions[state.quiz.currentIdx];
-    const len = state.quiz.questions.length;
-    if (!q) { finishQuiz(); return; }
+    const q       = state.quiz.questions[state.quiz.currentIdx];
+    const total   = state.quiz.questions.length;
+    const current = state.quiz.currentIdx;
 
-    const dotsEl = document.getElementById('quiz-dots');
-    if (dotsEl) {
-      dotsEl.innerHTML = '';
-      for (let i = 0; i < len; i++) {
-        const dot = document.createElement('div');
-        dot.className = 'quiz-dot' + (i < state.quiz.currentIdx ? ' done' : (i === state.quiz.currentIdx ? ' current' : ''));
-        dotsEl.appendChild(dot);
-      }
+    const sBadge = document.getElementById('quiz-subject-badge');
+    const qText  = document.getElementById('quiz-question-text');
+    const streak = document.getElementById('quiz-streak');
+    const dots   = document.getElementById('quiz-dots');
+
+    if (sBadge) {
+      const sc = SUBJECTS[state.quiz.subject];
+      sBadge.textContent = (sc ? sc.title : '') + ' • ' + state.quiz.topicTitle;
     }
-
-    const badge = document.getElementById('quiz-subject-badge');
-    const cfg   = SUBJECTS[state.quiz.subject] || {};
-    if (badge) badge.textContent = (cfg.title || '') + ' • ' + state.quiz.topicTitle;
-
-    const qText = document.getElementById('quiz-question-text');
     if (qText) qText.textContent = q.question;
 
-    const streak = document.getElementById('quiz-streak');
+    if (dots) {
+      dots.innerHTML = '';
+      for (let i = 0; i < total; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'quiz-dot' + (i === current ? ' active' : (i < current ? ' done' : ''));
+        dots.appendChild(dot);
+      }
+    }
     if (streak) streak.textContent = state.profile.streak;
 
     const optionsEl = document.getElementById('quiz-options');
@@ -436,186 +443,183 @@
 
   function finishQuiz() {
     const topicId = state.quiz.topicId;
-    const starsEarned = Math.round((state.quiz.score / state.quiz.questions.length) * 30) + 10;
-
-    if (!state.progress.completedTopics.includes(topicId)) {
+    if (topicId && !state.progress.completedTopics.includes(topicId)) {
       state.progress.completedTopics.push(topicId);
     }
+    const starsEarned = 30;
+    const xpEarned    = 100;
+    state.profile.stars  += starsEarned;
+    state.profile.xp     += xpEarned;
+    state.profile.level   = Math.floor(state.profile.xp / 100) + 1;
 
-    state.profile.stars += starsEarned;
-    state.profile.xp    += 100;
-    state.profile.level  = Math.floor(state.profile.xp / 200) + 1;
-    if (state.quiz.score > 0) state.profile.streak++;
     saveState();
     updateHeader();
-
-    renderVictory(starsEarned);
+    renderVictory(state.quiz.subject, state.quiz.topicTitle, starsEarned, xpEarned);
   }
 
-  /* ─── VICTORY ─────────────────────────────────────────────── */
-  function renderVictory(starsEarned) {
-    const title = document.getElementById('victory-title');
-    const sub   = document.getElementById('victory-subtitle');
-    const note  = document.getElementById('victory-note');
-    const starsEl = document.getElementById('victory-stars');
-    const xpEl    = document.getElementById('victory-xp');
-    const levelEl = document.getElementById('victory-level-num');
-    const nextEl  = document.getElementById('victory-next-level');
-    const badge   = document.getElementById('victory-level-badge');
-
-    if (title) title.textContent = 'HARİKASIN! 🎉';
-    if (sub)   sub.textContent   = (SUBJECTS[state.quiz.subject] || {}).title + ' • ' + state.quiz.topicTitle;
-    if (note)  note.textContent  = state.quiz.score + ' / ' + state.quiz.questions.length + ' doğru yaptın. Çok başarılı bir çalışma!';
-    if (starsEl) starsEl.textContent = '+' + starsEarned;
-    if (xpEl)    xpEl.textContent    = '+100';
-    if (levelEl) levelEl.textContent = state.profile.level;
-    if (nextEl)  nextEl.textContent  = state.profile.level + 1;
-    if (badge)   badge.textContent   = state.profile.level;
-
-    setTimeout(() => {
-      const bar = document.getElementById('victory-level-bar');
-      if (bar) {
-        const xpInLevel = state.profile.xp % 200;
-        const pct = Math.round((xpInLevel / 200) * 100);
-        bar.style.width = pct + '%';
-      }
-    }, 200);
-
+  /* ─── VICTORY SCREEN ────────────────────────────────────────── */
+  function renderVictory(subjectKey, topicTitle, starsEarned, xpEarned) {
     showScreen('screen-victory');
-    startConfetti();
+
+    const subEl = document.getElementById('victory-subtitle');
+    const stEl  = document.getElementById('victory-stars');
+    const xpEl  = document.getElementById('victory-xp');
+    const lvNum = document.getElementById('victory-level-num');
+    const nxtLv = document.getElementById('victory-next-level');
+    const lvBar = document.getElementById('victory-level-bar');
+    const note  = document.getElementById('victory-note');
+
+    const sc = SUBJECTS[subjectKey];
+    if (subEl) subEl.textContent = (sc ? sc.title : '') + ' • ' + topicTitle;
+    if (stEl)  stEl.textContent  = '+' + starsEarned;
+    if (xpEl)  xpEl.textContent  = '+' + xpEarned;
+    if (lvNum) lvNum.textContent = state.profile.level;
+    if (nxtLv) nxtLv.textContent = state.profile.level + 1;
+
+    const progressInLevel = state.profile.xp % 100;
+    if (lvBar) lvBar.style.width = Math.max(15, progressInLevel) + '%';
+
+    const notes = [
+      'Günün hedefine bir adım daha yaklaştın! Harikasın!',
+      'Yeni bir konu tamamlandı, kütüphanede yeni masallar seni bekliyor!',
+      'Tebrikler! Düzenli çalışarak serini artırıyorsun.'
+    ];
+    if (note) note.textContent = notes[Math.floor(Math.random() * notes.length)];
+
+    runConfetti();
   }
 
-  function startConfetti() {
+  function runConfetti() {
     const canvas = document.getElementById('victory-canvas');
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
-    const colors = ['#ffb300','#0073df','#48d99e','#ba1a1a','#ffba38','#6ffbbe'];
-    let pieces = [];
-    let frame = 0;
+    canvas.width = canvas.offsetWidth || window.innerWidth;
+    canvas.height = canvas.offsetHeight || window.innerHeight;
 
-    function resize() {
-      canvas.width  = canvas.parentElement ? canvas.parentElement.clientWidth : 400;
-      canvas.height = canvas.parentElement ? canvas.parentElement.clientHeight : 600;
-    }
-    resize();
+    const colors = ['#ffb300', '#005bb3', '#48d99e', '#ff6b6b', '#a855f7'];
+    const pieces = Array.from({ length: 60 }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height * 0.4,
+      r: Math.random() * 6 + 3,
+      d: Math.random() * 60,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      tilt: Math.random() * 10 - 10,
+      tiltAngle: 0,
+      tiltAngleInc: Math.random() * 0.07 + 0.05
+    }));
 
-    for (let i = 0; i < 40; i++) {
-      pieces.push({
-        x: canvas.width / 2 + (Math.random() * 120 - 60),
-        y: canvas.height * 0.25,
-        vx: (Math.random() - 0.5) * 8,
-        vy: (Math.random() * -7) - 2,
-        size: Math.random() * 8 + 4,
-        color: colors[Math.floor(Math.random() * colors.length)],
-        rot: Math.random() * 360,
-        rotV: (Math.random() - 0.5) * 6,
-        g: 0.18,
-        op: 1
-      });
-    }
+    let animationFrame;
+    let frames = 0;
 
     function draw() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      frame++;
       pieces.forEach(p => {
-        p.x += p.vx; p.y += p.vy; p.vy += p.g;
-        p.rot += p.rotV; p.op = Math.max(0, p.op - 0.006);
-        ctx.save();
-        ctx.globalAlpha = p.op;
-        ctx.translate(p.x, p.y);
-        ctx.rotate((p.rot * Math.PI) / 180);
-        ctx.fillStyle = p.color;
-        ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.6);
-        ctx.restore();
+        p.tiltAngle += p.tiltAngleInc;
+        p.y += (Math.cos(p.d) + 3 + p.r / 2) / 2;
+        p.x += Math.sin(p.d);
+        p.tilt = Math.sin(p.tiltAngle) * 15;
+
+        ctx.beginPath();
+        ctx.lineWidth = p.r;
+        ctx.strokeStyle = p.color;
+        ctx.moveTo(p.x + p.tilt + p.r / 4, p.y);
+        ctx.lineTo(p.x + p.tilt, p.y + p.tilt + p.r / 4);
+        ctx.stroke();
       });
-      if (frame < 180) requestAnimationFrame(draw);
+      frames++;
+      if (frames < 120) {
+        animationFrame = requestAnimationFrame(draw);
+      } else {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
     }
     draw();
   }
 
-  /* ─── KİTAPLIK ─────────────────────────────────────────────── */
+  /* ─── KİTAPLIK SCREEN ─────────────────────────────────────── */
   function renderKitaplik() {
     const list = document.getElementById('story-list');
     if (!list) return;
     list.innerHTML = '';
+    list.className = 'story-grid-responsive';
 
     const stories = [
-      { emoji: '🦊', title: 'Tilki ile Bilge Leylek', desc: 'Türkçe • Anlama Masalı', subject: 'turkce', time: '4 dk' },
-      { emoji: '🌱', title: 'Küçük Tohumun Yolculuğu', desc: 'Fen Bilimleri • Canlılar Dünyası', subject: 'fenbilimleri', time: '5 dk' },
-      { emoji: '🔢', title: 'Sayılar Diyarı ve Gizemli Sıfır', desc: 'Matematik • Sayı Macerası', subject: 'matematik', time: '6 dk' },
-      { emoji: '🌍', title: 'Bizim Güzel Mahallemiz', desc: 'Hayat Bilgisi • Birlikte Yaşamak', subject: 'hayatbilgisi', time: '4 dk' }
+      { id: 'masal-1', title: 'Tilki ile Bilge Leylek', subject: 'Türkçe • Anlama Masalı', emoji: '🦊', time: '4 dk', desc: 'Paylaşmanın ve dostluğun önemi' },
+      { id: 'masal-2', title: 'Küçük Tohumun Yolculuğu', subject: 'Fen Bilimleri • Canlılar', emoji: '🌱', time: '5 dk', desc: 'Bitkilerin büyüme serüveni' },
+      { id: 'masal-3', title: 'Sayılar Diyarı ve Gizemli Sıfır', subject: 'Matematik • Sayı Macerası', emoji: '🔢', time: '6 dk', desc: 'Basamak değeri ve basamaklar' },
+      { id: 'masal-4', title: 'Bizim Güzel Mahallemiz', subject: 'Hayat Bilgisi • Birlikte Yaşamak', emoji: '🌍', time: '4 dk', desc: 'Komşuluk ve yardımlaşma' }
     ];
 
     stories.forEach(s => {
-      const cfg = SUBJECTS[s.subject] || {};
-      const card = document.createElement('div');
-      card.className = 'story-card-compact';
-      card.innerHTML = `
-        <div class="story-thumb-box" style="background:${cfg.bg || 'var(--surface-container)'}">
-          <span>${s.emoji}</span>
-        </div>
-        <div style="flex:1; min-width:0;">
-          <div style="display:flex; justify-content:space-between; align-items:center;">
+      const item = document.createElement('div');
+      item.className = 'story-card-compact';
+      item.innerHTML = `
+        <div class="story-icon-box">${s.emoji}</div>
+        <div style="flex:1;min-width:0">
+          <div style="display:flex;justify-content:space-between;align-items:center">
             <h4 class="story-title-compact">${s.title}</h4>
-            <span style="font-size:10px; color:${cfg.accent}; font-weight:700;">${s.time}</span>
+            <span style="font-size:11px;color:var(--secondary);font-weight:700">${s.time}</span>
           </div>
-          <p class="story-desc-compact">${s.desc}</p>
+          <p class="story-desc-compact">${s.subject}</p>
         </div>
         <button class="btn-listen-icon" title="Dinle">
-          <span class="material-symbols-outlined icon-fill" style="font-size:18px; color:${cfg.accent};">play_arrow</span>
-        </button>`;
-      
-      card.addEventListener('click', () => {
-        alert('"' + s.title + '" masalı başlatılıyor! 🎧');
-      });
-      list.appendChild(card);
+          <span class="material-symbols-outlined icon-fill" style="font-size:18px;color:var(--secondary)">play_arrow</span>
+        </button>
+      `;
+      item.onclick = () => {
+        alert('📖 ' + s.title + ' masalı başlıyor! MEB 3. sınıf okuma-anlama alıştırması.');
+      };
+      list.appendChild(item);
     });
   }
 
-  /* ─── GELİŞİM ──────────────────────────────────────────────── */
+  /* ─── GELİŞİM SCREEN ──────────────────────────────────────── */
   function renderGelisim() {
-    const ss = document.getElementById('stat-stars');
-    const sk = document.getElementById('stat-streak');
-    const sl = document.getElementById('stat-level');
-    const sb = document.getElementById('stat-level-bar');
-    const sl2 = document.getElementById('stat-level-label');
-    if (ss) ss.textContent = state.profile.stars;
-    if (sk) sk.textContent = state.profile.streak;
-    if (sl) sl.textContent = state.profile.level;
-    if (sl2) sl2.textContent = LEVEL_TITLES[Math.min(state.profile.level - 1, LEVEL_TITLES.length - 1)];
-    if (sb) {
-      const pct = Math.round(((state.profile.xp % 200) / 200) * 100);
-      sb.style.width = pct + '%';
-    }
+    const stStars  = document.getElementById('stat-stars');
+    const stStreak = document.getElementById('stat-streak');
+    const stLevel  = document.getElementById('stat-level');
+    const stLabel  = document.getElementById('stat-level-label');
+    const stBar    = document.getElementById('stat-level-bar');
 
+    if (stStars)  stStars.textContent  = state.profile.stars;
+    if (stStreak) stStreak.textContent = state.profile.streak;
+    if (stLevel)  stLevel.textContent  = state.profile.level;
+
+    const titleIdx = Math.min(LEVEL_TITLES.length - 1, state.profile.level - 1);
+    if (stLabel) stLabel.textContent = LEVEL_TITLES[titleIdx];
+    const lvlPct = Math.min(100, Math.round(((state.profile.xp % 100) / 100) * 100));
+    if (stBar) stBar.style.width = Math.max(15, lvlPct) + '%';
+
+    // Avatars
     const avatarArea = document.getElementById('avatar-area');
     if (avatarArea) {
       avatarArea.innerHTML = '';
       const avatars = ['🦊','🦉','🐯','🐸','🦁','🐧'];
       avatars.forEach(av => {
-        const opt = document.createElement('div');
-        opt.className = 'avatar-chip' + (state.profile.avatar === av ? ' selected' : '');
-        opt.innerHTML = `<span style="font-size:22px;">${av}</span>`;
-        opt.onclick = () => {
+        const chip = document.createElement('div');
+        chip.className = 'avatar-chip' + (state.profile.avatar === av ? ' selected' : '');
+        chip.innerHTML = `<span style="font-size:24px">${av}</span>`;
+        chip.onclick = () => {
           state.profile.avatar = av;
           saveState();
           updateHeader();
           renderGelisim();
         };
-        avatarArea.appendChild(opt);
+        avatarArea.appendChild(chip);
       });
     }
 
+    // Badges
     const badgeGrid = document.getElementById('badge-grid');
     if (badgeGrid) {
       badgeGrid.innerHTML = '';
       const badges = [
-        { emoji: '🌟', name: 'İlk Adım',    desc: 'İlk konuyu bitir', earned: state.progress.completedTopics.length >= 1 },
-        { emoji: '🔥', name: 'Seri Ustası', desc: '3 gün seri yap', earned: state.profile.streak >= 3 },
-        { emoji: '🏆', name: 'Şampiyon',    desc: '60 Yıldız topla', earned: state.profile.stars >= 60 },
-        { emoji: '🧠', name: 'Bilge Kaşif', desc: 'Seviye 2 ol', earned: state.profile.level >= 2 },
-        { emoji: '🎯', name: 'Keskin Niş',  desc: '3 görev tamamla', earned: state.progress.completedTopics.length >= 3 },
-        { emoji: '📚', name: 'Kitap Kurdu', desc: 'Masalları dinle', earned: false }
+        { id: 'first_topic', name: 'İlk Adım', emoji: '🌟', desc: 'İlk konuyu bitir', earned: state.progress.completedTopics.length >= 1 },
+        { id: 'streak_3',    name: 'Seri Ustası', emoji: '🔥', desc: '3 gün seri yap', earned: state.profile.streak >= 3 },
+        { id: 'star_60',     name: 'Şampiyon', emoji: '🏆', desc: '60 Yıldız topla', earned: state.profile.stars >= 60 },
+        { id: 'level_2',     name: 'Bilge Kaşif', emoji: '🦉', desc: 'Seviye 2 ol', earned: state.profile.level >= 2 },
+        { id: 'focus_done',  name: 'Keskin Nişancı', emoji: '🎯', desc: '3 görev tamamla', earned: state.progress.completedTopics.length >= 3 },
+        { id: 'reader',      name: 'Kitap Kurdu', emoji: '📚', desc: 'Masalları dinle', earned: true }
       ];
       badges.forEach(b => {
         const item = document.createElement('div');
@@ -686,7 +690,7 @@
   }
 
   /* ─── INITIALIZATION (Direct single splash to dashboard) ─── */
-  document.addEventListener('DOMContentLoaded', () => {
+  function startApp() {
     loadState();
     initEvents();
 
@@ -694,6 +698,12 @@
     setTimeout(() => {
       setActiveTab('macera');
     }, 1200);
-  });
+  }
 
-})();
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', startApp);
+  } else {
+    startApp();
+  }
+
+})(window);

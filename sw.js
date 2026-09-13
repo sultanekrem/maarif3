@@ -1,41 +1,15 @@
-const CACHE_NAME = 'maarif3-v70';
+const CACHE_NAME = 'maarif3-v72';
 const CACHE_FILES = [
   './',
   './index.html',
   './css/design.css',
   './js/curriculum-term1.js',
-  './data/curriculum-term1.json',
-  './js/engine/utils.js',
-  './js/engine/audio.js',
-  './js/engine/particles.js',
-  './js/engine/renderer.js',
-  './js/engine/input.js',
-  './js/engine/game-loop.js',
-  './js/math/questions.js',
-  './js/progress.js',
   './js/app.js',
   './manifest.json',
-  './assets/welcome_screen_hq.jpg',
-  './assets/victory_screen_hq.jpg',
-  './assets/space_bg_hq.jpg',
-  './assets/game_logo_splash.png',
+  './assets/maarif_yildizi_3_logo.png',
   './assets/icon-192.png',
   './assets/icon-512.png',
-  './assets/apple-touch-icon.png',
-  './assets/app_icon_official.png',
-  './assets/mascot_star.png',
-  './assets/mascot_star_circular.png',
-  './assets/icons/subj_turkce.svg',
-  './assets/icons/subj_matematik.svg',
-  './assets/icons/subj_hayat.svg',
-  './assets/icons/subj_fen.svg',
-  './assets/icons/subj_ingilizce.svg',
-  './assets/icons/subj_muzik.svg',
-  './assets/icons/nav_home.svg',
-  './assets/icons/nav_books.svg',
-  './assets/icons/nav_games.svg',
-  './assets/icons/nav_badges.svg',
-  './assets/icons/nav_profile.svg'
+  './assets/apple-touch-icon.png'
 ];
 
 self.addEventListener('install', event => {
@@ -52,6 +26,7 @@ self.addEventListener('activate', event => {
       return Promise.all(
         cacheNames.map(cacheName => {
           if (cacheName !== CACHE_NAME) {
+            console.log('Purging old cache:', cacheName);
             return caches.delete(cacheName);
           }
         })
@@ -64,17 +39,31 @@ self.addEventListener('fetch', event => {
   if (event.request.url.includes('/api/')) {
     return;
   }
+  // Network first for core app files
+  if (event.request.mode === 'navigate' || event.request.url.match(/\.(html|js|css|json)/)) {
+    event.respondWith(
+      fetch(event.request)
+        .then(response => {
+          if (response && response.status === 200) {
+            const clone = response.clone();
+            caches.open(CACHE_NAME).then(cache => cache.put(event.request, clone));
+          }
+          return response;
+        })
+        .catch(() => caches.match(event.request))
+    );
+    return;
+  }
+  // Cache first for assets/images
   event.respondWith(
-    fetch(event.request)
-      .then(response => {
-        if (response && response.status === 200 && response.type === 'basic') {
-          const responseClone = response.clone();
-          caches.open(CACHE_NAME).then(cache => {
-            cache.put(event.request, responseClone);
-          });
+    caches.match(event.request).then(cached => {
+      return cached || fetch(event.request).then(response => {
+        if (response && response.status === 200) {
+          const clone = response.clone();
+          caches.open(CACHE_NAME).then(cache => cache.put(event.request, clone));
         }
         return response;
-      })
-      .catch(() => caches.match(event.request))
+      });
+    })
   );
 });

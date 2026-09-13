@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <title>Maarif Yıldızı 3</title>
-  <link rel="stylesheet" href="css/design.css?v=70">
-  <link rel="manifest" href="manifest.json?v=70">
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png?v=70">
-  <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png?v=70">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png?v=70">
+  <link rel="stylesheet" href="css/design.css?v=72">
+  <link rel="manifest" href="manifest.json?v=72">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png?v=72">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png?v=72">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png?v=72">
   <meta name="theme-color" content="#ffb300">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -16,7 +16,9 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js').catch(() => {});
+        navigator.serviceWorker.register('sw.js?v=72').then(reg => {
+          reg.update();
+        }).catch(() => {});
       });
     }
   </script>
@@ -26,17 +28,17 @@
 
   <!-- ===================== SCREEN: SPLASH ===================== -->
   <div id="screen-splash" class="maarif-screen active">
-    <div class="splash-logo">
-      <span class="material-symbols-outlined splash-logo-icon icon-fill">auto_awesome</span>
-    </div>
-    <div style="text-align:center">
-      <p class="text-headline-sm font-comfortaa" style="color:var(--primary)">Maarif Yıldızı 3</p>
-      <p class="text-label-sm" style="color:var(--on-surface-variant);margin-top:2px">3. Sınıf MEB Macerası</p>
-    </div>
-    <div class="splash-dots">
-      <div class="splash-dot"></div>
-      <div class="splash-dot"></div>
-      <div class="splash-dot"></div>
+    <div class="splash-center-box">
+      <div class="splash-logo-container">
+        <img src="assets/maarif_yildizi_3_logo.png?v=72" alt="Maarif Yıldızı 3" class="splash-official-logo">
+      </div>
+      <h1 class="text-headline-md font-comfortaa" style="color:var(--primary); font-size: 26px; font-weight: 800; margin: 16px 0 2px 0;">Maarif Yıldızı 3</h1>
+      <p class="text-label-sm" style="color:var(--on-surface-variant); font-size: 13px; font-weight: 700; margin: 0;">3. Sınıf MEB Eğlenceli Öğrenme</p>
+      <div class="splash-dots" style="margin-top: 20px;">
+        <div class="splash-dot"></div>
+        <div class="splash-dot"></div>
+        <div class="splash-dot"></div>
+      </div>
     </div>
   </div>
 
@@ -44,7 +46,7 @@
   <header id="maarif-header" class="hidden">
     <div class="header-inner">
       <div class="header-logo" onclick="setActiveTab('macera')" style="cursor:pointer;">
-        <img src="assets/maarif_yildizi_3_logo.png?v=70" alt="Maarif Yıldızı 3" class="header-brand-img">
+        <img src="assets/maarif_yildizi_3_logo.png?v=72" alt="Maarif Yıldızı 3" class="header-brand-img">
         <div class="header-logo-text">
           <span class="header-logo-title">Maarif Yıldızı 3</span>
           <span id="header-subtitle" class="header-logo-sub">3. Sınıf • Macera</span>
@@ -104,7 +106,7 @@
       </div>
 
       <!-- Island map -->
-      <div id="island-map" style="display:flex;flex-direction:column;gap:0;position:relative"></div>
+      <div id="island-map"></div>
 
       <!-- Quick practice -->
       <div style="display:flex;flex-direction:column;gap:8px">
@@ -142,91 +144,45 @@
   <!-- ===================== SCREEN: ETKİNLİK ===================== -->
   <div id="screen-etkinlik" class="maarif-screen">
     <div class="screen-content">
-      <!-- Guide mascot card -->
-      <div class="guide-mascot-card">
-        <div style="display:flex;align-items:flex-start;gap:12px">
-          <div style="width:56px;height:56px;border-radius:9999px;background:var(--primary-fixed);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 3px 0 var(--primary-fixed-dim);font-size:28px;position:relative">
-            🦉
-            <span style="position:absolute;bottom:-4px;right:-4px;width:20px;height:20px;background:var(--tertiary-container);border-radius:9999px;display:flex;align-items:center;justify-content:center;font-size:12px;font-family:'Comfortaa',sans-serif;color:var(--on-tertiary-container)">✓</span>
-          </div>
-          <div style="flex:1;min-width:0">
-            <div style="display:flex;align-items:center;justify-content:space-between">
-              <span class="text-headline-sm font-comfortaa" style="color:var(--primary)">Bilge Kuş ile Macera Kuralı</span>
-              <button id="btn-toggle-guide" class="btn-sm-ghost">
-                Rehber
-                <span id="guide-toggle-icon" class="material-symbols-outlined" style="font-size:16px">expand_more</span>
-              </button>
-            </div>
-            <p class="text-body-sm" style="color:var(--on-surface-variant);margin-top:4px">"Unutma: Her gün minik bir adım! Önceki konuyu bitirmeden yeni kilitler açılmaz." 🎯</p>
-          </div>
-        </div>
-        <div id="guide-steps" style="margin-top:12px;padding-top:12px;border-top:1px solid var(--outline-variant)">
-          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
-            <div style="background:var(--surface-container-lowest);padding:8px;border-radius:var(--radius-md);display:flex;flex-direction:column;align-items:center;text-align:center;box-shadow:0 2px 0 var(--surface-dim)">
-              <div style="width:32px;height:32px;border-radius:9999px;background:var(--primary-fixed);color:var(--on-primary-fixed);display:flex;align-items:center;justify-content:center;font-family:'Comfortaa',sans-serif;font-size:14px;font-weight:700;margin-bottom:4px">1</div>
-              <span class="text-label-sm" style="color:var(--on-surface)">15 Dk Görev</span>
-              <span style="font-size:11px;color:var(--on-surface-variant)">Günü tamamla</span>
-            </div>
-            <div style="background:var(--surface-container-lowest);padding:8px;border-radius:var(--radius-md);display:flex;flex-direction:column;align-items:center;text-align:center;box-shadow:0 2px 0 var(--surface-dim)">
-              <div style="width:32px;height:32px;border-radius:9999px;background:var(--secondary-fixed);color:var(--on-secondary-fixed);display:flex;align-items:center;justify-content:center;font-family:'Comfortaa',sans-serif;font-size:14px;font-weight:700;margin-bottom:4px">2</div>
-              <span class="text-label-sm" style="color:var(--on-surface)">Kilidi Aç</span>
-              <span style="font-size:11px;color:var(--on-surface-variant)">Sıradaki üniteye geç</span>
-            </div>
-            <div style="background:var(--surface-container-lowest);padding:8px;border-radius:var(--radius-md);display:flex;flex-direction:column;align-items:center;text-align:center;box-shadow:0 2px 0 var(--surface-dim)">
-              <div style="width:32px;height:32px;border-radius:9999px;background:var(--tertiary-fixed);color:var(--on-tertiary-fixed);display:flex;align-items:center;justify-content:center;font-family:'Comfortaa',sans-serif;font-size:14px;font-weight:700;margin-bottom:4px">3</div>
-              <span class="text-label-sm" style="color:var(--on-surface)">Yıldız Kazan</span>
-              <span style="font-size:11px;color:var(--on-surface-variant)">Rozetleri topla</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <!-- Focus Task Hero -->
       <div class="focus-task-hero">
         <div style="position:relative;z-index:1">
-          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
-            <span style="display:inline-flex;align-items:center;gap:6px;padding:4px 12px;background:rgba(255,255,255,0.85);border-radius:9999px;font-family:'Comfortaa',sans-serif;font-size:12px;font-weight:700;color:var(--on-surface)">
-              <span class="material-symbols-outlined icon-fill" style="font-size:16px;color:var(--primary-container)">bolt</span>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+            <span style="display:inline-flex;align-items:center;gap:6px;padding:3px 10px;background:rgba(255,255,255,0.9);border-radius:9999px;font-family:'Comfortaa',sans-serif;font-size:11px;font-weight:700;color:var(--on-surface)">
+              <span class="material-symbols-outlined icon-fill" style="font-size:14px;color:var(--primary-container)">bolt</span>
               Günün Odak Görevi
             </span>
-            <span style="display:inline-flex;align-items:center;gap:4px;padding:4px 10px;background:rgba(255,255,255,0.7);border-radius:9999px;font-family:'Comfortaa',sans-serif;font-size:12px;font-weight:700;color:var(--on-surface-variant)">⏱️ 10-15 Dk</span>
+            <span style="display:inline-flex;align-items:center;gap:4px;padding:3px 8px;background:rgba(255,255,255,0.8);border-radius:9999px;font-family:'Comfortaa',sans-serif;font-size:11px;font-weight:700;color:var(--on-surface-variant)">⏱️ 10-15 Dk</span>
           </div>
-          <h2 id="focus-task-title" class="text-headline-lg-m font-comfortaa" style="color:var(--on-primary-fixed)">Matematik • 1. Ünite</h2>
-          <p id="focus-task-desc" class="text-body-md" style="color:var(--on-primary-fixed-variant);margin-top:4px">Sayıları Okuma ve Yazma</p>
-          <div style="margin-top:12px;background:rgba(255,255,255,0.7);backdrop-filter:blur(4px);padding:12px;border-radius:var(--radius-md)">
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
-              <span class="text-label-sm" style="color:var(--on-surface)">Görev Durumu: <span id="focus-progress-label">0 / 3 Tamamlandı</span></span>
-              <span id="focus-progress-pct" class="text-headline-sm font-comfortaa" style="color:var(--primary)">%0</span>
+          <h2 id="focus-task-title" class="text-headline-md font-comfortaa" style="color:var(--on-primary-fixed);font-size:18px;margin-bottom:2px">Matematik • 1. Ünite</h2>
+          <p id="focus-task-desc" class="text-body-sm" style="color:var(--on-primary-fixed-variant);font-size:13px;margin:0">Sayıları Okuma ve Yazma</p>
+          <div style="margin-top:8px;background:rgba(255,255,255,0.7);backdrop-filter:blur(4px);padding:8px 12px;border-radius:var(--radius-md)">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+              <span class="text-label-sm" style="color:var(--on-surface);font-size:11px">Görev Durumu: <span id="focus-progress-label">0 / 3 Tamam</span></span>
+              <span id="focus-progress-pct" class="font-comfortaa" style="color:var(--primary);font-size:13px;font-weight:700">%0</span>
             </div>
-            <div class="progress-track-thin">
-              <div id="focus-progress-bar" class="progress-bar-thin" style="width:0%;background:var(--tertiary-container)"></div>
+            <div class="progress-track-thin" style="height:6px">
+              <div id="focus-progress-bar" class="progress-bar-thin" style="width:0%;background:var(--tertiary-container);height:100%"></div>
             </div>
           </div>
-          <button id="btn-start-focus" class="btn-primary" style="margin-top:16px">
+          <button id="btn-start-focus" class="btn-primary" style="margin-top:10px;min-height:44px;padding:8px 16px;font-size:14px">
             <span>Göreve Başla!</span>
-            <span class="material-symbols-outlined">rocket_launch</span>
+            <span class="material-symbols-outlined" style="font-size:18px">rocket_launch</span>
           </button>
         </div>
       </div>
 
-      <!-- Curriculum Tree -->
-      <div style="display:flex;align-items:center;justify-content:space-between;padding-top:4px">
-        <div style="display:flex;align-items:center;gap:8px">
-          <span class="material-symbols-outlined" style="color:var(--primary);font-size:24px">account_tree</span>
-          <h3 class="text-headline-md font-comfortaa" style="color:var(--on-surface)">Ders Müfredat Ağacı</h3>
+      <!-- Curriculum Tree Header -->
+      <div style="display:flex;align-items:center;justify-content:space-between;padding-top:2px">
+        <div style="display:flex;align-items:center;gap:6px">
+          <span class="material-symbols-outlined" style="color:var(--primary);font-size:20px">account_tree</span>
+          <h3 class="text-headline-sm font-comfortaa" style="color:var(--on-surface);font-size:16px">Ders Müfredat Ağacı</h3>
         </div>
-        <span class="section-label">3. Sınıf MEB</span>
+        <span class="section-label" style="font-size:11px;padding:2px 8px">3. Sınıf MEB</span>
       </div>
-      <div id="curriculum-tree" style="display:flex;flex-direction:column;gap:12px"></div>
 
-      <!-- Motivational footer -->
-      <div class="maarif-card" style="display:flex;align-items:center;gap:12px">
-        <span style="font-size:28px;flex-shrink:0">🌟</span>
-        <div>
-          <p class="text-label-lg font-comfortaa" style="color:var(--on-surface)">Harika Gidiyorsun!</p>
-          <p class="text-body-sm" style="color:var(--on-surface-variant);margin-top:2px">Bugün 1 alıştırma daha yaparak günlük serini uzatabilirsin!</p>
-        </div>
-      </div>
+      <!-- Curriculum Tree Rendered by JS -->
+      <div id="curriculum-tree"></div>
     </div>
   </div>
 
@@ -329,11 +285,11 @@
           <span>Sonraki Maceraya Geç!</span>
           <span class="material-symbols-outlined">rocket_launch</span>
         </button>
-        <button id="btn-back-to-map" class="btn-ghost">
+        <button id="btn-back-to-map" class="btn-ghost" onclick="setActiveTab('macera')">
           <span class="material-symbols-outlined" style="color:var(--on-surface-variant)">map</span>
           <span>Haritaya Dön</span>
         </button>
-        <button id="btn-avatar-reward" style="display:flex;align-items:center;justify-content:center;gap:6px;padding:8px;color:var(--secondary);font-family:'Comfortaa',sans-serif;font-size:14px;font-weight:700;cursor:pointer;background:none;border:none">
+        <button id="btn-avatar-reward" onclick="setActiveTab('gelisim')" style="display:flex;align-items:center;justify-content:center;gap:6px;padding:8px;color:var(--secondary);font-family:'Comfortaa',sans-serif;font-size:14px;font-weight:700;cursor:pointer;background:none;border:none">
           <span class="material-symbols-outlined" style="font-size:20px">styler</span>
           Ödüllerini Avatarına Tak! 👒
         </button>
@@ -345,20 +301,20 @@
   <div id="screen-kitaplik" class="maarif-screen">
     <div class="screen-content">
       <div style="display:flex;align-items:center;justify-content:space-between">
-        <h2 class="text-headline-md font-comfortaa" style="color:var(--on-surface)">Kitaplığım 📚</h2>
-        <span class="section-label">MEB Onaylı</span>
+        <h2 class="text-headline-sm font-comfortaa" style="color:var(--on-surface);font-size:18px">Kitaplığım 📚</h2>
+        <span class="section-label" style="font-size:11px;padding:2px 8px">MEB Masalları</span>
       </div>
-      <div style="background:linear-gradient(135deg,var(--secondary-fixed),var(--tertiary-fixed));border-radius:var(--radius-lg);padding:20px;position:relative;overflow:hidden">
-        <div style="font-size:48px;margin-bottom:8px">📖</div>
-        <h3 class="text-headline-sm font-comfortaa" style="color:var(--on-surface)">Bugünün Masalı</h3>
-        <p class="text-body-sm" style="color:var(--on-surface-variant);margin-top:4px">Sesli okuma ve anlama soruları</p>
-        <button id="btn-featured-story" class="btn-primary" style="max-width:200px;margin-top:12px;font-size:14px;min-height:44px">
-          <span class="material-symbols-outlined icon-fill">headphones</span>
-          <span>Okumaya Başla</span>
+      <div style="background:linear-gradient(135deg,var(--secondary-fixed),var(--tertiary-fixed));border-radius:var(--radius-md);padding:14px 16px;position:relative;overflow:hidden">
+        <div style="font-size:32px;margin-bottom:4px">📖</div>
+        <h3 class="text-headline-sm font-comfortaa" style="color:var(--on-surface);font-size:16px">Bugünün Masalı: Tilki ile Bilge Leylek</h3>
+        <p class="text-body-sm" style="color:var(--on-surface-variant);margin-top:2px;font-size:12px">Sesli dinleme ve anlama sorularıyla okuma hızını artır.</p>
+        <button id="btn-featured-story" class="btn-primary" style="max-width:180px;margin-top:10px;font-size:13px;min-height:38px;padding:6px 14px">
+          <span class="material-symbols-outlined icon-fill" style="font-size:18px">headphones</span>
+          <span>Masalı Dinle</span>
         </button>
       </div>
-      <h3 class="text-label-lg font-comfortaa" style="color:var(--on-surface)">Tüm Kitaplar</h3>
-      <div id="story-list" style="display:flex;flex-direction:column;gap:12px"></div>
+      <h3 class="text-label-md font-comfortaa" style="color:var(--on-surface);margin-top:2px">Tüm Masallar & Hikayeler</h3>
+      <div id="story-list"></div>
     </div>
   </div>
 
@@ -366,7 +322,7 @@
   <div id="screen-gelisim" class="maarif-screen">
     <div class="screen-content">
       <div style="display:flex;align-items:center;justify-content:space-between">
-        <h2 class="text-headline-md font-comfortaa" style="color:var(--on-surface)">Gelişimim ⭐</h2>
+        <h2 class="text-headline-sm font-comfortaa" style="color:var(--on-surface);font-size:18px">Gelişimim ⭐</h2>
       </div>
       <div class="maarif-card">
         <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;text-align:center">
@@ -393,9 +349,9 @@
           <div id="stat-level-bar" class="progress-bar" style="width:20%"></div>
         </div>
       </div>
-      <h3 class="text-label-lg font-comfortaa" style="color:var(--on-surface)">Maskotunu Seç</h3>
+      <h3 class="text-label-md font-comfortaa" style="color:var(--on-surface)">Maskotunu Seç</h3>
       <div id="avatar-area" class="avatar-area"></div>
-      <h3 class="text-label-lg font-comfortaa" style="color:var(--on-surface)">Rozetlerim 🏅</h3>
+      <h3 class="text-label-md font-comfortaa" style="color:var(--on-surface)">Rozetlerim 🏅</h3>
       <div id="badge-grid" class="badge-grid"></div>
     </div>
   </div>
@@ -404,19 +360,19 @@
   <nav id="maarif-nav" class="hidden">
     <div class="nav-inner">
       <div class="nav-items">
-        <button class="nav-tab active" data-tab="macera" type="button">
+        <button class="nav-tab active" data-tab="macera" onclick="setActiveTab('macera')" type="button">
           <span class="material-symbols-outlined">explore</span>
           <span class="nav-label">Macera</span>
         </button>
-        <button class="nav-tab" data-tab="etkinlik" type="button">
+        <button class="nav-tab" data-tab="etkinlik" onclick="setActiveTab('etkinlik')" type="button">
           <span class="material-symbols-outlined">sports_esports</span>
           <span class="nav-label">Etkinlik</span>
         </button>
-        <button class="nav-tab" data-tab="kitaplik" type="button">
+        <button class="nav-tab" data-tab="kitaplik" onclick="setActiveTab('kitaplik')" type="button">
           <span class="material-symbols-outlined">auto_stories</span>
           <span class="nav-label">Kitaplık</span>
         </button>
-        <button class="nav-tab" data-tab="gelisim" type="button">
+        <button class="nav-tab" data-tab="gelisim" onclick="setActiveTab('gelisim')" type="button">
           <span class="material-symbols-outlined">military_tech</span>
           <span class="nav-label">Gelişim</span>
         </button>
@@ -426,7 +382,7 @@
 
 </div><!-- /app-wrapper -->
 
-<script src="js/curriculum-term1.js"></script>
-<script src="js/app.js"></script>
+<script src="js/curriculum-term1.js?v=72"></script>
+<script src="js/app.js?v=72"></script>
 </body>
 </html>

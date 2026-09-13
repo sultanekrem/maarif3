@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="100%" height="100%">
+  <!-- Girl Student Avatar with Pencils & Backpack -->
+  <defs>
+    <linearGradient id="hairGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#854D0E"/>
+      <stop offset="100%" stop-color="#451A03"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Backpack straps & bag -->
+  <rect x="35" y="85" width="90" height="75" rx="20" fill="#EF4444"/>
+  <rect x="42" y="95" width="76" height="55" rx="14" fill="#F87171"/>
+
+  <!-- Pencils in hand/backpack -->
+  <g transform="rotate(-25 40 70)">
+    <rect x="32" y="45" width="10" height="50" rx="2" fill="#FBBF24"/>
+    <polygon points="32,45 37,30 42,45" fill="#FDE68A"/>
+    <polygon points="35,36 37,30 39,36" fill="#1E1B4B"/>
+  </g>
+  <g transform="rotate(20 120 70)">
+    <rect x="115" y="45" width="10" height="50" rx="2" fill="#3B82F6"/>
+    <polygon points="115,45 120,30 125,45" fill="#BFDBFE"/>
+    <polygon points="118,36 120,30 122,36" fill="#1E1B4B"/>
+  </g>
+
+  <!-- Body / School Shirt -->
+  <path d="M48 115 Q80 100 112 115 L120 160 L40 160 Z" fill="#3B82F6"/>
+  <!-- Collar -->
+  <polygon points="80,122 66,112 80,108" fill="#FFFFFF"/>
+  <polygon points="80,122 94,112 80,108" fill="#FFFFFF"/>
+
+  <!-- Neck -->
+  <rect x="72" y="94" width="16" height="18" fill="#FBCFE8"/>
+
+  <!-- Pigtails -->
+  <ellipse cx="38" cy="72" rx="16" ry="24" fill="url(#hairGrad)"/>
+  <circle cx="44" cy="84" r="7" fill="#EC4899"/>
+  <ellipse cx="122" cy="72" rx="16" ry="24" fill="url(#hairGrad)"/>
+  <circle cx="116" cy="84" r="7" fill="#EC4899"/>
+
+  <!-- Head -->
+  <ellipse cx="80" cy="72" rx="34" ry="36" fill="#FDE047" opacity="0.15"/>
+  <ellipse cx="80" cy="72" rx="32" ry="34" fill="#FED7AA"/>
+
+  <!-- Hair Bangs -->
+  <path d="M48 62 Q80 34 112 62 Q96 48 80 50 Q64 48 48 62 Z" fill="url(#hairGrad)"/>
+
+  <!-- Eyes -->
+  <ellipse cx="68" cy="72" rx="4.5" ry="6" fill="#1E1B4B"/>
+  <circle cx="66.5" cy="70" r="2" fill="#FFFFFF"/>
+  <ellipse cx="92" cy="72" rx="4.5" ry="6" fill="#1E1B4B"/>
+  <circle cx="90.5" cy="70" r="2" fill="#FFFFFF"/>
+
+  <!-- Cheeks -->
+  <circle cx="60" cy="79" r="6" fill="#FDA4AF" opacity="0.6"/>
+  <circle cx="100" cy="79" r="6" fill="#FDA4AF" opacity="0.6"/>
+
+  <!-- Smile -->
+  <path d="M72 82 Q80 90 88 82" fill="none" stroke="#9A3412" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

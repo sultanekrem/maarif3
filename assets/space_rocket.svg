@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 220" width="100%" height="100%">
+  <!-- Space Rocket with Flames & Glow -->
+  <defs>
+    <linearGradient id="rocketBody" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E2E8F0"/>
+      <stop offset="40%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#CBD5E1"/>
+    </linearGradient>
+    <linearGradient id="flameGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FEF08A"/>
+      <stop offset="40%" stop-color="#F97316"/>
+      <stop offset="100%" stop-color="#EF4444" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Big Flame Exhaust -->
+  <ellipse cx="80" cy="180" rx="20" ry="38" fill="url(#flameGrad)"/>
+  <ellipse cx="80" cy="172" rx="10" ry="22" fill="#FEF08A"/>
+
+  <!-- Left Fin -->
+  <path d="M50 115 L25 155 L52 145 Z" fill="#EF4444"/>
+  <!-- Right Fin -->
+  <path d="M110 115 L135 155 L108 145 Z" fill="#EF4444"/>
+
+  <!-- Main Fuselage -->
+  <path d="M80 15 Q115 65 112 145 L48 145 Q45 65 80 15 Z" fill="url(#rocketBody)"/>
+
+  <!-- Nose Cone -->
+  <path d="M80 15 Q100 50 106 65 L54 65 Q60 50 80 15 Z" fill="#EF4444"/>
+
+  <!-- Porthole Window -->
+  <circle cx="80" cy="90" r="18" fill="#38BDF8" stroke="#0284C7" stroke-width="4"/>
+  <circle cx="80" cy="90" r="14" fill="#7DD3FC"/>
+  <!-- Highlight -->
+  <path d="M72 82 A11 11 0 0 1 88 82" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Star Decal -->
+  <polygon points="80,120 83,127 90,127 85,131 87,138 80,134 73,138 75,131 70,127 77,127" fill="#FBBF24"/>
+</svg>

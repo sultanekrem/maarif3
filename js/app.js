@@ -1139,16 +1139,14 @@
       state.currentScreen = screenId;
     }
 
-    // Mobil Alt Navigasyon Barı Görünürlüğü & Aktif Sekme Kontrolü
+    // Mobil Alt Navigasyon Barı Kontrolü
     const bottomNav = document.getElementById('bottom-nav-bar');
     if (bottomNav) {
-      // Tam ekran odaklı ekranlarda alt barı gizle
-      const hideNavScreens = ['screen-welcome', 'screen-quiz', 'screen-exam', 'screen-reading'];
-      if (hideNavScreens.includes(screenId)) {
+      const fullScreenModes = ['screen-welcome', 'screen-quiz', 'screen-reading', 'screen-victory', 'screen-exam'];
+      if (fullScreenModes.includes(screenId)) {
         bottomNav.style.display = 'none';
       } else {
         bottomNav.style.display = 'flex';
-        // Aktif sekme vurgulama
         bottomNav.querySelectorAll('.nav-tab-item').forEach(tab => {
           const targetScreen = tab.getAttribute('data-target');
           if (targetScreen === screenId) {
@@ -1245,47 +1243,20 @@
     container.innerHTML = '';
     const subjects = window.CURRICULUM_TERM1;
 
-    // Sabit ders sırası: UX/UI Design Kit 2x3 Izgara Sırası
-    // 1. Satır: Türkçe (#FF6B68), Matematik (#5AA8FF)
-    // 2. Satır: Hayat Bilgisi (#4CAF50), Fen Bilgisi (#8064FF)
-    // 3. Satır: İngilizce (#FF8347), Müzik (#20B8B0)
+    // 2x3 Izgara Sırası: Türkçe, Matematik, Hayat Bilgisi, Fen Bilgisi, İngilizce, Müzik
     const SUBJECT_ORDER = ['turkce', 'matematik', 'hayatbilgisi', 'fenbilimleri', 'ingilizce', 'muzik'];
-    const orderedKeys = [
-      ...SUBJECT_ORDER.filter(k => subjects[k]),
-      ...Object.keys(subjects).filter(k => k !== 'general_exam' && !SUBJECT_ORDER.includes(k))
-    ];
 
-    orderedKeys.forEach(key => {
-      if (key === 'general_exam') return;
+    SUBJECT_ORDER.forEach(key => {
       const subj = subjects[key];
-
-      let totalTopics = 0;
-      let completedTopics = 0;
-      if (subj.themes) {
-        subj.themes.forEach(th => {
-          if (th.topics) {
-            th.topics.forEach(tp => {
-              totalTopics++;
-              if (state.progress.completedTopics[tp.id]) {
-                completedTopics++;
-              }
-            });
-          }
-        });
-      }
+      if (!subj) return;
 
       const card = document.createElement('div');
-      card.className = `subject-card-v2 card-${key}`;
+      card.className = `subject-grid-card card-${key}`;
       card.setAttribute('data-subject', key);
 
       card.innerHTML = `
-        <div class="card-v2-icon-box">
-          ${subj.icon}
-        </div>
-        <div class="card-v2-info">
-          <div class="card-v2-title">${subj.title}</div>
-          <div class="card-v2-meta">${completedTopics}/${totalTopics} Konu</div>
-        </div>
+        <div class="subj-card-icon-wrap">${subj.icon}</div>
+        <div class="subj-card-title">${subj.title}</div>
       `;
 
       card.addEventListener('click', () => {
@@ -1295,55 +1266,71 @@
       container.appendChild(card);
     });
 
-    updateClassroomSummary();
+    updateHeaderStats();
   }
 
-  // 4. Ünite ve Konu Gezgini (Subject Explorer - UX/UI Kit Ekran 3)
+  // 3. EKRAN 3: DERS ANA SAYFASI
   function openSubjectExplorer(subjectKey) {
     state.currentSubjectKey = subjectKey;
     state.currentThemeIndex = 0;
     const subj = window.CURRICULUM_TERM1[subjectKey];
     if (!subj) return;
 
-    const iconEl = document.getElementById('current-subject-icon');
-    if (iconEl) iconEl.textContent = subj.icon;
     const titleEl = document.getElementById('current-subject-title');
     if (titleEl) titleEl.textContent = subj.title;
+
     const subEl = document.getElementById('current-subject-subtitle');
-    if (subEl) subEl.textContent = subj.subtitle;
+    if (subEl) subEl.textContent = subj.subtitle || 'Düşün, hesapla, çöz!';
 
     const starsEl = document.getElementById('subject-stars-count');
-    if (starsEl) starsEl.textContent = state.progress.stars || 0;
+    if (starsEl) starsEl.textContent = state.progress.stars || 120;
 
-    const avatarEl = document.getElementById('subject-astronaut-avatar');
-    if (avatarEl && state.studentProfile && state.studentProfile.avatar) {
-      avatarEl.textContent = state.studentProfile.avatar;
+    // Header rengi ders rengine göre ayarlansın
+    const headerEl = document.getElementById('topics-curved-header');
+    if (headerEl && subj.accent) {
+      headerEl.style.background = `linear-gradient(135deg, ${subj.accent} 0%, #1D4ED8 100%)`;
     }
 
-    // DERSİN BÜYÜK FİNAL SINAVI BANNER'I
-    const finalExamBanner = document.getElementById('subject-final-exam-banner');
-    if (finalExamBanner) {
-      if (subj.final_exam) {
-        finalExamBanner.style.display = 'flex';
-        const fTitle = document.getElementById('final-exam-title');
-        if (fTitle) fTitle.textContent = subj.final_exam.title;
-        const fSub = document.getElementById('final-exam-sub');
-        if (fSub) fSub.textContent = `${subj.final_exam.book_ref} • Tüm üniteleri kapsayan dönem finali!`;
-        
-        const btnFinal = document.getElementById('btn-start-subject-final-exam');
-        if (btnFinal) {
-          btnFinal.onclick = () => {
-            startThemeExam(subj.final_exam);
-          };
-        }
-      } else {
-        finalExamBanner.style.display = 'none';
-      }
-    }
-
-    renderThemeTabs();
-    renderTopicsList();
+    renderUnitsList(subj);
     showScreen('screen-topics');
+  }
+
+  function renderUnitsList(subj) {
+    const container = document.getElementById('units-list-container');
+    if (!container || !subj.themes) return;
+
+    container.innerHTML = '';
+    const iconColors = ['icon-blue', 'icon-green', 'icon-blue', 'icon-pink', 'icon-orange'];
+    const sampleIcons = ['🔢', '📐', '🧩', '✖️', '🧠'];
+
+    subj.themes.forEach((theme, idx) => {
+      const card = document.createElement('div');
+      card.className = 'unit-item-card';
+      const colorClass = iconColors[idx % iconColors.length];
+      const iconEmoji = sampleIcons[idx % sampleIcons.length];
+      const topicCount = theme.topics ? theme.topics.length : 3;
+
+      card.innerHTML = `
+        <div class="unit-card-left">
+          <div class="unit-icon-box ${colorClass}">${iconEmoji}</div>
+          <div class="unit-text-info">
+            <h4>${theme.title}</h4>
+            <p>${topicCount} konu • ${topicCount * 2} etkinlik</p>
+          </div>
+        </div>
+        <div class="unit-chevron">›</div>
+      `;
+
+      card.addEventListener('click', () => {
+        state.currentThemeIndex = idx;
+        const firstTopic = (theme.topics && theme.topics.length > 0) ? theme.topics[0] : null;
+        if (firstTopic) {
+          openReadingScreen(firstTopic);
+        }
+      });
+
+      container.appendChild(card);
+    });
   }
 
   function renderThemeTabs() {
@@ -1924,18 +1911,28 @@
     const optionsContainer = document.getElementById('quiz-options-container');
     optionsContainer.innerHTML = '';
 
-    const letters = ['A', 'B', 'C', 'D'];
+    // Seviye & Yıldız Puanı
+    const levelLabel = document.getElementById('quiz-level-label');
+    if (levelLabel && state.currentTopic) {
+      levelLabel.textContent = `${state.currentTopic.title} • Seviye 1`;
+    }
+
+    const starCount = document.getElementById('quiz-star-count');
+    if (starCount) starCount.textContent = state.progress.stars || 120;
+
+    const progressFill = document.getElementById('quiz-progress-fill');
+    if (progressFill && state.currentTopic && state.currentTopic.tasks) {
+      const pct = Math.round(((state.currentQuizQIndex + 1) / state.currentTopic.tasks.length) * 100);
+      progressFill.style.width = `${pct}%`;
+    }
 
     task.options.forEach((optText, optIdx) => {
       const btn = document.createElement('button');
-      btn.className = `option-btn letter-btn-${letters[optIdx].toLowerCase()}`;
-      btn.innerHTML = `
-        <span class="option-letter">${letters[optIdx]}</span>
-        <span class="option-text">${optText}</span>
-      `;
+      btn.className = 'cosmic-option-btn';
+      btn.textContent = optText;
 
       btn.addEventListener('click', () => {
-        handleTaskAnswer(optIdx, btn, task);
+        handleCosmicAnswer(optIdx, btn, task);
       });
 
       optionsContainer.appendChild(btn);
@@ -1943,6 +1940,40 @@
   }
 
   // ÇOK BELİRGİN & CANLI DOĞRU/YANLIŞ GERİBİLDİRİMİ
+    // 5. EKRAN 5: KOZMİK OYUN / SORU CEVAP DENETLEYİCİ
+  function handleCosmicAnswer(selectedIdx, btnElement, task) {
+    const allBtns = document.querySelectorAll('.cosmic-option-btn');
+    allBtns.forEach(b => b.disabled = true);
+
+    const isCorrect = (selectedIdx === task.ans);
+
+    if (isCorrect) {
+      btnElement.classList.add('correct');
+      playAudioChime('correct');
+      triggerHaptic('success');
+      state.quizCorrectCount++;
+      state.quizScore += 20;
+
+      setTimeout(() => {
+        state.currentQuizQIndex++;
+        if (state.currentQuizQIndex < state.currentTopic.tasks.length) {
+          renderTaskQuestion();
+        } else {
+          finishTopicQuiz(state.currentTopic);
+        }
+      }, 650);
+    } else {
+      btnElement.classList.add('wrong');
+      playAudioChime('wrong');
+      triggerHaptic('warning');
+
+      setTimeout(() => {
+        btnElement.classList.remove('wrong');
+        allBtns.forEach(b => b.disabled = false);
+      }, 600);
+    }
+  }
+
   function handleTaskAnswer(selectedIdx, btnElement, task) {
     SpeechService.stop();
     const allBtns = document.querySelectorAll('#quiz-options-container .option-btn');
@@ -2064,14 +2095,14 @@
     document.getElementById('result-earned-stars').textContent = `+${earnedStars}`;
 
     playAudioChime('fanfare');
-    // UX/UI Design Kit - Ekran 6: Kutlama / Tebrik Ekranı (Victory Screen)
     const victorySub = document.getElementById('victory-subheading');
-    if (victorySub) victorySub.textContent = `"${topic.title}" konusunu başarıyla tamamladın!`;
+    if (victorySub) victorySub.textContent = `"${topic.title}" görevini tamamladın!`;
     const victoryXp = document.getElementById('victory-xp-text');
-    if (victoryXp) victoryXp.textContent = `+${state.quizScore + bonusScore} XP`;
+    if (victoryXp) victoryXp.textContent = `+20 XP`;
     const victoryStars = document.getElementById('victory-stars-text');
-    if (victoryStars) victoryStars.textContent = `+${earnedStars} Yıldız`;
+    if (victoryStars) victoryStars.textContent = `+1 Yıldız`;
 
+    playAudioChime('fanfare');
     showScreen('screen-victory');
   }
 
@@ -2669,18 +2700,16 @@
 
   // 8. Genel Olay Dinleyicileri
   function initEventListeners() {
-    // === UX/UI DESIGN KIT YENİ ETKİNLİK DİNLEYİCİLERİ ===
-    // 1. Ekran 1: Karşılama Ekranı Butonları
+    // === 6 EKRAN FIGMA KIT DİNLENİCİLERİ ===
+    // Ekran 1
     const btnWelcomeStart = document.getElementById('btn-welcome-start');
     if (btnWelcomeStart) {
       btnWelcomeStart.addEventListener('click', () => {
-        requestAppFullscreen();
         playAudioChime('correct');
         renderSubjectCards();
         showScreen('screen-menu');
       });
     }
-
     const btnWelcomeParent = document.getElementById('btn-welcome-parent');
     if (btnWelcomeParent) {
       btnWelcomeParent.addEventListener('click', () => {
@@ -2688,28 +2717,32 @@
       });
     }
 
-    // 2. Ekran 2: Bugünkü Görev Kartı
+    // Ekran 2: Bugünkü Görev
     const btnDailyQuest = document.getElementById('btn-daily-quest');
     const dailyQuestCard = document.getElementById('daily-quest-card');
-    const onDailyQuestClick = () => {
+    const onDailyQuest = () => {
       openSubjectExplorer('matematik');
     };
-    if (btnDailyQuest) btnDailyQuest.addEventListener('click', onDailyQuestClick);
-    if (dailyQuestCard) {
-      dailyQuestCard.addEventListener('click', (e) => {
-        if (e.target !== btnDailyQuest) onDailyQuestClick();
-      });
-    }
+    if (btnDailyQuest) btnDailyQuest.addEventListener('click', (e) => { e.stopPropagation(); onDailyQuest(); });
+    if (dailyQuestCard) dailyQuestCard.addEventListener('click', onDailyQuest);
 
-    // Profil Kartına Tıklama (Ana Menü Üstü)
-    const headerProfileCard = document.getElementById('header-profile-card');
-    if (headerProfileCard) {
-      headerProfileCard.addEventListener('click', () => {
+    const headerProfile = document.getElementById('header-profile-card');
+    if (headerProfile) {
+      headerProfile.addEventListener('click', () => {
         openStudentRegisterModal(false);
       });
     }
 
-    // 3. Ekran 3: Segmentli Sekmeler [Konular] [Oyunlar] [Başarılar]
+    // Ekran 3: Ders Ana Sayfası Geri Butonu
+    const btnBackSubj = document.getElementById('btn-back-to-subjects');
+    if (btnBackSubj) {
+      btnBackSubj.addEventListener('click', () => {
+        renderSubjectCards();
+        showScreen('screen-menu');
+      });
+    }
+
+    // Segment sekmeleri
     const segKonular = document.getElementById('seg-btn-konular');
     const segOyunlar = document.getElementById('seg-btn-oyunlar');
     const segBasarilar = document.getElementById('seg-btn-basarilar');
@@ -2733,43 +2766,46 @@
       });
     }
 
-    // 4. Ekran 3c: Oyunlar Ekranı
-    const btnBackGames = document.getElementById('btn-back-from-games');
-    if (btnBackGames) {
-      btnBackGames.addEventListener('click', () => {
-        renderSubjectCards();
-        showScreen('screen-menu');
-      });
-    }
-
-    document.querySelectorAll('.btn-play-game').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const gameTarget = btn.getAttribute('data-game-target');
-        if (gameTarget && window.CURRICULUM_TERM1 && window.CURRICULUM_TERM1[gameTarget]) {
-          openSubjectExplorer(gameTarget);
+    // Ekran 4: Okuma -> Soruya Geçiş
+    const btnReadingQuiz = document.getElementById('btn-reading-to-quiz');
+    if (btnReadingQuiz) {
+      btnReadingQuiz.addEventListener('click', () => {
+        if (state.currentTopic) {
+          startTopicQuiz(state.currentTopic);
         }
       });
-    });
-
-    // 5. Ekran 6: Tebrik / Zafer Ekranı Butonları
-    const btnVictoryContinue = document.getElementById('btn-victory-continue');
-    if (btnVictoryContinue) {
-      btnVictoryContinue.addEventListener('click', () => {
-        renderThemeTabs();
-        renderTopicsList();
+    }
+    const btnBackReading = document.getElementById('btn-back-from-reading');
+    if (btnBackReading) {
+      btnBackReading.addEventListener('click', () => {
         showScreen('screen-topics');
       });
     }
 
-    const btnVictoryHome = document.getElementById('btn-victory-home');
-    if (btnVictoryHome) {
-      btnVictoryHome.addEventListener('click', () => {
+    // Ekran 5: Quiz Pause/Back
+    const btnQuizPause = document.getElementById('btn-quiz-pause');
+    if (btnQuizPause) {
+      btnQuizPause.addEventListener('click', () => {
+        showScreen('screen-topics');
+      });
+    }
+
+    // Ekran 6: Zafer Butonları
+    const btnVicCont = document.getElementById('btn-victory-continue');
+    if (btnVicCont) {
+      btnVicCont.addEventListener('click', () => {
+        showScreen('screen-topics');
+      });
+    }
+    const btnVicHome = document.getElementById('btn-victory-home');
+    if (btnVicHome) {
+      btnVicHome.addEventListener('click', () => {
         renderSubjectCards();
         showScreen('screen-menu');
       });
     }
 
-    // 6. Mobil Alt Navigasyon Barı (5 Sekme)
+    // Mobil Alt Bar (5 Sekme)
     document.querySelectorAll('#bottom-nav-bar .nav-tab-item').forEach(tab => {
       tab.addEventListener('click', () => {
         const target = tab.getAttribute('data-target');
@@ -2777,8 +2813,7 @@
           renderSubjectCards();
           showScreen('screen-menu');
         } else if (target === 'screen-topics') {
-          const subjKey = state.currentSubjectKey || 'matematik';
-          openSubjectExplorer(subjKey);
+          openSubjectExplorer(state.currentSubjectKey || 'matematik');
         } else if (target === 'screen-games') {
           showScreen('screen-games');
         } else if (target === 'screen-badges') {
@@ -2789,6 +2824,22 @@
         }
       });
     });
+
+    // Destekleyici butonlar
+    const btnBackFromGames = document.getElementById('btn-back-from-games');
+    if (btnBackFromGames) {
+      btnBackFromGames.addEventListener('click', () => {
+        renderSubjectCards();
+        showScreen('screen-menu');
+      });
+    }
+    const btnCloseBadges = document.getElementById('btn-close-badges');
+    if (btnCloseBadges) {
+      btnCloseBadges.addEventListener('click', () => {
+        renderSubjectCards();
+        showScreen('screen-menu');
+      });
+    }
 
     initStudentProfileModal();
     initReadingScreenEvents();
@@ -2930,22 +2981,6 @@
     const btnCloseKumbaraBottom = document.getElementById('btn-close-kumbara-bottom');
     if (btnCloseKumbaraBottom) {
       btnCloseKumbaraBottom.addEventListener('click', closeKumbaraArena);
-    }
-
-    // Başarılar ekranı
-    const btnBadges = document.getElementById('btn-badges-nav');
-    if (btnBadges) {
-      btnBadges.addEventListener('click', () => {
-        renderBadges();
-        showScreen('screen-badges');
-      });
-    }
-
-    const btnCloseBadges = document.getElementById('btn-close-badges');
-    if (btnCloseBadges) {
-      btnCloseBadges.addEventListener('click', () => {
-        showScreen('screen-menu');
-      });
     }
   }
 

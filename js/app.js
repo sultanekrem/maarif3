@@ -10,7 +10,6 @@
     progress: { completedTopics: [], completedUnits: {} },
     quiz: { subject: null, topicId: null, topicTitle: '', questions: [], currentIdx: 0, score: 0 },
     currentTab: 'macera',
-    firstLaunch: false,
     focusSubject: 'matematik',
     focusTopicId: null
   };
@@ -33,7 +32,6 @@
     try {
       localStorage.setItem('maarif3_profile', JSON.stringify(state.profile));
       localStorage.setItem('maarif3_progress', JSON.stringify(state.progress));
-      localStorage.setItem('maarif3_launched', '1');
     } catch(e) {}
   }
 
@@ -41,10 +39,8 @@
     try {
       const p = localStorage.getItem('maarif3_profile');
       const r = localStorage.getItem('maarif3_progress');
-      const l = localStorage.getItem('maarif3_launched');
       if (p) Object.assign(state.profile, JSON.parse(p));
       if (r) Object.assign(state.progress, JSON.parse(r));
-      if (l) state.firstLaunch = false;
     } catch(e) {}
   }
 
@@ -88,8 +84,11 @@
     if (el) el.textContent = subtitles[tab] || '3. Sınıf';
 
     showScreen('screen-' + tab);
-    const renders = { macera: renderMacera, etkinlik: renderEtkinlik, kitaplik: renderKitaplik, gelisim: renderGelisim };
-    if (renders[tab]) renders[tab]();
+
+    if (tab === 'macera') renderMacera();
+    else if (tab === 'etkinlik') renderEtkinlik();
+    else if (tab === 'kitaplik') renderKitaplik();
+    else if (tab === 'gelisim') renderGelisim();
   }
 
   /* ─── HEADER ─────────────────────────────────────────────── */
@@ -162,24 +161,6 @@
       return matTopics[0];
     }
     return null;
-  }
-
-  /* ─── SPLASH & WELCOME ───────────────────────────────────── */
-  function initSplash() {
-    showScreen('screen-splash');
-    setTimeout(() => {
-      if (state.firstLaunch) {
-        showScreen('screen-welcome');
-      } else {
-        goToMain();
-      }
-    }, 1800);
-  }
-
-  function goToMain() {
-    state.firstLaunch = false;
-    saveState();
-    setActiveTab('macera');
   }
 
   /* ─── MACERA SCREEN ──────────────────────────────────────── */
@@ -557,10 +538,10 @@
     list.innerHTML = '';
 
     const stories = [
-      { emoji: '🦊', title: 'Tilki ve Karga', desc: 'Okuma ve anlama masalı', subject: 'turkce' },
-      { emoji: '🌱', title: 'Tohumun Yolculuğu', desc: 'Fen Bilimleri masalı', subject: 'fen' },
-      { emoji: '🔢', title: 'Sayılar Ülkesi', desc: 'Matematik hikayesi', subject: 'matematik' },
-      { emoji: '🌍', title: 'Bizim Mahallemiz', desc: 'Hayat Bilgisi hikayesi', subject: 'hayat' }
+      { emoji: '🦊', title: 'Tilki ile Bilge Leylek', desc: 'Türkçe • Anlama Masalı', subject: 'turkce', time: '4 dk' },
+      { emoji: '🌱', title: 'Küçük Tohumun Yolculuğu', desc: 'Fen Bilimleri • Canlılar Dünyası', subject: 'fen', time: '5 dk' },
+      { emoji: '🔢', title: 'Sayılar Diyarı ve Gizemli Sıfır', desc: 'Matematik • Sayı Macerası', subject: 'matematik', time: '6 dk' },
+      { emoji: '🌍', title: 'Bizim Güzel Mahallemiz', desc: 'Hayat Bilgisi • Birlikte Yaşamak', subject: 'hayat', time: '4 dk' }
     ];
 
     stories.forEach(s => {
@@ -572,13 +553,19 @@
           <span>${s.emoji}</span>
         </div>
         <div style="flex:1; min-width:0;">
-          <h4 class="story-title-compact">${s.title}</h4>
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <h4 class="story-title-compact">${s.title}</h4>
+            <span style="font-size:10px; color:${cfg.accent}; font-weight:700;">${s.time}</span>
+          </div>
           <p class="story-desc-compact">${s.desc}</p>
         </div>
         <button class="btn-listen-icon" title="Dinle">
-          <span class="material-symbols-outlined icon-fill" style="font-size:18px;">headphones</span>
+          <span class="material-symbols-outlined icon-fill" style="font-size:18px; color:${cfg.accent};">play_arrow</span>
         </button>`;
-      card.addEventListener('click', () => alert(s.title + ' yakında seslendirilecek!'));
+      
+      card.addEventListener('click', () => {
+        alert('"' + s.title + '" masalı başlatılıyor! Hazır ol! 🎧');
+      });
       list.appendChild(card);
     });
   }
@@ -606,7 +593,7 @@
       avatars.forEach(av => {
         const opt = document.createElement('div');
         opt.className = 'avatar-chip' + (state.profile.avatar === av ? ' selected' : '');
-        opt.innerHTML = `<span style="font-size:24px;">${av}</span>`;
+        opt.innerHTML = `<span style="font-size:22px;">${av}</span>`;
         opt.onclick = () => {
           state.profile.avatar = av;
           saveState();
@@ -621,19 +608,22 @@
     if (badgeGrid) {
       badgeGrid.innerHTML = '';
       const badges = [
-        { emoji: '🌟', name: 'İlk Adım',    earned: state.progress.completedTopics.length >= 1 },
-        { emoji: '🔥', name: 'Seri Ustası', earned: state.profile.streak >= 3 },
-        { emoji: '🏆', name: 'Şampiyon',    earned: state.profile.stars >= 60 },
-        { emoji: '🧠', name: 'Bilge Kaşif', earned: state.profile.level >= 2 },
-        { emoji: '🎯', name: 'Keskin Niş',  earned: state.progress.completedTopics.length >= 3 },
-        { emoji: '📚', name: 'Kitap Kurdu', earned: false }
+        { emoji: '🌟', name: 'İlk Adım',    desc: 'İlk konuyu bitir', earned: state.progress.completedTopics.length >= 1 },
+        { emoji: '🔥', name: 'Seri Ustası', desc: '3 gün seri yap', earned: state.profile.streak >= 3 },
+        { emoji: '🏆', name: 'Şampiyon',    desc: '60 Yıldız topla', earned: state.profile.stars >= 60 },
+        { emoji: '🧠', name: 'Bilge Kaşif', desc: 'Seviye 2 ol', earned: state.profile.level >= 2 },
+        { emoji: '🎯', name: 'Keskin Niş',  desc: '3 görev tamamla', earned: state.progress.completedTopics.length >= 3 },
+        { emoji: '📚', name: 'Kitap Kurdu', desc: 'Masalları dinle', earned: false }
       ];
       badges.forEach(b => {
         const item = document.createElement('div');
         item.className = 'badge-chip' + (b.earned ? '' : ' locked');
         item.innerHTML = `
           <div class="badge-chip-icon">${b.emoji}</div>
-          <span class="badge-chip-name">${b.name}</span>`;
+          <span class="badge-chip-name">${b.name}</span>
+          <span style="font-size:9px; color:${b.earned ? 'var(--tertiary)' : 'var(--outline)'}; font-weight:700;">
+            ${b.earned ? 'Kazanıldı ✓' : b.desc}
+          </span>`;
         badgeGrid.appendChild(item);
       });
     }
@@ -641,76 +631,68 @@
 
   /* ─── EVENT LISTENERS ───────────────────────────────────────── */
   function initEvents() {
-    const startBtn = document.getElementById('btn-start-adventure');
-    const skipBtn  = document.getElementById('btn-skip-welcome');
-    if (startBtn) startBtn.addEventListener('click', goToMain);
-    if (skipBtn)  skipBtn.addEventListener('click',  goToMain);
-
-    const guideToggle = document.getElementById('btn-toggle-guide');
-    if (guideToggle) {
-      guideToggle.addEventListener('click', () => {
-        const steps  = document.getElementById('guide-steps');
-        const icon   = document.getElementById('guide-toggle-icon');
-        if (!steps) return;
-        const isHidden = steps.style.display === 'none';
-        steps.style.display = isHidden ? 'block' : 'none';
-        if (icon) icon.textContent = isHidden ? 'expand_less' : 'expand_more';
-      });
-    }
-
+    // Single clean event attachment for bottom nav
     document.querySelectorAll('.nav-tab').forEach(tab => {
-      tab.addEventListener('click', (e) => {
+      tab.onclick = function(e) {
         e.preventDefault();
-        const tabKey = tab.dataset.tab;
-        if (tabKey) setActiveTab(tabKey);
-      });
+        e.stopPropagation();
+        const tabKey = this.dataset.tab;
+        if (tabKey) {
+          setActiveTab(tabKey);
+        }
+      };
     });
 
     const qpm = document.getElementById('qp-matematik');
     const qpt = document.getElementById('qp-turkce');
-    if (qpm) qpm.addEventListener('click', () => {
+    if (qpm) qpm.onclick = () => {
       const topic = getFirstActiveTopic('matematik');
       if (topic) startQuiz('matematik', topic.id);
-    });
-    if (qpt) qpt.addEventListener('click', () => {
+    };
+    if (qpt) qpt.onclick = () => {
       const topic = getFirstActiveTopic('turkce');
       if (topic) startQuiz('turkce', topic.id);
-    });
+    };
 
     const quitBtn = document.getElementById('btn-quit-quiz');
-    if (quitBtn) quitBtn.addEventListener('click', () => {
+    if (quitBtn) quitBtn.onclick = () => {
       setActiveTab('macera');
-    });
+    };
 
     const nextBtn = document.getElementById('btn-quiz-next');
-    if (nextBtn) nextBtn.addEventListener('click', () => {
+    if (nextBtn) nextBtn.onclick = () => {
       state.quiz.currentIdx++;
       if (state.quiz.currentIdx >= state.quiz.questions.length) {
         finishQuiz();
       } else {
         renderQuestion();
       }
-    });
+    };
 
     const nextMission = document.getElementById('btn-next-mission');
     const backToMap   = document.getElementById('btn-back-to-map');
     const avatarRew   = document.getElementById('btn-avatar-reward');
-    if (nextMission) nextMission.addEventListener('click', () => setActiveTab('etkinlik'));
-    if (backToMap) backToMap.addEventListener('click', () => setActiveTab('macera'));
-    if (avatarRew) avatarRew.addEventListener('click', () => setActiveTab('gelisim'));
+    if (nextMission) nextMission.onclick = () => setActiveTab('etkinlik');
+    if (backToMap) backToMap.onclick = () => setActiveTab('macera');
+    if (avatarRew) avatarRew.onclick = () => setActiveTab('gelisim');
 
     const hAvatar = document.getElementById('header-avatar');
-    if (hAvatar) hAvatar.addEventListener('click', () => setActiveTab('gelisim'));
+    if (hAvatar) hAvatar.onclick = () => setActiveTab('gelisim');
 
     const fsBtn = document.getElementById('btn-featured-story');
-    if (fsBtn) fsBtn.addEventListener('click', () => alert('Sesli hikaye yakında!'));
+    if (fsBtn) fsBtn.onclick = () => alert('Günün sesli masalı başlıyor! 🎧');
   }
 
-  /* ─── INITIALIZATION ────────────────────────────────────────── */
+  /* ─── INITIALIZATION (Direct to Macera after 1.5s single splash) ─── */
   document.addEventListener('DOMContentLoaded', () => {
     loadState();
     initEvents();
-    initSplash();
+
+    // Show single splash screen for 1.4s then go directly to main dashboard
+    showScreen('screen-splash');
+    setTimeout(() => {
+      setActiveTab('macera');
+    }, 1400);
   });
 
 })();

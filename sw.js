@@ -1,4 +1,4 @@
-const CACHE_NAME = 'maarif3-v68';
+const CACHE_NAME = 'maarif3-v69';
 const CACHE_FILES = [
   './',
   './index.html',

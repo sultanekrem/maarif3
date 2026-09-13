@@ -1,10 +1,8 @@
-const CACHE_NAME = 'maarif3-v65';
+const CACHE_NAME = 'maarif3-v66';
 const CACHE_FILES = [
   './',
   './index.html',
-  './css/style.css',
-  './css/maarif-kit.css',
-  './css/stitch-kit.css',
+  './css/design.css',
   './js/curriculum-term1.js',
   './data/curriculum-term1.json',
   './js/engine/utils.js',

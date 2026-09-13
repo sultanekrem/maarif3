@@ -1,5 +1,5 @@
-﻿const state = {
-  profile: { name: 'Kahraman', avatar: 'ğŸ¦Š', stars: 0, streak: 0, level: 1, xp: 0 },
+const state = {
+  profile: { name: 'Kahraman', avatar: '🦊', stars: 0, streak: 0, level: 1, xp: 0 },
   progress: { completedTopics: [], completedUnits: {} },
   quiz: { subject: null, topicId: null, questions: [], currentIdx: 0, score: 0, correctStreak: 0 },
   currentTab: 'macera',
@@ -7,12 +7,12 @@
 };
 
 const SUBJECTS = {
-  matematik:    { title: '1. Matematik',    icon: 'calculate',    color: 'var(--primary-container)',   shadow: '#b37d00', iconBg: 'rgba(255,179,0,0.15)',  textColor: 'var(--primary)',    emoji: 'ğŸ”¢' },
-  fen:          { title: '2. Fen Bilimleri',icon: 'science',      color: 'var(--tertiary-fixed)',      shadow: '#2dbb7d', iconBg: 'rgba(72,217,158,0.15)', textColor: 'var(--tertiary)',   emoji: 'ğŸ”¬' },
-  turkce:       { title: '3. TÃ¼rkÃ§e',       icon: 'menu_book',    color: 'var(--secondary-fixed)',     shadow: '#7dd3fc', iconBg: 'rgba(0,115,223,0.12)', textColor: 'var(--secondary)', emoji: 'ğŸ“–' },
-  hayat:        { title: '4. Hayat Bilgisi',icon: 'emoji_people', color: 'var(--primary-fixed)',       shadow: '#ffba38', iconBg: 'rgba(255,222,172,0.3)', textColor: 'var(--primary)',    emoji: 'ğŸŒ' },
-  ingilizce:    { title: '5. Ä°ngilizce',    icon: 'translate',    color: '#ede9fe',                    shadow: '#9333ea', iconBg: 'rgba(155,81,224,0.12)', textColor: '#7c3aed',          emoji: 'ğŸŒ' },
-  muzik:        { title: '6. MÃ¼zik',        icon: 'music_note',   color: '#fce7f3',                    shadow: '#db2777', iconBg: 'rgba(219,39,119,0.1)', textColor: '#db2777',          emoji: 'ğŸµ' }
+  matematik:    { title: '1. Matematik',    icon: 'calculate',    color: 'var(--primary-container)',   shadow: '#b37d00', iconBg: 'rgba(255,179,0,0.15)',  textColor: 'var(--primary)',    emoji: '🔢' },
+  fen:          { title: '2. Fen Bilimleri',icon: 'science',      color: 'var(--tertiary-fixed)',      shadow: '#2dbb7d', iconBg: 'rgba(72,217,158,0.15)', textColor: 'var(--tertiary)',   emoji: '🔬' },
+  turkce:       { title: '3. Türkçe',       icon: 'menu_book',    color: 'var(--secondary-fixed)',     shadow: '#7dd3fc', iconBg: 'rgba(0,115,223,0.12)', textColor: 'var(--secondary)', emoji: '📖' },
+  hayat:        { title: '4. Hayat Bilgisi',icon: 'emoji_people', color: 'var(--primary-fixed)',       shadow: '#ffba38', iconBg: 'rgba(255,222,172,0.3)', textColor: 'var(--primary)',    emoji: '🌍' },
+  ingilizce:    { title: '5. İngilizce',    icon: 'translate',    color: '#ede9fe',                    shadow: '#9333ea', iconBg: 'rgba(155,81,224,0.12)', textColor: '#7c3aed',          emoji: '🌐' },
+  muzik:        { title: '6. Müzik',        icon: 'music_note',   color: '#fce7f3',                    shadow: '#db2777', iconBg: 'rgba(219,39,119,0.1)', textColor: '#db2777',          emoji: '🎵' }
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -38,11 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   document.getElementById('btn-quit-quiz')?.addEventListener('click', () => {
-    if(confirm('Ã‡Ä±kmak istediÄŸine emin misin?')) goToMain();
+    if(confirm('Çıkmak istediğine emin misin?')) goToMain();
   });
 
   document.getElementById('btn-quiz-next')?.addEventListener('click', nextQuestion);
-  document.getElementById('btn-next-mission')?.addEventListener('click', () => alert('SÄ±radaki gÃ¶rev yakÄ±nda!'));
+  document.getElementById('btn-next-mission')?.addEventListener('click', () => alert('Sıradaki görev yakında!'));
   document.getElementById('btn-back-to-map')?.addEventListener('click', goToMain);
   document.getElementById('btn-avatar-reward')?.addEventListener('click', () => setActiveTab('gelisim'));
   
@@ -333,9 +333,9 @@ function handleAnswer(idx) {
   const fi = document.getElementById('quiz-feedback-icon');
   
   if (ft) ft.innerText = isCorrect ? 'Harika!' : 'Hata!';
-  if (fx) fx.innerText = q.explanation || (isCorrect ? 'DoÄŸru cevap.' : 'Tekrar dene.');
+  if (fx) fx.innerText = q.explanation || (isCorrect ? 'Doğru cevap.' : 'Tekrar dene.');
   if (fi) {
-      fi.innerText = isCorrect ? 'âœ…' : 'âŒ';
+      fi.innerText = isCorrect ? '✅' : '❌';
       fi.style.fontSize = '24px';
   }
   
@@ -371,7 +371,7 @@ function renderVictory(subjKey, topicTitle, stars) {
   const elStars = document.getElementById('victory-stars');
   const elXp = document.getElementById('victory-xp');
   
-  if (elSub) elSub.innerText = SUBJECTS[subjKey].title + ' â€¢ ' + topicTitle;
+  if (elSub) elSub.innerText = SUBJECTS[subjKey].title + ' • ' + topicTitle;
   if (elStars) elStars.innerText = '+' + stars;
   if (elXp) elXp.innerText = '+' + (stars * 2);
   

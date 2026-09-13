@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <title>Maarif Yıldızı 3</title>
+  <title>Maarif Yıldızı 3 - 3. Sınıf MEB Eğlenceli Öğrenme Dünyası</title>
   <link rel="stylesheet" href="css/design.css">
   <link rel="manifest" href="manifest.json">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
@@ -21,13 +21,62 @@
 <body>
 <div id="app-wrapper">
 
-  <!-- ===================== SCREEN: SPLASH ===================== -->
+  <!-- ===================== SCREEN: SPLASH (ZARİF & DENGELİ) ===================== -->
   <div id="screen-splash" class="maarif-screen active">
-    <div class="splash-center-box">
-      <img src="assets/maarif_yildizi_3_logo.png" alt="Maarif Yıldızı 3" class="splash-hero-logo">
-      <h1 class="splash-title">Maarif Yıldızı 3</h1>
-      <div class="splash-dots">
-        <div class="splash-dot"></div><div class="splash-dot"></div><div class="splash-dot"></div>
+    <div class="splash-card">
+      <!-- Floating Doodles -->
+      <div class="splash-doodle doodle-1">✦</div>
+      <div class="splash-doodle doodle-2">✨</div>
+      <div class="splash-doodle doodle-3">★</div>
+
+      <!-- Mascot Avatar Frame -->
+      <div class="splash-avatar-glow">
+        <div class="splash-avatar-border">
+          <img src="assets/maarif_yildizi_3_logo.png" alt="Maarif Yıldızı 3" class="splash-avatar-img">
+        </div>
+      </div>
+
+      <!-- MEB Model Pill -->
+      <div class="splash-meb-badge">
+        <span class="pulse-dot"></span>
+        <span>TÜRKİYE YÜZYILI MAARİF MODELİ</span>
+      </div>
+
+      <!-- App Title -->
+      <h1 class="splash-hero-title">
+        <span class="text-amber">Maarif</span> <span class="text-sky">Yıldızı 3</span>
+      </h1>
+      <p class="splash-hero-sub">3. Sınıf MEB Müfredatına Uygun Oyunlaştırılmış Öğrenme Macerası</p>
+
+      <!-- Triple Values -->
+      <div class="splash-slogan-row">
+        <div class="slogan-pill"><span>⭐</span> Öğren</div>
+        <div class="slogan-dot">•</div>
+        <div class="slogan-pill"><span>🧭</span> Keşfet</div>
+        <div class="slogan-dot">•</div>
+        <div class="slogan-pill"><span>🏆</span> Başar!</div>
+      </div>
+
+      <!-- Bottom Progress Track -->
+      <div class="splash-progress-box">
+        <div class="splash-status-row">
+          <span class="status-left"><span class="blue-dot"></span> Macera Hazırlanıyor...</span>
+          <span class="status-pct" id="splash-pct">%85</span>
+        </div>
+        <div class="splash-track">
+          <div class="splash-bar" id="splash-progress-bar">
+            <div class="shimmer-glare"></div>
+          </div>
+        </div>
+        <p class="splash-foot-note">Matematik, Türkçe ve Fen adaları açılıyor ✨</p>
+      </div>
+
+      <!-- Trust Badge -->
+      <div class="splash-trust-badge">
+        <span class="check-icon">✓</span>
+        <span>MEB 3. Sınıf Uyumlu</span>
+        <span class="sep">•</span>
+        <span class="shield-text">🛡️ %100 Güvenli Çocuk Alanı</span>
       </div>
     </div>
   </div>
@@ -35,189 +84,488 @@
   <!-- ===================== SHARED HEADER ===================== -->
   <header id="maarif-header" class="hidden">
     <div class="header-inner">
-      <div class="header-logo">
+      <div class="header-logo" onclick="setActiveTab('macera')">
         <img src="assets/maarif_yildizi_3_logo.png" alt="Logo" class="header-brand-img">
         <div class="header-logo-text">
           <span class="header-logo-title">Maarif Yıldızı 3</span>
-          <span id="header-subtitle" class="header-logo-sub">3. Sınıf</span>
+          <span id="header-subtitle" class="header-logo-sub">3. Sınıf • Macera</span>
         </div>
       </div>
       <div class="header-badges">
-        <div class="header-badge header-badge-streak">
-          <span class="material-symbols-outlined">local_fire_department</span>
-          <span id="header-streak-val">1</span>
+        <div class="header-badge header-badge-streak" title="Günlük Seri">
+          <span class="badge-icon">🔥</span>
+          <span id="header-streak-val">5</span>
         </div>
-        <div class="header-badge header-badge-stars">
-          <span class="material-symbols-outlined icon-fill">star</span>
-          <span id="header-stars-val">0</span>
+        <div class="header-badge header-badge-stars" title="Altın Yıldızlar">
+          <span class="badge-icon">⭐</span>
+          <span id="header-stars-val">340</span>
         </div>
+        <button class="header-profile-btn" onclick="setActiveTab('gelisim')" title="Profil & Avatar">
+          <span id="header-avatar-preview">🤠</span>
+        </button>
       </div>
     </div>
   </header>
 
-  <!-- ===================== TAB 1: ANA SAYFA ===================== -->
-  <div id="screen-home" class="maarif-screen">
+  <!-- ===================== SEKME 1: MACERA (ANA SAYFA) ===================== -->
+  <div id="screen-macera" class="maarif-screen">
     <div class="screen-content">
-      <h2 id="home-greeting" class="home-greeting">Merhaba, Kahraman! 🚀</h2>
       
-      <div class="daily-task-card">
-        <h3>Bugünün Görevi</h3>
-        <p id="home-task-desc">Harika gidiyorsun! Yeni şeyler öğrenmeye hazır mısın?</p>
-        <button id="btn-home-cta" class="btn-amber">Devam Et 🚀</button>
-        <div class="progress-wrap">
-          <div class="progress-label">Günlük İlerleme: <span id="home-progress-text">0/5</span></div>
-          <div class="progress-track"><div id="home-progress-bar" class="progress-bar"></div></div>
+      <!-- Bilge Kuş Karşılama Kartı -->
+      <div class="greeting-hero-card">
+        <div class="greeting-mascot-row">
+          <div class="mascot-badge-circle">
+            <span class="mascot-avatar-char">🦉</span>
+          </div>
+          <div class="greeting-text-col">
+            <div class="energy-pill">
+              <span class="bolt-icon">⚡</span>
+              <span>Bugün çok enerjiksin!</span>
+            </div>
+            <h2 id="home-greeting" class="greeting-name-title">Harika gidiyorsun, Efe! 🚀</h2>
+            <p id="home-task-desc" class="greeting-task-sub">Günün Görevi: <strong class="text-amber">Çarpma Alıştırması</strong> (+30 Yıldız kazan)</p>
+          </div>
+        </div>
+
+        <div class="daily-progress-section">
+          <div class="daily-progress-labels">
+            <span class="goal-tag">🚩 Günün Hedefi</span>
+            <span id="home-progress-text" class="goal-counter">3 / 5 Tamamlandı</span>
+          </div>
+          <div class="progress-track-lg">
+            <div id="home-progress-bar" class="progress-bar-lg" style="width: 60%;"></div>
+          </div>
         </div>
       </div>
 
-      <h3>Hızlı Ders Seçimi</h3>
-      <div class="home-subjects-row">
-        <!-- populated by js -->
-      </div>
-    </div>
-  </div>
-
-  <!-- ===================== TAB 2: DERSLER ===================== -->
-  <div id="screen-subjects" class="maarif-screen">
-    <div class="screen-content">
-      <h2>Dersler</h2>
-      <div class="subjects-grid" id="subjects-grid">
-        <!-- populated by js -->
-      </div>
-    </div>
-  </div>
-
-  <!-- ===================== SCREEN: UNIT LIST ===================== -->
-  <div id="screen-unit-list" class="maarif-screen">
-    <div class="screen-content">
-      <button class="btn-back" onclick="setActiveTab('subjects')">← Geri</button>
-      <h2 id="unit-list-title">Ders Adı</h2>
-      <div class="unit-accordion" id="unit-accordion">
-        <!-- populated by js -->
-      </div>
-    </div>
-  </div>
-
-  <!-- ===================== SCREEN: TOPIC LIST ===================== -->
-  <div id="screen-topic-list" class="maarif-screen">
-    <div class="screen-content">
-      <button class="btn-back" id="btn-back-topic-list">← Geri</button>
-      <h2 id="topic-list-title">Ünite Adı</h2>
-      <div class="topic-list" id="topic-list">
-        <!-- populated by js -->
-      </div>
-    </div>
-  </div>
-
-  <!-- ===================== TAB 3: BEN (PROFILE) ===================== -->
-  <div id="screen-profile" class="maarif-screen">
-    <div class="screen-content">
-      <div class="profile-header">
-        <div class="profile-avatar" id="profile-avatar">🦊</div>
-        <h2 id="profile-name">Kahraman</h2>
-        <div class="profile-level">Seviye <span id="profile-level-val">1</span></div>
-      </div>
-      <div class="profile-stats">
-        <div class="stat-box">
-          <div class="stat-icon">⭐</div>
-          <div class="stat-val" id="profile-stars">0</div>
-          <div class="stat-lbl">Yıldız</div>
+      <!-- Macera Patikası Başlığı -->
+      <div class="section-banner-row">
+        <div class="sec-title-group">
+          <span class="sec-symbol">🧭</span>
+          <h3 class="sec-heading">Macera Patikası</h3>
         </div>
-        <div class="stat-box">
-          <div class="stat-icon">🔥</div>
-          <div class="stat-val" id="profile-streak">1</div>
-          <div class="stat-lbl">Seri</div>
+        <span class="sec-tag-pill">1. Dönem Haritası</span>
+      </div>
+
+      <!-- Kavisli Ada Haritası Alanı (JS Tarafından Canlı Doldurulur) -->
+      <div id="adventure-map-area" class="adventure-map-container">
+        <!-- SVG Curved Line and Island Pods populated by JS -->
+      </div>
+
+      <!-- Günün Bilgi Çarkı (Sürpriz Mini Oyun) -->
+      <div class="wheel-promo-card">
+        <div class="wheel-promo-content">
+          <div class="wheel-promo-badge">🎲 Şansını Dene!</div>
+          <h4 class="wheel-promo-title">Günün Bilgi Çarkı</h4>
+          <p class="wheel-promo-sub">Çevir, mini soruya doğru cevap ver ve sürpriz yıldızlar kazan!</p>
+          <button id="btn-open-wheel" class="btn-primary-blue">
+            <span>🔄 Çarkı Çevir (+25 Yıldız)</span>
+          </button>
+        </div>
+        <div class="wheel-promo-art">
+          <div class="wheel-mini-disk">⭐</div>
         </div>
       </div>
-      <h3>Ders İlerlemeleri</h3>
-      <div class="profile-progress-list" id="profile-progress-list">
-        <!-- populated by js -->
+
+      <!-- Eğlenceli Hızlı Alıştırmalar -->
+      <div class="quick-exercises-section">
+        <h4 class="quick-section-title">Eğlenceli Hızlı Alıştırmalar</h4>
+        <div class="quick-cards-grid">
+          <div class="quick-card math-quick" onclick="openTopic('matematik', 'mat_t1_4')">
+            <div class="quick-card-top">
+              <span class="quick-icon">🔢</span>
+              <span class="quick-duration">3 dk</span>
+            </div>
+            <h5 class="quick-card-name">Hızlı Çarpma</h5>
+            <p class="quick-card-desc">3'ler ve 4'ler</p>
+          </div>
+          <div class="quick-card turkish-quick" onclick="openTopic('turkce', 'tur_t1_1')">
+            <div class="quick-card-top">
+              <span class="quick-icon">📖</span>
+              <span class="quick-duration">5 dk</span>
+            </div>
+            <h5 class="quick-card-name">Zıt Anlamlılar</h5>
+            <p class="quick-card-desc">Kelime Avı</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===================== SEKME 2: ETKİNLİK (DERSLER & MÜFREDAT AĞACI) ===================== -->
+  <div id="screen-etkinlik" class="maarif-screen">
+    <div class="screen-content">
+      
+      <!-- Bilge Kuş Macera Kuralı -->
+      <div class="guide-rule-card">
+        <div class="guide-rule-header">
+          <div class="mascot-sm-bubble">🦉</div>
+          <div class="guide-rule-text">
+            <div class="guide-rule-top">
+              <h4 class="guide-rule-title">Bilge Kuş ile Macera Kuralı</h4>
+              <button id="btn-toggle-guide" class="btn-guide-toggle">Rehber ▼</button>
+            </div>
+            <p class="guide-rule-quote">"Unutma: Her gün minik bir adım! Önceki konuyu bitirmeden yeni kilitler açılmaz." 🎯</p>
+          </div>
+        </div>
+        <div id="guide-steps-box" class="guide-steps-row">
+          <div class="guide-step-col">
+            <div class="step-circle step-1">1</div>
+            <span class="step-head">15 Dk Görev</span>
+            <span class="step-sub">Günü tamamla</span>
+          </div>
+          <div class="guide-step-col">
+            <div class="step-circle step-2">2</div>
+            <span class="step-head">Kilidi Aç</span>
+            <span class="step-sub">Yeni üniteye geç</span>
+          </div>
+          <div class="guide-step-col">
+            <div class="step-circle step-3">3</div>
+            <span class="step-head">Yıldız Kazan</span>
+            <span class="step-sub">Rozetleri topla</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Günün Odak Görevi Kartı -->
+      <div class="focus-mission-card">
+        <div class="focus-tag-row">
+          <span class="focus-pill">⚡ Günün Odak Görevi</span>
+          <span class="focus-time">⏱️ 10-15 Dk</span>
+        </div>
+        <h3 id="focus-mission-title" class="focus-mission-heading">Matematik • 2. Ünite</h3>
+        <p id="focus-mission-desc" class="focus-mission-desc">Çarpım Tablosu ve Ritmik Sayma Alıştırmaları</p>
+        <div class="focus-progress-wrap">
+          <div class="focus-progress-labels">
+            <span id="focus-task-status">Görev Durumu: 1 / 3 Tamamlandı</span>
+            <span id="focus-task-pct" class="focus-pct">%33</span>
+          </div>
+          <div class="progress-track-sm">
+            <div id="focus-task-bar" class="progress-bar-sm" style="width: 33%;"></div>
+          </div>
+        </div>
+        <button id="btn-start-focus" class="btn-start-focus-action">
+          <span>Göreve Başla!</span>
+          <span>🚀</span>
+        </button>
+      </div>
+
+      <!-- Müfredat Ağacı Başlığı -->
+      <div class="section-banner-row">
+        <div class="sec-title-group">
+          <span class="sec-symbol">🌲</span>
+          <h3 class="sec-heading">Ders Müfredat Ağacı</h3>
+        </div>
+        <span class="sec-tag-pill">3. Sınıf MEB</span>
+      </div>
+
+      <!-- 6 Dersin Müfredat Blokları (JS tarafından canlı render edilir) -->
+      <div id="curriculum-subjects-stack" class="curriculum-stack">
+        <!-- Subjects populated dynamically -->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===================== SEKME 3: KİTAPLIK (SESLİ MASAL & OKUMA) ===================== -->
+  <div id="screen-kitaplik" class="maarif-screen">
+    <div class="screen-content">
+      
+      <!-- Okuma Hedefi Kartı -->
+      <div class="library-goal-card">
+        <div class="library-goal-top">
+          <h3 class="lib-goal-title">Kitap Dünyası 📚</h3>
+          <span class="lib-timer-pill">⏱️ 15 Dk Hedefi</span>
+        </div>
+        <p class="lib-goal-sub">Bugün <strong class="text-amber">12 dakika</strong> okudun! Hedefe 3 dakika kaldı ⏳</p>
+        <div class="progress-track-md">
+          <div class="progress-bar-md" style="width: 80%;"></div>
+        </div>
+        <div class="lib-goal-bottom">
+          <span>Başlangıç (0 dk)</span>
+          <span class="text-emerald font-bold">%80 Tamamlandı</span>
+        </div>
+      </div>
+
+      <!-- Kaldığın Yerden Devam Et (Öne Çıkan Kitap) -->
+      <div class="library-featured-card">
+        <div class="featured-banner-tag">📖 Kaldığın Yerden Devam Et</div>
+        <div class="featured-book-flex">
+          <div class="featured-cover-box">
+            <span class="featured-badge-3">3. Sınıf</span>
+            <div class="featured-art">🌟📚</div>
+          </div>
+          <div class="featured-info-col">
+            <span class="featured-series-name">MEB Hikaye Dizisi</span>
+            <h4 class="featured-book-title">Küçük Yıldızın Yolculuğu</h4>
+            <p class="featured-book-desc">Göklerin en parlak yıldızı olmak isteyen minik dostumuzun gökkuşağı köprüsündeki maceraları...</p>
+            <div class="featured-reading-bar">
+              <div class="featured-reading-fill" style="width: 65%;"></div>
+            </div>
+            <div class="featured-btn-group">
+              <button class="btn-listen-speech" onclick="SpeechService.speak('Küçük Yıldızın Yolculuğu. Bir varmış bir yokmuş, gökyüzünün en derin mavisinde minik bir yıldız yaşarmış.', false, this)">
+                <span>🎧 Sesli Dinle</span>
+              </button>
+              <button class="btn-read-continue" onclick="openStoryReader('kucuk_yildiz')">
+                <span>📖 Devam Et</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kategori Filtreleri -->
+      <div class="library-filter-pills">
+        <button class="lib-pill active">📚 Tümü</button>
+        <button class="lib-pill">🪄 Masallar</button>
+        <button class="lib-pill">🚀 Bilim & Keşif</button>
+        <button class="lib-pill">🌿 Doğa & Çevre</button>
+      </div>
+
+      <!-- Popüler Kitaplar Listesi -->
+      <div class="popular-books-list" id="library-books-grid">
+        <!-- JS tarafından MEB okuma kitapları ile doldurulur -->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===================== SEKME 4: GELİŞİM (AVATAR ATÖLYESİ & ROZETLER) ===================== -->
+  <div id="screen-gelisim" class="maarif-screen">
+    <div class="screen-content">
+      
+      <!-- Üst Bakiye ve Seri Çubuğu -->
+      <div class="avatar-balance-bar">
+        <div class="avatar-balance-left">
+          <span class="palette-icon">🎨</span>
+          <div>
+            <h3 class="atelier-title">Avatar Atölyesi</h3>
+            <span class="atelier-sub">Ödüllerini Kuşan!</span>
+          </div>
+        </div>
+        <div class="avatar-balance-right">
+          <div class="streak-pill-box">
+            <span>🔥</span>
+            <span id="atelier-streak-val">5 Gün</span>
+          </div>
+          <div class="stars-pill-box">
+            <span>⭐</span>
+            <span id="atelier-stars-val" class="font-bold">380</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Karakter Podyumu / Sahnesi -->
+      <div class="avatar-podium-stage">
+        <div class="avatar-cheer-speech">
+          <span>✨</span> <span id="avatar-cheer-text">Yeni Şapkan Harika Durdu!</span>
+        </div>
+        <div class="avatar-spotlight-disc">
+          <div class="avatar-main-figure" id="podium-avatar-face">🤠</div>
+          <span class="podium-star-float">⭐</span>
+          <span class="podium-badge-float">✓</span>
+        </div>
+        <div class="avatar-student-badge">
+          <span class="badge-role">🎓 Kahraman • 3-B Sınıfı</span>
+          <span class="badge-lvl">Seviye <span id="atelier-level-val">5</span>: Yıldız Kaşifi</span>
+        </div>
+      </div>
+
+      <!-- Gardırop Kategorileri -->
+      <div class="wardrobe-tabs">
+        <button class="wardrobe-tab active" data-cat="caps" onclick="switchWardrobeCategory('caps')">🧢 Şapkalar</button>
+        <button class="wardrobe-tab" data-cat="glasses" onclick="switchWardrobeCategory('glasses')">👓 Gözlükler</button>
+        <button class="wardrobe-tab" data-cat="mascots" onclick="switchWardrobeCategory('mascots')">🦉 Maskotlar</button>
+        <button class="wardrobe-tab" data-cat="badges" onclick="switchWardrobeCategory('badges')">🏅 Rozetler</button>
+      </div>
+
+      <!-- Yıldız Mağazası Kartları Grid -->
+      <div class="wardrobe-items-grid" id="wardrobe-items-grid">
+        <!-- JS tarafından doldurulur -->
+      </div>
+
+      <!-- Başarı Sandıkları Bölümü -->
+      <div class="section-banner-row mt-4">
+        <div class="sec-title-group">
+          <span class="sec-symbol">🎁</span>
+          <h3 class="sec-heading">Sürpriz Hazine Sandıkları</h3>
+        </div>
+      </div>
+
+      <div class="chests-grid">
+        <div class="chest-card chest-bronze">
+          <span class="chest-badge-top">GÜNLÜK ÖDÜL</span>
+          <div class="chest-icon">📦</div>
+          <h5 class="chest-name">Bronz Görev Sandığı</h5>
+          <p class="chest-reward">+20 Yıldız & Bilgi Kartı</p>
+          <button class="btn-chest-open" onclick="openChest('bronze')">Hemen Aç (Ücretsiz)</button>
+        </div>
+        <div class="chest-card chest-silver">
+          <span class="chest-badge-top">ÜNİTE BİTİRME</span>
+          <div class="chest-icon">💎</div>
+          <h5 class="chest-name">Gümüş Ünite Sandığı</h5>
+          <p class="chest-reward">+50 Yıldız & Sihirli Şapka</p>
+          <button class="btn-chest-open blue" onclick="openChest('silver')">Kilidi Aç (100 ⭐)</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===================== MODAL: GÜNÜN BİLGİ ÇARKI ===================== -->
+  <div id="modal-wheel" class="maarif-modal hidden">
+    <div class="modal-backdrop" onclick="closeWheelModal()"></div>
+    <div class="modal-card wheel-modal-card">
+      <button class="btn-modal-close" onclick="closeWheelModal()">✕</button>
+      <h3 class="wheel-modal-title">Günün Bilgi Çarkı 🎡</h3>
+      <p class="wheel-modal-sub">Çarkı çevir, mini soruyu bil ve ödülünü kap!</p>
+      
+      <div class="wheel-spinner-container">
+        <div class="wheel-pointer">▼</div>
+        <div id="wheel-spinner-disk" class="wheel-disk">
+          <div class="wheel-slice slice-1">+20 ⭐</div>
+          <div class="wheel-slice slice-2">+30 ⭐</div>
+          <div class="wheel-slice slice-3">🎁 Kutu</div>
+          <div class="wheel-slice slice-4">+50 ⭐</div>
+          <div class="wheel-slice slice-5">🦉 Soru</div>
+          <div class="wheel-slice slice-6">+40 ⭐</div>
+        </div>
+      </div>
+
+      <button id="btn-spin-wheel" class="btn-amber w-full mt-3" onclick="spinLuckyWheel()">
+        <span>ÇEVİR! 🚀</span>
+      </button>
+
+      <div id="wheel-question-box" class="wheel-q-box hidden">
+        <p id="wheel-q-text" class="font-bold">Mini Soru: 7 x 4 kaçtır?</p>
+        <div class="wheel-q-options" id="wheel-q-opts">
+          <!-- JS -->
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- ===================== SCREEN: WORKBOOK ===================== -->
+  <!-- ===================== EKRAN: KONU ÇALIŞMA SAYFASI (WORKBOOK) ===================== -->
   <div id="screen-workbook" class="maarif-screen">
     <div class="screen-content">
-      <button class="btn-back" id="btn-back-workbook">← Geri</button>
-      <div class="wb-header">
-        <span id="wb-subject-badge" class="subject-badge">Matematik</span>
-        <h2 id="wb-title">Konu Başlığı</h2>
-        <button id="btn-read-wb" class="btn-speech">🔊 Sesli Oku</button>
-      </div>
+      <button class="btn-back-link" onclick="setActiveTab('etkinlik')">← Müfredata Dön</button>
       
-      <div id="wb-content" class="wb-content">
-        <!-- populated by js -->
+      <div class="wb-header-panel">
+        <span id="wb-subject-pill" class="wb-subject-pill">Matematik</span>
+        <h2 id="wb-title" class="wb-title-heading">Konu Başlığı</h2>
+        <button id="btn-wb-tts" class="btn-speech-pill">🔊 Sesli Oku</button>
       </div>
 
-      <button id="btn-start-exam-wb" class="btn-amber" style="margin-top: 20px;">Sınava Başla! 🎯</button>
+      <div id="wb-content" class="wb-dynamic-content">
+        <!-- JS ile temiz kural, örnek, önemli noktalar ve sen de dene kartları -->
+      </div>
+
+      <div class="wb-footer-cta">
+        <button id="btn-wb-start-quiz" class="btn-amber w-full">
+          <span>Bu Konunun Sınavına Başla! 🎯</span>
+        </button>
+      </div>
     </div>
   </div>
 
-  <!-- ===================== SCREEN: QUIZ ===================== -->
+  <!-- ===================== EKRAN: ETKİLEŞİMLİ QUIZ / SINAV ===================== -->
   <div id="screen-quiz" class="maarif-screen">
-    <div class="quiz-top-bar">
-      <button class="btn-back" id="btn-quit-quiz">← Geri</button>
-      <div class="quiz-header-info">
-        <span id="quiz-subject-indicator">Matematik • 1/5</span>
-        <span class="quiz-stars">⭐ <span id="quiz-reward-val">50</span></span>
+    <div class="quiz-top-nav">
+      <button class="btn-back-quiz" id="btn-quit-quiz">← Çıkış</button>
+      <div class="quiz-status-indicators">
+        <span id="quiz-subject-step" class="quiz-step-tag">Matematik • 1/5</span>
+        <span class="quiz-star-reward">⭐ <span id="quiz-reward-val">50</span></span>
       </div>
     </div>
-    <div class="quiz-progress-track">
-      <div id="quiz-progress-bar" class="quiz-progress-bar"></div>
+    <div class="quiz-progress-bar-rail">
+      <div id="quiz-step-bar" class="quiz-progress-fill"></div>
     </div>
-    
-    <div class="screen-content quiz-content">
-      <div class="quiz-question-box">
-        <h3 id="quiz-question-text">Soru metni...</h3>
+
+    <div class="screen-content quiz-body-container">
+      
+      <!-- Soru Kartı -->
+      <div class="quiz-card-frame">
+        <div class="quiz-card-mascot-tip">
+          <span class="owl-icon">🦉</span>
+          <span id="quiz-tip-message">Soruyu dikkatle oku, doğru cevabı kolayca bulacaksın!</span>
+        </div>
+        <h3 id="quiz-question-text" class="quiz-question-stem">Soru metni yükleniyor...</h3>
       </div>
 
-      <div id="quiz-interactive-area" class="quiz-options-area">
-        <!-- populated by js -->
+      <!-- Şıklar veya Etkileşim Alanı -->
+      <div id="quiz-interactive-area" class="quiz-tactile-options-list">
+        <!-- JS -->
       </div>
 
-      <button id="btn-read-question" class="btn-speech" style="margin-top: 10px;">🔊 Sesli Oku</button>
+      <!-- Sesli Dinleme Butonu -->
+      <button id="btn-read-question" class="btn-speech-pill mt-2">
+        <span>🔊 Soruyu Sesli Dinle</span>
+      </button>
 
-      <div class="quiz-feedback-banner" id="quiz-feedback-banner" style="display:none;">
-        <div class="feedback-icon" id="feedback-icon">✅</div>
-        <div class="feedback-text">
-          <strong id="feedback-title">Harika!</strong>
-          <p id="feedback-desc">Açıklama veya ipucu</p>
+      <!-- Geri Bildirim Banner'ı -->
+      <div id="quiz-feedback-banner" class="quiz-result-banner hidden">
+        <div id="feedback-icon" class="feedback-emoticon">✅</div>
+        <div class="feedback-copy">
+          <h4 id="feedback-title" class="feedback-heading">Harika!</h4>
+          <p id="feedback-desc" class="feedback-detail">Açıklama</p>
         </div>
       </div>
 
-      <button id="btn-quiz-next" class="btn-primary" style="display:none; margin-top:10px; width:100%;">Sonraki →</button>
+      <!-- Sonraki Butonu -->
+      <button id="btn-quiz-next" class="btn-next-question hidden">
+        <span>Sonraki Soru →</span>
+      </button>
+
     </div>
   </div>
 
-  <!-- ===================== SCREEN: VICTORY ===================== -->
+  <!-- ===================== EKRAN: BÖLÜM BAŞARISI VE KUTLAMA ===================== -->
   <div id="screen-victory" class="maarif-screen">
-    <div class="screen-content victory-content">
-      <div class="victory-icon">🏆</div>
-      <h1 class="victory-title">Tebrikler!</h1>
-      <p id="victory-desc" class="victory-desc">Bölümü başarıyla tamamladın.</p>
-      
-      <div class="victory-stats">
-        <div>⭐ +30 Yıldız</div>
+    <div class="screen-content victory-wrapper">
+      <div class="victory-confetti-art">🎉🏆✨</div>
+      <h1 class="victory-main-title">HARİKASIN!</h1>
+      <p id="victory-desc" class="victory-sub-copy">Bölümü başarıyla tamamladın!</p>
+
+      <div class="victory-prize-box">
+        <div class="prize-item">
+          <span class="prize-emoji">⭐</span>
+          <span class="prize-text">+50 Altın Yıldız</span>
+        </div>
+        <div class="prize-item">
+          <span class="prize-emoji">⚡</span>
+          <span class="prize-text">+100 Deneyim (XP)</span>
+        </div>
       </div>
-      
-      <button id="btn-victory-home" class="btn-amber" onclick="setActiveTab('home')" style="width:100%;">Ana Sayfaya Dön</button>
+
+      <div class="victory-actions-stack">
+        <button class="btn-amber w-full" onclick="setActiveTab('macera')">
+          <span>Haritaya Dön & Devam Et 🚀</span>
+        </button>
+        <button class="btn-ghost-atelier w-full mt-2" onclick="setActiveTab('gelisim')">
+          <span>Ödüllerini Avatarına Tak! 👒</span>
+        </button>
+      </div>
     </div>
   </div>
 
-  <!-- ===================== BOTTOM NAV ===================== -->
+  <!-- ===================== SABİT ALT NAVİGASYON (4 TEMEL SEKME) ===================== -->
   <nav id="maarif-nav" class="hidden">
-    <button class="nav-tab active" data-tab="home" onclick="setActiveTab('home')">
-      <span class="nav-icon">🏠</span>
-      <span class="nav-label">Ana Sayfa</span>
+    <button class="nav-tab active" data-tab="macera" onclick="setActiveTab('macera')">
+      <span class="nav-tab-icon">🧭</span>
+      <span class="nav-tab-label">Macera</span>
     </button>
-    <button class="nav-tab" data-tab="subjects" onclick="setActiveTab('subjects')">
-      <span class="nav-icon">📚</span>
-      <span class="nav-label">Dersler</span>
+    <button class="nav-tab" data-tab="etkinlik" onclick="setActiveTab('etkinlik')">
+      <span class="nav-tab-icon">🎮</span>
+      <span class="nav-tab-label">Etkinlik</span>
     </button>
-    <button class="nav-tab" data-tab="profile" onclick="setActiveTab('profile')">
-      <span class="nav-icon">⭐</span>
-      <span class="nav-label">Ben</span>
+    <button class="nav-tab" data-tab="kitaplik" onclick="setActiveTab('kitaplik')">
+      <span class="nav-tab-icon">📖</span>
+      <span class="nav-tab-label">Kitaplık</span>
+    </button>
+    <button class="nav-tab" data-tab="gelisim" onclick="setActiveTab('gelisim')">
+      <span class="nav-tab-icon">⭐</span>
+      <span class="nav-tab-label">Gelişim</span>
     </button>
   </nav>
 

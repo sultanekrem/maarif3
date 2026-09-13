@@ -1,11 +1,11 @@
 {
   "matematik": {
     "title": "Matematik",
-    "subtitle": "3. Sınıf 1. Kitap (MEB Maarif Modeli)",
+    "subtitle": "Düşün, hesapla, çöz!",
     "icon": "📐",
     "badge": "18 Konu",
-    "accent": "#4F46E5",
-    "bg_light": "#EEF2FF",
+    "accent": "#5AA8FF",
+    "bg_light": "#EFF6FF",
     "themes": [
       {
         "id": "mat_tema1",
@@ -1762,15 +1762,17 @@
           "ans": 3
         }
       ]
-    }
+    },
+    "short_title": "Matematik",
+    "color": "#5AA8FF"
   },
   "fenbilimleri": {
-    "title": "Fen Bilimleri",
-    "subtitle": "3. Sınıf 1. Kitap (MEB Maarif Modeli)",
+    "title": "Fen Bilgisi",
+    "subtitle": "Merak et, araştır, keşfet!",
     "icon": "🔬",
     "badge": "11 Konu",
-    "accent": "#059669",
-    "bg_light": "#ECFDF5",
+    "accent": "#8064FF",
+    "bg_light": "#F5F3FF",
     "themes": [
       {
         "id": "fen_u1",
@@ -2808,15 +2810,17 @@
           "ans": 3
         }
       ]
-    }
+    },
+    "short_title": "Fen Bilgisi",
+    "color": "#8064FF"
   },
   "hayatbilgisi": {
     "title": "Hayat Bilgisi",
-    "subtitle": "3. Sınıf 1. Kitap (MEB Maarif Modeli)",
-    "icon": "🌱",
+    "subtitle": "Doğayı sev, çevreni koru!",
+    "icon": "🌿",
     "badge": "9 Konu",
-    "accent": "#E11D48",
-    "bg_light": "#FFF1F2",
+    "accent": "#4CAF50",
+    "bg_light": "#F0FDF4",
     "themes": [
       {
         "id": "hb_u1",
@@ -3642,15 +3646,17 @@
           "ans": 2
         }
       ]
-    }
+    },
+    "short_title": "Hayat Bilgisi",
+    "color": "#4CAF50"
   },
   "ingilizce": {
-    "title": "İngilizce (English)",
-    "subtitle": "3. Sınıf Ders & Çalışma Kitabı (1. Dönem / Themes 1-3)",
-    "icon": "🔤",
+    "title": "İngilizce",
+    "subtitle": "Learn English, explore the world!",
+    "icon": "📙",
     "badge": "11 Konu",
-    "accent": "#0284C7",
-    "bg_light": "#F0F9FF",
+    "accent": "#FF8347",
+    "bg_light": "#FFF7ED",
     "themes": [
       {
         "id": "ing_t1",
@@ -4628,15 +4634,17 @@
           "ans": 2
         }
       ]
-    }
+    },
+    "short_title": "İngilizce",
+    "color": "#FF8347"
   },
   "turkce": {
     "title": "Türkçe",
-    "subtitle": "3. Sınıf 1. Kitap (MEB Maarif Modeli)",
-    "icon": "📖",
+    "subtitle": "Oku, anla, kelimeleri keşfet!",
+    "icon": "📕",
     "badge": "20 Konu",
-    "accent": "#D97706",
-    "bg_light": "#FEF3C7",
+    "accent": "#FF6B68",
+    "bg_light": "#FFF0F0",
     "themes": [
       {
         "id": "turkce_tema1",
@@ -6797,7 +6805,9 @@
           "hint": "Ömer Seyfettin Türk öykücülüğünün usta kurucusudur."
         }
       ]
-    }
+    },
+    "short_title": "Türkçe",
+    "color": "#FF6B68"
   },
   "general_exam": {
     "title": "👑 3. Sınıf 1. Dönem MEB Maarif Modeli Genel Değerlendirme Sınavı",
@@ -6884,5 +6894,1185 @@
         "ans": 0
       }
     ]
+  },
+  "muzik": {
+    "title": "Müzik",
+    "short_title": "Müzik",
+    "icon": "🎵",
+    "color": "#20B8B0",
+    "book_ref": "MEB 3. Sınıf Müzik Ders Kitabı",
+    "themes": [
+      {
+        "id": "muz_u1",
+        "title": "1. ÜNİTE: Dinleme ve Söyleme",
+        "page_range": "s. 10 - 25",
+        "topics": [
+          {
+            "id": "muz_t1_1",
+            "title": "İstiklâl Marşı'mız ve Saygı Duruşu",
+            "page": 12,
+            "desc": "Millî marşımızın anlamı, doğru duruş ve marşımızı coşkuyla seslendirme.",
+            "badge": "İstiklâl Marşı",
+            "tasks": [
+              {
+                "q": "İstiklâl Marşı'mız söylenirken ve dinlenirken nasıl bir duruş sergilemeliyiz?",
+                "options": [
+                  "Oturarak ve arkadaşlarımızla konuşarak",
+                  "Hareket etmeden, dik ve saygıyla (hazırolda)",
+                  "Yürüyerek ve etrafa bakınarak",
+                  "Ellerimiz cebimizde rahatça"
+                ],
+                "ans": 1,
+                "hint": "Millî marşımız okunurken dik, saygılı ve hareketsiz duruş sergilenir."
+              },
+              {
+                "q": "İstiklâl Marşı'mızın şairi (yazarı) kimdir?",
+                "options": [
+                  "Cahit Sıtkı Tarancı",
+                  "Ziya Gökalp",
+                  "Mehmet Âkif Ersoy",
+                  "Ömer Seyfettin"
+                ],
+                "ans": 2,
+                "hint": "İstiklâl Marşı'mızın sözlerini millî şairimiz Mehmet Âkif Ersoy yazmıştır."
+              },
+              {
+                "q": "İstiklâl Marşı'mızın bestecisi (müziğini yapan) kimdir?",
+                "options": [
+                  "Ulvi Cemal Erkin",
+                  "Ahmet Adnan Saygun",
+                  "Cemal Reşit Rey",
+                  "Osman Zeki Üngör"
+                ],
+                "ans": 3,
+                "hint": "İstiklâl Marşı'mız Osman Zeki Üngör tarafından bestelenmiştir."
+              }
+            ],
+            "reading_pages": [
+              {
+                "type": "birlikte_ogrenelim",
+                "badge": "🎵 1. BÖLÜM: DİNLEME VE SÖYLEME",
+                "title": "İstiklâl Marşı'mızı Doğru Söyleyelim",
+                "story": "Tören alanında bayrağımız göndere çekilirken hep birlikte İstiklâl Marşı'mızı coşkuyla ve gururla söyleriz...",
+                "content": "İstiklâl Marşı, milletimizin bağımsızlık ve özgürlük sembolüdür. Marşımızı söylerken ve dinlerken saygı duruşunda bulunur, başımızı dik tutarız. \n\nMarşımızı doğru seslendirebilmek için nefesimizi doğru yerlerde almalı ve kelimeleri net bir şekilde telaffuz etmeliyiz.",
+                "info_box": {
+                  "title": "💡 ALTIN BİLGİ",
+                  "content": "İstiklâl Marşı'mızın şairi Mehmet Âkif Ersoy, bestecisi ise Osman Zeki Üngör'dür. Törenlerde ilk iki kıtası söylenir."
+                },
+                "try_box": {
+                  "question": "İstiklâl Marşı söylenirken yanımızdaki kişi konuşursa ne yapmalıyız?",
+                  "answer": "Kendi duruşumuzu bozmadan, tören bittikten sonra marş okunurken konuşulmaması ve saygıyla dinlenmesi gerektiğini nazikçe hatırlatmalıyız."
+                }
+              }
+            ]
+          },
+          {
+            "id": "muz_t1_2",
+            "title": "Sesimiz ve Nefesimiz",
+            "page": 14,
+            "desc": "Şarkı söylerken doğru diyafram nefesi alma ve sesimizi koruma yöntemleri.",
+            "badge": "Doğru Nefes",
+            "tasks": [
+              {
+                "q": "Şarkı söylerken nefesimizi nasıl almalıyız?",
+                "options": [
+                  "Burnumuzdan sakin, derin ve diyaframı şişirerek",
+                  "Omuzlarımızı yukarı kaldırarak hızlıca",
+                  "Ağzımızdan kesik kesik ve gürültülü",
+                  "Nefes almadan sonuna kadar zorlayarak"
+                ],
+                "ans": 0,
+                "hint": "Doğru şarkı söyleme nefesi omuzları kaldırmadan, diyaframa alınan nefestir."
+              },
+              {
+                "q": "Ses tellerimizin sağlığını korumak için hangisinden KAÇINMALIYIZ?",
+                "options": [
+                  "Ilık su içmekten",
+                  "Bağırarak konuşmaktan ve çok soğuk su içmekten",
+                  "Düzenli nefes egzersizlerinden",
+                  "Günde yeterli dinlenmekten"
+                ],
+                "ans": 1,
+                "hint": "Aşırı bağırmak ve buzlu içecekler ses tellerine zarar verir."
+              },
+              {
+                "q": "Şarkı söylemeye başlamadan önce yapılan ses açma ve nefes çalışmalarına ne ad verilir?",
+                "options": [
+                  "Ritim yarışı",
+                  "Enstrüman ayarı",
+                  "Müziksel ısınma egzersizleri",
+                  "Sessizlik oyunu"
+                ],
+                "ans": 2,
+                "hint": "Şarkı söylemeden önce ses telleri egzersizlerle ısıtılır."
+              }
+            ],
+            "reading_pages": [
+              {
+                "type": "birlikte_ogrenelim",
+                "badge": "🌬️ DOĞRU NEFES VE SES",
+                "title": "Sesimiz Bizim En Güzel Çalgımızdır!",
+                "content": "Her insanın kendine özgü, eşsiz bir ses rengi vardır. Şarkı söylerken sesimizi bir enstrüman gibi kullanırız. \n\nDoğru nefes almak için: \n1. Omuzlarımızı rahat bırakırız.\n2. Burnumuzdan karnımıza doğru derin bir nefes çekeriz (çiçek koklar gibi).\n3. Şarkı söylerken nefesimizi dengeli ve yavaşça dışarı veririz.",
+                "key_points": [
+                  "Şarkı söylerken dik durmak nefes yolunu açar.",
+                  "Çok soğuk veya aşırı sıcak içecekler ses tellerimizi yorar.",
+                  "Bağırmadan, doğal ve duru sesimizle şarkı söylemeliyiz."
+                ],
+                "try_box": {
+                  "question": "Çiçek koklama nefesi alıştırması nasıl yapılır?",
+                  "answer": "Burnunuzdan mis kokulu bir gülü kokluyormuş gibi derin ve yavaş bir nefes alıp, sonra bir mumu söndürmeden alevini hafifçe titretir gibi nefesi üfleyerek veririz."
+                }
+              }
+            ]
+          },
+          {
+            "id": "muz_t1_3",
+            "title": "Birlikte Söylüyoruz (Koro)",
+            "page": 17,
+            "desc": "Toplu şarkı söyleme kuralları, koro uyumu ve arkadaşlarımızı dinleme.",
+            "badge": "Koro Uyumu",
+            "tasks": [
+              {
+                "q": "Birden fazla kişinin aynı anda uyum içinde şarkı söylediği müzik topluluğuna ne ad verilir?",
+                "options": [
+                  "Bando",
+                  "Orkestra",
+                  "Solo",
+                  "Koro"
+                ],
+                "ans": 3,
+                "hint": "Birlikte şarkı söyleyen ses topluluğuna koro denir."
+              },
+              {
+                "q": "Koroda şarkı söylerken en çok neye dikkat etmeliyiz?",
+                "options": [
+                  "Diğer arkadaşlarımızı dinleyerek aynı hız ve güçte söylemeye",
+                  "Arkadaşımızın sesini bastırmak için en yüksek sesle bağırmaya",
+                  "Şarkıyı herkesten önce bitirmeye çalışmaya",
+                  "Sadece kendi duyabileceğimiz fısıltıyla söylemeye"
+                ],
+                "ans": 0,
+                "hint": "Koroda en önemli kural dinleme ve birlikte uyum içinde söylemektir."
+              },
+              {
+                "q": "Bir şarkıyı tek başına söyleyen kişiye ne ad verilir?",
+                "options": [
+                  "Koro şefi",
+                  "Solist (Solo)",
+                  "Ritim ustası",
+                  "Piyanist"
+                ],
+                "ans": 1,
+                "hint": "Tek başına şarkı söylemeye solo, söyleyen kişiye solist denir."
+              }
+            ],
+            "reading_pages": [
+              {
+                "type": "birlikte_ogrenelim",
+                "badge": "👥 BİRLİKTE MÜZİK YAPALIM",
+                "title": "Koro: Seslerin Kardeşliği",
+                "content": "Birlikte şarkı söylemek hem çok eğlencelidir hem de arkadaşlık duygularını pekiştirir. Koroda tek bir kişinin sesi öne çıkmaz; tüm sesler birleşip tek bir zengin ses haline gelir.",
+                "key_points": [
+                  "Koro şefinin el hareketlerini ve işaretlerini takip ederiz.",
+                  "Şarkıya aynı anda başlar, aynı anda nefes alır ve aynı anda bitiririz.",
+                  "Güleryüzlü ve neşeli bir ifadeyle şarkı söyleriz."
+                ],
+                "try_box": {
+                  "question": "Koroda bir kişi çok yüksek sesle bağırırsa koroya ne olur?",
+                  "answer": "Bütünlük ve uyum bozulur, kulak tırmalayıcı bir ses çıkar. Koroda asıl amaç seslerin bir nehir gibi birleşmesidir."
+                }
+              }
+            ]
+          }
+        ],
+        "exam": {
+          "title": "1. Ünite Değerlendirme Sınavı (Dinleme ve Söyleme)",
+          "book_ref": "MEB Müzik 3 s. 25",
+          "questions": [
+            {
+              "q": "İstiklâl Marşı'mızın ilk iki kıtası söylenirken hangisi yapılmalıdır?",
+              "options": [
+                "Eller cebinde etrafı izlemek",
+                "Saygı duruşunda dik durup coşkuyla eşlik etmek",
+                "Yanımızdakiyle sohbet etmek",
+                "Koşarak tören alanından ayrılmak"
+              ],
+              "ans": 1,
+              "hint": "Millî marşımızda dimdik saygı duruşunda bulunulur."
+            },
+            {
+              "q": "Şarkı söylerken sesimizi doğru kullanmak için hangi nefes türü önerilir?",
+              "options": [
+                "Göğüs nefesi",
+                "Hızlı nefes",
+                "Diyafram nefesi",
+                "Ağızdan kesik nefes"
+              ],
+              "ans": 2,
+              "hint": "Diyafram nefesi ses tellerini korur ve güçlü ton sağlar."
+            },
+            {
+              "q": "Birlikte şarkı söyleyen insan topluluğuna ne ad verilir?",
+              "options": [
+                "Koro",
+                "Solo",
+                "Tiyatro",
+                "Orkestra"
+              ],
+              "ans": 0,
+              "hint": "Ses topluluğu koro adını alır."
+            },
+            {
+              "q": "Mehmet Âkif Ersoy İstiklâl Marşı'mızı kime ithaf etmiştir (armağan etmiştir)?",
+              "options": [
+                "Yalnızca öğretmenlere",
+                "Kendi ailesine",
+                "Yabancı sporculara",
+                "Kahraman Türk Ordusuna ve Milletine"
+              ],
+              "ans": 3,
+              "hint": "Mehmet Âkif Ersoy marşımızı Kahraman Ordumuza ve milletimize armağan etmiştir."
+            },
+            {
+              "q": "Koroyu el işaretleriyle yöneten kişiye ne denir?",
+              "options": [
+                "Solist",
+                "Söz yazarı",
+                "Koro Şefi",
+                "Sunucu"
+              ],
+              "ans": 2,
+              "hint": "Koroyu yöneten kişiye Koro Şefi (Maestro) denir."
+            },
+            {
+              "q": "Aşağıdakilerden hangisi ses tellerimiz için FAYDALI bir alışkanlıktır?",
+              "options": [
+                "Buz gibi soğuk su içmek",
+                "Bol bol ılık su tüketmek",
+                "Sürekli bağırarak konuşmak",
+                "Tozlu ortamlarda derin nefes almak"
+              ],
+              "ans": 1,
+              "hint": "Ilık su ses tellerinin nemli ve esnek kalmasını sağlar."
+            }
+          ]
+        }
+      },
+      {
+        "id": "muz_u2",
+        "title": "2. ÜNİTE: Çalgılar ve Ritim Dünyası",
+        "page_range": "s. 26 - 39",
+        "topics": [
+          {
+            "id": "muz_t2_1",
+            "title": "Çalgı Türlerini Tanıyalım",
+            "page": 28,
+            "desc": "Telli, üflemeli, vurmalı ve tuşlu çalgı ailelerinin özellikleri ve sesleri.",
+            "badge": "Çalgı Aileleri",
+            "tasks": [
+              {
+                "q": "Gitar, bağlama ve keman hangi çalgı ailesine girer?",
+                "options": [
+                  "Vurmalı çalgılar",
+                  "Telli çalgılar",
+                  "Üflemeli çalgılar",
+                  "Tuşlu çalgılar"
+                ],
+                "ans": 1,
+                "hint": "Tellerin titreşimiyle ses üreten çalgılara telli çalgılar denir."
+              },
+              {
+                "q": "Flüt, ney, klarnet ve zurna hangi çalgı ailesine aittir?",
+                "options": [
+                  "Telli çalgılar",
+                  "Vurmalı çalgılar",
+                  "Üflemeli çalgılar",
+                  "Tuşlu çalgılar"
+                ],
+                "ans": 2,
+                "hint": "İçine hava üflenerek çalınan çalgılar üflemeli çalgılardır."
+              },
+              {
+                "q": "Davul, tef, darbuka ve zil hangi çalgı ailesine girer?",
+                "options": [
+                  "Telli çalgılar",
+                  "Tuşlu çalgılar",
+                  "Nefesli çalgılar",
+                  "Vurmalı çalgılar"
+                ],
+                "ans": 3,
+                "hint": "Vurularak ya da sallanarak ses çıkarılan aletler vurmalı çalgılardır."
+              }
+            ],
+            "reading_pages": [
+              {
+                "type": "birlikte_ogrenelim",
+                "badge": "🎸 ÇALGI AİLELERİ",
+                "title": "Müzik Aletlerinin Büyülü Dünyası",
+                "content": "Müzik aletleri (çalgılar) ses çıkarma yöntemlerine göre 4 ana aileye ayrılır:",
+                "model_html": "\n                <div class=\"cat-comparison-grid\">\n                  <div class=\"cat-card cat-plants\">\n                    <div class=\"cat-title\">🎻 1. Telli Çalgılar</div>\n                    <div class=\"cat-item\">🎸 <strong>Örnekler:</strong> Bağlama, Gitar, Keman, Kanun, Ud</div>\n                    <div class=\"cat-item\">✨ <strong>Özellik:</strong> Tellerin parmakla, mızrapla veya yayla titreştirilmesiyle ses çıkarır.</div>\n                  </div>\n                  <div class=\"cat-card cat-animals\">\n                    <div class=\"cat-title\">🎺 2. Üflemeli Çalgılar</div>\n                    <div class=\"cat-item\">🎷 <strong>Örnekler:</strong> Flüt, Ney, Kaval, Klarnet, Trompet</div>\n                    <div class=\"cat-item\">✨ <strong>Özellik:</strong> Nefesimizin çalgı içindeki hava sütununu titreştirmesiyle ses verir.</div>\n                  </div>\n                  <div class=\"cat-card cat-plants\">\n                    <div class=\"cat-title\">🥁 3. Vurmalı Çalgılar</div>\n                    <div class=\"cat-item\">🪘 <strong>Örnekler:</strong> Davul, Darbuka, Tef, Zil, Marakas, Ksilofon</div>\n                    <div class=\"cat-item\">✨ <strong>Özellik:</strong> Elle veya tokmakla vurularak, sallanarak ritim tutulur.</div>\n                  </div>\n                  <div class=\"cat-card cat-animals\">\n                    <div class=\"cat-title\">🎹 4. Tuşlu Çalgılar</div>\n                    <div class=\"cat-item\">🎼 <strong>Örnekler:</strong> Piyano, Melodika, Org, Akordeon</div>\n                    <div class=\"cat-item\">✨ <strong>Özellik:</strong> Siyah ve beyaz tuşlara basılarak ses elde edilir.</div>\n                  </div>\n                </div>\n              ",
+                "try_box": {
+                  "question": "Okulumuzda müzik derslerinde en çok çaldığımız melodika hangi iki ailenin birleşimidir?",
+                  "answer": "Melodika hem üflemeli (hortumuna üfleriz) hem de tuşlu (tuşlarına basarız) bir çalgıdır!"
+                }
+              }
+            ]
+          },
+          {
+            "id": "muz_t2_2",
+            "title": "Kendi Ritim Çalgımı Yapıyorum",
+            "page": 34,
+            "desc": "Geri dönüşüm malzemeleriyle evde ritim aletleri tasarlama ve ritim kalıpları.",
+            "badge": "Ritim Atölyesi",
+            "tasks": [
+              {
+                "q": "Boş bir pet şişenin içine mercimek veya pirinç koyup salladığımızda hangi çalgıyı elde ederiz?",
+                "options": [
+                  "Marakas",
+                  "Gitar",
+                  "Keman",
+                  "Ney"
+                ],
+                "ans": 0,
+                "hint": "İçinde boncuk veya tohum olan sallamalı vurmalı çalgıya marakas denir."
+              },
+              {
+                "q": "Müzikte düzenli ve eşit aralıklarla tekrar eden vuruşlara ne denir?",
+                "options": [
+                  "Melodi",
+                  "Ritim (Nabız)",
+                  "Sözlük",
+                  "Solfej"
+                ],
+                "ans": 1,
+                "hint": "Kalp atışımız gibi düzenli vuruşlara ritim denir."
+              },
+              {
+                "q": "İki tahta kaşığı birbirine vurarak ritim tuttuğumuz geleneksel halk çalgımız hangisidir?",
+                "options": [
+                  "Piyano",
+                  "Trompet",
+                  "Tahta kaşıklar",
+                  "Flüt"
+                ],
+                "ans": 2,
+                "hint": "Halk oyunlarımızda tahta kaşıklar ritim çalgısı olarak kullanılır."
+              }
+            ],
+            "reading_pages": [
+              {
+                "type": "birlikte_ogrenelim",
+                "badge": "✂️ GERİ DÖNÜŞÜM RİTİM ATÖLYESİ",
+                "title": "Evdeki Malzemelerle Müzik Yap!",
+                "content": "Müzik yapmak için pahalı enstrümanlara ihtiyacımız yok! Doğadaki ve evdeki birçok nesne harika bir ritim aletine dönüşebilir.",
+                "key_points": [
+                  "🪇 <strong>Ev Yapımı Marakas:</strong> Küçük bir yoğurt kabına veya pet şişeye kuru nohut/fasulye koyup kapağını bantlayalım.",
+                  "🥢 <strong>Ritim Çubukları:</strong> Kurşun kalemler veya ahşap mutfak kaşıkları.",
+                  "🥁 <strong>Masa Davulu:</strong> Boş bir dondurma kutusunun üzerine balon gererek mini davul yapabiliriz."
+                ],
+                "try_box": {
+                  "question": "Vücudumuzla nasıl ritim çalgısı yapabiliriz?",
+                  "answer": "El çırpma (alkış), dizlerimize vurma, ayaklarımızı yere vurma ve parmak şıklatma beden perküsyonu oluşturur!"
+                }
+              }
+            ]
+          }
+        ],
+        "exam": {
+          "title": "2. Ünite Değerlendirme Sınavı (Çalgılar ve Ritim Dünyası)",
+          "book_ref": "MEB Müzik 3 s. 39",
+          "questions": [
+            {
+              "q": "Aşağıdaki çalgılardan hangisi TELLİ çalgılar grubunda yer alır?",
+              "options": [
+                "Ney",
+                "Bağlama",
+                "Davul",
+                "Zurna"
+              ],
+              "ans": 1,
+              "hint": "Bağlama Türk halk müziğimizin en önemli telli çalgısıdır."
+            },
+            {
+              "q": "Piyano hangi çalgı türüne örnektir?",
+              "options": [
+                "Üflemeli çalgı",
+                "Vurmalı çalgı",
+                "Tuşlu çalgı",
+                "Telli çalgı"
+              ],
+              "ans": 2,
+              "hint": "Piyano tuşlara basılarak çalınır."
+            },
+            {
+              "q": "Müziğin kalbi sayılan düzenli vuruşlara ne ad verilir?",
+              "options": [
+                "Ritim",
+                "Hız",
+                "Gürlük",
+                "Dize"
+              ],
+              "ans": 0,
+              "hint": "Düzenli kalp atışı gibi vuruşlara ritim denir."
+            },
+            {
+              "q": "Geleneksel davulumuz hangi çalgı ailesine aittir?",
+              "options": [
+                "Üflemeli",
+                "Telli",
+                "Elektronik",
+                "Vurmalı"
+              ],
+              "ans": 3,
+              "hint": "Davula tokmakla vurularak ses çıkarılır."
+            },
+            {
+              "q": "Aşağıdakilerden hangisi ÜFLEMELİ bir çalgıdır?",
+              "options": [
+                "Keman",
+                "Gitar",
+                "Flüt",
+                "Def"
+              ],
+              "ans": 2,
+              "hint": "Flüt üflenerek çalınır."
+            },
+            {
+              "q": "Ellerimizi birbirine vurarak oluşturduğumuz ritme ne denir?",
+              "options": [
+                "Nefes",
+                "Alkış (El çırpma)",
+                "Ezgi",
+                "Solfej"
+              ],
+              "ans": 1,
+              "hint": "El çırparak alkış ritmi oluştururuz."
+            }
+          ]
+        }
+      },
+      {
+        "id": "muz_u3",
+        "title": "3. ÜNİTE: Seslerin Dünyası (Hız ve Gürlük)",
+        "page_range": "s. 40 - 57",
+        "topics": [
+          {
+            "id": "muz_t3_1",
+            "title": "Uzun ve Kısa Sesler",
+            "page": 42,
+            "desc": "Seslerin süresini fark etme, uzun ve kısa sesleri ayırt etme çalışmaları.",
+            "badge": "Ses Süreleri",
+            "tasks": [
+              {
+                "q": "Gemi sireni veya tren düdüğü sesi nasıl bir sestir?",
+                "options": [
+                  "Çok kısa ve kesik bir ses",
+                  "Uzun süren ve devam eden bir ses",
+                  "Fısıltı halinde duyulmayan bir ses",
+                  "Hiç çıkmayan bir ses"
+                ],
+                "ans": 1,
+                "hint": "Gemi sireni 'Düüüüüüüt' diye uzun süre çalar."
+              },
+              {
+                "q": "Ağaçkakanın ağaca vurması veya saatin saniyesinin sesi (tık) nasıl bir sestir?",
+                "options": [
+                  "Uzun bir ses",
+                  "Görünmez bir ses",
+                  "Kısa ve kesik bir ses",
+                  "Sonsuz bir ses"
+                ],
+                "ans": 2,
+                "hint": "Saat tıkırtısı anlık ve çok kısa bir sestir."
+              },
+              {
+                "q": "Müzikte seslerin uzunluğunu ve kısalığını hangi işaretlerle gösteririz?",
+                "options": [
+                  "Rakamlarla",
+                  "Noktalama işaretleriyle",
+                  "Renklerle",
+                  "Notalarla ve süre değerleriyle"
+                ],
+                "ans": 3,
+                "hint": "Notalar sesin hem perdesini hem de ne kadar süreceğini gösterir."
+              }
+            ],
+            "reading_pages": [
+              {
+                "type": "birlikte_ogrenelim",
+                "badge": "⏱️ SESLERİN SÜRESİ",
+                "title": "Uzun Ses mi, Kısa Ses mi?",
+                "content": "Çevremizdeki seslerin süresi birbirinden farklıdır. Bazı sesler uzayıp giderken bazıları bir anda biter.",
+                "key_points": [
+                  "📢 <strong>Uzun Sesler:</strong> Ambulans sireni, kurt uluması, uzayan tren düdüğü, kemanın uzayan yayı.",
+                  "💧 <strong>Kısa Sesler:</strong> Su damlaması (tıp), kapı çalması (tak), topun yere sekmesi, saat tik-tağı."
+                ],
+                "try_box": {
+                  "question": "Kendi sesinle 'Aaaa' sesini önce çok uzun, sonra arka arkaya kısa kısa (A! A! A!) çıkarabilir misin?",
+                  "answer": "Harika! Uzun ses kesintisiz nefes ister, kısa ses ise nefesi hemen keserek oluşturulur."
+                }
+              }
+            ]
+          },
+          {
+            "id": "muz_t3_2",
+            "title": "Kalın ve İnce Sesler",
+            "page": 44,
+            "desc": "Doğadaki ve müzikteki kalın (pes) ve ince (tiz) sesleri ayırt etme.",
+            "badge": "Ses Perdeleri",
+            "tasks": [
+              {
+                "q": "Küçük bir kuşun cıvıltısı veya kedinin miyavlaması nasıl bir sestir?",
+                "options": [
+                  "İnce (Tiz) ses",
+                  "Kalın (Pes) ses",
+                  "Görünmez ses",
+                  "Boğuk ses"
+                ],
+                "ans": 0,
+                "hint": "Kuş cıvıltısı incecik (tiz) bir sestir."
+              },
+              {
+                "q": "Büyük bir ayının kükremesi veya aslanın sesi nasıl bir sestir?",
+                "options": [
+                  "İnce (Tiz) ses",
+                  "Kalın (Pes) ses",
+                  "Sessiz ses",
+                  "Fısıltı"
+                ],
+                "ans": 1,
+                "hint": "Büyük ve heybetli hayvanların sesleri kalındır (pes)."
+              },
+              {
+                "q": "Müzikte ince seslere ne ad verilir?",
+                "options": [
+                  "Pes ses",
+                  "Kaba ses",
+                  "Tiz ses",
+                  "Ağır ses"
+                ],
+                "ans": 2,
+                "hint": "Müzikte ince seslere 'tiz', kalın seslere 'pes' denir."
+              }
+            ],
+            "reading_pages": [
+              {
+                "type": "birlikte_ogrenelim",
+                "badge": "🎶 İNCE VE KALIN SESLER",
+                "title": "Tiz ve Pes Sesler",
+                "content": "Sesin yüksekliği onun ince mi yoksa kalın mı olduğunu belirler. Müzikte ince seslere <strong>TİZ</strong>, kalın seslere <strong>PES</strong> denir.",
+                "key_points": [
+                  "🐥 <strong>İnce (Tiz) Sesler:</strong> Kuş cıvıltısı, sivrisinek vızıltısı, zil sesi, kemanın ince teli.",
+                  "🐻 <strong>Kalın (Pes) Sesler:</strong> Dev bir ayının homurtusu, gök gürültüsü, büyük davul sesi, kontrbas."
+                ],
+                "try_box": {
+                  "question": "Annemizin sesi ile babamızın sesi karşılaştırıldığında hangisi daha incedir?",
+                  "answer": "Genellikle kadın ve çocuk sesleri daha ince (tiz), erkek sesleri ise daha kalındır (pes)!"
+                }
+              }
+            ]
+          },
+          {
+            "id": "muz_t3_3",
+            "title": "Müzikte Hız ve Gürlük",
+            "page": 47,
+            "desc": "Hızlı-yavaş tempolar ve kuvvetli-hafif ses gürlükleri ile şarkılara duygu katma.",
+            "badge": "Hız ve Gürlük",
+            "tasks": [
+              {
+                "q": "Ninni söylenirken nasıl bir hız ve gürlük kullanılır?",
+                "options": [
+                  "Çok hızlı ve bağıra çağıra",
+                  "Hızlı ve sert vuruşlarla",
+                  "Kulak tıkatacak kadar gürültülü",
+                  "Yavaş, yumuşak ve sakin bir sesle"
+                ],
+                "ans": 3,
+                "hint": "Ninniler bebeği uyutmak için yavaş ve hafif gürlükte söylenir."
+              },
+              {
+                "q": "Coşkulu bir 29 Ekim marşı söylenirken nasıl bir gürlük tercih edilir?",
+                "options": [
+                  "Kuvvetli, gür ve coşkulu bir sesle",
+                  "Fısıltıyla ve çok yavaş",
+                  "Uykulu ve sessiz",
+                  "Duyulmayacak derecede hafif"
+                ],
+                "ans": 0,
+                "hint": "Marşlar milletin coşkusunu yansıtmak için kuvvetli ve gür söylenir."
+              },
+              {
+                "q": "Müzikte eserin çalınma veya söylenme süratine ne denir?",
+                "options": [
+                  "Gürlük",
+                  "Hız (Tempo)",
+                  "Boya",
+                  "Dize"
+                ],
+                "ans": 1,
+                "hint": "Müziğin ne kadar hızlı veya yavaş aktığını belirten kavrama hız (tempo) denir."
+              }
+            ],
+            "reading_pages": [
+              {
+                "type": "birlikte_ogrenelim",
+                "badge": "🚀 TEMPO VE DİNAMİKLER",
+                "title": "Müziğin Hızı ve Gücü",
+                "content": "Müzik de hayat gibidir; bazen neşeyle koşar (hızlı), bazen dinlenir (yavaş). Bazen fısıldar (hafif), bazen gürler (kuvvetli)!",
+                "key_points": [
+                  "🐢 <strong>Yavaş Hız:</strong> Kaplumbağa yürüyüşü gibi sakin şarkılar ve ninniler.",
+                  "🐇 <strong>Hızlı Hız:</strong> Tavşan koşusu gibi neşeli oyun havaları ve danslar.",
+                  "🤫 <strong>Hafif Gürlük:</strong> Gizli bir sır anlatır gibi yumuşak sesler.",
+                  "🦁 <strong>Kuvvetli Gürlük:</strong> Törenlerdeki güçlü marşlar ve zafer şarkıları."
+                ],
+                "try_box": {
+                  "question": "Yağmurun yağışını düşünün: Önce tek tek çiseler, sonra sağanağa döner. Müzikte bu nasıl anlatılır?",
+                  "answer": "Hafif ve yavaş seslerle başlanıp, giderek daha kuvvetli ve hızlı ritimlere geçilerek fırtına hissettirilir!"
+                }
+              }
+            ]
+          }
+        ],
+        "exam": {
+          "title": "3. Ünite Değerlendirme Sınavı (Seslerin Dünyası)",
+          "book_ref": "MEB Müzik 3 s. 57",
+          "questions": [
+            {
+              "q": "Müzikte ince seslere verilen ad hangisidir?",
+              "options": [
+                "Pes",
+                "Tiz",
+                "Durgun",
+                "Ağır"
+              ],
+              "ans": 1,
+              "hint": "İnce sesler tiz olarak adlandırılır."
+            },
+            {
+              "q": "Gök gürültüsü nasıl bir sestir?",
+              "options": [
+                "İnce ve zayıf",
+                "Kısa ve fısıltılı",
+                "Kalın ve kuvvetli",
+                "Sessiz"
+              ],
+              "ans": 2,
+              "hint": "Gök gürültüsü kalın (pes) ve kuvvetli bir sestir."
+            },
+            {
+              "q": "Bebeği uyutmak için söylenen ninniler hangi hızda söylenmelidir?",
+              "options": [
+                "Yavaş ve sakin",
+                "Çok hızlı",
+                "Koşar adım",
+                "Korkutucu"
+              ],
+              "ans": 0,
+              "hint": "Ninniler sakin ve yavaş tempoda söylenir."
+            },
+            {
+              "q": "Bir keman yayının uzun süre çekilmesiyle hangi ses türü elde edilir?",
+              "options": [
+                "Kısa ses",
+                "Kesik ses",
+                "Görünmez ses",
+                "Uzun ses"
+              ],
+              "ans": 3,
+              "hint": "Yay boyunca devam eden ses uzun sestir."
+            },
+            {
+              "q": "Müziğin ses seviyesine (kuvvetli veya hafif olmasına) ne ad verilir?",
+              "options": [
+                "Hız",
+                "Ritim",
+                "Gürlük",
+                "Söz"
+              ],
+              "ans": 2,
+              "hint": "Sesin şiddetine gürlük denir."
+            },
+            {
+              "q": "Küçük bir farenin sesi ile kocaman bir filin sesi karşılaştırıldığında farenin sesi nasıldır?",
+              "options": [
+                "Daha kalındır",
+                "Daha incedir (tiz)",
+                "Aynıdır",
+                "Duyulmazdır"
+              ],
+              "ans": 1,
+              "hint": "Küçük canlılar daha ince (tiz) sesler çıkarır."
+            }
+          ]
+        }
+      },
+      {
+        "id": "muz_u4",
+        "title": "4. ÜNİTE: Müzik ve Hareket (Dans ve Oyun)",
+        "page_range": "s. 58 - 69",
+        "topics": [
+          {
+            "id": "muz_t4_1",
+            "title": "Dans Ediyorum (Ritim ve Hareket)",
+            "page": 60,
+            "desc": "Müzik eşliğinde bedensel hareketler, ritme uygun adımlar ve koordinasyon.",
+            "badge": "Ritim ve Dans",
+            "tasks": [
+              {
+                "q": "Müziğin ritmine uygun olarak vücudumuzu hareket ettirmeye ne denir?",
+                "options": [
+                  "Kitap okumak",
+                  "Dans etmek",
+                  "Resim çizmek",
+                  "Ders çalışmak"
+                ],
+                "ans": 1,
+                "hint": "Ritimle uyumlu bedensel hareketlere dans denir."
+              },
+              {
+                "q": "Müzik hızlandığında dans adımlarımız nasıl değişmelidir?",
+                "options": [
+                  "Hareketsiz durmalıyız",
+                  "Daha da yavaşlamalıyız",
+                  "Müziğe uyarak adımlarımızı hızlandırmalıyız",
+                  "Gözlerimizi kapatıp beklemeliyiz"
+                ],
+                "ans": 2,
+                "hint": "Dans daima müziğin temposunu ve hızını takip eder."
+              },
+              {
+                "q": "Dans etmek çocuklara hangi yönden fayda sağlar?",
+                "options": [
+                  "Sadece yorulmalarını sağlar",
+                  "Hiçbir faydası yoktur",
+                  "Uykusuz bırakır",
+                  "Beden koordinasyonunu ve ritim duygusunu geliştirir"
+                ],
+                "ans": 3,
+                "hint": "Dans bedensel koordinasyonu, dengeyi ve mutluluğu artırır."
+              }
+            ],
+            "reading_pages": [
+              {
+                "type": "birlikte_ogrenelim",
+                "badge": "💃 MÜZİK VE HAREKET",
+                "title": "Bedenimiz Müziğin Aynasıdır!",
+                "content": "Neşeli bir müzik duyduğumuzda yerimizde duramayız! Ayaklarımız ritim tutar, başımız sallanır. Müzikle hareket etmek bedenimizi güçlendirir ve bize neşe verir.",
+                "key_points": [
+                  "Müziğin vuruşlarına göre adım atmak ritim duygusunu geliştirir.",
+                  "Grup halinde dans etmek iş birliği ve arkadaşlığı pekiştirir.",
+                  "Dans ederken çevremizdeki arkadaşlarımıza çarpmamaya dikkat ederiz."
+                ],
+                "try_box": {
+                  "question": "Yavaş bir müzik çalarken hızlı zıplayabilir miyiz?",
+                  "answer": "Zıplayabiliriz ama müziğin ritmine uymaz! Müzikle uyumlu olmak için müzik yavaşladığında adımlarımızı da süzülerek yavaşlatmalıyız."
+                }
+              }
+            ]
+          },
+          {
+            "id": "muz_t4_2",
+            "title": "Geleneksel Türk Halk Dansları",
+            "page": 64,
+            "desc": "Kültürel zenginliğimiz olan Halay, Horon, Zeybek gibi halk oyunlarımızın özellikleri.",
+            "badge": "Halk Dansları",
+            "tasks": [
+              {
+                "q": "Karadeniz bölgesine özgü, kemençe eşliğinde hızlı ve coşkulu adımlarla oynanan halk oyunumuz hangisidir?",
+                "options": [
+                  "Horon",
+                  "Zeybek",
+                  "Halay",
+                  "Bar"
+                ],
+                "ans": 0,
+                "hint": "Karadeniz'in dalgaları gibi kıpır kıpır oynanan oyun Horon'dur."
+              },
+              {
+                "q": "Ege bölgesine özgü, yiğitlik ve cesareti anlatan, ağır ve asil adımlarla oynanan oyun hangisidir?",
+                "options": [
+                  "Horon",
+                  "Zeybek",
+                  "Kaşık havası",
+                  "Çayda Çıra"
+                ],
+                "ans": 1,
+                "hint": "Efe ve zeybeklerin kolları kartal gibi açarak oynadığı oyun Zeybek'tir."
+              },
+              {
+                "q": "El ele, omuz omuza tutuşularak birlik ve beraberlik içinde oynanan halk oyunumuz hangisidir?",
+                "options": [
+                  "Solo dans",
+                  "Bale",
+                  "Halay",
+                  "Vals"
+                ],
+                "ans": 2,
+                "hint": "Anadolu'da düğünlerde ve bayramlarda el ele çekilen oyun Halay'dır."
+              }
+            ],
+            "reading_pages": [
+              {
+                "type": "birlikte_ogrenelim",
+                "badge": "🇹🇷 KÜLTÜR HAZİNEMİZ",
+                "title": "Yurdumuzun Renkli Halk Oyunları",
+                "content": "Halk oyunlarımız, milletimizin sevinçlerini, kahramanlıklarını ve doğayla olan bağını yansıtan eşsiz kültürel mirasımızdır.",
+                "model_html": "\n                <div class=\"cat-comparison-grid\">\n                  <div class=\"cat-card cat-plants\">\n                    <div class=\"cat-title\">🌊 Karadeniz: Horon</div>\n                    <div class=\"cat-item\">🐟 Kemençe ve tulum eşliğinde Karadeniz'in hırçın dalgaları ve hamsisi gibi hızla titreyerek oynanır.</div>\n                  </div>\n                  <div class=\"cat-card cat-animals\">\n                    <div class=\"cat-title\">🦅 Ege Bölgesi: Zeybek</div>\n                    <div class=\"cat-item\">🌾 Davul zurna eşliğinde, kollar kartal gibi iki yana açılarak yiğitçe ve vakur adımlarla oynanır.</div>\n                  </div>\n                  <div class=\"cat-card cat-plants\">\n                    <div class=\"cat-title\">🤝 İç & Doğu Anadolu: Halay</div>\n                    <div class=\"cat-item\">👫 Birlik ve beraberliğin simgesidir. Parmaklar ve omuzlar birbirine kenetlenerek ritimle çekilir.</div>\n                  </div>\n                </div>\n              ",
+                "try_box": {
+                  "question": "Halk oyunları oynarken giyilen özel renkli kıyafetlere ne ad verilir?",
+                  "answer": "Yöresel halk oyunu kostümleri (geleneksel giysiler) denir. Her bölgenin kıyafeti ve başlığı birbirinden farklı ve çok renklidir!"
+                }
+              }
+            ]
+          }
+        ],
+        "exam": {
+          "title": "4. Ünite Değerlendirme Sınavı (Müzik ve Hareket)",
+          "book_ref": "MEB Müzik 3 s. 69",
+          "questions": [
+            {
+              "q": "Kemençe eşliğinde oynanan Karadeniz halk oyunu hangisidir?",
+              "options": [
+                "Zeybek",
+                "Horon",
+                "Sirtaki",
+                "Tango"
+              ],
+              "ans": 1,
+              "hint": "Kemençeyle Karadeniz'de Horon oynanır."
+            },
+            {
+              "q": "Zeybek oyunu hangi bölgemize aittir?",
+              "options": [
+                "Karadeniz Bölgesi",
+                "Marmara Bölgesi",
+                "Ege Bölgesi",
+                "Güneydoğu Anadolu Bölgesi"
+              ],
+              "ans": 2,
+              "hint": "Zeybek Ege yöremizin efelerine özgü oyundur."
+            },
+            {
+              "q": "Halay çekerken en başta mendil sallayan kişiye ne ad verilir?",
+              "options": [
+                "Halay Başı",
+                "Solist",
+                "Hakem",
+                "Kaptan"
+              ],
+              "ans": 0,
+              "hint": "Halayı başlatan ve mendil sallayan kişiye Halay Başı denir."
+            },
+            {
+              "q": "Müzikli oyunların bize kazandırdığı en önemli duygu nedir?",
+              "options": [
+                "Kıskançlık ve öfke",
+                "Yalnızlık",
+                "Tembellik",
+                "Birlik, beraberlik ve paylaşma"
+              ],
+              "ans": 3,
+              "hint": "Birlikte oyun oynamak sevgi ve dayanışmayı artırır."
+            },
+            {
+              "q": "Hızlı bir ritim çaldığında dansçılar nasıl hareket eder?",
+              "options": [
+                "Uyuyarak",
+                "Tamamen durarak",
+                "Daha hızlı ve tempolu",
+                "Ağır çekimde"
+              ],
+              "ans": 2,
+              "hint": "Hızlı müzikte dans hareketleri de hızlanır."
+            },
+            {
+              "q": "Ellerinde tahta kaşıklarla ritim tutarak oynanan oyunlara ne denir?",
+              "options": [
+                "Horon",
+                "Kaşık Oyunları",
+                "Bale",
+                "Modern dans"
+              ],
+              "ans": 1,
+              "hint": "Konya, Silifke gibi yörelerde kaşık oyunları meşhurdur."
+            }
+          ]
+        }
+      },
+      {
+        "id": "muz_u5",
+        "title": "5. ÜNİTE: Müzik Kültürümüz ve Değerlerimiz",
+        "page_range": "s. 70 - 83",
+        "topics": [
+          {
+            "id": "muz_t5_1",
+            "title": "Müzik Kültürümüz ve Büyük Sanatçılarımız",
+            "page": 72,
+            "desc": "Barış Manço, Âşık Veysel ve kültürümüze değer katan unutulmaz müzisyenlerimiz.",
+            "badge": "Büyük Ustalar",
+            "tasks": [
+              {
+                "q": "\"Arkadaşım Eşek\", \"Ayı\", \"Gülpembe\" gibi unutulmaz çocuk şarkılarını yapan büyük sanatçımız kimdir?",
+                "options": [
+                  "Âşık Veysel",
+                  "Barış Manço",
+                  "Neşet Ertaş",
+                  "Münir Nurettin Selçuk"
+                ],
+                "ans": 1,
+                "hint": "Çocukların çok sevdiği 'Adam Olacak Çocuk' programını yapan Barış Manço'dur."
+              },
+              {
+                "q": "\"Dostlar Beni Hatırlasın\", \"Uzun İnce Bir Yoldayım\" türkülerini sazıyla söyleyen büyük halk ozanımız kimdir?",
+                "options": [
+                  "Barış Manço",
+                  "Zeki Müren",
+                  "Âşık Veysel",
+                  "Kayahan"
+                ],
+                "ans": 2,
+                "hint": "Gözleri görmese de gönül gözüyle türküler yakan ozanımız Âşık Veysel'dir."
+              },
+              {
+                "q": "\"Bozkırın Tezenesi\" olarak tanınan ve Türkmen türkülerini bağlamasıyla ölümsüzleştiren ozanımız kimdir?",
+                "options": [
+                  "Barış Manço",
+                  "İlhan Şeşen",
+                  "Fikret Kızılok",
+                  "Neşet Ertaş"
+                ],
+                "ans": 3,
+                "hint": "Bozkırın Tezenesi unvanıyla tanınan büyük usta Neşet Ertaş'tır."
+              }
+            ],
+            "reading_pages": [
+              {
+                "type": "birlikte_ogrenelim",
+                "badge": "⭐ MÜZİK ÇINARLARIMIZ",
+                "title": "Gönüllerde Yaşayan Ustalar",
+                "content": "Ülkemizin müziği yüzyıllar boyunca sevgi, barış ve kardeşlik tohumları eken büyük ustalarla zenginleşmiştir.",
+                "key_points": [
+                  "🎸 <strong>Barış Manço:</strong> Dünyayı gezen, çocukları çok seven ve bize şarkılarıyla öğütler veren kültür elçimizdir.",
+                  "🪕 <strong>Âşık Veysel:</strong> Sivas'ın Sivrialan köyünden tüm dünyaya sevgi ve hoşgörü mesajları yayan usta ozanımızdır.",
+                  "🌾 <strong>Neşet Ertaş:</strong> Saygıyı, alçakgönüllülüğü ve türkülerimizin samimiyetini temsil eden büyük halk sanatçımızdır."
+                ],
+                "try_box": {
+                  "question": "Barış Manço'nun 'Arkadaşım Eşek' şarkısını biliyor musun? Nakaratı nasıldı?",
+                  "answer": "'Arkadaşım eş, arkadaşım şek, arkadaşım eşek!' diyerek neşeyle söyleriz!"
+                }
+              }
+            ]
+          },
+          {
+            "id": "muz_t5_2",
+            "title": "Kendi Ezgimi Oluşturuyorum",
+            "page": 79,
+            "desc": "Basit notalar ve ritimlerle doğaçlama mini ezgiler ve melodiler besteleme.",
+            "badge": "Ezgi Atölyesi",
+            "tasks": [
+              {
+                "q": "Farklı yükseklikteki seslerin ritmik bir düzen içinde sıralanmasıyla oluşan müzik cümlesine ne denir?",
+                "options": [
+                  "Ezgi (Melodi)",
+                  "Resim",
+                  "Hikâye",
+                  "Tekerleme"
+                ],
+                "ans": 0,
+                "hint": "Akılda kalan, ıslıkla çalınabilen müzik dizisine ezgi (melodi) denir."
+              },
+              {
+                "q": "Kendi ezgimizi oluştururken hangisinden yararlanabiliriz?",
+                "options": [
+                  "Sadece sessiz kalmaktan",
+                  "Ksilofon veya melodika tuşlarından",
+                  "Gözlerimizi bağlamaktan",
+                  "Kitap okumaktan"
+                ],
+                "ans": 1,
+                "hint": "Ksilofon veya melodikadaki renkli tuşlarla kolayca kendi melodimizi bulabiliriz."
+              },
+              {
+                "q": "Yeni bir müzik eseri ortaya çıkaran, besteleyen kişiye ne ad verilir?",
+                "options": [
+                  "Dinleyici",
+                  "Ressam",
+                  "Besteci (Kompozitör)",
+                  "Oyuncu"
+                ],
+                "ans": 2,
+                "hint": "Müziği üreten kişiye besteci denir."
+              }
+            ],
+            "reading_pages": [
+              {
+                "type": "birlikte_ogrenelim",
+                "badge": "🎼 KÜÇÜK BESTECİLER",
+                "title": "Sen de Bir Melodi Bestele!",
+                "content": "Müzik yaratıcılığımızı kullanmanın en güzel yoludur. Aklına gelen neşeli bir cümleye bir melodi uydurabilir, bir ninni veya ritmik bir şarkı üretebilirsin!",
+                "key_points": [
+                  "1. Bir duygu seç: Sevinç, heyecan veya huzur.",
+                  "2. 3 veya 4 nota seç (Örneğin: Do - Mi - Sol).",
+                  "3. Bu notaları farklı ritimlerle çal veya mırıldan!",
+                  "4. Beğendiğin melodiyi tekrar ederek kalıcı hale getir."
+                ],
+                "try_box": {
+                  "question": "Yağmur yağarken cama vuran damlaların ritmine göre bir şarkı uydurabilir misin?",
+                  "answer": "'Tıpır tıpır yağmur yağıyor, pencereme konuyor...' diyerek kendi yağmur şarkını oluşturabilirsin!"
+                }
+              }
+            ]
+          }
+        ],
+        "exam": {
+          "title": "5. Ünite Değerlendirme Sınavı (Müzik Kültürümüz ve Değerlerimiz)",
+          "book_ref": "MEB Müzik 3 s. 82 - 83",
+          "questions": [
+            {
+              "q": "\"Arkadaşım Eşek\" şarkısıyla tanınan büyük sanatçımız kimdir?",
+              "options": [
+                "Âşık Veysel",
+                "Barış Manço",
+                "Neşet Ertaş",
+                "Münir Nurettin"
+              ],
+              "ans": 1,
+              "hint": "Barış Manço çocukların sevgilisidir."
+            },
+            {
+              "q": "Müzikte akılda kalan, mırıldanabildiğimiz ses dizisine ne ad verilir?",
+              "options": [
+                "Sözlük",
+                "Kıta",
+                "Ezgi (Melodi)",
+                "Harf"
+              ],
+              "ans": 2,
+              "hint": "Müziğin şarkı sözü olmaksızın çalınan ana melodisine ezgi denir."
+            },
+            {
+              "q": "Yeni bir müzik bestesi yapan kişiye ne ad verilir?",
+              "options": [
+                "Besteci",
+                "Şair",
+                "Ressam",
+                "Oyuncu"
+              ],
+              "ans": 0,
+              "hint": "Müziği besteleyen sanatçıya besteci denir."
+            },
+            {
+              "q": "Âşık Veysel türkülerini hangi enstrümanla çalmıştır?",
+              "options": [
+                "Piyano",
+                "Trompet",
+                "Bateri",
+                "Bağlama (Saz)"
+              ],
+              "ans": 3,
+              "hint": "Âşık Veysel bağlamasıyla türkülerini söylemiştir."
+            },
+            {
+              "q": "Müzik dinlemek ve müzik yapmak insanı nasıl hissettirir?",
+              "options": [
+                "Yalnız ve huysuz",
+                "Hasta ve yorgun",
+                "Mutlu, huzurlu ve enerjik",
+                "Korkmuş"
+              ],
+              "ans": 2,
+              "hint": "Müzik ruhun gıdasıdır; mutluluk ve huzur verir."
+            },
+            {
+              "q": "Aşağıdakilerden hangisi millî ve manevi duygularımızı güçlendiren bir müzik türüdür?",
+              "options": [
+                "Anlamsız gürültüler",
+                "Kahramanlık türküleri ve millî marşlar",
+                "Sadece yabancı reklam müzikleri",
+                "Korkutucu ses efektleri"
+              ],
+              "ans": 1,
+              "hint": "Türkülerimiz ve marşlarımız birliğimizi güçlendirir."
+            }
+          ]
+        }
+      }
+    ],
+    "final_exam": {
+      "title": "1. Dönem Müzik Büyük Başarı Sınavı",
+      "book_ref": "MEB 3. Sınıf Müzik Tüm Dönem Değerlendirmesi",
+      "questions": [
+        {
+          "q": "İstiklâl Marşı'mızın şairi kimdir?",
+          "options": [
+            "Osman Zeki Üngör",
+            "Atatürk",
+            "Mehmet Âkif Ersoy",
+            "Ziya Gökalp"
+          ],
+          "ans": 2,
+          "hint": "Mehmet Âkif Ersoy İstiklâl Marşı'mızın şairidir."
+        },
+        {
+          "q": "Gitar ve bağlama hangi çalgı grubuna girer?",
+          "options": [
+            "Telli çalgılar",
+            "Vurmalı çalgılar",
+            "Üflemeli çalgılar",
+            "Tuşlu çalgılar"
+          ],
+          "ans": 0,
+          "hint": "Telli çalgılardır."
+        },
+        {
+          "q": "Müzikte ince seslere ne ad verilir?",
+          "options": [
+            "Pes",
+            "Yavaş",
+            "Gür",
+            "Tiz"
+          ],
+          "ans": 3,
+          "hint": "İnce seslere tiz denir."
+        },
+        {
+          "q": "Karadeniz'in kemençe eşliğinde oynanan coşkulu halk oyunu hangisidir?",
+          "options": [
+            "Zeybek",
+            "Horon",
+            "Halay",
+            "Bale"
+          ],
+          "ans": 1,
+          "hint": "Horon Karadeniz oyunudur."
+        },
+        {
+          "q": "\"Arkadaşım Eşek\" şarkısının bestecisi kimdir?",
+          "options": [
+            "Âşık Veysel",
+            "Neşet Ertaş",
+            "Barış Manço",
+            "Cemal Reşit Rey"
+          ],
+          "ans": 2,
+          "hint": "Barış Manço'dur."
+        },
+        {
+          "q": "Birden fazla kişinin uyumla şarkı söylediği müzik topluluğuna ne denir?",
+          "options": [
+            "Koro",
+            "Solo",
+            "Orkestra",
+            "Grup"
+          ],
+          "ans": 0,
+          "hint": "Koro ses topluluğudur."
+        }
+      ]
+    },
+    "subtitle": "Dinle, söyle, ritmi yakala!",
+    "accent": "#20B8B0",
+    "bg_light": "#F0FDFA",
+    "badge": "12 Konu"
   }
 }

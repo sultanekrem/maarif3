@@ -21,209 +21,161 @@
 <body>
   <div id="app">
     
-    <!-- 1. SPLASH SCREEN (Karşılama & Başlangıç - Geniş Modern Sahne) -->
-    <div id="screen-splash" class="screen active">
-      <div class="splash-hero-container">
-        
-        <div class="splash-hero-header">
-          <div class="splash-ministry-badge">
-            <span>🇹🇷 T.C. MİLLÎ EĞİTİM BAKANLIĞI • 2026-2027 TÜRKİYE YÜZYILI MAARİF MODELİ</span>
+    <!-- 1. GİRİŞ / KARŞILAMA EKRANI (UX/UI Design Kit - Ekran 1) -->
+    <div id="screen-welcome" class="screen active">
+      <div class="welcome-screen-container">
+        <!-- Maskot & Logo -->
+        <div class="welcome-hero-brand">
+          <div class="welcome-mascot-wrap">
+            <img src="assets/game_logo_splash.png" class="welcome-star-mascot" alt="Maarif Yıldızı 3">
+          </div>
+          <h1 class="welcome-app-title">Maarif Yıldızı 3</h1>
+          <p class="welcome-app-tagline">Öğren • Keşfet • Parla</p>
+        </div>
+
+        <!-- 6 Ders İkonlu Rozetler Şeridi -->
+        <div class="welcome-subjects-strip">
+          <div class="welcome-subj-pill pill-turkce"><span>📕</span> Türkçe</div>
+          <div class="welcome-subj-pill pill-matematik"><span>📐</span> Matematik</div>
+          <div class="welcome-subj-pill pill-hayat"><span>🌿</span> Hayat Bilgisi</div>
+          <div class="welcome-subj-pill pill-fen"><span>🔬</span> Fen Bilgisi</div>
+          <div class="welcome-subj-pill pill-ingilizce"><span>📙</span> İngilizce</div>
+          <div class="welcome-subj-pill pill-muzik"><span>🎵</span> Müzik</div>
+        </div>
+
+        <!-- Neşeli Okul İllüstrasyon Sahnesi -->
+        <div class="welcome-illustration-card">
+          <div class="welcome-art-hills">
+            <span class="art-sun">☀️</span>
+            <span class="art-cloud cloud-1">☁️</span>
+            <span class="art-cloud cloud-2">☁️</span>
+            <span class="art-school">🏫</span>
+            <span class="art-tree">🌳</span>
+            <span class="art-tree tree-2">🌲</span>
+            <span class="art-rainbow">🌈</span>
           </div>
         </div>
 
-        <div class="splash-hero-center">
-          <div class="splash-logo-wrapper">
-            <img src="assets/maarif_logo.svg" class="splash-hero-logo" alt="Maarif Yıldızı 3">
-          </div>
-          <h1 class="splash-hero-title">Maarif Yıldızı 3</h1>
-          <p class="splash-hero-subtitle">3. Sınıf 1. Dönem Resmî MEB Ders Kitapları • 3 Adımlı Görsel Hap Bilgiler • Tema Başarı Sınavları</p>
-        </div>
-
-        <!-- 5 Resmî MEB Dersi Kartları (Geniş Vitrin) -->
-        <div class="splash-curriculum-showcase">
-          <div class="showcase-card showcase-turkce">
-            <div class="showcase-icon">📖</div>
-            <div class="showcase-info">
-              <strong>Türkçe</strong>
-              <span>20 Konu • 4 Tema</span>
-            </div>
-          </div>
-          <div class="showcase-card showcase-math">
-            <div class="showcase-icon">📐</div>
-            <div class="showcase-info">
-              <strong>Matematik</strong>
-              <span>18 Konu • 4 Tema</span>
-            </div>
-          </div>
-          <div class="showcase-card showcase-sci">
-            <div class="showcase-icon">🔬</div>
-            <div class="showcase-info">
-              <strong>Fen Bilimleri</strong>
-              <span>11 Konu • 4 Tema</span>
-            </div>
-          </div>
-          <div class="showcase-card showcase-life">
-            <div class="showcase-icon">🌱</div>
-            <div class="showcase-info">
-              <strong>Hayat Bilgisi</strong>
-              <span>9 Konu • 2 Tema</span>
-            </div>
-          </div>
-          <div class="showcase-card showcase-eng">
-            <div class="showcase-icon">🔤</div>
-            <div class="showcase-info">
-              <strong>İngilizce</strong>
-              <span>11 Konu • 3 Tema</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Özellikler Şeridi -->
-        <div class="splash-features-bar">
-          <div class="feature-item">
-            <span class="f-icon">💡</span>
-            <span>69 Adet 3 Adımlı Hap Bilgi</span>
-          </div>
-          <div class="feature-item">
-            <span class="f-icon">📝</span>
-            <span>17 Tema Sınavı + Büyük Final</span>
-          </div>
-          <div class="feature-item">
-            <span class="f-icon">🎓</span>
-            <span>Kişiselleştirilmiş Başarı Karnesi</span>
-          </div>
-        </div>
-
-        <!-- Başlatma ve Giriş Aksiyonları -->
-        <div class="splash-hero-actions">
-          <button id="btn-start-app" class="btn-splash-start">
-            <span class="btn-icon">🚀</span>
-            <span class="btn-text">DERSLERE BAŞLA (Giriş Yap)</span>
+        <!-- Butonlar -->
+        <div class="welcome-action-buttons">
+          <button id="btn-welcome-start" class="btn-welcome-primary">
+            <span>Başla →</span>
           </button>
-          <button id="btn-splash-profile" class="btn-splash-profile">
-            <span class="btn-icon">👤</span>
-            <span class="btn-text">Öğrenci Kaydı / Profil</span>
+          <button id="btn-welcome-parent" class="btn-welcome-secondary">
+            <span>Ebeveyn Girişi</span>
           </button>
         </div>
-
-        <div class="splash-pwa-badge">
-          <span>📱 Tablet, iPad, Akıllı Tahta & PC Uyumlu • Çevrimdışı Çalışır (PWA)</span>
-        </div>
-
       </div>
     </div>
 
-    <!-- 2. SCREEN MENU (Ana Ders Paneli & Sınıf Kumanda Merkezi) -->
+    <!-- 2. SCREEN MENU (Ana Sayfa - UX/UI Design Kit - Ekran 2) -->
     <div id="screen-menu" class="screen">
-      <!-- Üst Kumanda Barı (Belirgin Ayrılmış, Çocuk Odaklı) -->
-      <header class="app-header">
-        <div class="header-student-profile" id="header-profile-card" role="button" tabindex="0" title="Öğrenci Profilini Düzenle">
-          <div class="student-avatar-wrap">
-            <span class="student-avatar-emoji" id="header-avatar-emoji">👧</span>
-          </div>
-          <div class="student-text">
-            <div class="student-name-row">
-              <span class="student-name" id="header-student-name">Eylül Yılmaz</span>
-              <span class="edit-badge">✏️ Değiştir</span>
-            </div>
-            <div class="student-sub" id="header-student-meta">3-A • No: —</div>
+      <!-- Üst Bar: Merhaba + Avatar + Yıldız Puanı -->
+      <header class="home-top-bar">
+        <div class="home-user-greeting" id="header-profile-card" role="button" tabindex="0">
+          <div class="home-avatar-circle" id="header-avatar-emoji">👧</div>
+          <div class="home-greeting-texts">
+            <h2 class="home-greeting-title">Merhaba!</h2>
+            <p class="home-greeting-sub">Bugün ne öğrenmek istersin?</p>
           </div>
         </div>
 
-        <div class="header-stats">
-          <div class="stat-pill stars-pill">
-            <span class="pill-icon">⭐</span>
-            <span id="menu-stars" class="pill-value">0</span>
-            <span class="pill-label">Yıldız</span>
+        <div class="home-top-actions">
+          <div class="home-star-pill">
+            <span class="star-icon">⭐</span>
+            <span id="menu-stars" class="star-num">120</span>
           </div>
-          <div class="stat-pill score-pill">
-            <span class="pill-icon">🏆</span>
-            <span id="menu-score" class="pill-value">0</span>
-            <span class="pill-label">Puan</span>
-          </div>
-        </div>
-
-        <div class="header-actions">
-          <button id="btn-kumbara" class="action-circle-btn kumbara-circle-btn" title="Yıldız Kumbarası (Pekiştirme Soruları)">
+          <button id="btn-kumbara" class="home-icon-circle-btn" title="Yıldız Kumbarası">
             <span>🧠</span>
             <span id="kumbara-counter-badge" class="kumbara-badge hidden">0</span>
           </button>
-          <button id="btn-dyslexia" class="action-circle-btn" title="Kolay Okuma & Disleksi Modu">👓</button>
-          <button id="btn-sound" class="action-circle-btn" title="Ses Aç/Kapat">🔊</button>
-          <button id="btn-badges-nav" class="action-circle-btn" title="Başarılar & Rozetler">🏅</button>
+          <button id="btn-sound" class="home-icon-circle-btn" title="Ses Aç/Kapat">🔊</button>
         </div>
       </header>
 
-      <!-- Ana İçerik Konteyneri -->
-      <main class="menu-main-content">
-        <div class="section-title-wrap">
-          <div>
-            <h2 class="section-heading">1. Dönem Dersleri & Üniteler</h2>
-            <p class="section-subheading">Çalışmak istediğin ders kitabını seç, konuları bitir ve ünite sınavıyla kendini dene!</p>
+      <!-- Ana İçerik Kaydırma Alanı -->
+      <main class="home-main-scroll">
+        <!-- Bugünkü Görev Kartı (Featured Daily Quest) -->
+        <div class="daily-quest-card" id="daily-quest-card">
+          <div class="quest-content-left">
+            <span class="quest-pill-tag">Bugünkü Görev</span>
+            <div class="quest-subject-line">
+              <span class="quest-subj-icon" id="quest-subj-icon">📐</span>
+              <strong class="quest-subj-name" id="quest-subj-name">Matematik</strong>
+            </div>
+            <p class="quest-desc" id="quest-desc">Çarpma işlemiyle tanışalım.</p>
           </div>
-          <div class="term-tag">2026 - 2027 EĞİTİM ÖĞRETİM YILI</div>
+          <button id="btn-daily-quest" class="btn-quest-start">Hemen Başla →</button>
         </div>
 
-        <!-- 4 Ana Ders Kartı Grid -->
-        <div class="subjects-grid" id="subjects-grid-container">
-          <!-- JS tarafından doldurulur -->
+        <!-- Derslerim Başlığı -->
+        <div class="home-section-head">
+          <h3 class="home-section-title">Derslerim</h3>
         </div>
-        <!-- 👑 DÖNEMİN BÜYÜK SINAVI: 4 DERS GENEL DEĞERLENDİRME BANNER'I -->
+
+        <!-- 2x3 Ders Kartları Izgarası (6 Ders) -->
+        <div class="subjects-grid-v2" id="subjects-grid-container">
+          <!-- JS tarafından 6 ders kartı doldurulur: Türkçe, Matematik, Hayat Bilgisi, Fen Bilgisi, İngilizce, Müzik -->
+        </div>
+
+        <!-- 👑 6 Ders Genel Değerlendirme Büyük Sınav Banner'ı -->
         <div class="grand-general-exam-banner" id="grand-exam-banner">
           <div class="grand-banner-content">
             <div class="grand-banner-left">
-              <span class="grand-badge">👑 1. DÖNEM BEŞ DERS GENEL BAŞARI SINAVI</span>
+              <span class="grand-badge">👑 6 DERS BÜYÜK BAŞARI SINAVI</span>
               <h3 class="grand-title">3. Sınıf MEB Maarif Modeli Genel Değerlendirme Sınavı</h3>
-              <p class="grand-sub">Türkçe, Matematik, Fen Bilimleri, Hayat Bilgisi ve İngilizce — Tüm 69 resmî kazanımı kapsayan büyük dönem sınavı! Kendini sına ve karne al!</p>
+              <p class="grand-sub">Türkçe, Matematik, Fen, Hayat Bilgisi, İngilizce ve Müzik — Tüm kazanımları kapsayan dönem sınavı!</p>
             </div>
             <button id="btn-start-general-exam" class="btn-grand-exam-action">
-              <span>Genel Sınavı Başlat</span>
-              <span>🚀</span>
+              <span>Sınava Başla 🚀</span>
             </button>
           </div>
         </div>
 
-
-        <!-- Sınıf & Öğrenci Başarı Paneli (Gelişim Özeti - Alta Sabitlenmiş) -->
+        <!-- Başarı Raporu Özeti -->
         <div class="classroom-summary-card">
           <div class="summary-left">
-            <span class="summary-badge">🎓 3. SINIF GELİŞİM RAPORU (2026-2027)</span>
-            <h3 class="summary-title" id="class-summary-title">69 Resmî MEB Kazanımı Hazır</h3>
-            <p class="summary-desc">Her üniteyi tamamladıktan sonra "Tema Değerlendirme Sınavı" ile bilginizi ölçün, öğretmen ve veli onaylı karnenizi alın!</p>
+            <span class="summary-badge">🎓 3. SINIF GELİŞİM RAPORU</span>
+            <h3 class="summary-title" id="class-summary-title">81 Resmî MEB Kazanımı</h3>
+            <p class="summary-desc">Her konuyu tamamlayıp ünite sınavlarıyla yıldızlarınızı toplayın!</p>
           </div>
           <div class="summary-right">
             <div class="summary-stat-box">
-              <span class="stat-big-num" id="stat-completed-topics-count">0 / 69</span>
-              <span class="stat-small-lbl">Tamamlanan Konu</span>
-            </div>
-            <div class="summary-stat-box">
-              <span class="stat-big-num" id="stat-exams-taken-count">0 / 23</span>
-              <span class="stat-small-lbl">Tema Sınavı</span>
+              <span class="stat-big-num" id="stat-completed-topics-count">0 / 81</span>
+              <span class="stat-small-lbl">Tamamlanan</span>
             </div>
           </div>
         </div>
       </main>
     </div>
 
-    <!-- 3. SCREEN TOPICS (Seçilen Dersin Ünite ve Konu Ağacı) -->
+    <!-- 3. SCREEN TOPICS (Ders Ana Sayfası - UX/UI Design Kit - Ekran 3) -->
     <div id="screen-topics" class="screen">
-      <header class="topics-header">
-        <button id="btn-back-to-subjects" class="btn-back">
-          <span class="back-arrow">←</span> Dersler
+      <header class="topics-header-v2">
+        <button id="btn-back-to-subjects" class="btn-back-v2">
+          <span class="back-arrow">←</span>
         </button>
-        <div class="topics-header-title">
-          <span id="current-subject-icon" class="subject-icon-large">📐</span>
-          <div>
-            <h2 id="current-subject-title">Matematik</h2>
-            <p id="current-subject-subtitle">3. Sınıf 1. Kitap • 2026-2027 Maarif Modeli</p>
-          </div>
+        <div class="topics-header-info">
+          <h2 id="current-subject-title" class="subject-main-title">Matematik</h2>
+          <p id="current-subject-subtitle" class="subject-sub-title">Düşün, hesapla, çöz!</p>
         </div>
-        <div class="topics-header-stats">
-          <span id="subject-progress-count" class="progress-badge">0 / 18 Konu</span>
+        <div class="topics-header-right">
+          <div class="subject-star-pill">
+            <span>⭐</span>
+            <span id="subject-stars-count">120</span>
+          </div>
+          <div class="subject-astronaut-avatar" id="subject-astronaut-avatar">🧑‍🚀</div>
         </div>
       </header>
 
-      <!-- Ünite Seçici Sekmeler -->
+      <!-- Segmentli Filtre Sekmeleri: [Konular] [Oyunlar] [Başarılar] -->
+      <div class="subject-segmented-tabs">
+        <button class="seg-tab-btn active" data-seg="konular" id="seg-btn-konular">Konular</button>
+        <button class="seg-tab-btn" data-seg="oyunlar" id="seg-btn-oyunlar">Oyunlar</button>
+        <button class="seg-tab-btn" data-seg="basarilar" id="seg-btn-basarilar">Başarılar</button>
+      </div>
+
+      <!-- Ünite Seçici Sekmeler (Yatay Kayan Kapsüller) -->
       <div class="theme-tabs-nav" id="theme-tabs-container">
         <!-- JS ile üniteler doldurulur -->
       </div>
@@ -584,6 +536,120 @@
         </div>
       </div>
     </div>
+    <!-- 3c. SCREEN GAMES (Oyunlar Ekranı - UX/UI Design Kit 6 Oyun Örneği) -->
+    <div id="screen-games" class="screen">
+      <header class="games-screen-header">
+        <div class="games-header-left">
+          <button id="btn-back-from-games" class="btn-back-v2">←</button>
+          <div>
+            <h2 class="games-header-title">🎮 Ders Oyunları ve Aktiviteler</h2>
+            <p class="games-header-sub">Her ders için özel hazırlanmış eğlenceli oyunlarla öğren!</p>
+          </div>
+        </div>
+      </header>
+
+      <main class="games-cards-scroll">
+        <div class="games-showcase-grid">
+          <!-- 1. Türkçe: Kelime Dedektifi -->
+          <div class="game-showcase-card card-game-turkce" data-game="turkce">
+            <div class="game-card-top">
+              <span class="game-subj-badge">Türkçe</span>
+              <span class="game-badge-tag">Kelime Dedektifi 🔍</span>
+            </div>
+            <h3 class="game-card-title">Zıt ve Eş Anlamlı Kelimeler Avı</h3>
+            <p class="game-card-desc">Cümlelerdeki gizli kelimeleri büyütecinle keşfet, doğru anlamları yakala!</p>
+            <button class="btn-play-game" data-game-target="turkce">Oyna 🚀</button>
+          </div>
+
+          <!-- 2. Matematik: Uzay İstasyonu -->
+          <div class="game-showcase-card card-game-math" data-game="matematik">
+            <div class="game-card-top">
+              <span class="game-subj-badge">Matematik</span>
+              <span class="game-badge-tag">Uzay İstasyonu 🚀</span>
+            </div>
+            <h3 class="game-card-title">Gök Taşı & Çarpma Kalkanı</h3>
+            <p class="game-card-desc">Uzay istasyonunu korumak için hızlı çarpma ve zihinden işlem sorularını çöz!</p>
+            <button class="btn-play-game" data-game-target="matematik">Oyna 🚀</button>
+          </div>
+
+          <!-- 3. Hayat Bilgisi: Doğayı Koru -->
+          <div class="game-showcase-card card-game-life" data-game="hayatbilgisi">
+            <div class="game-card-top">
+              <span class="game-subj-badge">Hayat Bilgisi</span>
+              <span class="game-badge-tag">Doğayı Koru 🌱</span>
+            </div>
+            <h3 class="game-card-title">Geri Dönüşüm & Çevre Kahramanı</h3>
+            <p class="game-card-desc">Ağaç dik, atıkları geri dönüşüm kutularına eşle ve dünyamızı yeşert!</p>
+            <button class="btn-play-game" data-game-target="hayatbilgisi">Oyna 🚀</button>
+          </div>
+
+          <!-- 4. Fen Bilgisi: Bitki Deneyi -->
+          <div class="game-showcase-card card-game-sci" data-game="fenbilimleri">
+            <div class="game-card-top">
+              <span class="game-subj-badge">Fen Bilgisi</span>
+              <span class="game-badge-tag">Bitki Deneyi 🔬</span>
+            </div>
+            <h3 class="game-card-title">Tohumdan Fidana Yaşam Döngüsü</h3>
+            <p class="game-card-desc">Işık, su ve uygun sıcaklığı vererek kendi fidanını büyüt ve laboratuvarı tamamla!</p>
+            <button class="btn-play-game" data-game-target="fenbilimleri">Oyna 🚀</button>
+          </div>
+
+          <!-- 5. İngilizce: Word Quest -->
+          <div class="game-showcase-card card-game-eng" data-game="ingilizce">
+            <div class="game-card-top">
+              <span class="game-subj-badge">İngilizce</span>
+              <span class="game-badge-tag">Word Quest 🇬🇧</span>
+            </div>
+            <h3 class="game-card-title">Listen & Pick (Dinle ve Resmi Bul)</h3>
+            <p class="game-card-desc">Sesli İngilizce kelimeleri dinle, doğru resimli kartı bul ve puanları topla!</p>
+            <button class="btn-play-game" data-game-target="ingilizce">Oyna 🚀</button>
+          </div>
+
+          <!-- 6. Müzik: Ritim Oyunu -->
+          <div class="game-showcase-card card-game-music" data-game="muzik">
+            <div class="game-card-top">
+              <span class="game-subj-badge">Müzik</span>
+              <span class="game-badge-tag">Ritim Oyunu 🎵</span>
+            </div>
+            <h3 class="game-card-title">Ritim Tekrarı & Melodi Ustası</h3>
+            <p class="game-card-desc">Renkli ritim boncuklarına bas, çalan tempoları hafızanda tut ve tekrarla!</p>
+            <button class="btn-play-game" data-game-target="muzik">Oyna 🚀</button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- 6. SCREEN VICTORY (Kutlama / Tebrik Ekranı - UX/UI Design Kit - Ekran 6) -->
+    <div id="screen-victory" class="screen overlay">
+      <div class="victory-modal-card">
+        <div class="victory-mascot-animation">
+          <img src="assets/game_logo_splash.png" class="victory-mascot-img" alt="Tebrikler">
+          <div class="victory-confetti">🎉 ⭐ ✨ 🎈</div>
+        </div>
+
+        <h2 class="victory-heading">Tebrikler!</h2>
+        <p class="victory-subheading" id="victory-subheading">Görevi başarıyla tamamladın!</p>
+
+        <!-- Ödül Kartı -->
+        <div class="victory-rewards-container">
+          <div class="victory-reward-badge badge-xp">
+            <span class="r-icon">⭐</span>
+            <span class="r-val" id="victory-xp-text">+20 XP</span>
+          </div>
+          <div class="victory-reward-badge badge-star">
+            <span class="r-icon">🌟</span>
+            <span class="r-val" id="victory-stars-text">+1 Yıldız</span>
+          </div>
+        </div>
+
+        <!-- Butonlar -->
+        <div class="victory-modal-actions">
+          <button id="btn-victory-continue" class="btn-victory-primary">Devam Et →</button>
+          <button id="btn-victory-home" class="btn-victory-secondary">Ana Sayfaya Dön</button>
+        </div>
+      </div>
+    </div>
+
 
     <!-- ====================================================================
          ROOT MODALLAR (Ekranlardan bağımsız, overlay açılan pencereler)
@@ -1032,7 +1098,32 @@
       </div>
     </div>
 
-    <!-- SCRIPT YÜKLEME SIRASI -->
+    <!-- 📱 MOBİL ALT NAVİGASYON BARI (5 Sekme - UX/UI Design Kit) -->
+    <nav class="bottom-nav-bar" id="bottom-nav-bar">
+      <button class="nav-tab-item active" data-target="screen-menu">
+        <span class="nav-tab-icon">🏠</span>
+        <span class="nav-tab-label">Ana Sayfa</span>
+      </button>
+      <button class="nav-tab-item" data-target="screen-topics">
+        <span class="nav-tab-icon">📖</span>
+        <span class="nav-tab-label">Dersler</span>
+      </button>
+      <button class="nav-tab-item" data-target="screen-games">
+        <span class="nav-tab-icon">🎮</span>
+        <span class="nav-tab-label">Oyunlar</span>
+      </button>
+      <button class="nav-tab-item" data-target="screen-badges">
+        <span class="nav-tab-icon">🏆</span>
+        <span class="nav-tab-label">Başarılar</span>
+      </button>
+      <button class="nav-tab-item" data-target="modal-student-register">
+        <span class="nav-tab-icon">👤</span>
+        <span class="nav-tab-label">Profil</span>
+      </button>
+    </nav>
+  </div>
+
+  <!-- SCRIPT YÜKLEME SIRASI -->
   <script src="js/engine/utils.js"></script>
   <script src="js/engine/audio.js"></script>
   <script src="js/engine/particles.js"></script>

@@ -266,8 +266,35 @@
         <p id="quiz-question-text" class="quiz-question-text">Soru yükleniyor...</p>
       </div>
 
+      <!-- Bilge Kuş Mascot Tip Dialogue Bubble -->
+      <div id="quiz-mascot-tip-row" class="mascot-tip-row" style="display:none">
+        <div class="mascot-tip-avatar">🦉</div>
+        <div class="mascot-tip-bubble">
+          <div class="mascot-tip-title">
+            <span class="material-symbols-outlined icon-fill" style="font-size:14px;color:var(--primary)">tips_and_updates</span>
+            Bilge Kuş İpucu:
+          </div>
+          <div id="quiz-mascot-tip-text">İpucu yükleniyor...</div>
+        </div>
+      </div>
+
+      <!-- Visual Problem Aid Container (Baskets, Blocks, Matter Pods) -->
+      <div id="quiz-visual-aid-area" style="display:none"></div>
+
       <!-- Dynamic Question Container (Mode 1: Choice, Mode 2: True/False, Mode 3: Matching) -->
       <div id="quiz-interactive-area"></div>
+
+      <!-- Reward & Confidence Strip -->
+      <div id="quiz-reward-strip" class="quiz-reward-strip">
+        <span class="quiz-reward-item">
+          <span class="material-symbols-outlined icon-fill" style="color:var(--primary-container);font-size:16px">stars</span>
+          <span>+20 Yıldız</span>
+        </span>
+        <span class="quiz-reward-item">
+          <span class="material-symbols-outlined icon-fill" style="color:var(--tertiary);font-size:16px">military_tech</span>
+          <span>Rozet Puanı</span>
+        </span>
+      </div>
 
       <!-- Feedback -->
       <div class="quiz-feedback" id="quiz-feedback" style="display:none">

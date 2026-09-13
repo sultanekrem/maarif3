@@ -1396,3 +1396,590 @@ img { display: block; }
   opacity: 0.45;
   filter: grayscale(1);
 }
+
+/* ============================================================
+   STITCH GAMIFIED DESIGN ENHANCEMENTS:
+   Mascot Tip Bubbles, Visual Problem Aids, Chunky Tactile Buttons,
+   Reward Confidence Strips, and Unit Stack Layouts
+   ============================================================ */
+
+/* Mascot Tip Dialogue Bubble */
+.mascot-tip-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  padding: 0 14px;
+  margin-top: 4px;
+}
+
+.mascot-tip-avatar {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 9999px;
+  background: var(--primary-fixed);
+  border: 2px solid var(--primary-fixed-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 3px 0 var(--primary-fixed-dim);
+  position: relative;
+}
+
+.mascot-tip-bubble {
+  position: relative;
+  flex: 1;
+  background: #ffffff;
+  border: 1.5px solid var(--outline-variant);
+  border-radius: 16px;
+  padding: 10px 14px;
+  box-shadow: 0 3px 0 var(--surface-dim);
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--on-surface);
+}
+
+.mascot-tip-bubble::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  bottom: 12px;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 8px solid #ffffff;
+  z-index: 2;
+}
+.mascot-tip-bubble::after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  bottom: 11px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-right: 10px solid var(--outline-variant);
+  z-index: 1;
+}
+
+.mascot-tip-title {
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 800;
+  font-size: 11px;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 2px;
+}
+
+/* Visual Problem Aid Area (Sepetler, Bloklar, Deney Fanusları) */
+.quiz-visual-aid-box {
+  background: linear-gradient(180deg, #fffbf0 0%, #fff4e0 100%);
+  border: 2px dashed #fbd38d;
+  border-radius: 18px;
+  padding: 14px;
+  margin: 0 14px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.visual-aid-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 12px;
+  background: #ffffff;
+  border: 1.5px solid #fbd38d;
+  border-radius: 9999px;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #744210;
+  box-shadow: 0 2px 0 #fbd38d;
+}
+
+/* Apple Baskets Grid */
+.basket-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  width: 100%;
+  max-width: 380px;
+}
+
+.basket-card {
+  background: #ffffff;
+  border: 2px solid #fbd38d;
+  border-radius: 14px;
+  padding: 6px 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 3px 0 #fde68a;
+}
+
+.basket-card .b-icon { font-size: 22px; }
+.basket-card .b-label { font-size: 11px; font-weight: 800; color: #dc2626; margin-top: 2px; }
+
+/* Base Ten Blocks Showcase */
+.blocks-showcase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.block-unit-card {
+  background: #ffffff;
+  border: 2px solid var(--outline-variant);
+  border-radius: 12px;
+  padding: 6px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 68px;
+  box-shadow: 0 3px 0 var(--surface-dim);
+}
+.block-unit-card .b-icons { font-size: 16px; margin-bottom: 2px; }
+.block-unit-card .b-title { font-size: 10px; font-weight: 700; color: var(--on-surface-variant); }
+.block-unit-card .b-num { font-family: "Comfortaa", sans-serif; font-size: 14px; font-weight: 800; color: var(--primary); }
+
+/* Science Matter Pods Showcase */
+.matter-pods-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  width: 100%;
+}
+
+.matter-pod-card {
+  border-radius: 14px;
+  padding: 8px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 2px solid;
+}
+.matter-pod-solid  { background: #ecfeff; border-color: #a5f3fc; color: #0891b2; box-shadow: 0 3px 0 #a5f3fc; }
+.matter-pod-liquid { background: #ecfdf5; border-color: #a7f3d0; color: #059669; box-shadow: 0 3px 0 #a7f3d0; }
+.matter-pod-gas    { background: #faf5ff; border-color: #e9d5ff; color: #9333ea; box-shadow: 0 3px 0 #e9d5ff; }
+
+/* English Vocabulary Visual Choice Cards */
+.english-card-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+.english-card-emoji { font-size: 28px; }
+
+/* Reward & Confidence Strip below quiz */
+.quiz-reward-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 4px 14px 0 14px;
+  padding: 8px 14px;
+  background: var(--primary-fixed);
+  border: 1.5px solid var(--primary-fixed-dim);
+  border-radius: 14px;
+  box-shadow: 0 2px 0 var(--primary-fixed-dim);
+}
+
+.quiz-reward-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #ffffff;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--primary);
+  box-shadow: 0 2px 0 #ecd7c1;
+}
+
+/* 3D Tactile Option Buttons (Overhaul for 2-column or 1-column) */
+.quiz-options-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  width: 100%;
+  padding: 0 14px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 520px) {
+  .quiz-options-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.quiz-option-tactile {
+  width: 100%;
+  min-height: 56px;
+  background: #ffffff;
+  border: 2px solid var(--outline-variant);
+  border-radius: 16px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.12s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 4px 0 var(--surface-dim);
+  text-align: left;
+}
+
+.quiz-option-tactile:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 var(--surface-dim);
+}
+
+.quiz-option-tactile:hover {
+  background: var(--surface-container-low);
+  border-color: var(--secondary-container);
+}
+
+.quiz-option-tactile.correct {
+  border-color: var(--tertiary) !important;
+  background: #ecfdf5 !important;
+  box-shadow: 0 4px 0 #059669 !important;
+}
+
+.quiz-option-tactile.incorrect {
+  border-color: var(--error) !important;
+  background: #fef2f2 !important;
+  box-shadow: 0 4px 0 #dc2626 !important;
+}
+
+.opt-letter-badge {
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+  border-radius: 10px;
+  background: var(--surface-container);
+  color: var(--on-surface);
+  font-family: "Comfortaa", sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 0 var(--surface-dim);
+}
+
+.quiz-option-tactile.correct .opt-letter-badge {
+  background: var(--tertiary);
+  color: #ffffff;
+  box-shadow: 0 2px 0 #00462e;
+}
+
+.quiz-option-tactile.incorrect .opt-letter-badge {
+  background: var(--error);
+  color: #ffffff;
+  box-shadow: 0 2px 0 #7f1d1d;
+}
+
+.opt-indicator-icon {
+  font-size: 20px;
+  color: var(--on-surface-variant);
+  transition: transform 0.15s;
+}
+
+.quiz-option-tactile:hover .opt-indicator-icon {
+  transform: scale(1.2);
+}
+
+/* ============================================================
+   STITCH CURRICULUM TREE & UNIT CARDS STACK
+   (renme_rehberi_ve_ders_m_fredat)
+   ============================================================ */
+.curriculum-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+
+.curriculum-subject-card {
+  background: #ffffff;
+  border: 2px solid var(--outline-variant);
+  border-radius: 20px;
+  padding: 16px;
+  box-shadow: 0 3px 0 var(--surface-dim);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.curriculum-subject-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.curriculum-subject-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  box-shadow: 0 2px 0 var(--surface-dim);
+}
+
+.unit-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 4px;
+}
+
+.unit-stack-item {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  transition: all 0.12s;
+  box-sizing: border-box;
+}
+
+.unit-stack-item.unit-done {
+  background: var(--surface-container-low);
+  border: 1.5px solid var(--outline-variant);
+  box-shadow: 0 2px 0 #e7d7c9;
+}
+
+.unit-stack-item.unit-active {
+  background: var(--secondary-fixed);
+  border: 2px solid var(--secondary-container);
+  box-shadow: 0 3px 0 #0073df;
+}
+
+.unit-stack-item.unit-locked {
+  background: var(--surface-container);
+  border: 1.5px solid var(--outline-variant);
+  opacity: 0.72;
+}
+
+.unit-status-icon {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.unit-done .unit-status-icon {
+  background: var(--tertiary-fixed);
+  color: var(--on-tertiary-fixed);
+}
+
+.unit-active .unit-status-icon {
+  background: var(--secondary-container);
+  color: #ffffff;
+  animation: pulseDot 1.4s infinite ease-in-out;
+}
+
+.unit-locked .unit-status-icon {
+  background: var(--surface-dim);
+  color: var(--outline);
+}
+
+.unit-info-col {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.unit-title-text {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--on-surface);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.unit-sub-text {
+  font-size: 11px;
+  color: var(--on-surface-variant);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-unit-action {
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-shadow: 0 2px 0 var(--surface-dim);
+  transition: transform 0.1s;
+}
+
+.btn-unit-action:active {
+  transform: translateY(2px);
+}
+
+.unit-done .btn-unit-action {
+  background: #ffffff;
+  color: var(--on-surface);
+  border: 1px solid var(--outline-variant);
+}
+
+.unit-active .btn-unit-action {
+  background: var(--secondary-container);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 3px 0 #00468c;
+}
+
+/* ============================================================
+   STITCH RICH WORKBOOK ENHANCEMENTS (Sen De Dene, Formül, Örnek)
+   ============================================================ */
+.decomp-cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.decomp-card {
+  background: #ffffff;
+  border: 1.5px solid var(--outline-variant);
+  border-radius: 12px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  box-shadow: 0 2px 0 var(--surface-dim);
+}
+
+.decomp-badge {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.decomp-row {
+  font-size: 12px;
+  color: var(--on-surface);
+}
+
+.decomp-math {
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+.book-formula-card {
+  background: #eff6ff;
+  border: 2px solid #bfdbfe;
+  border-radius: 14px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.formula-title {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  color: #1e40af;
+}
+
+.formula-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: #1e3a8a;
+}
+
+.formula-result {
+  margin-top: 4px;
+  padding-top: 4px;
+  border-top: 1px dashed #93c5fd;
+  font-size: 13px;
+  font-weight: 800;
+  color: #1d4ed8;
+}
+
+.try-box-card {
+  background: #f0fdf4;
+  border: 2px solid #bbf7d0;
+  border-radius: 14px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.try-box-header {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  color: #15803d;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.try-box-q {
+  font-size: 13px;
+  font-weight: 700;
+  color: #166534;
+}
+
+.try-box-btn {
+  align-self: flex-start;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  background: #22c55e;
+  color: #ffffff;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  box-shadow: 0 2px 0 #15803d;
+  cursor: pointer;
+  margin-top: 2px;
+}
+
+.try-box-ans {
+  font-size: 12px;
+  font-weight: 700;
+  color: #14532d;
+  background: #dcfce7;
+  padding: 6px 10px;
+  border-radius: 8px;
+  margin-top: 4px;
+}

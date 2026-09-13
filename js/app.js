@@ -381,7 +381,7 @@
     map.appendChild(grid);
   }
 
-  /* ─── ETKİNLİK SCREEN ─────────────────────────────────────── */
+    /* ─── ETKİNLİK SCREEN (STITCH CURRICULUM TREE & UNIT STACK) ─── */
   function renderEtkinlik() {
     const focusTopic = getFocusTopic();
     const ftTitle = document.getElementById('focus-task-title');
@@ -411,44 +411,106 @@
     if (!tree) return;
     tree.innerHTML = '';
 
-    const listContainer = document.createElement('div');
-    listContainer.className = 'subject-overview-list';
+    const stackContainer = document.createElement('div');
+    stackContainer.className = 'curriculum-stack';
 
     SUBJECT_ORDER.forEach((key, subjIdx) => {
       const cfg = SUBJECTS[key];
+      const subjData = getSubjectData(key);
+      if (!subjData || !cfg) return;
+
       const topics = getAllTopics(key);
-      const done = topics.filter(t => isTopicCompleted(t.id)).length;
-      const pct = topics.length ? Math.round((done / topics.length) * 100) : 0;
-      const activeTopic = getFirstActiveTopic(key);
+      const doneCount = topics.filter(t => isTopicCompleted(t.id)).length;
+      const totalCount = topics.length;
+      const pct = totalCount ? Math.round((doneCount / totalCount) * 100) : 0;
 
-      const item = document.createElement('div');
-      item.className = 'subject-row-card';
+      const card = document.createElement('div');
+      card.className = 'curriculum-subject-card';
 
-      item.innerHTML = `
-        <div class="subject-row-icon" style="background:${cfg.bg}">
-          <span class="material-symbols-outlined" style="color:${cfg.accent}">${cfg.icon}</span>
-        </div>
-        <div class="subject-row-main">
-          <div style="display:flex; justify-content:space-between; align-items:baseline;">
-            <h4 class="subject-row-title">${subjIdx+1}. ${cfg.title}</h4>
-            <span class="subject-row-pct" style="color:${cfg.accent}">%${pct}</span>
+      // Header row
+      let headerHtml = `
+        <div class="curriculum-subject-head">
+          <div style="display:flex;align-items:center;gap:10px">
+            <div class="curriculum-subject-icon" style="background:${cfg.bg}">
+              <span class="material-symbols-outlined" style="color:${cfg.accent};font-size:24px">${cfg.icon}</span>
+            </div>
+            <div>
+              <h4 class="text-headline-sm font-comfortaa" style="color:var(--on-surface);margin:0;font-size:15px">${subjIdx + 1}. ${cfg.title}</h4>
+              <p class="text-body-sm" style="color:var(--on-surface-variant);font-size:11px;margin:2px 0 0 0">${totalCount} Konu • ${(subjData.themes || []).length} Ünite</p>
+            </div>
           </div>
-          <p class="subject-row-sub">${activeTopic ? activeTopic.title : 'Tüm üniteler bitti'} (${topics.length} Konu)</p>
-          <div class="subject-row-bar">
-            <div style="width:${pct}%; background:${cfg.accent}; height:100%; border-radius:4px;"></div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <span class="text-headline-sm font-comfortaa" style="color:${cfg.accent};font-size:14px">%${pct}</span>
+            <button class="btn-sub-action" style="color:${cfg.accent};border-color:${cfg.accent};font-size:11px;padding:4px 10px;" onclick="openSubjectDetail('${key}')">Tümü →</button>
           </div>
         </div>
-        <button class="btn-sub-action" style="color:${cfg.accent}; border-color:${cfg.accent};">Konular →</button>
+        <div class="progress-track-thin" style="margin-top:2px">
+          <div class="progress-bar-thin" style="width:${pct}%;background:${cfg.accent}"></div>
+        </div>
       `;
 
-      item.addEventListener('click', () => {
-        openSubjectDetail(key);
+      // Unit Stack items
+      let unitsHtml = '<div class="unit-stack">';
+      let previousThemeDone = true;
+
+      (subjData.themes || []).forEach((theme, uIdx) => {
+        const themeTopics = theme.topics || [];
+        const themeDone = themeTopics.length > 0 && themeTopics.every(t => isTopicCompleted(t.id));
+        const themeActive = !themeDone && previousThemeDone;
+
+        let statusClass = 'unit-locked';
+        let statusIcon = 'lock';
+        let actionBtnText = 'Kilitli 🔒';
+        let actionBtnClass = 'btn-unit-action';
+        let badgeText = 'Önceki üniteyi bitir';
+        let onClickAction = '';
+
+        if (themeDone) {
+          statusClass = 'unit-done';
+          statusIcon = 'check_circle';
+          actionBtnText = 'Tekrar Et 🔄';
+          actionBtnClass = 'btn-unit-action btn-unit-done';
+          badgeText = '⭐⭐⭐ Tamamlandı';
+          onClickAction = `openSubjectDetail('${key}')`;
+        } else if (themeActive) {
+          statusClass = 'unit-active';
+          statusIcon = 'play_arrow';
+          actionBtnText = 'Devam Et 🚀';
+          actionBtnClass = 'btn-unit-action btn-unit-active';
+          badgeText = '🎯 Sıradaki Ünite';
+          const firstUnfinished = themeTopics.find(t => !isTopicCompleted(t.id)) || themeTopics[0];
+          if (firstUnfinished) {
+            onClickAction = `startQuiz('${key}', '${firstUnfinished.id}')`;
+          } else {
+            onClickAction = `openSubjectDetail('${key}')`;
+          }
+        }
+
+        unitsHtml += `
+          <div class="unit-stack-item ${statusClass}">
+            <div class="unit-status-icon">
+              <span class="material-symbols-outlined" style="font-size:18px">${statusIcon}</span>
+            </div>
+            <div class="unit-info-col" style="cursor:pointer" onclick="openSubjectDetail('${key}')">
+              <div class="unit-title-text">${theme.title}</div>
+              <div class="unit-sub-text">${badgeText} • ${themeTopics.length} Konu</div>
+            </div>
+            ${onClickAction ? `<button class="${actionBtnClass}" onclick="${onClickAction}">${actionBtnText}</button>` : `<span style="font-size:11px;color:var(--outline);font-weight:700">🔒</span>`}
+          </div>
+        `;
+
+        if (!themeDone) {
+          previousThemeDone = false;
+        }
       });
 
-      listContainer.appendChild(item);
+      unitsHtml += '</div>';
+
+      card.innerHTML = headerHtml + unitsHtml;
+      stackContainer.appendChild(card);
     });
 
-    tree.appendChild(listContainer);
+    tree.appendChild(stackContainer);
   }
 
   /* ─── SUBJECT DETAIL & CURRICULUM EXPLORER ─────────────────── */
@@ -523,7 +585,7 @@
   }
   window.openSubjectDetail = openSubjectDetail;
 
-  /* ─── WORKBOOK READER SCREEN ──────────────────────────────── */
+    /* ─── WORKBOOK READER SCREEN (RICH STITCH COMPONENTS) ─────── */
   function openWorkbook(subjectKey, topicId) {
     state.currentSubjectKey = subjectKey;
     state.currentTopicId = topicId;
@@ -569,40 +631,98 @@
           <span>MEB PÜF NOKTASI VE KURAL</span>
         </div>
         <div class="info-box-content">
-          <p><strong>Kural:</strong> ${fc.rule || ''}</p>
-          ${fc.example ? `<p style="margin-top:4px"><strong>Örnek:</strong> ${fc.example}</p>` : ''}
-          ${fc.tip ? `<p style="margin-top:4px;color:#a16207"><strong>⚠️ Dikkat:</strong> ${fc.tip}</p>` : ''}
+          <p><strong>Kural:</strong> ${(fc.rule || '').replace(/\\n|\n/g, '<br>')}</p>
+          ${fc.example ? `<p style="margin-top:4px"><strong>Örnek:</strong> ${(fc.example || '').replace(/\\n|\n/g, '<br>')}</p>` : ''}
+          ${fc.tip ? `<p style="margin-top:4px;color:#a16207"><strong>⚠️ Dikkat:</strong> ${(fc.tip || '').replace(/\\n|\n/g, '<br>')}</p>` : ''}
         </div>
       `;
       contentEl.appendChild(fcCard);
     }
 
-    // 2. Reading Pages (Discovery, Models, Tables)
+    // 2. Reading Pages (Discovery, Models, Tables, Daily Life, Sen De Dene)
     if (topic.reading_pages && topic.reading_pages.length) {
       topic.reading_pages.forEach(p => {
         const pCard = document.createElement('div');
         pCard.className = 'workbook-section-card';
 
         let inner = `<span class="workbook-section-badge">${p.badge || 'DERS KİTABI ANLATIMI'}</span>`;
-        if (p.title) inner += `<h3 class="text-headline-sm font-comfortaa" style="font-size:15px;color:var(--primary)">${p.title}</h3>`;
+        if (p.title) inner += `<h3 class="text-headline-sm font-comfortaa" style="font-size:15px;color:var(--primary);margin-top:4px">${p.title}</h3>`;
+        
         if (p.story) {
-          inner += `<p class="text-body-md" style="line-height:22px;color:var(--on-surface)">${p.story}</p>`;
+          inner += `<p class="text-body-md" style="line-height:22px;color:var(--on-surface);margin-top:4px">${p.story}</p>`;
           fullSpokenText += p.story + ' ';
         }
         if (p.content) {
-          inner += `<p class="text-body-sm" style="line-height:20px;color:var(--on-surface-variant)">${p.content}</p>`;
+          inner += `<p class="text-body-sm" style="line-height:20px;color:var(--on-surface-variant);margin-top:4px">${p.content}</p>`;
           fullSpokenText += p.content + ' ';
         }
-        if (p.model_html) inner += p.model_html;
-        if (p.table_html) inner += p.table_html;
+        if (p.model_html) {
+          inner += p.model_html;
+        }
+        if (p.table_html) {
+          inner += p.table_html;
+        }
+        
+        // Key Points list
+        if (p.key_points && Array.isArray(p.key_points)) {
+          inner += `
+            <div style="background:var(--surface-container-lowest);padding:10px 12px;border-radius:10px;border-left:4px solid var(--secondary);margin-top:8px">
+              <div style="font-weight:700;font-size:12px;color:var(--secondary);margin-bottom:4px">📌 Önemli Noktalar:</div>
+              <ul style="margin:0;padding-left:18px;font-size:12px;color:var(--on-surface);line-height:19px">
+                ${p.key_points.map(kp => `<li>${kp}</li>`).join('')}
+              </ul>
+            </div>`;
+        }
+
+        // Daily Life Examples
+        if (p.daily_life && Array.isArray(p.daily_life)) {
+          inner += `
+            <div style="background:rgba(255,179,0,0.08);border:1px solid rgba(255,179,0,0.3);border-radius:12px;padding:10px 12px;margin-top:8px">
+              <div style="font-family:Comfortaa,sans-serif;font-weight:800;font-size:12px;color:var(--primary);margin-bottom:6px">🌍 Günlük Hayattan Örnekler:</div>
+              <div style="display:flex;flex-direction:column;gap:5px">
+                ${p.daily_life.map(dl => `<div style="font-size:12px;color:var(--on-surface)">${dl}</div>`).join('')}
+              </div>
+            </div>`;
+        }
+
+        // Golden Info Box
         if (p.info_box) {
+          const formattedBoxContent = (p.info_box.content || '').replace(/\\n|\n/g, '<br style="margin-bottom:4px">');
           inner += `
             <div class="info-box-golden" style="margin-top:8px">
               <div class="info-box-title"><span>🌟</span> ${p.info_box.title || 'BİLGİ KUTUSU'}</div>
-              <div class="info-box-content">${p.info_box.content || ''}</div>
+              <div class="info-box-content">${formattedBoxContent}</div>
             </div>`;
-          fullSpokenText += (p.info_box.content || '') + ' ';
+          fullSpokenText += (p.info_box.content || '').replace(/\\n|\n/g, ' ') + ' ';
         }
+
+        // Example Box (Soru ve Çözüm)
+        if (p.example_box) {
+          inner += `
+            <div class="info-box-golden" style="margin-top:8px;border-left:4px solid var(--secondary)">
+              <div class="info-box-title" style="color:var(--secondary)"><span>📝</span> ${p.example_box.title || 'ÖRNEK SORU VE ÇÖZÜM'}</div>
+              <div class="info-box-content">
+                <p><strong>Soru:</strong> ${p.example_box.question || p.example_box.problem || ''}</p>
+                <p style="margin-top:4px;color:var(--secondary);font-weight:700"><strong>Çözüm:</strong> ${p.example_box.solution || ''}</p>
+              </div>
+            </div>`;
+        }
+
+        // Interactive "Sen de Dene!" Try Box
+        if (p.try_box) {
+          const ansId = 'try-ans-' + Math.random().toString(36).substring(2, 8);
+          inner += `
+            <div class="try-box-card">
+              <div class="try-box-header">
+                <span class="material-symbols-outlined" style="font-size:18px;color:var(--tertiary)">edit_note</span>
+                <span>SEN DE DENE!</span>
+              </div>
+              <p class="try-box-q">${p.try_box.question}</p>
+              <button class="try-box-btn" onclick="const a=document.getElementById('${ansId}'); if(a){ a.style.display = a.style.display==='none'?'block':'none'; }">Cevabı Gör 💡</button>
+              <div id="${ansId}" class="try-box-ans" style="display:none"><strong>Doğru Cevap:</strong> ${p.try_box.answer}</div>
+            </div>`;
+        }
+
         if (p.tip) {
           inner += `<p style="font-size:12px;font-weight:700;color:var(--secondary);margin-top:6px">💡 ${p.tip}</p>`;
         }
@@ -611,13 +731,27 @@
         contentEl.appendChild(pCard);
       });
     } else {
-      // Fallback descriptive text if no reading_pages
+      // Fallback: visual concept breakdown cards
       const descCard = document.createElement('div');
       descCard.className = 'workbook-section-card';
       descCard.innerHTML = `
         <span class="workbook-section-badge">KONU KAZANIMI</span>
-        <h3 class="text-headline-sm font-comfortaa">${topic.title}</h3>
-        <p class="text-body-md" style="line-height:22px">${topic.desc || 'Bu konuda 3. sınıf MEB müfredatı temel kavramları ve alıştırmaları yer alır.'}</p>
+        <h3 class="text-headline-sm font-comfortaa" style="font-size:15px;color:var(--primary);margin-top:4px">${topic.title}</h3>
+        <p class="text-body-md" style="line-height:22px;margin-top:4px">${topic.desc || 'Bu konuda 3. sınıf MEB müfredatı temel kavramları ve alıştırmaları yer alır.'}</p>
+        <div class="decomp-cards-grid">
+          <div class="decomp-card">
+            <span class="decomp-badge">💡 1. Adım: Kavramı Öğren</span>
+            <span class="decomp-row">Konu kurallarını ve temel mantığı dikkatlice oku.</span>
+          </div>
+          <div class="decomp-card">
+            <span class="decomp-badge">🎯 2. Adım: Örnekleri İncele</span>
+            <span class="decomp-row">Modellenen örnekleri ve çözümleri kavra.</span>
+          </div>
+          <div class="decomp-card">
+            <span class="decomp-badge">🚀 3. Adım: Sınav ile Pekiştir</span>
+            <span class="decomp-row">Aşağıdaki 'Sınava Başla' butonuyla yıldızları topla!</span>
+          </div>
+        </div>
       `;
       contentEl.appendChild(descCard);
       fullSpokenText += topic.desc || '';
@@ -628,7 +762,7 @@
     if (listenBtn) {
       const isEn = subjectKey === 'ingilizce';
       listenBtn.onclick = () => {
-        SpeechService.speak(fullSpokenText.slice(0, 500), isEn, listenBtn);
+        SpeechService.speak(fullSpokenText.slice(0, 600), isEn, listenBtn);
       };
     }
   }
@@ -734,6 +868,163 @@
   }
   window.startQuiz = startQuiz;
 
+  /* ─── VISUAL PROBLEM AID BUILDER (STITCH V2) ─────────────────── */
+  function buildVisualProblemAid(subjectKey, q, topicTitle) {
+    const qLower = (q.question || '').toLowerCase();
+    const tLower = (topicTitle || '').toLowerCase();
+
+    // 1. Multiplication / Equal Groups -> Apple Baskets Model (Elma Sepetleri)
+    if (subjectKey === 'matematik' && (qLower.includes('sepet') || qLower.includes('çarpma') || qLower.includes('tane') || qLower.includes('katı') || qLower.includes('×') || qLower.includes('çarpım') || tLower.includes('çarpma'))) {
+      let bCount = 3;
+      let aCount = 4;
+      const m = qLower.match(/(\d+)\s*(sepet|tabak|kutu|grup)/);
+      if (m && parseInt(m[1]) >= 2 && parseInt(m[1]) <= 5) bCount = parseInt(m[1]);
+      const m2 = qLower.match(/(\d+)\s*(elma|tane|ceviz|kalem|çilek)/);
+      if (m2 && parseInt(m2[1]) >= 1 && parseInt(m2[1]) <= 6) aCount = parseInt(m2[1]);
+
+      let basketsHtml = '';
+      for (let i = 1; i <= bCount; i++) {
+        const apples = '🍎'.repeat(aCount);
+        basketsHtml += `
+          <div class="basket-card">
+            <div class="basket-head">${i}. Sepet</div>
+            <div class="basket-apples">${apples}</div>
+            <div class="basket-count">${aCount} Elma</div>
+          </div>`;
+      }
+      return `
+        <div class="quiz-visual-aid-box">
+          <div class="visual-aid-badge">
+            <span class="material-symbols-outlined" style="font-size:16px;color:var(--primary)">shopping_basket</span>
+            <span>Görsel Problem: Eşit Gruplar & Sepet Modeli</span>
+          </div>
+          <div class="basket-grid">
+            ${basketsHtml}
+          </div>
+          <div class="visual-aid-caption">💡 ${bCount} sepetin her birinde ${aCount} elma var: ${bCount} × ${aCount} = ${bCount * aCount} elma</div>
+        </div>`;
+    }
+
+    // 2. Base Ten Blocks (Yüzlük, Onluk, Birlik Taban Blokları)
+    if (subjectKey === 'matematik' && (qLower.includes('basamak') || qLower.includes('yüzlük') || qLower.includes('onluk') || qLower.includes('birlik') || qLower.includes('modellenen') || qLower.includes('blok') || tLower.includes('sayı'))) {
+      let h = 3, t = 4, o = 7;
+      const mH = qLower.match(/(\d+)\s*yüzlük/);
+      if (mH) h = parseInt(mH[1]);
+      const mT = qLower.match(/(\d+)\s*onluk/);
+      if (mT) t = parseInt(mT[1]);
+      const mO = qLower.match(/(\d+)\s*birlik/);
+      if (mO) o = parseInt(mO[1]);
+
+      const hIcons = '🟦 '.repeat(Math.min(h, 6)).trim();
+      const tIcons = '🟩 '.repeat(Math.min(t, 8)).trim();
+      const oIcons = '🟨 '.repeat(Math.min(o, 9)).trim();
+      const totalNum = h * 100 + t * 10 + o;
+
+      return `
+        <div class="quiz-visual-aid-box">
+          <div class="visual-aid-badge">
+            <span class="material-symbols-outlined" style="font-size:16px;color:var(--secondary)">view_in_ar</span>
+            <span>Görsel Taban Blokları Modeli</span>
+          </div>
+          <div class="blocks-showcase">
+            <div class="block-unit-card">
+              <div class="block-sym-icon">${hIcons}</div>
+              <div class="block-sym-label">${h} Yüzlük Levha</div>
+              <div class="block-sym-val">${h * 100}</div>
+            </div>
+            <div class="block-unit-card">
+              <div class="block-sym-icon">${tIcons}</div>
+              <div class="block-sym-label">${t} Onluk Çubuk</div>
+              <div class="block-sym-val">${t * 10}</div>
+            </div>
+            <div class="block-unit-card">
+              <div class="block-sym-icon">${oIcons}</div>
+              <div class="block-sym-label">${o} Birlik Küp</div>
+              <div class="block-sym-val">${o}</div>
+            </div>
+          </div>
+          <div class="visual-aid-caption">Model Değeri: ${h * 100} + ${t * 10} + ${o} = ${totalNum}</div>
+        </div>`;
+    }
+
+    // 3. Matter Pods (Fen Bilimleri Katı, Sıvı, Gaz Kapsülleri)
+    if (subjectKey === 'fenbilimleri' && (qLower.includes('katı') || qLower.includes('sıvı') || qLower.includes('gaz') || qLower.includes('madde') || qLower.includes('hal') || tLower.includes('madde'))) {
+      return `
+        <div class="quiz-visual-aid-box">
+          <div class="visual-aid-badge">
+            <span class="material-symbols-outlined" style="font-size:16px;color:var(--tertiary)">science</span>
+            <span>Fen Laboratuvarı: Maddenin 3 Hali</span>
+          </div>
+          <div class="matter-pods-grid">
+            <div class="matter-pod-card">
+              <div class="matter-pod-icon">🧊</div>
+              <div class="matter-pod-label">1. Katı</div>
+              <div class="matter-pod-sub">Belirli bir şekli vardır (Taş, Buz)</div>
+            </div>
+            <div class="matter-pod-card">
+              <div class="matter-pod-icon">💧</div>
+              <div class="matter-pod-label">2. Sıvı</div>
+              <div class="matter-pod-sub">Konulduğu kabın şeklini alır (Su, Süt)</div>
+            </div>
+            <div class="matter-pod-card">
+              <div class="matter-pod-icon">💨</div>
+              <div class="matter-pod-label">3. Gaz</div>
+              <div class="matter-pod-sub">Bulunduğu ortama tamamen yayılır (Hava)</div>
+            </div>
+          </div>
+          <div class="visual-aid-caption">💡 Katı maddelerin şekli değişmezken sıvılar ve gazlar akıcıdır!</div>
+        </div>`;
+    }
+
+    // 4. Turkish Vocabulary Bridge & Clue Tokens
+    if (subjectKey === 'turkce') {
+      return `
+        <div class="quiz-visual-aid-box">
+          <div class="visual-aid-badge">
+            <span class="material-symbols-outlined" style="font-size:16px;color:var(--secondary)">menu_book</span>
+            <span>Türkçe Anlam & Kelime Köprüsü</span>
+          </div>
+          <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;padding:4px 0">
+            <span style="background:var(--secondary-fixed);color:var(--secondary);padding:4px 12px;border-radius:9999px;font-size:11px;font-weight:700">📖 Cümle Bağlamı</span>
+            <span style="background:var(--primary-fixed);color:var(--primary);padding:4px 12px;border-radius:9999px;font-size:11px;font-weight:700">🎯 Anlam İlişkisi</span>
+            <span style="background:var(--tertiary-fixed);color:var(--tertiary);padding:4px 12px;border-radius:9999px;font-size:11px;font-weight:700">✍️ Yazım Kuralı</span>
+          </div>
+        </div>`;
+    }
+
+    // 5. English Picture & Audio Clue
+    if (subjectKey === 'ingilizce') {
+      return `
+        <div class="quiz-visual-aid-box">
+          <div class="visual-aid-badge">
+            <span class="material-symbols-outlined" style="font-size:16px;color:#7c3aed">translate</span>
+            <span>English Illustrated Flashcard</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:center;gap:12px;padding:6px">
+            <span style="font-size:32px">🎨</span>
+            <div>
+              <div style="font-family:Comfortaa,sans-serif;font-weight:800;color:#7c3aed;font-size:14px">Look, Listen & Choose!</div>
+              <div style="font-size:11px;color:var(--on-surface-variant)">Pick the correct English word or phrase below.</div>
+            </div>
+          </div>
+        </div>`;
+    }
+
+    // 6. Generic Subject Concept Card
+    const sc = SUBJECTS[subjectKey];
+    return `
+      <div class="quiz-visual-aid-box">
+        <div class="visual-aid-badge">
+          <span class="material-symbols-outlined" style="font-size:16px;color:var(--primary)">lightbulb</span>
+          <span>${sc ? sc.title : 'Ders'} • Keşif İpucu</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;padding:4px 6px">
+          <span style="font-size:26px">${sc ? sc.emoji : '🎯'}</span>
+          <span style="font-size:12px;color:var(--on-surface-variant);line-height:17px">${q.hint ? q.hint.slice(0, 110) : 'Kazanımı hatırla ve doğru cevaba odaklan!'}</span>
+        </div>
+      </div>`;
+  }
+
   function renderQuizQuestion() {
     SpeechService.stop();
 
@@ -748,6 +1039,10 @@
     const area   = document.getElementById('quiz-interactive-area');
     const fb     = document.getElementById('quiz-feedback');
     const nw     = document.getElementById('quiz-next-wrap');
+
+    const mascotTipRow  = document.getElementById('quiz-mascot-tip-row');
+    const mascotTipText = document.getElementById('quiz-mascot-tip-text');
+    const visualAidArea = document.getElementById('quiz-visual-aid-area');
 
     if (fb) fb.style.display = 'none';
     if (nw) nw.style.display = 'none';
@@ -764,6 +1059,20 @@
         dot.className = 'quiz-dot' + (i === current ? ' active' : (i < current ? ' done' : ''));
         dots.appendChild(dot);
       }
+    }
+
+    // 1. Bilge Kuş Mascot Tip Bubble
+    if (mascotTipRow && mascotTipText) {
+      const tipContent = q.hint || 'Soruyu dikkatle oku, doğru cevabı kolayca bulacaksın! 🦉';
+      mascotTipText.textContent = tipContent;
+      mascotTipRow.style.display = 'flex';
+    }
+
+    // 2. Visual Problem Aid (Baskets, Blocks, Matter Pods, Flashcards)
+    if (visualAidArea) {
+      const aidHtml = buildVisualProblemAid(state.quiz.subject, q, state.quiz.topicTitle);
+      visualAidArea.innerHTML = aidHtml;
+      visualAidArea.style.display = 'block';
     }
 
     // Audio read button
@@ -791,18 +1100,19 @@
     }
   }
 
-  // 1. Multiple Choice Renderer
+  // 1. Tactile 3D Multiple Choice Renderer (Stitch V2)
   function renderChoiceOptions(q, container) {
     const wrap = document.createElement('div');
-    wrap.className = 'quiz-options';
+    wrap.className = 'quiz-options-grid';
     const letters = ['A','B','C','D'];
 
     q.options.forEach((opt, idx) => {
       const btn = document.createElement('button');
-      btn.className = 'quiz-option';
+      btn.className = 'quiz-option-tactile';
       btn.innerHTML = `
-        <div class="quiz-option-letter">${letters[idx]}</div>
-        <span class="quiz-option-text">${opt}</span>
+        <div class="opt-letter-badge">${letters[idx]}</div>
+        <div class="opt-text">${opt}</div>
+        <span class="material-symbols-outlined opt-indicator-icon">radio_button_unchecked</span>
       `;
       btn.onclick = () => handleChoiceAnswer(idx, q);
       wrap.appendChild(btn);
@@ -813,12 +1123,18 @@
 
   function handleChoiceAnswer(selectedIdx, q) {
     const correct = selectedIdx === q.correct;
-    const allBtns = document.querySelectorAll('.quiz-option');
+    const allBtns = document.querySelectorAll('.quiz-option-tactile');
 
     allBtns.forEach((btn, i) => {
       btn.classList.add('disabled');
-      if (i === q.correct) btn.classList.add('correct');
-      else if (i === selectedIdx && !correct) btn.classList.add('incorrect');
+      const icon = btn.querySelector('.opt-indicator-icon');
+      if (i === q.correct) {
+        btn.classList.add('correct');
+        if (icon) icon.textContent = 'check_circle';
+      } else if (i === selectedIdx && !correct) {
+        btn.classList.add('incorrect');
+        if (icon) icon.textContent = 'cancel';
+      }
     });
 
     if (correct) {

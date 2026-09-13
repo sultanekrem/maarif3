@@ -1,27 +1,31 @@
 /* ==========================================================================
    ✨ MAARİF YILDIZI 3 — UX/UI DESIGN KIT (RESMÎ TASARIM SİSTEMİ)
-   6 Ekran Birebir Piksel & Renk Sistemi
+   Exact Hex Colors from Figma Palette:
+   Türkçe: #FF6B68 | Matematik: #5AA8FF | Hayat Bilgisi: #4CAF50
+   Fen Bilgisi: #8064FF | İngilizce: #FF8347 | Müzik: #20B8B0
+   Ana Mor: #6C63FF | Arka Plan: #F8F9FD | Metin: #1E1B4B
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
 
 :root {
   --font-main: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --c-purple-btn: #5B42F3;
-  --c-purple-btn-hover: #4C35E0;
-  
-  /* 6 Ders Renkleri */
-  --c-turkce: #FF5757;
-  --c-matematik: #3B99FE;
-  --c-hayat: #48BB78;
-  --c-fen: #7E57C2;
-  --c-ingilizce: #FF9800;
-  --c-muzik: #00BCD4;
+  --c-primary: #6C63FF;
+  --c-primary-dark: #5A52E0;
+
+  /* Resmî Kit Renk Paleti */
+  --c-turkce: #FF6B68;
+  --c-matematik: #5AA8FF;
+  --c-hayat: #4CAF50;
+  --c-fen: #8064FF;
+  --c-ingilizce: #FF8347;
+  --c-muzik: #20B8B0;
 
   --c-bg: #F8F9FD;
-  --c-card-bg: #FFFFFF;
-  --c-text-dark: #1E1B4B;
+  --c-card: #FFFFFF;
+  --c-text-main: #1E1B4B;
   --c-text-muted: #64748B;
+  --c-border: #F1F5F9;
 }
 
 * {
@@ -34,14 +38,14 @@
 html, body {
   font-family: var(--font-main) !important;
   background: var(--c-bg) !important;
-  color: var(--c-text-dark) !important;
+  color: var(--c-text-main) !important;
   height: 100%;
   overflow: hidden;
 }
 
 #app {
   width: 100%;
-  max-width: 480px;
+  max-width: 440px;
   height: 100vh;
   height: 100dvh;
   margin: 0 auto;
@@ -50,10 +54,9 @@ html, body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.08);
 }
 
-/* Ekran Temeli */
 .screen {
   display: none !important;
   width: 100%;
@@ -72,14 +75,14 @@ html, body {
   width: 100%;
   height: 52px;
   border-radius: 26px;
-  background: linear-gradient(135deg, #6C5CE7 0%, #5B42F3 100%);
+  background: linear-gradient(135deg, #7C73FF 0%, #6C63FF 100%);
   color: #FFFFFF;
   border: none;
   font-family: var(--font-main);
   font-size: 1.05rem;
   font-weight: 900;
   cursor: pointer;
-  box-shadow: 0 8px 24px rgba(91, 66, 243, 0.35);
+  box-shadow: 0 8px 24px rgba(108, 99, 255, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,7 +92,7 @@ html, body {
 
 .btn-pill-primary:active {
   transform: scale(0.97);
-  box-shadow: 0 4px 12px rgba(91, 66, 243, 0.25);
+  box-shadow: 0 4px 12px rgba(108, 99, 255, 0.25);
 }
 
 .btn-pill-secondary {
@@ -107,6 +110,7 @@ html, body {
   align-items: center;
   justify-content: center;
   transition: all 0.15s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
 .btn-pill-secondary:active {
@@ -115,112 +119,32 @@ html, body {
 }
 
 /* ==========================================================================
-   1. EKRAN 1: GİRİŞ / KARŞILAMA EKRANI
+   1. EKRAN 1: GİRİŞ / KARŞILAMA EKRANI (HQ ARTWORK)
    ========================================================================== */
 #screen-welcome {
   position: relative;
-  background: linear-gradient(180deg, #70C8FF 0%, #BAE6FD 50%, #E0F2FE 100%);
+  background: url('../assets/welcome_screen_hq.jpg') no-repeat center center / cover !important;
   overflow: hidden;
-  justify-content: space-between;
+  justify-content: flex-end;
+  padding: 0 24px max(32px, env(safe-area-inset-bottom));
 }
 
-.welcome-bg-scene {
+.welcome-click-overlay {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 60%;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.welcome-landscape-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: bottom center;
-}
-
-.welcome-content-layer {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  padding: max(20px, env(safe-area-inset-top)) 24px max(24px, env(safe-area-inset-bottom));
-}
-
-.welcome-hero-brand {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.welcome-mascot-box {
-  width: 150px;
-  height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: -10px;
-  animation: mascotFloat 3s ease-in-out infinite;
-}
-
-@keyframes mascotFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-}
-
-.welcome-mascot-3d {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.15));
-}
-
-.welcome-logo-svg-wrap {
-  width: 250px;
-  height: 90px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.welcome-logo-3d {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.welcome-tagline {
-  font-size: 0.95rem;
-  font-weight: 800;
-  color: #1E1B4B;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(8px);
-  padding: 4px 16px;
-  border-radius: 20px;
-  margin-top: 4px;
-  letter-spacing: 0.5px;
-}
-
-.welcome-action-buttons {
-  width: 100%;
-  max-width: 320px;
+  bottom: max(24px, env(safe-area-inset-bottom));
+  left: 24px;
+  right: 24px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-bottom: 8px;
+  z-index: 10;
 }
 
 /* ==========================================================================
    2. EKRAN 2: ANA SAYFA
    ========================================================================== */
 #screen-menu {
-  padding-bottom: 72px;
+  padding-bottom: 74px;
   background: var(--c-bg);
 }
 
@@ -228,29 +152,23 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 20px 10px;
-  padding-top: max(16px, env(safe-area-inset-top));
-  background: transparent;
+  padding: 18px 20px 10px;
+  padding-top: max(18px, env(safe-area-inset-top));
   flex-shrink: 0;
 }
 
-.home-greeting-area {
-  display: flex;
-  flex-direction: column;
-}
-
 .home-greeting-title {
-  font-size: 1.55rem;
+  font-size: 1.6rem;
   font-weight: 900;
-  color: var(--c-text-dark);
+  color: var(--c-text-main);
   line-height: 1.2;
 }
 
 .home-greeting-sub {
   font-size: 0.88rem;
   color: var(--c-text-muted);
-  font-weight: 600;
-  margin-top: 2px;
+  font-weight: 700;
+  margin-top: 3px;
 }
 
 .home-avatar-circle {
@@ -258,18 +176,18 @@ html, body {
   height: 48px;
   border-radius: 50%;
   background: #EFF6FF;
-  border: 2.5px solid #3B99FE;
+  border: 2.5px solid var(--c-matematik);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.6rem;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(59, 153, 254, 0.2);
+  box-shadow: 0 4px 14px rgba(90, 168, 255, 0.25);
 }
 
 .home-content-body {
   flex: 1;
-  padding: 0 20px 24px;
+  padding: 4px 20px 24px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -277,28 +195,17 @@ html, body {
 
 /* Bugünkü Görev Kartı */
 .featured-quest-card {
-  background: linear-gradient(135deg, #1D72FE 0%, #0D54CF 100%);
+  background: linear-gradient(135deg, #4A9CFF 0%, #1877F2 100%);
   border-radius: 24px;
   padding: 18px 20px;
   color: #FFFFFF;
   display: flex;
   align-items: center;
   gap: 14px;
-  box-shadow: 0 10px 28px rgba(13, 84, 207, 0.28);
+  box-shadow: 0 10px 28px rgba(24, 119, 242, 0.28);
   position: relative;
   overflow: hidden;
   cursor: pointer;
-}
-
-.featured-quest-card::after {
-  content: '';
-  position: absolute;
-  top: -20px;
-  right: -20px;
-  width: 100px;
-  height: 100px;
-  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
-  border-radius: 50%;
 }
 
 .quest-icon-square {
@@ -310,8 +217,12 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.6rem;
   flex-shrink: 0;
+}
+
+.quest-icon-square img, .quest-icon-square svg {
+  width: 26px;
+  height: 26px;
 }
 
 .quest-text-block {
@@ -322,7 +233,7 @@ html, body {
 .quest-tag-label {
   display: inline-block;
   background: rgba(255, 255, 255, 0.25);
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 800;
   padding: 2px 10px;
   border-radius: 10px;
@@ -331,14 +242,14 @@ html, body {
 }
 
 .quest-subject-name {
-  font-size: 1.18rem;
+  font-size: 1.2rem;
   font-weight: 900;
   line-height: 1.2;
 }
 
 .quest-topic-desc {
   font-size: 0.82rem;
-  color: #DBEAFE;
+  color: #E0E7FF;
   font-weight: 600;
   margin-top: 2px;
   white-space: nowrap;
@@ -348,14 +259,14 @@ html, body {
 
 .btn-quest-action {
   background: #FFFFFF;
-  color: #0D54CF;
+  color: #1877F2;
   border: none;
   border-radius: 16px;
   padding: 10px 14px;
   font-size: 0.84rem;
   font-weight: 900;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   white-space: nowrap;
   flex-shrink: 0;
   transition: transform 0.15s ease;
@@ -365,14 +276,10 @@ html, body {
   transform: scale(0.95);
 }
 
-.home-section-heading {
-  margin-top: 4px;
-}
-
 .home-section-heading h3 {
   font-size: 1.15rem;
   font-weight: 900;
-  color: var(--c-text-dark);
+  color: var(--c-text-main);
 }
 
 /* 2x3 Ders Izgarası */
@@ -391,7 +298,7 @@ html, body {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  min-height: 112px;
+  min-height: 114px;
   cursor: pointer;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
@@ -403,44 +310,48 @@ html, body {
 }
 
 .subject-grid-card.card-turkce {
-  background: linear-gradient(135deg, #FF6B68 0%, #FF5757 100%);
-  box-shadow: 0 8px 20px rgba(255, 87, 87, 0.32);
+  background: linear-gradient(135deg, #FF7B78 0%, #FF6B68 100%);
+  box-shadow: 0 8px 22px rgba(255, 107, 104, 0.32);
 }
 
 .subject-grid-card.card-matematik {
-  background: linear-gradient(135deg, #5AA8FF 0%, #3B99FE 100%);
-  box-shadow: 0 8px 20px rgba(59, 153, 254, 0.32);
+  background: linear-gradient(135deg, #6BB2FF 0%, #5AA8FF 100%);
+  box-shadow: 0 8px 22px rgba(90, 168, 255, 0.32);
 }
 
 .subject-grid-card.card-hayatbilgisi {
-  background: linear-gradient(135deg, #52D086 0%, #48BB78 100%);
-  box-shadow: 0 8px 20px rgba(72, 187, 120, 0.32);
+  background: linear-gradient(135deg, #57BE5B 0%, #4CAF50 100%);
+  box-shadow: 0 8px 22px rgba(76, 175, 80, 0.32);
 }
 
 .subject-grid-card.card-fenbilimleri {
-  background: linear-gradient(135deg, #9370DB 0%, #7E57C2 100%);
-  box-shadow: 0 8px 20px rgba(126, 87, 194, 0.32);
+  background: linear-gradient(135deg, #9177FF 0%, #8064FF 100%);
+  box-shadow: 0 8px 22px rgba(128, 100, 255, 0.32);
 }
 
 .subject-grid-card.card-ingilizce {
-  background: linear-gradient(135deg, #FFA726 0%, #FF9800 100%);
-  box-shadow: 0 8px 20px rgba(255, 152, 0, 0.32);
+  background: linear-gradient(135deg, #FF945E 0%, #FF8347 100%);
+  box-shadow: 0 8px 22px rgba(255, 131, 71, 0.32);
 }
 
 .subject-grid-card.card-muzik {
-  background: linear-gradient(135deg, #26C6DA 0%, #00BCD4 100%);
-  box-shadow: 0 8px 20px rgba(0, 188, 212, 0.32);
+  background: linear-gradient(135deg, #2AC7BF 0%, #20B8B0 100%);
+  box-shadow: 0 8px 22px rgba(32, 184, 176, 0.32);
 }
 
 .subj-card-icon-wrap {
   width: 44px;
   height: 44px;
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.22);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+}
+
+.subj-card-icon-wrap img, .subj-card-icon-wrap svg {
+  width: 26px;
+  height: 26px;
 }
 
 .subj-card-title {
@@ -454,19 +365,19 @@ html, body {
    3. EKRAN 3: DERS ANA SAYFASI (MATEMATİK)
    ========================================================================== */
 #screen-topics {
-  padding-bottom: 72px;
-  background: #F8F9FD;
+  padding-bottom: 74px;
+  background: var(--c-bg);
 }
 
 .topics-curved-header {
-  background: linear-gradient(135deg, #3B99FE 0%, #1D4ED8 100%);
+  background: linear-gradient(135deg, var(--c-matematik) 0%, #2563EB 100%);
   border-radius: 0 0 32px 32px;
   padding: 16px 20px 24px;
   padding-top: max(16px, env(safe-area-inset-top));
   color: #FFFFFF;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 10px 24px rgba(29, 78, 216, 0.22);
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.22);
 }
 
 .curved-top-bar {
@@ -482,7 +393,7 @@ html, body {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.95);
   border: none;
-  color: #1E1B4B;
+  color: var(--c-text-main);
   font-size: 1.25rem;
   font-weight: 900;
   display: flex;
@@ -490,11 +401,6 @@ html, body {
   justify-content: center;
   cursor: pointer;
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  transition: transform 0.15s ease;
-}
-
-.btn-circular-back:active {
-  transform: scale(0.92);
 }
 
 .header-star-counter {
@@ -521,7 +427,7 @@ html, body {
 }
 
 .curved-subject-title {
-  font-size: 1.8rem;
+  font-size: 1.85rem;
   font-weight: 900;
   line-height: 1.15;
 }
@@ -549,7 +455,6 @@ html, body {
   filter: drop-shadow(0 6px 12px rgba(0,0,0,0.2));
 }
 
-/* Segmentli Filtre Hapı */
 .floating-segmented-nav {
   display: flex;
   background: #FFFFFF;
@@ -559,7 +464,7 @@ html, body {
   position: relative;
   z-index: 10;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-  border: 1px solid #F1F5F9;
+  border: 1px solid var(--c-border);
 }
 
 .seg-pill-btn {
@@ -577,12 +482,11 @@ html, body {
 }
 
 .seg-pill-btn.active {
-  background: var(--c-purple-btn);
+  background: var(--c-primary);
   color: #FFFFFF;
-  box-shadow: 0 3px 10px rgba(91, 66, 243, 0.3);
+  box-shadow: 0 3px 10px rgba(108, 99, 255, 0.3);
 }
 
-/* Ünite Kartları Listesi */
 .topics-cards-scroll {
   flex: 1;
   padding: 0 20px 24px;
@@ -602,14 +506,13 @@ html, body {
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
-  border: 1px solid #F1F5F9;
+  border: 1px solid var(--c-border);
   cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.15s ease;
 }
 
 .unit-item-card:active {
   transform: scale(0.98);
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
 }
 
 .unit-card-left {
@@ -638,7 +541,7 @@ html, body {
 .unit-text-info h4 {
   font-size: 0.98rem;
   font-weight: 800;
-  color: var(--c-text-dark);
+  color: var(--c-text-main);
 }
 
 .unit-text-info p {
@@ -655,10 +558,10 @@ html, body {
 }
 
 /* ==========================================================================
-   4. EKRAN 4: KONU İÇERİĞİ (ÖĞRENME EKRANI)
+   4. EKRAN 4: KONU İÇERİĞİ (ÖĞRENME)
    ========================================================================== */
 #screen-reading {
-  background: #F8F9FD;
+  background: var(--c-bg);
 }
 
 .reading-top-bar {
@@ -668,7 +571,7 @@ html, body {
   padding: 14px 20px;
   padding-top: max(14px, env(safe-area-inset-top));
   background: #FFFFFF;
-  border-bottom: 1px solid #F1F5F9;
+  border-bottom: 1px solid var(--c-border);
 }
 
 .reading-back-link {
@@ -677,7 +580,7 @@ html, body {
   font-family: var(--font-main);
   font-size: 1rem;
   font-weight: 800;
-  color: #1E1B4B;
+  color: var(--c-text-main);
   display: flex;
   align-items: center;
   gap: 4px;
@@ -686,7 +589,7 @@ html, body {
 
 .reading-back-link .back-arrow {
   font-size: 1.3rem;
-  color: #3B99FE;
+  color: var(--c-matematik);
 }
 
 .reading-star-badge {
@@ -720,13 +623,13 @@ html, body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border: 1px solid #F1F5F9;
+  border: 1px solid var(--c-border);
 }
 
 .lesson-main-title {
   font-size: 1.55rem;
   font-weight: 900;
-  color: var(--c-text-dark);
+  color: var(--c-text-main);
   margin-bottom: 10px;
 }
 
@@ -764,7 +667,7 @@ html, body {
 .lesson-addition-text {
   font-size: 1.15rem;
   font-weight: 900;
-  color: #1E1B4B;
+  color: var(--c-text-main);
   margin-top: 10px;
 }
 
@@ -795,7 +698,7 @@ html, body {
   border-radius: 18px;
   padding: 12px 16px;
   box-shadow: 0 3px 12px rgba(0,0,0,0.05);
-  border: 1px solid #F1F5F9;
+  border: 1px solid var(--c-border);
   position: relative;
 }
 
@@ -812,57 +715,19 @@ html, body {
 .tip-speech-bubble p {
   font-size: 0.88rem;
   font-weight: 800;
-  color: #1E1B4B;
+  color: var(--c-text-main);
 }
 
 /* ==========================================================================
-   5. EKRAN 5: OYUN / SORU EKRANI (KOZMİK UZAY TEMASI)
+   5. EKRAN 5: OYUN / SORU EKRANI (KOZMİK UZAY HQ)
    ========================================================================== */
 .cosmic-space-screen {
-  background: linear-gradient(180deg, #0B0E28 0%, #151B4E 60%, #1E1B4B 100%) !important;
+  background: url('../assets/space_bg_hq.jpg') no-repeat center center / cover !important;
   color: #FFFFFF !important;
   position: relative;
   overflow: hidden;
   justify-content: space-between;
   padding: max(16px, env(safe-area-inset-top)) 20px max(24px, env(safe-area-inset-bottom));
-}
-
-.cosmic-bg-stars {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    radial-gradient(2px 2px at 20px 30px, #FFFFFF, rgba(0,0,0,0)),
-    radial-gradient(2px 2px at 40px 70px, #7DD3FC, rgba(0,0,0,0)),
-    radial-gradient(1px 1px at 90px 40px, #FFFFFF, rgba(0,0,0,0)),
-    radial-gradient(2px 2px at 160px 120px, #FDE047, rgba(0,0,0,0)),
-    radial-gradient(2px 2px at 260px 80px, #F472B6, rgba(0,0,0,0)),
-    radial-gradient(1px 1px at 310px 140px, #FFFFFF, rgba(0,0,0,0)),
-    radial-gradient(3px 3px at 200px 220px, #38BDF8, rgba(0,0,0,0));
-  background-repeat: repeat;
-  background-size: 350px 350px;
-  opacity: 0.8;
-  pointer-events: none;
-}
-
-.cosmic-rocket-flying {
-  position: absolute;
-  top: 14%;
-  left: 50%;
-  transform: translateX(-50%) scale(0.9);
-  width: 100px;
-  height: 140px;
-  object-fit: contain;
-  pointer-events: none;
-  z-index: 1;
-  animation: rocketHover 2.5s ease-in-out infinite;
-}
-
-@keyframes rocketHover {
-  0%, 100% { transform: translateX(-50%) translateY(0) rotate(-2deg); }
-  50% { transform: translateX(-50%) translateY(-10px) rotate(2deg); }
 }
 
 .cosmic-header {
@@ -879,8 +744,8 @@ html, body {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.25);
   color: #FFFFFF;
   font-size: 1.1rem;
@@ -899,9 +764,9 @@ html, body {
 }
 
 .cosmic-level-label {
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   font-weight: 800;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
   margin-bottom: 4px;
 }
 
@@ -909,7 +774,7 @@ html, body {
   width: 100%;
   max-width: 150px;
   height: 8px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.25);
   border-radius: 4px;
   overflow: hidden;
 }
@@ -925,8 +790,8 @@ html, body {
   display: flex;
   align-items: center;
   gap: 4px;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.25);
   padding: 4px 12px;
   border-radius: 16px;
@@ -935,20 +800,19 @@ html, body {
   color: #FDE047;
 }
 
-/* Soru Kartı */
 .cosmic-question-card {
   position: relative;
   z-index: 2;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(14px);
-  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
   border-radius: 26px;
   padding: 24px 20px;
   width: 100%;
   text-align: center;
-  margin-top: 80px;
+  margin-top: 140px;
   margin-bottom: 20px;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
 }
 
 .cosmic-question-text {
@@ -958,7 +822,6 @@ html, body {
   letter-spacing: 1px;
 }
 
-/* 2x2 Şık Izgarası */
 .cosmic-options-2x2 {
   position: relative;
   z-index: 2;
@@ -982,7 +845,7 @@ html, body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   transition: transform 0.12s ease, background 0.15s ease;
 }
 
@@ -1009,90 +872,25 @@ html, body {
 }
 
 /* ==========================================================================
-   6. EKRAN 6: BAŞARI EKRANI (TEBRİKLER)
+   6. EKRAN 6: BAŞARI EKRANI (HQ ARTWORK)
    ========================================================================== */
 #screen-victory {
-  background: linear-gradient(180deg, #E0F2FE 0%, #F0F9FF 50%, #FFFFFF 100%);
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
+  position: relative;
+  background: url('../assets/victory_screen_hq.jpg') no-repeat center center / cover !important;
+  overflow: hidden;
+  justify-content: flex-end;
+  padding: 0 24px max(32px, env(safe-area-inset-bottom));
 }
 
-.victory-screen-inner {
-  width: 100%;
-  max-width: 340px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.victory-cloud-mascot-wrap {
-  width: 220px;
-  height: 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 8px;
-}
-
-.victory-clouds-svg {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
-}
-
-.victory-big-title {
-  font-size: 2.2rem;
-  font-weight: 900;
-  color: var(--c-text-dark);
-  margin-bottom: 2px;
-}
-
-.victory-big-sub {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--c-text-muted);
-  margin-bottom: 18px;
-}
-
-/* Sarı Pastel Ödül Kartı */
-.victory-reward-card {
-  width: 100%;
-  background: #FFFBEB;
-  border: 1.5px solid #FDE68A;
-  border-radius: 20px;
-  padding: 16px 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 24px;
-  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.1);
-}
-
-.reward-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.reward-star-icon {
-  font-size: 1.4rem;
-}
-
-.reward-number-txt {
-  font-size: 1.25rem;
-  font-weight: 900;
-  color: #B45309;
-}
-
-.victory-bottom-actions {
-  width: 100%;
+.victory-click-overlay {
+  position: absolute;
+  bottom: max(24px, env(safe-area-inset-bottom));
+  left: 24px;
+  right: 24px;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  z-index: 10;
 }
 
 /* ==========================================================================
@@ -1103,10 +901,10 @@ html, body {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 64px;
+  height: 66px;
   padding-bottom: env(safe-area-inset-bottom);
   background: #FFFFFF;
-  border-top: 1.5px solid #F1F5F9;
+  border-top: 1.5px solid var(--c-border);
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -1131,9 +929,17 @@ html, body {
 }
 
 .nav-tab-icon {
-  font-size: 1.35rem;
-  line-height: 1;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: transform 0.2s ease;
+}
+
+.nav-tab-icon img, .nav-tab-icon svg {
+  width: 22px;
+  height: 22px;
 }
 
 .nav-tab-label {
@@ -1142,9 +948,10 @@ html, body {
 }
 
 .nav-tab-item.active {
-  color: var(--c-purple-btn);
+  color: var(--c-primary);
 }
 
 .nav-tab-item.active .nav-tab-icon {
   transform: scale(1.15);
+  color: var(--c-primary);
 }

@@ -1243,8 +1243,16 @@
     container.innerHTML = '';
     const subjects = window.CURRICULUM_TERM1;
 
-    // 2x3 Izgara Sırası: Türkçe, Matematik, Hayat Bilgisi, Fen Bilgisi, İngilizce, Müzik
+    // Resmî 6 Ders Sırası ve Vektör İkon Haritası
     const SUBJECT_ORDER = ['turkce', 'matematik', 'hayatbilgisi', 'fenbilimleri', 'ingilizce', 'muzik'];
+    const vectorIcons = {
+      turkce: 'assets/icons/subj_turkce.svg',
+      matematik: 'assets/icons/subj_matematik.svg',
+      hayatbilgisi: 'assets/icons/subj_hayat.svg',
+      fenbilimleri: 'assets/icons/subj_fen.svg',
+      ingilizce: 'assets/icons/subj_ingilizce.svg',
+      muzik: 'assets/icons/subj_muzik.svg'
+    };
 
     SUBJECT_ORDER.forEach(key => {
       const subj = subjects[key];
@@ -1254,8 +1262,12 @@
       card.className = `subject-grid-card card-${key}`;
       card.setAttribute('data-subject', key);
 
+      const iconPath = vectorIcons[key] || 'assets/icons/subj_matematik.svg';
+
       card.innerHTML = `
-        <div class="subj-card-icon-wrap">${subj.icon}</div>
+        <div class="subj-card-icon-wrap">
+          <img src="${iconPath}" alt="${subj.title}">
+        </div>
         <div class="subj-card-title">${subj.title}</div>
       `;
 
@@ -1269,7 +1281,6 @@
     updateHeaderStats();
   }
 
-  // 3. EKRAN 3: DERS ANA SAYFASI
   function openSubjectExplorer(subjectKey) {
     state.currentSubjectKey = subjectKey;
     state.currentThemeIndex = 0;

@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <title>Maarif Yıldızı 3</title>
-  <link rel="stylesheet" href="css/design.css?v=68">
-  <link rel="manifest" href="manifest.json?v=68">
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png?v=68">
-  <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png?v=68">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png?v=68">
+  <link rel="stylesheet" href="css/design.css?v=70">
+  <link rel="manifest" href="manifest.json?v=70">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png?v=70">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png?v=70">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png?v=70">
   <meta name="theme-color" content="#ffb300">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -40,81 +40,27 @@
     </div>
   </div>
 
-  <!-- ===================== SCREEN: WELCOME ===================== -->
-  <div id="screen-welcome" class="maarif-screen">
-    <div class="welcome-header">
-      <div class="header-logo">
-        <img src="assets/maarif_yildizi_3_logo.png?v=69" alt="Logo" style="width:38px;height:38px;border-radius:12px;object-fit:cover;box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-        <div class="header-logo-text">
-          <span class="header-logo-title">Maarif Yıldızı 3</span>
-          <span class="header-logo-sub">3. Sınıf Dünyası</span>
-        </div>
-      </div>
-      <button id="btn-skip-welcome" style="background:rgba(255,179,0,0.1);border:1px solid rgba(255,179,0,0.3);padding:6px 14px;border-radius:9999px;font-family:'Comfortaa',sans-serif;font-size:12px;font-weight:700;color:var(--on-surface-variant);cursor:pointer">Geç →</button>
-    </div>
-    <div class="welcome-hero">
-      <img src="assets/maarif_yildizi_3_logo.png?v=69" alt="Logo" style="width:110px;height:110px;border-radius:24px;object-fit:cover;box-shadow:0 8px 24px rgba(255,179,0,0.3);">
-      <div class="welcome-hero-badge">✨ 3. Sınıf Macerası Başlıyor!</div>
-    </div>
-    <div style="text-align:center">
-      <h1 class="text-headline-lg-m font-comfortaa" style="color:var(--on-surface)">Dersler Artık<br><span style="color:var(--primary)">Eğlenceli Bir Oyun!</span></h1>
-      <p class="text-body-sm" style="color:var(--on-surface-variant);margin-top:8px">MEB 3. sınıf müfredatındaki <strong>Türkçe, Matematik, Fen ve Hayat Bilgisi</strong> konularını eğlenceli görevler, masallar ve ödüllerle keşfet.</p>
-    </div>
-    <div style="display:flex;flex-direction:column;gap:8px">
-      <div class="welcome-feature-item">
-        <div class="welcome-feature-icon" style="background:#fff0e0">🎯</div>
-        <div>
-          <p class="text-label-md font-comfortaa" style="color:var(--on-surface)">Günde Sadece 15 Dakika</p>
-          <p class="text-body-sm" style="color:var(--on-surface-variant)">Sıkılmadan, oyun tadında interaktif alıştırmalar</p>
-        </div>
-      </div>
-      <div class="welcome-feature-item">
-        <div class="welcome-feature-icon" style="background:#e0f0ff">📚</div>
-        <div>
-          <p class="text-label-md font-comfortaa" style="color:var(--on-surface)">Sesli Masallar ve Kütüphane</p>
-          <p class="text-body-sm" style="color:var(--on-surface-variant)">Okuma hızını artıran resimli büyülü hikayeler</p>
-        </div>
-      </div>
-      <div class="welcome-feature-item">
-        <div class="welcome-feature-icon" style="background:#e0fff0">🏆</div>
-        <div>
-          <p class="text-label-md font-comfortaa" style="color:var(--on-surface)">Yıldızlar, Rozetler ve Seviyeler</p>
-          <p class="text-body-sm" style="color:var(--on-surface-variant)">Her başarıda parlayan eğlenceli ödül sistemi</p>
-        </div>
-      </div>
-    </div>
-    <div class="welcome-cta">
-      <div class="welcome-step-dots">
-        <div class="welcome-step-dot active"></div>
-        <div class="welcome-step-dot"></div>
-        <div class="welcome-step-dot"></div>
-      </div>
-      <button id="btn-start-adventure" class="btn-amber" style="max-width:400px;width:100%">
-        <span>Maceraya Başla!</span>
-        <span class="material-symbols-outlined">rocket_launch</span>
-      </button>
-    </div>
-  </div>
-
   <!-- ===================== SHARED HEADER ===================== -->
   <header id="maarif-header" class="hidden">
-    <div class="header-logo">
-      <img src="assets/maarif_yildizi_3_logo.png?v=69" alt="Logo" style="width:38px;height:38px;border-radius:12px;object-fit:cover;box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-      <div class="header-logo-text">
-        <span class="header-logo-title">Maarif Yıldızı 3</span>
-        <span id="header-subtitle" class="header-logo-sub">3. Sınıf • Macera</span>
+    <div class="header-inner">
+      <div class="header-logo" onclick="setActiveTab('macera')" style="cursor:pointer;">
+        <img src="assets/maarif_yildizi_3_logo.png?v=70" alt="Maarif Yıldızı 3" class="header-brand-img">
+        <div class="header-logo-text">
+          <span class="header-logo-title">Maarif Yıldızı 3</span>
+          <span id="header-subtitle" class="header-logo-sub">3. Sınıf • Macera</span>
+        </div>
       </div>
-    </div>
-    <div class="header-badges">
-      <div class="header-badge header-badge-streak">
-        <span class="material-symbols-outlined" style="font-size:16px">local_fire_department</span>
-        <span id="header-streak-val">0</span>
+      <div class="header-badges">
+        <div id="header-streak" class="header-badge header-badge-streak" title="Günlük Seri">
+          <span class="material-symbols-outlined" style="font-size:16px;">local_fire_department</span>
+          <span id="header-streak-val">0</span>
+        </div>
+        <div id="header-stars" class="header-badge header-badge-stars" title="Toplanan Yıldızlar">
+          <span class="material-symbols-outlined icon-fill" style="font-size:16px;color:var(--primary-container)">star</span>
+          <span id="header-stars-val">0</span>
+        </div>
+        <div id="header-avatar" class="header-avatar" title="Profilim & Avatar" onclick="setActiveTab('gelisim')">🦊</div>
       </div>
-      <div class="header-badge header-badge-stars">
-        <span class="material-symbols-outlined icon-fill" style="font-size:16px;color:var(--primary-container)">star</span>
-        <span id="header-stars-val">0</span>
-      </div>
-      <div id="header-avatar" class="header-avatar">🦊</div>
     </div>
   </header>
 
@@ -456,22 +402,24 @@
 
   <!-- ===================== BOTTOM NAV ===================== -->
   <nav id="maarif-nav" class="hidden">
-    <div class="nav-items">
-      <div class="nav-tab active" data-tab="macera">
-        <span class="material-symbols-outlined">explore</span>
-        <span class="nav-label">Macera</span>
-      </div>
-      <div class="nav-tab" data-tab="etkinlik">
-        <span class="material-symbols-outlined">sports_esports</span>
-        <span class="nav-label">Etkinlik</span>
-      </div>
-      <div class="nav-tab" data-tab="kitaplik">
-        <span class="material-symbols-outlined">auto_stories</span>
-        <span class="nav-label">Kitaplık</span>
-      </div>
-      <div class="nav-tab" data-tab="gelisim">
-        <span class="material-symbols-outlined">military_tech</span>
-        <span class="nav-label">Gelişim</span>
+    <div class="nav-inner">
+      <div class="nav-items">
+        <button class="nav-tab active" data-tab="macera" type="button">
+          <span class="material-symbols-outlined">explore</span>
+          <span class="nav-label">Macera</span>
+        </button>
+        <button class="nav-tab" data-tab="etkinlik" type="button">
+          <span class="material-symbols-outlined">sports_esports</span>
+          <span class="nav-label">Etkinlik</span>
+        </button>
+        <button class="nav-tab" data-tab="kitaplik" type="button">
+          <span class="material-symbols-outlined">auto_stories</span>
+          <span class="nav-label">Kitaplık</span>
+        </button>
+        <button class="nav-tab" data-tab="gelisim" type="button">
+          <span class="material-symbols-outlined">military_tech</span>
+          <span class="nav-label">Gelişim</span>
+        </button>
       </div>
     </div>
   </nav>

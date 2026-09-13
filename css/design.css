@@ -909,3 +909,200 @@ body {
   cursor: pointer !important;
   -webkit-tap-highlight-color: transparent;
 }
+
+/* ============================================================
+   RESPONSIVE DESIGN ADAPTATION (Mobile + Tablet + Desktop)
+   ============================================================ */
+
+/* App Wrapper: Fluid responsive layout */
+#app-wrapper {
+  width: 100%;
+  max-width: 100%;
+  height: 100dvh;
+  max-height: 100dvh;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  overflow: hidden !important;
+}
+
+/* Screens */
+.maarif-screen {
+  width: 100%;
+  height: 100dvh;
+  max-height: 100dvh;
+  overflow: hidden !important;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+}
+
+.maarif-screen.active {
+  display: flex !important;
+  position: relative;
+}
+
+/* Screen Content Container */
+.screen-content {
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  height: calc(100dvh - 142px);
+  padding: 76px 16px 80px 16px !important;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-direction: column;
+  gap: 12px !important;
+  box-sizing: border-box;
+}
+
+/* Header: Responsive Bar */
+#maarif-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 68px !important;
+  z-index: 50;
+  background: rgba(255, 248, 244, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1.5px solid var(--outline-variant);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+#maarif-header.hidden {
+  display: none !important;
+}
+
+.header-inner {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-brand-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+/* Bottom Nav: Responsive Bar */
+#maarif-nav {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 72px !important;
+  z-index: 9999 !important;
+  background: #ffffff !important;
+  border-top: 1.5px solid var(--outline-variant);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.06) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  padding-bottom: env(safe-area-inset-bottom, 2px);
+  box-sizing: border-box;
+  pointer-events: auto !important;
+}
+
+#maarif-nav.hidden {
+  display: none !important;
+}
+
+.nav-inner {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-items {
+  display: flex;
+  width: 100%;
+  gap: 8px;
+}
+
+.nav-tab {
+  flex: 1;
+  min-height: 52px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  padding: 4px 6px !important;
+  color: var(--on-surface-variant);
+  cursor: pointer !important;
+  transition: all 0.15s ease;
+  background: transparent;
+  border: none;
+  gap: 2px;
+  user-select: none;
+  pointer-events: auto !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nav-tab:hover {
+  background: var(--surface-container-low);
+}
+
+.nav-tab.active {
+  background: var(--primary-container) !important;
+  color: var(--on-primary-container) !important;
+  box-shadow: 0 3px 0 #d99200 !important;
+}
+
+.nav-tab .material-symbols-outlined {
+  font-size: 22px !important;
+}
+
+.nav-tab .nav-label {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 11px !important;
+  font-weight: 700;
+}
+
+/* Tablet & Desktop Layout Scaling */
+@media (min-width: 640px) {
+  .island-compact-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 12px !important;
+  }
+  .subject-overview-list {
+    grid-template-columns: 1fr 1fr;
+    display: grid !important;
+    gap: 10px !important;
+  }
+  .screen-content {
+    padding: 82px 24px 86px 24px !important;
+    gap: 16px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .island-compact-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 16px !important;
+  }
+  .screen-content {
+    max-width: 960px;
+  }
+}

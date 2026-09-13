@@ -1,5 +1,5 @@
 /* ============================================================
-   MAARIF YILDIZI 3 — App Controller (Stitch v2 Single-Viewport)
+   MAARIF YILDIZI 3 — App Controller (Responsive & Multi-Screen)
    ============================================================ */
 (function () {
   'use strict';
@@ -15,16 +15,18 @@
   };
 
   /* ─── SUBJECT CONFIG ─────────────────────────────────────── */
+  // Keys must match window.CURRICULUM_TERM1 keys:
+  // 'matematik', 'fenbilimleri', 'turkce', 'hayatbilgisi', 'ingilizce', 'muzik'
   const SUBJECTS = {
-    matematik:  { title: 'Matematik',    icon: 'calculate',    bg: 'rgba(255,179,0,0.15)',   accent: 'var(--primary)',    emoji: '🔢', shadow: '#b37d00' },
-    fen:        { title: 'Fen Bilimleri',icon: 'science',       bg: 'rgba(72,217,158,0.15)',  accent: 'var(--tertiary)',   emoji: '🔬', shadow: '#2dbb7d' },
-    turkce:     { title: 'Türkçe',       icon: 'menu_book',     bg: 'rgba(0,115,223,0.12)',   accent: 'var(--secondary)', emoji: '📖', shadow: '#7dd3fc' },
-    hayat:      { title: 'Hayat Bilgisi',icon: 'emoji_people',  bg: 'rgba(255,222,172,0.3)',  accent: 'var(--primary)',   emoji: '🌍', shadow: '#ffba38' },
-    ingilizce:  { title: 'İngilizce',    icon: 'translate',     bg: 'rgba(155,81,224,0.12)',  accent: '#7c3aed',          emoji: '🌐', shadow: '#9333ea' },
-    muzik:      { title: 'Müzik',        icon: 'music_note',    bg: 'rgba(219,39,119,0.1)',   accent: '#db2777',          emoji: '🎵', shadow: '#db2777' }
+    matematik:    { title: 'Matematik',    icon: 'calculate',    bg: 'rgba(255,179,0,0.15)',   accent: 'var(--primary)',    emoji: '🔢', shadow: '#b37d00' },
+    fenbilimleri: { title: 'Fen Bilimleri',icon: 'science',       bg: 'rgba(72,217,158,0.15)',  accent: 'var(--tertiary)',   emoji: '🔬', shadow: '#2dbb7d' },
+    turkce:       { title: 'Türkçe',       icon: 'menu_book',     bg: 'rgba(0,115,223,0.12)',   accent: 'var(--secondary)', emoji: '📖', shadow: '#7dd3fc' },
+    hayatbilgisi: { title: 'Hayat Bilgisi',icon: 'emoji_people',  bg: 'rgba(255,222,172,0.3)',  accent: 'var(--primary)',   emoji: '🌍', shadow: '#ffba38' },
+    ingilizce:    { title: 'İngilizce',    icon: 'translate',     bg: 'rgba(155,81,224,0.12)',  accent: '#7c3aed',          emoji: '🌐', shadow: '#9333ea' },
+    muzik:        { title: 'Müzik',        icon: 'music_note',    bg: 'rgba(219,39,119,0.1)',   accent: '#db2777',          emoji: '🎵', shadow: '#db2777' }
   };
 
-  const SUBJECT_ORDER = ['matematik','fen','turkce','hayat','ingilizce','muzik'];
+  const SUBJECT_ORDER = ['matematik','fenbilimleri','turkce','hayatbilgisi','ingilizce','muzik'];
   const LEVEL_TITLES = ['Yeni Başlayan','Kaşif','Öğrenci','Yıldız Avcısı','Bilge Kuş','Şampiyon'];
 
   /* ─── SAVE / LOAD ─────────────────────────────────────────── */
@@ -45,7 +47,7 @@
   }
 
   /* ─── SCREEN ROUTER ──────────────────────────────────────── */
-  const NAV_SCREENS  = ['screen-macera','screen-etkinlik','screen-kitaplik','screen-gelisim'];
+  const NAV_SCREENS = ['screen-macera','screen-etkinlik','screen-kitaplik','screen-gelisim'];
 
   function showScreen(id) {
     document.querySelectorAll('.maarif-screen').forEach(s => {
@@ -539,9 +541,9 @@
 
     const stories = [
       { emoji: '🦊', title: 'Tilki ile Bilge Leylek', desc: 'Türkçe • Anlama Masalı', subject: 'turkce', time: '4 dk' },
-      { emoji: '🌱', title: 'Küçük Tohumun Yolculuğu', desc: 'Fen Bilimleri • Canlılar Dünyası', subject: 'fen', time: '5 dk' },
+      { emoji: '🌱', title: 'Küçük Tohumun Yolculuğu', desc: 'Fen Bilimleri • Canlılar Dünyası', subject: 'fenbilimleri', time: '5 dk' },
       { emoji: '🔢', title: 'Sayılar Diyarı ve Gizemli Sıfır', desc: 'Matematik • Sayı Macerası', subject: 'matematik', time: '6 dk' },
-      { emoji: '🌍', title: 'Bizim Güzel Mahallemiz', desc: 'Hayat Bilgisi • Birlikte Yaşamak', subject: 'hayat', time: '4 dk' }
+      { emoji: '🌍', title: 'Bizim Güzel Mahallemiz', desc: 'Hayat Bilgisi • Birlikte Yaşamak', subject: 'hayatbilgisi', time: '4 dk' }
     ];
 
     stories.forEach(s => {
@@ -564,7 +566,7 @@
         </button>`;
       
       card.addEventListener('click', () => {
-        alert('"' + s.title + '" masalı başlatılıyor! Hazır ol! 🎧');
+        alert('"' + s.title + '" masalı başlatılıyor! 🎧');
       });
       list.appendChild(card);
     });
@@ -631,16 +633,16 @@
 
   /* ─── EVENT LISTENERS ───────────────────────────────────────── */
   function initEvents() {
-    // Single clean event attachment for bottom nav
+    // Nav Tab Click
     document.querySelectorAll('.nav-tab').forEach(tab => {
-      tab.onclick = function(e) {
+      tab.addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
         const tabKey = this.dataset.tab;
         if (tabKey) {
           setActiveTab(tabKey);
         }
-      };
+      });
     });
 
     const qpm = document.getElementById('qp-matematik');
@@ -683,16 +685,15 @@
     if (fsBtn) fsBtn.onclick = () => alert('Günün sesli masalı başlıyor! 🎧');
   }
 
-  /* ─── INITIALIZATION (Direct to Macera after 1.5s single splash) ─── */
+  /* ─── INITIALIZATION (Direct single splash to dashboard) ─── */
   document.addEventListener('DOMContentLoaded', () => {
     loadState();
     initEvents();
 
-    // Show single splash screen for 1.4s then go directly to main dashboard
     showScreen('screen-splash');
     setTimeout(() => {
       setActiveTab('macera');
-    }, 1400);
+    }, 1200);
   });
 
 })();

@@ -341,57 +341,98 @@
     if (!map) return;
     map.innerHTML = '';
 
-    const islandsData = [
-      { key: 'turkce',       name: 'Masal Ormanı',       sub: 'Eş Anlam & Okuma',   icon: '📖', state: 'done',   badge: '⭐⭐⭐ Tamamlandı', align: 'left',  btn: 'Tekrar Et 🔄', action: "openSubjectDetail('turkce')" },
-      { key: 'matematik',    name: 'Geometri Şatosu',    sub: 'Çarpma & Doğal Sayı',icon: '🏰', state: 'active', badge: 'Şu Anki Durak!',   align: 'right', btn: 'Hadi Oyna! 🚀', action: "openMatGame()" },
-      { key: 'hayatbilgisi', name: 'Toplum Vadisi',      sub: 'Ben ve Okulum',      icon: '🌍', state: 'locked', badge: '🔒 2. Seviyede Açılır', align: 'left',  btn: 'Keşfet', action: "openSubjectDetail('hayatbilgisi')" },
-      { key: 'fenbilimleri', name: 'Kuvvet & Deney Lab', sub: 'Maddenin Halleri',   icon: '🔬', state: 'active', badge: '🧪 Deney Vakti!',   align: 'right', btn: 'Deneye Başla! ⚡', action: "openFenLab()" },
-      { key: 'ingilizce',    name: 'Magic Words',        sub: 'School Life',        icon: '🌐', state: 'locked', badge: '🔒 Kilitli',       align: 'left',  btn: 'İncele', action: "openSubjectDetail('ingilizce')" },
-      { key: 'muzik',        name: 'Melodi Bahçesi',     sub: 'Ritim ve Şarkılar',  icon: '🎵', state: 'locked', badge: '🔒 Kilitli',       align: 'right', btn: 'İncele', action: "openSubjectDetail('muzik')" }
-    ];
+    // Dynamic island data based on curriculum progress
+    const islandsData = SUBJECT_ORDER.map((key, idx) => {
+      const cfg = SUBJECTS[key];
+      const topics = getAllTopics(key);
+      const done = topics.filter(t => isTopicCompleted(t.id)).length;
+      const total = topics.length;
+      const allDone = total > 0 && done === total;
+      const firstIncomplete = topics.find(t => !isTopicCompleted(t.id));
+
+      const ISLAND_NAMES = {
+        matematik:    { name: 'Sayılar Adası',    sub: 'Matematik Macerası' },
+        fenbilimleri: { name: 'Deney Ormanı',     sub: 'Fen Bilimleri Keşfi' },
+        turkce:       { name: 'Masal Diyarı',     sub: 'Türkçe & Okuma' },
+        hayatbilgisi: { name: 'Keşif Vadisi',     sub: 'Hayat Bilgisi' },
+        ingilizce:    { name: 'Magic Island',      sub: 'İngilizce Dünyası' },
+        muzik:        { name: 'Melodi Bahçesi',   sub: 'Müzik & Ritim' }
+      };
+
+      const names = ISLAND_NAMES[key] || { name: cfg.title, sub: '' };
+      const isActive = !allDone && (idx === 0 || getAllTopics(SUBJECT_ORDER[idx - 1]).every(t => isTopicCompleted(t.id)) || done > 0);
+
+      let stateClass = 'island-locked';
+      let btnClass = '';
+      let btnText = 'İncele 🔒';
+      let badgeText = '🔒 Kilitli';
+      let action = `openSubjectDetail('${key}')`;
+
+      if (allDone) {
+        stateClass = 'island-done';
+        btnClass = 'btn-island-done';
+        btnText = '✅ Tamamlandı!';
+        badgeText = '⭐ Tamamlandı';
+      } else if (idx === 0 || isActive) {
+        stateClass = 'island-active';
+        btnClass = 'btn-island-active';
+        btnText = 'Hadi Oyna! 🚀';
+        badgeText = `${done}/${total} Konu`;
+        if (firstIncomplete) {
+          action = `startQuiz('${key}', '${firstIncomplete.id}')`;
+        }
+      }
+
+      // Special mini-game overrides for macera islands
+      if (key === 'matematik' && !allDone) {
+        action = `openSubjectDetail('${key}')`;
+        btnText = 'Keşfet 🔢';
+      } else if (key === 'fenbilimleri' && !allDone) {
+        action = `openFenLab()`;
+        btnText = 'Lab\'a Gir! 🔬';
+      }
+
+      return {
+        key, cfg, stateClass, btnClass, btnText, badgeText, action,
+        name: names.name, sub: names.sub, done, total,
+        isCurrentFocus: key === state.focusSubject && !allDone
+      };
+    });
 
     const wrapper = document.createElement('div');
     wrapper.className = 'adventure-path-wrapper';
 
-    // SVG Curved Path connecting all islands
-    const svgPath = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    svgPath.setAttribute('class', 'adventure-path-svg');
-    svgPath.setAttribute('viewBox', '0 0 340 780');
-    svgPath.setAttribute('preserveAspectRatio', 'none');
-    svgPath.innerHTML = `
-      <path d="M 90,60 C 260,110 260,200 240,240 C 210,310 80,340 90,430 C 100,510 260,530 240,630 C 220,700 160,730 160,770"
-            fill="none" stroke="#d6c4ac" stroke-width="8" stroke-dasharray="12 12" stroke-linecap="round" opacity="0.8"/>
-    `;
-    wrapper.appendChild(svgPath);
+    const ALIGNS = ['left', 'right', 'left', 'right', 'left', 'right'];
 
-    islandsData.forEach((island) => {
+    islandsData.forEach((island, idx) => {
       const card = document.createElement('div');
-      const isCurrent = island.state === 'active' && island.key === 'matematik';
-      card.className = `island-trail-card island-align-${island.align} ${isCurrent ? 'island-current' : ''} ${island.state === 'locked' ? 'island-locked' : ''}`;
+      const alignClass = 'island-align-' + ALIGNS[idx];
+      const focusClass = island.isCurrentFocus ? 'island-current' : '';
+      card.className = `island-trail-card ${alignClass} ${island.stateClass} ${focusClass}`;
+
+      const iconBg = island.cfg.bg || 'rgba(255,179,0,0.12)';
+      const accent = island.cfg.accent || 'var(--primary)';
 
       let beaconHtml = '';
-      if (isCurrent) {
-        beaconHtml = `<div class="island-beacon-badge">📍 Şu Anki Durak!</div>`;
+      if (island.isCurrentFocus) {
+        beaconHtml = `<div class="island-beacon-badge">📍 Devam Et!</div>`;
       }
 
       card.innerHTML = `
         ${beaconHtml}
-        <div style="display:flex;align-items:center;gap:12px">
-          <div style="width:52px;height:52px;border-radius:14px;background:var(--primary-fixed);display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0;box-shadow:0 2px 0 var(--primary-fixed-dim)">
-            ${island.icon}
+        <div style="display:flex;align-items:center;gap:12px;margin-top:${island.isCurrentFocus ? '8px' : '0'}">
+          <div style="width:50px;height:50px;border-radius:14px;background:${iconBg};display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0;box-shadow:0 3px 0 ${island.cfg.shadow || 'rgba(0,0,0,0.1)'}">
+            ${island.cfg.emoji}
           </div>
           <div style="flex:1;min-width:0">
-            <div style="display:flex;justify-content:space-between;align-items:baseline">
-              <span class="text-label-sm" style="color:var(--primary);text-transform:uppercase;font-size:10px">${island.key.toUpperCase()}</span>
-              <span style="font-size:11px;font-weight:700;color:var(--on-surface-variant)">${island.badge}</span>
-            </div>
-            <h4 class="text-headline-sm font-comfortaa" style="font-size:15px;color:var(--on-surface);margin:2px 0">${island.name}</h4>
-            <p class="text-body-sm" style="color:var(--on-surface-variant);font-size:11px;margin:0">${island.sub}</p>
+            <div style="font-size:10px;font-weight:800;color:${accent};text-transform:uppercase;letter-spacing:0.5px;margin-bottom:2px">${island.cfg.title} • ${island.badgeText}</div>
+            <h4 class="font-comfortaa" style="font-size:15px;color:var(--on-surface);margin:0;font-weight:700;line-height:1.2">${island.name}</h4>
+            <p style="font-size:11px;color:var(--on-surface-variant);margin:2px 0 0 0">${island.sub}</p>
           </div>
         </div>
-        <button class="btn-island-play" onclick="${island.action}">
-          <span class="material-symbols-outlined" style="font-size:18px">play_circle</span>
-          <span>${island.btn}</span>
+        <button class="btn-island-play ${island.btnClass}" onclick="${island.action}">
+          <span class="material-symbols-outlined" style="font-size:16px">play_circle</span>
+          <span>${island.btnText}</span>
         </button>
       `;
 
@@ -401,7 +442,8 @@
     map.appendChild(wrapper);
   }
 
-    /* ─── ETKİNLİK SCREEN (STITCH CURRICULUM TREE & UNIT STACK) ─── */
+  /* ─── ETKİNLİK SCREEN (STITCH CURRICULUM TREE & UNIT STACK) ─── */
+
   function renderEtkinlik() {
     const focusTopic = getFocusTopic();
     const ftTitle = document.getElementById('focus-task-title');
@@ -569,10 +611,9 @@
         topicsHtml += `
           <div class="topic-item-row" data-topic-id="${t.id}">
             <div class="topic-main-info">
-              <div style="display:flex;align-items:center;gap:6px">
+              <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
                 <span style="font-size:14px">${isDone ? '✅' : '📍'}</span>
                 <span class="topic-title-span">${t.title}</span>
-                <span class="section-label" style="font-size:10px;padding:1px 6px">s. ${t.page || ''}</span>
               </div>
               <p class="topic-desc-span">${t.desc || ''}</p>
             </div>
@@ -620,7 +661,7 @@
     const titleEl = document.getElementById('wb-title');
     const cfg     = SUBJECTS[subjectKey];
 
-    if (badgeEl) badgeEl.textContent = (cfg ? cfg.title : '') + (topic.page ? ' • Sayfa ' + topic.page : '');
+    if (badgeEl) badgeEl.textContent = (cfg ? cfg.title : '') + ' • ' + (topic.badge || 'Konu');
     if (titleEl) titleEl.textContent = topic.title;
 
     const backBtn = document.getElementById('btn-back-from-workbook');
@@ -933,6 +974,40 @@
   }
   window.handleMatGameChoice = handleMatGameChoice;
 
+
+  /* ─── DATA CLEANING HELPERS ──────────────────────────────── */
+  const PDF_NOISE = /===\s*PAGE\s*\d+\s*===.*$|\d+\s*ÖLÇME.*$|ÖLÇME,?\s*DEĞERLENDİRME.*$|SINAV\s*HİZMETLERİ.*$|GENEL\s*MÜDÜRLÜĞÜ.*$|MEB\s*\d{4}.*$/gi;
+  const ANSWER_SPOILER = /MEB\s*Kazanımı\s*:\s*Doğru\s*cevap\s+.*?\([A-D]\s*seçeneği\)\.?|Doğru\s*cevap\s+[A-D]\s*\([A-D]\s*seçeneği\)\.?|Cevap\s*:\s*[A-D]\s*seçeneği\.?|\(Cevap\s*[A-D]\)|MEB\s*Kazanımı\s*:\s*/gi;
+
+  const GENERIC_HINTS = [
+    'Soruyu dikkatlice oku ve tüm şıkları karşılaştır! 🦉',
+    'Konuyu hatırla ve adım adım düşün. Yapabilirsin! 💪',
+    'İlk önce kesin yanlış olanları elemeyi dene! 🎯',
+    'Bu konuyu çalışma kitabında gözden geçirebilirsin! 📖',
+    'Her şık için "Bu doğru mu?" diye kendine sor! 🤔',
+  ];
+  let _hintIdx = 0;
+
+  function cleanOption(text) {
+    if (!text) return '';
+    let t = String(text).replace(PDF_NOISE, '').trim();
+    t = t.replace(/\|+$/, '').trim();
+    if (t.length > 70) t = t.slice(0, 67) + '…';
+    return t || String(text).slice(0, 40);
+  }
+
+  function cleanHint(text) {
+    if (!text) return null;
+    let t = String(text).replace(ANSWER_SPOILER, '').trim();
+    t = t.replace(/^\s*:\s*/, '').trim();
+    if (t.length < 6) {
+      const h = GENERIC_HINTS[_hintIdx % GENERIC_HINTS.length];
+      _hintIdx++;
+      return h;
+    }
+    return t;
+  }
+
   /* ─── QUIZ ENGINE (CHOICE, TRUE/FALSE, MATCHING) ───────────── */
   function buildQuestionsForTopic(subjectKey, topic) {
     const list = [];
@@ -941,66 +1016,71 @@
     // 1. Multiple Choice Questions from genuine tasks
     tasks.forEach(task => {
       const qText = task.q || task.question;
-      const opts  = task.options || [];
+      const opts  = (task.options || []).map(cleanOption).filter(o => o.length > 0);
       const ans   = typeof task.ans === 'number' ? task.ans : (typeof task.correct === 'number' ? task.correct : 0);
-      const hint  = task.hint || task.explanation || 'Tebrikler, doğru cevap!';
+      const safeAns = Math.min(ans, opts.length - 1);
+      const hint  = cleanHint(task.hint || task.explanation) || GENERIC_HINTS[_hintIdx++ % GENERIC_HINTS.length];
 
       if (qText && opts.length >= 2) {
         list.push({
           type: 'choice',
           question: qText,
           options: opts,
-          correct: ans,
+          correct: safeAns,
           hint: hint,
           isEnglish: subjectKey === 'ingilizce'
         });
       }
     });
 
-    // 2. True / False (Evet / Hayır) Exercise
+    // 2. True / False (Evet / Hayır) Exercise — only if fact_card has a real rule
     if (topic.fact_card && topic.fact_card.rule) {
+      const rule = topic.fact_card.rule;
+      // Make a true OR false question alternating
+      const makeTrue = list.length % 2 === 0;
+      let tfQuestion, tfIsTrue;
+      if (makeTrue) {
+        tfQuestion = '🧠 DOĞRU MU, YANLIŞ MI?\n' + rule.slice(0, 120);
+        tfIsTrue = true;
+      } else {
+        // Slightly negate the rule to make it false
+        tfQuestion = '🧠 DOĞRU MU, YANLIŞ MI?\n"' + (topic.title || 'Bu konu') + '" ile ilgili her bilgi kesinlikle doğrudur.';
+        tfIsTrue = false;
+      }
       list.push({
         type: 'true_false',
-        question: 'DOĞRU MU, YANLIŞ MI? ' + topic.fact_card.rule.slice(0, 140),
-        isTrue: true,
-        hint: topic.fact_card.tip || 'Kuralı hatırla: Her zaman dikkatle oku!',
+        question: tfQuestion,
+        isTrue: tfIsTrue,
+        hint: topic.fact_card.tip ? cleanHint(topic.fact_card.tip) || '📌 Kuralı hatırla!' : '📌 Kuralı düşün!',
         isEnglish: false
-      });
-    } else if (tasks.length > 0 && tasks[0].options) {
-      const sample = tasks[0];
-      const correctOpt = sample.options[sample.ans || 0];
-      list.push({
-        type: 'true_false',
-        question: 'BİLGİ KONTROLÜ: "' + sample.q + '" sorusunun doğru yanıtı "' + correctOpt + '" dir.',
-        isTrue: true,
-        hint: sample.hint || 'Kazanım bilgisini pekiştiriyoruz!',
-        isEnglish: subjectKey === 'ingilizce'
       });
     }
 
-    // 3. Matching (Eşleştirme) Exercise
+    // 3. Matching (Eşleştirme) Exercise — use question stem vs. correct answer
     if (tasks.length >= 3) {
       const pairs = [];
       tasks.slice(0, 3).forEach(t => {
-        const left = (t.q || '').replace(/Modellenen|sayıyı bulun:|Okunuşu|olan sayının rakamla yazılışı nedir\?|sayısında/g, '').trim().slice(0, 24) || 'Soru';
-        const right = t.options && t.options[t.ans || 0] ? String(t.options[t.ans || 0]).slice(0, 24) : 'Cevap';
-        pairs.push({ left: left, right: right });
+        const qStem = (t.q || '').replace(/[?!]/g, '').trim().slice(0, 28) || 'Soru';
+        const opts = (t.options || []).map(cleanOption);
+        const aIdx = typeof t.ans === 'number' ? t.ans : 0;
+        const answer = opts[aIdx] ? opts[aIdx].slice(0, 28) : 'Cevap';
+        pairs.push({ left: qStem, right: answer });
       });
       list.push({
         type: 'matching',
-        question: 'KAVRAM EŞLEŞTİRME: Sol taraftaki ifadeleri sağdaki doğru karşılıklarıyla eşleştir!',
+        question: '🔗 EŞLEŞTİRME: Sol taraftaki soruları sağdaki doğru cevaplarla eşleştir!',
         pairs: pairs,
-        hint: 'Harika eşleştirmeler yaptın!',
+        hint: 'Harika! Tüm eşleştirmeleri doğru buldun! 🎯',
         isEnglish: subjectKey === 'ingilizce'
       });
     }
 
-    // If completely empty, generate robust subject questions
+    // If completely empty, generate a warmup question
     if (!list.length) {
       list.push({
         type: 'choice',
-        question: topic.title + ' konusundaki alıştırmaya hazır mısın?',
-        options: ['Hazırım 🚀', 'Tekrar Bakayım', 'Kolay Gelsin', 'Hadi Başlayalım'],
+        question: '"' + topic.title + '" konusuna hazır mısın?',
+        options: ['Evet, Hazırım! 🚀', 'Önce Tekrar Bakayım 📖', 'Hadi Başlayalım! 💪', 'Kolay Gelsin! ⭐'],
         correct: 0,
         hint: 'Maceraya tam gaz devam!',
         isEnglish: false
@@ -1226,10 +1306,16 @@
       }
     }
 
-    // 1. Bilge Kuş Mascot Tip Bubble
+    // 1. Bilge Kuş Mascot — sadece motivasyon mesajı, cevap vermeden önce ipucu YOK
+    const MOTIVATIONS = [
+      'Dikkatlice oku ve en uygun şıkkı seç! 💪',
+      'Şıkları teker teker değerlendir! 🦉',
+      'Kesin yanlış olanları önce ele! 🎯',
+      'Bu soruyu çözebilirsin, güveniyorum! ⭐',
+      'Konuyu hatırla, doğru cevap orada saklı! 📖',
+    ];
     if (mascotTipRow && mascotTipText) {
-      const tipContent = q.hint || 'Soruyu dikkatle oku, doğru cevabı kolayca bulacaksın! 🦉';
-      mascotTipText.textContent = tipContent;
+      mascotTipText.textContent = MOTIVATIONS[state.quiz.currentIdx % MOTIVATIONS.length];
       mascotTipRow.style.display = 'flex';
     }
 
@@ -1292,23 +1378,25 @@
 
     allBtns.forEach((btn, i) => {
       btn.classList.add('disabled');
+      btn.style.cursor = 'default';
       const icon = btn.querySelector('.opt-indicator-icon');
       if (i === q.correct) {
         btn.classList.add('correct');
-        if (icon) icon.textContent = 'check_circle';
+        if (icon) { icon.textContent = 'check_circle'; icon.style.color = '#16a34a'; }
       } else if (i === selectedIdx && !correct) {
         btn.classList.add('incorrect');
-        if (icon) icon.textContent = 'cancel';
+        if (icon) { icon.textContent = 'cancel'; icon.style.color = '#dc2626'; }
       }
     });
 
     if (correct) {
       playSound('correct');
       state.quiz.score++;
-      showFeedback(true, 'Tebrikler! Doğru Cevap! 🎉', q.hint);
+      showFeedback(true, '🎉 Harika! Doğru cevap!', q.hint || 'Devam et böyle! ⭐');
     } else {
       playSound('wrong');
-      showFeedback(false, 'Neredeyse! Doğru Yanıt: ' + q.options[q.correct], q.hint);
+      const correctLabel = q.options[q.correct] || '—';
+      showFeedback(false, '❌ Yanlış! Doğru cevap: ' + correctLabel, q.hint || 'Tekrar dene! 💪');
     }
     showNextButton();
   }

@@ -29,7 +29,7 @@ window.CURRICULUM_TERM1 = {
                   "9"
                 ],
                 "ans": 1,
-                "hint": "MEB Kazanımı: Doğru cevap 7 (B seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "A ve B doğal sayılarının abaküs ile gösterimleri aşağıda verilmiştir. Buna göre A ve B doğal sayılarının toplamının okunuşu aşağıdakilerden hangisidir?",
@@ -37,10 +37,10 @@ window.CURRICULUM_TERM1 = {
                   "Yedi yüz yetmiş",
                   "Yedi yüz yetmiş bir",
                   "Yedi yüz seksen",
-                  "Yedi yüz seksen bir 9 === PAGE 11 === 2 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Yedi yüz seksen bir 9"
                 ],
                 "ans": 1,
-                "hint": "MEB Kazanımı: Doğru cevap Yedi yüz yetmiş bir (B seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Yukarıdaki onluk taban blokları ile modellenen çıkarma işlemi hangisidir?",
@@ -51,7 +51,7 @@ window.CURRICULUM_TERM1 = {
                   "358 223 135"
                 ],
                 "ans": 2,
-                "hint": "MEB Kazanımı: Doğru cevap 358 135 223 (C seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "Modellenen 3 basamaklı sayıyı bulun: 3 Yüzlük, 4 Onluk, 7 Birlik",
@@ -150,7 +150,7 @@ window.CURRICULUM_TERM1 = {
                   "4."
                 ],
                 "ans": 1,
-                "hint": "MEB Kazanımı: Doğru cevap 2. (B seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "Aşağıdaki rakamlar birer kez kullanılarak üç basamaklı en küçük ve en büyük doğal sayı oluşturuluyor. Buna göre oluşturulan doğal sayıların farkı kaçtır?",
@@ -158,10 +158,10 @@ window.CURRICULUM_TERM1 = {
                   "277",
                   "287",
                   "297",
-                  "307 4 7 5 10 === PAGE 12 === 3 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "307 4 7 5 10"
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap 307 4 7 5 10 === PAGE 12 === 3 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ (D seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "Aşağıda taban bloklarıyla modellenmiş bir doğal sayı verilmiştir. Buna göre modellenen sayı hangisidir?",
@@ -172,7 +172,7 @@ window.CURRICULUM_TERM1 = {
                   "227"
                 ],
                 "ans": 2,
-                "hint": "MEB Kazanımı: Doğru cevap 235 (C seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "562 sayısının doğru çözümlenmiş hali hangisidir?",
@@ -256,10 +256,10 @@ window.CURRICULUM_TERM1 = {
                   "0",
                   "3",
                   "6",
-                  "7 2 3 4 75 0 3 87 56 2 3 4 7 59 9 tepe topu 2 basamaklı en küçük tek doğal sayı 3 basamaklı en büyük tek doğal sayı 11 === PAGE 13 === 4 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "7 2 3 4 75 0 3 87 56 2 3 4 7 59 9 tepe topu 2 basamaklı en küçük tek doğal sa..."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap 0 (A seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Kerem, üzerinde bazı sayıların yazılı olduğu kartları onar ileriye doğru ritmik olacak şekilde diziyor. Bu kartların birkaçını ise ters çeviriyor. 346 356 376 386 396 Buna göre aşağıdakilerden hangisi Kerem’in kartlarında yazan sayılardan biri değildir?",
@@ -270,7 +270,7 @@ window.CURRICULUM_TERM1 = {
                   "416"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap 336 (A seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "Aşağıda sıralanmış kartlar veriliyor. Bu kartlardan bir tanesi çıkarılarak kalanların sırası değiştirilmeden üç basamaklı en büyük doğal sayı oluşturuluyor. Buna göre çıkarılan karttaki rakam kaçtır?",
@@ -278,10 +278,10 @@ window.CURRICULUM_TERM1 = {
                   "0",
                   "3",
                   "5",
-                  "8 3 8 5 0 12 === PAGE 14 === 5 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "8 3 8 5 0 12"
                 ],
                 "ans": 2,
-                "hint": "MEB Kazanımı: Doğru cevap 5 (C seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "478 .... 482 ifadesinde noktalı yere hangi sembol gelmelidir?",
@@ -367,7 +367,7 @@ window.CURRICULUM_TERM1 = {
                   "Üç yüz on iki"
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap Üç yüz on iki (D seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "Aşağıda boncuklarla abaküste sayı oluşturma oyununun kuralları veriliyor: ● Her çubuğa en az bir boncuk koyulur. ● Tüm boncuklar kullanılır. ● Mevcut boncuklarla üç basamaklı en büyük doğal sayı oluşturulur. Bu oyunu oynayan Arda’nın 16 boncuğu olduğuna göre abaküste oluşturduğu sayı aşağıdakilerden hangisidir?",
@@ -375,10 +375,10 @@ window.CURRICULUM_TERM1 = {
                   "943",
                   "952",
                   "961",
-                  "971 13 === PAGE 15 === 6 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "971 13"
                 ],
                 "ans": 1,
-                "hint": "MEB Kazanımı: Doğru cevap 952 (B seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "426 274 Yukarıdaki çıkarma işleminde fark kaçtır?",
@@ -389,7 +389,7 @@ window.CURRICULUM_TERM1 = {
                   "292"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap 152 (A seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "6 - 12 - 18 - ? - 30 ritmik saymasında soru işareti yerine hangi sayı gelmelidir?",
@@ -472,10 +472,10 @@ window.CURRICULUM_TERM1 = {
                   "458 246",
                   "543 236",
                   "573 231",
-                  "678 467 14 === PAGE 16 === 7 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "678 467 14"
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap 678 467 14 === PAGE 16 === 7 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ (D seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "Aşağıdaki çıkarma işlemlerinden hangisinin sonucu en büyüktür?",
@@ -486,7 +486,7 @@ window.CURRICULUM_TERM1 = {
                   "489 – 458 = …"
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap 489 – 458 = … (D seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "Üç basamaklı bir doğal sayıya ait bilgiler aşağıda verilmiştir: ● Yüzler basamağındaki rakamın basamak değeri 300’dür. ● Birler basamağındaki rakamın sayı değeri 1’dir. ● Sayının tüm basamaklarındaki rakamların sayı değerlerinin toplamı 9’dur. Buna göre bu sayı kaçtır?",
@@ -497,7 +497,7 @@ window.CURRICULUM_TERM1 = {
                   "391"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap 153 (A seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "Bir sayının ÇİFT sayı olduğunu anlamak için hangi basamağına bakarız?",
@@ -576,7 +576,7 @@ window.CURRICULUM_TERM1 = {
                   "435"
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap 435 (D seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "Aşağıdaki kutular 7’den başlayarak yedişer ileriye doğru ritmik sayma kuralına göre doldurulacaktır. Buna göre boş kutulara aşağıdakilerden hangisi getirilemez?",
@@ -584,10 +584,10 @@ window.CURRICULUM_TERM1 = {
                   "21",
                   "27",
                   "35",
-                  "49 7 14 28 42 56 16 === PAGE 18 === 9 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "49 7 14 28 42 56 16"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap 21 (A seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Zeynep, üzerinde doğal sayıların yazılı olduğu renkli topları küçükten büyüğe doğru aşağıdaki gibi sıralamıştır. Topların sırasının karıştığını fark eden Zeynep, hangi iki topun yerini değiştirirse sıralamadaki yanlışı düzeltmiş olur?",
@@ -598,7 +598,7 @@ window.CURRICULUM_TERM1 = {
                   "Turuncu ve kırmızı 569 869 769 669 969"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Mavi ve kırmızı (A seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "İki TEK sayının toplamı her zaman nasıl bir sayıdır? (Örn: 3 + 5 = ?)",
@@ -691,10 +691,10 @@ window.CURRICULUM_TERM1 = {
                   "267 52 211",
                   "271 54 213",
                   "274 59 215",
-                  "279 64 226 Yeşil Turuncu Mavi Kırmızı Mor 17 === PAGE 19 === 10 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "279 64 226 Yeşil Turuncu Mavi Kırmızı Mor 17"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap 267 52 211 (A seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "38 < < < 45 olduğuna göre ve yerine yazılabilecek en büyük doğal sayıların toplamı kaçtır?",
@@ -705,7 +705,7 @@ window.CURRICULUM_TERM1 = {
                   "89"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap 83 (A seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "Mete, Romen rakamlarının yazılı olduğu, renkli kartonlardan oluşan panoya okla üç atış yapmıştır. Birinci atışında sarı, ikinci atışında kırmızı, üçüncü atışında ise mavi renkli kartonlar- dan birine isabet ettirmiştir. Buna göre Mete’nin isabet ettirdiği Romen rakamlarının sayı değerleri aşağıdakilerin hangisinde doğru verilmiş olabilir? Birinci Atış İkinci Atış Üçüncü Atış",
@@ -713,10 +713,10 @@ window.CURRICULUM_TERM1 = {
                   "3 6 20",
                   "7 10 14",
                   "9 19 4",
-                  "15 13 16 18 === PAGE 20 === 11 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "15 13 16 18"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap 3 6 20 (A seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "15 - 22 - 29 - 36 - ? örüntüsünün kuralı ve sıradaki sayısı nedir?",
@@ -801,7 +801,7 @@ window.CURRICULUM_TERM1 = {
                   "280"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap 44 (A seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Aşağıdaki çıkarma işlemlerinde aynı renkteki kutulara aynı sayılar yazılarak işlemler sırasıyla yapılıyor. 876 368 124 216 Buna göre pembe kutuya yazılacak sayı aşağıdakilerden hangisidir?",
@@ -812,7 +812,7 @@ window.CURRICULUM_TERM1 = {
                   "180"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap 168 (A seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "Aşağıdaki kutularda yazan rakamlar birer kez kullanılarak üç basamaklı en büyük doğal sayı ile üç basamaklı en küçük doğal sayı oluşturulacaktır. Buna göre oluşturulan sayılar arasındaki fark kaçtır?",
@@ -820,10 +820,10 @@ window.CURRICULUM_TERM1 = {
                   "712",
                   "733",
                   "742",
-                  "753 1 3 4 6 7 8 120 280 59 44 89 – 30 94 – 50 200 – 80 19 === PAGE 21 === 12 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "753 1 3 4 6 7 8 120 280 59 44 89 – 30 94 – 50 200 – 80 19"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap 712 (A seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "467 sayısı en yakın ONLUĞA yuvarlandığında hangi sayı elde edilir?",
@@ -1020,7 +1020,7 @@ window.CURRICULUM_TERM1 = {
                   "850"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap 508 (A seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "755 < 7 5 olduğuna göre yerine aşağıdakilerden hangisi yazılabilir?",
@@ -1031,7 +1031,7 @@ window.CURRICULUM_TERM1 = {
                   "3"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap 6 (A seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "Aşağıda yüzler, onlar ve birler basamağında kullanılacak renkli sayı pulları veriliyor. Bu sayı pullarından aynı renkte olanlarla üç basamaklı doğal sayılar oluşturuluyor. Buna göre aşağıdakilerden hangisi oluşturulan doğal sayılardan biri değildir?",
@@ -1039,10 +1039,10 @@ window.CURRICULUM_TERM1 = {
                   "İki yüz yetmiş dokuz",
                   "Dört yüz elli",
                   "Altı yüz on sekiz",
-                  "Sekiz yüz otuz dokuz 2 1 0 6 5 8 4 3 9 8 7 2 Yüzler Basamağı Onlar Basamağı Birler Basamağı 20 === PAGE 22 === 13 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Sekiz yüz otuz dokuz 2 1 0 6 5 8 4 3 9 8 7 2 Yüzler Basamağı Onlar Basamağı B..."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap İki yüz yetmiş dokuz (A seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Bir bütünün 2 eş parçaya bölünmesiyle oluşan parçalardan birine ne ad verilir ve nasıl yazılır?",
@@ -1138,7 +1138,7 @@ window.CURRICULUM_TERM1 = {
                   "102 azalır."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap 98 artar. (A seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "292 < A < 297 307 < B < 311 Yukarıda verilenlere göre A yerine yazılabilecek en büyük doğal sayı ile B yerine yazılabilecek en küçük tek doğal sayının toplamı kaçtır?",
@@ -1149,7 +1149,7 @@ window.CURRICULUM_TERM1 = {
                   "606"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap 599 (A seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "En yakın yüzlüğe yuvarlandığında 200 olan en küçük ve en büyük doğal sayılar aşağıdakilerin hangisinde doğru verilmiştir? En Küçük Doğal Sayı En Büyük Doğal Sayı",
@@ -1157,10 +1157,10 @@ window.CURRICULUM_TERM1 = {
                   "149 250",
                   "150 249",
                   "199 250",
-                  "201 249 21 === PAGE 23 === 14 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "201 249 21"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap 149 250 (A seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "Bir pastayı 6 eş dilime böldük ve 2 dilimini yedik. Yenen kısmı ifade eden kesir hangisidir?",
@@ -1242,10 +1242,10 @@ window.CURRICULUM_TERM1 = {
                   "3 6 9 12 15 Renk Beyaz",
                   "5 10 15 20 25 Renk Beyaz",
                   "3 6 9 12 15 Renk Beyaz",
-                  "5 10 15 20 25 Renk Beyaz 44 === PAGE 46 === 2 ÖLÇME, DEĞERLENDİ RME VE SI NAV Hİ ZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "5 10 15 20 25 Renk Beyaz 44"
                 ],
                 "ans": 1,
-                "hint": "MEB Kazanımı: Doğru cevap 5 10 15 20 25 Renk Beyaz (B seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "Bu manavda pazar günü toplam kaç kilogram meyve satılmıştır?",
@@ -1256,7 +1256,7 @@ window.CURRICULUM_TERM1 = {
                   "180"
                 ],
                 "ans": 2,
-                "hint": "MEB Kazanımı: Doğru cevap 75 (C seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "2-4. soruları aşağıdaki bilgilere göre cevaplayınız. Aşağıdaki tabloda bir manavda satılan meyveler ve bunların birer kilogramının satış fiyatları verilmiştir. Tablo: Meyvelerin Kilogram Fiyatları Meyveler Kilogram Fiyatı (TL) Elma 6 Portakal 5 Çilek 10 Muz 15 Aşağıdaki şekil grafiğinde de bu manavın pazar günü kaç kilogram meyve sattığı gösterilmiştir. Grafik: Satılan Meyvelerin Miktarı Elma Portakal Çilek Muz Not: Her meyve 1 kilogramı göstermektedir. Bu manavın pazar günü, çilek ve portakal satışlarından elde ettiği kazanç arasındaki fark kaç liradır?",
@@ -1267,7 +1267,7 @@ window.CURRICULUM_TERM1 = {
                   "70"
                 ],
                 "ans": 1,
-                "hint": "MEB Kazanımı: Doğru cevap 50 (B seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "Bir kesirde bütünün kaç eş parçaya ayrıldığını hangi terim gösterir?",
@@ -1348,11 +1348,11 @@ window.CURRICULUM_TERM1 = {
                 "options": [
                   "Manavın satışından en çok kazanç elde ettiği meyve muzdur.",
                   "Manav meyvelerin satışından toplam 128 TL kazanmıştır.",
-                  "Elma satışından elde ettiği kazanç ile portakal satışından elde ettiği kazanç eşittir.",
-                  "Manavın satışından en az kazanç elde ettiği meyve portakaldır. 45 === PAGE 47 === 3 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Elma satışından elde ettiği kazanç ile portakal satışından elde ettiği kazanç...",
+                  "Manavın satışından en az kazanç elde ettiği meyve portakaldır. 45"
                 ],
                 "ans": 1,
-                "hint": "MEB Kazanımı: Doğru cevap Manav meyvelerin satışından toplam 128 TL kazanmıştır. (B seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "Aşağıdaki sıklık tablosunda bir çiftlikteki hayvanların toplam ayak sayıları verilmiştir. Tablo: Çiftlikteki Hayvanların Toplam Ayak Sayıları Hayvan Türü Toplam Ayak Sayısı Tavuk 20 Tavşan 20 Koyun 16 Buna göre aşağıdakilerden hangisi doğrudur?",
@@ -1363,7 +1363,7 @@ window.CURRICULUM_TERM1 = {
                   "Çiftlikte en fazla koyun vardır."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Tavuk sayısı, koyun sayısından fazladır. (A seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "Aşağıda üç basamaklı üç doğal sayının toplama işlemi yapılmıştır. Boş bırakılan basamaklardaki rakamların yerine , , ve sembolleri kullanılmıştır. Buna göre , ve sembollerinin yerine yazılması gereken rakamlar aşağıdakilerin hangisinde doğru olarak verilmiştir?",
@@ -1371,10 +1371,10 @@ window.CURRICULUM_TERM1 = {
                   "4 0 3",
                   "6 3 2",
                   "5 8 1",
-                  "4 9 2 46 === PAGE 48 === 4 ÖLÇME, DEĞERLENDİ RME VE SI NAV Hİ ZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "4 9 2 46"
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap 4 9 2 46 === PAGE 48 === 4 ÖLÇME, DEĞERLENDİ RME VE SI NAV Hİ ZMETLERİ GENEL MÜDÜRLÜĞÜ (D seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "Öğleden sonra saat 3, dijital saatte nasıl gösterilir?",
@@ -1467,10 +1467,10 @@ window.CURRICULUM_TERM1 = {
                   "En fazla elma, 2018 yılında toplanmıştır.",
                   "En fazla armut, 2020 yılında toplanmıştır.",
                   "2019 yılında, en az şeftali toplanmıştır.",
-                  "En çok ürün, 2018 yılında toplanmıştır. 47 === PAGE 49 === ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "En çok ürün, 2018 yılında toplanmıştır. 47"
                 ],
                 "ans": 2,
-                "hint": "MEB Kazanımı: Doğru cevap 2019 yılında, en az şeftali toplanmıştır. (C seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Aşağıdaki sıklık tablosunda bir okulun 3. sınıflarına ait öğrenci sayıları verilmiştir. Tablo: Şubelerdeki Öğrenci Sayıları Şube Öğrenci Sayısı 3/A 24 3/B 30 3/C 36 3/D 24 Aşağıdaki şekil grafiklerinden hangisi sıklık tablosundaki verilere göre çizilmiştir?",
@@ -1478,10 +1478,10 @@ window.CURRICULUM_TERM1 = {
                   "6 12 18 24 30 36 3/A3 /B 3/C3 /D",
                   "6 12 18 24 30 36 3/A3 /B 3/C3 /D",
                   "6 12 18 24 30 36 3/A3 /B 3/C3 /D",
-                  "6 12 18 24 30 36 3/A3 /B 3/C3 /D 3 3 3 3 3 3 3 3 48 === PAGE 50 === 6 ÖLÇME, DEĞERLENDİ RME VE SI NAV Hİ ZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "6 12 18 24 30 36 3/A3 /B 3/C3 /D 3 3 3 3 3 3 3 3 48"
                 ],
                 "ans": 1,
-                "hint": "MEB Kazanımı: Doğru cevap 6 12 18 24 30 36 3/A3 /B 3/C3 /D (B seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "Bir sınıf kütüphanesinde 48 tane hikâye kitabı, hikâye kitaplarının 12 fazlası kadar da şiir kitabı vardır. Buna göre bu kütüphanedeki hikâye ve şiir kitaplarının toplam sayısı kaçtır?",
@@ -1492,7 +1492,7 @@ window.CURRICULUM_TERM1 = {
                   "108"
                 ],
                 "ans": 1,
-                "hint": "MEB Kazanımı: Doğru cevap 60 (B seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "1 saat kaç dakikadır?",
@@ -1588,7 +1588,7 @@ window.CURRICULUM_TERM1 = {
                   "457"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap 179 (A seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "sayı 2. sayı Can 213 146 Elif 119 108 Kaan 346 402 Zeynep 102 614 Buna göre hangisinin bulduğu sonuç, sayıların toplamının gerçek sonucundan küçüktür?",
@@ -1599,7 +1599,7 @@ window.CURRICULUM_TERM1 = {
                   "Zeynep"
                 ],
                 "ans": 1,
-                "hint": "MEB Kazanımı: Doğru cevap Elif (B seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "Aşağıdaki tabloda verilen doğal sayılar, soldan sağa ve yukarıdan aşağıya doğru toplanarak toplam kısmına yazılmıştır. + Toplam 79 136 39 Toplam 100 96 196 Buna göre , ve yerine gelecek doğal sayılar aşağıdakilerin hangisinde doğru olarak verilmiştir?",
@@ -1607,10 +1607,10 @@ window.CURRICULUM_TERM1 = {
                   "50 21 61",
                   "52 27 63",
                   "54 23 62",
-                  "57 21 60 49 === PAGE 51 === 7 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "57 21 60 49"
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap 57 21 60 49 === PAGE 51 === 7 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ (D seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Diş fırçalama süresi yaklaşık olarak ne kadardır?",
@@ -1689,13 +1689,13 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Not: 4 8 12 16 20 24 28 32 36 FasulyeNohut Bulgur Yukarıdaki şekil grafiğine göre oluşturulan sıklık tablosu aşağıdakilerden hangisidir?",
                 "options": [
-                  "Tablo: Bakliyat Miktarları Bakliyat Miktar (kg) Fasulye 8 Nohut 4 Pirinç 6 Bulgur 9 Mercimek 5",
-                  "Tablo: Bakliyat Miktarları Bakliyat Miktar (kg) Fasulye 36 Nohut 16 Pirinç 24 Bulgur 20 Mercimek 36",
-                  "Tablo: Bakliyat Miktarları Bakliyat Miktar (kg) Fasulye 32 Nohut 16 Pirinç 24 Bulgur 36 Mercimek 20",
-                  "Tablo: Bakliyat Miktarları Bakliyat Miktar (kg) Fasulye 32 Nohut 12 Pirinç 20 Bulgur 32 Mercimek 20 50 === PAGE 52 === 8 ÖLÇME, DEĞERLENDİ RME VE SI NAV Hİ ZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Tablo: Bakliyat Miktarları Bakliyat Miktar (kg) Fasulye 8 Nohut 4 Pirinç 6 Bu...",
+                  "Tablo: Bakliyat Miktarları Bakliyat Miktar (kg) Fasulye 36 Nohut 16 Pirinç 24...",
+                  "Tablo: Bakliyat Miktarları Bakliyat Miktar (kg) Fasulye 32 Nohut 16 Pirinç 24...",
+                  "Tablo: Bakliyat Miktarları Bakliyat Miktar (kg) Fasulye 32 Nohut 12 Pirinç 20..."
                 ],
                 "ans": 2,
-                "hint": "MEB Kazanımı: Doğru cevap Tablo: Bakliyat Miktarları Bakliyat Miktar (kg) Fasulye 32 Nohut 16 Pirinç 24 Bulgur 36 Mercimek 20 (C seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "Aşağıdaki şekil grafiğinde bir çiftlikte bulunan hayvan türlerinden tavukların sayısı gösterilmiştir. 50 100 150 200 250 Hayvan Türü TavukKoyun Grafikteki eksik şekillerle ilgili ipuçları aşağıdaki gibidir: ● Koyun sayısında kullanılacak şekil sayısı tavuklarda kullanılandan bir eksiktir. ● İnek sayısında kullanılacak şekil sayısı ise koyunlarda kullanılacak olandan üç fazladır. Buna göre çiftlikteki hayvanların toplam sayısı kaçtır?",
@@ -1706,7 +1706,7 @@ window.CURRICULUM_TERM1 = {
                   "700"
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap 700 (D seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "Elma ve armut ağaçlarının olduğu bir bahçedeki toplam ağaç sayısı 578’dir. Bu bahçedeki elma ağaçlarının sayısı 284 olduğuna göre armut ağaçlarının sayısı kaçtır?",
@@ -1717,7 +1717,7 @@ window.CURRICULUM_TERM1 = {
                   "294"
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap 294 (D seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "1 metre (m) kaç santimetredir (cm)?",
@@ -1810,10 +1810,10 @@ window.CURRICULUM_TERM1 = {
                   "1",
                   "2",
                   "3",
-                  "4 193 215+ 51 === PAGE 53 === 9 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "4 193 215+ 51"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap 1 (A seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "17-18. soruları aşağıdaki bilgilere göre cevaplayınız. Aşağıdaki şekil grafiğinde bazı öğrencilerin bir haftada okudukları kitapların sayfa sayıları gösterilmiştir. Not: 8 16 24 32 40 48 56 64 72 KübraArdaDuygu Eda Fatih ve Kübra toplam kaç sayfa kitap okumuştur?",
@@ -1824,7 +1824,7 @@ window.CURRICULUM_TERM1 = {
                   "96"
                 ],
                 "ans": 2,
-                "hint": "MEB Kazanımı: Doğru cevap 90 (C seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Arda ve Eda’nın okudukları toplam sayfa sayısı ile Duygu’nun okuduğu sayfa sayısı arasındaki fark kaçtır?",
@@ -1832,10 +1832,10 @@ window.CURRICULUM_TERM1 = {
                   "20",
                   "24",
                   "27",
-                  "31 52 === PAGE 54 === 10 ÖLÇME, DEĞERLENDİ RME VE SI NAV Hİ ZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "31 52"
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap 31 52 === PAGE 54 === 10 ÖLÇME, DEĞERLENDİ RME VE SI NAV Hİ ZMETLERİ GENEL MÜDÜRLÜĞÜ (D seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "1 Türk Lirası kaç kuruştur?",
@@ -1999,7 +1999,7 @@ window.CURRICULUM_TERM1 = {
                   "810"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap 380 (A seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "Aşağıdaki tabloya 20, 30 ve 70 doğal sayıları her satır ve sütunda birer tane olacak şekilde yerleştirilecektir. A 20 B 70 30 20 C D E Buna göre A+B+C+E işleminin sonucu kaçtır?",
@@ -2007,10 +2007,10 @@ window.CURRICULUM_TERM1 = {
                   "130",
                   "140",
                   "150",
-                  "160 53 === PAGE 55 === 11 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "160 53"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap 130 (A seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "Öğretmeni, Ayşe’den 3 onluk 6 birlikten oluşan doğal sayı ile 2 onluk 7 birlikten oluşan doğal sayıyı zihinden toplamasını istiyor. Buna göre Ayşe’nin zihinden yaptığı işlemin sonucu kaçtır?",
@@ -2021,7 +2021,7 @@ window.CURRICULUM_TERM1 = {
                   "52"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap 63 (A seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "48 + 31 işleminin sonucunu en yakın onluğa yuvarlayarak tahmin ediniz.",
@@ -2100,13 +2100,13 @@ window.CURRICULUM_TERM1 = {
               {
                 "q": "Aşağıdaki nesne grafiğinde bir çiçekçideki çiçek sayıları gösterilmiştir. Grafik: Çiçekçideki Çiçek Sayıları Çiçek Adı Çiçek Sayısı Gül Karanfil Papatya Lale Not: Her nesne 10 çiçeği göstermektedir. Buna göre oluşturulan sıklık tablosu aşağıdakilerden hangisidir?",
                 "options": [
-                  "Tablo: Çiçekçideki Çiçek Sayıları Çiçek Adı Çiçek Sayısı Gül 70 Karanfil 90 Papatya 60 Lale 120",
-                  "Tablo: Çiçekçideki Çiçek Sayıları Çiçek Adı Çiçek Sayısı Gül 70 Karanfil 80 Papatya 50 Lale 120",
-                  "Tablo: Çiçekçideki Çiçek Sayıları Çiçek Adı Çiçek Sayısı Gül 70 Karanfil 70 Papatya 60 Lale 120",
-                  "Tablo: Çiçekçideki Çiçek Sayıları Çiçek Adı Çiçek Sayısı Gül 70 Karanfil 90 Papatya 50 Lale 100 54 === PAGE 56 === 12 ÖLÇME, DEĞERLENDİ RME VE SI NAV Hİ ZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Tablo: Çiçekçideki Çiçek Sayıları Çiçek Adı Çiçek Sayısı Gül 70 Karanfil 90 P...",
+                  "Tablo: Çiçekçideki Çiçek Sayıları Çiçek Adı Çiçek Sayısı Gül 70 Karanfil 80 P...",
+                  "Tablo: Çiçekçideki Çiçek Sayıları Çiçek Adı Çiçek Sayısı Gül 70 Karanfil 70 P...",
+                  "Tablo: Çiçekçideki Çiçek Sayıları Çiçek Adı Çiçek Sayısı Gül 70 Karanfil 90 P..."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Tablo: Çiçekçideki Çiçek Sayıları Çiçek Adı Çiçek Sayısı Gül 70 Karanfil 90 Papatya 60 Lale 120 (A seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Aşağıdaki sıklık ve çetele tablosunda Ece’nin balonlarının renkleri ve balonların bazılarının sayısı verilmiştir. Ece’nin toplam 54 balonu bulunmaktadır. Tablo: Balon Sayısı Tablo: Balon Sayısı Sıklık Tablosu Çetele Tablosu Balon Rengi Balon Sayısı Balon Rengi Balon Sayısı Pembe 20 Pembe .... Beyaz …. Beyaz Sarı …. Sarı …. Turuncu …. Turuncu …. Ece’nin sarı ve turuncu renkli balonlarının sayısı birbirine eşit olduğuna göre sarı balonlarının sayısı kaçtır?",
@@ -2117,7 +2117,7 @@ window.CURRICULUM_TERM1 = {
                   "20"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap 10 (A seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "Bir öğretmen sınıfındaki öğrencilere sevdiği meyveleri sorar ve öğrencilerin verdikleri cevaplara göre aşağıdaki şekil grafiğini hazırlar. 3 6 9 12 15 18 21 24 27 Meyve ElmaArmutÜzümMuz Buna göre aşağıdaki ifadelerden hangisi doğrudur?",
@@ -2125,10 +2125,10 @@ window.CURRICULUM_TERM1 = {
                   "Armut sevenlerin sayısı, muz sevenlerin sayısından 10 eksiktir.",
                   "Elma sevenlerin sayısı, çilek sevenlerin sayısından 15 fazladır.",
                   "Muz sevenlerin sayısı, elma sevenlerin sayısından 10 fazladır.",
-                  "Çilek sevenlerin sayısı, üzüm sevenlerin sayısından 3 eksiktir. 55 === PAGE 57 === 13 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Çilek sevenlerin sayısı, üzüm sevenlerin sayısından 3 eksiktir. 55"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Armut sevenlerin sayısı, muz sevenlerin sayısından 10 eksiktir. (A seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "45 + [ ? ] = 82 işleminde verilmeyen toplanan kaçtır?",
@@ -2357,7 +2357,7 @@ window.CURRICULUM_TERM1 = {
                   "Murat'ın uzun boylu olduğunu"
                 ],
                 "ans": 1,
-                "hint": "MEB Kazanımı: Doğru cevap Dünya’nın şeklinin küreye benzediğini (B seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "Dünya şeklindeki bir yapboz görselde verilmiştir. Buna göre yapbozun 1. ve 2. parçası Dünya’nın hangi katmanlarını temsil eder? 1. 2.",
@@ -2365,10 +2365,10 @@ window.CURRICULUM_TERM1 = {
                   "Su katmanı Hava katmanı",
                   "Kara katmanı Su katmanı",
                   "Dağ katmanı Su katmanı",
-                  "Kara katmanı Hava katmanı 9 === PAGE 11 === ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Kara katmanı Hava katmanı 9"
                 ],
                 "ans": 1,
-                "hint": "MEB Kazanımı: Doğru cevap Kara katmanı Su katmanı (B seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "Öğretmen sınıfa aşağıdaki soruyu yöneltmiştir. Öğretmenin sorduğu soruya hangi öğrenci yanlış cevap vermiştir?",
@@ -2379,7 +2379,7 @@ window.CURRICULUM_TERM1 = {
                   "İbrahim"
                 ],
                 "ans": 2,
-                "hint": "MEB Kazanımı: Doğru cevap Özlem (C seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Üzerinde eldiven resmi olan laboratuvar sembolü neyi ifade eder?",
@@ -2440,7 +2440,7 @@ window.CURRICULUM_TERM1 = {
                   "Dünya yüzeyinde suların daha fazla yer kaplaması"
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap Dünya yüzeyinde suların daha fazla yer kaplaması (D seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "Defne, Dünya’nın katmanlarında bulunan yeryüzü şekillerine örnekler vermiştir. Daha sonra bir yerde hata yaptığını fark etmiştir. Buna göre, Defne hangi örneği verirken hata yapmıştır?",
@@ -2451,7 +2451,7 @@ window.CURRICULUM_TERM1 = {
                   "Su katmanı Ova"
                 ],
                 "ans": 1,
-                "hint": "MEB Kazanımı: Doğru cevap Su katmanı Göl (B seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "Güneş’in zararlı ışınlarından canlıları koruyan ozon tabakası, Dünya’nın hangi katmanında bulunur?",
@@ -2459,10 +2459,10 @@ window.CURRICULUM_TERM1 = {
                   "Kara katmanı",
                   "Hava katmanı",
                   "Su katmanı",
-                  "İç çekirdek 11 === PAGE 13 === ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "İç çekirdek 11"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Kara katmanı (A seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "Bilimsel bir araştırmanın ilk adımı genellikle hangisidir?",
@@ -2547,7 +2547,7 @@ window.CURRICULUM_TERM1 = {
                   "Dış çekirdek"
                 ],
                 "ans": 2,
-                "hint": "MEB Kazanımı: Doğru cevap Manto (C seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "Dünya modeli üzerinde mavi renkli bölgeler su katmanını; yeşil, sarı ve kahverengi bölgeler ise kara katmanını göstermektedir. Buna göre, Dünya modeliyle ilgili verilen bilgilerden hangisi yanlıştır?",
@@ -2558,7 +2558,7 @@ window.CURRICULUM_TERM1 = {
                   "Kahverengi bölgeler, Dünya modelinde daha fazladır."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Yeşil bölgelerde ovalar bulunabilir. (A seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Deniz kenarında oynayan bir çocuk Dünya’nın katmanlarından hangisiyle temas hâlinde değildir?",
@@ -2566,10 +2566,10 @@ window.CURRICULUM_TERM1 = {
                   "Hava katmanı",
                   "Kara katmanı",
                   "Su katmanı",
-                  "Manto 12 === PAGE 14 === ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Manto 12"
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap Manto 12 === PAGE 14 === ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ (D seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "Aşağıdakilerden hangisi bir bilim insanının temel özelliklerinden BİRİDİR?",
@@ -2700,7 +2700,7 @@ window.CURRICULUM_TERM1 = {
                   "Kahverengi"
                 ],
                 "ans": 1,
-                "hint": "MEB Kazanımı: Doğru cevap Yeşil (B seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "Aşağıdakilerden hangisi Dünya’nın küreye benzer bir şekle sahip olduğunu kanıtlamaz?",
@@ -2708,10 +2708,10 @@ window.CURRICULUM_TERM1 = {
                   "Karadan uzaklaşan bir geminin en son bacasının gözden kaybolması",
                   "Güneş doğarken önce Güneş’in bir kısmının, bir süre sonra tamamının görülmesi",
                   "Hep aynı yönde hareket eden bir uçağın başlangıç noktasına tekrar dönmesi",
-                  "Uzay aracıyla Dünya’dan uzaklaşırken önce evlerin çatısının sonra şehrin görülmesi Su katmanı Kara katmanı Hava katmanı Kara katmanı 13 === PAGE 15 === ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Uzay aracıyla Dünya’dan uzaklaşırken önce evlerin çatısının sonra şehrin görü..."
                 ],
                 "ans": 1,
-                "hint": "MEB Kazanımı: Doğru cevap Güneş doğarken önce Güneş’in bir kısmının, bir süre sonra tamamının görülmesi (B seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "Aşağıdakilerden hangisi Dünya’nın en sıcak katmanıdır?",
@@ -2722,7 +2722,7 @@ window.CURRICULUM_TERM1 = {
                   "Dış çekirdek"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap İç çekirdek (A seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "Gözle görülemeyecek kadar küçük olan ve sadece mikroskopla görülebilen canlı grubu hangisidir?",
@@ -2794,7 +2794,7 @@ window.CURRICULUM_TERM1 = {
                   "Poşetin ağzını bağladığımızda içinde biriken havayı fark ederiz."
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap Poşetin ağzını bağladığımızda içinde biriken havayı fark ederiz. (D seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Dünya’nın şeklini öğrencilerine modelle anlatmak isteyen bir öğretmen, aşağıdakilerden hangisini kullanabilir?",
@@ -2802,10 +2802,10 @@ window.CURRICULUM_TERM1 = {
                   "Tabak",
                   "Defter",
                   "Şişe",
-                  "Top 14 === PAGE 16 === ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Top 14"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Tabak (A seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "Dünya yüzeyindeki kara ve suların kapladığı alanlar görselde verilmiştir. Buna göre; verilen ifadelerden hangisi doğrudur?",
@@ -2816,7 +2816,7 @@ window.CURRICULUM_TERM1 = {
                   "Yer kabuğunu oluşturan karalar sulardan daha çok yer kaplar."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Yer kabuğunun kalınlığı her yerde aynıdır. (A seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "Çevremizdeki nesnelerin sertlik, yumuşaklık ve sıcaklık özelliklerini hangi duyu organımızla algılarız?",
@@ -2898,10 +2898,10 @@ window.CURRICULUM_TERM1 = {
                   "Manto",
                   "Dış çekirdek",
                   "Yer kabuğu",
-                  "İç çekirdek ? 15 === PAGE 17 === ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "İç çekirdek ? 15"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Manto (A seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "Doğan ve Arda, ellerindeki oyuncak uçağı Dünya modeli üzerinde sürekli aynı yönde hareket ettirdiklerinde uçak, başlangıç noktasına döner. Buna göre, Doğan ve Arda hangi sonuca ulaşır?",
@@ -2912,7 +2912,7 @@ window.CURRICULUM_TERM1 = {
                   "Dünya katmanlardan oluşur. Doğan Arda Doğan Arda"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Dünya Güneş etrafında döner. (A seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "Aşağıdakilerden hangisi Dünya’nın dış katmanlarındandır?",
@@ -2920,10 +2920,10 @@ window.CURRICULUM_TERM1 = {
                   "Manto",
                   "İç çekirdek",
                   "Su katmanı",
-                  "Dış çekirdek 16 === PAGE 18 === ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Dış çekirdek 16"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Manto (A seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Bir tohumun çimlenmesi için gereken 3 temel faktör hangisidir?",
@@ -3054,7 +3054,7 @@ window.CURRICULUM_TERM1 = {
                   "Yer kabuğu"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Magma (A seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "Görseldeki öğrenciler Dünya’mızın katmanlarından biri olan çekirdekle ilgili bilgi vermiştir. Öğrencilerden hangilerinin verdiği bilgi doğrudur?",
@@ -3062,10 +3062,10 @@ window.CURRICULUM_TERM1 = {
                   "Yalnız Aysu",
                   "Kerem ve Can",
                   "Aysu ve Can",
-                  "Aysu, Kerem ve Can • Canlıların yaşadığı katmandır. • Dünya’nın en dış katmanıdır. • Manto üzerinde bulunur. Aysu Kerem Can Dünya’nın en sıcak katmanıdır. Canlıların yaşayabilmesi için uygun bir ortamdır. Dünya’mızın en iç katmanıdır. 17 === PAGE 19 === ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Aysu, Kerem ve Can • Canlıların yaşadığı katmandır. • Dünya’nın en dış katman..."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Yalnız Aysu (A seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "Aşağıdakilerden hangisi kara katmanının özelliklerinden biri değildir?",
@@ -3076,7 +3076,7 @@ window.CURRICULUM_TERM1 = {
                   "Dünya’mızı sararak Güneş’in zararlı ışınlarından korur."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Toprak, taş ve kayalardan oluşur. (A seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "Kayaçlara farklı renk, parlaklık ve sertlik veren yapılar hangileridir?",
@@ -3161,7 +3161,7 @@ window.CURRICULUM_TERM1 = {
                   "Okyanuslar, denizler, göller, nehirler bu katmanı oluşturur."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Dünya'mızın en sıcak katmanıdır. (A seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "Dünya’mızın uzaydan çekilmiş fotoğrafları incelendiğinde mavi rengin daha fazla olduğu görülür. Dünya’mızın resimlerinde mavi rengin daha fazla olmasının nedeni hangisidir?",
@@ -3169,10 +3169,10 @@ window.CURRICULUM_TERM1 = {
                   "Etrafında atmosfer denilen hava tabakasının olması",
                   "Yüzeyinde su tabakasının daha fazla olması",
                   "Dünya yüzeyinde rüzgârların oluşması",
-                  "Resimlerin çok uzaktan çekilmesi 19 === PAGE 21 === ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Resimlerin çok uzaktan çekilmesi 19"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Etrafında atmosfer denilen hava tabakasının olması (A seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Bir öğrenci, kara katmanını oluşturan yeryüzü şekillerini tahtaya yazmıştır. Ancak bir hata yaptığını fark etmiştir. Bu öğrenci, hatasını düzeltmek için hangisini silmelidir?",
@@ -3183,7 +3183,7 @@ window.CURRICULUM_TERM1 = {
                   "Toprak"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Nehir (A seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "Milyonlarca yıl önce yaşamış canlıların kayaç tabakaları arasında taşlaşmış kalıntılarına ne ad verilir?",
@@ -3300,10 +3300,10 @@ window.CURRICULUM_TERM1 = {
                   "Kıyıya yaklaşan geminin önce dumanının sonra bacasının görülmesi",
                   "Dünya’nın yüzeyinde karaların sulardan daha az yer kaplaması",
                   "Dünya yüzeyinde dağların, ovaların ve okyanusların bulunması",
-                  "Dünya’nın merkezine yaklaşıldıkça sıcaklığın artması 20 === PAGE 22 === ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Dünya’nın merkezine yaklaşıldıkça sıcaklığın artması 20"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Kıyıya yaklaşan geminin önce dumanının sonra bacasının görülmesi (A seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "Dünya’nın katmanlarından biri de mantodur. Manto yüksek sıcaklık nedeniyle erimiş kayalardan oluşur. Buna göre, hangisi mantonun sıcak olduğunu kanıtlamaz?",
@@ -3314,7 +3314,7 @@ window.CURRICULUM_TERM1 = {
                   "Toprağın derinliklerine inildikçe toprak sıcaklığının artması"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Yer altından sıcak suların çıkması (A seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "Dünya’nın uzaydan çekilmiş bir fotoğrafı görselde verilmiştir. Buna göre, Dünya'nın fotoğrafıyla ilgili yapılan yorumlardan hangisi yanlıştır?",
@@ -3325,7 +3325,7 @@ window.CURRICULUM_TERM1 = {
                   "Beyaz bölgeler atmosferin olmadığı alanlardır."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Kahverengi bölgeler karalardır. (A seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "Belirli bir şekli olan ve dışarıdan bir etki olmadıkça şeklini koruyan maddeler hangi haldedir?",
@@ -3407,10 +3407,10 @@ window.CURRICULUM_TERM1 = {
                   "Yer kabuğu Dış çekirdek Manto İç çekirdek",
                   "İç çekirdek Dış çekirdek Manto Yer kabuğu",
                   "Yer kabuğu Manto Dış çekirdek İç çekirdek",
-                  "İç çekirdek Manto Dış çekirdek Yer kabuğu 1 2 3 4 21 === PAGE 23 === ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "İç çekirdek Manto Dış çekirdek Yer kabuğu 1 2 3 4 21"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Yer kabuğu Dış çekirdek Manto İç çekirdek (A seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Venüs’e “Sabah Yıldızı”, Mars’a “Kızıl Gezegen” denilirken Dünya’ya da “Mavi Gezegen” denilmektedir. Dünya’ya “Mavi Gezegen” denilmesinin nedeni hangisidir?",
@@ -3421,7 +3421,7 @@ window.CURRICULUM_TERM1 = {
                   "Yüzeyinin büyük oranda sularla kaplı olması"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Soğuk bir gezegen olması (A seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "Feribotla yolculuk yapan Ömer, gökyüzündeki bir martının denize doğru dalış yaparak balık avladığını gözlemlemiştir. Buna göre martı bu hareketi boyunca sırasıyla Dünya’nın hangi katmanlarında bulunmuştur?",
@@ -3432,7 +3432,7 @@ window.CURRICULUM_TERM1 = {
                   "Hava - kara"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Kara - hava (A seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "Demir tozları ile talaş karışımını en kolay hangi yöntemle ayırabiliriz?",
@@ -3514,10 +3514,10 @@ window.CURRICULUM_TERM1 = {
                   "Şeklinin küreye benzediğini",
                   "Katmanlardan oluştuğunu",
                   "Yüzeyinin karalar ve sularla kaplı olduğunu",
-                  "Etrafının hava katmanıyla sarıldığını Ece Güneş doğarken önce Güneş’in bir kısmı, sonra yarısı, en sonunda ise tamamı görülür. Güneş batarken de yavaş yavaş gözden kaybolur. 22 === PAGE 24 === ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Etrafının hava katmanıyla sarıldığını Ece Güneş doğarken önce Güneş’in bir kı..."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Şeklinin küreye benzediğini (A seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "Buna göre, öğretmenin sorusuna hangi öğrenci doğru yanıt vermiştir?",
@@ -3528,7 +3528,7 @@ window.CURRICULUM_TERM1 = {
                   "Reşat: Diğer adı mantodur."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Koray: Bazı yerlerde daha kalın bazı yerlerde daha incedir. (A seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "Bir grup öğrenci; kırmızı, sarı, turuncu, mavi ve yeşil renkte oyun hamurlarıyla bir Dünya modeli hazırlamak istiyor. Öncelikle kırmızı oyun hamurunu top haline getiriyorlar. Kırmızı topun üzerini turuncu sonra sarı, en sonunda da mavi oyun hamuruyla kaplıyorlar. Mavi kaplamanın üzerine yer yer yeşil oyun hamuru yerleştiriyorlar. Plastik bıçak yardımıyla oluşan modeli kesiyorlar. Bu işlem sonucunda görseldeki modeli elde ediyorlar. Öğrenciler, yaptıkları bu etkinlikle aşağıdaki sonuçlardan hangisine ulaşamazlar?",
@@ -3536,10 +3536,10 @@ window.CURRICULUM_TERM1 = {
                   "Dünya’yı oluşturan katmanlar küre şeklindedir.",
                   "Dıştaki her bir katman, içteki katmanı kuşatır.",
                   "Dünya iç içe geçmiş katmanlardan oluşur.",
-                  "Tüm katmanların kalınlığı ve özellikleri aynıdır. Evet çocuklar! Bu gördüğünüz fotoğraftaki katmanın adı kara katmanı… Şimdi bana bu katmanla ilgili bildiklerinizi söyler misiniz? 23 === PAGE 25 === ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Tüm katmanların kalınlığı ve özellikleri aynıdır. Evet çocuklar! Bu gördüğünü..."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Dünya’yı oluşturan katmanlar küre şeklindedir. (A seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Kullanılmış defter ve karton kutuları hangi geri dönüşüm kutusuna atmalıyız?",
@@ -3768,7 +3768,7 @@ window.CURRICULUM_TERM1 = {
                   "Güçlü yönlerini geliştirmek kişinin isteğine bağlı değildir."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Akranlarımız ile güçlü yönlerimiz farklıdır. (A seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "İnsanların birbirine yardım etmeleri, sevgi ve saygı göstermeleri arkadaşlık ilişkilerinin güçlenmesini sağlar. Bu açıklamaya göre aşağıdaki durumlardan hangisi arkadaşlık ilişkilerimizi olumsuz etkiler?",
@@ -3779,7 +3779,7 @@ window.CURRICULUM_TERM1 = {
                   "Düşen bir arkadaşımızın yerden kalkmasına yardımcı olmak"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Arkadaşımızın üzüntüsüne duyarsız kalmak (A seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "Buna göre arkadaşlarınızın aşağıdaki davranışlarından hangisi sizi mutlu eder?",
@@ -3787,10 +3787,10 @@ window.CURRICULUM_TERM1 = {
                   "Fikirlerinize saygı duyması",
                   "Konuşurken sözünüzü kesmesi",
                   "Kişisel eşyalarınızı izinsiz kullanması",
-                  "Sorun yaşadığınızda taraflı davranması Davranışlarımız, bizi ve çevremizdekileri olumlu veya olumsuz şekilde etkileyebilir. 9 === PAGE 11 === ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Sorun yaşadığınızda taraflı davranması Davranışlarımız, bizi ve çevremizdekil..."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Fikirlerinize saygı duyması (A seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "Bir arkadaşımızın resmi çok güzel yapması onun hangi yönünü gösterir?",
@@ -3862,7 +3862,7 @@ window.CURRICULUM_TERM1 = {
                   "daima kendi tarafımızı tutanları"
                 ],
                 "ans": 2,
-                "hint": "MEB Kazanımı: Doğru cevap gerektiğinde teşekkür edenleri (C seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "Aşağıda 3/B sınıfının krokisi verilmiştir. Krokiye göre aşağıdakilerden hangisi söylenebilir?",
@@ -3870,10 +3870,10 @@ window.CURRICULUM_TERM1 = {
                   "Cem, öğretmen masasının önünde oturmaktadır.",
                   "Esra, kapıya en yakın oturan öğrencidir.",
                   "Aslı, pencere kenarında oturmaktadır.",
-                  "Melih, Mert’in önünde oturmaktadır. Arkadaşlarımıza karşı davranışlarımızda saygılı ve kibar olmalıyız. Arkadaşlık edebileceğimiz kişileri seçerken onların bazı özelliklere sahip olup olmadıklarına dikkat etmeliyiz. Örneğin;..................................... arkadaş olarak seçmeliyiz. Kapı Öğretmen Masası Mina Esra Cem Zeynep Melih Aslı Ada Su Mert Salih Tahta Pencere 10 === PAGE 12 === ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Melih, Mert’in önünde oturmaktadır. Arkadaşlarımıza karşı davranışlarımızda s..."
                 ],
                 "ans": 1,
-                "hint": "MEB Kazanımı: Doğru cevap Esra, kapıya en yakın oturan öğrencidir. (B seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "I. Okulda yapılan kulüp çalışmaları sayesinde öz güvenimiz artar. II. Okul, vatanımıza ve milletimize faydalı bireyler olmamızı sağlar. III. Okullarda düzenlenen etkinlikler toplumda kaynaşmayı ve dayanışmayı arttırır. Yukarıdakilerden hangileri okulun bireysel ve toplumsal katkıları arasında yer alır?",
@@ -3884,7 +3884,7 @@ window.CURRICULUM_TERM1 = {
                   "I, II ve III"
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap I, II ve III (D seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "Aşağıdakilerden hangisi okuldaki SORUMLULUKLARIMIZDAN biridir?",
@@ -3966,10 +3966,10 @@ window.CURRICULUM_TERM1 = {
                   "oyun - telefon",
                   "resim - e-posta",
                   "oylama - dilekçe",
-                  "yarışma - mektup 3/D sınıfı öğrencileri okul bahçesinin yan tarafındaki kullanılmayan alana futbol veya basketbol sahası yapılmasını istemektedirler. Bu taleplerini derste öğretmenlerine iletirler. Öğretmenleri onlara, hangi spor sahasının yapılmasına karar vermeleri gerektiğini söyler. Bunun için de “---------” yapacaklarını belirtir. Aldıkları kararı ise okul idaresine “---------” ile iletmelerini söyler. 11 === PAGE 13 === ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "yarışma - mektup 3/D sınıfı öğrencileri okul bahçesinin yan tarafındaki kulla..."
                 ],
                 "ans": 2,
-                "hint": "MEB Kazanımı: Doğru cevap oylama - dilekçe (C seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "Ben Elif, bu yıl üçüncü sınıfa gidiyorum. En sevdiğim şeylerden biri kütüphanede kitap okumaktır. Kütüphane görevlisinden bazen üç taneden fazla kitap alırım. Kütüphane görevlisi bana güvenir. Aldığım kitapları mutlaka vaktinde getiririm. Çünkü benim için verdiğim sözleri tutmak önemlidir. Bazen okuduğum şeyleri hemen anlayamam. Okuduklarımı iyice kavramak için öğretmenlerimin de yardımıyla deney yapar ve internetteki güvenilir sitelerden o konu ile ilgili görselleri ya da videoları incelerim. Kısacası o bilgiyi öğrenene kadar peşini asla bırakmam! Buna göre Elif’le ilgili aşağıdakilerden hangisi söylenemez?",
@@ -3977,10 +3977,10 @@ window.CURRICULUM_TERM1 = {
                   "Bilgiyi her zaman kitaplardan öğrenir.",
                   "İhtiyacı olduğunda araştırma yapar.",
                   "Başladığı işi bitirir.",
-                  "Güvenilir biridir. Elif 13 === PAGE 15 === ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Güvenilir biridir. Elif 13"
                 ],
                 "ans": 2,
-                "hint": "MEB Kazanımı: Doğru cevap Başladığı işi bitirir. (C seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "Bu durumda Özgür nasıl davranırsa sorun çözülebilir?",
@@ -3991,7 +3991,7 @@ window.CURRICULUM_TERM1 = {
                   "Yaptığı yanlışlığın farkına varıp arkadaşlarından özür dilemelidir."
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap Yaptığı yanlışlığın farkına varıp arkadaşlarından özür dilemelidir. (D seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "Tüm dünyadaki çocukların okula gidip bilgi öğrenmesi hangi hakla güvenceye alınmıştır?",
@@ -4108,10 +4108,10 @@ window.CURRICULUM_TERM1 = {
                   "Yardımsever",
                   "Sır tutabilen",
                   "Taraflı davranan",
-                  "Duyarlı davranan Özgür, katıldığı bir grup çalışmasında sadece kendi fikirlerinin dinlenmesini istedi. Grup arkadaşları ise bu durumdan rahatsız oldular ve Özgür’e bunu söyleyerek rahatsızlıklarını dile getirdiler. 14 === PAGE 16 === ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Duyarlı davranan Özgür, katıldığı bir grup çalışmasında sadece kendi fikirler..."
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap Duyarlı davranan Özgür, katıldığı bir grup çalışmasında sadece kendi fikirlerinin dinlenmesini istedi. Grup arkadaşları ise bu durumdan rahatsız oldular ve Özgür’e bunu söyleyerek rahatsızlıklarını dile getirdiler. 14 === PAGE 16 === ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ (D seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Mehmet yeni tanıştığı kişilerle konuşmakta çekingen davranmaktadır. Okulun halk oyunları ekibinde görev almaya başlayan Mehmet, birçok yarışma ve etkinliğe katılmıştır. Bir süre sonra Mehmet, yeni tanıştığı kişilerle artık daha rahat konuşabildiğini fark etmiştir. Buna göre bir ekiple katıldığı yarışma ve etkinlikler Mehmet’i nasıl etkilemiştir?",
@@ -4122,7 +4122,7 @@ window.CURRICULUM_TERM1 = {
                   "Sorumluluklarını öğretmiştir."
                 ],
                 "ans": 1,
-                "hint": "MEB Kazanımı: Doğru cevap Yardımlaşma bilinci oluşturmuştur. (B seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "Cumhuriyet İlkokulu idaresi, öğrencilerin isteklerini yazıp atması için okul koridorlarına dilek kutuları yerleştirir. İdareciler, öğrencilerin kâğıtlara yazıp dilek kutularına attıkları istekleri ay sonunda okuyarak uygun olanların yerine getirilmesini sağlamaktadır. Buna göre aşağıdaki isteklerden hangisinin okul idaresi tarafından karşılanması mümkün değildir?",
@@ -4130,10 +4130,10 @@ window.CURRICULUM_TERM1 = {
                   "Okul kantininde meyve satılmasını istiyorum.",
                   "Okul bahçesine oyun parkı yapılmasını istiyorum.",
                   "Okula yeni spor malzemelerinin alınmasını istiyorum.",
-                  "Okulun karşısındaki caddeye kırtasiye dükkânı açılmasını istiyorum. 16 === PAGE 18 === ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Okulun karşısındaki caddeye kırtasiye dükkânı açılmasını istiyorum. 16"
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap Okulun karşısındaki caddeye kırtasiye dükkânı açılmasını istiyorum. 16 === PAGE 18 === ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ (D seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "Vücudumuzun sağlıklı büyümesi için her besin grubundan yeteri kadar tüketmeye ne denir?",
@@ -4215,10 +4215,10 @@ window.CURRICULUM_TERM1 = {
                   "Doktor-mimar-astronot",
                   "Eczacı-mimar-uçak mühendisi",
                   "Hemşire-inşaat mühendisi-pilot",
-                  "Diş hekimi-makine mühendisi-astronot Bina tasarımları yapmak istiyorum. Bu binaların içinde farklı ve kullanışlı yaşam alanları oluşturmak en büyük hayalim. Uzay çalışmalarına katılıp uzayda bilim adına araştırmalar yapmak istiyorum. İnsanların sağlığını korumaları için elimden geleni yapmak istiyorum. Onların hastalıklarına teşhis koyarak tedavi olmalarına yardımcı olmak istiyorum. Dilek Serhan Erhan 17 === PAGE 19 === 10 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Diş hekimi-makine mühendisi-astronot Bina tasarımları yapmak istiyorum. Bu bi..."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Doktor-mimar-astronot (A seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "3/A sınıfı öğrencileri arasında aşağıdaki konuşmalar geçmiştir: Hangi öğrenci, arkadaşlık ilişkileri bakımından sergilediği davranışı değiştirmelidir?",
@@ -4226,10 +4226,10 @@ window.CURRICULUM_TERM1 = {
                   "Mert",
                   "Erdem",
                   "Ayça",
-                  "Sevgi Arkadaşlarımın farklı özelliklerine saygı gösteririm. Hatalı da olsa en yakın arkadaşımın tarafını tutarım. Empati kurarak sorunlara çözüm ararım. Arkadaşım konuşurken dikkatimi ona veririm. Mert Erdem Ayça Sevgi"
+                  "Sevgi Arkadaşlarımın farklı özelliklerine saygı gösteririm. Hatalı da olsa en..."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Mert (A seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "Buna göre aşağıdakilerden hangisi arkadaşlık ilişkilerimizi olumlu etkileyen bir davranıştır?",
@@ -4237,10 +4237,10 @@ window.CURRICULUM_TERM1 = {
                   "Emir vermek",
                   "Nazik olmak",
                   "Ön yargılı olmak",
-                  "Öfkeli davranmak Sergilediğimiz olumlu davranışlar kişiliğimizi yansıtır. Bu davranışlar, toplumdaki ilişkilerimizi de etkiler. 18 === PAGE 20 === 11 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Öfkeli davranmak Sergilediğimiz olumlu davranışlar kişiliğimizi yansıtır. Bu ..."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Emir vermek (A seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Türkiye'de polis, ambulans, itfaiye gibi tüm acil durumlar için aranan tek numara hangisidir?",
@@ -4322,10 +4322,10 @@ window.CURRICULUM_TERM1 = {
                   "I ve II",
                   "I ve III",
                   "II ve III",
-                  "I, II ve III Laboratuvar Öğretmenler Odası 3/C 3/A 3/D 3/B Kızlar Tuvaleti Erkekler Tuvaleti Koridor Rehberlik Odası Merdiven 19 === PAGE 21 === 12 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "I, II ve III Laboratuvar Öğretmenler Odası 3/C 3/A 3/D 3/B Kızlar Tuvaleti Er..."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap I ve II (A seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "Aşağıda bazı öğrencilerin yapmakta zorlandıkları etkinlikler verilmiştir: Hangi öğrenci zorlandığı etkinliklerde kendisini geliştirmek için uygun bir çözüm yolu bulmuştur?",
@@ -4333,10 +4333,10 @@ window.CURRICULUM_TERM1 = {
                   "Ela",
                   "Kamil",
                   "Ayşe",
-                  "Osman Sağ ve sol yönümü karıştırdığım için körebe oyunlarına katılmıyorum. Sek sek oyunu oynamayı bilmiyorum. Bu oyunu merak ediyor olsam da oynamayı hiç denemedim. Futbol oynarken bulunduğum kaleye fazla gol atılsa da iyi bir kaleci olabilmek için fazla antrenman yapıyorum. Hızlı koşamadığım için mendil kapmaca oyunlarına katılmıyorum. Ela Kamil Ayşe Osman"
+                  "Osman Sağ ve sol yönümü karıştırdığım için körebe oyunlarına katılmıyorum. Se..."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Ela (A seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "Murat, teneffüse çıkarken Eda’nın boyalarını yanlışlıkla düşürmüş ve birkaç tanesini kırmıştır. Bu sırada bahçede oynayan Eda’nın bu olaydan haberi yoktur. Daha sonra Murat, sınıfa giren Eda’ya bu olayı anlatmış ve ondan özür dilemiştir. Buna göre Murat’ın Eda’ya karşı sergilediği davranış aşağıdakilerden hangisidir?",
@@ -4344,10 +4344,10 @@ window.CURRICULUM_TERM1 = {
                   "Zorbalık",
                   "Tarafsız olmak",
                   "Dürüstlük",
-                  "Yardımseverlik 20 === PAGE 22 === 13 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Yardımseverlik 20"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Zorbalık (A seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "Karşıdan karşıya geçerken hangisini KULLANMALIYIZ?",
@@ -4467,7 +4467,7 @@ window.CURRICULUM_TERM1 = {
                   "Kusura bakma, bu söylediğini kabul edemem."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Ali de gelirse teklifini kabul ederim. (A seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "Buna göre Ozan’ın konuşmasının sonunda kullandığı atasözü hangisi olabilir?",
@@ -4475,10 +4475,10 @@ window.CURRICULUM_TERM1 = {
                   "Ne ekersen onu biçersin.",
                   "Damlaya damlaya göl olur.",
                   "Ayağını yorganına göre uzat.",
-                  "Bir elin nesi var, iki elin sesi var. Tek başımıza çözmekte zorlandığımız sorunlar, yardımlaşma ve dayanışma ile daha çabuk çözülür. Atalarımız bunun için şu atasözünü söylemiştir: ---- Ozan"
+                  "Bir elin nesi var, iki elin sesi var. Tek başımıza çözmekte zorlandığımız sor..."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Ne ekersen onu biçersin. (A seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Burcu'nun ifade ettiği meslek aşağıdakilerden hangisidir?",
@@ -4486,10 +4486,10 @@ window.CURRICULUM_TERM1 = {
                   "Ressam",
                   "Bahçıvan",
                   "Veteriner",
-                  "Öğretmen Çiçeklere meraklıdır. Açık havada olmayı ve bahçe işlerini yapmayı sever. Burcu 23 === PAGE 25 === 16 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Öğretmen Çiçeklere meraklıdır. Açık havada olmayı ve bahçe işlerini yapmayı s..."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Ressam (A seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "Annemizin ve babamızın annesine ne ad veririz?",
@@ -4574,7 +4574,7 @@ window.CURRICULUM_TERM1 = {
                   "Güçlendirilmesi gereken yönünün farkındadır."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Arkadaşlarını nasıl etkileyeceğini bilir. (A seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "Ahmet, oyunlarda yenilse de arkadaşlarını tebrik etmeyi unutmaz. Yardıma ihtiyacı olan bir arkadaşını gördüğünde ona hemen yardımcı olur. Herhangi bir konu ile ilgili arkadaşlarının farklı düşüncelerini de dinler. Bu metinde Ahmet’in hangi özelliğine değinilmemiştir?",
@@ -4585,7 +4585,7 @@ window.CURRICULUM_TERM1 = {
                   "Saygılı"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Kibar (A seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "I. Ölçülü bir şekilde çizilir. II. Bir yerin kuş bakışı çizimidir. III. Çizilirken geometrik şekillerden faydalanılır. IV.Aradığımız yeri daha kolay bulmamızı sağlar. Kroki ile ilgili yukarıdaki bilgilerden hangileri doğrudur?",
@@ -4596,7 +4596,7 @@ window.CURRICULUM_TERM1 = {
                   "I, II, III ve IV"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap I ve II (A seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "Bir işin köylüler veya komşular tarafından el birliğiyle gönüllü olarak yapılmasına ne ad verilir?",
@@ -4678,10 +4678,10 @@ window.CURRICULUM_TERM1 = {
                   "Bilgilendirici olması",
                   "Yardım amaçlı düzenlenmesi",
                   "Okuma ve yazma öğrenilmesi",
-                  "Kaynaşmayı ve dayanışmayı arttırması 27 === PAGE 29 === 20 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Kaynaşmayı ve dayanışmayı arttırması 27"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Bilgilendirici olması (A seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Bu krokiye göre aşağıdaki bilgilerden hangisi doğrudur?",
@@ -4689,10 +4689,10 @@ window.CURRICULUM_TERM1 = {
                   "Mert, evinden sağlık ocağına gitmek için fırının önünden geçmelidir.",
                   "Aysun, evinden lokantaya gitmek için yolun karşısına geçmelidir.",
                   "Mehmet ile Mert'in evleri yan yanadır.",
-                  "Ezgi'nin evi parkın bitişiğindedir. Karanfil Sokak Park Ezgi'nin evi Mert'in evi Lokanta Fırın Mehmet'in evi Market Aysun’un evi Sağlık ocağı Eczane"
+                  "Ezgi'nin evi parkın bitişiğindedir. Karanfil Sokak Park Ezgi'nin evi Mert'in ..."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Mert, evinden sağlık ocağına gitmek için fırının önünden geçmelidir. (A seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "Evimizde ve okulumuzda birtakım sorumluluklarımız vardır. Kendimize ve ailemize karşı görevlerimiz evdeki sorumluluklarımızdır. Buna göre aşağıdakilerden hangisi dokuz yaşındaki bir çocuğun evdeki sorumluluklarından biri değildir?",
@@ -4700,10 +4700,10 @@ window.CURRICULUM_TERM1 = {
                   "Musluk tamir etmek",
                   "Odasını toplamak",
                   "Sofra hazırlığına yardımcı olmak",
-                  "Kullandığı eşyaları yerine koymak 49 === PAGE 51 === ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Kullandığı eşyaları yerine koymak 49"
                 ],
                 "ans": 2,
-                "hint": "MEB Kazanımı: Doğru cevap Sofra hazırlığına yardımcı olmak (C seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "Hastaları muayene eden, teşhis koyup tedavi eden meslek sahibi kimdir?",
@@ -4901,7 +4901,7 @@ window.CURRICULUM_TERM1 = {
                   "good"
                 ],
                 "ans": 2,
-                "hint": "MEB Kazanımı: Doğru cevap what (C seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "Hi! I’m Michael. M-I-C-H-A-E-L - - - - Read the dialogue and choose the correct option.",
@@ -4912,7 +4912,7 @@ window.CURRICULUM_TERM1 = {
                   "Spell your name, please."
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap Spell your name, please. (D seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "Look at the numbers and choose the correct one.",
@@ -4920,10 +4920,10 @@ window.CURRICULUM_TERM1 = {
                   "11",
                   "14",
                   "17",
-                  "18 eleven fifteen twenty eight 9 === PAGE 11 === 2 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "18 eleven fifteen twenty eight 9"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap 11 (A seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Who works in the school library and helps us find books?",
@@ -4988,7 +4988,7 @@ window.CURRICULUM_TERM1 = {
                   "ten"
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap ten (D seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "- - - - ? I’m eleven. Read the dialogue and choose the correct answer.",
@@ -4999,7 +4999,7 @@ window.CURRICULUM_TERM1 = {
                   "What is your name"
                 ],
                 "ans": 2,
-                "hint": "MEB Kazanımı: Doğru cevap How old are you (C seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "Hi! My name is Leyla. What is your name? Hello! - - - - Read and choose the correct option.",
@@ -5007,10 +5007,10 @@ window.CURRICULUM_TERM1 = {
                   "Take care!",
                   "My name is Jane.",
                   "Have a nice weekend!",
-                  "I’m ten. 10 === PAGE 12 === 3 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "I’m ten. 10"
                 ],
                 "ans": 1,
-                "hint": "MEB Kazanımı: Doğru cevap My name is Jane. (B seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "Where do students play basketball and do physical exercises at school?",
@@ -5095,7 +5095,7 @@ window.CURRICULUM_TERM1 = {
                   "hi"
                 ],
                 "ans": 1,
-                "hint": "MEB Kazanımı: Doğru cevap great (B seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "Look at the pictures and choose the correct answer. -A- -B-",
@@ -5103,10 +5103,10 @@ window.CURRICULUM_TERM1 = {
                   "Good morning Good afternoon",
                   "Good night Good evening",
                   "Good afternoon Good evening",
-                  "Good night Good morning 11 === PAGE 13 === 4 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Good night Good morning 11"
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap Good night Good morning 11 === PAGE 13 === 4 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ (D seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Who is she? Is she your mother’s - - - - ? She is my aunt. Yes, she is. Choose the correct option.",
@@ -5117,7 +5117,7 @@ window.CURRICULUM_TERM1 = {
                   "daughter"
                 ],
                 "ans": 2,
-                "hint": "MEB Kazanımı: Doğru cevap grandmother (C seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "Which month comes after October?",
@@ -5199,10 +5199,10 @@ window.CURRICULUM_TERM1 = {
                   "aunt",
                   "uncle",
                   "cousin",
-                  "grandfather 28 === PAGE 30 === 2 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "grandfather 28"
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap grandfather 28 === PAGE 30 === 2 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ (D seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "- - - - ? He is my uncle. Choose the correct option.",
@@ -5213,7 +5213,7 @@ window.CURRICULUM_TERM1 = {
                   "Who is he"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap How old is he (A seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "- - - - is my cousin. Choose the correct option.",
@@ -5221,10 +5221,10 @@ window.CURRICULUM_TERM1 = {
                   "It",
                   "We",
                   "This",
-                  "They 29 === PAGE 31 === 3 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "They 29"
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap They 29 === PAGE 31 === 3 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ (D seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "You ........... run in the corridor at school! (Koridorda koşmamalısın!)",
@@ -5355,7 +5355,7 @@ window.CURRICULUM_TERM1 = {
                   "family"
                 ],
                 "ans": 2,
-                "hint": "MEB Kazanımı: Doğru cevap class (C seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Look! He is Atatürk. That is Ali Rıza Bey. He is Atatürk’s father. OK, and that is Zübeyde Hanım. She is Atatürk’s mother. Yes! - - - - ? Choose the correct option.",
@@ -5363,10 +5363,10 @@ window.CURRICULUM_TERM1 = {
                   "What is that",
                   "Who is that",
                   "Who is Atatürk",
-                  "Where are they 30 === PAGE 32 === 4 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ Look at the picture and answer the questions 7-8-9. This is June’s Family Jack Mary Tommy DaisyJasminWilliam EddieJune ChloeAdrianClaire (me) Choose the correct option."
+                  "Where are they 30"
                 ],
                 "ans": 1,
-                "hint": "MEB Kazanımı: Doğru cevap Who is that (B seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "What is June’s uncle’s name?",
@@ -5377,7 +5377,7 @@ window.CURRICULUM_TERM1 = {
                   "Tommy"
                 ],
                 "ans": 1,
-                "hint": "MEB Kazanımı: Doğru cevap Eddie (B seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "What is this? (Çizim yaparken düz çizgi çekmek için kullanılan cetvel)",
@@ -5462,7 +5462,7 @@ window.CURRICULUM_TERM1 = {
                   "father"
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap father (D seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "June’s aunt is - - - - .",
@@ -5470,10 +5470,10 @@ window.CURRICULUM_TERM1 = {
                   "Daisy",
                   "Mary",
                   "Chloe",
-                  "Jasmin 31 === PAGE 33 === 5 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Jasmin 31"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Daisy (A seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "İsma/i.dotl - /uni015Eenay N/i.dotl Ay/uni015Fe Emre Nil: - - - - is my brother and - - - - is my mother. Choose the correct one.",
@@ -5484,7 +5484,7 @@ window.CURRICULUM_TERM1 = {
                   "Emre - Ayşe"
                 ],
                 "ans": 2,
-                "hint": "MEB Kazanımı: Doğru cevap Emre - Şenay (C seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Saat tam 5:00 iken nasıl söylenir?",
@@ -5566,10 +5566,10 @@ window.CURRICULUM_TERM1 = {
                   "He can skip rope.",
                   "He can’t play chess.",
                   "He can’t run fast.",
-                  "He can play basketball. 48 === PAGE 50 === 2 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "He can play basketball. 48"
                 ],
                 "ans": 2,
-                "hint": "MEB Kazanımı: Doğru cevap He can’t run fast. (C seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "Look at the picture. - - - - . Choose the correct option.",
@@ -5580,7 +5580,7 @@ window.CURRICULUM_TERM1 = {
                   "I can climb a tree"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap I can carry heavy bags (A seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "Look at the pictures. She - - - - skip rope, but she - - - - swim. Choose the correct option.",
@@ -5588,10 +5588,10 @@ window.CURRICULUM_TERM1 = {
                   "can / can",
                   "can't / can",
                   "can / can't",
-                  "can't / can't 49 === PAGE 51 === 3 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "can't / can't 49"
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap can't / can't 49 === PAGE 51 === 3 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ (D seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "30 sayısının İngilizce yazılışı hangisidir?",
@@ -5676,7 +5676,7 @@ window.CURRICULUM_TERM1 = {
                   "He can play tennis"
                 ],
                 "ans": 1,
-                "hint": "MEB Kazanımı: Doğru cevap He can jump high (B seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "Look at the picture. Choose the correct sentence for the picture.",
@@ -5684,10 +5684,10 @@ window.CURRICULUM_TERM1 = {
                   "He can fly a kite.",
                   "He can swim.",
                   "He can lift weight.",
-                  "He can jump. 50 === PAGE 52 === 4 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "He can jump. 50"
                 ],
                 "ans": 2,
-                "hint": "MEB Kazanımı: Doğru cevap He can lift weight. (C seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Look at the pictures. Choose the correct words for the pictures.",
@@ -5698,7 +5698,7 @@ window.CURRICULUM_TERM1 = {
                   "fast slow"
                 ],
                 "ans": 1,
-                "hint": "MEB Kazanımı: Doğru cevap fat slim (B seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "'How is the weather today?' - 'It is ............ (güneşli).'",
@@ -5815,10 +5815,10 @@ window.CURRICULUM_TERM1 = {
                   "jump",
                   "walk fast",
                   "fly",
-                  "play the guitar 52 === PAGE 54 === 6 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "play the guitar 52"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap jump (A seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "Read the conversation and choose the correct option.",
@@ -5826,10 +5826,10 @@ window.CURRICULUM_TERM1 = {
                   "tired",
                   "good",
                   "happy",
-                  "suprised Oh, I’m sorry. I’m - - - - .Hi, Alice! I’m energetic today. Let’s play a game. 68 === PAGE 70 === 2 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "suprised Oh, I’m sorry. I’m - - - - .Hi, Alice! I’m energetic today. Let’s pl..."
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap suprised Oh, I’m sorry. I’m - - - - .Hi, Alice! I’m energetic today. Let’s play a game. 68 === PAGE 70 === 2 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ (D seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "Which one completes the dialogue correctly?",
@@ -5840,7 +5840,7 @@ window.CURRICULUM_TERM1 = {
                   "Let’s read a book I am thirsty. - - - - ."
                 ],
                 "ans": 1,
-                "hint": "MEB Kazanımı: Doğru cevap Let’s drink water (B seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "'Foot' (ayak) kelimesinin çoğul hali hangisidir?",
@@ -5922,10 +5922,10 @@ window.CURRICULUM_TERM1 = {
                   "eat a hamburger",
                   "listen to music",
                   "run in the park",
-                  "drink water I feel tired today. So, I can’t - - - - . 71 === PAGE 73 === 5 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "drink water I feel tired today. So, I can’t - - - - . 71"
                 ],
                 "ans": 1,
-                "hint": "MEB Kazanımı: Doğru cevap listen to music (B seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "According to the dialogues, who makes the WRONG suggestion?",
@@ -5933,10 +5933,10 @@ window.CURRICULUM_TERM1 = {
                   "Clayton",
                   "Lyla",
                   "Edwin",
-                  "Hazel 72 === PAGE 74 === 6 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Hazel 72"
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap Hazel 72 === PAGE 74 === 6 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ (D seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "Look at the picture. Choose the correct answer. Let’s play a game. Have you got a - - - - in your room?",
@@ -5947,7 +5947,7 @@ window.CURRICULUM_TERM1 = {
                   "kite"
                 ],
                 "ans": 2,
-                "hint": "MEB Kazanımı: Doğru cevap teddy bear (C seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "Kışın soğuk havalarda dışarı çıkarken giydiğimiz palto/kabanın İngilizcesi nedir?",
@@ -6029,10 +6029,10 @@ window.CURRICULUM_TERM1 = {
                   "two teddy bears",
                   "three dolls",
                   "three balls",
-                  "two toy cars No, I haven’t. Hazel Ali 94 === PAGE 96 === 2 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "two toy cars No, I haven’t. Hazel Ali 94"
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap two toy cars No, I haven’t. Hazel Ali 94 === PAGE 96 === 2 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ (D seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "Look at the picture and choose the correct answer.",
@@ -6043,7 +6043,7 @@ window.CURRICULUM_TERM1 = {
                   "teddy bear Hello, I am a ---- . I am brown."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap button (A seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "Look at the picture and choose the correct answer. Mia : How many blocks are there? Jane : ---- .",
@@ -6054,7 +6054,7 @@ window.CURRICULUM_TERM1 = {
                   "There are eight blocks"
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap There are eight blocks (D seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Bir şeyi SEVMEDİĞİMİZİ belirtmek için hangisini kullanırız?",
@@ -6251,7 +6251,7 @@ window.CURRICULUM_TERM1 = {
                   "gerçek - hayal"
                 ],
                 "ans": 2,
-                "hint": "MEB Kazanımı: Doğru cevap tatlı - acı (C seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "“Bozmak” sözcüğü aşağıdaki cümlelerin hangisinde “büyük parayı küçük birimlere ayırmak” anlamında kullanılmıştır?",
@@ -6262,7 +6262,7 @@ window.CURRICULUM_TERM1 = {
                   "Elimdeki yüz lirayı markette bozdurdum."
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap Elimdeki yüz lirayı markette bozdurdum. (D seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "“Boş - Dolu” sözcükleri arasındaki anlam ilişkisi aşağıdakilerin hangisinde vardır?",
@@ -6273,7 +6273,7 @@ window.CURRICULUM_TERM1 = {
                   "Güzel - Çirkin"
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap Güzel - Çirkin (D seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "Bir konuşmacıyı ya da metni dinlerken hangi davranış doğru ve nezaketlidir?",
@@ -6347,10 +6347,10 @@ window.CURRICULUM_TERM1 = {
                   "1 ve 2",
                   "1 ve 4",
                   "2 ve 3",
-                  "3 ve 4 9 === PAGE 11 === 2 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "3 ve 4 9"
                 ],
                 "ans": 1,
-                "hint": "MEB Kazanımı: Doğru cevap 1 ve 4 (B seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "Görseli dikkatle inceleyiniz. Aşağıda tanımları verilen sözcüklerden hangisi görselde yer almamaktadır?",
@@ -6361,7 +6361,7 @@ window.CURRICULUM_TERM1 = {
                   "Çocuk: Küçük yaştaki erkek veya kız."
                 ],
                 "ans": 2,
-                "hint": "MEB Kazanımı: Doğru cevap Otomobil: Motorlu, dört tekerlekli kara taşıtı. (C seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Öğretmenini ziyarete gidecek olan Ceren, en kısa yolu tercih etmek istiyor. Gideceği en kısa yoldaki sözcük çiftlerinin arasında eş anlam ilişkisi bulunmaktadır. 1 2 3 4 Bayrak - Merasim Soru - Sual Defter - Kalem Tane - Tek Buna göre Ceren’in, öğretmenine en kısa yoldan gidebilmesi için kaç numaralı yolu tercih etmesi gerekir?",
@@ -6369,10 +6369,10 @@ window.CURRICULUM_TERM1 = {
                   "1",
                   "2",
                   "3",
-                  "4 10 === PAGE 12 === 3 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "4 10"
                 ],
                 "ans": 1,
-                "hint": "MEB Kazanımı: Doğru cevap 2 (B seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "Nobel Ödüllü bilim insanımız Aziz Sancar, Anıtkabir'i ilk ziyaretinde kime hangi sözü vermiştir?",
@@ -6455,7 +6455,7 @@ window.CURRICULUM_TERM1 = {
                   "yaz"
                 ],
                 "ans": 1,
-                "hint": "MEB Kazanımı: Doğru cevap tavuk (B seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "DİL KIR SEL DAL Tuna Metehan Tunç Öykü Yukarıdaki öğrencilerden hangisinin balonunda eş sesli sözcük yoktur?",
@@ -6466,7 +6466,7 @@ window.CURRICULUM_TERM1 = {
                   "T una"
                 ],
                 "ans": 1,
-                "hint": "MEB Kazanımı: Doğru cevap Metehan (B seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "Bir bitki dört bölümden oluşur: kök, gövde, yaprak ve çiçek. Kök toprağın altındadır, onu göremeyiz ama kök bitkiyi hayata bağlayandır. Gövde ise bitkiyi ayakta tutandır. Yapraklar da bitkinin solunum organı olması, besin hazırlaması gibi nedenlerle önem taşır. Çiçek ise bitkinin renkli kısmıdır. Peki, birinden biri olmazsa ne mi olur? O zaman diğerleri de olamaz. Örneğin rengini beğenip kopardığımız çiçek, besin kaynağını kaybettiği için solar. O yüzden her çiçek dalında güzeldir. Bu metnin konusu aşağıdakilerden hangisidir?",
@@ -6474,10 +6474,10 @@ window.CURRICULUM_TERM1 = {
                   "Bitki çeşitleri",
                   "Bitkinin bölümleri ve önemi",
                   "Meyvenin oluşumu",
-                  "Çiçeklerin güzelliği 13 === PAGE 15 === 6 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Çiçeklerin güzelliği 13"
                 ],
                 "ans": 2,
-                "hint": "MEB Kazanımı: Doğru cevap Meyvenin oluşumu (C seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "\"Köyde İlk Sabah\" şiirinde çocuğun avucuna konan ve ona günaydın diyen canlı hangisidir?",
@@ -6564,7 +6564,7 @@ window.CURRICULUM_TERM1 = {
                   "Aslanağzı"
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap Aslanağzı (D seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Benim adım Mete. Artık 3. sınıf oldum. Bugün çok heyecanlıyım çünkü 3 aydır görmediğim okulumu, arkadaşlarımı ve öğretmenimi göreceğim. Evden neşeyle çıktım. Okul bahçesine girer girmez arkadaşlarımı gördüm. Onlarla konuşup hasret giderdik. Ders başladığında öğretmenimiz bizden tatil anılarımızı anlatmamızı istedi.Yeni kitaplarımızı dağıttı. Sonrasında da sınıfımıza yeni gelen arkadaşlarımızla tanıştık. Kısaca heyecanla beklediğime değen çok güzel bir gündü. Bu metnin konusu aşağıdakilerden hangisidir?",
@@ -6575,7 +6575,7 @@ window.CURRICULUM_TERM1 = {
                   "Heyecanla beklenen kitaplar"
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap Heyecanla beklenen kitaplar (D seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "Paylaşmak, elinde ve gönlünde olanın bir kısmını başkalarına vermektir. Paylaşmak, insanın en temel ihtiyaçlarından biridir. Bazen öyle anlar gelir ki insan, duygu ve düşüncelerini tek başına değil de sevdikleri ve değer verdikleri ile paylaşmak ister. Acı da olsa tatlı da olsa paylaşmak önemlidir. Böyle olursa hayatta paylaşılan her şey daha anlamlı ve samimi olur. Bu metnin ana fikri aşağıdakilerden hangisidir?",
@@ -6583,10 +6583,10 @@ window.CURRICULUM_TERM1 = {
                   "İnsanın güveni paylaştıkça artar.",
                   "Paylaştıkça dünyamız güzelleşir.",
                   "Paylaşmak, düşünceli olmayı öğretir.",
-                  "Mutluluk daha kolay paylaşılır. 14 === PAGE 16 === 7 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Mutluluk daha kolay paylaşılır. 14"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap İnsanın güveni paylaştıkça artar. (A seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "Kültürümüzde komşuluk ilişkilerine neden büyük önem verilir?",
@@ -6673,7 +6673,7 @@ window.CURRICULUM_TERM1 = {
                   "Çevremizi temiz tutarak etrafımızdakilere örnek olmalıyız."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Çevremizi temiz tutmak görev ve sorumluluklarımız arasındadır. (A seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "Yaz günlerinde sıcak çarpmasından korunmak için açık renkli, ince ve hava alan giysiler giymeye özen göstermeliyiz. Yeteri kadar su tüketerek vücudumuzu susuz bırakmamalıyız. Günün en sıcak saatlerinde daha az fiziksel aktivite yapmaya dikkat etmeliyiz. Bu metne göre aşağıdakilerden hangisi sıcaklardan korunma yollarından biridir?",
@@ -6684,7 +6684,7 @@ window.CURRICULUM_TERM1 = {
                   "Sıcak saatlerde bol egzersiz yapmak"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Bol bol yüzmek (A seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "İçi kitaplarla dolu, Okumanın kolay yolu, Bekler bizi sevgi dolu, Çok güzeldir kütüphane. Evde sıkıldıysan eğer, Hemen gitmeye değer, Hep gitmeliymiş meğer, Çok güzeldir kütüphane. Bu şiirin ana duygusu aşağıdakilerden hangisidir?",
@@ -6692,10 +6692,10 @@ window.CURRICULUM_TERM1 = {
                   "Okuma sevgisi",
                   "Kitap okuma",
                   "Kütüphane sevgisi",
-                  "Kütüphanenin amacı 15 === PAGE 17 === 8 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Kütüphanenin amacı 15"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Okuma sevgisi (A seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "\"Çam Ağacı\" metninde yaşlı çınar ağacı, genç çam ağacına hangi öğüdü vermiştir?",
@@ -6861,7 +6861,7 @@ window.CURRICULUM_TERM1 = {
                   "Minik serçenin yuvası"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Karınca sürüsü (A seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "Su hakkında pek çok şey biliyoruz. Fakat su kaynaklarımızın sınırlı olduğunu, ona bazı insanların ulaşamadığını bazen unutuyoruz. Örneğin 100 yıl önce bugün, evlerde kullanılan suyun altı kat daha azı kullanılıyordu. Okuduğum bu kitap bize suyun, bütün canlılar için ne kadar değerli olduğunu hatırlatıyor. “Bugün dişlerimizi fırçaladığımız su, on yıl önce bir balinanın burnundan püskürtülmüş olabilir.” diyen yazar bize, suyun döngüsü hakkında unutulmayacak bilgiler veriyor. Metinde sözü edilen kitabın konusu aşağıdakilerden hangisidir?",
@@ -6869,10 +6869,10 @@ window.CURRICULUM_TERM1 = {
                   "Su kaynakları",
                   "Su ve insan",
                   "Su ve kuraklık",
-                  "Suyun önemi 16 === PAGE 18 === 9 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Suyun önemi 16"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Su kaynakları (A seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "Seviyorsan canını, Vücuduna iyi bak. Kuvvetlendir kanını, İstersen çok yaşamak. Sen yaşarsan bu vatan, Ancak yaşar, yükselir. Bunu bil, böyle inan, Varlık sağlıktan gelir. Vakitli yat, erken kalk, Çok dikkat et zamana. Ne güzeldir çalışmak, Dinçlik verir insana. Sağlık Öğüdü Bu şiirin ana duygusu aşağıdakilerden hangisidir?",
@@ -6883,7 +6883,7 @@ window.CURRICULUM_TERM1 = {
                   "Temizliğe dikkat etmeliyiz."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Her şeyin başı sağlıktır. (A seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "Ülkü, ayakkabılarını neden siyaha boyamak istemiştir?",
@@ -6967,10 +6967,10 @@ window.CURRICULUM_TERM1 = {
                   "Akşam olduğu için",
                   "Etraflarında çok fazla ışık olduğu için",
                   "Her yer karanlık olduğu için",
-                  "Daha önce gökyüzüne hiç bakmadıkları için 17 === PAGE 19 === 10 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Daha önce gökyüzüne hiç bakmadıkları için 17"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Akşam olduğu için (A seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "Konumu: Marmara Bölgesi’nde, Bursa ili sınırları içerisinde yer almaktadır. Ulaşım: Bursa’dan 34 km’lik yaz-kış açık kara yolu ile veya teleferikle 20 dakikada Sarıalan’a çıkılır. Oradan da minibüsler ile oteller bölgesine ulaşılır. Özel helikopter servisi ile de İstanbul’dan 25 dakikada millî parka varılabilir. Millî Parkı Bu metinden “Uludağ Millî Parkı” ile ilgili aşağıdaki bilgilerden hangisine ulaşılamaz?",
@@ -6981,7 +6981,7 @@ window.CURRICULUM_TERM1 = {
                   "Sadece kara yolu ulaşımına uygundur."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Bursa il sınırları içerisindedir. (A seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Bir eşya üreticisi şirket, eski akıllı telefonların ekranlarından bardak üretmeye başlamış. Eski atıkları çeşitli nesnelere dönüştürmeye odaklanan şirket, ürettiği koyu renk bardaklarda geri dönüşüme giden akıllı telefonların ekranlarını kullanıyor. Böylece bir zamanlar elinizden düşürmediğiniz eski telefonlarınızla bir kez daha buluşup bu kez onları bir şeyler içmek için kullanmanın keyfini yaşıyorsunuz. Bu metinden aşağıdaki cümlelerin hangisi çıkarılamaz?",
@@ -6989,10 +6989,10 @@ window.CURRICULUM_TERM1 = {
                   "Koyu renk bardaklardan bazıları, eski telefon ekranlarından üretilmektedir.",
                   "Atık maddeler, çoğu zaman dönüştürülüp farklı amaçlarla kullanılabilir.",
                   "Atıklardan bardak üreten şirketler, sadece cam bardak üretmektedir.",
-                  "Kullanılan bazı elektronik eşyalar, geri dönüştürülebilir. 18 === PAGE 20 === 11 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Kullanılan bazı elektronik eşyalar, geri dönüştürülebilir. 18"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Koyu renk bardaklardan bazıları, eski telefon ekranlarından üretilmektedir. (A seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "Metne göre Atatürk çocukken eline biraz para geçse yarısıyla ne alırmış?",
@@ -7079,7 +7079,7 @@ window.CURRICULUM_TERM1 = {
                   "Metin, XXL beden kıyafet giymektedir."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Ali, M beden kıyafet giymektedir. (A seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "Bu hafta çok eğlenceli başladı. Nedenine gelince ben ve arkadaşlarım yeni bir oyun icat ettik. Oyunumuzun henüz bir ismi yok ama çok eğlenceli olduğu kesin. Biz zamanın nasıl geçtiğini anlamadık. Hatta acıktığımızı bile fark etmemişiz. Bu metinde aşağıdaki hikâye unsurlarından hangisi yoktur?",
@@ -7090,7 +7090,7 @@ window.CURRICULUM_TERM1 = {
                   "Olay"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Yer (A seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "Hayvanların yaşamları hakkında bilgi edinmek ve onları koruyacak önlemler almak, bilim insanlarının doğayı korumak amacıyla yaptığı çalışmalar arasındadır. Bu alanda araştırmalar yaparken de kullandıkları pek çok farklı yöntem vardır. Hayvanları kara ya da hava taşıtlarıyla takip etmek, fotokapanlar kullanmak ya da hayvanlara, onları uzaktan takip edebildikleri aygıtlar takmak gibi. Hızlı gelişen teknolojinin de yardımıyla bu araştırmaları yapabilmenin artık birçok yolu var. Bu metnin türü aşağıdakilerden hangisidir?",
@@ -7098,10 +7098,10 @@ window.CURRICULUM_TERM1 = {
                   "Şiir",
                   "Masal",
                   "Bilgilendirici metin",
-                  "Hikâye 19 === PAGE 21 === 12 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Hikâye 19"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Şiir (A seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "Kastamonu'dan İnebolu'ya cephane taşırken bebeğinin üzerindeki battaniyeyi ıslanmasın diye mermilere örten kahraman kadınımız kimdir?",
@@ -7188,7 +7188,7 @@ window.CURRICULUM_TERM1 = {
                   "Japon bilim insanları hangi bitkiyi incelemiştir?"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Bitkiler, kendilerine zarar veren canlılara karşı nasıl bir tepki veriyor? (A seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Bir parkta ceviz ağaçlarının gölgesinde oturmuş, serçe kuşlarının seslerini dinliyordum. Arkadaşım yanıma geldi ve biraz sohbet ettik. Hemen ardından elinde bir fotoğraf makinesi ile parkın fotoğrafçısı bize yaklaştı. “Bu güzel buluşmayı kalıcı hâle getirmek ister misiniz?” diye sordu. Biz de kabul edince fotoğrafımızı çekti. Bu buluşmanın kalıcı olabileceğini gerçekten de hiç düşünmemiştim. Fotoğrafların en güzel yanı bu değil mi? Siz unutursunuz ama onlar yaşananları hep saklı tutar. Bu metinde aşağıdaki hikâye unsurlarından hangisi yoktur?",
@@ -7199,7 +7199,7 @@ window.CURRICULUM_TERM1 = {
                   "Olay"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Zaman (A seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "Şiirin dört dizeden oluşan bölümüne verilen ad aşağıdakilerden hangisidir?",
@@ -7207,10 +7207,10 @@ window.CURRICULUM_TERM1 = {
                   "Satır",
                   "Kıta",
                   "Mısra",
-                  "Paragraf 20 === PAGE 22 === 13 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Paragraf 20"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Satır (A seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "\"Dün Gibi\" metninde yazar çocukluğundaki hangi coşkulu anıyı anlatmaktadır?",
@@ -7297,7 +7297,7 @@ window.CURRICULUM_TERM1 = {
                   "Köpekler ve İnsanlar"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Köpeklerin Hayatı (A seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "İnsan; yorulan, uykusu gelen, yemek yemesi gereken, sevgiye ihtiyacı olan, sosyalleşmek isteyen bir canlıdır. Oysa robotlar acıkmazlar, susamazlar ya da onların sosyalleşmek gibi bir istekleri olmaz. Bu yüzden insanın yapacağı mekanik bir işi çok daha çabuk yapabilirler. Örneğin mutfağımızdaki elektrikli çırpıcıyı düşünelim. Bu çırpıcı, kek harcını 15 saniyede istenilen kıvama getirebilir. Oysa bunu elle yapmak istediğimizde hem daha yavaş yapar hem de çabucak yoruluruz. Bu yüzden robotlar, sanayide ve fabrikalarda giderek daha çok kullanılmaya başlandı. İnsan işçiler yerine robot işçiler kullanılıyor artık. Ayrıca robotlar farklı şekillerde icat edilebilir. Bu sayede insanların ulaşamadığı yerlere ulaşabilirler. Tehlikeli bölgelere, suyun en derin noktalarına, uzayın ulaşılmaz yerlerine insanlar ulaşamasa bile robotlar ulaşabilir. Bu metnin başlığı aşağıdakilerden hangisi olamaz?",
@@ -7305,10 +7305,10 @@ window.CURRICULUM_TERM1 = {
                   "Robotlar Neden Var?",
                   "Robot ve İnsan",
                   "Robotlar ve Sanayi",
-                  "En Yararlı İcat: Robot 21 === PAGE 23 === 14 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "En Yararlı İcat: Robot 21"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Robotlar Neden Var? (A seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "Ağaç; genel olarak meyve verebilen, gövdesi odun veya kereste yapmaya elverişli olan ve uzun yıllar yaşayabilen bir bitki türüdür. Ağaçlar; erozyonu önler, serinlemeyi sağlar, havayı temizler, insanları güneşin zararlı ışınlarından korur. Cilt için en büyük tehditlerden bir tanesi bu zararlı ışınlardır. Yapılan araştırmalar, ağaçlar sayesinde insanların güneşin zararlı ışınlarına maruz kalma oranında yüzde elli azalma olduğunu göstermektedir. Günümüzde sayıları günden güne azalan ağaçlar, dünyamız için oldukça önemlidir. Doğamızın bir parçası olan ağaçların insanlara ve çevreye faydası zaman zaman unutulabiliyor. Çoğalmalarına katkı sağlamak yerine, yetişmeleri uzun yıllar alan bu ağaçlar bilinçsizce yok ediliyor. Bu metne en uygun başlık aşağıdakilerden hangisidir?",
@@ -7319,7 +7319,7 @@ window.CURRICULUM_TERM1 = {
                   "Güneş Işınları"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Doğa Sevgisi (A seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Mustafa Kemal Atatürk dünyada çocuklara bayram armağan eden tek liderdir. Bu bayram hangisidir?",
@@ -7482,10 +7482,10 @@ window.CURRICULUM_TERM1 = {
                   "Küçük leyleğin, uzun bir yolculuğa çıkması",
                   "Leyleklerin uçuşa hazırlanması",
                   "Bir sonbahar günü leyleklerin sıcak yerlere göç etmesi",
-                  "Lekirdek'in, pembe atkısını boynuna takması 22 === PAGE 24 === 15 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Lekirdek'in, pembe atkısını boynuna takması 22"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Küçük leyleğin, uzun bir yolculuğa çıkması (A seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "Küçükayı adı verilen takımyıldızının en ucunda bulunan ve kuzeyi belirleyen yıldıza “Kutup Yıldızı” denir. Bu yıldızın bilimsel adı “Polaris”tir. Halk arasında Demirkazık olarak da adlandırılır. Kutup Yıldızı’nın en önemli özelliği, diğer yıldızlardan farklı olarak gün boyunca yer değiştirmeyip sürekli kuzeyi göstermesidir. Bu özelliğinden dolayı tarih boyunca yolcular ve denizciler yön bulmada bu yıldızdan faydalanmıştır. Bu yıldız sadece kuzey yarım kürede görülebilmektedir. Bu metinde “Kutup Yıldızı” ile ilgili aşağıdaki bilgilerin hangisinden söz edilmemiştir?",
@@ -7496,7 +7496,7 @@ window.CURRICULUM_TERM1 = {
                   "Nerede görüldüğünden"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Kim tarafından bulunduğundan (A seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "1 1 11 1 1 11 5 72 3 4 6 Yukarıdaki görselde 1’den 7’ye kadar numaralanmış her bir kutu, bir harfe karşılık gelmektedir. Kutularla ilgili bilgiler şunlardır: 1 numaralı kutu, alfabenin 6. harfine, 2 numaralı kutu, alfabenin 9. harfine, 3 numaralı kutu, alfabenin 2. harfine, 4 numaralı kutu, alfabenin 25. harfine, 5 numaralı kutu, alfabenin 16. harfine, 6 numaralı kutu, alfabenin 14. harfine, 7 numaralı kutu, alfabenin 21. harfine karşılık gelmektedir. Buna göre “EMRE” sözcüğünü yazmak isteyen biri aşağıdaki kutu numaralarından hangisini sırayla seçmelidir?",
@@ -7507,7 +7507,7 @@ window.CURRICULUM_TERM1 = {
                   "1-5-7-1"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap 1-5-7-1 (A seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "Ormanlar neden 'dünyanın akciğerleri' olarak adlandırılır?",
@@ -7594,7 +7594,7 @@ window.CURRICULUM_TERM1 = {
                   "Nerede yanlış yaptığını düşünüyordu"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Sizinle gelsem mi emin olamadım (A seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "Eyvah( ) kalem kutumu evde unutmuşum( ) Bu cümlede yay ayraçla belirtilen yerlere aşağıdaki noktalama işaretlerinden hangileri sırasıyla getirilmelidir?",
@@ -7602,10 +7602,10 @@ window.CURRICULUM_TERM1 = {
                   "( : ) ( . )",
                   "( , ) ( ! )",
                   "( ! ) ( . )",
-                  "( , ) ( ? ) 25 === PAGE 27 === 18 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "( , ) ( ? ) 25"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap ( : ) ( . ) (A seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Geri dönüşüm konusunda bilgilendirici bir metin yazacağım. Buna göre Eren, aşağıdaki adımlardan hangisi ile metin yazmaya başlamalıdır?",
@@ -7613,10 +7613,10 @@ window.CURRICULUM_TERM1 = {
                   "Resim çizerek",
                   "Araştırma yaparak",
                   "Sunum hazırlayarak",
-                  "Görsel bularak 26 === PAGE 28 === 19 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Görsel bularak 26"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Resim çizerek (A seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "Karıncalar kış mevsimine nasıl hazırlanırlar?",
@@ -7703,7 +7703,7 @@ window.CURRICULUM_TERM1 = {
                   "Dal - Güç - Yüz"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Güç - Yüz - Dal (A seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "Ezgi, kursun birinci aşamasını başarıyla tamamladı. Aşağıdakilerden hangisi anlam bakımından bu cümleden kesin olarak çıkarılır?",
@@ -7711,10 +7711,10 @@ window.CURRICULUM_TERM1 = {
                   "Öğrenciler, kursa severek gitmektedir.",
                   "Ezgi birden fazla kursa gitmektedir.",
                   "Kursun birden fazla aşaması vardır.",
-                  "Ezgi, kursu birinci olarak tamamlamıştır. 27 === PAGE 29 === 20 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Ezgi, kursu birinci olarak tamamlamıştır. 27"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Öğrenciler, kursa severek gitmektedir. (A seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "“Kaçırmak” sözcüğü aşağıdaki cümlelerin hangisinde “ölçüyü, sınırı aşmak, fazlasına gitmek” anlamında kullanılmıştır?",
@@ -7725,7 +7725,7 @@ window.CURRICULUM_TERM1 = {
                   "Son otobüsü kaçırdım."
                 ],
                 "ans": 2,
-                "hint": "MEB Kazanımı: Doğru cevap Maçtaki ilk penaltıyı kaçırdı. (C seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "Ağaç köklerinin toprağı tutarak rüzgar ve yağmurla kaymasını önlemesine ne denir?",
@@ -7807,12 +7807,12 @@ window.CURRICULUM_TERM1 = {
                 "q": "Aşağıdaki tanımlardan hangisi yukarıdaki görsellerden birine ait değildir?",
                 "options": [
                   "Bilgisayarda hazırlanan metnin yazılı sayfa hâlinde dökümünü veren araç.",
-                  "Türlü işlerde kullanılmak için çoğu ağaçtan veya taştan yapılan, uzun ve geniş kap.",
-                  "Ateş veya kızgın bir şey tutmaya, korları karıştırmaya yarayan iki kollu metal araç.",
-                  "Dik iniş ve çıkış yapabildiği için dar yerlerde de kullanılabilen, tepeden pervaneli, uçan taşıt."
+                  "Türlü işlerde kullanılmak için çoğu ağaçtan veya taştan yapılan, uzun ve geni...",
+                  "Ateş veya kızgın bir şey tutmaya, korları karıştırmaya yarayan iki kollu meta...",
+                  "Dik iniş ve çıkış yapabildiği için dar yerlerde de kullanılabilen, tepeden pe..."
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap Dik iniş ve çıkış yapabildiği için dar yerlerde de kullanılabilen, tepeden pervaneli, uçan taşıt. (D seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "yağmur Buna göre minik fare kaç numaralı borulardan geçerek peynire ulaşabilir?",
@@ -7820,21 +7820,21 @@ window.CURRICULUM_TERM1 = {
                   "1 - 6 - 10",
                   "2 - 8 - 11",
                   "3 - 5 - 9",
-                  "6 - 8 - 12 72 === PAGE 74 === 2 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "6 - 8 - 12 72"
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap 6 - 8 - 12 72 === PAGE 74 === 2 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ (D seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "Görseli verilen nesneyi aşağıdaki öğrencilerden hangisi doğru tanımlamıştır?",
                 "options": [
                   "Göknur: Gece uyurken giyilen yatak giysisi.",
-                  "Sevim: Elleri dış etkilerden koruyan yün, örgü, kumaş ya da deriden yapılan el giyeceği.",
-                  "Aylin: Genellikle ev içinde giyilen, arkası açık, hafif ve türlü biçimlerde ayak giysisi.",
-                  "Esra: Yünden örülmüş ya da kalın kumaştan yapılmış, önü açık, kollu üst giysisi. 73 === PAGE 75 === 3 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Sevim: Elleri dış etkilerden koruyan yün, örgü, kumaş ya da deriden yapılan e...",
+                  "Aylin: Genellikle ev içinde giyilen, arkası açık, hafif ve türlü biçimlerde a...",
+                  "Esra: Yünden örülmüş ya da kalın kumaştan yapılmış, önü açık, kollu üst giysi..."
                 ],
                 "ans": 2,
-                "hint": "MEB Kazanımı: Doğru cevap Aylin: Genellikle ev içinde giyilen, arkası açık, hafif ve türlü biçimlerde ayak giysisi. (C seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "Şiddetli rüzgar ve yağmurun birleşmesiyle oluşan doğa olayına ne ad verilir?",
@@ -7918,10 +7918,10 @@ window.CURRICULUM_TERM1 = {
                   "Matara: Genellikle aba, deri veya metalden yapılmış su kabı.",
                   "Sandık: İçine çeşitli şeyler konulan, tahtadan yapılmış, kapaklı eşya.",
                   "Raket: Masa tenisi, tenis gibi oyunlarda topa vurmak için kullanılan araç.",
-                  "Minder: Yer alıştırmalarında ve atlamalarda, düşmelerin sertliğini azaltmak için kullanılan şilte."
+                  "Minder: Yer alıştırmalarında ve atlamalarda, düşmelerin sertliğini azaltmak i..."
                 ],
                 "ans": 1,
-                "hint": "MEB Kazanımı: Doğru cevap Sandık: İçine çeşitli şeyler konulan, tahtadan yapılmış, kapaklı eşya. (B seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "GİDON TEKERLEK PEDAL SELE 1 3 2 4 “Ön tekerleğe bağlı olup bisiklet ve motosiklete yön veren, iki ucundan tutulan yatay çubuk, yönelgeç.” Yukarıda tanımı verilen bisiklet bölümü aşağıdaki numaralardan hangisi ile gösterilmiştir?",
@@ -7929,10 +7929,10 @@ window.CURRICULUM_TERM1 = {
                   "1",
                   "2",
                   "3",
-                  "4 74 === PAGE 76 === 4 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "4 74"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap 1 (A seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "Aşağıdaki cümlelerde geçen altı çizili sözcüklerden hangisinin eş anlamlısı yoktur?",
@@ -7943,7 +7943,7 @@ window.CURRICULUM_TERM1 = {
                   "Büyük bir masanın etrafında toplanmışlardı."
                 ],
                 "ans": 2,
-                "hint": "MEB Kazanımı: Doğru cevap Sözcükleri anlamına uygun kullanmalısın. (C seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Güneşin ısıtmasıyla buharlaşan suların gökyüzünde bulut olup yağmur olarak yere inmesine ne ad verilir?",
@@ -8106,10 +8106,10 @@ window.CURRICULUM_TERM1 = {
                   "Pahalı - Küçük",
                   "Kirli - İhtiyar",
                   "İtmek - Gayretli",
-                  "İri - Pak 75 === PAGE 77 === 5 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "İri - Pak 75"
                 ],
                 "ans": 1,
-                "hint": "MEB Kazanımı: Doğru cevap Kirli - İhtiyar (B seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "“Küçük köpek ağaçların arasına gizlendi.” cümlesindeki altı çizili sözcüğün yerine aşağıdakilerden hangisi getirilirse cümlenin anlamı bozulmaz?",
@@ -8120,7 +8120,7 @@ window.CURRICULUM_TERM1 = {
                   "kaçtı"
                 ],
                 "ans": 1,
-                "hint": "MEB Kazanımı: Doğru cevap saklandı (B seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "Aşağıdaki cümlelerde yer alan altı çizili sözcüklerden hangisinin eş seslisi yoktur?",
@@ -8131,7 +8131,7 @@ window.CURRICULUM_TERM1 = {
                   "Türkçe sınavından yüz aldım."
                 ],
                 "ans": 1,
-                "hint": "MEB Kazanımı: Doğru cevap Son günlerde kitap okumaya daha çok zaman ayırdım. (B seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "Kütüphanede kitap okurken ve araştırma yaparken uyulması gereken en temel kural hangisidir?",
@@ -8215,10 +8215,10 @@ window.CURRICULUM_TERM1 = {
                   "Özlem",
                   "Bahar sevinci",
                   "Mutluluk",
-                  "Ağaç sevgisi 77 === PAGE 79 === 7 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Ağaç sevgisi 77"
                 ],
                 "ans": 3,
-                "hint": "MEB Kazanımı: Doğru cevap Ağaç sevgisi 77 === PAGE 79 === 7 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ (D seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "Kondisyon denildiğinde, sporcunun bir etkinliğe hazırlık aşamalarındaki gelişim süreciyle etkinlik sırasındaki performans düzeyi kastedilir. Sporcular, iyi bir performans gösterebilmek için kondisyon düzeylerini artırmaya çalışır. Böylece olası yaralanma ve sakatlanma risklerini de azaltırlar. Çünkü yüksek bir kondisyon düzeyiyle sporcular, vücut esnekliklerini artırmış ve kaslarını güçlendirmiş olur. Profesyonel sporcular, kondisyon düzeylerini geliştirebilmek amacıyla antrenörlerinin kendileri için belirlediği bir çalışma programını uygular. İyi bir kondisyon düzeyi yalnızca profesyonel sporcular için değil, bizim de daha aktif ve sağlıklı bir yaşam sürebilmemiz için gereklidir. Örneğin dik bir yokuşu ya da uzun bir merdiveni çıkarken çabuk yorulmamız kondisyon eksikliğimizden kaynaklanabilir. Kondisyon düzeyimizi artırmak için düzenli spor yapıp kaslarımızı çalıştırmalıyız. Bu amaçla açık havada uzun yürüyüşlere çıkabilir, bisiklet sürmek ve yüzmek gibi fiziksel etkinliklerde bulunabiliriz. Bu metnin konusu aşağıdakilerden hangisidir?",
@@ -8229,7 +8229,7 @@ window.CURRICULUM_TERM1 = {
                   "Sporda fiziksel özelliklerimizin önemi"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Sporda kondisyonun önemi (A seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Gözlerimiz, çevremizi görmemizi sağlayan duyu organımızdır. Varlıkların rengini, yerini, büyüklüğünü, şeklini gözümüzle algılarız. Göz sağlığımızı korumak için kirli ellerimizle gözlerimize dokunmamalıyız. Tablet ve bilgisayar karşısında uzun zaman geçirmemeliyiz. Başkalarına ait gözlük ve havluları kullanmamalıyız. Göz sağlığımıza iyi gelen besinleri tüketmeliyiz. Bu metnin konusu aşağıdakilerden hangisi olamaz?",
@@ -8237,10 +8237,10 @@ window.CURRICULUM_TERM1 = {
                   "Beş duyumuz",
                   "Görme duyumuz göz",
                   "Göz sağlığımız",
-                  "Gözlerimiz 78 === PAGE 80 === 8 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Gözlerimiz 78"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Beş duyumuz (A seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "Düzenli kitap okumak bir çocuğun gelişimine nasıl katkı sağlar?",
@@ -8327,7 +8327,7 @@ window.CURRICULUM_TERM1 = {
                   "Hayvan sevgisi"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Baharın gelişi (A seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "Hareketli olmak çok önemli! Bilim insanları, sürekli bilgisayar veya telefon başında oturmayı, gün içinde yaptığımız hareketleri azaltmayı doğru bulmuyor. Yapılan bir araştırmaya göre şeker hastalığına yakalanan insanların yüzde 25’i durgun, cansız bir hayat yaşıyor. Kalp hastalarının yüzde 30’u ise hareketin eksik olduğu bir yaşam sürdükleri için hasta oluyor. Bu metnin ana fikri aşağıdakilerden hangisidir?",
@@ -8338,7 +8338,7 @@ window.CURRICULUM_TERM1 = {
                   "Dengeli beslenmek çok önemlidir."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Teknoloji, insan sağlığını etkilemektedir. (A seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "İyi bir dinleyici, iletişim kurduğu kişinin sadece söylediklerini değil; yüzü, eli, kolu ve bedeniyle yaptıklarını da anlar. Çünkü yüz ifadeleri, el ve kol hareketleri, bedenin duruş tarzı, ses tonu ile de iletişim kurulur. İnsanların karşı karşıya gelerek kurduğu iletişimde hem sözlü hem de sözsüz mesajlar aynı anda kullanılır. Bu iletişimdeki mesaj alışverişinin ancak küçük bir bölümünü sözlü mesajlar oluşturur. Yüz ifadeleri, el kol hareketleri, bedenin konumu ve sesin yükselip alçalması iletişimde kullanılan mesajların daha büyük bir bölümünü oluşturur. Bu metnin ana fikri aşağıdakilerden hangisidir?",
@@ -8349,7 +8349,7 @@ window.CURRICULUM_TERM1 = {
                   "İyi bir dinleyici, iletişim sırasında tüm konuşmaları doğru anlamalıdır."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap İletişimde sadece söylenenler değil beden dili de önemlidir. (A seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "Bir kitabı okuduktan sonra 'okur kimliği' geliştiren bir kişi ne yapar?",
@@ -8433,10 +8433,10 @@ window.CURRICULUM_TERM1 = {
                   "Günlük yaşam becerilerinin toprak sayesinde gerçekleştirildiğine",
                   "Yerleşim yerlerinin su kaynaklarından uzağa kurulduğuna",
                   "Tarihî kalıntıların her yerde bulunduğuna",
-                  "Suyun yaşam kaynağı olduğuna 80 === PAGE 82 === 10 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Suyun yaşam kaynağı olduğuna 80"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Günlük yaşam becerilerinin toprak sayesinde gerçekleştirildiğine (A seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Ülkemizde Karayolları Trafik Kanunu’na göre 10 yaşından küçük çocukların ön koltukta oturması yasaktır. Ani bir fren veya sarsıntıda zarar görmemeleri, yaralanmamaları için 36 kiloya kadar tüm çocukların arka koltukta ve çocuk koltuğunda oturması gerekiyor. Tabii emniyet kemeri takmak da şart. Metinde sözü edilen kuralın, trafik kanununa konulma sebebi aşağıdakilerden hangisidir?",
@@ -8447,7 +8447,7 @@ window.CURRICULUM_TERM1 = {
                   "Çocukların ön koltukta oturmalarını sağlamak"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Çocukların yolculuk sırasında yaralanmasını engellemek (A seçeneği)."
+                "hint": "Adım adım düşün. Her şık için 'Bu doğru mu?' diye sor! 🤔"
               },
               {
                 "q": "Kanguru deyince pek çoğunuzun aklına yavrularını taşıdıkları keseleri gelir. Dişi kanguru 24 ila 38 günün ardından 4 kadar yavru doğurabilir. Yavrular yaklaşık 2 gram ağırlığında ve 1 santimetre uzunluğunda doğar. Doğumdan yaklaşık 1 dakika sonra koku duyuları yardımıyla annelerinin keselerine tırmanır ve burada 120 ila 450 gün kalırlar. Burada hem barınıp korunurlar hem de anne sütüyle beslenirler. Dişi kanguru kesesinde iki farklı yaştaki yavruyu aynı anda büyütebilir. Bu durumda besleyicilik açısından iki farklı yapıda anne sütü salgılanır. Yavrular, kesede bütün yaşamsal faaliyetlerini gerçekleştirebilir. Kese, dişi kanguru tarafından temizlenir. Yavrular keseden çıkıp doğaya karıştıklarında da bir süre annelerinin yanından ayrılmaz. Herhangi bir tehlikeye karşı hemen annelerinin keselerine giriverirler. Dişi kangurular 14 ila 20 ay, erkek kangurularsa 2 ila 4 yılda tamamen olgunlaşıp yetişkin birer kanguru olur. Bu metne göre kangurularla ilgili aşağıdaki bilgilerden hangisi doğrudur?",
@@ -8455,10 +8455,10 @@ window.CURRICULUM_TERM1 = {
                   "Yavruları yaklaşık 2 gram ağırlığında ve 4 santimetre uzunluğunda doğar.",
                   "Dişileri 2 ila 4 yılda tamamen olgunlaşıp yetişkin birer kanguru olur.",
                   "Dişileri, kesesinde iki farklı yaştaki yavruyu aynı anda büyütür.",
-                  "Dişilerinin kesesi, yavru kanguru tarafından temizlenir. 81 === PAGE 83 === 11 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "Dişilerinin kesesi, yavru kanguru tarafından temizlenir. 81"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Yavruları yaklaşık 2 gram ağırlığında ve 4 santimetre uzunluğunda doğar. (A seçeneği)."
+                "hint": "Öğrendiğin kuralı hatırla ve uygula! ✨"
               },
               {
                 "q": "Pusulanın renkli (genelde kırmızı) ucu her zaman hangi ana yönü gösterir?",
@@ -8545,7 +8545,7 @@ window.CURRICULUM_TERM1 = {
                   "Genel olarak 2 metre uzunluğa, 100 kg ağırlığa ulaşır."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Ortalama yaşam süreleri seksen yıldır. (A seçeneği)."
+                "hint": "İpucu: İlk önce kesin yanlış olanları elemeyi dene! 🎯"
               },
               {
                 "q": "Karıncalar, iletişimde bulunmak ve koku almak için antenlerini kullanır. Karıncaların kafalarında iki adet anten bulunur. Karıncaların altı adet bacağı vardır. Güçlü bacakları sayesinde ağırlığının yirmi katını taşıyabilir. Bu bilgilere göre karıncalarla ilgili aşağıdakilerin hangisine ulaşılamaz?",
@@ -8556,7 +8556,7 @@ window.CURRICULUM_TERM1 = {
                   "Antenlerini beslenirken kullanır."
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap Antenleriyle koku alır. (A seçeneği)."
+                "hint": "Soruyu dikkatlice oku ve şıkları karşılaştır. Doğru cevabı bulabilirsin! 🦉"
               },
               {
                 "q": "Geyik sürüsü ormanlık alanda karnını doyurdu. Sonra da ormanın alt tarafında bulunan vadiye yönelerek nehirden su içti. Kana kana su içen geyikler, ağaçların gölgesinde dinlenmeye çekildi. Bu metindeki olay aşağıdaki yerlerin hangisinde geçmektedir?",
@@ -8564,10 +8564,10 @@ window.CURRICULUM_TERM1 = {
                   "vadi - dağ",
                   "orman - yayla",
                   "orman - vadi",
-                  "dağ - yayla 82 === PAGE 84 === 12 ÖLÇME, DEĞERLENDİRME VE SINAV HİZMETLERİ GENEL MÜDÜRLÜĞÜ"
+                  "dağ - yayla 82"
                 ],
                 "ans": 0,
-                "hint": "MEB Kazanımı: Doğru cevap vadi - dağ (A seçeneği)."
+                "hint": "Bu konuyu çalışma kitabında tekrar gözden geçirebilirsin! 📖"
               },
               {
                 "q": "Türk edebiyatında modern hikâyeciliğin kurucularından olan ve 'Kaşağı', 'Diyet', 'Falaka' gibi unutulmaz eserler yazan yazarımız kimdir?",

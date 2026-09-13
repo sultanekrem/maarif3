@@ -186,10 +186,22 @@
   ];
   let _hintIdx = 0;
 
+  function cleanQuestion(text) {
+    if (!text) return '';
+    return String(text)
+      .replace(PDF_NOISE, '')
+      .replace(/^\s*\d+[\.\)]\s*/, '')
+      .trim();
+  }
+
   function cleanOption(text) {
     if (!text) return '';
-    let t = String(text).replace(PDF_NOISE, '').trim().replace(/\|+$/, '').trim();
-    return t.length > 70 ? t.slice(0, 67) + '…' : (t || String(text).slice(0, 40));
+    let t = String(text)
+      .replace(PDF_NOISE, '')
+      .replace(/\|+$/, '')
+      .replace(/\s+\d{1,2}$/, '')
+      .trim();
+    return t || String(text).trim();
   }
 
   function cleanHint(text) {
@@ -828,6 +840,191 @@
     renderQuizQuestion();
   }
   window.startQuiz = startQuiz;
+  window.state = state;
+  window.renderQuizQuestion = renderQuizQuestion;
+
+  // --- GÖRSEL VE OKUMA DESTEĞİ (ABAKÜS, TABAN BLOKLARI, MASALLAR) ---
+  let _activeStoryText = '';
+
+  function generateAbacusSVG(hundreds, tens, ones, label = 'Abaküs Modeli') {
+    const beadColors = {
+      Y: { fill: 'url(#abacus-grad-y)', stroke: '#ca8a04' },
+      O: { fill: 'url(#abacus-grad-o)', stroke: '#0284c7' },
+      B: { fill: 'url(#abacus-grad-b)', stroke: '#16a34a' }
+    };
+
+    function renderRodsBeads(count, rodX, type) {
+      let beadsHtml = '';
+      const startY = 138;
+      const beadH = 12;
+      const beadGap = 14;
+      for (let i = 0; i < count; i++) {
+        const y = startY - i * beadGap;
+        beadsHtml += `
+          <g>
+            <rect x="${rodX - 20}" y="${y - 5}" width="40" height="${beadH}" rx="6" fill="${beadColors[type].fill}" stroke="${beadColors[type].stroke}" stroke-width="1.5" filter="drop-shadow(0 2px 2px rgba(0,0,0,0.15))" />
+            <line x1="${rodX - 14}" y1="${y - 2}" x2="${rodX + 14}" y2="${y - 2}" stroke="rgba(255,255,255,0.75)" stroke-width="1.2" stroke-linecap="round" />
+          </g>
+        `;
+      }
+      return beadsHtml;
+    }
+
+    return `
+      <svg viewBox="0 0 270 190" width="270" height="190" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 4px 8px rgba(0,0,0,0.06));">
+        <defs>
+          <linearGradient id="abacus-wood" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#b45309" />
+            <stop offset="100%" stop-color="#78350f" />
+          </linearGradient>
+          <linearGradient id="abacus-grad-y" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#fde047" />
+            <stop offset="60%" stop-color="#eab308" />
+            <stop offset="100%" stop-color="#ca8a04" />
+          </linearGradient>
+          <linearGradient id="abacus-grad-o" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="60%" stop-color="#0284c7" />
+            <stop offset="100%" stop-color="#0369a1" />
+          </linearGradient>
+          <linearGradient id="abacus-grad-b" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#4ade80" />
+            <stop offset="60%" stop-color="#16a34a" />
+            <stop offset="100%" stop-color="#15803d" />
+          </linearGradient>
+        </defs>
+
+        <!-- Arka Zemin Kartı -->
+        <rect x="2" y="2" width="266" height="186" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" />
+
+        <!-- Abaküs Üst Ahşap Çerçeve -->
+        <rect x="22" y="14" width="226" height="10" rx="3" fill="url(#abacus-wood)" stroke="#572506" stroke-width="1" />
+
+        <!-- 3 Çubuk (Y, O, B) -->
+        <line x1="60" y1="24" x2="60" y2="150" stroke="#94a3b8" stroke-width="5" stroke-linecap="round" />
+        <line x1="135" y1="24" x2="135" y2="150" stroke="#94a3b8" stroke-width="5" stroke-linecap="round" />
+        <line x1="210" y1="24" x2="210" y2="150" stroke="#94a3b8" stroke-width="5" stroke-linecap="round" />
+
+        <!-- Boncuklar -->
+        ${renderRodsBeads(hundreds, 60, 'Y')}
+        ${renderRodsBeads(tens, 135, 'O')}
+        ${renderRodsBeads(ones, 210, 'B')}
+
+        <!-- Abaküs Ahşap Tabanı -->
+        <rect x="18" y="148" width="234" height="26" rx="5" fill="url(#abacus-wood)" stroke="#572506" stroke-width="1.2" />
+
+        <!-- Basamak Etiketleri -->
+        <text x="60" y="165" text-anchor="middle" fill="#fef3c7" font-family="Comfortaa, sans-serif" font-size="11" font-weight="800">Y (${hundreds})</text>
+        <text x="135" y="165" text-anchor="middle" fill="#fef3c7" font-family="Comfortaa, sans-serif" font-size="11" font-weight="800">O (${tens})</text>
+        <text x="210" y="165" text-anchor="middle" fill="#fef3c7" font-family="Comfortaa, sans-serif" font-size="11" font-weight="800">B (${ones})</text>
+      </svg>
+    `;
+  }
+
+  function generateDoubleAbacusSVG(h1, t1, u1, h2, t2, u2) {
+    return `
+      <div style="display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;">
+        <div style="text-align:center;">
+          <span style="font-family:'Comfortaa',sans-serif;font-size:12px;font-weight:800;color:#0284c7;display:block;margin-bottom:4px;">A Sayısı</span>
+          ${generateAbacusSVG(h1, t1, u1)}
+        </div>
+        <div style="font-size:26px;font-weight:900;color:#f59e0b;padding:4px;">+</div>
+        <div style="text-align:center;">
+          <span style="font-family:'Comfortaa',sans-serif;font-size:12px;font-weight:800;color:#10b981;display:block;margin-bottom:4px;">B Sayısı</span>
+          ${generateAbacusSVG(h2, t2, u2)}
+        </div>
+      </div>
+    `;
+  }
+
+  function generateBaseTenBlocksSVG(h, t, u) {
+    return `
+      <div style="display:flex;align-items:center;justify-content:center;gap:12px;background:#ffffff;border:2px solid #e2e8f0;border-radius:14px;padding:12px 14px;flex-wrap:wrap;">
+        <div style="text-align:center;">
+          <div style="font-size:28px;letter-spacing:2px;">🟩🟩🟩</div>
+          <span style="font-family:'Comfortaa',sans-serif;font-size:12px;font-weight:800;color:#d97706;display:block;margin-top:4px;">${h} Yüzlük (300)</span>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-size:28px;letter-spacing:2px;">🟦🟦🟦🟦</div>
+          <span style="font-family:'Comfortaa',sans-serif;font-size:12px;font-weight:800;color:#0284c7;display:block;margin-top:4px;">${t} Onluk (40)</span>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-size:20px;letter-spacing:1px;">🟨🟨🟨🟨🟨🟨🟨</div>
+          <span style="font-family:'Comfortaa',sans-serif;font-size:12px;font-weight:800;color:#10b981;display:block;margin-top:4px;">${u} Birlik (7)</span>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderQuizStoryPanel(subjKey, topicId, questionText) {
+    const storyCard = document.getElementById('quiz-story-container');
+    const storyTitle = document.getElementById('quiz-story-title');
+    const storyTextEl = document.getElementById('quiz-story-text');
+    if (!storyCard || !storyTitle || !storyTextEl) return;
+
+    _activeStoryText = '';
+
+    const topics = getAllTopics(subjKey);
+    const top = topics.find(t => t.id === topicId) || topics[0];
+    if (!top || !top.reading_pages || !top.reading_pages.length) {
+      storyCard.classList.add('hidden');
+      return;
+    }
+
+    const page = top.reading_pages.find(p => p.story || p.content || p.type === 'metin') || top.reading_pages[0];
+    const rawText = page.content || page.story || '';
+    if (!rawText) {
+      storyCard.classList.add('hidden');
+      return;
+    }
+
+    _activeStoryText = rawText;
+    storyTitle.textContent = page.title || top.title;
+
+    const paras = rawText.split('\n\n').filter(p => p.trim().length > 0);
+    let html = paras.map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`).join('');
+
+    if (page.info_box) {
+      html += `
+        <div class="reading-info-pill">
+          <strong>${page.info_box.title || '💡 Ana Fikir'}:</strong> ${page.info_box.content}
+        </div>
+      `;
+    }
+
+    storyTextEl.innerHTML = html;
+    storyCard.classList.remove('hidden');
+
+    const qLower = (questionText || '').toLowerCase();
+    const isDirectStoryQ = qLower.includes('kelebek') || qLower.includes('lavanta') || qLower.includes('metne göre') || qLower.includes('şiire göre') || qLower.includes('parçaya göre') || qLower.includes('metinde') || subjKey === 'turkce';
+    
+    if (isDirectStoryQ) {
+      storyCard.classList.remove('collapsed');
+      const arrow = document.getElementById('quiz-story-toggle-icon');
+      if (arrow) arrow.textContent = '▲';
+    } else {
+      storyCard.classList.add('collapsed');
+      const arrow = document.getElementById('quiz-story-toggle-icon');
+      if (arrow) arrow.textContent = '▼';
+    }
+  }
+
+  window.toggleQuizReadingBody = function() {
+    const card = document.getElementById('quiz-story-container');
+    const arrow = document.getElementById('quiz-story-toggle-icon');
+    if (!card) return;
+    card.classList.toggle('collapsed');
+    if (arrow) {
+      arrow.textContent = card.classList.contains('collapsed') ? '▼' : '▲';
+    }
+  };
+
+  window.readQuizStory = function() {
+    const btn = document.getElementById('btn-listen-quiz-story');
+    if (_activeStoryText) {
+      SpeechService.speak(_activeStoryText, false, btn);
+    }
+  };
 
   function renderQuizQuestion() {
     SpeechService.stop();
@@ -841,13 +1038,54 @@
     const readBtn = document.getElementById('btn-read-question');
     const fbBanner = document.getElementById('quiz-feedback-banner');
     const nextBtn = document.getElementById('btn-quiz-next');
+    const visualBox = document.getElementById('quiz-visual-container');
 
     if (stepTag) stepTag.textContent = `${SUBJECTS[state.quiz.subject].title} • ${cur + 1}/${total}`;
     if (stepBar) stepBar.style.width = `${((cur) / total) * 100}%`;
-    if (qText) qText.textContent = cleanOption(q.question);
+    if (qText) qText.textContent = cleanQuestion(q.question);
 
     if (readBtn) {
-      readBtn.onclick = () => SpeechService.speak(cleanOption(q.question), q.isEnglish, readBtn);
+      readBtn.onclick = () => SpeechService.speak(cleanQuestion(q.question), q.isEnglish, readBtn);
+    }
+
+    // Render Reading Story Drawer if topic has reading context
+    renderQuizStoryPanel(state.quiz.subject, state.quiz.topicId, q.question);
+
+    // Render Visuals (Abaküs, Taban Blokları vb.)
+    if (visualBox) {
+      const qLow = (q.question || '').toLowerCase();
+      if (qLow.includes('abaküs') || qLow.includes('abakus')) {
+        visualBox.classList.remove('hidden');
+        if (qLow.includes('a ve b')) {
+          visualBox.innerHTML = generateDoubleAbacusSVG(4, 2, 5, 3, 4, 6) + `<div class="quiz-visual-label">A Sayısı: 425 (4Y 2O 5B) &nbsp;|&nbsp; B Sayısı: 346 (3Y 4O 6B)</div>`;
+        } else if (qLow.includes('ahmet, verilen toplama') || qLow.includes('elde ettiği sonucu boş abaküste')) {
+          visualBox.innerHTML = `
+            <div style="text-align:center;margin-bottom:6px;">
+              <span style="display:inline-block;background:#fffbeb;border:2px solid #fde68a;border-radius:10px;padding:6px 14px;font-family:'Comfortaa',sans-serif;font-size:16px;font-weight:800;color:#92400e;">458 + 274 = 732</span>
+            </div>
+            ${generateAbacusSVG(7, 3, 2, 'İşlem Sonucu Abaküsü')}
+            <div class="quiz-visual-label">Toplam Sonucu: 732 (Yüzler basamağında 7 boncuk vardır)</div>
+          `;
+        } else if (qLow.includes('16 boncuğu olduğuna göre')) {
+          visualBox.innerHTML = `
+            <div style="background:#f0fdf4;border:1.5px solid #bbf7d0;border-radius:10px;padding:6px 12px;margin-bottom:6px;font-size:12px;color:#166534;font-weight:700;">
+              🎯 Kural: 16 boncukla her çubukta en az 1 boncuk olan en büyük 3 basamaklı sayı
+            </div>
+            ${generateAbacusSVG(9, 5, 2, '16 Boncuk Modeli')}
+            <div class="quiz-visual-label">En büyük sayı: 952 (9 + 5 + 2 = 16 Boncuk)</div>
+          `;
+        } else if (qLow.includes('üç basamaklı bir doğal sayı oluşturulmuştur') || qLow.includes('okunuşu aşağıdakilerden')) {
+          visualBox.innerHTML = generateAbacusSVG(3, 1, 2, '3 Basamaklı Sayı Abaküsü') + `<div class="quiz-visual-label">Aşağıdaki abaküste oluşturulan doğal sayı: 3 Yüzlük, 1 Onluk, 2 Birlik</div>`;
+        } else {
+          visualBox.innerHTML = generateAbacusSVG(3, 1, 2, 'Abaküs Modeli') + `<div class="quiz-visual-label">Soru Abaküs Modeli</div>`;
+        }
+      } else if (qLow.includes('taban blok') || qLow.includes('modellenen 3 basamaklı sayıyı')) {
+        visualBox.classList.remove('hidden');
+        visualBox.innerHTML = generateBaseTenBlocksSVG(3, 4, 7) + `<div class="quiz-visual-label">3 Yüzlük, 4 Onluk, 7 Birlik = 347</div>`;
+      } else {
+        visualBox.classList.add('hidden');
+        visualBox.innerHTML = '';
+      }
     }
 
     if (fbBanner) fbBanner.classList.add('hidden');
@@ -944,21 +1182,22 @@
     loadState();
     showScreen('screen-splash');
 
-    // Splash Simülasyonu (2 saniye zarif dolum)
+    // Splash Simülasyonu (~2.8 saniye ferah ve zarif dolum)
     const pctEl = document.getElementById('splash-pct');
     const barEl = document.getElementById('splash-progress-bar');
-    let p = 20;
+    let p = 15;
     const timer = setInterval(() => {
-      p += 20;
+      p += 10;
+      if (p > 100) p = 100;
       if (pctEl) pctEl.textContent = `%${p}`;
       if (barEl) barEl.style.width = `${p}%`;
       if (p >= 100) {
         clearInterval(timer);
         setTimeout(() => {
           setActiveTab('macera');
-        }, 300);
+        }, 400);
       }
-    }, 280);
+    }, 270);
   }
 
   if (document.readyState === 'loading') {

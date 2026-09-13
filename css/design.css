@@ -92,34 +92,63 @@ h1, h2, h3, h4, h5, .font-comfortaa {
   padding: 76px 16px 24px;
 }
 
-/* ===================== SPLASH SCREEN (ZARİF & DENGELİ) ===================== */
+/* ===================== SPLASH SCREEN (FERAH TAM EKRAN & DOĞAL LOGO) ===================== */
 #screen-splash {
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(180deg, #FFFDF5 0%, #FFF9EE 50%, #EFF9FF 100%);
-  z-index: 9999;
   position: fixed;
   inset: 0;
-  padding: 24px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+  background: radial-gradient(circle at 50% 20%, #FFFDF5 0%, #FFF8EA 55%, #EFF6FF 100%);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
 }
 
 #screen-splash.active {
   display: flex !important;
 }
 
-.splash-card {
+.splash-bg-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+  opacity: 0.6;
+}
+.glow-top {
+  width: 320px;
+  height: 320px;
+  background: #fde68a;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.glow-bottom {
+  width: 380px;
+  height: 280px;
+  background: #bae6fd;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.splash-content-wrap {
   width: 100%;
-  max-width: 380px;
-  background: rgba(255, 255, 255, 0.95);
-  border: 4px solid #ffffff;
-  border-radius: var(--radius-xl);
-  box-shadow: 0 16px 40px rgba(245, 158, 11, 0.15), 0 4px 0 #ecd7c1;
-  padding: 28px 20px;
-  text-align: center;
-  position: relative;
+  max-width: 480px;
+  height: 100%;
+  max-height: 840px;
+  padding: 40px 24px 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  text-align: center;
 }
 
 .splash-doodle {
@@ -127,39 +156,38 @@ h1, h2, h3, h4, h5, .font-comfortaa {
   font-weight: 800;
   user-select: none;
   pointer-events: none;
+  z-index: 1;
 }
-.doodle-1 { top: 20px; left: 24px; color: #fde047; font-size: 22px; animation: gentleFloat 3s infinite ease-in-out; }
-.doodle-2 { top: 18px; right: 28px; color: #facc15; font-size: 20px; animation: gentleFloat 4s infinite ease-in-out 0.5s; }
-.doodle-3 { bottom: 85px; right: 20px; color: #38bdf8; font-size: 18px; opacity: 0.6; }
+.doodle-1 { top: 36px; left: 32px; color: #facc15; font-size: 26px; animation: gentleFloat 3s infinite ease-in-out; }
+.doodle-2 { top: 48px; right: 36px; color: #fbbf24; font-size: 22px; animation: gentleFloat 4s infinite ease-in-out 0.5s; }
+.doodle-3 { bottom: 120px; left: 28px; color: #38bdf8; font-size: 20px; opacity: 0.7; animation: gentleFloat 3.5s infinite ease-in-out 1s; }
+.doodle-4 { bottom: 100px; right: 32px; color: #f59e0b; font-size: 24px; opacity: 0.8; animation: gentleFloat 4.2s infinite ease-in-out 1.5s; }
 
 @keyframes gentleFloat {
   0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-6px) rotate(3deg); }
+  50% { transform: translateY(-8px) rotate(4deg); }
 }
 
-.splash-avatar-glow {
-  position: relative;
-  margin-bottom: 14px;
-}
-
-.splash-avatar-border {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #ffd54f, #ffb300, #ff8f00);
-  padding: 6px;
-  box-shadow: 0 8px 24px rgba(255, 179, 0, 0.35);
+.splash-logo-container {
+  margin: 6px 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
-.splash-avatar-img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: #ffffff;
-  object-fit: cover;
+.splash-brand-logo {
+  width: 144px;
+  height: 144px;
+  border-radius: 28px;
+  box-shadow: 0 16px 36px rgba(255, 179, 0, 0.28), 0 4px 14px rgba(0, 0, 0, 0.08);
+  animation: logoBreath 3s ease-in-out infinite alternate;
+  display: block;
+}
+
+@keyframes logoBreath {
+  0% { transform: translateY(0px) scale(1); filter: drop-shadow(0 4px 12px rgba(255,179,0,0.25)); }
+  100% { transform: translateY(-6px) scale(1.03); filter: drop-shadow(0 10px 24px rgba(255,179,0,0.4)); }
 }
 
 .splash-meb-badge {
@@ -1863,6 +1891,146 @@ nav#maarif-nav {
   padding-top: 16px;
 }
 
+/* ===================== QUIZ GÖRSEL VE OKUMA PANELLERİ ===================== */
+.quiz-reading-card {
+  background: #fbf7ee;
+  border: 2px solid #e8d7b8;
+  border-radius: 18px;
+  box-shadow: 0 4px 0 #dfcaa7;
+  margin-bottom: 14px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.quiz-reading-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: #fdf2dc;
+  border-bottom: 1.5px solid #ebd8b7;
+  cursor: pointer;
+  user-select: none;
+}
+
+.reading-badge-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.reading-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.reading-heading {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  color: #78350f;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.reading-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.btn-listen-story-pill {
+  background: #ffedd5;
+  border: 1.5px solid #fdba74;
+  border-radius: var(--radius-full);
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 800;
+  color: #c2410c;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 2px 0 #fb923c;
+  transition: transform 0.1s;
+}
+
+.btn-listen-story-pill:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+.toggle-arrow-icon {
+  font-size: 12px;
+  color: #92400e;
+  transition: transform 0.2s;
+}
+
+.quiz-reading-card.collapsed .toggle-arrow-icon {
+  transform: rotate(-90deg);
+}
+
+.quiz-reading-card.collapsed .quiz-reading-body {
+  display: none;
+}
+
+.quiz-reading-body {
+  padding: 12px 14px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #451a03;
+  max-height: 180px;
+  overflow-y: auto;
+  background: #fffdf9;
+}
+
+.reading-story-content p {
+  margin-bottom: 8px;
+}
+
+.reading-info-pill {
+  margin-top: 8px;
+  padding: 8px 10px;
+  background: #fef3c7;
+  border-left: 3px solid #f59e0b;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #92400e;
+}
+
+/* Dinamik Soru Görsel Alanı (Abaküs, Taban Blokları, Saat) */
+.quiz-visual-box {
+  width: 100%;
+  background: #f8fafc;
+  border: 2px dashed #cbd5e1;
+  border-radius: 16px;
+  padding: 14px;
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.quiz-visual-box svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.quiz-visual-label {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  color: #475569;
+  margin-top: 6px;
+  text-align: center;
+}
+
 .quiz-card-frame {
   background: #ffffff;
   border: 2.5px solid var(--outline-variant);
@@ -1886,9 +2054,12 @@ nav#maarif-nav {
 }
 
 .quiz-question-stem {
-  font-size: 16px;
-  line-height: 1.45;
+  font-size: 17px;
+  line-height: 1.55;
   color: var(--on-surface);
+  font-weight: 800;
+  white-space: normal;
+  word-break: break-word;
 }
 
 .quiz-tactile-options-list {

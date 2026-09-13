@@ -21,32 +21,35 @@
 <body>
 <div id="app-wrapper">
 
-  <!-- ===================== SCREEN: SPLASH (ZARİF & DENGELİ) ===================== -->
+  <!-- ===================== SCREEN: SPLASH (FERAH TAM EKRAN & DOĞAL LOGO) ===================== -->
   <div id="screen-splash" class="maarif-screen active">
-    <div class="splash-card">
-      <!-- Floating Doodles -->
-      <div class="splash-doodle doodle-1">✦</div>
-      <div class="splash-doodle doodle-2">✨</div>
-      <div class="splash-doodle doodle-3">★</div>
+    <!-- Ambient Floating Doodles & Background Glow -->
+    <div class="splash-bg-glow glow-top"></div>
+    <div class="splash-bg-glow glow-bottom"></div>
+    <div class="splash-doodle doodle-1">✦</div>
+    <div class="splash-doodle doodle-2">✨</div>
+    <div class="splash-doodle doodle-3">★</div>
+    <div class="splash-doodle doodle-4">🌟</div>
 
-      <!-- Mascot Avatar Frame -->
-      <div class="splash-avatar-glow">
-        <div class="splash-avatar-border">
-          <img src="assets/maarif_yildizi_3_logo.png" alt="Maarif Yıldızı 3" class="splash-avatar-img">
-        </div>
-      </div>
-
-      <!-- MEB Model Pill -->
+    <div class="splash-content-wrap">
+      <!-- Top MEB Model Pill -->
       <div class="splash-meb-badge">
         <span class="pulse-dot"></span>
         <span>TÜRKİYE YÜZYILI MAARİF MODELİ</span>
       </div>
 
-      <!-- App Title -->
-      <h1 class="splash-hero-title">
-        <span class="text-amber">Maarif</span> <span class="text-sky">Yıldızı 3</span>
-      </h1>
-      <p class="splash-hero-sub">3. Sınıf MEB Müfredatına Uygun Oyunlaştırılmış Öğrenme Macerası</p>
+      <!-- Natural Squircle Logo (No circular cut, pure rounded squircle form) -->
+      <div class="splash-logo-container">
+        <img src="assets/maarif_yildizi_3_logo.png" alt="Maarif Yıldızı 3" class="splash-brand-logo">
+      </div>
+
+      <!-- App Title & Slogan -->
+      <div class="splash-text-group">
+        <h1 class="splash-hero-title">
+          <span class="text-amber">Maarif</span> <span class="text-sky">Yıldızı 3</span>
+        </h1>
+        <p class="splash-hero-sub">3. Sınıf MEB Müfredatına Uygun Oyunlaştırılmış Öğrenme Macerası</p>
+      </div>
 
       <!-- Triple Values -->
       <div class="splash-slogan-row">
@@ -61,10 +64,10 @@
       <div class="splash-progress-box">
         <div class="splash-status-row">
           <span class="status-left"><span class="blue-dot"></span> Macera Hazırlanıyor...</span>
-          <span class="status-pct" id="splash-pct">%85</span>
+          <span class="status-pct" id="splash-pct">%15</span>
         </div>
         <div class="splash-track">
-          <div class="splash-bar" id="splash-progress-bar">
+          <div class="splash-bar" id="splash-progress-bar" style="width: 15%;">
             <div class="shimmer-glare"></div>
           </div>
         </div>
@@ -484,12 +487,35 @@
 
     <div class="screen-content quiz-body-container">
       
+      <!-- Okuma / Dinleme Metni Alanı (Kelebek ile Lavanta vb.) -->
+      <div id="quiz-story-container" class="quiz-reading-card hidden">
+        <div class="quiz-reading-header" onclick="toggleQuizReadingBody()">
+          <div class="reading-badge-title">
+            <span class="reading-icon">📖</span>
+            <span id="quiz-story-title" class="reading-heading">Okuma Metni</span>
+          </div>
+          <div class="reading-header-actions">
+            <button class="btn-listen-story-pill" id="btn-listen-quiz-story" onclick="event.stopPropagation(); readQuizStory();">
+              <span>🔊 Metni Dinle</span>
+            </button>
+            <span class="toggle-arrow-icon" id="quiz-story-toggle-icon">▼</span>
+          </div>
+        </div>
+        <div class="quiz-reading-body" id="quiz-reading-body">
+          <div class="reading-story-content" id="quiz-story-text"></div>
+        </div>
+      </div>
+
       <!-- Soru Kartı -->
       <div class="quiz-card-frame">
         <div class="quiz-card-mascot-tip">
           <span class="owl-icon">🦉</span>
           <span id="quiz-tip-message">Soruyu dikkatle oku, doğru cevabı kolayca bulacaksın!</span>
         </div>
+        
+        <!-- Dinamik Soru Görseli (Abaküs, Taban Blokları, Saat, Kesir vb.) -->
+        <div id="quiz-visual-container" class="quiz-visual-box hidden"></div>
+
         <h3 id="quiz-question-text" class="quiz-question-stem">Soru metni yükleniyor...</h3>
       </div>
 

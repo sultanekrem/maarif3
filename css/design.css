@@ -1983,3 +1983,420 @@ img { display: block; }
   border-radius: 8px;
   margin-top: 4px;
 }
+
+
+/* ============================================================
+   STITCH MINI GAMES, ADVENTURE PATH, LIBRARY & AVATAR WORKSHOP
+   ============================================================ */
+
+/* SVG Curved Adventure Path */
+.adventure-path-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 10px 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.adventure-path-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.island-trail-card {
+  position: relative;
+  z-index: 1;
+  width: 92%;
+  max-width: 340px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 14px 16px;
+  box-shadow: 0 4px 0 var(--surface-dim);
+  border: 2px solid var(--outline-variant);
+  box-sizing: border-box;
+  transition: transform 0.15s ease;
+}
+
+.island-trail-card:hover {
+  transform: translateY(-2px);
+}
+
+.island-trail-card.island-align-left {
+  align-self: flex-start;
+}
+
+.island-trail-card.island-align-right {
+  align-self: flex-end;
+}
+
+.island-trail-card.island-current {
+  border-color: var(--primary-container);
+  background: var(--surface-container-low);
+  box-shadow: 0 6px 0 #b37d00;
+  transform: scale(1.02);
+}
+
+.island-trail-card.island-locked {
+  opacity: 0.72;
+  background: var(--surface-container-high);
+}
+
+.island-beacon-badge {
+  position: absolute;
+  top: -12px;
+  left: 12px;
+  background: var(--error);
+  color: #ffffff;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 2px 4px rgba(186, 26, 26, 0.4);
+  animation: bounceDot 1.6s infinite ease-in-out;
+}
+
+@keyframes bounceDot {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.btn-island-play {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 16px;
+  background: var(--tertiary);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  box-shadow: 0 4px 0 #00462e;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.btn-island-play:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #00462e;
+}
+
+/* FEN BİLİMLERİ LABORATUVARI (FANUSLAR) */
+.fen-lab-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+
+.pod-targets-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+}
+
+.pod-target-box {
+  background: var(--surface-container-lowest);
+  border: 2px solid var(--outline-variant);
+  border-radius: 16px;
+  padding: 10px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: 0 3px 0 var(--surface-dim);
+}
+
+.pod-target-box.active-drag-over, .pod-target-box:hover {
+  border-color: var(--secondary);
+  transform: scale(1.03);
+}
+
+.pod-head-pill {
+  width: 100%;
+  padding: 3px 0;
+  border-radius: 8px;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.pod-icon-bubble {
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  background: var(--surface-container-low);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.pod-counter-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  background: var(--surface-container);
+  color: var(--on-surface-variant);
+}
+
+.matter-tokens-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.matter-token-card {
+  background: #ffffff;
+  border: 2px solid var(--outline-variant);
+  border-radius: 14px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  box-shadow: 0 3px 0 var(--surface-dim);
+  transition: all 0.12s ease;
+}
+
+.matter-token-card:hover {
+  border-color: var(--secondary);
+}
+
+.matter-token-card.selected-token {
+  border-color: var(--secondary);
+  background: var(--secondary-fixed);
+  box-shadow: 0 4px 0 #0073df;
+  transform: translateY(-2px);
+}
+
+.matter-token-card.classified-done {
+  opacity: 0.45;
+  pointer-events: none;
+  border-style: dashed;
+}
+
+/* MATEMATİK ELMA SEPETİ OYUNU */
+.baskets-quad-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.basket-quad-box {
+  background: #ffffff;
+  border: 1.5px solid var(--outline-variant);
+  border-radius: 14px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 3px 0 var(--surface-dim);
+}
+
+.basket-apples-pile {
+  font-size: 22px;
+  letter-spacing: 2px;
+  padding: 6px 12px;
+  background: var(--surface-container);
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.mat-formula-pill {
+  background: var(--primary-fixed);
+  color: var(--on-primary-fixed);
+  font-family: "Comfortaa", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  text-align: center;
+  margin-top: 6px;
+  box-shadow: 0 2px 0 var(--primary-fixed-dim);
+}
+
+/* STITCH KİTAPLIK VE MASAL KÖŞESİ */
+.reading-goal-card {
+  background: var(--surface-container);
+  border: 1.5px solid var(--outline-variant);
+  border-radius: 18px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.book-spotlight-card {
+  background: #ffffff;
+  border: 2px solid var(--outline-variant);
+  border-radius: 20px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 4px 0 var(--surface-dim);
+  position: relative;
+  overflow: hidden;
+}
+
+.filter-chips-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 8px;
+  padding: 4px 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.filter-chip-btn {
+  padding: 8px 16px;
+  border-radius: 9999px;
+  border: 1.5px solid var(--outline-variant);
+  background: var(--surface-container-low);
+  color: var(--on-surface-variant);
+  font-family: "Comfortaa", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+
+.filter-chip-btn.active-chip {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+  box-shadow: 0 2px 0 #604100;
+}
+
+/* STITCH AVATAR ATÖLYESİ VE YILDIZ MAĞAZASI */
+.avatar-workshop-card {
+  background: #ffffff;
+  border: 2px solid var(--outline-variant);
+  border-radius: 20px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  box-shadow: 0 3px 0 var(--surface-dim);
+}
+
+.avatar-stage-box {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 9999px;
+  background: var(--primary-fixed);
+  border: 3px solid var(--primary-container);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 52px;
+  box-shadow: 0 6px 0 var(--primary-fixed-dim);
+}
+
+.avatar-hat-accessory {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 34px;
+}
+
+.avatar-glasses-accessory {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 26px;
+}
+
+.star-shop-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+}
+
+.shop-item-card {
+  background: #ffffff;
+  border: 1.5px solid var(--outline-variant);
+  border-radius: 16px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+  box-shadow: 0 3px 0 var(--surface-dim);
+}
+
+.shop-item-icon {
+  font-size: 34px;
+}
+
+.shop-item-title {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--on-surface);
+}
+
+.shop-item-price {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 800;
+  color: #b37d00;
+}
+
+.btn-shop-action {
+  width: 100%;
+  padding: 6px 10px;
+  border-radius: 9999px;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.btn-shop-buy {
+  background: var(--primary-container);
+  color: var(--on-primary-container);
+  border: none;
+  box-shadow: 0 2px 0 #b37d00;
+}
+
+.btn-shop-equipped {
+  background: var(--tertiary);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 2px 0 #00462e;
+}

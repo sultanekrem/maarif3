@@ -8,7 +8,7 @@
 
   /* ─── STATE ──────────────────────────────────────────────── */
   const state = {
-    profile: { name: 'Kahraman', avatar: '🦊', stars: 0, streak: 1, level: 1, xp: 0 },
+    profile: { name: 'Kahraman', avatar: '🦊', stars: 50, streak: 1, level: 1, xp: 0, equippedHat: '', equippedGlasses: '', inventory: [] },
     progress: { completedTopics: [], completedUnits: {} },
     quiz: {
       subject: null,
@@ -341,44 +341,64 @@
     if (!map) return;
     map.innerHTML = '';
 
-    const grid = document.createElement('div');
-    grid.className = 'island-compact-grid';
+    const islandsData = [
+      { key: 'turkce',       name: 'Masal Ormanı',       sub: 'Eş Anlam & Okuma',   icon: '📖', state: 'done',   badge: '⭐⭐⭐ Tamamlandı', align: 'left',  btn: 'Tekrar Et 🔄', action: "openSubjectDetail('turkce')" },
+      { key: 'matematik',    name: 'Geometri Şatosu',    sub: 'Çarpma & Doğal Sayı',icon: '🏰', state: 'active', badge: 'Şu Anki Durak!',   align: 'right', btn: 'Hadi Oyna! 🚀', action: "openMatGame()" },
+      { key: 'hayatbilgisi', name: 'Toplum Vadisi',      sub: 'Ben ve Okulum',      icon: '🌍', state: 'locked', badge: '🔒 2. Seviyede Açılır', align: 'left',  btn: 'Keşfet', action: "openSubjectDetail('hayatbilgisi')" },
+      { key: 'fenbilimleri', name: 'Kuvvet & Deney Lab', sub: 'Maddenin Halleri',   icon: '🔬', state: 'active', badge: '🧪 Deney Vakti!',   align: 'right', btn: 'Deneye Başla! ⚡', action: "openFenLab()" },
+      { key: 'ingilizce',    name: 'Magic Words',        sub: 'School Life',        icon: '🌐', state: 'locked', badge: '🔒 Kilitli',       align: 'left',  btn: 'İncele', action: "openSubjectDetail('ingilizce')" },
+      { key: 'muzik',        name: 'Melodi Bahçesi',     sub: 'Ritim ve Şarkılar',  icon: '🎵', state: 'locked', badge: '🔒 Kilitli',       align: 'right', btn: 'İncele', action: "openSubjectDetail('muzik')" }
+    ];
 
-    SUBJECT_ORDER.forEach((key) => {
-      const cfg = SUBJECTS[key];
-      const pct = getSubjectProgress(key);
-      const isFullDone = pct === 100;
-      const activeTopic = getFirstActiveTopic(key);
-      const isCurrent = state.focusSubject === key && !isFullDone;
+    const wrapper = document.createElement('div');
+    wrapper.className = 'adventure-path-wrapper';
 
+    // SVG Curved Path connecting all islands
+    const svgPath = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svgPath.setAttribute('class', 'adventure-path-svg');
+    svgPath.setAttribute('viewBox', '0 0 340 780');
+    svgPath.setAttribute('preserveAspectRatio', 'none');
+    svgPath.innerHTML = `
+      <path d="M 90,60 C 260,110 260,200 240,240 C 210,310 80,340 90,430 C 100,510 260,530 240,630 C 220,700 160,730 160,770"
+            fill="none" stroke="#d6c4ac" stroke-width="8" stroke-dasharray="12 12" stroke-linecap="round" opacity="0.8"/>
+    `;
+    wrapper.appendChild(svgPath);
+
+    islandsData.forEach((island) => {
       const card = document.createElement('div');
-      card.className = 'island-card-stitch' + (isCurrent ? ' island-active' : (isFullDone ? ' island-done' : ''));
+      const isCurrent = island.state === 'active' && island.key === 'matematik';
+      card.className = `island-trail-card island-align-${island.align} ${isCurrent ? 'island-current' : ''} ${island.state === 'locked' ? 'island-locked' : ''}`;
+
+      let beaconHtml = '';
+      if (isCurrent) {
+        beaconHtml = `<div class="island-beacon-badge">📍 Şu Anki Durak!</div>`;
+      }
 
       card.innerHTML = `
-        <div class="island-icon-box" style="background:${cfg.bg}">
-          <span>${cfg.emoji}</span>
-        </div>
-        <div class="island-info">
-          <div style="display:flex; justify-content:space-between; align-items:center;">
-            <span class="island-subject-name" style="color:${cfg.accent}">${cfg.title}</span>
-            <span class="island-badge-status">${pct}%</span>
+        ${beaconHtml}
+        <div style="display:flex;align-items:center;gap:12px">
+          <div style="width:52px;height:52px;border-radius:14px;background:var(--primary-fixed);display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0;box-shadow:0 2px 0 var(--primary-fixed-dim)">
+            ${island.icon}
           </div>
-          <div class="island-topic-title">${activeTopic ? activeTopic.title : 'Tamamlandı'}</div>
-          <div class="island-progress-line">
-            <div class="island-progress-fill" style="width:${pct}%; background:${cfg.accent}"></div>
+          <div style="flex:1;min-width:0">
+            <div style="display:flex;justify-content:space-between;align-items:baseline">
+              <span class="text-label-sm" style="color:var(--primary);text-transform:uppercase;font-size:10px">${island.key.toUpperCase()}</span>
+              <span style="font-size:11px;font-weight:700;color:var(--on-surface-variant)">${island.badge}</span>
+            </div>
+            <h4 class="text-headline-sm font-comfortaa" style="font-size:15px;color:var(--on-surface);margin:2px 0">${island.name}</h4>
+            <p class="text-body-sm" style="color:var(--on-surface-variant);font-size:11px;margin:0">${island.sub}</p>
           </div>
         </div>
+        <button class="btn-island-play" onclick="${island.action}">
+          <span class="material-symbols-outlined" style="font-size:18px">play_circle</span>
+          <span>${island.btn}</span>
+        </button>
       `;
 
-      // Clicking an island opens the complete subject explorer!
-      card.addEventListener('click', () => {
-        openSubjectDetail(key);
-      });
-
-      grid.appendChild(card);
+      wrapper.appendChild(card);
     });
 
-    map.appendChild(grid);
+    map.appendChild(wrapper);
   }
 
     /* ─── ETKİNLİK SCREEN (STITCH CURRICULUM TREE & UNIT STACK) ─── */
@@ -767,6 +787,151 @@
     }
   }
   window.openWorkbook = openWorkbook;
+
+
+  /* ============================================================
+     STITCH MINI GAMES: FEN LABORATUVARI & MATEMATİK ADASI
+     ============================================================ */
+
+  // 1. FEN LABORATUVARI (KATI - SIVI - GAZ FANUSLARI)
+  let fenState = {
+    selectedToken: null,
+    classifiedCount: 0,
+    podCounts: { solid: 0, liquid: 0, gas: 0 }
+  };
+
+  function openFenLab() {
+    fenState = {
+      selectedToken: null,
+      classifiedCount: 0,
+      podCounts: { solid: 0, liquid: 0, gas: 0 }
+    };
+    showScreen('screen-fen-lab');
+    updateFenLabUI();
+  }
+  window.openFenLab = openFenLab;
+
+  function selectMatterToken(el, type, name) {
+    playSound('pop');
+    document.querySelectorAll('.matter-token-card').forEach(c => c.classList.remove('selected-token'));
+    el.classList.add('selected-token');
+    fenState.selectedToken = { element: el, type: type, name: name };
+
+    const promptEl = document.getElementById('fen-lab-prompt');
+    if (promptEl) {
+      promptEl.innerHTML = `"${name}" seçildi! Şimdi onu uygun fanusa yerleştirmek için yukarıdaki <strong>Katı, Sıvı veya Gaz</strong> fanusuna tıkla! 💡`;
+    }
+  }
+  window.selectMatterToken = selectMatterToken;
+
+  function classifySelectedMatter(targetPodType) {
+    if (!fenState.selectedToken) {
+      alert('Önce aşağıdaki maddelerden birini seçmelisin! 👇');
+      return;
+    }
+
+    const { element, type, name } = fenState.selectedToken;
+    const isCorrect = type === targetPodType;
+
+    const fbBanner = document.getElementById('fen-feedback-banner');
+    const fbTitle  = document.getElementById('fen-feedback-title');
+    const fbText   = document.getElementById('fen-feedback-text');
+
+    if (isCorrect) {
+      playSound('correct');
+      element.classList.remove('selected-token');
+      element.classList.add('classified-done');
+      fenState.classifiedCount++;
+      fenState.podCounts[type]++;
+      fenState.selectedToken = null;
+
+      state.profile.stars += 5;
+      saveState();
+      updateHeader();
+
+      const typeTitles = { solid: 'Katı 🧊', liquid: 'Sıvı 💧', gas: 'Gaz 🎈' };
+      if (fbBanner && fbTitle && fbText) {
+        fbBanner.style.display = 'flex';
+        fbTitle.textContent = `Harika! "${name}" bir ${typeTitles[type]} maddedir! 🎉 (+5 Yıldız)`;
+        fbText.textContent = type === 'solid' ? 'Katı maddelerin belirli bir şekli ve hacmi vardır.' : (type === 'liquid' ? 'Sıvı maddeler akıcıdır ve konuldukları kabın şeklini alır.' : 'Gaz maddeler bulundukları ortama tamamen yayılır.');
+      }
+
+      updateFenLabUI();
+
+      if (fenState.classifiedCount === 6) {
+        setTimeout(() => {
+          playSound('levelup');
+          alert('TEBRİKLER! 🎉 Tüm maddeleri doğru fanuslara yerleştirdin! +25 Bonus Yıldız kazandın!');
+          state.profile.stars += 25;
+          saveState();
+          updateHeader();
+        }, 500);
+      }
+    } else {
+      playSound('wrong');
+      if (fbBanner && fbTitle && fbText) {
+        fbBanner.style.display = 'flex';
+        fbTitle.textContent = `Tekrar Dene! 💡`;
+        fbText.textContent = `"${name}" seçtiğin fanusa ait değil. Özelliklerini tekrar düşün!`;
+      }
+    }
+  }
+  window.classifySelectedMatter = classifySelectedMatter;
+
+  function updateFenLabUI() {
+    const sEl = document.getElementById('solid-count');
+    const lEl = document.getElementById('liquid-count');
+    const gEl = document.getElementById('gas-count');
+    const pEl = document.getElementById('fen-progress-label');
+
+    if (sEl) sEl.textContent = `${fenState.podCounts.solid} / 2 Madde`;
+    if (lEl) lEl.textContent = `${fenState.podCounts.liquid} / 2 Madde`;
+    if (gEl) gEl.textContent = `${fenState.podCounts.gas} / 2 Madde`;
+    if (pEl) pEl.textContent = `${fenState.classifiedCount} / 6 Tamamlandı`;
+  }
+
+  // 2. MATEMATİK ELMA SEPETİ OYUNU
+  function openMatGame() {
+    showScreen('screen-mat-game');
+    const fb = document.getElementById('mat-game-feedback');
+    if (fb) fb.style.display = 'none';
+  }
+  window.openMatGame = openMatGame;
+
+  function handleMatGameChoice(val, btnEl) {
+    const isCorrect = val === 12;
+    const fb = document.getElementById('mat-game-feedback');
+    const t  = document.getElementById('mat-feedback-title');
+    const tx = document.getElementById('mat-feedback-text');
+
+    document.querySelectorAll('#screen-mat-game .quiz-option-tactile').forEach(b => {
+      b.classList.add('disabled');
+      if (b.innerText.includes('12')) b.classList.add('correct');
+      else b.classList.add('incorrect');
+    });
+
+    if (isCorrect) {
+      playSound('levelup');
+      state.profile.stars += 20;
+      saveState();
+      updateHeader();
+      if (fb && t && tx) {
+        fb.className = 'quiz-feedback correct-fb';
+        fb.style.display = 'flex';
+        t.textContent = 'MÜKEMMEL! 🎉 Doğru Cevap: 12 Elma!';
+        tx.textContent = '4 sepet × 3 elma = 12 elma topladın! (+20 Altın Yıldız)';
+      }
+    } else {
+      playSound('wrong');
+      if (fb && t && tx) {
+        fb.className = 'quiz-feedback incorrect-fb';
+        fb.style.display = 'flex';
+        t.textContent = 'Neredeyse! 💡';
+        tx.textContent = 'Doğru cevap 12 olmalıydı. 4 sepetin her birinde 3 elma var: 3 + 3 + 3 + 3 = 12!';
+      }
+    }
+  }
+  window.handleMatGameChoice = handleMatGameChoice;
 
   /* ─── QUIZ ENGINE (CHOICE, TRUE/FALSE, MATCHING) ───────────── */
   function buildQuestionsForTopic(subjectKey, topic) {
@@ -1380,21 +1545,41 @@
     draw();
   }
 
-  /* ─── KİTAPLIK SCREEN ─────────────────────────────────────── */
+  /* ─── KİTAPLIK SCREEN (STITCH FİLTRELİ & SPOTLIGHT) ───────── */
+  const ALL_STORIES = [
+    { id: 'masal-1', title: 'Küçük Yıldızın Yolculuğu', cat: 'masal', emoji: '⭐', time: '5 dk', desc: 'Gökkuşağı köprüsündeki sihirli dostluk macerası.', text: 'Bir varmış, bir yokmuş. Gökyüzünün en parlak yıldızı olmak isteyen Küçük Yıldız, dostlarıyla paylaşmanın ve yardımlaşmanın gerçek parlaklık olduğunu keşfetmiş.' },
+    { id: 'masal-2', title: 'Tilki ile Bilge Leylek', cat: 'degerler', emoji: '🦊', time: '4 dk', desc: 'Paylaşmanın ve dostluğun önemi üzerine bir fabl.', text: 'Bilge leylek ile kurnaz tilki bir gün sofrada buluşmuşlar. Paylaşmayı ve birbirine saygı duymayı öğrenmişler.' },
+    { id: 'masal-3', title: 'Kayıp Gezegenin Sırrı', cat: 'bilim', emoji: '🪐', time: '6 dk', desc: 'Uzayda güneş sistemini ve gezegenleri keşfet.', text: 'Ali ve Ayşe, oyuncak roketleriyle gökyüzüne bakarken Dünya\'nın atmosferini ve güneş sisteminin gizemli gezegenlerini keşfe çıkmışlar.' },
+    { id: 'masal-4', title: 'Güneşin Neşeli Şiiri', cat: 'siir', emoji: '☀️', time: '3 dk', desc: 'Doğanın uyanışını anlatan ritmik çocuk şiiri.', text: 'Sabah oldu aç gözünü, Güneş yayar neşesini. Kuşlar öter cıvıl cıvıl, Çalış çocuk hiç durmadan bil.' },
+    { id: 'masal-5', title: 'Tohumun Mucizesi', cat: 'bilim', emoji: '🌱', time: '5 dk', desc: 'Toprağın altındaki küçük tohumun uyanışı.', text: 'Toprağın sıcak koynunda uyuyan tohum, ilkbahar yağmurlarıyla can buldu. Önce kök saldı toprağa, sonra uzandı mavi göğe.' },
+    { id: 'masal-6', title: 'İyilik Yapan İyilik Bulur', cat: 'degerler', emoji: '❤️', time: '4 dk', desc: 'Yardımlaşma ve dürüstlük masalı.', text: 'Küçük bir karıncayı sudan kurtaran güvercin, gün gelip karıncanın yardımıyla avcının tuzağından kurtulmuş. İyilik asla karşılıksız kalmazmış.' }
+  ];
+
   function renderKitaplik() {
+    filterStories('all', document.querySelector('.filter-chip-btn[data-cat="all"]'));
+
+    const spotlightListenBtn = document.getElementById('btn-spotlight-listen');
+    if (spotlightListenBtn) {
+      spotlightListenBtn.onclick = () => {
+        SpeechService.speak(ALL_STORIES[0].text, false, spotlightListenBtn);
+      };
+    }
+  }
+
+  function filterStories(cat, chipBtn) {
+    if (chipBtn) {
+      document.querySelectorAll('.filter-chip-btn').forEach(b => b.classList.remove('active-chip'));
+      chipBtn.classList.add('active-chip');
+    }
+
     const list = document.getElementById('story-list');
     if (!list) return;
     list.innerHTML = '';
     list.className = 'story-grid-responsive';
 
-    const stories = [
-      { id: 'masal-1', title: 'Tilki ile Bilge Leylek', subject: 'Türkçe • Anlama Masalı', emoji: '🦊', time: '4 dk', text: 'Bir varmış, bir yokmuş. Ormanın derinliklerinde bilge bir leylek ile kurnaz bir tilki yaşarmış. Leylek herkese yardım eder, tilki ise oyunlar oynarmış. Bir gün paylaşmanın en büyük erdem olduğunu öğrenmişler.' },
-      { id: 'masal-2', title: 'Küçük Tohumun Yolculuğu', subject: 'Fen Bilimleri • Canlılar', emoji: '🌱', time: '5 dk', text: 'Toprağın altında uyuyan küçük tohum, güneşin ılık ışıklarını hissetti. Yağmur damlaları ona can verdi. Önce köklerini saldı, sonra gökyüzüne doğru yemyeşil yapraklarını uzattı.' },
-      { id: 'masal-3', title: 'Sayılar Diyarı ve Gizemli Sıfır', subject: 'Matematik • Sayı Macerası', emoji: '🔢', time: '6 dk', text: 'Sayılar Diyarında her sayının bir basamağı vardı. Sıfır bazen tek başına bir şey ifade etmese de, diğer sayıların yanına geldiğinde onları on kat büyütür, değerlerine değer katardı.' },
-      { id: 'masal-4', title: 'Bizim Güzel Mahallemiz', subject: 'Hayat Bilgisi • Birlikte Yaşam', emoji: '🌍', time: '4 dk', text: 'Mahallemizde herkes birbirini tanır, sabahları neşeyle selamlaşırdı. Birlikte kurulan oyunlar ve yardımlaşma, mahallemizi dünyanın en huzurlu yeri yapardı.' }
-    ];
+    const filtered = cat === 'all' ? ALL_STORIES : ALL_STORIES.filter(s => s.cat === cat);
 
-    stories.forEach(s => {
+    filtered.forEach(s => {
       const item = document.createElement('div');
       item.className = 'story-card-compact';
       item.innerHTML = `
@@ -1404,7 +1589,7 @@
             <h4 class="story-title-compact">${s.title}</h4>
             <span style="font-size:11px;color:var(--secondary);font-weight:700">${s.time}</span>
           </div>
-          <p class="story-desc-compact">${s.subject}</p>
+          <p class="story-desc-compact">${s.desc}</p>
         </div>
         <button class="btn-listen-icon" title="Dinle">
           <span class="material-symbols-outlined icon-fill" style="font-size:18px;color:var(--secondary)">play_arrow</span>
@@ -1415,33 +1600,41 @@
       };
       list.appendChild(item);
     });
-
-    const fsBtn = document.getElementById('btn-featured-story');
-    if (fsBtn) {
-      fsBtn.onclick = () => {
-        SpeechService.speak(stories[0].text, false, fsBtn);
-      };
-    }
   }
+  window.filterStories = filterStories;
 
-  /* ─── GELİŞİM SCREEN ──────────────────────────────────────── */
+  function openStoryModal(title, text) {
+    alert(`${title}
+
+${text}`);
+  }
+  window.openStoryModal = openStoryModal;
+
+  /* ─── GELİŞİM SCREEN (STITCH AVATAR WORKSHOP & STAR SHOP) ──── */
+  const SHOP_ITEMS = [
+    { id: 'hat_grad',     type: 'hat',     name: 'Mezuniyet Kepi', icon: '🎓', price: 20 },
+    { id: 'hat_detect',   type: 'hat',     name: 'Dedektif Şapkası', icon: '🕵️', price: 30 },
+    { id: 'hat_crown',    type: 'hat',     name: 'Altın Taç',      icon: '👑', price: 50 },
+    { id: 'hat_straw',    type: 'hat',     name: 'Yaz Şapkası',    icon: '👒', price: 15 },
+    { id: 'glass_wise',   type: 'glasses', name: 'Bilge Gözlüğü',  icon: '👓', price: 25 },
+    { id: 'glass_sun',    type: 'glasses', name: 'Güneş Gözlüğü',  icon: '🕶️', price: 35 }
+  ];
+
   function renderGelisim() {
     const stStars  = document.getElementById('stat-stars');
     const stStreak = document.getElementById('stat-streak');
     const stLevel  = document.getElementById('stat-level');
-    const stLabel  = document.getElementById('stat-level-label');
-    const stBar    = document.getElementById('stat-level-bar');
+    const shopBal  = document.getElementById('shop-star-balance');
 
     if (stStars)  stStars.textContent  = state.profile.stars;
     if (stStreak) stStreak.textContent = state.profile.streak;
     if (stLevel)  stLevel.textContent  = state.profile.level;
+    if (shopBal)  shopBal.textContent  = `⭐ ${state.profile.stars} Yıldız`;
 
-    const titleIdx = Math.min(LEVEL_TITLES.length - 1, state.profile.level - 1);
-    if (stLabel) stLabel.textContent = LEVEL_TITLES[titleIdx];
-    const lvlPct = Math.min(100, Math.round(((state.profile.xp % 100) / 100) * 100));
-    if (stBar) stBar.style.width = Math.max(15, lvlPct) + '%';
+    // Stage preview
+    updateAvatarStage();
 
-    // Avatars
+    // Base avatar selector
     const avatarArea = document.getElementById('avatar-area');
     if (avatarArea) {
       avatarArea.innerHTML = '';
@@ -1455,37 +1648,140 @@
           state.profile.avatar = av;
           saveState();
           updateHeader();
+          updateAvatarStage();
           renderGelisim();
         };
         avatarArea.appendChild(chip);
       });
     }
 
+    // Star Shop Items
+    renderStarShop();
+
     // Badges
-    const badgeGrid = document.getElementById('badge-grid');
-    if (badgeGrid) {
-      badgeGrid.innerHTML = '';
-      const badges = [
-        { id: 'first_topic', name: 'İlk Adım', emoji: '🌟', desc: 'İlk konuyu bitir', earned: state.progress.completedTopics.length >= 1 },
-        { id: 'streak_3',    name: 'Seri Ustası', emoji: '🔥', desc: '3 gün seri yap', earned: state.profile.streak >= 3 },
-        { id: 'star_60',     name: 'Şampiyon', emoji: '🏆', desc: '60 Yıldız topla', earned: state.profile.stars >= 60 },
-        { id: 'level_2',     name: 'Bilge Kaşif', emoji: '🦉', desc: 'Seviye 2 ol', earned: state.profile.level >= 2 },
-        { id: 'focus_done',  name: 'Keskin Nişancı', emoji: '🎯', desc: '3 görev tamamla', earned: state.progress.completedTopics.length >= 3 },
-        { id: 'reader',      name: 'Kitap Kurdu', emoji: '📚', desc: 'Masalları dinle', earned: true }
-      ];
-      badges.forEach(b => {
-        const item = document.createElement('div');
-        item.className = 'badge-chip' + (b.earned ? '' : ' locked');
-        item.innerHTML = `
-          <div class="badge-chip-icon">${b.emoji}</div>
-          <span class="badge-chip-name">${b.name}</span>
-          <span style="font-size:9px; color:${b.earned ? 'var(--tertiary)' : 'var(--outline)'}; font-weight:700;">
-            ${b.earned ? 'Kazanıldı ✓' : b.desc}
-          </span>`;
-        badgeGrid.appendChild(item);
-      });
+    renderBadges();
+  }
+
+  function updateAvatarStage() {
+    const stageEmoji = document.getElementById('stage-mascot-emoji');
+    const hatEl = document.getElementById('equipped-hat');
+    const glassEl = document.getElementById('equipped-glasses');
+
+    if (stageEmoji) stageEmoji.textContent = state.profile.avatar || '🦊';
+    if (hatEl) hatEl.textContent = state.profile.equippedHat || '';
+    if (glassEl) glassEl.textContent = state.profile.equippedGlasses || '';
+
+    // Also update header avatar
+    const hAvatar = document.getElementById('header-avatar');
+    if (hAvatar) {
+      hAvatar.textContent = (state.profile.equippedHat ? state.profile.equippedHat + ' ' : '') + (state.profile.avatar || '🦊');
     }
   }
+
+  function renderStarShop() {
+    const grid = document.getElementById('star-shop-grid');
+    if (!grid) return;
+    grid.innerHTML = '';
+
+    const inv = state.profile.inventory || [];
+
+    SHOP_ITEMS.forEach(item => {
+      const isOwned = inv.includes(item.id);
+      const isEquipped = (item.type === 'hat' && state.profile.equippedHat === item.icon) ||
+                         (item.type === 'glasses' && state.profile.equippedGlasses === item.icon);
+
+      const card = document.createElement('div');
+      card.className = 'shop-item-card';
+
+      let btnClass = 'btn-shop-buy';
+      let btnLabel = `Satın Al (${item.price} ⭐)`;
+      let btnAction = `buyShopItem('${item.id}', ${item.price}, '${item.type}', '${item.icon}')`;
+
+      if (isEquipped) {
+        btnClass = 'btn-shop-equipped';
+        btnLabel = 'Çıkar ❌';
+        btnAction = `unequipShopItem('${item.type}')`;
+      } else if (isOwned) {
+        btnClass = 'btn-shop-buy';
+        btnLabel = 'Giy ✨';
+        btnAction = `equipShopItem('${item.type}', '${item.icon}')`;
+      }
+
+      card.innerHTML = `
+        <div class="shop-item-icon">${item.icon}</div>
+        <div class="shop-item-title">${item.name}</div>
+        <span class="shop-item-price">⭐ ${item.price} Yıldız</span>
+        <button class="btn-shop-action ${btnClass}" onclick="${btnAction}">${btnLabel}</button>
+      `;
+
+      grid.appendChild(card);
+    });
+  }
+
+  function buyShopItem(id, price, type, icon) {
+    if (state.profile.stars < price) {
+      alert(`Yetersiz Yıldız! 🌟 Bu eşya için ${price} yıldız gerekiyor. Test çözerek yıldız topla!`);
+      return;
+    }
+    playSound('levelup');
+    state.profile.stars -= price;
+    if (!state.profile.inventory) state.profile.inventory = [];
+    state.profile.inventory.push(id);
+
+    // Auto equip
+    if (type === 'hat') state.profile.equippedHat = icon;
+    if (type === 'glasses') state.profile.equippedGlasses = icon;
+
+    saveState();
+    updateHeader();
+    renderGelisim();
+  }
+  window.buyShopItem = buyShopItem;
+
+  function equipShopItem(type, icon) {
+    playSound('pop');
+    if (type === 'hat') state.profile.equippedHat = icon;
+    if (type === 'glasses') state.profile.equippedGlasses = icon;
+    saveState();
+    updateHeader();
+    renderGelisim();
+  }
+  window.equipShopItem = equipShopItem;
+
+  function unequipShopItem(type) {
+    playSound('pop');
+    if (type === 'hat') state.profile.equippedHat = '';
+    if (type === 'glasses') state.profile.equippedGlasses = '';
+    saveState();
+    updateHeader();
+    renderGelisim();
+  }
+  window.unequipShopItem = unequipShopItem;
+
+  function renderBadges() {
+    const badgeGrid = document.getElementById('badge-grid');
+    if (!badgeGrid) return;
+    badgeGrid.innerHTML = '';
+    const badges = [
+      { id: 'first_topic', name: 'İlk Adım', emoji: '🌟', desc: 'İlk konuyu bitir', earned: state.progress.completedTopics.length >= 1 },
+      { id: 'streak_3',    name: 'Seri Ustası', emoji: '🔥', desc: '3 gün seri yap', earned: state.profile.streak >= 3 },
+      { id: 'star_60',     name: 'Şampiyon', emoji: '🏆', desc: '60 Yıldız topla', earned: state.profile.stars >= 60 },
+      { id: 'level_2',     name: 'Bilge Kaşif', emoji: '🦉', desc: 'Seviye 2 ol', earned: state.profile.level >= 2 },
+      { id: 'fen_lab',     name: 'Genç Bilimci', emoji: '🔬', desc: 'Fanus deneyini tamamla', earned: true },
+      { id: 'reader',      name: 'Kitap Kurdu', emoji: '📚', desc: 'Masalları dinle', earned: true }
+    ];
+    badges.forEach(b => {
+      const item = document.createElement('div');
+      item.className = 'badge-chip' + (b.earned ? '' : ' locked');
+      item.innerHTML = `
+        <div class="badge-chip-icon">${b.emoji}</div>
+        <div class="badge-chip-name">${b.name}</div>
+        <div class="badge-chip-desc">${b.desc}</div>
+      `;
+      badgeGrid.appendChild(item);
+    });
+  }
+
 
   /* ─── EVENT LISTENERS ───────────────────────────────────────── */
   function initEvents() {

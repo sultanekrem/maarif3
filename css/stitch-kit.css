@@ -204,13 +204,14 @@ body {
    STITCH HOME SCROLL CONTAINER
    ========================================================================== */
 .stitch-home-content {
-  padding: 12px 14px 90px 14px;
+  padding: 10px 14px 100px 14px;
   display: flex;
   flex-direction: column;
   gap: 14px;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   flex: 1;
+  min-height: 0;
 }
 
 /* ==========================================================================
@@ -223,8 +224,9 @@ body {
   padding: 14px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   border: 1px solid rgba(231, 215, 201, 0.6);
+  flex-shrink: 0;
 }
 
 .stitch-guide-header {
@@ -287,7 +289,10 @@ body {
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--stitch-primary);
-  line-height: 1.2;
+  line-height: 1.25;
+  word-break: normal;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 .stitch-guide-toggle-btn {
@@ -398,10 +403,11 @@ body {
   width: 100%;
   background: linear-gradient(135deg, var(--stitch-primary-fixed) 0%, var(--stitch-primary-container) 100%);
   border-radius: 22px;
-  padding: 18px 16px;
+  padding: 16px 14px;
   box-shadow: 0 6px 20px rgba(255, 179, 0, 0.28);
   position: relative;
-  overflow: hidden;
+  overflow: visible;
+  flex-shrink: 0;
 }
 
 .stitch-focus-header {
@@ -440,12 +446,12 @@ body {
 
 .stitch-focus-title {
   font-family: var(--font-headline);
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--stitch-on-primary-fixed);
   line-height: 1.25;
-  position: relative;
-  z-index: 2;
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 
 .stitch-focus-desc {
@@ -1325,4 +1331,449 @@ body {
 .stitch-btn-quiz:active {
   transform: translateY(2px);
   box-shadow: 0 1px 0 #00462e;
+}
+
+/* ==========================================================================
+   📂 STITCH MÜFREDAT AĞACI AKORDİYON SİSTEMİ
+   ========================================================================== */
+.stitch-subject-card {
+  background: var(--stitch-surface-lowest);
+  border-radius: 20px;
+  padding: 14px;
+  border: 1px solid rgba(231, 215, 201, 0.6);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  transition: all 0.2s ease;
+}
+
+.stitch-subject-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.stitch-subject-header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stitch-subject-accordion-icon {
+  font-size: 22px;
+  color: var(--stitch-on-surface-variant);
+  transition: transform 0.25s ease;
+  user-select: none;
+}
+
+.stitch-subject-card.is-open .stitch-subject-accordion-icon {
+  transform: rotate(180deg);
+}
+
+.stitch-subject-card.is-collapsed .stitch-units-stack {
+  display: none !important;
+}
+
+.stitch-subject-card.is-open .stitch-units-stack {
+  display: flex !important;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+/* ==========================================================================
+   🎮 EKRAN: DERS ETKİNLİKLERİ & OYUNLAR (STITCH GAMES SCREEN)
+   ========================================================================== */
+#screen-games {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  background: var(--stitch-surface) !important;
+  padding-bottom: 72px !important;
+}
+
+.stitch-games-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 64px;
+  padding: 0 14px;
+  background: rgba(255, 248, 244, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 50;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+  flex-shrink: 0;
+}
+
+.stitch-games-back-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--stitch-surface-container);
+  color: var(--stitch-on-surface);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.1s ease;
+}
+
+.stitch-games-back-btn:active {
+  transform: scale(0.92);
+}
+
+.stitch-games-title-wrap {
+  flex: 1;
+  text-align: center;
+  min-width: 0;
+}
+
+.stitch-games-title {
+  font-family: var(--font-headline);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--stitch-on-surface);
+  margin: 0;
+}
+
+.stitch-games-sub {
+  font-size: 0.68rem;
+  color: var(--stitch-on-surface-variant);
+  font-weight: 600;
+  margin-top: 1px;
+}
+
+.stitch-games-content {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 14px 14px 24px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stitch-games-banner {
+  background: linear-gradient(135deg, var(--stitch-secondary-fixed) 0%, var(--stitch-secondary-container) 100%);
+  border-radius: 20px;
+  padding: 14px 16px;
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(0, 93, 183, 0.18);
+  flex-shrink: 0;
+}
+
+.stitch-games-banner-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.22);
+  padding: 2px 10px;
+  border-radius: 9999px;
+  font-family: var(--font-headline);
+  font-size: 0.68rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.stitch-games-banner-title {
+  font-family: var(--font-headline);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 4px;
+}
+
+.stitch-games-banner-desc {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.94);
+  line-height: 1.35;
+  margin: 0;
+  font-weight: 600;
+}
+
+.stitch-games-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 500px) {
+  .stitch-games-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.stitch-game-card {
+  background: var(--stitch-surface-lowest);
+  border-radius: 20px;
+  padding: 15px;
+  border: 1.5px solid rgba(231, 215, 201, 0.8);
+  box-shadow: 0 3px 0 var(--stitch-surface-dim);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  transition: transform 0.15s ease;
+}
+
+.stitch-game-card:active {
+  transform: translateY(2px);
+}
+
+.stitch-game-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.stitch-game-subj-badge {
+  font-family: var(--font-headline);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 9999px;
+}
+
+.stitch-game-reward-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-family: var(--font-headline);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--stitch-primary);
+  background: var(--stitch-primary-fixed);
+  padding: 2px 8px;
+  border-radius: 9999px;
+}
+
+.stitch-game-title {
+  font-family: var(--font-headline);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--stitch-on-surface);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.stitch-game-desc {
+  font-size: 0.78rem;
+  color: var(--stitch-on-surface-variant);
+  line-height: 1.35;
+  margin: 0;
+  font-weight: 600;
+}
+
+.stitch-game-btn {
+  height: 40px;
+  border-radius: 12px;
+  font-family: var(--font-headline);
+  font-size: 0.82rem;
+  font-weight: 700;
+  border: none;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.stitch-game-btn:active {
+  transform: translateY(2px);
+}
+
+.stitch-game-card.game-matematik .stitch-game-subj-badge { background: #FFF0D4; color: #8C5300; }
+.stitch-game-card.game-matematik .stitch-game-btn { background: #FFB300; color: #3E2400; box-shadow: 0 3px 0 #D99200; }
+
+.stitch-game-card.game-fenbilimleri .stitch-game-subj-badge { background: #E0F2FE; color: #0369A1; }
+.stitch-game-card.game-fenbilimleri .stitch-game-btn { background: #0284C7; box-shadow: 0 3px 0 #0369A1; }
+
+.stitch-game-card.game-turkce .stitch-game-subj-badge { background: #FCE7F3; color: #BE185D; }
+.stitch-game-card.game-turkce .stitch-game-btn { background: #DB2777; box-shadow: 0 3px 0 #BE185D; }
+
+.stitch-game-card.game-hayatbilgisi .stitch-game-subj-badge { background: #DCFCE7; color: #15803D; }
+.stitch-game-card.game-hayatbilgisi .stitch-game-btn { background: #16A34A; box-shadow: 0 3px 0 #15803D; }
+
+.stitch-game-card.game-ingilizce .stitch-game-subj-badge { background: #FFEDD5; color: #C2410C; }
+.stitch-game-card.game-ingilizce .stitch-game-btn { background: #EA580C; box-shadow: 0 3px 0 #C2410C; }
+
+.stitch-game-card.game-muzik .stitch-game-subj-badge { background: #EDE9FE; color: #6D28D9; }
+.stitch-game-card.game-muzik .stitch-game-btn { background: #7C3AED; box-shadow: 0 3px 0 #6D28D9; }
+
+/* ==========================================================================
+   💡 HAP BİLGİ MODALI (STITCH FACT CARD MODAL)
+   ========================================================================== */
+.fact-card-modal-large {
+  background: var(--stitch-surface-low) !important;
+  border-radius: 26px !important;
+  border: 1.5px solid rgba(231, 215, 201, 0.8) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18) !important;
+  max-width: 540px !important;
+  width: 92% !important;
+  padding: 20px 18px !important;
+}
+
+.fact-badge {
+  background: var(--stitch-primary-fixed) !important;
+  color: var(--stitch-on-primary-fixed) !important;
+  font-family: var(--font-headline) !important;
+  font-size: 0.7rem !important;
+  font-weight: 700 !important;
+  border-radius: 9999px !important;
+  padding: 3px 10px !important;
+}
+
+.fact-book-ref-badge {
+  font-family: var(--font-headline) !important;
+  font-size: 0.68rem !important;
+  color: var(--stitch-on-surface-variant) !important;
+  font-weight: 700 !important;
+}
+
+.fact-card-title {
+  font-family: var(--font-headline) !important;
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  color: var(--stitch-on-surface) !important;
+}
+
+.fact-step-card {
+  background: var(--stitch-surface-lowest) !important;
+  border-radius: 16px !important;
+  border: 1px solid rgba(231, 215, 201, 0.7) !important;
+  padding: 12px 14px !important;
+  box-shadow: 0 2px 0 var(--stitch-surface-dim) !important;
+}
+
+.fact-step-card.step-rule {
+  border-left: 4px solid var(--stitch-primary) !important;
+}
+
+.fact-step-card.step-example {
+  border-left: 4px solid var(--stitch-secondary) !important;
+}
+
+.fact-step-card.step-tip {
+  border-left: 4px solid var(--stitch-tertiary) !important;
+}
+
+.step-num {
+  font-family: var(--font-headline) !important;
+  font-size: 0.7rem !important;
+  font-weight: 700 !important;
+}
+
+.step-text {
+  font-family: var(--font-body) !important;
+  font-size: 0.86rem !important;
+  color: var(--stitch-on-surface) !important;
+  line-height: 1.45 !important;
+}
+
+.fact-card-actions .btn-primary-action {
+  background: var(--stitch-primary) !important;
+  color: #FFFFFF !important;
+  font-family: var(--font-headline) !important;
+  font-size: 0.92rem !important;
+  font-weight: 700 !important;
+  border-radius: 9999px !important;
+  height: 48px !important;
+  box-shadow: 0 4px 0 var(--stitch-primary-container) !important;
+  border: none !important;
+  cursor: pointer !important;
+}
+
+.fact-card-actions .btn-primary-action:active {
+  transform: translateY(2px) !important;
+  box-shadow: 0 2px 0 var(--stitch-primary-container) !important;
+}
+
+.fact-card-actions .btn-secondary-action {
+  background: var(--stitch-surface-high) !important;
+  color: var(--stitch-on-surface-variant) !important;
+  font-family: var(--font-headline) !important;
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  border-radius: 9999px !important;
+  height: 48px !important;
+  border: none !important;
+  cursor: pointer !important;
+}
+
+/* ==========================================================================
+   📖 EKRAN: KONU OKUMA & DERS KİTABI (SCREEN READING STITCH THEME)
+   ========================================================================== */
+#screen-reading {
+  background: var(--stitch-surface) !important;
+}
+
+.reading-header {
+  background: rgba(255, 248, 244, 0.95) !important;
+  border-bottom: 1px solid rgba(231, 215, 201, 0.6) !important;
+}
+
+.reading-topic-name {
+  font-family: var(--font-headline) !important;
+  color: var(--stitch-on-surface) !important;
+}
+
+.reading-page-counter {
+  font-family: var(--font-headline) !important;
+  background: var(--stitch-primary-container) !important;
+  color: var(--stitch-on-primary-container) !important;
+}
+
+.reading-page-card {
+  background: var(--stitch-surface-lowest) !important;
+  border-radius: 22px !important;
+  border: 1px solid rgba(231, 215, 201, 0.7) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+}
+
+.reading-page-title {
+  font-family: var(--font-headline) !important;
+  color: var(--stitch-on-surface) !important;
+}
+
+.reading-page-content {
+  font-family: var(--font-body) !important;
+  color: var(--stitch-on-surface) !important;
+}
+
+.btn-reading-nav {
+  font-family: var(--font-headline) !important;
+  border-radius: 14px !important;
+  background: var(--stitch-surface-low) !important;
+  border: 1.5px solid rgba(231, 215, 201, 0.8) !important;
+  color: var(--stitch-on-surface) !important;
+}
+
+.btn-reading-voice {
+  font-family: var(--font-headline) !important;
+  border-radius: 14px !important;
+  background: var(--stitch-secondary) !important;
+  box-shadow: 0 3px 0 var(--stitch-on-secondary-fixed-variant) !important;
+  border: none !important;
+}
+
+.btn-reading-cta-primary {
+  font-family: var(--font-headline) !important;
+  background: var(--stitch-primary) !important;
+  box-shadow: 0 4px 0 var(--stitch-primary-container) !important;
+  border-radius: 9999px !important;
 }

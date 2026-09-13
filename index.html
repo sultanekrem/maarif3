@@ -398,50 +398,115 @@
 
     <!-- Oyunlar Ekranı -->
     <div id="screen-games" class="screen">
-      <header class="reading-top-bar">
-        <button id="btn-back-from-games" class="reading-back-link">
-          <span class="back-arrow">‹</span> Ana Sayfa
+      <header class="stitch-games-header">
+        <button id="btn-back-from-games" class="stitch-games-back-btn" aria-label="Geri" type="button">
+          <span class="material-symbols-outlined">arrow_back</span>
         </button>
-        <h3 style="font-weight: 800; font-size: 1.05rem;">🎮 Ders Oyunları</h3>
-        <div style="width: 40px;"></div>
+        <div class="stitch-games-title-wrap">
+          <h2 class="stitch-games-title">🎮 Ders Etkinlikleri & Oyunlar</h2>
+          <span class="stitch-games-sub">Eğlenerek Öğren & Yıldız Topla</span>
+        </div>
+        <div class="stitch-stat-pill stitch-stat-stars">
+          <span class="material-symbols-outlined" style="font-size:16px; color:#FFB300;">star</span>
+          <span id="games-stars-count">0</span>
+        </div>
       </header>
-      <main style="flex:1; padding: 16px 20px; overflow-y: auto;">
-        <div class="games-showcase-grid">
-          <div class="game-showcase-card card-game-turkce" data-game="turkce">
-            <h3>🔍 Kelime Dedektifi (Türkçe)</h3>
-            <p>Zıt ve eş anlamlı kelimeleri büyütecinle keşfet!</p>
-            <button class="btn-play-game" data-game-target="turkce">Oyna 🚀</button>
+
+      <main class="stitch-games-content">
+        <!-- Oyun İstasyonu Bilgi Kartı -->
+        <div class="stitch-games-banner">
+          <div class="stitch-games-banner-badge">
+            <span class="material-symbols-outlined" style="font-size:14px;">sports_esports</span>
+            <span>Öğrenme İstasyonu</span>
           </div>
-          <div class="game-showcase-card card-game-math" data-game="matematik">
-            <h3>🚀 Uzay İstasyonu (Matematik)</h3>
-            <p>Hızlı çarpma kalkanını çalıştır, uzayı kurtar!</p>
-            <button class="btn-play-game" data-game-target="matematik">Oyna 🚀</button>
+          <h3 class="stitch-games-banner-title">Ders Mini Oyunları</h3>
+          <p class="stitch-games-banner-desc">Öğrendiğin konuları eğlenceli görevlerle pekiştir, sürpriz puanlar ve başarı rozetleri topla!</p>
+        </div>
+
+        <!-- 6 Ders Oyun Kartları Izgarası -->
+        <div class="stitch-games-grid">
+          <!-- Matematik -->
+          <div class="stitch-game-card game-matematik" data-game="matematik">
+            <div class="stitch-game-card-top">
+              <span class="stitch-game-subj-badge">📐 Matematik</span>
+              <span class="stitch-game-reward-pill">⭐ +3 Yıldız</span>
+            </div>
+            <h4 class="stitch-game-title">🚀 Uzay İstasyonu</h4>
+            <p class="stitch-game-desc">Hızlı çarpma kalkanını çalıştır, uzayı kurtar!</p>
+            <button class="stitch-game-btn btn-play-game" data-game-target="matematik" type="button">
+              <span>Oyna</span> 🚀
+            </button>
           </div>
-          <div class="game-showcase-card card-game-life" data-game="hayatbilgisi">
-            <h3>🌱 Doğayı Koru (Hayat Bilgisi)</h3>
-            <p>Geri dönüşüm ve çevre kahramanı ol!</p>
-            <button class="btn-play-game" data-game-target="hayatbilgisi">Oyna 🚀</button>
+
+          <!-- Fen Bilimleri -->
+          <div class="stitch-game-card game-fenbilimleri" data-game="fenbilimleri">
+            <div class="stitch-game-card-top">
+              <span class="stitch-game-subj-badge">🔬 Fen Bilimleri</span>
+              <span class="stitch-game-reward-pill">⭐ +3 Yıldız</span>
+            </div>
+            <h4 class="stitch-game-title">🌱 Bitki Deneyi</h4>
+            <p class="stitch-game-desc">Tohumdan fidana yaşam döngüsü laboratuvarı!</p>
+            <button class="stitch-game-btn btn-play-game" data-game-target="fenbilimleri" type="button">
+              <span>Oyna</span> 🚀
+            </button>
           </div>
-          <div class="game-showcase-card card-game-sci" data-game="fenbilimleri">
-            <h3>🔬 Bitki Deneyi (Fen Bilgisi)</h3>
-            <p>Tohumdan fidana yaşam döngüsü laboratuvarı!</p>
-            <button class="btn-play-game" data-game-target="fenbilimleri">Oyna 🚀</button>
+
+          <!-- Türkçe -->
+          <div class="stitch-game-card game-turkce" data-game="turkce">
+            <div class="stitch-game-card-top">
+              <span class="stitch-game-subj-badge">📚 Türkçe</span>
+              <span class="stitch-game-reward-pill">⭐ +3 Yıldız</span>
+            </div>
+            <h4 class="stitch-game-title">🔍 Kelime Dedektifi</h4>
+            <p class="stitch-game-desc">Zıt ve eş anlamlı kelimeleri büyütecinle keşfet!</p>
+            <button class="stitch-game-btn btn-play-game" data-game-target="turkce" type="button">
+              <span>Oyna</span> 🚀
+            </button>
           </div>
-          <div class="game-showcase-card card-game-eng" data-game="ingilizce">
-            <h3>🇬🇧 Word Quest (İngilizce)</h3>
-            <p>Listen & Pick! Dinle ve resmi bul!</p>
-            <button class="btn-play-game" data-game-target="ingilizce">Oyna 🚀</button>
+
+          <!-- Hayat Bilgisi -->
+          <div class="stitch-game-card game-hayatbilgisi" data-game="hayatbilgisi">
+            <div class="stitch-game-card-top">
+              <span class="stitch-game-subj-badge">🌱 Hayat Bilgisi</span>
+              <span class="stitch-game-reward-pill">⭐ +3 Yıldız</span>
+            </div>
+            <h4 class="stitch-game-title">🌍 Doğayı Koru</h4>
+            <p class="stitch-game-desc">Geri dönüşüm ve çevre kahramanı ol!</p>
+            <button class="stitch-game-btn btn-play-game" data-game-target="hayatbilgisi" type="button">
+              <span>Oyna</span> 🚀
+            </button>
           </div>
-          <div class="game-showcase-card card-game-music" data-game="muzik">
-            <h3>🎵 Ritim Oyunu (Müzik)</h3>
-            <p>Renkli ritim kalıplarını tekrarla, melodi ustası ol!</p>
-            <button class="btn-play-game" data-game-target="muzik">Oyna 🚀</button>
+
+          <!-- İngilizce -->
+          <div class="stitch-game-card game-ingilizce" data-game="ingilizce">
+            <div class="stitch-game-card-top">
+              <span class="stitch-game-subj-badge">🇬🇧 İngilizce</span>
+              <span class="stitch-game-reward-pill">⭐ +3 Yıldız</span>
+            </div>
+            <h4 class="stitch-game-title">🎯 Word Quest</h4>
+            <p class="stitch-game-desc">Listen & Pick! Dinle ve doğru resmi bul!</p>
+            <button class="stitch-game-btn btn-play-game" data-game-target="ingilizce" type="button">
+              <span>Oyna</span> 🚀
+            </button>
+          </div>
+
+          <!-- Müzik -->
+          <div class="stitch-game-card game-muzik" data-game="muzik">
+            <div class="stitch-game-card-top">
+              <span class="stitch-game-subj-badge">🎵 Müzik</span>
+              <span class="stitch-game-reward-pill">⭐ +3 Yıldız</span>
+            </div>
+            <h4 class="stitch-game-title">🥁 Ritim Oyunu</h4>
+            <p class="stitch-game-desc">Renkli ritim kalıplarını tekrarla, melodi ustası ol!</p>
+            <button class="stitch-game-btn btn-play-game" data-game-target="muzik" type="button">
+              <span>Oyna</span> 🚀
+            </button>
           </div>
         </div>
       </main>
     </div>
 
-<!-- ====================================================================
+    <!-- ====================================================================
          ROOT MODALLAR (Ekranlardan bağımsız, overlay açılan pencereler)
          ==================================================================== -->
 

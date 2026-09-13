@@ -1283,7 +1283,7 @@
 
       // Ders Kartı Elemanı
       const cardEl = document.createElement('div');
-      cardEl.className = 'stitch-subject-card';
+      cardEl.className = 'stitch-subject-card ' + (cfg.key === 'matematik' ? 'is-open' : 'is-collapsed');
 
       // Üst Başlık & İlerleme Çubuğu
       cardEl.innerHTML = `
@@ -2100,14 +2100,19 @@
 
   // 5. İnteraktif Soru ve Etkinlik Ekranı (Konu Bazlı Quiz)
   function startTopicQuiz(topic) {
+    if (!topic || !topic.tasks || topic.tasks.length === 0) return;
     state.currentTopic = topic;
     state.currentTaskIndex = 0;
+    state.currentQuizQIndex = 0;
     state.quizScore = 0;
     state.quizCorrectCount = 0;
     state.streak = 0;
 
-    document.getElementById('quiz-topic-title').textContent = topic.title;
-    document.getElementById('quiz-book-page').textContent = `📖 Kitap Sayfa ${topic.page}`;
+    const topicTitleEl = document.getElementById('quiz-topic-title');
+    if (topicTitleEl) topicTitleEl.textContent = topic.title;
+
+    const bookPageEl = document.getElementById('quiz-book-page');
+    if (bookPageEl) bookPageEl.textContent = `📖 Kitap Sayfa ${topic.page || 'MEB'}`;
     
     renderCurrentQuestion();
     showScreen('screen-quiz');
@@ -2117,15 +2122,39 @@
     const topic = state.currentTopic;
     if (!topic || !topic.tasks || topic.tasks.length === 0) return;
 
-    const task = topic.tasks[state.currentTaskIndex];
+    const qIdx = state.currentTaskIndex;
+    const task = topic.tasks[qIdx];
+    if (!task) {
+      finishTopicQuiz();
+      return;
+    }
     const totalTasks = topic.tasks.length;
 
-    document.getElementById('quiz-progress-text').textContent = `Soru ${state.currentTaskIndex + 1} / ${totalTasks}`;
-    const fillPercent = ((state.currentTaskIndex + 1) / totalTasks) * 100;
-    document.getElementById('quiz-progress-bar').style.width = `${fillPercent}%`;
+    const progText = document.getElementById('quiz-progress-text');
+    if (progText) progText.textContent = `Soru ${qIdx + 1} / ${totalTasks}`;
 
-    document.getElementById('quiz-question-text').textContent = task.q;
-    document.getElementById('quiz-streak-badge').textContent = `🔥 ${state.streak} Seri`;
+    const progBar = document.getElementById('quiz-progress-bar');
+    if (progBar) progBar.style.width = `${((qIdx + 1) / totalTasks) * 100}%`;
+
+    const qTextEl = document.getElementById('quiz-question-text');
+    if (qTextEl) qTextEl.textContent = task.q || '';
+
+    const streakBadge = document.getElementById('quiz-streak-badge');
+    if (streakBadge) streakBadge.textContent = `🔥 ${state.streak} Seri`;
+
+    // Seviye & Yıldız & İlerleme Kapsülü
+    const levelLabel = document.getElementById('quiz-level-label');
+    if (levelLabel) {
+      levelLabel.textContent = `${topic.title} • Soru ${qIdx + 1}/${totalTasks}`;
+    }
+
+    const starCount = document.getElementById('quiz-star-count');
+    if (starCount) starCount.textContent = state.progress.stars || 0;
+
+    const progressFill = document.getElementById('quiz-progress-fill');
+    if (progressFill) {
+      progressFill.style.width = `${Math.round(((qIdx + 1) / totalTasks) * 100)}%`;
+    }
 
     // 🇹🇷 İki Dilli Türkçe Çeviri Çubuğu
     const quizTrBanner = document.getElementById('quiz-tr-banner');
@@ -2139,60 +2168,19 @@
       }
     }
 
-    // Karalama tahtasını her yeni soruda kapat
-    ScratchpadService.close('quiz');
-
-    // 🧮 Somut Matematik Araçları ve Çizim Tahtası SADECE Matematik Dersinde Görünür
-    const isMathQuiz = state.currentSubjectKey === 'matematik';
-    const btnToolsQuiz = document.getElementById('btn-tools-quiz');
-    const btnDrawQuiz = document.getElementById('btn-draw-quiz');
-    if (btnToolsQuiz) btnToolsQuiz.classList.toggle('is-visible', isMathQuiz);
-    if (btnDrawQuiz) btnDrawQuiz.classList.toggle('is-visible', isMathQuiz);
-
-    // 🌟 Çocuk Odaklı Macera Görev Rozeti
-    const qBadgeEl = document.getElementById('quiz-q-type-badge');
-    if (qBadgeEl) {
-      const missionMap = {
-        'matematik': '🚀 Uzay Kaptanı Görevi',
-        'fen': '🔬 Doğa Kaşifi Görevi',
-        'hayat': '🌱 Gezegen Dedektifi Görevi',
-        'turkce': '📖 Masal Kahramanı Görevi',
-        'ingilizce': '🔤 Dünya Gezgini Görevi'
-      };
-      qBadgeEl.textContent = missionMap[state.currentSubject] || '🎯 Yıldız Görevi';
-    }
-
-    // 🔊 Sesli Oku Butonu
-    const btnReadQuiz = document.getElementById('btn-read-quiz-q');
-    if (btnReadQuiz) {
-      SpeechService.resetButton(btnReadQuiz);
-      btnReadQuiz.onclick = () => {
-        SpeechService.toggleQuestion(task, btnReadQuiz);
-      };
+    // Karalama tahtasını kapat
+    if (typeof ScratchpadService !== 'undefined') {
+      ScratchpadService.close('quiz');
     }
 
     const feedbackBox = document.getElementById('quiz-feedback-box');
-    feedbackBox.classList.add('hidden');
+    if (feedbackBox) feedbackBox.classList.add('hidden');
 
     const optionsContainer = document.getElementById('quiz-options-container');
+    if (!optionsContainer) return;
     optionsContainer.innerHTML = '';
 
-    // Seviye & Yıldız Puanı
-    const levelLabel = document.getElementById('quiz-level-label');
-    if (levelLabel && state.currentTopic) {
-      levelLabel.textContent = `${state.currentTopic.title} • Seviye 1`;
-    }
-
-    const starCount = document.getElementById('quiz-star-count');
-    if (starCount) starCount.textContent = state.progress.stars || 120;
-
-    const progressFill = document.getElementById('quiz-progress-fill');
-    if (progressFill && state.currentTopic && state.currentTopic.tasks) {
-      const pct = Math.round(((state.currentQuizQIndex + 1) / state.currentTopic.tasks.length) * 100);
-      progressFill.style.width = `${pct}%`;
-    }
-
-    task.options.forEach((optText, optIdx) => {
+    (task.options || []).forEach((optText, optIdx) => {
       const btn = document.createElement('button');
       btn.className = 'cosmic-option-btn';
       btn.textContent = optText;
@@ -2205,8 +2193,7 @@
     });
   }
 
-  // ÇOK BELİRGİN & CANLI DOĞRU/YANLIŞ GERİBİLDİRİMİ
-    // 5. EKRAN 5: KOZMİK OYUN / SORU CEVAP DENETLEYİCİ
+  // 5. EKRAN 5: KOZMİK OYUN / SORU CEVAP DENETLEYİCİ
   function handleCosmicAnswer(selectedIdx, btnElement, task) {
     const allBtns = document.querySelectorAll('.cosmic-option-btn');
     allBtns.forEach(b => b.disabled = true);
@@ -2219,24 +2206,33 @@
       triggerHaptic('success');
       state.quizCorrectCount++;
       state.quizScore += 20;
+      state.streak++;
 
       setTimeout(() => {
-        state.currentQuizQIndex++;
-        if (state.currentQuizQIndex < state.currentTopic.tasks.length) {
-          renderTaskQuestion();
+        state.currentTaskIndex++;
+        if (state.currentTaskIndex < state.currentTopic.tasks.length) {
+          renderCurrentQuestion();
         } else {
-          finishTopicQuiz(state.currentTopic);
+          finishTopicQuiz();
         }
       }, 650);
     } else {
       btnElement.classList.add('wrong');
       playAudioChime('wrong');
       triggerHaptic('warning');
+      state.streak = 0;
+
+      // Doğru cevabı parlat
+      if (allBtns[task.ans]) {
+        allBtns[task.ans].classList.add('correct');
+      }
 
       setTimeout(() => {
-        btnElement.classList.remove('wrong');
-        allBtns.forEach(b => b.disabled = false);
-      }, 600);
+        allBtns.forEach(b => {
+          b.classList.remove('wrong', 'correct');
+          b.disabled = false;
+        });
+      }, 900);
     }
   }
 

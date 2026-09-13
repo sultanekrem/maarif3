@@ -28,29 +28,26 @@
     <!-- ====================================================================
          1. EKRAN 1: GİRİŞ / KARŞILAMA EKRANI (WELCOME SCREEN)
          ==================================================================== -->
-    <div id="screen-welcome" class="screen active">
-      <div class="welcome-bg-scene">
-        <img src="assets/scene_welcome.svg" class="welcome-landscape-img" alt="Okul Sahnesi">
-      </div>
-      <div class="welcome-content-layer">
-        <!-- Maskot & 3D Logo -->
-        <div class="welcome-hero-brand">
-          <div class="welcome-mascot-box">
-            <img src="assets/mascot_star.png" class="welcome-mascot-3d" alt="Maarif Yıldızı 3 Maskotu">
+    <!-- ====================================================================
+         1. EKRAN 1: GİRİŞ / KARŞILAMA EKRANI (STITCH ZERO-SCROLL WELCOME)
+         ==================================================================== -->
+    <div id="screen-welcome" class="screen active stitch-welcome-screen">
+      <div class="stitch-welcome-container">
+        <!-- Maskot & Marka -->
+        <div class="stitch-welcome-brand">
+          <div class="stitch-welcome-mascot-wrap">
+            <img src="assets/mascot_star.png" class="stitch-welcome-mascot-img" alt="Maarif Yıldızı 3 Maskotu">
           </div>
-          <div class="welcome-logo-svg-wrap">
-            <img src="assets/logo_maarif3.svg" class="welcome-logo-3d" alt="Maarif Yıldızı 3">
-          </div>
-          <p class="welcome-tagline">Öğren • Keşfet • Parla</p>
+          <h1 class="stitch-welcome-title">Maarif Yıldızı 3</h1>
+          <p class="stitch-welcome-subtitle">3. Sınıf • Eğlenceli Öğrenme Macerası</p>
+          <div class="stitch-welcome-badge">⭐ MEB Müfredatına Tam Uyumlu</div>
         </div>
 
-        <!-- Butonlar -->
-        <div class="welcome-action-buttons">
-          <button id="btn-welcome-start" class="btn-pill-primary">
-            <span>Başla →</span>
-          </button>
-          <button id="btn-welcome-parent" class="btn-pill-secondary">
-            <span>Ebeveyn Girişi</span>
+        <!-- Başla Aksiyon Butonu -->
+        <div class="stitch-welcome-actions">
+          <button id="btn-welcome-start" class="stitch-welcome-btn" type="button">
+            <span>Maceraya Başla!</span>
+            <span class="stitch-btn-icon">🚀</span>
           </button>
         </div>
       </div>
@@ -185,43 +182,40 @@
     </div>
 
     <!-- ====================================================================
-         3. EKRAN 3: DERS ANA SAYFASI (SUBJECT TOPICS)
+         3. EKRAN 3: DERS KİTAPLIĞI & KONULAR (STITCH KİTAPLIK - SCREEN TOPICS)
          ==================================================================== -->
-    <div id="screen-topics" class="screen">
-      <!-- Kavisli Başlık Alanı -->
-      <header class="topics-curved-header" id="topics-curved-header">
-        <div class="curved-top-bar">
-          <button id="btn-back-to-subjects" class="btn-circular-back" aria-label="Geri">
-            <span>←</span>
+    <div id="screen-topics" class="screen stitch-library-screen">
+      <!-- Stitch Kitaplık Başlığı -->
+      <header class="stitch-library-header">
+        <div class="stitch-library-title-row">
+          <button id="btn-back-to-subjects" class="stitch-library-back-btn" aria-label="Geri">
+            <span class="material-symbols-outlined">arrow_back</span>
           </button>
-          <div class="header-star-counter">
-            <span>⭐</span>
-            <span id="subject-stars-count">120</span>
+          <div class="stitch-library-title-wrap">
+            <h1 class="stitch-library-title" id="current-subject-title">Ders Kitaplığı</h1>
+            <p class="stitch-library-sub" id="current-subject-subtitle">3. Sınıf MEB Fasikülleri & Konuları</p>
+          </div>
+          <div class="stitch-stat-pill stitch-stat-stars">
+            <span class="material-symbols-outlined" style="font-size:16px; color:#FFB300;">star</span>
+            <span id="subject-stars-count">0</span>
           </div>
         </div>
 
-        <div class="curved-hero-row">
-          <div class="curved-text-col">
-            <h1 class="curved-subject-title" id="current-subject-title">Matematik</h1>
-            <p class="curved-subject-sub" id="current-subject-subtitle">Düşün, hesapla, çöz!</p>
-          </div>
-          <div class="curved-character-col">
-            <img src="assets/student_girl.svg" class="curved-girl-img" alt="Öğrenci">
-          </div>
+        <!-- 6 Ders Hızlı Seçim Şeridi (Pills) -->
+        <div class="stitch-subjects-pill-scroll" id="library-subjects-pills">
+          <button class="stitch-subj-pill active" data-subject="matematik" type="button">📐 Matematik</button>
+          <button class="stitch-subj-pill" data-subject="fenbilimleri" type="button">🔬 Fen</button>
+          <button class="stitch-subj-pill" data-subject="turkce" type="button">📚 Türkçe</button>
+          <button class="stitch-subj-pill" data-subject="hayatbilgisi" type="button">🌱 Hayat Bilgisi</button>
+          <button class="stitch-subj-pill" data-subject="ingilizce" type="button">🌍 İngilizce</button>
+          <button class="stitch-subj-pill" data-subject="muzik" type="button">🎵 Müzik</button>
         </div>
       </header>
 
-      <!-- Segmentli Filtre Hapı [Konular] [Oyunlar] [Başarılar] -->
-      <div class="floating-segmented-nav">
-        <button class="seg-pill-btn active" data-seg="konular" id="seg-btn-konular">Konular</button>
-        <button class="seg-pill-btn" data-seg="oyunlar" id="seg-btn-oyunlar">Oyunlar</button>
-        <button class="seg-pill-btn" data-seg="basarilar" id="seg-btn-basarilar">Başarılar</button>
-      </div>
-
       <!-- Ünite & Konu Listesi -->
-      <main class="topics-cards-scroll">
+      <main class="stitch-library-main">
         <div class="units-list-container" id="units-list-container">
-          <!-- JS ile ünite kartları doldurulur -->
+          <!-- JS ile ünite ve konu kartları doldurulur -->
         </div>
       </main>
     </div>

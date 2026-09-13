@@ -1504,25 +1504,28 @@
   }
 
   function openSubjectExplorer(subjectKey) {
-    state.currentSubjectKey = subjectKey;
+    state.currentSubjectKey = subjectKey || 'matematik';
     state.currentThemeIndex = 0;
-    const subj = window.CURRICULUM_TERM1[subjectKey];
+    const subj = window.CURRICULUM_TERM1 ? window.CURRICULUM_TERM1[state.currentSubjectKey] : null;
     if (!subj) return;
 
     const titleEl = document.getElementById('current-subject-title');
-    if (titleEl) titleEl.textContent = subj.title;
+    if (titleEl) titleEl.textContent = `${subj.title} Kitaplığı`;
 
     const subEl = document.getElementById('current-subject-subtitle');
-    if (subEl) subEl.textContent = subj.subtitle || 'Düşün, hesapla, çöz!';
+    if (subEl) subEl.textContent = subj.subtitle || 'Ders Kitabı Fasikülleri ve Kazanım Rehberi';
 
     const starsEl = document.getElementById('subject-stars-count');
-    if (starsEl) starsEl.textContent = state.progress.stars || 120;
+    if (starsEl) starsEl.textContent = state.progress.stars || 0;
 
-    // Header rengi ders rengine göre ayarlansın
-    const headerEl = document.getElementById('topics-curved-header');
-    if (headerEl && subj.accent) {
-      headerEl.style.background = `linear-gradient(135deg, ${subj.accent} 0%, #1D4ED8 100%)`;
-    }
+    // Aktif hap butonunu güncelle
+    document.querySelectorAll('#library-subjects-pills .stitch-subj-pill').forEach(pill => {
+      if (pill.getAttribute('data-subject') === state.currentSubjectKey) {
+        pill.classList.add('active');
+      } else {
+        pill.classList.remove('active');
+      }
+    });
 
     renderUnitsList(subj);
     showScreen('screen-topics');
@@ -1533,36 +1536,66 @@
     if (!container || !subj.themes) return;
 
     container.innerHTML = '';
-    const iconColors = ['icon-blue', 'icon-green', 'icon-blue', 'icon-pink', 'icon-orange'];
-    const sampleIcons = ['🔢', '📐', '🧩', '✖️', '🧠'];
 
-    subj.themes.forEach((theme, idx) => {
-      const card = document.createElement('div');
-      card.className = 'unit-item-card';
-      const colorClass = iconColors[idx % iconColors.length];
-      const iconEmoji = sampleIcons[idx % sampleIcons.length];
-      const topicCount = theme.topics ? theme.topics.length : 3;
+    subj.themes.forEach((theme, tIdx) => {
+      const sectionCard = document.createElement('div');
+      sectionCard.className = 'stitch-unit-section-card';
 
-      card.innerHTML = `
-        <div class="unit-card-left">
-          <div class="unit-icon-box ${colorClass}">${iconEmoji}</div>
-          <div class="unit-text-info">
-            <h4>${theme.title}</h4>
-            <p>${topicCount} konu • ${topicCount * 2} etkinlik</p>
-          </div>
+      const topics = theme.topics || [];
+      const completedCount = topics.filter(t => state.progress.completedTopics[t.id]).length;
+
+      sectionCard.innerHTML = `
+        <div class="stitch-unit-section-header">
+          <h3 class="stitch-unit-section-title">${theme.title}</h3>
+          <span class="stitch-unit-section-badge">${completedCount}/${topics.length} Tamamlandı</span>
         </div>
-        <div class="unit-chevron">›</div>
+        <div class="stitch-topics-stack" id="theme-topics-stack-${tIdx}"></div>
       `;
 
-      card.addEventListener('click', () => {
-        state.currentThemeIndex = idx;
-        const firstTopic = (theme.topics && theme.topics.length > 0) ? theme.topics[0] : null;
-        if (firstTopic) {
-          openReadingScreen(firstTopic);
-        }
+      const topicsStack = sectionCard.querySelector(`#theme-topics-stack-${tIdx}`);
+
+      topics.forEach((topic, idx) => {
+        const isCompleted = !!state.progress.completedTopics[topic.id];
+        const topicItem = document.createElement('div');
+        topicItem.className = 'stitch-topic-item';
+
+        topicItem.innerHTML = `
+          <div class="stitch-topic-top-row">
+            <span class="stitch-topic-page-pill">📖 Sayfa ${topic.page || 'MEB'}</span>
+            <span class="stitch-topic-status-pill ${isCompleted ? 'done' : 'new'}">
+              ${isCompleted ? '✓ Tamamlandı' : '⭐ Yeni Konu'}
+            </span>
+          </div>
+          <h4 class="stitch-topic-title">${idx + 1}. ${topic.title}</h4>
+          <p class="stitch-topic-desc">${topic.desc || ''}</p>
+          <div class="stitch-topic-actions">
+            <button class="stitch-btn-read" type="button">
+              <span>📖 Konuyu Oku</span>
+            </button>
+            <button class="stitch-btn-quiz" type="button">
+              <span>🚀 Soruları Çöz</span>
+            </button>
+          </div>
+        `;
+
+        // Oku butonu
+        topicItem.querySelector('.stitch-btn-read').addEventListener('click', (e) => {
+          e.stopPropagation();
+          state.currentThemeIndex = tIdx;
+          openReadingScreen(topic);
+        });
+
+        // Quiz butonu
+        topicItem.querySelector('.stitch-btn-quiz').addEventListener('click', (e) => {
+          e.stopPropagation();
+          state.currentThemeIndex = tIdx;
+          startTopicQuiz(topic);
+        });
+
+        topicsStack.appendChild(topicItem);
       });
 
-      container.appendChild(card);
+      container.appendChild(sectionCard);
     });
   }
 
@@ -3055,6 +3088,14 @@
         } else if (target === 'modal-student-register') {
           openStudentRegisterModal(false);
         }
+      });
+    });
+
+    // Stitch Kitaplık 6 Ders Şerit Butonları
+    document.querySelectorAll('#library-subjects-pills .stitch-subj-pill').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const sKey = btn.getAttribute('data-subject');
+        if (sKey) openSubjectExplorer(sKey);
       });
     });
 

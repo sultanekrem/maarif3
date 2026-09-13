@@ -1,37 +1,31 @@
 {
-  "name": "Maarif Yıldızı 3 - 3. Sınıf MEB 2026-2027",
-  "short_name": "Maarif Yıldızı 3",
-  "description": "MEB 3. Sınıf 1. Dönem Resmî Ders Kitapları, 3 Adımlı Hap Bilgiler ve Başarı Sınavları",
-  "start_url": "./index.html",
+  "name": "Maarif Yıldızı 3",
+  "short_name": "Maarif 3",
+  "description": "3. Sınıf MEB Türkiye Yüzyılı Maarif Modeli",
+  "start_url": "./index.html?v=61",
   "id": "./",
   "scope": "./",
   "display": "standalone",
-  "display_override": [
-    "standalone",
-    "fullscreen",
-    "window-controls-overlay"
-  ],
-  "orientation": "any",
-  "theme_color": "#0B0F19",
-  "background_color": "#0B0F19",
+  "orientation": "portrait",
+  "theme_color": "#6C63FF",
+  "background_color": "#F8F9FD",
   "icons": [
     {
-      "src": "assets/maarif_logo.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "assets/icon-512.svg",
-      "sizes": "512x512",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "assets/icon-192.svg",
+      "src": "assets/icon-192.png?v=61",
       "sizes": "192x192",
-      "type": "image/svg+xml",
+      "type": "image/png",
       "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-512.png?v=61",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/game_logo_splash.png?v=61",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ],
   "categories": [

@@ -1,8 +1,10 @@
-const CACHE_NAME = 'maarif3-v60';
+const CACHE_NAME = 'maarif3-v62';
 const CACHE_FILES = [
   './',
   './index.html',
   './css/style.css',
+  './css/maarif-kit.css',
+  './css/stitch-kit.css',
   './js/curriculum-term1.js',
   './data/curriculum-term1.json',
   './js/engine/utils.js',
@@ -13,27 +15,33 @@ const CACHE_FILES = [
   './js/engine/game-loop.js',
   './js/math/questions.js',
   './js/progress.js',
-  './js/modes/meteor.js',
-  './js/modes/balloon.js',
-  './js/modes/runner.js',
-  './js/modes/match.js',
-  './js/modes/chain.js',
   './js/app.js',
   './manifest.json',
-  './assets/maarif_logo.svg',
+  './assets/welcome_screen_hq.jpg',
+  './assets/victory_screen_hq.jpg',
+  './assets/space_bg_hq.jpg',
   './assets/game_logo_splash.png',
-  './assets/icon-192.svg',
-  './assets/icon-512.svg'
+  './assets/icon-192.png',
+  './assets/icon-512.png',
+  './assets/mascot_star.png',
+  './assets/icons/subj_turkce.svg',
+  './assets/icons/subj_matematik.svg',
+  './assets/icons/subj_hayat.svg',
+  './assets/icons/subj_fen.svg',
+  './assets/icons/subj_ingilizce.svg',
+  './assets/icons/subj_muzik.svg',
+  './assets/icons/nav_home.svg',
+  './assets/icons/nav_books.svg',
+  './assets/icons/nav_games.svg',
+  './assets/icons/nav_badges.svg',
+  './assets/icons/nav_profile.svg'
 ];
 
 self.addEventListener('install', event => {
+  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then(cache => {
-        console.log('Opened cache');
-        return cache.addAll(CACHE_FILES);
-      })
-      .then(() => self.skipWaiting())
+      .then(cache => cache.addAll(CACHE_FILES))
   );
 });
 
@@ -52,19 +60,20 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', event => {
-  // API isteklerini Service Worker önbelleğine alma, doğrudan ağa ilet
   if (event.request.url.includes('/api/')) {
     return;
   }
-
   event.respondWith(
-    caches.match(event.request)
+    fetch(event.request)
       .then(response => {
-        // Cache hit - return response
-        if (response) {
-          return response;
+        if (response && response.status === 200 && response.type === 'basic') {
+          const responseClone = response.clone();
+          caches.open(CACHE_NAME).then(cache => {
+            cache.put(event.request, responseClone);
+          });
         }
-        return fetch(event.request);
+        return response;
       })
+      .catch(() => caches.match(event.request))
   );
 });

@@ -108,8 +108,10 @@
   function updateHeaderStats() {
     const starsEl = document.getElementById('menu-stars');
     const scoreEl = document.getElementById('menu-score');
-    if (starsEl) starsEl.textContent = state.progress.stars;
-    if (scoreEl) scoreEl.textContent = state.progress.score;
+    const streakEl = document.getElementById('menu-streak');
+    if (starsEl) starsEl.textContent = state.progress.stars || 0;
+    if (scoreEl) scoreEl.textContent = state.progress.score || 0;
+    if (streakEl) streakEl.textContent = state.streak || 1;
   }
 
   function updateClassroomSummary() {
@@ -1139,7 +1141,7 @@
       state.currentScreen = screenId;
     }
 
-    // Mobil Alt Navigasyon Barı Kontrolü
+    // Mobil Alt Navigasyon Barı Kontrolü (Stitch 4-Tab)
     const bottomNav = document.getElementById('bottom-nav-bar');
     if (bottomNav) {
       const fullScreenModes = ['screen-welcome', 'screen-quiz', 'screen-reading', 'screen-victory', 'screen-exam'];
@@ -1147,7 +1149,7 @@
         bottomNav.style.display = 'none';
       } else {
         bottomNav.style.display = 'flex';
-        bottomNav.querySelectorAll('.nav-tab-item').forEach(tab => {
+        bottomNav.querySelectorAll('.stitch-nav-tab, .nav-tab-item').forEach(tab => {
           const targetScreen = tab.getAttribute('data-target');
           if (targetScreen === screenId) {
             tab.classList.add('active');
@@ -1235,6 +1237,225 @@
     } catch(e) {}
   }
 
+  // ==========================================================================
+  // 🌟 STITCH DERS MÜFREDAT AĞACI & GÜNÜN ODAK GÖREVİ MOTORU
+  // MEB 3. Sınıf 6 Ders: Matematik, Fen Bilimleri, Türkçe, Hayat Bilgisi, İngilizce, Müzik
+  // Pedagojik Kilit Kuralı: "Önceki konuyu bitirmeden yeni kilitler açılmaz"
+  // ==========================================================================
+  function renderCurriculumTree() {
+    const container = document.getElementById('curriculum-tree-container');
+    if (!container || !window.CURRICULUM_TERM1) return;
+
+    container.innerHTML = '';
+    const subjects = window.CURRICULUM_TERM1;
+
+    const SUBJECT_CONFIG = [
+      { key: 'matematik', name: '1. Matematik', sub: 'Aktif Çalışılan Ders', icon: 'calculate', vector: 'assets/icons/subj_matematik.svg' },
+      { key: 'fenbilimleri', name: '2. Fen Bilimleri', sub: 'Sıradaki keşif alanı', icon: 'science', vector: 'assets/icons/subj_fen.svg' },
+      { key: 'turkce', name: '3. Türkçe', sub: 'Okuma ve Anlama', icon: 'menu_book', vector: 'assets/icons/subj_turkce.svg' },
+      { key: 'hayatbilgisi', name: '4. Hayat Bilgisi', sub: 'Bilinçli Yaşam', icon: 'emoji_people', vector: 'assets/icons/subj_hayat.svg' },
+      { key: 'ingilizce', name: '5. İngilizce', sub: 'Dünya Dili & İletişim', icon: 'translate', vector: 'assets/icons/subj_ingilizce.svg' },
+      { key: 'muzik', name: '6. Müzik', sub: 'Ritim, Nota ve Ezgiler', icon: 'music_note', vector: 'assets/icons/subj_muzik.svg' }
+    ];
+
+    let globalFirstActiveTopic = null;
+    let globalFirstActiveSubjKey = 'matematik';
+    let globalFirstActiveTheme = null;
+
+    SUBJECT_CONFIG.forEach((cfg) => {
+      const subj = subjects[cfg.key];
+      if (!subj || !subj.themes) return;
+
+      // Hesapla: Ders ilerleme yüzdesi
+      let totalSubjTopics = 0;
+      let completedSubjTopics = 0;
+      subj.themes.forEach(theme => {
+        if (theme.topics) {
+          theme.topics.forEach(tp => {
+            totalSubjTopics++;
+            if (state.progress.completedTopics[tp.id]) {
+              completedSubjTopics++;
+            }
+          });
+        }
+      });
+      const subjPct = totalSubjTopics > 0 ? Math.round((completedSubjTopics / totalSubjTopics) * 100) : 0;
+
+      // Ders Kartı Elemanı
+      const cardEl = document.createElement('div');
+      cardEl.className = 'stitch-subject-card';
+
+      // Üst Başlık & İlerleme Çubuğu
+      cardEl.innerHTML = `
+        <div class="stitch-subject-header" data-subject-key="${cfg.key}">
+          <div class="stitch-subject-info-left">
+            <div class="stitch-subject-icon-box">
+              <img src="${cfg.vector}" alt="${cfg.name}">
+            </div>
+            <div class="stitch-subject-title-wrap">
+              <h4 class="stitch-subject-name">${cfg.name}</h4>
+              <span class="stitch-subject-sub">${cfg.sub}</span>
+            </div>
+          </div>
+          <div class="stitch-subject-progress-badge">
+            <span class="stitch-subject-pct">%${subjPct}</span>
+            <span class="stitch-subject-pct-label">Tamamlandı</span>
+          </div>
+        </div>
+        <div class="stitch-subject-track">
+          <div class="stitch-subject-track-fill" style="width: ${subjPct}%;"></div>
+        </div>
+        <div class="stitch-units-stack" id="units-stack-${cfg.key}"></div>
+      `;
+
+      const unitsStack = cardEl.querySelector(`#units-stack-${cfg.key}`);
+
+      // Üniteleri Kilit / Aktif / Tamamlandı mantığıyla yerleştir
+      let previousUnitCompleted = true; // İlk ünite her zaman açıktır
+
+      subj.themes.forEach((theme, uIdx) => {
+        const uNum = uIdx + 1;
+        // Tema içindeki tüm konular tamamlandı mı?
+        const tTopics = theme.topics || [];
+        const completedInTheme = tTopics.filter(tp => state.progress.completedTopics[tp.id]);
+        const isThemeComplete = tTopics.length > 0 && completedInTheme.length === tTopics.length;
+
+        let status = 'locked'; // 'completed' | 'active' | 'locked'
+
+        if (isThemeComplete) {
+          status = 'completed';
+        } else if (previousUnitCompleted) {
+          status = 'active';
+          if (!globalFirstActiveTopic) {
+            const unfinished = tTopics.find(tp => !state.progress.completedTopics[tp.id]) || tTopics[0];
+            globalFirstActiveTopic = unfinished;
+            globalFirstActiveSubjKey = cfg.key;
+            globalFirstActiveTheme = theme;
+          }
+        } else {
+          status = 'locked';
+        }
+
+        const unitRow = document.createElement('div');
+        unitRow.className = `stitch-unit-row ${status}`;
+
+        if (status === 'completed') {
+          unitRow.innerHTML = `
+            <div class="stitch-unit-left">
+              <div class="stitch-unit-icon">
+                <span class="material-symbols-outlined" style="font-size:18px;">check</span>
+              </div>
+              <div class="stitch-unit-details">
+                <p class="stitch-unit-title">${uNum}. Ünite: ${theme.title.replace(/^\d+\.\s*TEMA:\s*/i, '')}</p>
+                <div class="stitch-unit-sub">
+                  <span class="material-symbols-outlined" style="font-size:14px; color:#FFB300;">star</span>
+                  <span class="material-symbols-outlined" style="font-size:14px; color:#FFB300;">star</span>
+                  <span class="material-symbols-outlined" style="font-size:14px; color:#FFB300;">star</span>
+                  <span style="margin-left:2px;">3/3 Yıldız • Tamamlandı</span>
+                </div>
+              </div>
+            </div>
+            <button class="stitch-btn-unit-replay" type="button">Tekrar</button>
+          `;
+          unitRow.querySelector('.stitch-btn-unit-replay').addEventListener('click', (e) => {
+            e.stopPropagation();
+            state.currentSubjectKey = cfg.key;
+            state.currentThemeIndex = uIdx;
+            const firstTopic = tTopics[0];
+            if (firstTopic) openReadingScreen(firstTopic);
+          });
+        } else if (status === 'active') {
+          unitRow.innerHTML = `
+            <div class="stitch-unit-left">
+              <div class="stitch-unit-icon">
+                <span class="material-symbols-outlined" style="font-size:18px;">play_arrow</span>
+              </div>
+              <div class="stitch-unit-details">
+                <div class="stitch-unit-sub active-tag">🎯 Şu Anki Odak Ünitesi</div>
+                <p class="stitch-unit-title">${uNum}. Ünite: ${theme.title.replace(/^\d+\.\s*TEMA:\s*/i, '')}</p>
+              </div>
+            </div>
+            <button class="stitch-btn-unit-continue" type="button">
+              <span>Devam Et</span>
+              <span class="material-symbols-outlined" style="font-size:16px;">arrow_forward</span>
+            </button>
+          `;
+          unitRow.querySelector('.stitch-btn-unit-continue').addEventListener('click', (e) => {
+            e.stopPropagation();
+            state.currentSubjectKey = cfg.key;
+            state.currentThemeIndex = uIdx;
+            const nextTopic = tTopics.find(tp => !state.progress.completedTopics[tp.id]) || tTopics[0];
+            if (nextTopic) openReadingScreen(nextTopic);
+          });
+        } else {
+          // Locked
+          unitRow.innerHTML = `
+            <div class="stitch-unit-left">
+              <div class="stitch-unit-icon">
+                <span class="material-symbols-outlined" style="font-size:16px;">lock</span>
+              </div>
+              <div class="stitch-unit-details">
+                <p class="stitch-unit-title">${uNum}. Ünite: ${theme.title.replace(/^\d+\.\s*TEMA:\s*/i, '')}</p>
+                <div class="stitch-unit-sub lock-hint">
+                  <span class="material-symbols-outlined" style="font-size:12px;">lock_clock</span>
+                  <span>${uNum - 1}. Üniteyi tamamlayınca açılır</span>
+                </div>
+              </div>
+            </div>
+            <span class="material-symbols-outlined stitch-unit-lock-icon">lock</span>
+          `;
+        }
+
+        unitsStack.appendChild(unitRow);
+        previousUnitCompleted = isThemeComplete;
+      });
+
+      // Tıklayınca ilgili dersin tüm konular sayfasına da gidilebilsin
+      cardEl.querySelector('.stitch-subject-header').addEventListener('click', () => {
+        openSubjectExplorer(cfg.key);
+      });
+
+      container.appendChild(cardEl);
+    });
+
+    // Günün Odak Görevi Kartını Aktif Konuya Göre Güncelle
+    updateFocusQuestCard(globalFirstActiveTopic, globalFirstActiveSubjKey, globalFirstActiveTheme);
+    updateHeaderStats();
+  }
+
+  function updateFocusQuestCard(activeTopic, subjKey, theme) {
+    const focusTitle = document.getElementById('stitch-focus-title');
+    const focusDesc = document.getElementById('stitch-focus-desc');
+    const focusStatus = document.getElementById('stitch-focus-status-label');
+    const focusPct = document.getElementById('stitch-focus-pct');
+    const focusFill = document.getElementById('stitch-focus-fill');
+    const focusBtn = document.getElementById('btn-stitch-focus-start');
+
+    if (!focusTitle || !activeTopic) return;
+
+    const subj = window.CURRICULUM_TERM1 ? window.CURRICULUM_TERM1[subjKey] : null;
+    const subjTitle = subj ? subj.title : 'Matematik';
+
+    const tTopics = theme && theme.topics ? theme.topics : [activeTopic];
+    const compCount = tTopics.filter(t => state.progress.completedTopics[t.id]).length;
+    const totalCount = tTopics.length;
+    const pct = totalCount > 0 ? Math.round((compCount / totalCount) * 100) : 0;
+
+    focusTitle.textContent = `${subjTitle} • ${theme ? theme.title.replace(/^\d+\.\s*TEMA:\s*/i, '') : activeTopic.title}`;
+    focusDesc.textContent = activeTopic.title + (activeTopic.desc ? ' — ' + activeTopic.desc : '');
+    
+    if (focusStatus) focusStatus.textContent = `Görev Durumu: ${compCount} / ${totalCount} Tamamlandı`;
+    if (focusPct) focusPct.textContent = `%${pct}`;
+    if (focusFill) focusFill.style.width = `${pct}%`;
+
+    if (focusBtn) {
+      focusBtn.onclick = () => {
+        state.currentSubjectKey = subjKey;
+        openReadingScreen(activeTopic);
+      };
+    }
+  }
+
   // 3. Zengin, Canlı & Karakterli 4 Ders Kartı
   function renderSubjectCards() {
     const container = document.getElementById('subjects-grid-container');
@@ -1278,6 +1499,7 @@
       container.appendChild(card);
     });
 
+    renderCurriculumTree();
     updateHeaderStats();
   }
 
@@ -2811,17 +3033,17 @@
     const btnVicHome = document.getElementById('btn-victory-home');
     if (btnVicHome) {
       btnVicHome.addEventListener('click', () => {
-        renderSubjectCards();
+        renderCurriculumTree();
         showScreen('screen-menu');
       });
     }
 
-    // Mobil Alt Bar (5 Sekme)
-    document.querySelectorAll('#bottom-nav-bar .nav-tab-item').forEach(tab => {
+    // Stitch Mobil Alt Bar (4 Sekme: Macera, Etkinlik, Kitaplık, Gelişim)
+    document.querySelectorAll('#bottom-nav-bar .stitch-nav-tab, #bottom-nav-bar .nav-tab-item').forEach(tab => {
       tab.addEventListener('click', () => {
         const target = tab.getAttribute('data-target');
         if (target === 'screen-menu') {
-          renderSubjectCards();
+          renderCurriculumTree();
           showScreen('screen-menu');
         } else if (target === 'screen-topics') {
           openSubjectExplorer(state.currentSubjectKey || 'matematik');
@@ -2835,6 +3057,33 @@
         }
       });
     });
+
+    // Stitch Bilge Yıldız Rehber Kartı Aç/Kapat Butonu
+    const guideBtn = document.getElementById('guideToggleBtn');
+    const guideDetails = document.getElementById('guideDetails');
+    const guideIcon = document.getElementById('guideToggleIcon');
+    let isGuideOpen = true;
+    if (guideBtn && guideDetails && guideIcon) {
+      guideBtn.addEventListener('click', () => {
+        isGuideOpen = !isGuideOpen;
+        if (isGuideOpen) {
+          guideDetails.style.display = 'grid';
+          guideIcon.classList.remove('rotate-180');
+        } else {
+          guideDetails.style.display = 'none';
+          guideIcon.classList.add('rotate-180');
+        }
+      });
+    }
+
+    // Stitch Header Logo Tıklama (Ana Sayfa Yenile)
+    const stitchBrand = document.getElementById('stitch-header-brand');
+    if (stitchBrand) {
+      stitchBrand.addEventListener('click', () => {
+        renderCurriculumTree();
+        showScreen('screen-menu');
+      });
+    }
 
     // Destekleyici butonlar
     const btnBackFromGames = document.getElementById('btn-back-from-games');

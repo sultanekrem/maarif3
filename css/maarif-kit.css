@@ -955,3 +955,74 @@ html, body {
   transform: scale(1.15);
   color: var(--c-primary);
 }
+
+/* ==========================================================================
+   HQ SCENE OVERLAYS FOR SCREEN 1 & SCREEN 6
+   ========================================================================== */
+.welcome-full-scene, .victory-full-scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome-scene-img, .victory-scene-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.welcome-touch-btn, .victory-touch-btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.1s ease;
+}
+
+.welcome-touch-btn:active, .victory-touch-btn:active {
+  transform: translateX(-50%) scale(0.96);
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 28px;
+}
+
+/* Screen 1 touch positions */
+.touch-start {
+  bottom: 12.2%;
+  width: 82%;
+  height: 56px;
+  border-radius: 28px;
+}
+
+.touch-parent {
+  bottom: 4.8%;
+  width: 82%;
+  height: 50px;
+  border-radius: 25px;
+}
+
+/* Screen 6 touch positions */
+.touch-continue {
+  bottom: 11.2%;
+  width: 82%;
+  height: 54px;
+  border-radius: 27px;
+}
+
+.touch-home {
+  bottom: 4.2%;
+  width: 82%;
+  height: 48px;
+  border-radius: 24px;
+}

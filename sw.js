@@ -1,4 +1,4 @@
-const CACHE_NAME = 'maarif3-v66';
+const CACHE_NAME = 'maarif3-v67';
 const CACHE_FILES = [
   './',
   './index.html',
@@ -21,6 +21,8 @@ const CACHE_FILES = [
   './assets/game_logo_splash.png',
   './assets/icon-192.png',
   './assets/icon-512.png',
+  './assets/apple-touch-icon.png',
+  './assets/app_icon_official.png',
   './assets/mascot_star.png',
   './assets/mascot_star_circular.png',
   './assets/icons/subj_turkce.svg',
